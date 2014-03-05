@@ -1,0 +1,55 @@
+---
+layout: default
+active: Blog
+---
+<div class="container">
+	<div class="row">&nbsp;</div>
+	<div class="row">
+	<div class="col-md-8">
+		Occasionally, I have thoughts that I can't fit into a 144-character <a href="http://www.twitter.com/AmeliaMN">tweet</a>, and I need somewhere to put them. 
+		This is that place! I'm learning Jekyll as I go, so please bear with any bugs, and <a href="mailto:amelia.mcnamara@stat.ucla.edu">email me</a> if you see something wrong.
+	</div>
+	<div class="col-md-4">
+	</div>
+	</div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-md-8">
+ 			 {% for post in site.posts offset: 0 limit: 10 %}
+      		<h3><a href="{{ post.url }}">{{ post.ptitle }}</a></h3>
+      		<p class="author">
+      		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+        {{ post.date | date: "%m/%d/%Y" }}
+    </time>
+      		</p>
+      		<div class="content">
+      		{{ post.excerpt }}
+  			</div>
+  			{% endfor %}
+  		</div>
+  				<div class="col-md-4">
+  			<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+  			<br>
+			<h4>Recent posts</h4>
+			<ul>
+ 			{% for post in site.posts offset: 0 limit: 10 %}
+    		<li>
+      		<a href="{{ post.url }}">{{ post.ptitle }}</a>
+    		</li>
+  			{% endfor %}
+			</ul>
+		</div>
+  		</div>
+  		<div class="row">&nbsp;</div>
+  		<div class="row">
+  		<div class="col-md-8">
+  			<a href="{{ site.baseurl}}/blog/archive.html">&larr; More posts</a>
+  		</div>
+  		<div class="col-md-4">
+  		</div>
+		</div>
+		<div class="row">
+		<div class="col-md-8"></div>
+
+	</div>
+</div>

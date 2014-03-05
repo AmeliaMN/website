@@ -1,0 +1,51 @@
+   <footer>
+      <div class="container">
+        <p class="text-muted credit">Copyright &copy; 2013 Amelia McNamara. All Rights Reserved.</p>
+      </div>
+    </footer>
+ <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+  var sc_project=8403591; 
+  var sc_invisible=1; 
+  var sc_security="445c0f52"; 
+  var scJsHost = (("https:" == document.location.protocol) ?
+  "https://secure." : "http://www.");
+</script>
+<script type="text/javascript"
+  src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="web stats"
+  href="http://statcounter.com/free-web-stats/"
+  target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/8403591/0/445c0f52/1/"
+  alt="web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+     <script src="./dist/js/Repo.js/repo.js"></script>
+    <script type="text/javascript">
+	$('.tooltip-test').tooltip()
+	$('#collapseOne').collapse("hide");
+	$('#repo').repo({ user: 'AmeliaMN', name: '1000tweets' });
+	$('.more').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='read less' ?  'read more' : 'read less';
+    	});
+    	$(this).blur();
+	});
+	$('.code').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='hide code' ?  'view code' : 'hide code';
+    	});
+    	$(this).blur();
+	});
+	</script>
+    
+  </body>
+</html>
