@@ -16,7 +16,7 @@ active: Blog
 	<div class="row">
 		<div class="col-md-8">
  			 {% for post in site.posts offset: 0 limit: 10 %}
-      		<h3><a href="{{ post.url }}">{{ post.ptitle }}</a></h3>
+      		<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a></h3>
       		<p class="author">
       		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
         {{ post.date | date: "%m/%d/%Y" }}
@@ -34,7 +34,7 @@ active: Blog
 			<ul>
  			{% for post in site.posts offset: 0 limit: 10 %}
     		<li>
-      		<a href="{{ post.url }}">{{ post.ptitle }}</a>
+      		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a>
     		</li>
   			{% endfor %}
 			</ul>

@@ -3,3 +3,4 @@ description: Personal website of Amelia McNamara, statistics PhD candidate at UC
 markdown: redcarpet
 pygments: true
 baseurl: "http://www.stat.ucla.edu/~amelia.mcnamara"
+permalink: blog/:categories/:year/:month/:day/:title.html

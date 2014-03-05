@@ -11,7 +11,7 @@ active: Blog
     <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
         <small style="color: #999;">{{ post.date | date: "%m/%d/%Y" }}</small>
     </time>
-    <a href="{{ post.url }}">{{ post.ptitle }}</a>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a>
     <br />
     </div>
 {% endfor %}
