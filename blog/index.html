@@ -1,11 +1,14 @@
 ---
 layout: default
 active: Blog
+description: Blog by Amelia McNamara on all things data, visualization, R, and teaching
+ptitle: Letters from a young statistician
 ---
 <div class="container">
 	<div class="row">&nbsp;</div>
 	<div class="row">
 	<div class="col-md-8">
+	<h3>Letters from a young statistician</h3>
 		Occasionally, I have thoughts that I can't fit into a 144-character <a href="http://www.twitter.com/AmeliaMN">tweet</a>, and I need somewhere to put them. 
 		This is that place! I'm learning Jekyll as I go, so please bear with any bugs, and <a href="mailto:amelia.mcnamara@stat.ucla.edu">email me</a> if you see something wrong.
 	</div>
@@ -15,7 +18,7 @@ active: Blog
 	<div class="row">&nbsp;</div>
 	<div class="row">
 		<div class="col-md-8">
- 			 {% for post in site.posts offset: 0 limit: 10 %}
+ 			 {% for post in site.posts offset:0 limit:10 %}
       		<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a></h3>
       		<p class="author">
       		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
@@ -28,11 +31,10 @@ active: Blog
   			{% endfor %}
   		</div>
   				<div class="col-md-4">
-  			<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
   			<br>
 			<h4>Recent posts</h4>
 			<ul>
- 			{% for post in site.posts offset: 0 limit: 10 %}
+ 			{% for post in site.posts offset:0 limit:10 %}
     		<li>
       		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a>
     		</li>

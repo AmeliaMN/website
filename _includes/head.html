@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Amelia McNamara: statistics PhD candidate at UCLA">
+    {% if page.description %}
+	<meta name="description" content="{{page.description}}" />
+	{% else %}
+	<meta name="description" content="{{site.description}}" />
+	{% endif %}
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara {% if page.active != "home" %} | {{page.active}} {% endif %} {%if page.title %} | {{page.title}}{% endif %} {% if page.subtitle %} | {{page.subtitle}} {% endif %}</title>
     <link rel="shortcut icon" href="{{ site.baseurl }}/assets/ico/favicon.png">
     <link rel="stylesheet" href="{{ site.baseurl }}/dist/font-awesome/css/font-awesome.min.css">
     <link href="{{ site.baseurl }}/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/dist/css/my.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/blog/feed.xml">
   </head>
   <body>
 
