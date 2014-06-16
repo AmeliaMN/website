@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>Amelia McNamara</title>
+		<description>Personal website of Amelia McNamara, statistics PhD candidate at UCLA</description>		
+		<link>http://www.stat.ucla.edu/~amelia.mcnamara</link>
+		<atom:link href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Sweater variation; or grey != black and white</title>
+				<description>&lt;p&gt;I have a sweater that I&amp;#39;ve loved to death (if you&amp;#39;ve encountered me anytime in the last 5 years, you&amp;#39;ve probably seen it) and after many frustrating attempts to replace it with something similar, I took to eBay to try to find an exact replacement. This is something I&amp;#39;ve had success with in the past-- put in some information about the item, and make a saved search that emails me every day with newly-listed results. But I&amp;#39;ve learned that eBay sellers only know about the mean, and not about variation.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;My eBay saved search goes something like this-- &amp;quot;H&amp;amp;M cardigan Color:Gray&amp;quot; but I&amp;#39;ve found that I often get results like this:
+&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/BlackAndWhiteCardigan.JPG&quot; class=&quot;img-responsive&quot; alt=&quot;Black and white sweater&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Part of the problem is one of classification-- eBay provides the standard six colors (primary and secondary), and a few descriptors like beige, ivory and brown, but probably the best description of the sweater above is &amp;quot;Multi-Color&amp;quot; which doesn&amp;#39;t really capture it. Probably eBay should provide a &amp;quot;Black and White&amp;quot; option. &lt;/p&gt;
+
+&lt;p&gt;What I think is funny about this example is that the seller is partially right-- the typical color of this sweater &lt;em&gt;is&lt;/em&gt; gray. But I&amp;#39;m not interested just in the typical color. I&amp;#39;m looking for a sweater with limited color variation (consistency across the garment). I&amp;#39;m looking for a unimodal color distribution with a small standard deviation, not a bimodal one!&lt;/p&gt;
+
+&lt;p&gt;This is abusing terminology a bit, but I think it illustrates an important point about how we don&amp;#39;t always care about the typical value, and when we talk about distributions (in any sense) we also need to take into account the variability. &lt;/p&gt;
+</description>
+				<pubDate>Thu, 12 Jun 2014 00:00:00 -0500</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/06/12/Sweater_Variation.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/06/12/Sweater_Variation.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/BlackAndWhiteCardigan.JPG" />
+			</item>
+		
+			<item>
+				<title>That paper I was telling you to read</title>
+				<description>&lt;p&gt;I was joking at lunch with some colleagues that I should have a few of my favorite papers linked on the main page of my website, so when I reference them for the n^th time, I can just say &amp;quot;look at my website&amp;quot; instead of promising to email them. While I don&amp;#39;t think it&amp;#39;s reasonable to put this on my front page, here&amp;#39;s the current list of my &amp;quot;have you read [x]?&amp;quot; papers:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://r.cs.purdue.edu/pub/ecoop12.pdf&quot;&gt;Evaluating the Design of the R Language&lt;/a&gt;: I&amp;#39;ll admit, I don&amp;#39;t understand everything that&amp;#39;s in this paper. And it certainly wasn&amp;#39;t necessary to sell me on R! But, I interact with a lot of computer scientists who ask me &amp;quot;why R?&amp;quot; and this paper seems to be a much better answer than anything I manage to come up with. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;ftp://cm.bell-labs.com/cm/stat/tukey/memo/techtools.html&quot;&gt;Technical Tools of Statistics&lt;/a&gt;: Tukey&amp;#39;s vision of the future, from the 1960s. Interesting because we&amp;#39;re &lt;strong&gt;still&lt;/strong&gt; trying to figure this stuff out. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://softwarestudies.com/cultural_analytics/Six_Provocations_for_Big_Data.pdf&quot;&gt;Six Provocations for Big Data&lt;/a&gt;: This article, by danah boyd and Kate Crawford, gives a great response to the buzzword trend of &amp;quot;Big Data.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://vis.stanford.edu/files/2011-DataWrangling-IVJ.pdf&quot;&gt;Research Directions in Data Wrangling&lt;/a&gt;: Just a great paper summing up some directions for research/development in the realm of data processes. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jonathanstray.com/papers/wickham.pdf&quot;&gt;Graphical Inference for InfoVis&lt;/a&gt;: Using an array of plots, most of them with &amp;quot;null&amp;quot; data, to determine if patterns you&amp;#39;re seeing are real or just the result of randomness. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/overviewperm.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Permuted basketball&quot;&gt;&lt;/a&gt;
+&lt;em&gt;Permuted graphic showing the location of Lakers players when they made 3-point shots. Which do you think is the real data?&lt;/em&gt;&lt;/p&gt;
+</description>
+				<pubDate>Fri, 16 May 2014 00:00:00 -0500</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/papers/2014/05/16/That_Paper.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/papers/2014/05/16/That_Paper.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/overviewperm.jpg" />
+			</item>
+		
+			<item>
+				<title>Repping Hadley at DataFest</title>
+				<description>&lt;p&gt;This weekend, we had our fourth annual &lt;a href=&quot;http://datafest.stat.ucla.edu/groups/datafest/&quot;&gt;DataFest&lt;/a&gt; event at UCLA. DataFest is a weekend-long data hackathon, where we give students an interesting dataset, plenty of snacks, and a space to work, and they try to come up with insights. This was the third year I attended, and it seems to just get bigger and better every time. We had about 140 undergraduates from all around Southern California this year. Groups came from UCLA, USC, Cal Poly SLO, UC Riverside, and Pomona College. Our data sponsor was &lt;a href=&quot;http://www.gridpoint.com/&quot;&gt;GridPoint&lt;/a&gt;, an energy-management company. They provide a service that is similar to the &lt;a href=&quot;https://nest.com/&quot;&gt;Nest&lt;/a&gt; (my simplistic interpretation), and they gave us tons of data for the students to analyze. I signed an NDA, so I shouldn&amp;#39;t be very specific about the contents of their proprietary dataset, but students were able to find tons of cool insights.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/DataFest2014.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;DataFest 2014 students&quot;&gt;&lt;/a&gt;
+&lt;em&gt;Our 2014 DataFest contestants&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;My personal favorite project (and Best Visualization prize winner) was a group who found and analyzed a trend in misusing AC, which they defined as running the air conditioner when outside temperatures were below some cutoff, I believe 60 degrees. Really, all the projects were fantastic.&lt;/p&gt;
+
+&lt;p&gt;As a graduate student &amp;quot;consultant&amp;quot; at DataFest, my responsibility was to float around and help the contestants. Since most of the UCLA participants have had me as a TA in a class where we&amp;#39;re using R, I got a lot of programming questions. Invariably, when students were really stuck on something it was a hard problem (which was bad for me looking like a superhero, but means that our students are getting the hang of R!). &lt;/p&gt;
+
+&lt;p&gt;During the weekend, I realized that I was repping &lt;a href=&quot;http://had.co.nz/&quot;&gt;Hadley Wickham&lt;/a&gt;&amp;#39;s packages even harder than usual. For example, students kept coming to me with incredibly hairy code, filled with multiple &lt;code&gt;for&lt;/code&gt; loops using explicit indices and making matches over many factor levels, asking for help debugging why it wasn&amp;#39;t doing what they wanted. Although I would attempt to talk through their code with them, it was usually beyond me getting up to speed quickly enough to catch what was probably a small typo somewhere. Instead, I constantly suggested &lt;a href=&quot;http://plyr.had.co.nz/&quot;&gt;plyr&lt;/a&gt;, and actually became pretty good at it over the weekend. &lt;code&gt;ddply()&lt;/code&gt; is such a heavy-hitter! There were definitely a few &amp;quot;whoa&amp;quot;s from students who hadn&amp;#39;t seen the power of plyr before. Most of my students already know &lt;a href=&quot;http://ggplot2.org/&quot;&gt;ggplot2&lt;/a&gt;, but they haven&amp;#39;t gone beyond the basic geoms. I helped another group use &lt;code&gt;geom_polygon()&lt;/code&gt; to show an additional layer of data in their plot. Finally, the data was all time stamped, and although the base R functions like &lt;code&gt;as.POSIX()&lt;/code&gt; would work, I saw a lot of code trying to make character matches to pull months or years from the data. &lt;a href=&quot;http://cran.r-project.org/web/packages/lubridate/index.html&quot;&gt;lubridate&lt;/a&gt; to the rescue! &lt;/p&gt;
+
+&lt;p&gt;In fact, I must have a standard line on Hadley, because at one point a group of students called me over to join a conversation with some of our sponsors from &lt;a href=&quot;http://www.summitllc.us/&quot;&gt;Summit Consulting&lt;/a&gt;. &amp;quot;Amelia, what do you think about Hadley Wickham?&amp;quot; they asked. &amp;quot;He&amp;#39;s great!&amp;quot; I said. &amp;quot;He writes all the best packages!&amp;quot; This got a big laugh, to the point that I think they&amp;#39;d made a bet on what I&amp;#39;d say. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt; was a generous sponsor of the event, but I think next year they should send some visitors! At the very least, we need to bring back our mini-seminar series during DataFest, and do demos of some of these useful packages. &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;For more on DataFest, check out our &lt;a href=&quot;https://twitter.com/ucladatafest&quot;&gt;twitter&lt;/a&gt; (and the hashtag &lt;a href=&quot;https://twitter.com/search?q=%23datafest&amp;amp;src=hash&quot;&gt;#datafest&lt;/a&gt;), as well as this &lt;a href=&quot;http://fivethirtyeight.com/datalab/the-students-most-likely-to-take-our-jobs/&quot;&gt;great article&lt;/a&gt; from FiveThirtyEight. The article mentions that there were three other DataFests this year, at &lt;a href=&quot;http://stat.duke.edu/datafest&quot;&gt;Duke&lt;/a&gt;, the &lt;a href=&quot;http://www.science.smith.edu/departments/math/datafest/&quot;&gt;Five Colleges&lt;/a&gt; and &lt;a href=&quot;http://orfe.princeton.edu/datafest/&quot;&gt;Princeton&lt;/a&gt;. Next year, we&amp;#39;re hoping to go even more national, with support from the American Statistical Association. I can&amp;#39;t wait to see where it goes in the future!&lt;/p&gt;
+</description>
+				<pubDate>Mon, 05 May 2014 00:00:00 -0500</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/05/05/Repping-Hadley.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/05/05/Repping-Hadley.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/DataFest2014.jpg" />
+			</item>
+		
+			<item>
+				<title>Thoughts from NICAR 2014: process and content</title>
+				<description>&lt;p&gt;One of the things I was most interested in learning about at NICAR was the processes and tools that journalists use when they&amp;#39;re doing data analysis. And the conference did not disappoint. I feel like I came away with a bunch of insight about how things are typically done, and a couple great places where crossover could be even more useful. 
+&amp;lt;!--more--&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data diaries&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Throughout the conference, I heard several people emphasize the need for a &amp;quot;data diary&amp;quot; to document the process of creating data-driven journalism. This is great! We should all strive to document our work to capture our own process and remember what we do. However, it seems like journalists have a workflow something like, as you do your analysis in Excel, write down in Word what you did. Others write longhand on a piece of paper. But, it would be much better to have the documentation of the process actually &lt;strong&gt;be&lt;/strong&gt; the process. For example, if you do your analysis in a language like python or R, you don&amp;#39;t have to write out &amp;quot;I edited the third row, second column to say 10 instead of 10000.&amp;quot; Rather, the code both does the action and documents what happened. Obviously, commenting is important so that you remember what all your hacks were doing, but using a language rather than a graphical user interface makes the process so much more documented. In fact, you can wrap your code and comments in a narrative, using tools like the &lt;a href=&quot;http://ipython.org/notebook&quot;&gt;iPython&lt;/a&gt; notebook or &lt;a href=&quot;http://www.rstudio.com/ide/docs/authoring/using_markdown&quot;&gt;R Markdown&lt;/a&gt;.  &lt;/p&gt;
+
+&lt;p&gt;In fact, one of my dreams for data journalism has been that all data-driven stories would be accompanied by a version of the data cleaning and analysis process. This documentation would be available to readers, who could modify and &amp;quot;audit&amp;quot; the code/process to see what their changes do. In my vision, you could also view the raw data, to see where everything started. However, hearing it from the journalistic prospective, that&amp;#39;s probably an unreasonable vision. Sarah Cohen was saying that if you wanted to open-source data, you would need to verify &lt;strong&gt;every cell&lt;/strong&gt; in the data set, and have an editor go through it, too. It&amp;#39;s hard for me to imagine &amp;quot;editing&amp;quot; a data set like that, but I can see why it&amp;#39;s necessary. If you did something wrong in your data set, it may not make any impact on the final result (that one value probably isn&amp;#39;t throwing off your mean or plot if it&amp;#39;s not an outlier) but if the public could inspect the data cell by cell, it could be a big deal to have a number wrong. I need to think more about this and see if there&amp;#39;s a solution. If you think of one, let me know in the comments!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Working headlines&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Another piece of process that I heard referenced several times in the sessions on &amp;quot;The Data-Driven Story&amp;quot; was the conversation starter, &amp;quot;Tell me what your working headline is. Tell me what your first two paragraphs are.&amp;quot; I work with a lot of education experts, who like the strategy of &amp;quot;sentence starters&amp;quot; which are phrases that help get students speaking in the language of the discipline, while guiding the conversation. This is similar. It&amp;#39;s a simple strategy, but it would be easy for an editor, even one not experienced with data, to understand the response from their journalist. It takes the conversation out of the realm of the data and back into the context. I think it could be a useful conversation (or &lt;a href=&quot;http://en.wikipedia.org/wiki/Rubber_duck_debugging&quot;&gt;rubber-duck debugging&lt;/a&gt; topic) for statisticians and data analysts to work through. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lightning talks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;On a more meta level, I thought the exercise of lightning talks was extremely effective. The space was large enough for almost every attendee of the conference to be included, the talks were short enough that they could only tantalize, never bore, and the material was surprisingly complex. The event was kicked off with some stand-up comedy by &lt;a href=&quot;http://www.andymboyle.com/&quot;&gt;Andy Boyle&lt;/a&gt;, who I&amp;#39;ve come to discover is just as funny on &lt;a href=&quot;https://twitter.com/andymboyle&quot;&gt;twitter&lt;/a&gt; talking about journalism. &lt;/p&gt;
+
+&lt;p&gt;For me, the best three lighting talks were by &lt;a href=&quot;http://lenagroeger.com/&quot;&gt;Lena Groeger&lt;/a&gt;, &lt;a href=&quot;http://www.chasedavis.com/&quot;&gt;Chase Davis&lt;/a&gt; and &lt;a href=&quot;http://palewi.re/who-is-ben-welsh/&quot;&gt;Ben Welsh&lt;/a&gt;. Lena talked about &amp;quot;wee things,&amp;quot; which I thought was a nice contrast to &amp;quot;big data.&amp;quot; Some of the wee things she discussed were small multiples, tiny text, mini maps,  iity-bitty images, and sparklines. The entire talk seems to be available &lt;a href=&quot;http://vimeo.com/91429794&quot;&gt;online&lt;/a&gt; if you want to check it out yourself. She also recommended the book &lt;a href=&quot;http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235&quot;&gt;The Information&lt;/a&gt; which I&amp;#39;m really looking forward to getting into. Chase essentially ran through my entire statistics graduate education in 5 minutes, explaining five algorithms, including Latent Dirichelt Allocation and the Naive Bayes Classifier. The &lt;a href=&quot;https://github.com/cjdd3b/nicar2014/tree/master/lightning-talk&quot;&gt;code&lt;/a&gt; is on github, although the presentation isn&amp;#39;t working for me. He apparently gave a similar talk the previous year, so if you want to catch up with &lt;strong&gt;everything&lt;/strong&gt; I&amp;#39;ve learned in my Phd, check out his &lt;a href=&quot;https://github.com/cjdd3b/nicar2013&quot;&gt;code&lt;/a&gt; and learn about Principal Component Analysis, Random Forests, and more. Ben did a talk called &amp;quot;You Must Learn,&amp;quot; although what stuck with me the most (more than what I was supposed to learn, oops) was the graphic styling of his presentation. Each slide was like a comic encapsulation of what he was talking about, and not in a dumb clipart way. The video of the talk is &lt;a href=&quot;http://palewi.re/talks/&quot;&gt;up&lt;/a&gt; too. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m on the planning committee for useR! 2014, and I&amp;#39;m hoping that our lightning talks can be even half as awesome as the ones from NICAR. You heard me, statisticians, step it up!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lyra&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;More of a tool than a process, but I was thrilled to be able to attend a live demo of &lt;a href=&quot;http://idl.cs.washington.edu/projects/lyra/&quot;&gt;Lyra&lt;/a&gt; with &lt;a href=&quot;http://arvindsatya.com/&quot;&gt;Arvind Satyanarayan&lt;/a&gt;, one of the creators of the project. Lyra is fascinating to me because it&amp;#39;s open source, it&amp;#39;s working with an existing framework, and it just makes extremely powerful data visualization tools available to people without much training necessary. If you haven&amp;#39;t already seen it, check out the gallery of plots they&amp;#39;ve been able to reproduce with their tool. &lt;/p&gt;
+
+&lt;p&gt;*This is my third (and final) post about NICAR 2014. The other two are &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
+</description>
+				<pubDate>Wed, 16 Apr 2014 00:00:00 -0500</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/16/NICARthoughtsPt3.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/16/NICARthoughtsPt3.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
+			</item>
+		
+			<item>
+				<title>Thoughts from NICAR 2014: data, where does it come from?</title>
+				<description>&lt;p&gt;One of the strands I followed most closely at NICAR was the way people get and use data. Here are some of the things that surprised me or intersect with the stuff I&amp;#39;m thinking about for my dissertation.
+&amp;lt;!--more--&amp;gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data resources&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I was surprised by the data resources that I hadn&amp;#39;t heard about before. NICAR maintains a &lt;a href=&quot;http://www.ire.org/nicar/database-library/&quot;&gt;list of databases &lt;/a&gt; that are available for purchase. These datasets don&amp;#39;t seem to be that expensive, and are pretty interesting looking. Anything from &lt;a href=&quot;http://ire.org/nicar/database-library/databases/boat-registration/&quot;&gt;boat registration&lt;/a&gt; to something called the &lt;a href=&quot;http://ire.org/nicar/database-library/databases/social-security-administration-death-master-file/&quot;&gt;Social Security Death Master File&lt;/a&gt;, which sounds varying degrees of sinister depending on where you put the emphasis. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FOIA requests&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The most useful thing I came away with was the realization that I, as a private citizen, am entitled to make FOIA (Freedom of Information Act) requests. If the government, especially the Federal government, is keeping data, I can request and receive it. I&amp;#39;ve been given to believe that this can be a difficult and slow process, but I&amp;#39;m looking forward to trying it out. One of the tools that people were talking about excitedly at NICAR was the &lt;a href=&quot;https://www.foiamachine.org/&quot;&gt;FOIA machine&lt;/a&gt; which automates your FOIA requests. &lt;/p&gt;
+
+&lt;p&gt;When you make FOIA requests, it&amp;#39;s best if you have some idea of what you&amp;#39;re looking for, but nothing too specific. If it&amp;#39;s clear the story you&amp;#39;re pursuing when you make a request, it might be denied. But, you need to know that the data exist to be able to ask for them. Apparently this is very &amp;quot;journalism 101,&amp;quot; but blank government forms can give a good hint as to what data the government is collecting. Additionally, you can FOIA a &amp;quot;records layout&amp;quot; for a database, so that you know what the variables are before you make your official request for the data. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Population, not a sample&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One statistical idea that I hadn&amp;#39;t connected the dots on is that journalists often are working with data that is not a sample. This is obviously a problem that many &amp;quot;data scientists&amp;quot; encounter, because data are coming from sources like the internet, but in the case of government data, if you get the entire data set, it should be the entire population, &lt;strong&gt;not&lt;/strong&gt; a sample. &lt;/p&gt;
+
+&lt;p&gt;Obviously, this changes the sorts of analysis tasks you might want to do. If you have the population, do you really need statistics? &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data are created by humans&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Speakers seemed to understand that all data had been touched by human hands &amp;quot;at least once in the process,&amp;quot; but I thought that their understanding could have gone deeper. If you think that some data you receive was created completely by a machine, you&amp;#39;re mistaken! Even if it&amp;#39;s an automated process, humans designed the hardware, the software, the programming language, the data collection algorithm, the data types for collection, etc. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Physical metaphors for data analysis&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I also went to a session on &amp;quot;When Data Don&amp;#39;t Exist&amp;quot; where several journalists talked about situations where they weren&amp;#39;t able to find existing datasets and had to create them themselves. There were a couple examples given in the session, especially by &lt;a href=&quot;https://twitter.com/sarahcnyt&quot;&gt;Sarah Cohen&lt;/a&gt;, that felt like a physical metaphor for data analysis more generally. Several times through her career, Cohen had to go through boxes of paper to turn them into a dataset. At first, she was going through the boxes consecutively, but she learned that you have different questions of the data once you&amp;#39;ve completed the first pass. Instead, she recommends trying to go through the boxes randomly. This will help you get a sense of the data. Use 2-3 weeks for your first stab, and only then make an estimate of how the rest of the process will take. &lt;/p&gt;
+
+&lt;p&gt;This is a great metaphor. It drives home the idea that going through data changes how you think about data. And usually, the first time you collect data (whether by going through boxes or deploying a participatory sensing campaign) you won&amp;#39;t get your collection schema exactly right. You&amp;#39;ll look back at your data and say, if only I had [blank]. By making it explicit that you&amp;#39;re doing a first pass, not trying to do the whole thing at once, you might be able to escape the sinking feeling that comes after you&amp;#39;ve put too much time into something that&amp;#39;s not going to work. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data that journalists encounter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It came up again and again that much of the data that journalists encounter comes in the form of a pdf. Apparently, it&amp;#39;s a common tactic for an agency to respond to a FOIA request by sending a pdf of data instead of the raw data file (csv, json, xls, etc). This makes it much harder to use the data, because you need to either go through it manually and re-enter the data (making pdfs the computer equivalent of Cohen&amp;#39;s boxes) or use some sort of technological solution. I heard OCR (optical character recognition) being thrown around quite a bit, but OCR really only helps you get text that was scanned into a digital format. Past that, the solution that had people talking at NICAR was &lt;a href=&quot;http://tabula.nerdpower.org/&quot;&gt;tabula&lt;/a&gt;. Tabula turns digital data that seems unstructured to humans into structured data tables, saving you the work of typing it in yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is the second in a series of posts about NICAR. The first is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html&quot;&gt;here&lt;/a&gt; and the next is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt3.html&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
+				<pubDate>Tue, 08 Apr 2014 00:00:00 -0500</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/08/NICARthoughtsPt2.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/08/NICARthoughtsPt2.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
+			</item>
+		
+			<item>
+				<title>Thoughts from NICAR 2014: taking action</title>
+				<description>&lt;p&gt;This past weekend, I attended the &lt;a href=&quot;http://ire.org/&quot;&gt;IRE&lt;/a&gt; &lt;a href=&quot;http://ire.org/conferences/nicar-2014/&quot;&gt;NICAR&lt;/a&gt; conference in Baltimore, MD. 
+It took me a while to figure out what those acronyms stand for, but they&amp;#39;re Investigative Reporters and Editors and National Institute of Computer-Assisted Reporting. 
+Now, I am not a reporter, editor, or computer-assisted journalist, but I found the entire conference fascinating and learned a lot. I thought I&amp;#39;d write up some of my 
+impressions to keep them fresh for myself, and in case anyone might be interested in what a statistician thought of a journalism conference.
+&amp;lt;!--more--&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;I had a lot of thoughts, so I&amp;#39;ll be breaking this into a couple pieces. The first thing I&amp;#39;ll say is that I&amp;#39;m taking Matt Waite&amp;#39;s &lt;a href=&quot;http://blog.mattwaite.com/post/78333096044/a-5-step-nicar-recovery-plan&quot;&gt;advice&lt;/a&gt;, and putting my learning into action immediately following NICAR. That&amp;#39;s what this blog is! I&amp;#39;ve been meaning to learn &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt; for months now, and writing about NICAR provided the perfect motivating project to learn the tool. I&amp;#39;ve already switched my entire website to jekyll, and I&amp;#39;m learning how to build blogs (what jekyll is really good at ) now. &lt;/p&gt;
+
+&lt;p&gt;Some resources that have been helpful to me on this journey include: &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo xcodebuild -license
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This turns out to be one of the things that was hanging up my jekyll install. I kept thinking it was a problem with my ruby version, or with some other dependency, but once I had run that and agreed to the xcode user agreement, doing&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;worked right out of the box. &lt;/p&gt;
+
+&lt;p&gt;Once I had jekyll running, I referred to a bunch of other peoples&amp;#39; blog posts and github repositories, notably:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Anna Debenham&amp;#39;s blog on &lt;a href=&quot;http://24ways.org/2013/get-started-with-github-pages/&quot;&gt;getting started with github pages (plus bonus jekyll)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Josh Branchaud&amp;#39;s blog on &lt;a href=&quot;http://joshbranchaud.com/blog/2013/03/02/Running-Your-Jekyll-Blog-from-a-Subdirectory.html&quot;&gt;running your jekyll blog from a subdirectory&lt;/a&gt; &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The snaptortoise github repository on &lt;a href=&quot;https://github.com/snaptortoise/jekyll-rss-feeds&quot;&gt;jekyll rss feeds&lt;/a&gt; (found via Drew Inglis&amp;#39; post on &lt;a href=&quot;http://blog.drewinglis.com/2013/03/18/adding-rss.html&quot;&gt;adding RSS to jekyll&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Daring Fireball &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;guide to markdown syntax&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;And of course, the jekyll documentation on things like &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;writing posts&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Obviously, this is a work in progress. But I&amp;#39;m feeling good about jumping right on something that I&amp;#39;ve been wanting to try for ages, especially since it came up so much at the conference. &lt;a href=&quot;http://en.wikipedia.org/wiki/Separation_of_presentation_and_content&quot;&gt;Separation of presentation and content&lt;/a&gt;. It is good. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is the first in a series of three posts about NICAR. The second is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt2.html&quot;&gt;here&lt;/a&gt; and the third is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt3.html&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
+				<pubDate>Tue, 04 Mar 2014 00:00:00 -0600</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
+			</item>
+		
+			<item>
+				<title>Migrated posts</title>
+				<description>&lt;p&gt;I decided to hand-migrate the posts from my now-depreciated blogger blog, so while this blog is new, some of the posts are old. Hopefully that makes sense!&lt;/p&gt;
+</description>
+				<pubDate>Tue, 04 Mar 2014 00:00:00 -0600</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/03/04/Migration.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/03/04/Migration.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
+			</item>
+		
+			<item>
+				<title>Productivity</title>
+				<description>&lt;p&gt;Like most people, I don&amp;#39;t feel like there are enough hours in a day to do everything I want to. And, I&amp;#39;ve been getting caught up in the small stuff because it&amp;#39;s so much easier to renew that library book than start writing my dissertation. Here are a few things that have been helping me become more productive lately:
+&amp;lt;!--more--&amp;gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://xph.us/2013/01/22/inbox-zero-for-life.html&quot;&gt;Inbox Zero&lt;/a&gt;. There are many explanations of inbox zero floating around out there, but this is the one I&amp;#39;ve implemented. Now, the only things I see when I log in to gmail are emails that haven&amp;#39;t been touched before, and if I want my &amp;quot;to-do list&amp;quot; emails, they&amp;#39;re in the starred filter. 
+On the same tack, I&amp;#39;ve started filtering my work emails out of my personal inbox so that&amp;#39;s not the first thing I see when I look at my phone in the morning. I only work half time, so this helps me to delineate my time better. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.coffitivity.com/&quot;&gt;Coffitivity&lt;/a&gt;. Again, there are many tools that give you ambient noise (my old standby was &lt;a href=&quot;http://www.iserenity.com/&quot;&gt;iSerenity&lt;/a&gt;) but this one has a modern sound. In fact, I swear it incorporates the exact buzz that my phone makes against the desk. Maybe that&amp;#39;s not a good feature...&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://rescuetime.com/ref/506719&quot;&gt;RescueTime&lt;/a&gt;. This app helps me quantify how productive I&amp;#39;ve been. The weekly reports are always a little depressing (I need to adjust my goals so I sometimes meet them), but they give me a little jolt of energy to change my habits or an affirmation that I&amp;#39;m on track.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.toggl.com/&quot;&gt;toggl&lt;/a&gt;. When I need to actually keep track of hours for something (freelance projects or general hours accounting) I use toggl. 
+Social media on the bus, only. It&amp;#39;s so tempting to look at facebook, twitter, or blogs during the day, but it&amp;#39;s so counterproductive to my dissertation goals. I&amp;#39;ve been trying to limit social media consumption to my twice-daily bus ride, when there&amp;#39;s too much stimulus for me to read something serious but I&amp;#39;ve got a solid block of time to fill. &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then, there are some things that I know would help me become more productive that I need to implement (or get better about):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Turn off email notifications on my phone and probably on my computers as well. Do I really need a ping every time I get a new email? As I work to filter things out so they don&amp;#39;t hit my inbox (and instead are filtered for later consumption), maybe the ping will become more meaningful, but right now it&amp;#39;s probably a distraction.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Leave myself a note with an action-item for the following morning. I usually have my highest energy levels right when I arrive at the office, so that&amp;#39;s not the time for email triage (are you sensing a trend, here? Email is the bane of my existence). If I left a Post-It with my first concrete task for the day, I could jump right into that. &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Many of these ideas came from &lt;a href=&quot;http://adultingblog.com/&quot;&gt;adulting&lt;/a&gt;, &lt;a href=&quot;http://smartprettyandawkward.com/&quot;&gt;smartprettyandawkward&lt;/a&gt;, and &lt;a href=&quot;http://matt.might.net/articles/productivity-tips-hints-hacks-tricks-for-grad-students-academics/&quot;&gt;hacks for grad students&lt;/a&gt;, so credit where credit is due.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 10 Aug 2013 00:00:00 -0500</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/tools/2013/08/10/Productivity.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/tools/2013/08/10/Productivity.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
+			</item>
+		
+			<item>
+				<title>What's the shashtistic on me?</title>
+				<description>&lt;p&gt;One of the major perks of becoming a statistician is hearing people (mainly drunk) who mispronounce the name of my field, earnestly repeating it over and over again in the hopes that I will tell them about &amp;quot;shashtistics,&amp;quot; or recite &amp;quot;the shashtistic&amp;quot; on them (generally, probability 1 that they are wasted).&lt;/p&gt;
+</description>
+				<pubDate>Sun, 12 Feb 2012 00:00:00 -0600</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2012/02/12/Whats_the-shashistic.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2012/02/12/Whats_the-shashistic.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
+			</item>
+		
+			<item>
+				<title>The Postal Service is into data visualization</title>
+				<description>&lt;p&gt;I was just listening to &amp;quot;Nothing Better&amp;quot; by The Postal Service on Pandora and was amused to hear for the first time the lyric, &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;#39;ve made charts and graphs that should finally make it clear.
+I&amp;#39;ve prepared a lecture on why I have to leave. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Hopefully I can find more songs that reference data visualization and prepare a playlist!&lt;/p&gt;
+</description>
+				<pubDate>Wed, 08 Feb 2012 00:00:00 -0600</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2012/02/08/The-Postal-Service-is-into.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2012/02/08/The-Postal-Service-is-into.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
+			</item>
+		
+	</channel>
+</rss>

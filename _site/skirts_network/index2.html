@@ -1,0 +1,194 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Skirt network</title>
+  <meta name="description" content="Network diagram for personal skirt collection">
+  <meta name="author" content="Amelia McNamara">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS concatenated and minified via ant build script-->
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <link rel="stylesheet" href="../dist/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/skirts.css" rel="stylesheet">
+    <link href="../dist/css/my.css" rel="stylesheet">
+    <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  
+  
+  
+  <!-- end CSS-->
+
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+<div id="container">
+	<div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-inner">
+          <a class="brand" href="#">Amelia McNamara</a>
+          <ul class="nav">
+            <li><a href="../index.html">home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	teaching 
+              	<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+            	<li><a href="../101a.html">101A</a></li>
+            	<li><a href="../Mobilize.html">Mobilize</a></li>
+              </ul>
+              </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">portfolio <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+              	<li><a href="../portfolio.html">Overview</a></li>
+              	<li class="divider"></li>
+              	<li class="nav-header">Programming</li>
+                <li><a href="../R.html">R</a></li>
+                <li><a href="../javascript.html">JavaScript</a></li>
+                <li><a href="../latex.html">LaTeX</a></li>
+                <li><a href="../python.html">Python</a></li>
+                <li><a href="../matlab.html">Matlab</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Art/design</li>
+                <li><a href="../illustrator.html">Illustrator</a></li>
+                <li><a href="../painting.html">Paint</a></li>
+                <li><a href="../drawing.html">Drawing</a></li>
+                <li><a href="../three-d.html">Cinema 4D</a></li>
+              </ul>
+              </li>
+        	</ul>
+            <ul class="nav navbar-nav pull-right">
+				<li><a  href="mailto:amelia.mcnamara@stat.ucla.edu"><i class="fa fa-envelope fa-2x"></i></a></li>
+				<li><a href="http://www.twitter.com/AmeliaMN"><i class="fa fa-twitter fa-2x"></i></a></li>
+				<li><a href="http://www.linkedin.com/in/AmeliaMcNamara"><i class="fa fa-linkedin fa-2x"></i></a></li>
+				<li><a href="http://www.facebook.com/amelia.mcnamara"><i class="fa fa-facebook fa-2x"></i></a></li>
+				<li><a href="http://plus.google.com/+AmeliaMcNamara"><i class="fa fa-google-plus fa-2x"></i></a></li>
+				<li><a href="https://github.com/AmeliaMN"><i class="fa fa-github fa-2x"></i></a></li>
+          </ul>
+    </div>
+</div>
+</div>
+
+
+  <div id="container" class="container">
+    <header>
+    <h1>Similar Skirts</h1>
+    <p>Similar skirts are linked together. Nodes are colored by skirt color (although the color of the node may not be the same as the skirt color) and sized by length of the skirt.</p>
+    </header>
+
+<div id="song_selection" class="control">
+        <h3>Data</h3>
+        <select id="song_select">
+          <option value="skirts.json">Skirts</option>
+        </select>
+
+      </div>
+    <div id="controls">
+      <div id="layouts" class="control">
+        <h3>Layout</h3>
+        <a id="force" class="active">Force Directed</a>
+        <a id="radial">Grouped</a>
+      </div>
+    <div id="groupings" class="control">
+      	<h3>Grouping</h3>
+      	<a id="color" class="active">Color</a>
+      	<a id="length">Length</a>
+      	<a id="material">Material</a>
+      	<a id="brand">Brand</a>
+      	<a id="size">Size</a>
+      </div>
+      <div id="filters" class="control">
+        <h3>Filter</h3>
+        <a id="all" class="active">All</a>
+        <a id="popular">Long</a>
+        <a id="obscure">Short</a>
+        <a id="lined">Lined</a>
+        <a id="nolined">Not lined</a>
+        <a id="pockets">Pockets</a>
+        <a id="nopockets">No pockets</a>
+        <a id="washable">Washable</a>
+        <a id="nowashable">Not washable</a>
+        <a id="petite">Petite</a>
+        <a id="nopetite">Not petite</a>
+      </div>
+    <div id="main" role="main">
+      <div id="vis"></div>
+    </div>
+    
+    
+    
+ 
+   <div id="footer">
+      <div class="container">
+	 <p class="text-muted credit">Data from my personal skirt collection. Copyright &copy; 2013 Amelia McNamara. All Rights Reserved.</p>
+    </div>
+</div>   
+    
+    
+    
+
+  </div> <!--! end of #container -->
+</div>
+
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <script src="js/libs/coffee-script.js"></script>
+  <script src="js/libs/d3.v2.js"></script>
+  <script src="js/Tooltip.js"></script>
+    <script src="js/libs/jquery.js"></script>
+  <script src="js/libs/bootstrap.js"></script>
+  <script src="js/bootstrap-dropdown.js"></script>
+  <script src="js/bootstrap-collapse.js"></script>
+<!--  <script src="coffee/vis.js"></script> -->
+  <script type="text/coffeescript" src="coffee/vis.coffee"></script>
+
+  <script> // Change UA-XXXXX-X to be your site's ID
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+  <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+  var sc_project=8403591; 
+  var sc_invisible=1; 
+  var sc_security="445c0f52"; 
+  var scJsHost = (("https:" == document.location.protocol) ?
+  "https://secure." : "http://www.");
+</script>
+<script type="text/javascript"
+  src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="web stats"
+  href="http://statcounter.com/free-web-stats/"
+  target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/8403591/0/445c0f52/1/"
+  alt="web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+<script type="text/javascript">
+	$('.tooltip-test').tooltip();
+</script>
+</body>
+</html>
