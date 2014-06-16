@@ -4,3 +4,4 @@ markdown: redcarpet
 pygments: true
 baseurl: "http://www.stat.ucla.edu/~amelia.mcnamara"
 permalink: blog/:categories/:year/:month/:day/:title.html
+excerpt_separator: <!--more-->

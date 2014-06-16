@@ -6,6 +6,7 @@ categories: misc
 ---
 
 I was going to title this post something like "day 3" or "day 23" but it's hard to say where I should start counting. Whatever the number, it's clear that I'm a fresh graduate student, and barely know what I'm in for.
+<!--more-->
 
 We had our first day of classes on Friday, and I'm just sitting down to my first couple of light readings. So far, I'm delighted. Our upcoming seminar speaker is involved with just the sort of data visualization I am interested in (mostly spatial, geographic visualizations) so I'm very excited to hear his talk and get to meet him at the session afterward. The motivational readings for my programming class are discussing what constitutes a "document" and what "information" really means. Everything meshes with my liberal arts sensibility. I know that grad school is going to be full of hard math, but they're easing us into it so nicely!
 

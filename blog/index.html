@@ -18,20 +18,33 @@ ptitle: Letters from a young statistician
 	<div class="row">&nbsp;</div>
 	<div class="row">
 		<div class="col-md-8">
- 			 {% for post in site.posts offset:0 limit:10 %}
-      		<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a></h3>
-      		<p class="author">
-      		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-        {{ post.date | date: "%m/%d/%Y" }}
-    </time>
-      		</p>
+      {% for post in site.posts offset:0 limit:10 %}
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a></h3>
+      <p class="author">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+      {{ post.date | date: "%m/%d/%Y" }}
+      </time>
+      </p>
+      {% if post.img %}
+      <div class="row">
+        <div class="col-md-8">
       		<div class="content">
-      		{{ post.excerpt }}
-  			</div>
-  			{% endfor %}
-  		</div>
-  				<div class="col-md-4">
-  			<br>
+      		  {{ post.excerpt }}
+          </div>
+        </div>
+        <div class="col-md-4">
+          <a class="thumbnail" href="#"><img src="{{ site.baseurl }}/img/{{ post.img }}" class="img-responsive"></a>
+        </div>
+      </div>
+      {% else %}
+      <div class="content">
+            {{ post.excerpt }}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="col-md-4">
+  		<br>
 			<h4>Recent posts</h4>
 			<ul>
  			{% for post in site.posts offset:0 limit:10 %}
@@ -41,7 +54,7 @@ ptitle: Letters from a young statistician
   			{% endfor %}
 			</ul>
 		</div>
-  		</div>
+  </div>
   		<div class="row">&nbsp;</div>
   		<div class="row">
   		<div class="col-md-8">

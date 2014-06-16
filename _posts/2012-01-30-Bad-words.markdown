@@ -6,6 +6,7 @@ categories: misc
 ---
 
 As a budding statistician, I struggle with the issue of terminology. Since I'm no longer just a member of the public, I'm expected to have a clearer understanding and use of technically specific words, but I'm just as biased by the popular uses of them! A few words/phrases I'm working on:
+<!--more-->
 
 "The data is" -- I know it is "the data are," but that still sounds so weird.
 

@@ -6,10 +6,11 @@ active: Blog
 	<div class="row">&nbsp;</div>
 	<div class="row">
 	<div class="col-md-8">
+	<h3>Archive</h3>
 {% for post in site.posts offset: 0 %}
 <div class="post-item">
     <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-        <small style="color: #999;">{{ post.date | date: "%m/%d/%Y" }}</small>
+        {{ post.date | date: "%m/%d/%Y" }}
     </time>
     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.ptitle }}</a>
     <br />
