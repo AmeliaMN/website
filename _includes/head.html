@@ -71,6 +71,11 @@
                 <li><a href="{{ site.baseurl }}/three-d.html">Cinema 4D</a></li>
               </ul>
               </li>
+              {% if page.active == "Future of Statistical Programming" %}
+              <li class="active"><a href="{{ site.baseurl }}/FoSP.html">statistical programming</a></li>
+              {% else %}
+              <li><a href="{{ site.baseurl }}/FoSP.html">statistical programming</a></li>
+              {% endif %}
               {% if page.active == "Blog" %}
               	<li class="active"><a href="{{ site.baseurl }}/blog/">blog</a></li>
               {% else %}
