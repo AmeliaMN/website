@@ -7,6 +7,146 @@
 		<atom:link href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>ICOTS discussion on technology in statistics education</title>
+				<description>&lt;p&gt;One of the most interesting sessions I attended at ICOTS was the panel session, &lt;a href=&quot;http://icots.info/9/session.php?s=9H&quot;&gt;Future trends for technology in statistics education&lt;/a&gt;. The panel was chaired by &lt;a href=&quot;https://www.stat.auckland.ac.nz/showperson?firstname=Chris&amp;amp;surname=Wild&quot; title=&quot;Chris Wild&quot;&gt;Chris Wild&lt;/a&gt; of Auckland, and featured&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;Deb Nolan&lt;/a&gt;, UC Berkeley&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;Nick Horton&lt;/a&gt;, Smith College&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;Bill Finzer&lt;/a&gt;, Common Online Data Analysis Platform (CODAP)/Fathom&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;Webster West&lt;/a&gt;, Texas A&amp;amp;M/StatCrunch. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Because I was so fascinated by the discussion, I ended up creating an almost-complete transcript of the discussion (biased by my personal interests, of course). I thought it was possible that someone else might be interested in my transcript, so I&amp;#39;m posting it here. Beyond my own interest bias, I&amp;#39;m sure that I&amp;#39;ve mis-attributed an idea here and there. Please let me know if there&amp;#39;s something I should change to be closer to the truth!&lt;/p&gt;
+
+&lt;!--more--&gt; 
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/2014-07-17 15.44.54-1.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;The panel&quot;&gt;&lt;/a&gt;
+&lt;em&gt;The panelists helping attendees find the last few seats (eventually, it was standing-room only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The first question posed to the panel by Chris Wild was &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;what do you consider the most exciting developments in technology for statistics education?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: Student centered data collection.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Open source tools, giving more students access.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: The recognition that data science as essential, and technology making it possible to integrate it into the whole curriculum.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: The popularity of data science and interest by students. &lt;/p&gt;
+
+&lt;p&gt;From that question, the discussion really just moved to a more fluid form, where panelists fed off each other&amp;#39;s comments and moved the conversation forward. Here are some of the comments that caught my ear. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: There isn&amp;#39;t going to be one &amp;quot;intro course,&amp;quot; there will be many courses. A second course needs to cover thinking with data, data wrangling, data munging (or whatever you call it). Hadley&amp;#39;s stuff is good, and uses simple verbs. Students should have the ability to do something with real world data.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: Students need to be exposed to more than one technology. Don&amp;#39;t just turn the R crank. [At some point in the discussion, &lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt; shared that students often call her statistical computing course &amp;quot;the R course,&amp;quot; which makes her cringe.]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: I struggle to come up with the right verbs (for describing the tasks students need to be able to do, especially in terms of code). But, we all do. Maybe it&amp;#39;s better to start with examples. Visualize point A, point B, see how to do it, and then determine what skills are needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: &amp;quot;Data immersion&amp;quot; is an experience everyone should have, regardless of discipline.&lt;/p&gt;
+
+&lt;p&gt;Another question arose here, perhaps raised by Chris Wild. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What are the advantages and disadvantages of menu-driven paradigms versus programming?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: I write code that helps people do menu-driven things. Many teachers are unreachable when it comes to code, and menu-driven can help.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: There&amp;#39;s a difference between coding and scripting. Scripting is simpler, coding is more complex. To code, you need some understanding of control flow, etc. Scripting is more interacting at the console. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: In Fathom, you have a collection, and you can sample from it. That&amp;#39;s essentially a loop. If you&amp;#39;re going to be a data scientist, you need to think computationally. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: We need to think developmentally. Think about when parents are upset because they can&amp;#39;t toilet train their baby. You say, I&amp;#39;m confident by the time they&amp;#39;re 18, they&amp;#39;ll be okay. Then work backward from there. [Ed: I&amp;#39;ve lost what this analogy was supposed to be about. Is the baby a statistics student, and the toilet-training teaching them to code? Insights on this one would be appreciated].&lt;/p&gt;
+
+&lt;p&gt;Coding lets you document your workflow. It&amp;#39;s much harder to do this in an interface. This helps with reproducibility, which we&amp;#39;ve basically decided is a good thing. Down the line, you want peer reviewers to be able to look at your data and code. Biologists have lab notebooks, that helps them be reproducible, and they see this in courses.  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: Ubiquitous data computing is coming. Imagine your Personal Data Calculator. Just like you always have something to write with, you will have a PDC. Technology for working with data will be just as pervasive as other technologies. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Shiny lets me quickly make an applet that would take 6 months for a Java developer. There&amp;#39;s a speed up in the creation of tools.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: In StatCrunch, I want to let textbook authors script their own applets (versus scripting artisanal applets for each author individually). This is coming down the road. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: In the past, I&amp;#39;ve tried making education games. One was a hospital that you tour around in. This effort was in Java, but we didn&amp;#39;t have the manpower. I had ideas about interactive dynamic documents, same thing. Shiny is making a difference, although I would prefer to be &amp;quot;down one level.&amp;quot; There&amp;#39;s a difference between dynamic and interactive-- dynamic means that output is automatically created for you from code. Interactive means that a reader can play with sliders, etc. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: [Paraphrasing &lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;] &amp;quot;So, a learning technology is something that will be out of date in 10 years?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;From &lt;a href=&quot;https://www.stat.auckland.ac.nz/showperson?firstname=Chris&amp;amp;surname=Wild&quot; title=&quot;Chris Wild&quot;&gt;Chris Wild&lt;/a&gt;, &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;there&amp;#39;s a design problem (that&amp;#39;s always the same) and an implementation problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Michael Bulmer&amp;#39;s &lt;a href=&quot;http://escholarship.org/uc/item/2q0740hv&quot;&gt;&amp;quot;Island&amp;quot;&lt;/a&gt;. It&amp;#39;s a big thing to take on.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: You can bring design in through simulation studies.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Looking at health services research: they use non-random data (e.g. from billings) to find out things about health. This is much the same as the problem we&amp;#39;re facing now. This is what we should be aiming for.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: There&amp;#39;s a lot of room to grow in computer science at the high school level. This will change what we do at the college level.
+&amp;quot;Have you heard about R.N. Jesus?&amp;quot; Stands for Random Number Generator, but you pray to it to get good numbers in a game. WoW is a super polished game. We don&amp;#39;t have the skills to build something polished like that.&lt;/p&gt;
+
+&lt;p&gt;Some time around here, the panel was opened up to questions from the audience. I&amp;#39;m not sure exactly what point that was. Nonethless, there was another question for the panel-- &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;what will we be talking about at ICOTS 10 in 2018?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: There will be learning log data available. I hope statistics ed people will be using this data.&lt;/p&gt;
+
+&lt;p&gt;Then, someone (maybe &lt;a href=&quot;http://www.stat.ucla.edu/%7Ergould/Home/About_Me.html&quot;&gt;Rob Gould&lt;/a&gt;) proposed a definition for Data Science. From my understanding of the comment, I sketched a Venn diagram in my notes which looked something like this:
+&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/DataScience.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Data Science Venn Diagram&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;An audience member suggested &lt;a href=&quot;coderdojo.com&quot;&gt;CoderDojo&lt;/a&gt; as a resource for students, which makes it cool to code, says every kid can code. [Ed: I think these types of claims are usually very limited to kids with a lot of privilege]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.calvin.edu/%7Erpruim/&quot;&gt;Randy Pruim&lt;/a&gt; asked the panel, &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;is there a dark side to this? Now, anyone can make a pretty graph, but it might not mean anything. There are thinking skills that are necessary.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: We&amp;#39;ve always had this problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: We should be doing things like text analysis in intro classes. Students get out of intro classes, they think data is just numbers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: Personal data should be meaningful to individuals. It should be able to be worked with. &lt;/p&gt;
+
+&lt;p&gt;And with that, my transcript ends. See, I told you it might only be interesting to me! Those who were there, what insights did I neglect to capture? &lt;/p&gt;
+</description>
+				<pubDate>Wed, 06 Aug 2014 00:00:00 -0700</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/teaching/2014/08/06/ICOTS-Panel-Transcript.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/teaching/2014/08/06/ICOTS-Panel-Transcript.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/2014-07-17 15.44.54-1.jpg" />
+			</item>
+		
+			<item>
+				<title>Yes, and...</title>
+				<description>&lt;p&gt;One of my primary teaching techniques is the improv-inspired &amp;quot;yes and...&amp;quot; move. People who have been trained in improvisational comedy know that the first rule is always to build on what your fellow performers say. If someone says, &amp;quot;now we&amp;#39;re sitting in a cafe, having coffee&amp;quot; you should never respond, &amp;quot;no, we&amp;#39;re outside playing frisbee!&amp;quot; Instead, you should build, &amp;quot;yes, and the waitress is a robot!&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;When I was in college, I had an instructor whose response to any student comment would always start with &amp;quot;no.&amp;quot; Over the course of the semester, this became a running joke with the students in the class, because it didn&amp;#39;t matter how right your answer was. &lt;/p&gt;
+
+&lt;!--more--&gt; 
+
+&lt;p&gt;A typical example would be the instructor asking, &amp;quot;What programming construct am I using here?&amp;quot; A student would answer, &amp;quot;you&amp;#39;re using a for loop&amp;quot; And the response would come back, &amp;quot;No. Well, I guess it is a for loop. But I wanted you to say a control statement.&amp;quot; That one&amp;#39;s actually pretty tame, because both the student&amp;#39;s response and the instructor&amp;#39;s expected response could be considered correct. But this instructor would go through verbal gymnastics to always start with no, even if the student&amp;#39;s response was precisely correct and there was no alternative.&lt;/p&gt;
+
+&lt;p&gt;As a result, many students shut down completely. Even though we joked about the instructor&amp;#39;s love of &amp;quot;no&amp;quot; many people became (consciously or unconsciously) scared off from responding. By the end of the course, I was essentially the only one brave enough to raise my hand, knowing that no matter what I said I would get a negative response. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/YesAnd.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Yes And&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, most teachers don&amp;#39;t go to this extreme. But, I know how easy it is to slip into a frame of mind where you want one particular response and no one is &amp;quot;getting it.&amp;quot; So, I make a concerted effort to always start my response to students with &amp;quot;yes&amp;quot; or something else similarly positive. &amp;quot;Sure, that model has some of the qualities I&amp;#39;m describing here. That&amp;#39;s a nice connection to the stuff we were talking about last week. I was looking for one of the models we&amp;#39;ve been discussing today. Does anyone have another idea?&amp;quot; In fact, I try to start with something positive, even if the answer is partly/mostly wrong. For each incorrect response, I try to put myself into my student&amp;#39;s frame of mind and figure out what the connection is that made them say it. &lt;/p&gt;
+
+&lt;p&gt;If I go through several responses and no one is saying what I expected, I&amp;#39;ll eventually say something like, &amp;quot;oh boy, here I go again, expecting you guys to read my mind!&amp;quot; Usually, this gets a laugh from the class. And by explicitly calling myself out when I&amp;#39;m asking unreasonable questions, it helps me reduce that behavior. Sometimes students can even be frustrated by my positivism, because they want to know &lt;em&gt;the&lt;/em&gt; answer to the question. Since I&amp;#39;ll talk my way through almost any response, it detracts from the idea of a correct response. While I try to strike a balance, I think that the idea of many correct responses is very statistical. &lt;/p&gt;
+</description>
+				<pubDate>Fri, 01 Aug 2014 00:00:00 -0700</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/teaching/2014/08/01/Yes-And.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/teaching/2014/08/01/Yes-And.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/YesAnd.jpg" />
+			</item>
+		
+			<item>
 				<title>Code + Ed</title>
 				<description>&lt;p&gt;Last month, I had the opportunity to attend the &lt;a href=&quot;http://eyeofestival.com/&quot;&gt;eyeo festival&lt;/a&gt; as a student volunteer. For me, one of the most useful parts of the festival was the &lt;a href=&quot;http://eyeofestival.com/code-ed-summit/&quot;&gt;Code+ed Summit&lt;/a&gt;, which took place on the day before the official conference opening. &lt;/p&gt;
 
@@ -284,45 +424,6 @@ impressions to keep them fresh for myself, and in case anyone might be intereste
 				<pubDate>Tue, 04 Mar 2014 00:00:00 -0800</pubDate>
 				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/03/04/Migration.html</link>
 				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/03/04/Migration.html</guid>
-				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
-			</item>
-		
-			<item>
-				<title>Productivity</title>
-				<description>&lt;p&gt;Like most people, I don&amp;#39;t feel like there are enough hours in a day to do everything I want to. And, I&amp;#39;ve been getting caught up in the small stuff because it&amp;#39;s so much easier to renew that library book than start writing my dissertation. Here are a few things that have been helping me become more productive lately:
-&amp;lt;!--more--&amp;gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://xph.us/2013/01/22/inbox-zero-for-life.html&quot;&gt;Inbox Zero&lt;/a&gt;. There are many explanations of inbox zero floating around out there, but this is the one I&amp;#39;ve implemented. Now, the only things I see when I log in to gmail are emails that haven&amp;#39;t been touched before, and if I want my &amp;quot;to-do list&amp;quot; emails, they&amp;#39;re in the starred filter. 
-On the same tack, I&amp;#39;ve started filtering my work emails out of my personal inbox so that&amp;#39;s not the first thing I see when I look at my phone in the morning. I only work half time, so this helps me to delineate my time better. &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.coffitivity.com/&quot;&gt;Coffitivity&lt;/a&gt;. Again, there are many tools that give you ambient noise (my old standby was &lt;a href=&quot;http://www.iserenity.com/&quot;&gt;iSerenity&lt;/a&gt;) but this one has a modern sound. In fact, I swear it incorporates the exact buzz that my phone makes against the desk. Maybe that&amp;#39;s not a good feature...&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://rescuetime.com/ref/506719&quot;&gt;RescueTime&lt;/a&gt;. This app helps me quantify how productive I&amp;#39;ve been. The weekly reports are always a little depressing (I need to adjust my goals so I sometimes meet them), but they give me a little jolt of energy to change my habits or an affirmation that I&amp;#39;m on track.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.toggl.com/&quot;&gt;toggl&lt;/a&gt;. When I need to actually keep track of hours for something (freelance projects or general hours accounting) I use toggl. 
-Social media on the bus, only. It&amp;#39;s so tempting to look at facebook, twitter, or blogs during the day, but it&amp;#39;s so counterproductive to my dissertation goals. I&amp;#39;ve been trying to limit social media consumption to my twice-daily bus ride, when there&amp;#39;s too much stimulus for me to read something serious but I&amp;#39;ve got a solid block of time to fill. &lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Then, there are some things that I know would help me become more productive that I need to implement (or get better about):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Turn off email notifications on my phone and probably on my computers as well. Do I really need a ping every time I get a new email? As I work to filter things out so they don&amp;#39;t hit my inbox (and instead are filtered for later consumption), maybe the ping will become more meaningful, but right now it&amp;#39;s probably a distraction.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Leave myself a note with an action-item for the following morning. I usually have my highest energy levels right when I arrive at the office, so that&amp;#39;s not the time for email triage (are you sensing a trend, here? Email is the bane of my existence). If I left a Post-It with my first concrete task for the day, I could jump right into that. &lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Many of these ideas came from &lt;a href=&quot;http://adultingblog.com/&quot;&gt;adulting&lt;/a&gt;, &lt;a href=&quot;http://smartprettyandawkward.com/&quot;&gt;smartprettyandawkward&lt;/a&gt;, and &lt;a href=&quot;http://matt.might.net/articles/productivity-tips-hints-hacks-tricks-for-grad-students-academics/&quot;&gt;hacks for grad students&lt;/a&gt;, so credit where credit is due.&lt;/p&gt;
-</description>
-				<pubDate>Sat, 10 Aug 2013 00:00:00 -0700</pubDate>
-				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/tools/2013/08/10/Productivity.html</link>
-				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/tools/2013/08/10/Productivity.html</guid>
-				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
-			</item>
-		
-			<item>
-				<title>What&#39;s the shashtistic on me?</title>
-				<description>&lt;p&gt;One of the major perks of becoming a statistician is hearing people (mainly drunk) who mispronounce the name of my field, earnestly repeating it over and over again in the hopes that I will tell them about &amp;quot;shashtistics,&amp;quot; or recite &amp;quot;the shashtistic&amp;quot; on them (generally, probability 1 that they are wasted).&lt;/p&gt;
-</description>
-				<pubDate>Sun, 12 Feb 2012 00:00:00 -0800</pubDate>
-				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2012/02/12/Whats_the-shashistic.html</link>
-				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2012/02/12/Whats_the-shashistic.html</guid>
 				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
 			</item>
 		
