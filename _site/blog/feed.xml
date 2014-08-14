@@ -7,6 +7,28 @@
 		<atom:link href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Data Science LA</title>
+				<description>&lt;p&gt;I&amp;#39;m now involved in the recently-launched &lt;a href=&quot;datascience.la&quot;&gt;datascience.la&lt;/a&gt; blog. While you&amp;#39;ll probably be drawn to the site for the &lt;a href=&quot;http://datascience.la/category/user-conference/sessions/&quot;&gt;useR! conference session videos&lt;/a&gt;, &lt;a href=&quot;http://datascience.la/category/user-conference/interviews/&quot;&gt;interviews with data scientists&lt;/a&gt;, and meetup announcements, there&amp;#39;s going to be much more!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/datascienceLA.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;DataScienceLA&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve posted &lt;a href=&quot;http://datascience.la/data-science-goes-to-college-with-datafest/&quot;&gt;Data Science Goes to College with DataFest&lt;/a&gt;, yet another summary of the yearly DataFest we hold at UCLA and that&amp;#39;s going national. &lt;/p&gt;
+
+&lt;p&gt;Then, I wrote &lt;a href=&quot;http://datascience.la/statistics-grad-school-what-is-it-really-like/&quot;&gt;Statistics Grad School-- What is it Really Like?&lt;/a&gt; describing some of the experience of getting a PhD in statistics at UCLA.&lt;/p&gt;
+
+&lt;p&gt;Finally, I&amp;#39;ll be giving a talk at this month&amp;#39;s DataVis LA meetup, &lt;a href=&quot;http://datascience.la/datavis-la-meetup-eyeo-festival-highlights-august-26/&quot;&gt;Eyeo Festival Highlights&lt;/a&gt; on August 26th. Come by Cornerstone OnDemand to hear me talk about the things that inspired me the most from the &lt;a href=&quot;http://eyeofestival.com/&quot;&gt;eyeo festival&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;If you want to keep up with &lt;a href=&quot;datascience.la&quot;&gt;datascience.la&lt;/a&gt;, you can follow along via &lt;a href=&quot;https://twitter.com/wwwDSLA&quot;&gt;twitter&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/user/DataScienceLA&quot;&gt;youtube&lt;/a&gt;, add us to your favorite &lt;a href=&quot;http://datascience.la/feed&quot;&gt;rss&lt;/a&gt; reader, or just drop by &lt;a href=&quot;datascience.la&quot;&gt;the site&lt;/a&gt;. I&amp;#39;m excited to be a part of it!&lt;/p&gt;
+</description>
+				<pubDate>Thu, 14 Aug 2014 00:00:00 -0700</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/teaching/2014/08/14/DataScienceLA.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/teaching/2014/08/14/DataScienceLA.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/datascienceLA.jpg" />
+			</item>
+		
+			<item>
 				<title>ICOTS discussion on technology in statistics education</title>
 				<description>&lt;p&gt;One of the most interesting sessions I attended at ICOTS was the panel session, &lt;a href=&quot;http://icots.info/9/session.php?s=9H&quot;&gt;Future trends for technology in statistics education&lt;/a&gt;. The panel was chaired by &lt;a href=&quot;https://www.stat.auckland.ac.nz/showperson?firstname=Chris&amp;amp;surname=Wild&quot; title=&quot;Chris Wild&quot;&gt;Chris Wild&lt;/a&gt; of Auckland, and featured&lt;/p&gt;
 
@@ -414,16 +436,6 @@ impressions to keep them fresh for myself, and in case anyone might be intereste
 				<pubDate>Tue, 04 Mar 2014 00:00:00 -0800</pubDate>
 				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html</link>
 				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html</guid>
-				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
-			</item>
-		
-			<item>
-				<title>Migrated posts</title>
-				<description>&lt;p&gt;I decided to hand-migrate the posts from my now-depreciated blogger blog, so while this blog is new, some of the posts are old. Hopefully that makes sense!&lt;/p&gt;
-</description>
-				<pubDate>Tue, 04 Mar 2014 00:00:00 -0800</pubDate>
-				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/03/04/Migration.html</link>
-				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/03/04/Migration.html</guid>
 				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
 			</item>
 		
