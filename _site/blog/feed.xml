@@ -7,6 +7,49 @@
 		<atom:link href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Kid Pix</title>
+				<description>&lt;p&gt;Since a lot of the &lt;a href=&quot;datascience.la&quot;&gt;datascience.la&lt;/a&gt; meetups are held at &lt;a href=&quot;http://www.crosscamp.us/&quot;&gt;Cross Campus&lt;/a&gt;, I joined their newletter, and I&amp;#39;m so glad I did-- it leads me to all sorts of cool things! One such event was a talk by &lt;a href=&quot;http://red-green-blue.com/about/&quot;&gt;Craig Hickman&lt;/a&gt; about the history and success of &lt;a href=&quot;http://red-green-blue.com/kid-pix-the-early-years/&quot;&gt;Kid Pix&lt;/a&gt;. If you weren&amp;#39;t a child in the &amp;#39;90s, Kid Pix was a fabulously open-ended paint program designed for kids.&lt;/p&gt;
+
+&lt;p&gt;The talk was a great mix of nostalgia and inspiration for me. I loved hearing about the principles that guided Hickman as he worked, like the idea of contextual menus, so kids never had to look in the menu bar. I was also brought back to my childhood, creating artwork, menus for pretend restaurants, birthday cards, notes, and much more, all in Kid Pix. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Hickman referenced two papers that inspired him-- &lt;a href=&quot;https://archive.org/stream/byte-magazine-1983-12/1983_12_BYTE_08-12_Easy_Software#page/n143/mode/2up&quot;&gt;Walt Disney and User Oriented Software&lt;/a&gt; and Alan Kay&amp;#39;s &lt;a href=&quot;http://frameworker.files.wordpress.com/2008/05/alan-kay-computer-software-sciam-sept-84.pdf&quot;&gt;Computer Software&lt;/a&gt;. Since I work with Alan, I&amp;#39;ve read Computer Software several times, and love the ideas about software being flexible enough to do things that the designer didn&amp;#39;t foresee, and the importance of computer users &amp;quot;creating&amp;quot; rather than just &amp;quot;using&amp;quot; (something that comes up a lot in the &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/Mobilize.html&quot;&gt;Mobilize project&lt;/a&gt;). &lt;/p&gt;
+
+&lt;p&gt;However, I hadn&amp;#39;t seen the article on Disney before. When I read it, I was surprised to discover I had heard most of the anecdotes before from people in Alan&amp;#39;s group. The article is full of connections between the principles of Disney animators and how they could be applied by software developers. For example, &amp;quot;prepare the audience.&amp;quot; A Disney character will show you what it&amp;#39;s going to do before it begins the action-- for example, by bending its knees before a jump. Software should do the same. The author suggests that a slow in/slow out approach to changing things on the screen can help a user be prepared for what is happening, and not get lost in a transition. &lt;/p&gt;
+
+&lt;p&gt;Kid Pix accomplished a lot of the goals outlined in these two papers. You could see the tools available to you on the left hand side, and you always knew to expect relevant contextual options to appear at the bottom of the screen. Everything was modifiable, including the &lt;a href=&quot;http://en.wikipedia.org/wiki/Susan_Kare&quot;&gt;Susan Kare&lt;/a&gt;-designed font stamps. Hickman explained that he&amp;#39;d loved the hieroglyphic-style font &lt;a href=&quot;http://www.kare.com/portfolio/05_apple_fonts.html&quot;&gt;Cairo&lt;/a&gt;, designed by Kare for the original Macintosh, so he just &amp;quot;put it back&amp;quot; as the stamps you could use in Kid Pix. As a child, I loved the fact that the stamps were modifiable, and I think the goal of a program that is manipulable all the way down is wonderful for any age level. &lt;/p&gt;
+
+&lt;p&gt;One of the unique qualities of Kid Pix, compared to a more standard paint program, is that the process matters as much or more than the final product. Although this had been my experience as a kid, I hadn&amp;#39;t realized that it was explicitly intended to be that way. Listen to Hickman explain,&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F170212262&amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The original version of Kid Pix was black and white, but Hickman soon created a second version with the software company Broderbund, which was in color and included sounds. This is the version I have the strongest memories of, although I think we had the black-and-white version first. &lt;/p&gt;
+
+&lt;p&gt;I was struck by David Pogue&amp;#39;s review of commercial version, which Hickman showed us. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Kid Pix 1.0&lt;/p&gt;
+
+&lt;p&gt;Pros: Brilliant; hilarious; innovative; inexpensive.&lt;/p&gt;
+
+&lt;p&gt;Cons: None. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So that gives you something to aspire to, doesn&amp;#39;t it?&lt;/p&gt;
+
+&lt;p&gt;If you ever used Kid Pix, its sounds will immediately bring you back. Here is Hickman demoing some of the tools, including the popular eraser bomb tool that cleared the entire screen:
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F170212261&amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to try out the original (black and white) Kid Pix, James Friend has created a &lt;a href=&quot;http://jamesfriend.com.au/pce-js/&quot;&gt;Mac emulator&lt;/a&gt; that runs it. For Hickman&amp;#39;s complete talk, see &lt;a href=&quot;https://www.youtube.com/watch?v=LqVhK6JgbSU&quot;&gt;this video&lt;/a&gt; from Media Leaders or &lt;a href=&quot;http://red-green-blue.com/kid-pix-the-early-years/&quot;&gt;Hickman&amp;#39;s page on Kid Pix&lt;/a&gt;, which goes through a lot of the material from his talk. Thanks again to &lt;a href=&quot;http://www.crosscamp.us/&quot;&gt;Cross Campus&lt;/a&gt; for hosting such a great event! &lt;/p&gt;
+</description>
+				<pubDate>Wed, 01 Oct 2014 00:00:00 -0700</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/tools/2014/10/01/KidPix.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/tools/2014/10/01/KidPix.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/CraigHickman.jpg" />
+			</item>
+		
+			<item>
 				<title>Data Science LA</title>
 				<description>&lt;p&gt;I&amp;#39;m now involved in the recently-launched &lt;a href=&quot;datascience.la&quot;&gt;datascience.la&lt;/a&gt; blog. While you&amp;#39;ll probably be drawn to the site for the &lt;a href=&quot;http://datascience.la/category/user-conference/sessions/&quot;&gt;useR! conference session videos&lt;/a&gt;, &lt;a href=&quot;http://datascience.la/category/user-conference/interviews/&quot;&gt;interviews with data scientists&lt;/a&gt;, and meetup announcements, there&amp;#39;s going to be much more!&lt;/p&gt;
 
@@ -394,48 +437,6 @@
 				<pubDate>Tue, 08 Apr 2014 00:00:00 -0700</pubDate>
 				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/08/NICARthoughtsPt2.html</link>
 				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/08/NICARthoughtsPt2.html</guid>
-				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
-			</item>
-		
-			<item>
-				<title>Thoughts from NICAR 2014: taking action</title>
-				<description>&lt;p&gt;This past weekend, I attended the &lt;a href=&quot;http://ire.org/&quot;&gt;IRE&lt;/a&gt; &lt;a href=&quot;http://ire.org/conferences/nicar-2014/&quot;&gt;NICAR&lt;/a&gt; conference in Baltimore, MD. 
-It took me a while to figure out what those acronyms stand for, but they&amp;#39;re Investigative Reporters and Editors and National Institute of Computer-Assisted Reporting. 
-Now, I am not a reporter, editor, or computer-assisted journalist, but I found the entire conference fascinating and learned a lot. I thought I&amp;#39;d write up some of my 
-impressions to keep them fresh for myself, and in case anyone might be interested in what a statistician thought of a journalism conference.
-&amp;lt;!--more--&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;I had a lot of thoughts, so I&amp;#39;ll be breaking this into a couple pieces. The first thing I&amp;#39;ll say is that I&amp;#39;m taking Matt Waite&amp;#39;s &lt;a href=&quot;http://blog.mattwaite.com/post/78333096044/a-5-step-nicar-recovery-plan&quot;&gt;advice&lt;/a&gt;, and putting my learning into action immediately following NICAR. That&amp;#39;s what this blog is! I&amp;#39;ve been meaning to learn &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt; for months now, and writing about NICAR provided the perfect motivating project to learn the tool. I&amp;#39;ve already switched my entire website to jekyll, and I&amp;#39;m learning how to build blogs (what jekyll is really good at ) now. &lt;/p&gt;
-
-&lt;p&gt;Some resources that have been helpful to me on this journey include: &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo xcodebuild -license
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This turns out to be one of the things that was hanging up my jekyll install. I kept thinking it was a problem with my ruby version, or with some other dependency, but once I had run that and agreed to the xcode user agreement, doing&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;worked right out of the box. &lt;/p&gt;
-
-&lt;p&gt;Once I had jekyll running, I referred to a bunch of other peoples&amp;#39; blog posts and github repositories, notably:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Anna Debenham&amp;#39;s blog on &lt;a href=&quot;http://24ways.org/2013/get-started-with-github-pages/&quot;&gt;getting started with github pages (plus bonus jekyll)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Josh Branchaud&amp;#39;s blog on &lt;a href=&quot;http://joshbranchaud.com/blog/2013/03/02/Running-Your-Jekyll-Blog-from-a-Subdirectory.html&quot;&gt;running your jekyll blog from a subdirectory&lt;/a&gt; &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The snaptortoise github repository on &lt;a href=&quot;https://github.com/snaptortoise/jekyll-rss-feeds&quot;&gt;jekyll rss feeds&lt;/a&gt; (found via Drew Inglis&amp;#39; post on &lt;a href=&quot;http://blog.drewinglis.com/2013/03/18/adding-rss.html&quot;&gt;adding RSS to jekyll&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Daring Fireball &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;guide to markdown syntax&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;And of course, the jekyll documentation on things like &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;writing posts&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Obviously, this is a work in progress. But I&amp;#39;m feeling good about jumping right on something that I&amp;#39;ve been wanting to try for ages, especially since it came up so much at the conference. &lt;a href=&quot;http://en.wikipedia.org/wiki/Separation_of_presentation_and_content&quot;&gt;Separation of presentation and content&lt;/a&gt;. It is good. &lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is the first in a series of three posts about NICAR. The second is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt2.html&quot;&gt;here&lt;/a&gt; and the third is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt3.html&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-</description>
-				<pubDate>Tue, 04 Mar 2014 00:00:00 -0800</pubDate>
-				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html</link>
-				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html</guid>
 				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
 			</item>
 		

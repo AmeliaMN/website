@@ -1,217 +1,196 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title>Skirt network</title>
-  <meta name="description" content="Network diagram for personal skirt collection">
-  <meta name="author" content="Amelia McNamara">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- CSS concatenated and minified via ant build script-->
-    <link rel="shortcut icon" href="../assets/ico/favicon.png">
-    <link rel="stylesheet" href="../dist/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="../dist/css/my.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/skirts.css" rel="stylesheet">
-    <script src="js/libs/modernizr-2.0.6.min.js"></script>
-  
-  
-  
-  <!-- end CSS-->
-
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
-</head>
-
-<body>
+---
+layout: skirts
+active: Research
+title: Skirts network
+---
 
 
-
-
-   <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#amelia">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Amelia McNamara</a>
-           <div class="nav-collapse collapse" id="amelia">
-            <p class="navbar-text pull-right">
-				<a  href="mailto:amelia.mcnamara@stat.ucla.edu"><i class="fa fa-envelope fa-2x"></i></a>
-				<a href="http://www.twitter.com/AmeliaMN"><i class="fa fa-twitter fa-2x"></i></a>
-				<a href="http://www.linkedin.com/in/AmeliaMcNamara"><i class="fa fa-linkedin fa-2x"></i></a>
-				<a href="http://www.facebook.com/amelia.mcnamara"><i class="fa fa-facebook fa-2x"></i></a>
-				<a href="http://plus.google.com/+AmeliaMcNamara"><i class="fa fa-google-plus fa-2x"></i></a>
-				<a href="https://github.com/AmeliaMN"><i class="fa fa-github fa-2x"></i></a>
-          	</ul>
-          	<ul class="nav">
-            <li><a href="../index.html">home</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              	teaching 
-              	<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-            	<li><a href="../101a.html">101A</a></li>
-            	<li><a href="../Mobilize.html">Mobilize</a></li>
-              </ul>
-              </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">portfolio <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-              	<li><a href="../portfolio.html">Overview</a></li>
-              	<li class="divider"></li>
-              	<li class="nav-header">Programming</li>
-                <li><a href="../R.html">R</a></li>
-                <li><a href="../javascript.html">JavaScript</a></li>
-                <li><a href="../latex.html">LaTeX</a></li>
-                <li><a href="../python.html">Python</a></li>
-                <li><a href="../matlab.html">Matlab</a></li>
-                <li class="divider"></li>
-                <li class="nav-header">Art/design</li>
-                <li><a href="../illustrator.html">Illustrator</a></li>
-                <li><a href="../painting.html">Paint</a></li>
-                <li><a href="../drawing.html">Drawing</a></li>
-                <li><a href="../three-d.html">Cinema 4D</a></li>
-              </ul>
-              </li>
-        	</ul>
-    </div>   
-    </div>
-</div>
-</div>
-
-
-  <div id="container" class="container">
-    <header>
+<div class="container">
+<div class="row">&nbsp;</div>
+<div class="row">
+	<div class="col-lg-12">
     <h1>Similar Skirts</h1>
-    <ul class="breadcrumb">
-  		<li><a href="../index.html">Home</a><span class="divider">/</span></li>
-  		<li><a href="../portfolio.html">Portfolio</a><span class="divider">/</span></li>
-  		<li><a href="../javascript.html">JavaScript</a><span class="divider">/</span></li>
-  		<li class="active">Skirts project</li>
-	</ul>
-    
-    <p>One project in <a href="http://polaris.gseis.ucla.edu/llievrou/LeahLievrouw/Welcome.html">Leah Lievrouw</a>'s Human Computer Interaction course was to design a data visualization about a personal collection. 
-    		I chose to visualize my skirt collection using a network (it's debatable whether that was a good choice) and used Jim Vallandingham's <a href="http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/">Interactive Network Visualization tutorial</a> 
-    		as a base. </p>
-    
-    		<p> Skirts are connected to one another if they share any one attribute in common (e.g. length, color, pockets or lack thereof). You can choose a force-directed layout or a grouped layout. 
-    		If you choose a grouped layout, there are a number of grouping choices. The screen shot below shows skirts grouped by color. Dots are sized by length, and color represents the color of the skirt 
-    		(although the color of the circle does not necessarily correspond with the color of the skirt. Blue represents "printed"). Hovering over any node displays the data associated with it, including a photograph of the skirt. </p>
-    	
-    <p>Similar skirts are linked together. Nodes are colored by skirt color (although the color of the node may not be the same as the skirt color) and sized by length of the skirt.</p>
-    </header>
+        <p>One project in <a href="http://polaris.gseis.ucla.edu/llievrou/LeahLievrouw/Welcome.html">Leah Lievrouw</a>'s Human Computer Interaction course was to design a data visualization about a personal collection. </p>
+            <p>I chose to visualize my skirt collection using a network (it's debatable whether that was a good choice) and used Jim Vallandingham's <a href="http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/">Interactive Network Visualization tutorial</a> as a base. <a href="index4.html">That version</a> got outdated fast, so I'm attempting to revamp it here.</p>
 
-<div id="song_selection" class="control">
-        <h3>Data</h3>
-        <select id="song_select">
-          <option value="skirts.json">Skirts</option>
-        </select>
+        <p>Similar skirts are linked together. Nodes are colored by skirt color (although the color of the node may not be the same as the skirt color) and sized by length of the skirt. Soon, I hope to have reimplemented the facilities to group and filter the network based on variables in the data.</p>
 
-      </div>
-    <div id="controls">
-      <div id="layouts" class="control">
-        <h3>Layout</h3>
-        <a id="force" class="active">Force Directed</a>
-        <a id="radial">Grouped</a>
-      </div>
-    <div id="groupings" class="control">
-      	<h3>Grouping</h3>
-      	<a id="color" class="active">Color</a>
-      	<a id="length">Length</a>
-      	<a id="material">Material</a>
-      	<a id="brand">Brand</a>
-      	<a id="size">Size</a>
-      </div>
-      <div id="filters" class="control">
-        <h3>Filter</h3>
-        <a id="all" class="active">All</a>
-        <a id="popular">Long</a>
-        <a id="obscure">Short</a>
-        <a id="lined">Lined</a>
-        <a id="nolined">Not lined</a>
-        <a id="pockets">Pockets</a>
-        <a id="nopockets">No pockets</a>
-        <a id="washable">Washable</a>
-        <a id="nowashable">Not washable</a>
-        <a id="petite">Petite</a>
-        <a id="nopetite">Not petite</a>
-      </div>
-    <div id="main" role="main">
-      <div id="vis"></div>
-    </div>
-    
-    
-    
- 
-   <div id="footer">
-      <div class="container">
-	 <p class="text-muted credit">Data from my personal skirt collection. Copyright &copy; 2013 Amelia McNamara. All Rights Reserved.</p>
-    </div>
-</div>   
-    
-    
-    
 
-  </div> <!--! end of #container -->
+<script>
+var width = 1024,
+    height = 768
+
+var color = d3.scale.category20();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var force = d3.layout.force()
+    .charge(-120)
+    .linkDistance(310)
+    .size([width, height]);
+
+d3.json("data/skirts.json", function(error, graph) {
+  var showDetails;
+  var hideDetails;
+	var edges = [];
+	graph.links.forEach(function(e) {
+    var sourceNode = graph.nodes.filter(function(n) { return n.id === e.source; })[0],
+        targetNode = graph.nodes.filter(function(n) { return n.id === e.target; })[0];
+
+  edges.push({source: sourceNode, target: targetNode});
+});
+
+	force
+		.nodes(graph.nodes)
+		.links(edges)
+		.start();
+
+	var link = svg.selectAll(".link")
+		.data(edges)
+	  .enter().append("line")
+		.attr("class", "link");
+
+	var node = svg.selectAll(".node")
+		.data(graph.nodes)
+	  .enter().append("circle")
+		.attr("class", "node")
+		.attr("r", function(d) { return Math.abs(d.length); })
+		.style("fill", function(d) { return color(d.color); })
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseout", mouseout)
+		.call(force.drag);
+
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 1e-6);
+
+function mouseover() {
+  div.transition()
+      .duration(500)
+      .style("opacity", 1);
+}
+
+function mouseout() {
+  div.transition()
+      .duration(500)
+      .style("opacity", 1e-6);
+}
+
+function mousemove(d){
+    var content, getImage, isIt;
+    content = 'color: ' + (d.color) + '<br>';
+    content += (d.length) + " inches long <br>";
+    isIt = function(d) {
+      if (d === false) {
+        return "not";
+      } else {
+        return "";
+      }
+    };
+    content += 'made of ' + (d.material) + '<br>';
+    content += isIt(d.lined) + ' lined <br>';
+    content += 'does ' + isIt(d.pockets) + ' have pockets <br>';
+    content += (isIt(d.wash)) + ' machine washable <br>';
+    content += (isIt(d.dry)) + ' dryable <br>';
+    content += 'made of ' + (d.material) + '<br>';
+    content += (isIt(d.petite)) + ' petite <br>';
+    getImage = function(d) {
+      return "img/" + d.id + ".jpg";
+    };
+    content += '<img src=' + getImage(d) + ' width="230" /></span></img>';
+  div
+  .html(content)
+    .style("left", (d3.event.pageX - 34) + "px")
+    .style("top", (d3.event.pageY - 12) + "px");
+};
+
+
+
+
+    // filterNodes = function(allNodes) {
+    //   var cutoff, filteredNodes, lengths;
+    //   filteredNodes = allNodes;
+    //   if (value === "long" || value === "short") {
+    //     lengths = allNodes.map(function(d) {
+    //       return d.length;
+    //     }).sort(d3.ascending);
+    //     cutoff = d3.quantile(lengths, 0.5);
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       if (value === "long") {
+    //         return n.length > cutoff;
+    //       } else if (value === "short") {
+    //         return n.length <= cutoff;
+    //       }
+    //     });
+    //   } else if (value === "a_button") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.wash === true;
+    //     });
+    //   } else if (filter === "nowashable") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.wash === false;
+    //     });
+    //   } else if (filter === "lined") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.lined === true;
+    //     });
+    //   } else if (filter === "nolined") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.lined === false;
+    //     });
+    //   } else if (filter === "pockets") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.pockets === true;
+    //     });
+    //   } else if (filter === "nopockets") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.pockets === false;
+    //     });
+    //   } else if (filter === "petite") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.petite === true;
+    //     });
+    //   } else if (filter === "nopetite") {
+    //     filteredNodes = allNodes.filter(function(n) {
+    //       return n.petite === false;
+    //     });
+    //   }
+    //   return filteredNodes;
+    // };
+
+
+	force.on("tick", function() {
+		link.attr("x1", function(d) { return d.source.x; })
+			   .attr("y1", function(d) { return d.source.y; })
+	       .attr("x2", function(d) { return d.target.x; })
+	       .attr("y2", function(d) { return d.target.y; });
+
+	  node.attr("cx", function(d) { return d.x; })
+	      .attr("cy", function(d) { return d.y; })
+	    });
+});
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</div>
 </div>
 
-  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
 
-  <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
-  <script src="js/libs/coffee-script.js"></script>
-  <script src="js/libs/d3.v2.js"></script>
-  <script src="js/Tooltip.js"></script>
-    <script src="js/libs/jquery.js"></script>
-  <script src="js/libs/bootstrap.js"></script>
-  <script src="js/bootstrap-dropdown.js"></script>
-  <script src="js/bootstrap-collapse.js"></script>
-<!--  <script src="coffee/vis.js"></script> -->
-  <script type="text/coffeescript" src="coffee/vis.coffee"></script>
-
-  <script> // Change UA-XXXXX-X to be your site's ID
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>
 
 
-  <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
-  
-  <!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-  var sc_project=8403591; 
-  var sc_invisible=1; 
-  var sc_security="445c0f52"; 
-  var scJsHost = (("https:" == document.location.protocol) ?
-  "https://secure." : "http://www.");
-</script>
-<script type="text/javascript"
-  src="http://www.statcounter.com/counter/counter.js"></script>
-<noscript><div class="statcounter"><a title="web stats"
-  href="http://statcounter.com/free-web-stats/"
-  target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/8403591/0/445c0f52/1/"
-  alt="web stats"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
-<script type="text/javascript">
-	$('.tooltip-test').tooltip();
-</script>
-</body>
-</html>
+<div class="row">&nbsp;</div>
+</div>
