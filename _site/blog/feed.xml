@@ -7,8 +7,155 @@
 		<atom:link href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Fitbit colors</title>
+				<description>&lt;p&gt;I have been a devoted Fitbit user for over a year now, and I think that as a device it is the sort of thing that a statistician would natually enjoy. It produces rich data about my day-to-day life, can be used to identify notable dates in my year, and does a great job of making me more physically active &amp;quot;on the margin.&amp;quot; But, the Fitbit app designers have made very strange color choices.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I&amp;#39;d appreciate any insight you have about why they might have chosen these colors. Here&amp;#39;s the daily trajectory:&lt;/p&gt;
+
+&lt;p&gt;When you get up and start moving, the graphs show your steps in an aqua blue that is very similar to the Fitbit dashboard color. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/Fitbit1.jpg&quot; alt=&quot;At the beginning of the day&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, as you continue, the colors move from aqua, to yellow, to orange/red. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/Fitbit2.jpg&quot; alt=&quot;A little later&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/Fitbit3.jpg&quot; alt=&quot;Getting close to the step goal&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, when you hit your step goal the color switches to green,&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/Fitbit4.jpg&quot; alt=&quot;Goal reached&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This color progression drives me a little crazy. It&amp;#39;s not in rainbow order, and it seems like it should move from red to orange, to yellow, to green/blue. In other words, the colors should indicate something about your health level. &lt;/p&gt;
+
+&lt;p&gt;Another choice I can imagine for the colors would be to code the progression I mentioned above to the progress you&amp;#39;ve made over the day. The Fitbit knows how long your typical day is, and it knows when you woke up. Maybe it could show green if you were making good progress to your goal for the day (given the time of day it was), yellow if you weren&amp;#39;t, and red if you were really behind. Then, once you hit the goal it could switch to a different color (e.g. purple) to indicate you&amp;#39;d hit it. &lt;/p&gt;
+
+&lt;p&gt;Any ideas about the color trajectory they&amp;#39;ve chosen? Do other fitness trackers use similar colors?&lt;/p&gt;
+</description>
+				<pubDate>Wed, 14 Jan 2015 00:00:00 -0800</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/visualization/2015/01/14/FitbitColors.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/visualization/2015/01/14/FitbitColors.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/Fitbit1.jpg" />
+			</item>
+		
+			<item>
+				<title>Fabric posters</title>
+				<description>&lt;p&gt;Don&amp;#39;t you hate having to take a poster to conferences? The tube is bulky, it&amp;#39;s easy to forget in the airport (or on the plane!), sometimes you get charged extra for your &amp;quot;additional carry-on&amp;quot; and often the poster doesn&amp;#39;t look great once it arrives. Plus, it&amp;#39;s expensive to print a poster, and you usually only get one use out of it. &lt;/p&gt;
+
+&lt;p&gt;Enter, the fabric poster!&lt;/p&gt;
+
+&lt;!--more--&gt; 
+
+&lt;p&gt;I learned about this wonderful option via twitter, before the Women in Statistics Conference. I was one of three women to bring fabric posters. Shown here are the other two, demonstrating one of the fantastic things about fabric posters-- they&amp;#39;re flexible!&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;Superhero statisticians to the rescue! &lt;a href=&quot;https://twitter.com/kralljr&quot;&gt;@kralljr&lt;/a&gt; &lt;a href=&quot;https://twitter.com/HelenPowell01&quot;&gt;@HelenPowell01&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/WiS2014?src=hash&quot;&gt;#WiS2014&lt;/a&gt; &lt;a href=&quot;http://t.co/uuVl05d40z&quot;&gt;pic.twitter.com/uuVl05d40z&lt;/a&gt;&lt;/p&gt;&amp;mdash; Stephanie Hicks (@stephaniehicks) &lt;a href=&quot;https://twitter.com/stephaniehicks/status/467447722703060994&quot;&gt;May 16, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Better than that, you can fold them up in your suitcase and they don&amp;#39;t wrinkle (or if they do, you can iron them!). Plus, they have the same DPI as paper, they&amp;#39;re cheaper, and you can easily re-use them (either as a poster or as a superhero cape). Still not sold? Check out these photos from IEEE Vis in Paris. The conference organizers needed to take down the posters quickly, and almost anyone with a paper poster ended up with something ripped, wrinkled, and taped to someone else&amp;#39;s poster.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; Sad paper posters, happy (folded) fabric poster. &lt;a href=&quot;https://twitter.com/hashtag/ieeevis?src=hash&quot;&gt;#ieeevis&lt;/a&gt; &lt;a href=&quot;http://t.co/VFZj2HdOuH&quot;&gt;pic.twitter.com/VFZj2HdOuH&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/533186832344055809&quot;&gt;November 14, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Okay, so how do you do it? &lt;a href=&quot;http://ascb.org/how-to-print-a-fabric-poster/&quot;&gt;This post&lt;/a&gt; is fantastic, and it&amp;#39;s where I learned how to print a fabric poster. For whatever reason, that link keeps changing, so I&amp;#39;ll summarize the main points:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;use the website &lt;a href=&quot;www.spoonflower.com&quot;&gt;spoonflower.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;choose the &amp;quot;performance knit&amp;quot; fabric, which should cost around $25&lt;/li&gt;
+&lt;li&gt;upload your poster &lt;strong&gt;as a png&lt;/strong&gt; (ignore at your peril!)&lt;/li&gt;
+&lt;li&gt;make sure it looks right, and order!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Printing and shipping is variable, but Spoonflower has a data-driven page that will tell you &lt;a href=&quot;http://help.spoonflower.com/customer/portal/articles/1173283-how-long-will-it-take-to-get-my-order-&quot;&gt;how many days production is currently taking&lt;/a&gt;. If you need your poster quickly, you can pay for rush shipping, but either way the poster will come folded up in one of those soft plastic envelopes that fits easily into any mailbox. What are you waiting for?&lt;/p&gt;
+</description>
+				<pubDate>Fri, 12 Dec 2014 00:00:00 -0800</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/12/12/FabricPosters.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/12/12/FabricPosters.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/IEEEVisPoster.jpg" />
+			</item>
+		
+			<item>
+				<title>New tools for data analysis and journalism</title>
+				<description>&lt;p&gt;While the &lt;a href=&quot;http://symposium2014.computation-and-journalism.com/&quot;&gt;Computation + Journalism Symposium&lt;/a&gt; continues to be filled with fascinating inlets to journalistic projects and innovative computational approaches (like using drones to map garbage dumps) the component that always catches my attention is the demoing of new tools for data analysis. &lt;/p&gt;
+
+&lt;p&gt;This year&amp;#39;s symposium was hosted at the &lt;a href=&quot;http://brown.columbia.edu/&quot;&gt;Brown Institute&lt;/a&gt; and was no exception-- I saw many projects that approached elements of my &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/FOSP.html&quot;&gt;theory about the future of statistical programming&lt;/a&gt; from different directions.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Many of the data analysis projects were discussed on a panel about journalistic platforms. The panelists were&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://sites.google.com/site/gideonmann/&quot;&gt;Gideon Mann&lt;/a&gt;, of Bloomberg, speaking about &lt;a href=&quot;https://colaboratory.jupyter.org/welcome/&quot;&gt;coLaboratory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kareemamin.com/&quot;&gt;Kareem Amin&lt;/a&gt;, of &lt;a href=&quot;http://newscorp.com/&quot;&gt;NewsCorp&lt;/a&gt;, talking about a forthcoming tool that uses custom HTML tags&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://brianabelson.com/&quot;&gt;Brian Abelson&lt;/a&gt;, of &lt;a href=&quot;http://enigma.io/&quot;&gt;enigma.io&lt;/a&gt; and the &lt;a href=&quot;http://towcenter.org/&quot;&gt;Tow Center&lt;/a&gt;, on &lt;a href=&quot;http://nytlabs.github.io/streamtools/&quot;&gt;streamtools&lt;/a&gt; from the &lt;a href=&quot;http://nytlabs.com/&quot;&gt;NYT R&amp;amp;D labs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All the tools spoke to the ideas I am engaging with in my dissertation, which I found very encouraging. The context that I have been thinking most deeply about is the high school data science classroom, much like the &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/mobilize.html&quot;&gt;Mobilize&lt;/a&gt; project, which I formerly worked on. &lt;/p&gt;
+
+&lt;p&gt;However, data journalism is the other context that I had been hoping to find relevance in. The fact that the panelists were engaging with the same issues, of being able to get started quickly but develop new modules as needed, of publishability and the need for interactivity, suggests that the two seemingly-different contexts (high school students/teachers, and data journalists) might not be that different in their needs after all. &lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;coLaboratory&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;I had asked my twitterverse about coLaboratory in September,&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;Saw this article on CoLaboratory, &lt;a href=&quot;http://t.co/MylVNfZckI&quot;&gt;http://t.co/MylVNfZckI&lt;/a&gt; but would love to hear from people who use it. &lt;a href=&quot;https://twitter.com/hmason&quot;&gt;@hmason&lt;/a&gt;?&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/515557079642169344&quot;&gt;September 26, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;but got no response except for &lt;a href=&quot;https://twitter.com/hmason&quot;&gt;Hilary Mason&lt;/a&gt; responding that she didn&amp;#39;t know the project and didn&amp;#39;t know why her photo was used on the article. &lt;/p&gt;
+
+&lt;p&gt;So, it was great to hear about the project straight from the horse&amp;#39;s mouth. &lt;a href=&quot;https://colaboratory.jupyter.org/welcome/&quot;&gt;coLaboratory&lt;/a&gt; seems to be part of &lt;a href=&quot;http://jupyter.org/&quot;&gt;project Jupyter&lt;/a&gt;, and it offers an iPython notebook that allows you to collaborate with others. Sadly, all their documentation seems to be technical, without any of the &amp;quot;so what&amp;quot; that I look for when learning about a tool. I did find a google research &lt;a href=&quot;http://googleresearch.blogspot.com/2014/08/doing-data-science-with-colaboratory.html&quot;&gt;blog post&lt;/a&gt; which gives a little more context and a few examples. &lt;/p&gt;
+
+&lt;p&gt;Essentially, coLaboratory can produce interactive reports (meaning, with sliders and buttons for users to interact with). It also has some focus on making it easy to develop the interface, using simple commands to invoke interactive controls. However, once a user modifies a control they need to re-click on the &amp;quot;run&amp;quot; button to see the updated information. This is my main complaint with iPython notebooks in general, so it&amp;#39;s too bad that the version for creating interactive documents doesn&amp;#39;t manage to jump that hurdle.  The other problem is that the source code really isn&amp;#39;t &lt;em&gt;that&lt;/em&gt; readable when you get down to it.&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Thelma&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The tool that Amin was talking about had different advantages. First, it is a click-driven interface, so you click on data inputs and outputs and see the results in the browser. By allowing users to build analysis in this way, you make it easier for novices to get started easily while still making nice results. The product he was talking about is based on custom HTML tags, using &lt;a href=&quot;https://www.polymer-project.org/&quot;&gt;Polymer&lt;/a&gt; web components. &lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t think that Amin wanted the name of the project to be made public yet, but he showed a demo and several people tweeted out the &lt;a href=&quot;http://thelmanews.github.io/thelma-component-demo/data-demo.html&quot;&gt;link&lt;/a&gt;,
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;As you do data analysis it updates the webpage: &lt;a href=&quot;http://t.co/isWky1uNAV&quot;&gt;http://t.co/isWky1uNAV&lt;/a&gt; -&lt;a href=&quot;https://twitter.com/kareemamin&quot;&gt;@kareemamin&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/cj2014?src=hash&quot;&gt;#cj2014&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nick Diakopoulos (@ndiakopoulos) &lt;a href=&quot;https://twitter.com/ndiakopoulos/status/525677010816090112&quot;&gt;October 24, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;and it appears to be called Thelma. &lt;/p&gt;
+
+&lt;p&gt;Obviously, Thelma needs a lot more work before it&amp;#39;s really made public. It&amp;#39;s not clear how to begin if you want to do something that doesn&amp;#39;t use the data and chart types already on the demo page, and even those aren&amp;#39;t exactly transparent. But, there&amp;#39;s a lot of potential here. The resulting charts are somewhat interactive, and updating happens as soon as you modify the inputs/outputs. &lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;streamtools&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Then, &lt;a href=&quot;http://brianabelson.com/&quot;&gt;Brian Abelson&lt;/a&gt; spoke about &lt;a href=&quot;http://nytlabs.github.io/streamtools/&quot;&gt;streamtools&lt;/a&gt;. Abelson was not involved with the development of streamtools, but he found it useful enough that he was willing to be its advocate on the panel. streamtools is a dataflow programming environment for working with live streaming data. Rather than waiting for data to be presented as a flat file, the lab wanted to allow users to deal directly with data as it streams in. Since I work with the Communications Design Group, it immediately made me think of Dan Ingalls&amp;#39; &lt;a href=&quot;https://en.wikipedia.org/wiki/Fabrik_(software)&quot;&gt;fabrik&lt;/a&gt; (a visual programming environment in which users &amp;quot;wired&amp;quot; components together), but of course there is a rich history of this sort of blocks programming environments. &lt;/p&gt;
+
+&lt;p&gt;The tool does a great job of making explicit the links between components in the system, and giving a visual hint to the data flowing through the system. However, it seems that the intended user of the system is someone who knows quite a bit about data analysis and programming. The blocks do not cue you toward their behavior, and the &amp;quot;parts bin&amp;quot; (to steal a &lt;a href=&quot;http://lively-web.org/welcome.html&quot;&gt;Lively&lt;/a&gt; term) is full of consise but not extremely descriptive labels. &lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;IEEE programming language rating&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The other project (not from the panel) that caught my eye was &lt;a href=&quot;http://www.nickdiakopoulos.com/&quot;&gt;Nick Diakopoulos&lt;/a&gt;&amp;#39; interactive &lt;a href=&quot;http://spectrum.ieee.org/computing/software/top-10-programming-languages&quot;&gt;ranking of programming languages&lt;/a&gt; for IEEE Spectrum. Sadly, it seems like the &lt;a href=&quot;http://spectrum.ieee.org/static/interactive-the-top-programming-languages&quot;&gt;interactive version&lt;/a&gt; is behind a paywall, but it&amp;#39;s worth the 99¢ to see it. &lt;/p&gt;
+
+&lt;p&gt;The ranking is based on a number of factors, such as position in google results, number of github repositories, and questions on stackoverflow. The interactive tool lets you see four different versions of the rating: IEEE Spectrum, Trending, Jobs, and Open. You can also filter the languages shown to only display Mobile, Web, Enterprise, or Embedded languages. &lt;/p&gt;
+
+&lt;p&gt;But the real beauty in this project is that you can manipulate the parameters used in the rankings to create your own version. If you don&amp;#39;t believe that google page rank is a good measure of a programming language&amp;#39;s ubiquity, you can drag that slider down or even zero it out. This lets you modify the procedure used to create the ranking, and it allows you to perform ad hoc sensitivity analysis. Many changes to parameters do not change the rankings, which could make a reader more confident in the ranking as provided by the IEEE. &lt;/p&gt;
+
+&lt;p&gt;In fact, the list is so robust to parameter manipulation that it was hard for me to tell if the ranking was being updated dynamically, or if you need to click the &amp;quot;Save as Custom&amp;quot; button to see the results! However, they do provide a great &amp;quot;Make a Comparison&amp;quot; button, which shows a sort of slopegraph/bumps chart (see &lt;a href=&quot;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk&quot;&gt;Tufte&lt;/a&gt;) displaying which languages were displaced and to where.&lt;/p&gt;
+
+&lt;p&gt;This article/interactive can&amp;#39;t really be described as a &amp;quot;tool,&amp;quot; per se, but I loved seeing an example of analysis where the underlying data work was exposed. This is the sort of &amp;quot;interaction all the way down&amp;quot; that I think is the future of data analysis. Not only should creators of data products be able to interact with their work as they produce it, consumers of those products should have the opportunity to deeply critique the process by viewing a transparent representation of the analysis process. &lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Overall&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;I am so invigorated by everything that I saw at the symposium. It&amp;#39;s such a treat to be around people who are thinking about some of the same issues that I am. &lt;/p&gt;
+
+&lt;p&gt;If you want to learn more about any of these projects, they are almost all forkable on github, which is another one of the principles that I think all good software should adhere to! What other interesting projects have you seen recently?&lt;/p&gt;
+</description>
+				<pubDate>Mon, 27 Oct 2014 00:00:00 -0700</pubDate>
+				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</link>
+				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</guid>
+				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/2014-10-27 10.10.06.jpg" />
+			</item>
+		
+			<item>
 				<title>Kid Pix</title>
-				<description>&lt;p&gt;Since a lot of the &lt;a href=&quot;datascience.la&quot;&gt;datascience.la&lt;/a&gt; meetups are held at &lt;a href=&quot;http://www.crosscamp.us/&quot;&gt;Cross Campus&lt;/a&gt;, I joined their newletter, and I&amp;#39;m so glad I did-- it leads me to all sorts of cool things! One such event was a talk by &lt;a href=&quot;http://red-green-blue.com/about/&quot;&gt;Craig Hickman&lt;/a&gt; about the history and success of &lt;a href=&quot;http://red-green-blue.com/kid-pix-the-early-years/&quot;&gt;Kid Pix&lt;/a&gt;. If you weren&amp;#39;t a child in the &amp;#39;90s, Kid Pix was a fabulously open-ended paint program designed for kids.&lt;/p&gt;
+				<description>&lt;p&gt;Since a lot of the &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt; meetups are held at &lt;a href=&quot;http://www.crosscamp.us/&quot;&gt;Cross Campus&lt;/a&gt;, I joined their newletter, and I&amp;#39;m so glad I did-- it leads me to all sorts of cool things! One such event was a talk by &lt;a href=&quot;http://red-green-blue.com/about/&quot;&gt;Craig Hickman&lt;/a&gt; about the history and success of &lt;a href=&quot;http://red-green-blue.com/kid-pix-the-early-years/&quot;&gt;Kid Pix&lt;/a&gt;. If you weren&amp;#39;t a child in the &amp;#39;90s, Kid Pix was a fabulously open-ended paint program designed for kids.&lt;/p&gt;
 
 &lt;p&gt;The talk was a great mix of nostalgia and inspiration for me. I loved hearing about the principles that guided Hickman as he worked, like the idea of contextual menus, so kids never had to look in the menu bar. I was also brought back to my childhood, creating artwork, menus for pretend restaurants, birthday cards, notes, and much more, all in Kid Pix. &lt;/p&gt;
 
@@ -51,7 +198,7 @@
 		
 			<item>
 				<title>Data Science LA</title>
-				<description>&lt;p&gt;I&amp;#39;m now involved in the recently-launched &lt;a href=&quot;datascience.la&quot;&gt;datascience.la&lt;/a&gt; blog. While you&amp;#39;ll probably be drawn to the site for the &lt;a href=&quot;http://datascience.la/category/user-conference/sessions/&quot;&gt;useR! conference session videos&lt;/a&gt;, &lt;a href=&quot;http://datascience.la/category/user-conference/interviews/&quot;&gt;interviews with data scientists&lt;/a&gt;, and meetup announcements, there&amp;#39;s going to be much more!&lt;/p&gt;
+				<description>&lt;p&gt;I&amp;#39;m now involved in the recently-launched &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt; blog. While you&amp;#39;ll probably be drawn to the site for the &lt;a href=&quot;http://datascience.la/category/user-conference/sessions/&quot;&gt;useR! conference session videos&lt;/a&gt;, &lt;a href=&quot;http://datascience.la/category/user-conference/interviews/&quot;&gt;interviews with data scientists&lt;/a&gt;, and meetup announcements, there&amp;#39;s going to be much more!&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -63,7 +210,7 @@
 
 &lt;p&gt;Finally, I&amp;#39;ll be giving a talk at this month&amp;#39;s DataVis LA meetup, &lt;a href=&quot;http://datascience.la/datavis-la-meetup-eyeo-festival-highlights-august-26/&quot;&gt;Eyeo Festival Highlights&lt;/a&gt; on August 26th. Come by Cornerstone OnDemand to hear me talk about the things that inspired me the most from the &lt;a href=&quot;http://eyeofestival.com/&quot;&gt;eyeo festival&lt;/a&gt;. &lt;/p&gt;
 
-&lt;p&gt;If you want to keep up with &lt;a href=&quot;datascience.la&quot;&gt;datascience.la&lt;/a&gt;, you can follow along via &lt;a href=&quot;https://twitter.com/wwwDSLA&quot;&gt;twitter&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/user/DataScienceLA&quot;&gt;youtube&lt;/a&gt;, add us to your favorite &lt;a href=&quot;http://datascience.la/feed&quot;&gt;rss&lt;/a&gt; reader, or just drop by &lt;a href=&quot;datascience.la&quot;&gt;the site&lt;/a&gt;. I&amp;#39;m excited to be a part of it!&lt;/p&gt;
+&lt;p&gt;If you want to keep up with &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt;, you can follow along via &lt;a href=&quot;https://twitter.com/wwwDSLA&quot;&gt;twitter&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/user/DataScienceLA&quot;&gt;youtube&lt;/a&gt;, add us to your favorite &lt;a href=&quot;http://datascience.la/feed&quot;&gt;rss&lt;/a&gt; reader, or just drop by &lt;a href=&quot;http://datascience.la&quot;&gt;the site&lt;/a&gt;. I&amp;#39;m excited to be a part of it!&lt;/p&gt;
 </description>
 				<pubDate>Thu, 14 Aug 2014 00:00:00 -0700</pubDate>
 				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/teaching/2014/08/14/DataScienceLA.html</link>
@@ -331,113 +478,6 @@
 				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/papers/2014/05/16/That_Paper.html</link>
 				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/papers/2014/05/16/That_Paper.html</guid>
 				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/overviewperm.jpg" />
-			</item>
-		
-			<item>
-				<title>Repping Hadley at DataFest</title>
-				<description>&lt;p&gt;This weekend, we had our fourth annual &lt;a href=&quot;http://datafest.stat.ucla.edu/groups/datafest/&quot;&gt;DataFest&lt;/a&gt; event at UCLA. DataFest is a weekend-long data hackathon, where we give students an interesting dataset, plenty of snacks, and a space to work, and they try to come up with insights. This was the third year I attended, and it seems to just get bigger and better every time. We had about 140 undergraduates from all around Southern California this year. Groups came from UCLA, USC, Cal Poly SLO, UC Riverside, and Pomona College. Our data sponsor was &lt;a href=&quot;http://www.gridpoint.com/&quot;&gt;GridPoint&lt;/a&gt;, an energy-management company. They provide a service that is similar to the &lt;a href=&quot;https://nest.com/&quot;&gt;Nest&lt;/a&gt; (my simplistic interpretation), and they gave us tons of data for the students to analyze. I signed an NDA, so I shouldn&amp;#39;t be very specific about the contents of their proprietary dataset, but students were able to find tons of cool insights.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.stat.ucla.edu/~amelia.mcnamara/img/DataFest2014.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;DataFest 2014 students&quot;&gt;&lt;/a&gt;
-&lt;em&gt;Our 2014 DataFest contestants&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;My personal favorite project (and Best Visualization prize winner) was a group who found and analyzed a trend in misusing AC, which they defined as running the air conditioner when outside temperatures were below some cutoff, I believe 60 degrees. Really, all the projects were fantastic.&lt;/p&gt;
-
-&lt;p&gt;As a graduate student &amp;quot;consultant&amp;quot; at DataFest, my responsibility was to float around and help the contestants. Since most of the UCLA participants have had me as a TA in a class where we&amp;#39;re using R, I got a lot of programming questions. Invariably, when students were really stuck on something it was a hard problem (which was bad for me looking like a superhero, but means that our students are getting the hang of R!). &lt;/p&gt;
-
-&lt;p&gt;During the weekend, I realized that I was repping &lt;a href=&quot;http://had.co.nz/&quot;&gt;Hadley Wickham&lt;/a&gt;&amp;#39;s packages even harder than usual. For example, students kept coming to me with incredibly hairy code, filled with multiple &lt;code&gt;for&lt;/code&gt; loops using explicit indices and making matches over many factor levels, asking for help debugging why it wasn&amp;#39;t doing what they wanted. Although I would attempt to talk through their code with them, it was usually beyond me getting up to speed quickly enough to catch what was probably a small typo somewhere. Instead, I constantly suggested &lt;a href=&quot;http://plyr.had.co.nz/&quot;&gt;plyr&lt;/a&gt;, and actually became pretty good at it over the weekend. &lt;code&gt;ddply()&lt;/code&gt; is such a heavy-hitter! There were definitely a few &amp;quot;whoa&amp;quot;s from students who hadn&amp;#39;t seen the power of plyr before. Most of my students already know &lt;a href=&quot;http://ggplot2.org/&quot;&gt;ggplot2&lt;/a&gt;, but they haven&amp;#39;t gone beyond the basic geoms. I helped another group use &lt;code&gt;geom_polygon()&lt;/code&gt; to show an additional layer of data in their plot. Finally, the data was all time stamped, and although the base R functions like &lt;code&gt;as.POSIX()&lt;/code&gt; would work, I saw a lot of code trying to make character matches to pull months or years from the data. &lt;a href=&quot;http://cran.r-project.org/web/packages/lubridate/index.html&quot;&gt;lubridate&lt;/a&gt; to the rescue! &lt;/p&gt;
-
-&lt;p&gt;In fact, I must have a standard line on Hadley, because at one point a group of students called me over to join a conversation with some of our sponsors from &lt;a href=&quot;http://www.summitllc.us/&quot;&gt;Summit Consulting&lt;/a&gt;. &amp;quot;Amelia, what do you think about Hadley Wickham?&amp;quot; they asked. &amp;quot;He&amp;#39;s great!&amp;quot; I said. &amp;quot;He writes all the best packages!&amp;quot; This got a big laugh, to the point that I think they&amp;#39;d made a bet on what I&amp;#39;d say. &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt; was a generous sponsor of the event, but I think next year they should send some visitors! At the very least, we need to bring back our mini-seminar series during DataFest, and do demos of some of these useful packages. &lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;For more on DataFest, check out our &lt;a href=&quot;https://twitter.com/ucladatafest&quot;&gt;twitter&lt;/a&gt; (and the hashtag &lt;a href=&quot;https://twitter.com/search?q=%23datafest&amp;amp;src=hash&quot;&gt;#datafest&lt;/a&gt;), as well as this &lt;a href=&quot;http://fivethirtyeight.com/datalab/the-students-most-likely-to-take-our-jobs/&quot;&gt;great article&lt;/a&gt; from FiveThirtyEight. The article mentions that there were three other DataFests this year, at &lt;a href=&quot;http://stat.duke.edu/datafest&quot;&gt;Duke&lt;/a&gt;, the &lt;a href=&quot;http://www.science.smith.edu/departments/math/datafest/&quot;&gt;Five Colleges&lt;/a&gt; and &lt;a href=&quot;http://orfe.princeton.edu/datafest/&quot;&gt;Princeton&lt;/a&gt;. Next year, we&amp;#39;re hoping to go even more national, with support from the American Statistical Association. I can&amp;#39;t wait to see where it goes in the future!&lt;/p&gt;
-</description>
-				<pubDate>Mon, 05 May 2014 00:00:00 -0700</pubDate>
-				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/05/05/Repping-Hadley.html</link>
-				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/misc/2014/05/05/Repping-Hadley.html</guid>
-				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/DataFest2014.jpg" />
-			</item>
-		
-			<item>
-				<title>Thoughts from NICAR 2014: process and content</title>
-				<description>&lt;p&gt;One of the things I was most interested in learning about at NICAR was the processes and tools that journalists use when they&amp;#39;re doing data analysis. And the conference did not disappoint. I feel like I came away with a bunch of insight about how things are typically done, and a couple great places where crossover could be even more useful. 
-&amp;lt;!--more--&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Data diaries&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Throughout the conference, I heard several people emphasize the need for a &amp;quot;data diary&amp;quot; to document the process of creating data-driven journalism. This is great! We should all strive to document our work to capture our own process and remember what we do. However, it seems like journalists have a workflow something like, as you do your analysis in Excel, write down in Word what you did. Others write longhand on a piece of paper. But, it would be much better to have the documentation of the process actually &lt;strong&gt;be&lt;/strong&gt; the process. For example, if you do your analysis in a language like python or R, you don&amp;#39;t have to write out &amp;quot;I edited the third row, second column to say 10 instead of 10000.&amp;quot; Rather, the code both does the action and documents what happened. Obviously, commenting is important so that you remember what all your hacks were doing, but using a language rather than a graphical user interface makes the process so much more documented. In fact, you can wrap your code and comments in a narrative, using tools like the &lt;a href=&quot;http://ipython.org/notebook&quot;&gt;iPython&lt;/a&gt; notebook or &lt;a href=&quot;http://www.rstudio.com/ide/docs/authoring/using_markdown&quot;&gt;R Markdown&lt;/a&gt;.  &lt;/p&gt;
-
-&lt;p&gt;In fact, one of my dreams for data journalism has been that all data-driven stories would be accompanied by a version of the data cleaning and analysis process. This documentation would be available to readers, who could modify and &amp;quot;audit&amp;quot; the code/process to see what their changes do. In my vision, you could also view the raw data, to see where everything started. However, hearing it from the journalistic prospective, that&amp;#39;s probably an unreasonable vision. Sarah Cohen was saying that if you wanted to open-source data, you would need to verify &lt;strong&gt;every cell&lt;/strong&gt; in the data set, and have an editor go through it, too. It&amp;#39;s hard for me to imagine &amp;quot;editing&amp;quot; a data set like that, but I can see why it&amp;#39;s necessary. If you did something wrong in your data set, it may not make any impact on the final result (that one value probably isn&amp;#39;t throwing off your mean or plot if it&amp;#39;s not an outlier) but if the public could inspect the data cell by cell, it could be a big deal to have a number wrong. I need to think more about this and see if there&amp;#39;s a solution. If you think of one, let me know in the comments!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Working headlines&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Another piece of process that I heard referenced several times in the sessions on &amp;quot;The Data-Driven Story&amp;quot; was the conversation starter, &amp;quot;Tell me what your working headline is. Tell me what your first two paragraphs are.&amp;quot; I work with a lot of education experts, who like the strategy of &amp;quot;sentence starters&amp;quot; which are phrases that help get students speaking in the language of the discipline, while guiding the conversation. This is similar. It&amp;#39;s a simple strategy, but it would be easy for an editor, even one not experienced with data, to understand the response from their journalist. It takes the conversation out of the realm of the data and back into the context. I think it could be a useful conversation (or &lt;a href=&quot;http://en.wikipedia.org/wiki/Rubber_duck_debugging&quot;&gt;rubber-duck debugging&lt;/a&gt; topic) for statisticians and data analysts to work through. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lightning talks&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;On a more meta level, I thought the exercise of lightning talks was extremely effective. The space was large enough for almost every attendee of the conference to be included, the talks were short enough that they could only tantalize, never bore, and the material was surprisingly complex. The event was kicked off with some stand-up comedy by &lt;a href=&quot;http://www.andymboyle.com/&quot;&gt;Andy Boyle&lt;/a&gt;, who I&amp;#39;ve come to discover is just as funny on &lt;a href=&quot;https://twitter.com/andymboyle&quot;&gt;twitter&lt;/a&gt; talking about journalism. &lt;/p&gt;
-
-&lt;p&gt;For me, the best three lighting talks were by &lt;a href=&quot;http://lenagroeger.com/&quot;&gt;Lena Groeger&lt;/a&gt;, &lt;a href=&quot;http://www.chasedavis.com/&quot;&gt;Chase Davis&lt;/a&gt; and &lt;a href=&quot;http://palewi.re/who-is-ben-welsh/&quot;&gt;Ben Welsh&lt;/a&gt;. Lena talked about &amp;quot;wee things,&amp;quot; which I thought was a nice contrast to &amp;quot;big data.&amp;quot; Some of the wee things she discussed were small multiples, tiny text, mini maps,  iity-bitty images, and sparklines. The entire talk seems to be available &lt;a href=&quot;http://vimeo.com/91429794&quot;&gt;online&lt;/a&gt; if you want to check it out yourself. She also recommended the book &lt;a href=&quot;http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235&quot;&gt;The Information&lt;/a&gt; which I&amp;#39;m really looking forward to getting into. Chase essentially ran through my entire statistics graduate education in 5 minutes, explaining five algorithms, including Latent Dirichelt Allocation and the Naive Bayes Classifier. The &lt;a href=&quot;https://github.com/cjdd3b/nicar2014/tree/master/lightning-talk&quot;&gt;code&lt;/a&gt; is on github, although the presentation isn&amp;#39;t working for me. He apparently gave a similar talk the previous year, so if you want to catch up with &lt;strong&gt;everything&lt;/strong&gt; I&amp;#39;ve learned in my Phd, check out his &lt;a href=&quot;https://github.com/cjdd3b/nicar2013&quot;&gt;code&lt;/a&gt; and learn about Principal Component Analysis, Random Forests, and more. Ben did a talk called &amp;quot;You Must Learn,&amp;quot; although what stuck with me the most (more than what I was supposed to learn, oops) was the graphic styling of his presentation. Each slide was like a comic encapsulation of what he was talking about, and not in a dumb clipart way. The video of the talk is &lt;a href=&quot;http://palewi.re/talks/&quot;&gt;up&lt;/a&gt; too. &lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m on the planning committee for useR! 2014, and I&amp;#39;m hoping that our lightning talks can be even half as awesome as the ones from NICAR. You heard me, statisticians, step it up!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lyra&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;More of a tool than a process, but I was thrilled to be able to attend a live demo of &lt;a href=&quot;http://idl.cs.washington.edu/projects/lyra/&quot;&gt;Lyra&lt;/a&gt; with &lt;a href=&quot;http://arvindsatya.com/&quot;&gt;Arvind Satyanarayan&lt;/a&gt;, one of the creators of the project. Lyra is fascinating to me because it&amp;#39;s open source, it&amp;#39;s working with an existing framework, and it just makes extremely powerful data visualization tools available to people without much training necessary. If you haven&amp;#39;t already seen it, check out the gallery of plots they&amp;#39;ve been able to reproduce with their tool. &lt;/p&gt;
-
-&lt;p&gt;*This is my third (and final) post about NICAR 2014. The other two are &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
-</description>
-				<pubDate>Wed, 16 Apr 2014 00:00:00 -0700</pubDate>
-				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/16/NICARthoughtsPt3.html</link>
-				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/16/NICARthoughtsPt3.html</guid>
-				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
-			</item>
-		
-			<item>
-				<title>Thoughts from NICAR 2014: data, where does it come from?</title>
-				<description>&lt;p&gt;One of the strands I followed most closely at NICAR was the way people get and use data. Here are some of the things that surprised me or intersect with the stuff I&amp;#39;m thinking about for my dissertation.
-&amp;lt;!--more--&amp;gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Data resources&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I was surprised by the data resources that I hadn&amp;#39;t heard about before. NICAR maintains a &lt;a href=&quot;http://www.ire.org/nicar/database-library/&quot;&gt;list of databases &lt;/a&gt; that are available for purchase. These datasets don&amp;#39;t seem to be that expensive, and are pretty interesting looking. Anything from &lt;a href=&quot;http://ire.org/nicar/database-library/databases/boat-registration/&quot;&gt;boat registration&lt;/a&gt; to something called the &lt;a href=&quot;http://ire.org/nicar/database-library/databases/social-security-administration-death-master-file/&quot;&gt;Social Security Death Master File&lt;/a&gt;, which sounds varying degrees of sinister depending on where you put the emphasis. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;FOIA requests&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The most useful thing I came away with was the realization that I, as a private citizen, am entitled to make FOIA (Freedom of Information Act) requests. If the government, especially the Federal government, is keeping data, I can request and receive it. I&amp;#39;ve been given to believe that this can be a difficult and slow process, but I&amp;#39;m looking forward to trying it out. One of the tools that people were talking about excitedly at NICAR was the &lt;a href=&quot;https://www.foiamachine.org/&quot;&gt;FOIA machine&lt;/a&gt; which automates your FOIA requests. &lt;/p&gt;
-
-&lt;p&gt;When you make FOIA requests, it&amp;#39;s best if you have some idea of what you&amp;#39;re looking for, but nothing too specific. If it&amp;#39;s clear the story you&amp;#39;re pursuing when you make a request, it might be denied. But, you need to know that the data exist to be able to ask for them. Apparently this is very &amp;quot;journalism 101,&amp;quot; but blank government forms can give a good hint as to what data the government is collecting. Additionally, you can FOIA a &amp;quot;records layout&amp;quot; for a database, so that you know what the variables are before you make your official request for the data. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Population, not a sample&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;One statistical idea that I hadn&amp;#39;t connected the dots on is that journalists often are working with data that is not a sample. This is obviously a problem that many &amp;quot;data scientists&amp;quot; encounter, because data are coming from sources like the internet, but in the case of government data, if you get the entire data set, it should be the entire population, &lt;strong&gt;not&lt;/strong&gt; a sample. &lt;/p&gt;
-
-&lt;p&gt;Obviously, this changes the sorts of analysis tasks you might want to do. If you have the population, do you really need statistics? &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Data are created by humans&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Speakers seemed to understand that all data had been touched by human hands &amp;quot;at least once in the process,&amp;quot; but I thought that their understanding could have gone deeper. If you think that some data you receive was created completely by a machine, you&amp;#39;re mistaken! Even if it&amp;#39;s an automated process, humans designed the hardware, the software, the programming language, the data collection algorithm, the data types for collection, etc. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Physical metaphors for data analysis&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I also went to a session on &amp;quot;When Data Don&amp;#39;t Exist&amp;quot; where several journalists talked about situations where they weren&amp;#39;t able to find existing datasets and had to create them themselves. There were a couple examples given in the session, especially by &lt;a href=&quot;https://twitter.com/sarahcnyt&quot;&gt;Sarah Cohen&lt;/a&gt;, that felt like a physical metaphor for data analysis more generally. Several times through her career, Cohen had to go through boxes of paper to turn them into a dataset. At first, she was going through the boxes consecutively, but she learned that you have different questions of the data once you&amp;#39;ve completed the first pass. Instead, she recommends trying to go through the boxes randomly. This will help you get a sense of the data. Use 2-3 weeks for your first stab, and only then make an estimate of how the rest of the process will take. &lt;/p&gt;
-
-&lt;p&gt;This is a great metaphor. It drives home the idea that going through data changes how you think about data. And usually, the first time you collect data (whether by going through boxes or deploying a participatory sensing campaign) you won&amp;#39;t get your collection schema exactly right. You&amp;#39;ll look back at your data and say, if only I had [blank]. By making it explicit that you&amp;#39;re doing a first pass, not trying to do the whole thing at once, you might be able to escape the sinking feeling that comes after you&amp;#39;ve put too much time into something that&amp;#39;s not going to work. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Data that journalists encounter&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;It came up again and again that much of the data that journalists encounter comes in the form of a pdf. Apparently, it&amp;#39;s a common tactic for an agency to respond to a FOIA request by sending a pdf of data instead of the raw data file (csv, json, xls, etc). This makes it much harder to use the data, because you need to either go through it manually and re-enter the data (making pdfs the computer equivalent of Cohen&amp;#39;s boxes) or use some sort of technological solution. I heard OCR (optical character recognition) being thrown around quite a bit, but OCR really only helps you get text that was scanned into a digital format. Past that, the solution that had people talking at NICAR was &lt;a href=&quot;http://tabula.nerdpower.org/&quot;&gt;tabula&lt;/a&gt;. Tabula turns digital data that seems unstructured to humans into structured data tables, saving you the work of typing it in yourself.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is the second in a series of posts about NICAR. The first is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html&quot;&gt;here&lt;/a&gt; and the next is &lt;a href=&quot;http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt3.html&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-</description>
-				<pubDate>Tue, 08 Apr 2014 00:00:00 -0700</pubDate>
-				<link>http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/08/NICARthoughtsPt2.html</link>
-				<guid isPermaLink="true">http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/04/08/NICARthoughtsPt2.html</guid>
-				<media:thumbnail url="http://www.stat.ucla.edu/~amelia.mcnamara/img/" />
 			</item>
 		
 	</channel>

@@ -1,7 +1,7 @@
 name: Amelia McNamara
 description: Personal website of Amelia McNamara, statistics PhD candidate at UCLA
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 baseurl: "http://www.stat.ucla.edu/~amelia.mcnamara"
 permalink: blog/:categories/:year/:month/:day/:title.html
 excerpt_separator: <!--more-->

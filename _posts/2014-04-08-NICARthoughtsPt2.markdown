@@ -6,6 +6,7 @@ categories: conferences
 ---
 
 One of the strands I followed most closely at NICAR was the way people get and use data. Here are some of the things that surprised me or intersect with the stuff I'm thinking about for my dissertation.
+
 <!--more--> 
 
 **Data resources**
