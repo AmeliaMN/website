@@ -1,7 +1,7 @@
 name: Amelia McNamara
-description: Personal website of Amelia McNamara, statistics PhD candidate at UCLA
+description: Personal website of Amelia McNamara, statistical and data sciences professor at Smith College.
 markdown: redcarpet
 highlighter: pygments
-baseurl: "http://www.stat.ucla.edu/~amelia.mcnamara"
+baseurl: "http://www.science.smith.edu/~amcnamara"
 permalink: blog/:categories/:year/:month/:day/:title.html
 excerpt_separator: <!--more-->
