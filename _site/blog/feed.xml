@@ -7,6 +7,184 @@
 		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Contextual notes</title>
+				<description>&lt;p&gt;Because I tend to select books by how thick they are (super-fast-reader problems) and I am a glutton for punishment, I have been slowly working my way through two of David Foster Wallace&amp;#39;s books concurrently. I am reading a paper copy of Infinite Jest, but the Kindle edition of The Pale King. These contrasting experiences got me thinking about contextual notes, particularly in electronic media. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;For Infinite Jest, I have two bookmarks, one for my place in the main text and one for my place in the endnotes. In fact, I sometimes have to employ a third bookmark because many of the endnotes have their own footnotes, which can run on for pages. &lt;/p&gt;
+
+&lt;p&gt;In contrast, the Kindle edition of The Pale King lets me click on a hyperlink to the endnote, and if there is a footnote in the endnote I can click that link, and on and on. Once I have reached the end of the rabbit hole, I can use the back button to step my way out of the layers and eventually find my way back to the text, just where I left off. &lt;/p&gt;
+
+&lt;p&gt;Especially for an electronic edition, where I couldn&amp;#39;t keep my thumb in the back of the book, being able to travel through the footnotes in this way has been invaluable. But, the paired experiences made me think more about how context is provided in electronic mediums. &lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;http://escholarship.org/uc/item/1mm9303x&quot;&gt;my dissertation&lt;/a&gt;, I wrote in an offhand way that &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;interactive articles on the web can be updated depending 
+on parameter manipulations, and some news outlets have 
+begun including contextual information in their articles. 
+Rather than hyperlinks taking the user away from the page 
+they were reading,  New York Magazine includes ephemeral popovers, 
+and Medium has instituted in-context comments linked to a 
+particular paragraph or sentence.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In this quote, I was trying to refer to the sorts of contextual information that can be access unobtrusively if a reader wants to see it, or ignored if they don&amp;#39;t. Of course, I didn&amp;#39;t include a citation, and when I went back looking for these features, I found it hard to track them down. In fact, at one point my googling returned my own dissertation. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve now discovered that while Medium has retained in-context comments they have changed the default for these notes to be private. This really reduces the usefulness of the feature, and I was baffled when I went back to look for it. Finally, I saw a tweet from &lt;a href=&quot;https://twitter.com/memotv&quot;&gt;Memo Akten&lt;/a&gt; confirming that they used to have such a feature, but recently removed it. &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-partner=&quot;tweetdeck&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I guess y&amp;#39;all didn&amp;#39;t notice &lt;a href=&quot;https://twitter.com/Medium&quot;&gt;@medium&lt;/a&gt; made side-notes private? Little notes to clarify, provide insight now not visible to public. how lovely.&lt;/p&gt;&amp;mdash; Memo Akten (@memotv) &lt;a href=&quot;https://twitter.com/memotv/status/662253919708520448&quot;&gt;November 5, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;For more about the original functionality, see this 2013 &lt;a href=&quot;https://medium.com/@ev/why-medium-notes-are-different-and-how-to-use-them-well-5972c72b18f2&quot;&gt;post on Medium&lt;/a&gt;. In it, the author (and CEO of Medium?!) writes that the notes can be used &amp;quot;as footnotes.&amp;quot; However, with the defaults changed, that&amp;#39;s not true until the original author goes back and changes the settings one by one. &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-partner=&quot;tweetdeck&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/xululululuuum&quot;&gt;@xululululuuum&lt;/a&gt; &lt;a href=&quot;https://twitter.com/Medium&quot;&gt;@Medium&lt;/a&gt; no! I have to delete all my current &amp;#39;side notes&amp;#39; and recreate them as &amp;#39;comments&amp;#39;! No automatic way of doing it. &lt;a href=&quot;https://twitter.com/hashtag/bad?src=hash&quot;&gt;#bad&lt;/a&gt;&lt;/p&gt;&amp;mdash; Memo Akten (@memotv) &lt;a href=&quot;https://twitter.com/memotv/status/662265035289436160&quot;&gt;November 5, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Memo and I aren&amp;#39;t the only ones noticing this. Once I found the original blog post, I noticed that most of the comments were actually from the past month and &lt;a href=&quot;https://medium.com/@owenblacker/marginal-notes-on-medium-268b3f727e6d#.4v2lc1xsm&quot;&gt;bemoaning the feature change&lt;/a&gt;. I was happy to see some references to other places where this is done well, including &lt;a href=&quot;https://edwardtufte.github.io/tufte-css/&quot;&gt;Tufte CSS&lt;/a&gt; which implements Tufte-style sidenotes in an HTML environment. &lt;/p&gt;
+
+&lt;p&gt;The New York Magazine feature seems to have survived, although I haven&amp;#39;t been able to find whatever article I was reading when I wrote about the popovers in my dissertation. I did track down this &lt;a href=&quot;http://www.niemanlab.org/2014/11/its-small-touches-that-can-make-a-difference-in-new-yorks-layouts/&quot;&gt;Niemen Lab piece&lt;/a&gt; which talks about an &lt;a href=&quot;http://nymag.com/daily/intelligencer/2014/10/jon-stewart-rosewater-in-conversation.html&quot;&gt;interview with Jon Stewart&lt;/a&gt; that uses the feature. Again, I don&amp;#39;t know what article it was that caught my eye while I was writing, and it was hard to locate a more recent piece with the feature. &lt;/p&gt;
+
+&lt;p&gt;Another place I have seen side notes used well is in Bret Victor&amp;#39;s explorable essays, like &lt;a href=&quot;http://worrydream.com/#!/LearnableProgramming&quot;&gt;Learnable Programming&lt;/a&gt;. Leaving aside the fact that these essays are &lt;em&gt;completely&lt;/em&gt; interactive, they do a nice job of balancing the information given to you in the stream of the narrative, and what is included in a Tufte-style side note. &lt;/p&gt;
+
+&lt;p&gt;Bret is really a font of knowledge, as you can see when you look at (for example) the contextual notes he provides alongside presentation slides on his website. If you want to watch him talk about &lt;a href=&quot;http://worrydream.com/#!/TheFutureOfProgramming&quot;&gt;the future of programming&lt;/a&gt; you can do that, but if you want to dig deeper you can look at the &lt;a href=&quot;http://worrydream.com/#!/dbx&quot;&gt;slides and side notes&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;When I started writing about this, I did some reading about David Foster Wallace and electronic endnotes, and came across this &lt;a href=&quot;http://www.theatlantic.com/magazine/archive/2005/04/host/303812/&quot;&gt;beautifully designed piece&lt;/a&gt; on The Atlantic. In the intro to the article, they note that when it was published in print they did a sort of static popover design, but they recently took the opportunity to redo the article with nested electronic endnotes. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/DFWatlantic.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;DFW atlantic&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So my question is, if it feels so satisfying to be able to dig deeper into information if we need it, or gloss over the parts we don&amp;#39;t, why isn&amp;#39;t this type of feature more common? And what other features could be included in electronic media to give us more of the same sort of experience?&lt;/p&gt;
+</description>
+				<pubDate>Thu, 19 Nov 2015 00:00:00 -0500</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/DFWatlantic.jpeg" />
+			</item>
+		
+			<item>
+				<title>20th New England Isolated Statisticians Meeting (NEISM) </title>
+				<description>&lt;p&gt;Now that I am at Smith, I am technically an &amp;quot;isolated&amp;quot; statistician. It&amp;#39;s a funny term, because I don&amp;#39;t feel isolated. I have great colleagues in the Statistical and Data Sciences program (&lt;a href=&quot;http://www.science.smith.edu/%7Ebbaumer/&quot;&gt;Ben Baumer&lt;/a&gt;, &lt;a href=&quot;http://www.science.smith.edu/%7Ejcrouser/&quot;&gt;Jordan Crouser&lt;/a&gt; and &lt;a href=&quot;http://www.math.smith.edu/faculty_halvorsen.php&quot;&gt;Katherine Halverson&lt;/a&gt;), although I am the only person with a PhD in statistics. However, there is a great mailing list for isostats and a few local meetings, so I am happy to accept the designation if it means I get to participate in these great discussions, many of which are teaching-oriented. &lt;/p&gt;
+
+&lt;p&gt;Earlier this month, I got to go to my first NEISM (New England Isolated Statisticians Meeting). It was great fun, and as always I got more out of the experience by livetweeting it. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;We talked about many current issues that statisticians are facing, including the importance of p-values, technology in statistics, and what skills were necessary in the context of big data (surprisingly, that conversation turned to communication, not databases). We also talked about issues more specific to teaching the introductory statistics class, including  the GAISE report, which promotes multivariate analysis but doesn&amp;#39;t take a particular stand on technology. &lt;/p&gt;
+
+&lt;p&gt;A couple discussions got a bit heated. &lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Tables&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;At the meeting, we spent some time debating the importance of tables (e.g. the standard normal table) in teaching. 
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What about tables? There&amp;#39;s a range of responses- 3 days on tables, only technology, or something in between. I&amp;#39;m in between. &lt;a href=&quot;https://twitter.com/hashtag/neism20?src=hash&quot;&gt;#neism20&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655399941356015616&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Interestingly, some folks in the room were insistent that tables not be used, while &lt;a href=&quot;https://twitter.com/rudeboybert&quot;&gt;@rudeboybert&lt;/a&gt; and I were both on the side of showing the tables in conjunction with technology. &lt;/p&gt;
+
+&lt;p&gt;(If you are looking for a good way to integrate technology when teaching about normal distributions, the mosaic package functions xpnorm and xqnorm are fantastic. That&amp;#39;s where the preview image on the blog came from.) &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;The question of whether or not to abandon normal tables in intro stats led to vigorous debate &lt;a href=&quot;https://twitter.com/hashtag/NEISM20?src=hash&quot;&gt;#NEISM20&lt;/a&gt;&lt;/p&gt;&amp;mdash; Albert Y. Kim (@rudeboybert) &lt;a href=&quot;https://twitter.com/rudeboybert/status/655408933218164736&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/StatsbyLopez&quot;&gt;@StatsbyLopez&lt;/a&gt; &lt;a href=&quot;https://twitter.com/rudeboybert&quot;&gt;@rudeboybert&lt;/a&gt; Not taking a hard line. De-emphasize tables but don&amp;#39;t ban them.&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655411316799225856&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;&lt;strong&gt;Resources&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;We spent some time collating conferences we liked,&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;We love the &amp;#39;COTS. USCOTS, ECOTS, ICOTS. &lt;a href=&quot;https://twitter.com/hashtag/neism20?src=hash&quot;&gt;#neism20&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655464971355164672&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;and journals,&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Popular journals include &lt;a href=&quot;https://twitter.com/signmagazine&quot;&gt;@signmagazine&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/JStatEd&quot;&gt;@JStatEd&lt;/a&gt;, Chance, TISE. &lt;a href=&quot;https://twitter.com/hashtag/neism20?src=hash&quot;&gt;#neism20&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655469407037169666&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;&lt;strong&gt;Communication&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;We also discussed the importance of communication in statistics and &amp;quot;data science.&amp;quot; I mentioned the SDS program at Smith, and folks on twitter jumped in to tout the benefits of communication.
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; &lt;a href=&quot;https://twitter.com/smithcollege&quot;&gt;@smithcollege&lt;/a&gt; I was in a program called Integrated Science and Technology that required frequent teamwork and presentations.&lt;/p&gt;&amp;mdash; Data Science Renee (@BecomingDataSci) &lt;a href=&quot;https://twitter.com/BecomingDataSci/status/655416278388224000&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; I think this is so important. Students SBAT communicate results clearly to anyone, inc those without statistical knowledge.&lt;/p&gt;&amp;mdash; Amy Hogan (@alittlestats) &lt;a href=&quot;https://twitter.com/alittlestats/status/655415627474145281&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;While most of the isolated statisticians teach at small colleges, we also thought about the challenges of incorporating communication in large classes, and the &lt;a href=&quot;http://simplystatistics.org/2013/03/26/an-instructors-thoughts-on-peer-review-for-data-analysis-in-coursera/&quot;&gt;peer-reviewed assignments in the JHU data science specializationn&lt;/a&gt; were mentioned. &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What to do about communication when you have hundreds of students? Maybe peer-review is the answer. &lt;a href=&quot;https://twitter.com/hashtag/neism20?src=hash&quot;&gt;#neism20&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655411931549954048&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;&lt;strong&gt;Group work&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Another discussion that got heated, particularly on twitter, was the question of group work. We had come around to the idea that group projects were probably the best way to include communication in classes. It lets students do real analysis and present the results. Grading a few team projects is more manageable for the instructor than reading many individual papers. But, we acknowledged that there is no optimal way to select groups. One participant asked, &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;HOW do you make groups work in classes? Assigning alphabetically doesn&amp;#39;t work, nor by seating, nor students choosing. &lt;a href=&quot;https://twitter.com/hashtag/neism20?src=hash&quot;&gt;#neism20&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655422919175241729&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;There were many suggestions, including&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; I ended up doing most the work no matter who I got in group. Maybe assign based on % of work done on previous. High %ers together?&lt;/p&gt;&amp;mdash; BlinkPop (@emilyeifler) &lt;a href=&quot;https://twitter.com/emilyeifler/status/655424481775607809&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; i randomize from the class list, re-do weekly. really like the results from doing so. everyone encouraged to get to know everyone&lt;/p&gt;&amp;mdash; Dianne Cook (@visnut) &lt;a href=&quot;https://twitter.com/visnut/status/656053091490394112&quot;&gt;October 19, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;and &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; idea: students choose partner, then pairs randomly grouped? Benefit of comfortable w someone on team plus forced to work w new ppl&lt;/p&gt;&amp;mdash; Data Science Renee (@BecomingDataSci) &lt;a href=&quot;https://twitter.com/BecomingDataSci/status/655457852044242944&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/hadleywickham&quot;&gt;Hadley Wickham&lt;/a&gt; immediately piped up with a link to a paper called &lt;a href=&quot;http://www4.ncsu.edu/unity/lockers/users/f/felder/public/Papers/CLStrategies(JCCCT).pdf&quot;&gt;Effective Strategies for Cooperative Learning&lt;/a&gt;, which includes many of the strategies we discussed both in person and electronically. The executive summary of the paper is that you have to assign groups, you might want to think about outnumbered minorities, particularly at the beginning of a class, and you should take into account peoples&amp;#39; schedules. &lt;/p&gt;
+
+&lt;p&gt;The paper also discusses the importance of peer ratings to assess participation, and there was a suggestion in the meeting to do this rating as part of the final.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;When evaluating groups, ask them to rate group participation (inc. themselves) &amp;amp; answer simple Qs about their analysis on the final &lt;a href=&quot;https://twitter.com/hashtag/neism20?src=hash&quot;&gt;#neism20&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655425776188334080&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;By doing this, you are able to weed out people who really did not participate. If they can&amp;#39;t list their explanatory and response variables without referring to notes or teammates, they didn&amp;#39;t participate fully in the project. &lt;/p&gt;
+
+&lt;p&gt;However, there was some pushback on twitter about whether forcing students to work in groups is the right answer. As the paper says, &amp;quot;As we tell our students, we’re sorry if they’re unhappy about having to work in teams but the truth is that our job is not to make them happy— it is to prepare them to be professionals.&amp;quot; &lt;a href=&quot;https://twitter.com/KCombinator&quot;&gt;@KCombinator&lt;/a&gt; disagreed,&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; why is your assumption that group work is crucial? Why not just let loners work alone if they wish? I do it for life.&lt;/p&gt;&amp;mdash; Lambda Kansas City (@KCombinator) &lt;a href=&quot;https://twitter.com/KCombinator/status/655425972452225024&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;They recommended a few resources by [Paul Graham](http://www.paulgraham.com/,&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; read &lt;a href=&quot;https://twitter.com/paulg&quot;&gt;@paulg&lt;/a&gt;. Particularly &lt;a href=&quot;http://t.co/gwS2CvZT2O&quot;&gt;http://t.co/gwS2CvZT2O&lt;/a&gt; &lt;a href=&quot;http://t.co/1faV6YPcl8&quot;&gt;http://t.co/1faV6YPcl8&lt;/a&gt; &lt;a href=&quot;http://t.co/WY88ZX1HS5&quot;&gt;http://t.co/WY88ZX1HS5&lt;/a&gt; &lt;a href=&quot;http://t.co/yBzlwgwCys&quot;&gt;http://t.co/yBzlwgwCys&lt;/a&gt;&lt;/p&gt;&amp;mdash; Lambda Kansas City (@KCombinator) &lt;a href=&quot;https://twitter.com/KCombinator/status/655446265199656960&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;My question was,&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/KCombinator&quot;&gt;@KCombinator&lt;/a&gt; this is getting pretty philosophical! Are there enough jobs for everyone who would prefer not to work with others to have them?&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/655445642668605440&quot;&gt;October 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;What do you think? Tell me in the comments.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 01 Nov 2015 00:00:00 -0400</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/xqnorm.jpeg" />
+			</item>
+		
+			<item>
 				<title>Fitbit colors</title>
 				<description>&lt;p&gt;I have been a devoted Fitbit user for over a year now, and I think that as a device it is the sort of thing that a statistician would natually enjoy. It produces rich data about my day-to-day life, can be used to identify notable dates in my year, and does a great job of making me more physically active &amp;quot;on the margin.&amp;quot; But, the Fitbit app designers have made very strange color choices.&lt;/p&gt;
 
@@ -34,7 +212,7 @@
 
 &lt;p&gt;Any ideas about the color trajectory they&amp;#39;ve chosen? Do other fitness trackers use similar colors?&lt;/p&gt;
 </description>
-				<pubDate>Wed, 14 Jan 2015 00:00:00 -0800</pubDate>
+				<pubDate>Wed, 14 Jan 2015 00:00:00 -0500</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/Fitbit1.jpg" />
@@ -71,7 +249,7 @@
 
 &lt;p&gt;Printing and shipping is variable, but Spoonflower has a data-driven page that will tell you &lt;a href=&quot;http://help.spoonflower.com/customer/portal/articles/1173283-how-long-will-it-take-to-get-my-order-&quot;&gt;how many days production is currently taking&lt;/a&gt;. If you need your poster quickly, you can pay for rush shipping, but either way the poster will come folded up in one of those soft plastic envelopes that fits easily into any mailbox. What are you waiting for?&lt;/p&gt;
 </description>
-				<pubDate>Fri, 12 Dec 2014 00:00:00 -0800</pubDate>
+				<pubDate>Fri, 12 Dec 2014 00:00:00 -0500</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2014/12/12/FabricPosters.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2014/12/12/FabricPosters.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/IEEEVisPoster.jpg" />
@@ -147,7 +325,7 @@
 
 &lt;p&gt;If you want to learn more about any of these projects, they are almost all forkable on github, which is another one of the principles that I think all good software should adhere to! What other interesting projects have you seen recently?&lt;/p&gt;
 </description>
-				<pubDate>Mon, 27 Oct 2014 00:00:00 -0700</pubDate>
+				<pubDate>Mon, 27 Oct 2014 00:00:00 -0400</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/2014-10-27 10.10.06.jpg" />
@@ -190,7 +368,7 @@
 
 &lt;p&gt;If you want to try out the original (black and white) Kid Pix, James Friend has created a &lt;a href=&quot;http://jamesfriend.com.au/pce-js/&quot;&gt;Mac emulator&lt;/a&gt; that runs it. For Hickman&amp;#39;s complete talk, see &lt;a href=&quot;https://www.youtube.com/watch?v=LqVhK6JgbSU&quot;&gt;this video&lt;/a&gt; from Media Leaders or &lt;a href=&quot;http://red-green-blue.com/kid-pix-the-early-years/&quot;&gt;Hickman&amp;#39;s page on Kid Pix&lt;/a&gt;, which goes through a lot of the material from his talk. Thanks again to &lt;a href=&quot;http://www.crosscamp.us/&quot;&gt;Cross Campus&lt;/a&gt; for hosting such a great event! &lt;/p&gt;
 </description>
-				<pubDate>Wed, 01 Oct 2014 00:00:00 -0700</pubDate>
+				<pubDate>Wed, 01 Oct 2014 00:00:00 -0400</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/tools/2014/10/01/KidPix.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/tools/2014/10/01/KidPix.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/CraigHickman.jpg" />
@@ -212,7 +390,7 @@
 
 &lt;p&gt;If you want to keep up with &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt;, you can follow along via &lt;a href=&quot;https://twitter.com/wwwDSLA&quot;&gt;twitter&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/user/DataScienceLA&quot;&gt;youtube&lt;/a&gt;, add us to your favorite &lt;a href=&quot;http://datascience.la/feed&quot;&gt;rss&lt;/a&gt; reader, or just drop by &lt;a href=&quot;http://datascience.la&quot;&gt;the site&lt;/a&gt;. I&amp;#39;m excited to be a part of it!&lt;/p&gt;
 </description>
-				<pubDate>Thu, 14 Aug 2014 00:00:00 -0700</pubDate>
+				<pubDate>Thu, 14 Aug 2014 00:00:00 -0400</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/14/DataScienceLA.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/14/DataScienceLA.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/datascienceLA.jpg" />
@@ -328,7 +506,7 @@
 
 &lt;p&gt;And with that, my transcript ends. See, I told you it might only be interesting to me! Those who were there, what insights did I neglect to capture? &lt;/p&gt;
 </description>
-				<pubDate>Wed, 06 Aug 2014 00:00:00 -0700</pubDate>
+				<pubDate>Wed, 06 Aug 2014 00:00:00 -0400</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/06/ICOTS-Panel-Transcript.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/06/ICOTS-Panel-Transcript.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/2014-07-17 15.44.54-1.jpg" />
@@ -352,7 +530,7 @@
 
 &lt;p&gt;If I go through several responses and no one is saying what I expected, I&amp;#39;ll eventually say something like, &amp;quot;oh boy, here I go again, expecting you guys to read my mind!&amp;quot; Usually, this gets a laugh from the class. And by explicitly calling myself out when I&amp;#39;m asking unreasonable questions, it helps me reduce that behavior. Sometimes students can even be frustrated by my positivism, because they want to know &lt;em&gt;the&lt;/em&gt; answer to the question. Since I&amp;#39;ll talk my way through almost any response, it detracts from the idea of a correct response. While I try to strike a balance, I think that the idea of many correct responses is very statistical. &lt;/p&gt;
 </description>
-				<pubDate>Fri, 01 Aug 2014 00:00:00 -0700</pubDate>
+				<pubDate>Fri, 01 Aug 2014 00:00:00 -0400</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/01/Yes-And.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/01/Yes-And.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/YesAnd.jpg" />
@@ -430,54 +608,10 @@
 
 &lt;p&gt;&lt;em&gt;P.S., it was only as I was writing this post that I noticed that the name &amp;quot;Code+ed&amp;quot; can be read as &amp;quot;Code and Education&amp;quot; or &amp;quot;coded&amp;quot; (which itself has two meanings; either programmed or as in &amp;quot;coded language&amp;quot;). Nice job with the naming, organizers!&lt;/em&gt;&lt;/p&gt;
 </description>
-				<pubDate>Tue, 22 Jul 2014 00:00:00 -0700</pubDate>
+				<pubDate>Tue, 22 Jul 2014 00:00:00 -0400</pubDate>
 				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2014/07/22/Coded.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2014/07/22/Coded.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/2014-06-10 09.23.14.jpg" />
-			</item>
-		
-			<item>
-				<title>Sweater variation; or grey != black and white</title>
-				<description>&lt;p&gt;I have a sweater that I&amp;#39;ve loved to death (if you&amp;#39;ve encountered me anytime in the last 5 years, you&amp;#39;ve probably seen it) and after many frustrating attempts to replace it with something similar, I took to eBay to try to find an exact replacement. This is something I&amp;#39;ve had success with in the past-- put in some information about the item, and make a saved search that emails me every day with newly-listed results. But I&amp;#39;ve learned that eBay sellers only know about the mean, and not about variation.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;My eBay saved search goes something like this-- &amp;quot;H&amp;amp;M cardigan Color:Gray&amp;quot; but I&amp;#39;ve found that I often get results like this:
-&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/BlackAndWhiteCardigan.JPG&quot; class=&quot;img-responsive&quot; alt=&quot;Black and white sweater&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Part of the problem is one of classification-- eBay provides the standard six colors (primary and secondary), and a few descriptors like beige, ivory and brown, but probably the best description of the sweater above is &amp;quot;Multi-Color&amp;quot; which doesn&amp;#39;t really capture it. Probably eBay should provide a &amp;quot;Black and White&amp;quot; option. &lt;/p&gt;
-
-&lt;p&gt;What I think is funny about this example is that the seller is partially right-- the typical color of this sweater &lt;em&gt;is&lt;/em&gt; gray. But I&amp;#39;m not interested just in the typical color. I&amp;#39;m looking for a sweater with limited color variation (consistency across the garment). I&amp;#39;m looking for a unimodal color distribution with a small standard deviation, not a bimodal one!&lt;/p&gt;
-
-&lt;p&gt;This is abusing terminology a bit, but I think it illustrates an important point about how we don&amp;#39;t always care about the typical value, and when we talk about distributions (in any sense) we also need to take into account the variability. &lt;/p&gt;
-</description>
-				<pubDate>Thu, 12 Jun 2014 00:00:00 -0700</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/misc/2014/06/12/Sweater_Variation.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/misc/2014/06/12/Sweater_Variation.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/BlackAndWhiteCardigan.JPG" />
-			</item>
-		
-			<item>
-				<title>That paper I was telling you to read</title>
-				<description>&lt;p&gt;I was joking at lunch with some colleagues that I should have a few of my favorite papers linked on the main page of my website, so when I reference them for the n^th time, I can just say &amp;quot;look at my website&amp;quot; instead of promising to email them. While I don&amp;#39;t think it&amp;#39;s reasonable to put this on my front page, here&amp;#39;s the current list of my &amp;quot;have you read [x]?&amp;quot; papers:&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://r.cs.purdue.edu/pub/ecoop12.pdf&quot;&gt;Evaluating the Design of the R Language&lt;/a&gt;: I&amp;#39;ll admit, I don&amp;#39;t understand everything that&amp;#39;s in this paper. And it certainly wasn&amp;#39;t necessary to sell me on R! But, I interact with a lot of computer scientists who ask me &amp;quot;why R?&amp;quot; and this paper seems to be a much better answer than anything I manage to come up with. &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;ftp://cm.bell-labs.com/cm/stat/tukey/memo/techtools.html&quot;&gt;Technical Tools of Statistics&lt;/a&gt;: Tukey&amp;#39;s vision of the future, from the 1960s. Interesting because we&amp;#39;re &lt;strong&gt;still&lt;/strong&gt; trying to figure this stuff out. &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://softwarestudies.com/cultural_analytics/Six_Provocations_for_Big_Data.pdf&quot;&gt;Six Provocations for Big Data&lt;/a&gt;: This article, by danah boyd and Kate Crawford, gives a great response to the buzzword trend of &amp;quot;Big Data.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://vis.stanford.edu/files/2011-DataWrangling-IVJ.pdf&quot;&gt;Research Directions in Data Wrangling&lt;/a&gt;: Just a great paper summing up some directions for research/development in the realm of data processes. &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jonathanstray.com/papers/wickham.pdf&quot;&gt;Graphical Inference for InfoVis&lt;/a&gt;: Using an array of plots, most of them with &amp;quot;null&amp;quot; data, to determine if patterns you&amp;#39;re seeing are real or just the result of randomness. &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/overviewperm.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Permuted basketball&quot;&gt;&lt;/a&gt;
-&lt;em&gt;Permuted graphic showing the location of Lakers players when they made 3-point shots. Which do you think is the real data?&lt;/em&gt;&lt;/p&gt;
-</description>
-				<pubDate>Fri, 16 May 2014 00:00:00 -0700</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/papers/2014/05/16/That_Paper.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/papers/2014/05/16/That_Paper.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/overviewperm.jpg" />
 			</item>
 		
 	</channel>
