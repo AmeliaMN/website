@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/dist/font-awesome/css/font-awesome.min.css">
     <link href="{{ site.baseurl }}/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/dist/css/my.css" rel="stylesheet">
+    {% if page.active == "Blog" %}
+      <link href="{{ site.baseurl }}/dist/css/post.css" rel="stylesheet">
+    {% endif %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/blog/feed.xml">
   </head>
   <body>

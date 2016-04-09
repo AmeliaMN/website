@@ -7,6 +7,77 @@
 		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>What&#39;s wrong with being data-collecting pigeons?</title>
+				<description>&lt;p&gt;As you might know from &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/blog/visualization/2015/01/14/FitbitColors.html&quot;&gt;my blog&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/minebocek/status/484751171374948353&quot;&gt;twitter&lt;/a&gt;, I&amp;#39;ve been a Fitbit person since December 2013. I&amp;#39;m also very interested in participatory sensing and citizen science, and I&amp;#39;ve been thinking about the ways that data can be used for good, both on the personal and societal level. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3&gt;Fitbit&lt;/h3&gt;
+
+&lt;p&gt;In June 2014, I set up an &lt;a href=&quot;https://ifttt.com/recipes/173925-document-your-daily-activity-in-a-google-spreadsheet&quot;&gt;IFTTT recipe&lt;/a&gt; to save my step data into a google spreadsheet every day. So, I have almost two years worth of data to play with. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/steps.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;My step habits&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, I get an average of 10,000 steps a day, with quite a bit of variance. I hadn&amp;#39;t realized this until recently, but it seems like since I moved from LA to Northampton (August 2015) I&amp;#39;ve been getting progressively fewer steps. I&amp;#39;m trying to turn that around, but it hasn&amp;#39;t quite been captured by the loess line yet! I&amp;#39;ve certainly used the Fitbit data to make micro changes on the day scale, but this is my first time using longer-term data to try to make behavior changes. &lt;/p&gt;
+
+&lt;p&gt;After years of hearing me talk about how useful the Fitbit feedback was, my dad recently purchased one, and he loves it. Apparently he has already changed his behavior to hit 10,000 steps a day. On the phone, he instructed me to &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;invent two of three more things like that&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;meaning simple sensor tools to help you live a better life. That&amp;#39;s a big proposition (thanks, Dad!) but I can see some interesting developments in that space lately. &lt;/p&gt;
+
+&lt;h3&gt;WeMo Insight switch&lt;/h3&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.amazon.com/gp/product/B00EOEDJ9W/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00EOEDJ9W&amp;linkCode=as2&amp;tag=flowingdata-20&amp;linkId=PXV4IU5GIASZOPRZ&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/wemo.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;WeMo Insight switch&quot;&gt;&lt;/a&gt;
+One is the &lt;a href=&quot;http://www.amazon.com/gp/product/B00EOEDJ9W/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=B00EOEDJ9W&amp;amp;linkCode=as2&amp;amp;tag=flowingdata-20&amp;amp;linkId=PXV4IU5GIASZOPRZ&quot;&gt;WeMo insight switch&lt;/a&gt;, which I heard about on Nathan Yau&amp;#39;s &lt;a href=&quot;http://flowingdata.com/2016/04/04/a-week-with-the-wemo-insight-switch/&quot;&gt;blog&lt;/a&gt;. You should go read his telling of it, but it sounds like it (or tools like it) could help people keep track of their energy use and learn to use less. That seems to count as a sensor tool to help you live a better life! &lt;/p&gt;
+
+&lt;h3&gt;Pigeon Air Patrol and Plume&lt;/h3&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.pigeonairpatrol.com/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/plume.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Pigeon Air Patrol&quot;&gt;&lt;/a&gt;
+Then, I heard about the idea of personalized pollution sensors on the &lt;a href=&quot;https://www.patreon.com/NSSDeviations&quot;&gt;Not So Standard Deviations Podcast&lt;/a&gt;. Roger and Hilary were discussing how the &lt;a href=&quot;http://www.pigeonairpatrol.com/&quot;&gt;Pigeon Air Patrol&lt;/a&gt; project strapped mini air pollution sensors to trained pigeons and then let them loose in London. &lt;/p&gt;
+
+&lt;p&gt;Obviously, this kind of procedure could be used to produce much more data than the official governmental sensors like those maintained by the &lt;a href=&quot;https://www3.epa.gov/airquality/montring.html&quot;&gt;EPA&lt;/a&gt; or &lt;a href=&quot;https://uk-air.defra.gov.uk/&quot;&gt;DERFA&lt;/a&gt;, as is the case in the UK. From what I can see, it seems like the Pigeon Air Patrol was more of a publicity stunt than anything else, and the team has moved on to having humans carry the sensors in their daily lives. They successfully &lt;a href=&quot;http://www.crowdfunder.co.uk/crowdsource-air-pollution-in-london&quot;&gt;crowdfunded a campaign&lt;/a&gt; to create a small sensor device that can be fastened onto a person&amp;#39;s bag or bike to tract the air quality wherever they go. &lt;/p&gt;
+
+&lt;h3&gt;Using participatory sensing data&lt;/h3&gt;
+
+&lt;p&gt;There are two main ways that I see participatory sensing or citizen science data collection projects being motivated. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;For the user&amp;#39;s own edification&lt;/strong&gt;. This is how I see Fitbit. The company is probably using my data for their own purposes, but my reason for collecting step data is so that I can know more about myself. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;For the use of researchers&lt;/strong&gt;. In this paradigm, people who participate in the project are doing it to generate data for some type of study. They may not get any direct use out of the data themselves, but they are happy to help. This is how the pigeons (presumably) felt about collecting air quality data. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It&amp;#39;s not clear where in this system the Plume sensor will fit. Will people be paying attention to their own personal &amp;quot;pollution dashboard&amp;quot; to see how much exposure they&amp;#39;re getting? Or are they just data-collecting pigeons helping scientists learn more about air quality? Of course, the best projects manage to do a little of both. &lt;/p&gt;
+
+&lt;h3&gt;Oldschool citizen science&lt;/h3&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.tbo.com/pasco-county/birders-flock-to-annual-christmas-count-20141228/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/audubon.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Christmas Bird Count&quot;&gt;&lt;/a&gt;
+The Audubon Society probably deserves the award for longest-running citizen science project, for their &lt;a href=&quot;https://www.audubon.org/conservation/science/christmas-bird-count&quot;&gt;Christmas Bird Count&lt;/a&gt;, which has been ongoing since 1900. &lt;/p&gt;
+
+&lt;p&gt;Volunteers go out in the month of December, observe the bird species in their area, and report back to the Audubon. In a similar vein, the Cornell Lab of Ornithology organizes &lt;a href=&quot;http://ebird.org/content/ebird/&quot;&gt;eBird&lt;/a&gt;, a year-round, volunteer-driven data collection method to track birds. &lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S000632070900216X&quot;&gt;this paper&lt;/a&gt; (cited almost 300 times!) the authors describe their commitment to good user-rewards for eBird participants. Although the people collecting data are doing so to help the researchers, the data collection process needs to feel fulfilling to them in order to motivate them to collect and input data. The researchers observed that their data submissions went up when they instituted more user-rewards, including data visualizations on the site that allow the citizen scientists to see their data in action. &lt;/p&gt;
+
+&lt;p&gt;In pretty stark contrast, the EPA has a &lt;a href=&quot;https://www.epa.gov/air-research/air-sensor-toolbox-citizen-scientists-resources&quot;&gt;toolbox&lt;/a&gt; for citizen scientists who are interested in gathering their own air quality data. However, it&amp;#39;s not clear if the process involves feeding the data back to the EPA for use, so it is just for the user&amp;#39;s own edification. I&amp;#39;m not sure there&amp;#39;s enough incentive there. &lt;/p&gt;
+
+&lt;h3&gt;Data quality&lt;/h3&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2010.00035.x/abstract&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/MunCarFin2010&quot; class=&quot;img-responsive&quot; alt=&quot;Data density&quot;&gt;&lt;/a&gt;
+Of course, if you are going to have many people collecting cheap data for scientific purposes, you have to worry about data quality. On the &lt;a href=&quot;https://www.patreon.com/NSSDeviations&quot;&gt;NSSD podcast&lt;/a&gt;, that was one of the main things Roger and Hilary discussed about the Plume project. &lt;/p&gt;
+
+&lt;p&gt;As far as I know, this is an open problem, but I&amp;#39;ve seen some interesting work on data augmentation that looks promising. For example, &lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2010.00035.x/abstract&quot;&gt;this paper&lt;/a&gt; found that they could scale models created with eBird data to get very similar predictions to those produced by models trained on high quality standardized data. Another &lt;a href=&quot;http://misrc.csom.umn.edu/workshops/2012/fall/Ipeirotis.pdf&quot;&gt;paper&lt;/a&gt; about data produced by Mechanical Turk workers suggests the use of the EM algorithm to produce probabilistic labels that have more reliable quality. Another &lt;a href=&quot;http://www.stat.columbia.edu/%7Egelman/research/published/forecasting-with-nonrepresentative-polls.pdf&quot;&gt;awesome paper&lt;/a&gt; (by Andrew Gelman, among others) does election forecasting using non-representative polls taken on the Xbox using multilevel regression and poststratification.  &lt;/p&gt;
+
+&lt;p&gt;All in all, I&amp;#39;m really excited about the possibility of more inexpensive sensor data to change the world! Certainly using tools like the Fitbit has changed my life, and I think there are things that could be done with the data (perhaps necessitating some more statistical research) that could benefit us all. As much as I love the idea of data-collecting pigeons, I want to be completely involved with the data collection process and getting something back from it myself. &lt;/p&gt;
+</description>
+				<pubDate>Fri, 08 Apr 2016 00:00:00 -0400</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/plume.jpg" />
+			</item>
+		
+			<item>
 				<title>Contextual notes</title>
 				<description>&lt;p&gt;Because I tend to select books by how thick they are (super-fast-reader problems) and I am a glutton for punishment, I have been slowly working my way through two of David Foster Wallace&amp;#39;s books concurrently. I am reading a paper copy of Infinite Jest, but the Kindle edition of The Pale King. These contrasting experiences got me thinking about contextual notes, particularly in electronic media. &lt;/p&gt;
 
@@ -534,84 +605,6 @@ particular paragraph or sentence.&lt;/p&gt;
 				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/01/Yes-And.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/01/Yes-And.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/YesAnd.jpg" />
-			</item>
-		
-			<item>
-				<title>Code + Ed</title>
-				<description>&lt;p&gt;Last month, I had the opportunity to attend the &lt;a href=&quot;http://eyeofestival.com/&quot;&gt;eyeo festival&lt;/a&gt; as a student volunteer. For me, one of the most useful parts of the festival was the &lt;a href=&quot;http://eyeofestival.com/code-ed-summit/&quot;&gt;Code+ed Summit&lt;/a&gt;, which took place on the day before the official conference opening. &lt;/p&gt;
-
-&lt;p&gt;This was the second annual meeting of the summit (which I also attended last year) and it&amp;#39;s organized as an un-conference/wiki-style conference, meaning that there&amp;#39;s no set schedule when you arrive. Instead, the participants build the schedule as they arrive, writing down topics they want to talk about themselves or things they&amp;#39;d like to hear others discuss. &lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Here&amp;#39;s what the board looked like when we arrived:
-&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/2014-06-10 08.33.25.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Blank whiteboard&quot;&gt;&lt;/a&gt;
-&lt;em&gt;What the board looked like when we showed up. (Shoutout to the awesome &lt;a href=&quot;http://intermediaarts.org/&quot;&gt;Intermedia Arts&lt;/a&gt; space!)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;You can see that there are a number of different physical spaces available at all times, with sizes that accommodate from 10 people to &amp;quot;a lot.&amp;quot; The time is broken into four sessions, two before and two after lunch. I didn&amp;#39;t get a shot of the full schedule, but here&amp;#39;s what it looked like as people started arriving and filling it up. 
-&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/2014-06-10 09.23.14.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Filling it in&quot;&gt;&lt;/a&gt;
-&lt;em&gt;As people started filling in the board.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This shot isn&amp;#39;t much better, but maybe you have an OCR algorithm that can catch all the names:
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;Who did the &amp;quot;designing hardware for learning and hacking&amp;quot;? That session sounds rad &lt;a href=&quot;https://twitter.com/search?q=%23eyeo2014&amp;amp;src=hash&quot;&gt;#eyeo2014&lt;/a&gt; &lt;a href=&quot;http://t.co/4R4JMcXBxo&quot;&gt;pic.twitter.com/4R4JMcXBxo&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kawandeep Virdee (@whichlight) &lt;a href=&quot;https://twitter.com/whichlight/statuses/476480289812672512&quot;&gt;June 10, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.tegabrain.com/&quot;&gt;Tega Brain&lt;/a&gt; started a collaborative &amp;quot;hackpad&amp;quot; (hadn&amp;#39;t heard of this site before) so people could contribute notes, and those are available &lt;a href=&quot;https://codeedeyeo.hackpad.com/&quot;&gt;here&lt;/a&gt;. Uncharacteristically, I wasn&amp;#39;t taking good notes or tweeting during the summit, I think because I was so engaged in the material! With that said, here are some of my takeaways, in what I think is chronological order. If you want to know more about the summit, I really recommend the &lt;a href=&quot;https://codeedeyeo.hackpad.com/&quot;&gt;hackpad&lt;/a&gt;. There are many differing perspectives there!&lt;/p&gt;
-
-&lt;h2&gt;&lt;strong&gt;Big data and data science for beginners&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;During the first session, &lt;a href=&quot;http://blog.blprnt.com/&quot;&gt;Jer Thorpe&lt;/a&gt;, &lt;a href=&quot;http://www.flong.com/bio/en/&quot;&gt;Golan Levin&lt;/a&gt; and I led a session on teaching big data and data science to beginners. &lt;/p&gt;
-
-&lt;p&gt;We were talking about the skills that beginners really need. Do they need to understand SQL? Web scraping? Complex joins? Spinning up Amazon EC2 instances? I don&amp;#39;t know if we got all the way to this in the discussion, but I think these questions really point to a need for a second course. Do whatever you want in the first course (I don&amp;#39;t even think it needs to be the &amp;quot;easy&amp;quot; stuff, as long as it&amp;#39;s interesting) and resolve to cover the other stuff in the next one. This takes the pressure off fitting it all in!&lt;/p&gt;
-
-&lt;p&gt;I believe this was the session in which we were talking about responsible web scrapers. Sometimes, scraping looks like &amp;quot;hacking,&amp;quot; especially if you&amp;#39;re someone who doesn&amp;#39;t know much about hacking. To alleviate this tension, someone (probably Jer) has his students include some text with their scaper, saying something like &amp;quot;we&amp;#39;re students in Jer Thorpe&amp;#39;s data art class. If you want to know what we&amp;#39;re doing with your data, feel free to contact us at this email address.&amp;quot; This simple act can change the way people view the scraper, and afterward they got overwhelmingly positive responses. &lt;/p&gt;
-
-&lt;p&gt;From my experience, if you&amp;#39;re going to teach &amp;quot;data science&amp;quot; to beginners, you need to make sure that the vocabulary that you&amp;#39;re teaching is very limited. Obviously, this can expand as the students gain experience, but it&amp;#39;s crucial not to overwhelm them at first. I got a laugh with something like, &amp;quot;we&amp;#39;ve been very specific about the syntaxes we use with the students. Syntaxii? Syntaxonomies?&amp;quot; (Pretty sure it&amp;#39;s &amp;quot;syntaxes&amp;quot;)&lt;/p&gt;
-
-&lt;h2&gt;&lt;strong&gt;New medium for education&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;I didn&amp;#39;t totally know what this theme meant, but we certainly had some interesting discussions. The two I remember most distinctly were focused on the iPad.&lt;/p&gt;
-
-&lt;p&gt;I mentioned the &amp;quot;navigate/drive&amp;quot; strategy that is often useful when people are learning at the computer, especially if equipment is limited. One person (the navigator) is more of the thinker, deciding what the pair should be doing. The other (the driver) actually has their hands on the keyboard/mouse. After a set period of time, participants switch roles. This can be a bit freeing, because the driver doesn&amp;#39;t need to be focusing on the strategy as much, just the technical difficulties, and the navigator doesn&amp;#39;t get caught up in syntax issues. However, it takes a certain type of person to enjoy this breakdown. Personally, I know that when I&amp;#39;m talking about computer tasks with someone (often a student) I am just itching to get my hands on the keyboard. However, it&amp;#39;s definitely a better pedagogical strategy to have them do it themselves! &lt;/p&gt;
-
-&lt;p&gt;In the same vein, one participant in the &amp;quot;new medium&amp;quot; discussion said that his significant other, who is a teacher, uses an iPad in her elementary school classroom. At any given time, one student is chosen as &amp;quot;The Finger,&amp;quot; which means that they are the one who gets to touch the iPad. This is a fun role for the person who gets to be The Finger, and it really focuses the attention of the class.&lt;/p&gt;
-
-&lt;p&gt;Another participant had worked with one of the Federal executive departments, and was on a team that had something to do with daily briefings of top officials*. Typically, these briefs are created as pdfs and distributed as printed documents. But, a much more engaging way to display the information is to have an iPad app so that the official can ask questions and be shown answers on-the-fly. This department changed their briefing to iPads, with the option to still receive paper briefings if the officials preferred that. One particular official* is very tech savvy and loves the iPad, but was not being briefed on the iPad. When they investigated, the department learned that it wasn&amp;#39;t the official&amp;#39;s preference, but rather the briefer&amp;#39;s. With a paper report, both official and briefer can have a copy of the brief, and the briefer can keep a respectful distance from the official.  The iPad requires a much more intimate connection, both heads bent over the iPad, manipulating the screen. It came out that the briefer felt this was disrespectful to the official. &lt;/p&gt;
-
-&lt;p&gt;I thought this was an interesting intersection of culture and technology. From friends who work with the US Army, I understand that it&amp;#39;s engrained in army culture for a presenter to provide paper copies of presentation slides (e.g. PowerPoint) and pay attention to the most senior official in the room. When they turn the page on their document, everyone else turns the page, and the presenter is expected to move on to the next slide. The iPad example similarly comes from a desire for the official to retain their power, rather than giving the briefer the same (or more) agency. However, it&amp;#39;s not just culture-- the iPad (or the app) could have been programmed to allow two devices to sync, so that the briefer could maintain a respectful distance but still &amp;quot;drive&amp;quot; the briefing. &lt;/p&gt;
-
-&lt;p&gt;* I know the names of the department and the official, just trying to maintain some modicum of anonymity&lt;/p&gt;
-
-&lt;h2&gt;&lt;strong&gt;Language and teaching&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;The biggest takeaway I got from this session was the importance of concreteness, both in terms of language and in terms of making tangible representations. The woman who made this point was from &lt;a href=&quot;http://www.ideo.com/&quot;&gt;IDEO&lt;/a&gt;, and was talking more specifically about design meetings. She said that in her experience, you can talk about &amp;quot;a pen&amp;quot; but it&amp;#39;s always better to talk about &amp;quot;this pen.&amp;quot; This reminds me of &lt;a href=&quot;http://www.meganerinmiller.com/&quot;&gt;Megan Erin Miller&lt;/a&gt;&amp;#39;s &lt;a href=&quot;http://www.tactiledesignkit.com/&quot;&gt;tactile design kit&lt;/a&gt;. This is a free (!) printable download that allows you to do web design using physical pieces. I saw Megan speak about this at eyeo 2013, and I was impressed with all the creativity-enhancing limits it places. For example, you can clearly see when things won&amp;#39;t all fit on a particular page, or when your buttons will overflow without some sort of collapsing menu. It would be fun to make something similar for statistics education, or even just use this same concept when planning computational projects.&lt;/p&gt;
-
-&lt;p&gt;We also spent some time talking about the difference between a prototype and a provocation. I &lt;em&gt;think&lt;/em&gt; the difference is that a prototype is a proof of concept of something you could actually make. A provocation is something more conceptual, that you wouldn&amp;#39;t actually put into production. But, having it (again, physically) in front of a group can stimulate good conversation that wouldn&amp;#39;t happen otherwise. When you create provocations, you can make many very different iterations, instead of the many similar iterations that you might create as prototypes. Again, this is something I&amp;#39;m trying to bring into my own work. Instead of trying to conceptualize prototypes, I want to think more in terms of provocations.&lt;/p&gt;
-
-&lt;h2&gt;&lt;strong&gt;Teaching coding in high school&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;We talked about &amp;quot;what doesn&amp;#39;t work&amp;quot; for quite a while in this session. I think this was a cathartic thing to do (there&amp;#39;s a &lt;em&gt;lot&lt;/em&gt; that doesn&amp;#39;t work) but it probably would have been more useful to talk about what did work. Luckily, we did transition there eventually. &lt;/p&gt;
-
-&lt;p&gt;I was glad to hear that most schools are moving away from things like Java and C++ towards simpler scripting languages, at least outside of AP Computer Science. Several people in the session were teaching Processing (even in high school geometry), and I also heard mention of JavaScript. I mostly teach high school &lt;em&gt;teachers&lt;/em&gt;, and (of course) I&amp;#39;m teaching them R within RStudio. &lt;/p&gt;
-
-&lt;p&gt;We all seemed to agree that for effective computer science teaching, you need to find a balance between open-endedness and unpreparedness. It&amp;#39;s important to know that the problem can be solved, or that there&amp;#39;s something interesting there, but you don&amp;#39;t want to have come up with &amp;quot;the answer,&amp;quot; otherwise it won&amp;#39;t feel creative and interesting to students. We all also agreed that finding these interesting prompts is pretty tricky. One successful coding exercise that a teacher set was creating a &amp;quot;choose your own adventure&amp;quot; narrative using HTML pages. Students could make the narrative as complicated or as simple as they wanted, so it scaled well, and they could customize to their interests. The teacher who told this anecdote admitted that his example story was pretty simple and uninteresting, but that his students really ran with it. &lt;/p&gt;
-
-&lt;p&gt;I was talking about the &amp;quot;recipe&amp;quot; idea that I&amp;#39;ve seen come up in some research on teaching/learning Java. Greenfoot (a learning environment for Java) uses the philosophy that students should never start with a blank page. Instead, they should be able to modify one line and then run something and have a result. This is like a recipe. &amp;quot;Starting from a blank screen requires design, and is an advanced exercise. It is something students encounter later, but not as the first contact&amp;quot; (&lt;a href=&quot;http://kar.kent.ac.uk/30614/1/2010-11-TOCE-greenfoot.pdf&quot;&gt;Michael K&amp;ouml;lling&lt;/a&gt;). &lt;/p&gt;
-
-&lt;p&gt;Another universal is that humans tend to view any change as bad change. So, if you&amp;#39;re going to show a few different tools you really need to scaffold the transition. It needs to seem like, &amp;quot;oh, we&amp;#39;ve reached the edge of the capabilities of this tool. I really wish we could do [X]&amp;quot; and then give them the tool to do [X]. But, you need to build up. If the new tool can&amp;#39;t do the things that the old tool could, it&amp;#39;s going to feel like a downgrade. A teacher gave the example of starting with Processing and then trying to sell students on R. As you might expect, that transition didn&amp;#39;t feel good to the students. Similarly, I&amp;#39;ve found that people will complain about any tool you give them, but if you try to change it they will complain! Similarly, any time the interface to a social networking site changes, all you see are complaints. Humans hate change!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The pitch&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Once again, the Code+ed summit gave me tons of inspiration for my teaching practice and dissertation. I love the eyeo festival, but I think I get more actionable ideas from the summit. If I haven&amp;#39;t already made the pitch to you, allow me to do it now: the summit has been free to attend so far, and you can register separately from the eyeo festival. The eyeo festival sells out within minutes every year, but the Code+ed summit fills at a more civilized rate. And, there are often a few people who don&amp;#39;t show up, so you can also test your luck by just showing up at Intermedia Arts on the day of the summit and asking if they have space. &lt;/p&gt;
-
-&lt;p&gt;And the best part is because it&amp;#39;s an unconference, you can make sure that it fits your interests. People have asked me, &amp;quot;was there a session on [X]?&amp;quot; and even if the answer is no, there could be next year! It&amp;#39;s a very casual event, and great for networking. If you work anywhere in the space of education and computation, I recommend attending!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;P.S., it was only as I was writing this post that I noticed that the name &amp;quot;Code+ed&amp;quot; can be read as &amp;quot;Code and Education&amp;quot; or &amp;quot;coded&amp;quot; (which itself has two meanings; either programmed or as in &amp;quot;coded language&amp;quot;). Nice job with the naming, organizers!&lt;/em&gt;&lt;/p&gt;
-</description>
-				<pubDate>Tue, 22 Jul 2014 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2014/07/22/Coded.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2014/07/22/Coded.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/2014-06-10 09.23.14.jpg" />
 			</item>
 		
 	</channel>
