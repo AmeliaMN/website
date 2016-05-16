@@ -7,6 +7,362 @@
 		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>OpenVisConf talk transcript</title>
+				<description>&lt;p&gt;During &lt;a href=&quot;https://openvisconf.com&quot;&gt;OpenVisConf&lt;/a&gt;, I hurriedly &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/blog/conferences/2016/04/25/OpenVisConf.html&quot;&gt;posted&lt;/a&gt; some links from my talk so people could follow up with resources I had mentioned. I kept meaning to write up a fuller blog post, but of course life comes along (in the interim, Smith has finished finals, I&amp;#39;ve graded a ton of projects, gone out of the state twice, and attended commencement). &lt;/p&gt;
+
+&lt;p&gt;So, when the &lt;a href=&quot;https://openvisconf.com/#transcripts&quot;&gt;official transcripts&lt;/a&gt; from the conference were posted, I knew I&amp;#39;d struck gold. &lt;a href=&quot;https://twitter.com/Asignia&quot;&gt;Amanda Lundberg&lt;/a&gt; was the transcriptionist, and she did a fantastic job. The transcripts are provided with a creative commons license, so I grabbed the text from my talk, edited it a bit, and stuck in some images. &lt;/p&gt;
+
+&lt;p&gt;It was quite interesting to read the transcripts as-is. I know Amanda edited out a lot of &amp;quot;um&amp;quot;s and &amp;quot;uh&amp;quot;s as everyone was speaking, but a person&amp;#39;s verbal tics still get through. In my case, I say &amp;quot;that&amp;quot;, &amp;quot;so&amp;quot;, and &amp;quot;really&amp;quot; a LOT. Some of those have been removed here for ease of reading. &lt;/p&gt;
+
+&lt;p&gt;On a more interesting note, the organizers used TF-IDF to identify unique words and bi-grams from each talk. Mine make it &lt;em&gt;pretty&lt;/em&gt; clear I&amp;#39;m a statistician. Words like &amp;quot;distribution&amp;quot;, &amp;quot;statistic&amp;quot;, &amp;quot;observed difference&amp;quot; and &amp;quot;bootstrap&amp;quot; all appeared more in my talk than others. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/text_viz.png&quot; class=&quot;img-responsive&quot; alt=&quot;tf-idf&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Talk&lt;/h4&gt;
+
+&lt;p&gt;Probably the easiest way to tell what the heck I&amp;#39;m talking about is to &lt;a href=&quot;https://www.youtube.com/watch?v=hps9r7JZQP8&quot;&gt;watch the video of my talk&lt;/a&gt;. &lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/hps9r7JZQP8&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;But, if you&amp;#39;re video-resistant (I usually am) this will probably give you the flavor. &lt;/p&gt;
+
+&lt;h4&gt;Transcript:&lt;/h4&gt;
+
+&lt;p&gt;The title of my talk is &amp;quot;Do you know Nothing when you see it?&amp;quot;. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/hungry_i/66962027/in/photolist-6VctH-zr4aM-e9mH1t-6XLhY9-qo4Bms-8gyi5q-zr357-4jeF2Y-r8nhEr-3BzwrF-hWLU1-zhqjfS-6akRDL-8oHoz1-Env5V-dLro6N-6Ba6Qx-hcQm7X-45WiW8-45Wj1K-nWoLpt-8Qp68q-6a6dd5-aqc1Ri-dZmw2h-79ykph-rxzvJj-uu5px-JCCFC-9tWqkt-6EGjEv-6Juo8s-eCaru-6VMiSX-dSGL3M-6bsbPs-8cueSK-4waMSd-7zWdYW-5WrAQr-MtpXy-6gH759-MtpXJ-a7uXuC-4THFy2-69GvS-GyDeK-EntY3-a1bJ4u-8HgEn&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/titleslide.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;TV static&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When I say nothing, I don&amp;#39;t mean nothing like television static, because that&amp;#39;s actually not nothing, that&amp;#39;s something. It&amp;#39;s the image, it just got garbled when it was going through the air. I mean something more like this, &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/randomness.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;random noise&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;but not really even this, because this is random noise that I generated with my computer. It&amp;#39;s pseudo-random, and probably your awesome human brain is finding patterns like &lt;a href=&quot;http://deepdreamgenerator.com/&quot;&gt;DeepDream&lt;/a&gt; already. You can see the bunnies and hearts and clouds in my random data.&lt;/p&gt;
+
+&lt;p&gt;Our goal is to be able to identify when something we created is nothing. And in order to do that, I&amp;#39;m going try statistics.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I&#39;m going to try... statistics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I am a statistics professor. That means whenever I get in front of a group of people, I try to sneakily teach them some statistics. &lt;/p&gt;
+
+&lt;p&gt;The question is, &lt;strong&gt;what is statistics about?&lt;/strong&gt; And it&amp;#39;s about many things. It&amp;#39;s about variation, which is one of the main themes we&amp;#39;re going to talk about here. Sometimes there&amp;#39;s modeling-- I&amp;#39;m going to ignore modeling almost completely. And when you take an intro stat class or if you&amp;#39;re doing basic science, you&amp;#39;re often asking are these two numbers different? Another way of saying is, is this one number, the difference, different than zero? Sometimes you want to know, this number, what are some other reasonable numbers we could have seen if we hadn&amp;#39;t seen this one? &lt;/p&gt;
+
+&lt;p&gt;In order to answer those questions, we need context about the variation. The first example that came to mind when I was preparing this talk was ants. I don&amp;#39;t know why. Imagine you had some ants, and you had some big-looking ants and little-looking ants. &lt;/p&gt;
+
+&lt;div class=&quot;ants&quot; style=&quot;margin:5px;&quot;&gt;
+&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/bareego/6657872621/in/photolist-b9kkzg-325Ep2-eYdznk-9SBTFj-6tWfjj-6oC1yN-8TifHh-6iAU8p-5nWn6B-6MBDMu-BoQci-dUyXLF-9QxFLR-a51iiR-4V4xA1-558iot-g7NJrP-fktCLP-xhLeW-6sN6Mo-8v9u8H-ozavpA-4eTAda-prJXTS-4ZSm8T-9AbyuJ-YTmUb-bzKnV-4dyx2v-2ZicrS-5Tu9ez-6h1U6q-6i17hn-7iuuib-kAkPyY-n4U475-5qduaP-N4Ws3-qjGbCr-osHjb-tEsAP-3UN759-o76HA-7KjG9k-67edp-xdMVP5-6zLxaT-pgWHT-8k3imL-smJAAa/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/bareego.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Big ant&quot; width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div style=&quot;margin:5px; overflow:hidden;&quot;&gt;
+&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/duncan/3189039332/in/photolist-5RNEhL-rZEoXK-nYZLfC-6nmrKx-pY9yMV-eRhnD5-pSNaGV-6ofFu5-et6vZ7-oD6Ho2-a272Uq-drzFK2-a95asp-nvsEmF-6fVHz9-36MAEJ-9Y51BL-3wGr3i-2KZa9r-6wfRXP-81NL4r-8xKxZp-6nTDi1-9XUUEw-5do5mX-opjwhP-o4kqqh-aaYVKv-83tTzL-c9T3bY-6FyRKs-6sJfKz-eXfmX9-nJttup-4R4gHx-6FyRLq-bMSpZK-5rueY2-6o9yu6-a6ZWN6-bGsWE6-6K9QaB-nJtF1m-69MiSx-bq4sGw-2KZa9M-8gkRfi-nHzf5N-am8cba-4VKSnJ&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/duncan.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Smaller ants&quot; width=&quot;300&quot; style=&quot;float:left&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;And you thought maybe I got unlucky-- I got five big-looking ants and five little-looking ants, but really they&amp;#39;re both draws from the same population. And overall the groups don&amp;#39;t have any difference in size. But, you observed differences in the group sizes of three-quarters of an inch.&lt;/p&gt;
+
+&lt;p&gt;You and I know something about ant size variation. That sounds very large, and we&amp;#39;ll see that it actually was.&lt;/p&gt;
+
+&lt;p&gt;In another context, imagine you had some a tug of war game set up, you had two teams. There&amp;#39;s men and women split up into the blue and the pink team. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/illinoisspringfield/17617323816/in/album-72157652398690788/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/illinoisspringfield.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Blue team&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/illinoisspringfield/8686873531/in/album-72157633316473571/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/illinoisspringfield2.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Pink team&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We mapped their heights, we found the average height, and we learned the average height between the groups was different. Again, we observed a difference of about three quarters of an inch.&lt;/p&gt;
+
+&lt;p&gt;We want to know, is that significant? Are those two teams really different, or did we just observe a difference by nature of the selection process? The random generation we&amp;#39;re assuming is happening behind the scenes?&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;ve taken a standard statistics class, you&amp;#39;re now thinking about confidence intervals. You&amp;#39;re thinking &amp;quot;point estimate, plus or minus the standard error times something that has to do with some distribution&amp;quot;. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/CI_mean.gif&quot; class=&quot;img-responsive&quot; alt=&quot;point estimate, plus or minus the standard error times something that has to do with some distribution&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And maybe you&amp;#39;re thinking about some pages in your textbook that had standard error calculations, with a bunch of square roots and fractions. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SE_page1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Standard error forumas&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;re thinking about a difference of means. So, we think, we can just pick that first formula. But really, it&amp;#39;s worse than that. There&amp;#39;s all these different proofs about if you have different group sizes, and if the variances are different. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SE_page2.png&quot; class=&quot;img-responsive&quot; alt=&quot;Standard error forumas&quot; &gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So then you need to pick that formula out. And then it is worse than &lt;strong&gt;that&lt;/strong&gt;, because once you have the standard error calculation, you have to know the degrees of freedom you&amp;#39;re going to look at in your distribution.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SE_page3.png&quot; class=&quot;img-responsive&quot; alt=&quot;Standard error forumas&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And even I-- I have a Ph.D. in statistics-- I get the heebie-jeebies if you ask me to come up with the right standard error computation. Maybe you&amp;#39;re better at statistics than me, and came up with the right standard error, found the degrees of freedom. Now you&amp;#39;re going to look at some idealized distribution.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://en.wikipedia.org/wiki/Student%27s_t-distribution&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/Student_t_pdf.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;T distribution&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We call this a sampling distribution. It&amp;#39;s not a distribution of data, it&amp;#39;s a distribution of statistics. Statistics are numbers computed from other numbers. In this case we had the average heights of the two tug of war teams and we&amp;#39;re looking at their difference.&lt;/p&gt;
+
+&lt;p&gt;With your standard error and your degrees of freedom and the distribution, you could come up with some confidence interval and you could see if there was really no relationship between the team and the height, how often would we observe a difference of three-quarters of an inch?&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m going to argue that&amp;#39;s not the way you should do that problem. Instead, you should use randomization. And randomization is just what it sounds. You have two things you think might have a relationship. You want to come up with the sampling distribution, and you want it to be the null distribution. The distribution of, essentially, nothing. &lt;/p&gt;
+
+&lt;p&gt;So what you&amp;#39;re going to do is you&amp;#39;re going to take the values, the labels here, and you&amp;#39;re going to mix them up. You&amp;#39;re going to compute the group height means for those different groups in the mixed-up data and compute the difference in the heights.&lt;/p&gt;
+
+&lt;p&gt;So you can see already sometimes you&amp;#39;re getting a positive difference, sometimes you&amp;#39;re getting a negative difference. I think one of those turned out to be zero. We&amp;#39;re going to do this like a thousand times and then we can look at the distribution of that statistic.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/randomization.png&quot; class=&quot;img-responsive&quot; alt=&quot;Randomization distribution&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This distribution is centered around zero because it&amp;#39;s a null distribution. And then we can calculate where is 95% of the data? What&amp;#39;s the middle 95%? And then sort of say &amp;quot;if there really was no difference between the heights of these two tug of war teams, what sorts of differences might we observe?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;And so in the case of the tug of war teams, if there was really no difference, we could observe height differences that were negative four inches to positive four inches different. Our observed difference of three quarters of an inch is so tiny we think it is nothing. Even though we saw a difference of three-quarters of an inch, that was nothing.&lt;/p&gt;
+
+&lt;p&gt;For the ants, same thing, but the distribution looks different. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/randomizationants.png&quot; class=&quot;img-responsive&quot; alt=&quot;Randomization distribution&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Randomization distributions are not always symmetric. And they&amp;#39;re not always smooth. They can have these lumps. But, again, we can compute where the middle 95% of the data is. So for the ants it goes from negative 0.5 to 0.5. The observed difference of three-quarters of an inch, that would be pretty weird to see if there was no difference between my two different ant size groups.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m a statistician, so the open source programming language of my choice is R. If you wanted to do this yourself in R, this is the code you would use. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r, eval=FALSE&quot; data-lang=&quot;r, eval=FALSE&quot;&gt;library(mosaic)
+diff(mean(~height|team, data=tugowar))
+
+bootstrap &amp;lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups=team)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So if I wanted to compute one difference in means, it&amp;#39;s the first piece of code. And I wanted to do a thousand of them, I could use the second chunk.&lt;/p&gt;
+
+&lt;p&gt;But there&amp;#39;s another technique we might want to use for assessing whether the number we got is sort of reasonable or what some other possible numbers we could have observed could be. That&amp;#39;s bootstrapping. In bootstrapping you take the data you have, kind of like pulling yourself up by your bootstraps. Making something from nothing. That&amp;#39;s not really possible, so we&amp;#39;re going to make data from our old data. We&amp;#39;re going to sample with replacement. Pull out data points. Here we&amp;#39;re not breaking the relationship between the two variables. We&amp;#39;re just pulling them out directly.&lt;/p&gt;
+
+&lt;p&gt;And you can see sometimes I get the same data point more than once in my bootstrap sample. But now I have new data, and I can treat that as my current data. And compute the mean heights, and then the possible difference
+in heights. And so if that observed tug of war game we saw was really representative of the world, other than 0.75 I might have observed 0.6637. &lt;/p&gt;
+
+&lt;p&gt;I can come up with a bootstrap distribution, much in the same way I can with randomization. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/boostrap_dist.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Bootstrap distribution&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The bootstrap distributuon might not be symmetric. It is centered around the estimate from the real data. In this case, centered around the 0.75. And then it shows us some possible numbers we could have observed.&lt;/p&gt;
+
+&lt;p&gt;So, again, if that was our data and we were generating bootstrap samples, we might have seen differences from negative 3 to positive 4, and again we think ours is not different from nothing or zero. &lt;/p&gt;
+
+&lt;p&gt;And with the ants, all the observed values we could have seen, they are all negative. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/bootstrap_ant.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Bootstrap distribution&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So, we think there is a relationship. One of those groups is bigger than the other.&lt;/p&gt;
+
+&lt;p&gt;If you want to know more about randomization and the bootstrap, you could look at this &lt;a href=&quot;www.openintro.org&quot;&gt;open source textbook&lt;/a&gt;. What? It was written by some really cool statisticians. &lt;a href=&quot;https://github.com/OpenIntroOrg&quot;&gt;The source&lt;/a&gt; is all on GitHub. You can download the PDF for free. If you like physical books, you can buy this statistics textbook that I used in my class for &lt;a href=&quot;http://smile.amazon.com/Introductory-Statistics-Randomization-Simulation-David/dp/1500576697?sa-no-redirect=1&quot;&gt;$9 on Amazon&lt;/a&gt;. So it&amp;#39;s really cool and good. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/openintro.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Open Intro&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want other resources, Jonathan Stray has a five minute lighting talk from NICAR, &lt;a href=&quot;http://bit.ly/OneWeirdStatsTrick&quot;&gt;&amp;quot;Solve Every Statistics Problem with One Weird Trick&amp;quot;&lt;/a&gt;, and that one weird trick is randomization, so you kind of know about that. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://jonathanstray.com/me&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/jonathan_stray.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Jonathan Stray&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And Tim Hesterberg, has a paper, &lt;a href=&quot;http://bit.ly/KnowAboutBootstrap&quot;&gt;&amp;quot;What Teachers should know about the Bootstrap&amp;quot;&lt;/a&gt;. I think it really should be called what everyone should know about the bootstrap.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.timhesterberg.net/home/bio&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/tim_hesterberg.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Tim Hesterberg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/howdoesitrelate.png&quot; class=&quot;img-responsive&quot; alt=&quot;What does this have to do with visualization?&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So what does this all have to do with visualization? We&amp;#39;re going to try to do the same thing with visualization as we did with numbers. Try to say is this different than nothing? What are other things we could have observed? And this is going to help us try to not make visualizations that don&amp;#39;t show anything. &lt;/p&gt;
+
+&lt;p&gt;When I say that, I don&amp;#39;t mean visualizations of the type you see on &lt;a href=&quot;http://viz.wtf/&quot;&gt;WTF-viz&lt;/a&gt;, &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://viz.wtf/post/141788409671/lingerie-chart&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/lingerie.png&quot; class=&quot;img-responsive&quot; alt=&quot;Lingerie chart?&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;although I like making fun of those too. And I don&amp;#39;t mean showing nothing in the way Darrell Huff is talking about in the 1950s with How to Lie with Statistics. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/Huff.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Darrell Huff&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead, I&amp;#39;m talking about using techniques like randomization. There&amp;#39;s an awesome paper by &lt;a href=&quot;http://hadley.nz/&quot;&gt;Hadley Wickham&lt;/a&gt;, &lt;a href=&quot;http://www-stat.wharton.upenn.edu/%7Ebuja/&quot;&gt;Andreas Buja&lt;/a&gt;, &lt;a href=&quot;http://dicook.github.io/&quot;&gt;Di Cook&lt;/a&gt; and &lt;a href=&quot;http://hofmann.public.iastate.edu/&quot;&gt;Heike Hofmann&lt;/a&gt;. &lt;/p&gt;
+
+&lt;div style=&quot;margin:5px;&quot;&gt;
+&lt;a class=&quot;thumb&quot; href=&quot;http://hadley.nz/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/hadley.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Hadley Wickham&quot;width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;margin:5px;&quot;&gt;
+&lt;a class=&quot;thumb&quot; href=&quot;http://www-stat.wharton.upenn.edu/~buja/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/andreas.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Andreas Buja&quot;width=&quot;100&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;margin:5px; overflow:hidden;&quot;&gt;
+&lt;a class=&quot;thumb&quot; href=&quot;http://dicook.github.io/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/di.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Di Cook&quot;width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;margin:5px; overflow:hidden;&quot;&gt;
+&lt;a class=&quot;thumb&quot; href=&quot;http://hofmann.public.iastate.edu/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/heike.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Heike Hofmann&quot;width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It&amp;#39;s called &lt;a href=&quot;http://bit.ly/graphical_inference&quot;&gt;Graphical Inference for InfoVis&lt;/a&gt;. I think it&amp;#39;s really worth checking out. One of the techniques they suggest in the paper is called the lineup.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/mike_crane/5188333652/in/photolist-8UtyQu-syKEK-9SHXTx-2azAWL-bCqhR4-7rSB2w-syKgn-bCqiAv-bCqhHt-bCqhWH-9WLjQh-bpvnxY-jHWcxM-bpvniA-Bh14D-bpvnCL-9VekKT-9Vh1Jo-9Vh4TS-765vEj-9Vh9Qd-bmKeHQ-ALLCXL-9Vhc17-9Veatv-oW5cC4-9VebyX-9Vef9H-9VgZFS-9Vh1wy-9VhbtN-9VekZi-9Vh2eJ-9Vh6es-9Vh1jA-9VhaeJ-9Vh8U9-9Vhaqo-9VhbLQ-9Vekxi-9Vec4p-9Vh7RL-9Vh16W-72qhos-9Vh6P5-9VgZeL-9VenuT-9Vea3D-9VeeSa-72mhJi&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/mike_crane.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Lineup&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The idea of the lineup is you put your data, your plot that you think shows something real, in a lineup with a bunch of innocent plots. If you can pick your accused plot out of the lineup of innocent plots, that means that it&amp;#39;s somehow different than nothing. &lt;/p&gt;
+
+&lt;p&gt;To illustrate this, I would break the relationship between X and Y and look at what other plots I could have gotten from the same data with that relationship broken.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/random6.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Random plot&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of looking at them all in sequence, I want to look at them all together. Let&amp;#39;s take an example. This is some data about loans. And I&amp;#39;m plotting the balance of a loan against the income. And I&amp;#39;m coloring by whether or not a person defaulted on their loan. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/default.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Loan defaults&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And my human brain sees a pattern. I say, it looks like people who default on loans are the ones that have really high loan balances. It doesn&amp;#39;t matter if they&amp;#39;re rich or poor, it&amp;#39;s just those high loan balances.&lt;/p&gt;
+
+&lt;p&gt;Is it possible I just sort of made that up? This is what it would look like if you use the protocol in the graphical inference paper and look at the plots. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/default_perm.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Loan defaults in lineup&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s 20 plots, because we often use a standard p-value cutoff of 0.05, which is the same as one out of 20. If you guessed randomly, you&amp;#39;d get the right one 1 out of 20 times even guessing at random.&lt;/p&gt;
+
+&lt;p&gt;So with this one I think you can probably identify which is the real plot. Part of it is I showed you the real one before. You might have recognized it.&lt;/p&gt;
+
+&lt;p&gt;In practice you shouldn&amp;#39;t look at the accused plot alone before you look at it in the lineup. So either you should build this into your workflow, looking at a lineup of plots every time you make a visualization, or more realistically, if you make a plot and think it might sort of show nothing, make a lineup and show it to someone who hasn&amp;#39;t seen the original plot.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r, eval=FALSE&quot; data-lang=&quot;r, eval=FALSE&quot;&gt;library(ggplot2)
+ggplot(Default)+
+  geom_point(aes(x=balance, y=income, col=default))
+
+library(nullabor)
+ggplot(lineup(null_permute(&#39;default&#39;), Default))+
+geom_point(aes(x=balance, y=income, col=default)) +
+ facet_wrap(~.sample)
+
+decrypt(&quot;OlCE bQTQ Aw GWPATAWw d&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you&amp;#39;re an R person, this is familiar. This is the ggplot code to make a scatterplot. And the bottom is to randomize the data to make null plots. I&amp;#39;m doing a null permute on the label of default versus not default and
+wrapping those facets into an array of plots. When you run the code, they have done a clever thing, it will make a plot in your plotting window, but also prints this text in the console.&lt;/p&gt;
+
+&lt;p&gt;It says decrypt and then it&amp;#39;s a bunch of nonsense characters. And that&amp;#39;s where they hid the answer. So if you were doing this on your computer and you wanted to not know ahead of time which was the real plot, but figure it out afterward, this is how to do it. You take the piece of code, and run the code, tells you where the true data was. So in this case we got it right.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r, eval=FALSE&quot; data-lang=&quot;r, eval=FALSE&quot;&gt;decrypt(&quot;OlCE bQTQ Aw GWPATAWw d&quot;)
+[1] &quot;True data in position 14&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can use the same code for the t-test. This is the tug of war teams again. Somewhere in there I&amp;#39;ve hidden the real plot of the different heights. The crosses represent the mean heights for each of the groups. The question is if you can pick out the real data. So in your head, make your guess.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/visual_t2.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Visual t-test&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It says decrypt, if you&amp;#39;re good at decrypting quickly, you could see what it is. But the true data is in position 5.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r, eval=FALSE&quot; data-lang=&quot;r, eval=FALSE&quot;&gt;decrypt(&quot;OlCE bQTQ Aw GWPATAWw J&quot;)
+[1] &quot;True data in position 5&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That&amp;#39;s not the one I picked out. Certainly not the most extreme of the possible plots. What this is telling me is the same thing as the permutation test I did with the statistics and the distribution at the beginning of the talk. There really isn&amp;#39;t a difference between these two groups.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;#39;ve given you a positive example and a negative one. But this one, I don&amp;#39;t think you really needed visualization to tell you that answer. You could have used standard statistics. The power of the graphical inference technique, is it&amp;#39;s generalizable. You can use it for anything.&lt;/p&gt;
+
+&lt;p&gt;One thing where I think humans are great at finding patterns in noise is in time series analysis. This is about the steps I take. So it&amp;#39;s from my FitBit. And sometimes I like to make up stories, like the variance is going up. Or the mean seems like it&amp;#39;s changing. Or something happened in December. I&amp;#39;m really good at making up those stories about the distributions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/ts.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Time series&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So again, the real data is in there. Again, look at it and try to see if you can guess which one it is. And now we&amp;#39;re going to try and decrypt. So there&amp;#39;s the string again. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r, eval=FALSE&quot; data-lang=&quot;r, eval=FALSE&quot;&gt;decrypt(&quot;OlCE bQTQ Aw GWPATAWw y&quot;)
+[1] &quot;True data in position 4&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It says the true data is in position 4. Again, that wasn&amp;#39;t the one I had picked out. But if I had just shown you the one time series plot, you would have believed my stories about what was interesting about that plot.&lt;/p&gt;
+
+&lt;p&gt;With the statistics analog, we&amp;#39;ve been doing the &amp;quot;is this different than zero?&amp;quot; task. Now I want to switch to the &amp;quot;what are some other reasonable values we could have gotten for this?&amp;quot; task. So with the numbers, that was what are some other reasonable values we could have gotten. &lt;/p&gt;
+
+&lt;p&gt;And then I&amp;#39;m going to talk about that in terms of plots. So some of this comes from joint work with a colleague of mine, &lt;a href=&quot;http://www.vpri.org/html/team_bios/aran_lunzer.htm&quot;&gt;Aran Lunzer&lt;/a&gt;, we worked together at the Communications Design Group. This is the highest quality image of Aran I could find. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.vpri.org/html/team_bios/aran_lunzer.htm&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/397f9d5.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Aran Lunzer&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I guess it&amp;#39;s almost life size in the theater, so maybe that&amp;#39;s fine.&lt;/p&gt;
+
+&lt;p&gt;We worked on a tool, a prototype tool, and we called it &lt;a href=&quot;http://vimeo.com/93535802&quot;&gt;LivelyR&lt;/a&gt;. This is real in the sense that if you go on GitHub and &lt;a href=&quot;https://github.com/aranlunzer/shiny&quot;&gt;download the code&lt;/a&gt; you could run it yourself. I don&amp;#39;t recommend it. It&amp;#39;s very buggy. But it really has &lt;a href=&quot;https://cran.r-project.org/&quot;&gt;R&lt;/a&gt; on the back end and &lt;a href=&quot;http://lively-web.org&quot;&gt;LivelyWeb&lt;/a&gt; and javascript on the front end. &lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&quot;video&quot;&gt;&lt;iframe src=&quot;//player.vimeo.com/video/93535802&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt; &lt;p&gt;&lt;a href=&quot;http://vimeo.com/93535802&quot;&gt;LivelyR introductory demo&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user27554411&quot;&gt;Aran Lunzer&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;It lets you play with the bin width and bin offset of a histogram. Many things let you do this, but this also lets you overlay a sweep of parameter values. So you can see a variety of histograms with the same bin width and slightly different bin offsets. And they form what I like to call a histogram cloud. Which is like a kernel density estimate, but easier for people to understand.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s one more feature we built into this, which is you can call out the individual histograms if you want to. Instead of seeing them overlaid as a cloud, you could do small multiples. And it&amp;#39;s actually a two-hand
+interaction here. There&amp;#39;s an iPad and you&amp;#39;re controlling the one screen with your right hand and the other with your left hand. So it&amp;#39;s a little bit buggy. But you can see the small multiples of the different possibilities of histograms you could have seen.&lt;/p&gt;
+
+&lt;p&gt;Again, I think it&amp;#39;s really easy with histograms to use the default algorithm, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Histogram&quot;&gt;Sturges algorithm&lt;/a&gt; or whatever it is in your favorite tool, which will make the bin widths for you. If you&amp;#39;re using &lt;a href=&quot;http://ggplot2.org/&quot;&gt;ggplot2&lt;/a&gt;, it will give you a warning, like, I chose a default but you should come up with something better. But, many people don&amp;#39;t. I know that you all do, because you&amp;#39;re visualization professionals.&lt;/p&gt;
+
+&lt;p&gt;But it&amp;#39;s not always obvious to non-professionals that those defaults make a huge difference. You might use the defaults and find what looks like a pattern, but it&amp;#39;s really just the result of the parameter values you chose. So giving people the opportunity to play with the parameters is really powerful. &lt;/p&gt;
+
+&lt;p&gt;After Aran and I did this work in one dimension, looking at the histograms. I started thinking how could we do this in two dimensions? Which got me thinking about maps. &lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://bit.ly/maup16&quot;&gt;Modifiable Aerial Unit Problem&lt;/a&gt; says that if you aggregate spatial data in different polygonal shapes, you&amp;#39;re going to get different spatial patterns. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/maup16&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/MAUP.gif&quot; class=&quot;img-responsive&quot; alt=&quot;Modifiable Aerial Unit Problem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This can happen with &lt;a href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;gerrymandering&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/gerrymandering.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;Gerrymandering&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It can happen with different county and zip code data, these different levels of polygons. And there are a lot of statistical problems that go along with that. &lt;/p&gt;
+
+&lt;p&gt;Aran Lunzer and I worked together on &lt;a href=&quot;http://bit.ly/spatial_agg&quot;&gt;this next tool&lt;/a&gt;, which doesn&amp;#39;t really have a name. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/spatial_agg&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/spatial_agg.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;Spatial aggregation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It takes point data about earthquakes in southern California and aggregates them into polygons. But instead of making fixed polygons, you can scale and rotate and move the polygons to see some other possible values of the visualization you could have gotten. So you start with your default values and maybe you think there are very obvious trends everyone should be aware of. You can tell some great story about why there is a hot spot of earthquakes in this one place.&lt;/p&gt;
+
+&lt;p&gt;But then when you start manipulating the polygons, you can see there are many other possible patterns you could have created. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/sjrohde/4687848929&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/sjrohde.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Nothing, AZ&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What I want you to take away from this talk is that there are statistical tasks and very analogous visualization tasks. In statistics we want to know if two numbers are different, which is like knowing if one number is different than zero. We could use tools like randomization to answer that question. In the visualization world we can use randomization in a different way to answer the question, is this plot different than nothing? &lt;/p&gt;
+
+&lt;p&gt;In statistics we might want to ask, what are some reasonable, other possible values for this number? What other differences in heights could we have observed? And you can use something like the bootstrap to show you other possible reasonable values. In the visualization space, using parameter manipulation, or giving users the ability to see how your parameter choices impact the visual story they are seeing can be really powerful.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 16 May 2016 00:00:00 -0400</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/text_viz.png" />
+			</item>
+		
+			<item>
+				<title>Do you know Nothing when you see it?</title>
+				<description>&lt;p&gt;I&amp;#39;m currently at &lt;a href=&quot;https://openvisconf.com/&quot;&gt;OpenVisConf&lt;/a&gt; and in awe of my fellow presenters. I did my presentation, &amp;quot;Do you know Nothing when you see it?&amp;quot; before lunch and have been slowly unwinding since then. A couple people asked for links to my slides and resources, so here they are!&lt;/p&gt;
+
+&lt;p&gt;I saved my Keynote slides as HTML and posted them on my website. They seem even lower quality than in Keynote (how is that possible?!) but you can access them  &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/OpenVisConf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.science.smith.edu/~amcnamara/OpenVisConf&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/titleslide.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Nothing&quot; width=&quot;400&quot;&gt;&lt;/a&gt; title slide image from flickr: &lt;a href=&quot;https://www.flickr.com/photos/hungry_i/66962027/in/photolist-6VctH-zr4aM-e9mH1t-6XLhY9-qo4Bms-8gyi5q-zr357-4jeF2Y-r8nhEr-3BzwrF-hWLU1-zhqjfS-6akRDL-8oHoz1-Env5V-dLro6N-6Ba6Qx-hcQm7X-45WiW8-45Wj1K-nWoLpt-8Qp68q-6a6dd5-aqc1Ri-dZmw2h-79ykph-rxzvJj-uu5px-JCCFC-9tWqkt-6EGjEv-6Juo8s-eCaru-6VMiSX-dSGL3M-6bsbPs-8cueSK-4waMSd-7zWdYW-5WrAQr-MtpXy-6gH759-MtpXJ-a7uXuC-4THFy2-69GvS-GyDeK-EntY3-a1bJ4u-8HgEn&quot;&gt;hungry_i&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Resources:&lt;/strong&gt; [May be updated to be more descriptive if I get the energy.]&lt;/p&gt;
+
+&lt;p&gt;Randomization and the bootstrap:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;David M Diez,  Christopher D Barr, Mine Çetinkaya-Rundel. &lt;a href=&quot;www.openintro.org&quot;&gt;Introductory Statistics with Randomization and Simulation.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Jonathan Stray. &lt;a href=&quot;http://bit.ly/OneWeirdStatsTrick&quot;&gt;“Solve Every Statistics Problem with One Weird Trick.”&lt;/a&gt; NICAR 2016. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tim Hesterberg. &lt;a href=&quot;http://bit.ly/KnowAboutBootstrap&quot;&gt;“What Teachers Should Know About the Bootstrap.“&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Graphical inference:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hadley Wickham, Dianne Cook, Heike Hofmann, and Andreas Buja. (2010). &lt;a href=&quot;http://bit.ly/graphical_inference&quot;&gt;Graphical Inference for Infovis.&lt;/a&gt; IEEE Transactions on Visualization and Computer Graphics, 16(6). &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;R packages:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/mosaic/index.html&quot;&gt;mosaic&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://ggplot2.org/&quot;&gt;ggplot2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://cran.r-project.org/web/packages/nullabor/vignettes/nullabor.html&quot;&gt;nullabor&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Modifiable Areal Unit Problem and Gerrymandering&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://bit.ly/maup16&quot;&gt;An Introduction to the Modifiable Areal Unit Problem&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Christopher Ingraham. &lt;a href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;This is the best explanation of gerrymandering you will ever see&lt;/a&gt;. The Washington Post.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Exploring parameter space:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Aran Lunzer and Amelia McNamara. (2014). &lt;a href=&quot;http://bit.ly/CheckingCharts&quot;&gt;It ain’t necessarily so: Checking charts for robustness.&lt;/a&gt; In IEEE Vis 2014. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://vimeo.com/93535802&quot;&gt;LivelyR introductory video&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://bit.ly/spatial_agg&quot;&gt;Spatial Aggregation Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thank you so much to everyone who offered kind words about my presentation!&lt;/p&gt;
+</description>
+				<pubDate>Mon, 25 Apr 2016 00:00:00 -0400</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/titleslide.jpg" />
+			</item>
+		
+			<item>
 				<title>What&#39;s wrong with being data-collecting pigeons?</title>
 				<description>&lt;p&gt;As you might know from &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/blog/visualization/2015/01/14/FitbitColors.html&quot;&gt;my blog&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/minebocek/status/484751171374948353&quot;&gt;twitter&lt;/a&gt;, I&amp;#39;ve been a Fitbit person since December 2013. I&amp;#39;m also very interested in participatory sensing and citizen science, and I&amp;#39;ve been thinking about the ways that data can be used for good, both on the personal and societal level. &lt;/p&gt;
 
@@ -465,146 +821,6 @@ particular paragraph or sentence.&lt;/p&gt;
 				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/14/DataScienceLA.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/14/DataScienceLA.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/datascienceLA.jpg" />
-			</item>
-		
-			<item>
-				<title>ICOTS discussion on technology in statistics education</title>
-				<description>&lt;p&gt;One of the most interesting sessions I attended at ICOTS was the panel session, &lt;a href=&quot;http://icots.info/9/session.php?s=9H&quot;&gt;Future trends for technology in statistics education&lt;/a&gt;. The panel was chaired by &lt;a href=&quot;https://www.stat.auckland.ac.nz/showperson?firstname=Chris&amp;amp;surname=Wild&quot; title=&quot;Chris Wild&quot;&gt;Chris Wild&lt;/a&gt; of Auckland, and featured&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;Deb Nolan&lt;/a&gt;, UC Berkeley&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;Nick Horton&lt;/a&gt;, Smith College&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;Bill Finzer&lt;/a&gt;, Common Online Data Analysis Platform (CODAP)/Fathom&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;Webster West&lt;/a&gt;, Texas A&amp;amp;M/StatCrunch. &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Because I was so fascinated by the discussion, I ended up creating an almost-complete transcript of the discussion (biased by my personal interests, of course). I thought it was possible that someone else might be interested in my transcript, so I&amp;#39;m posting it here. Beyond my own interest bias, I&amp;#39;m sure that I&amp;#39;ve mis-attributed an idea here and there. Please let me know if there&amp;#39;s something I should change to be closer to the truth!&lt;/p&gt;
-
-&lt;!--more--&gt; 
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/2014-07-17 15.44.54-1.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;The panel&quot;&gt;&lt;/a&gt;
-&lt;em&gt;The panelists helping attendees find the last few seats (eventually, it was standing-room only)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The first question posed to the panel by Chris Wild was &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;what do you consider the most exciting developments in technology for statistics education?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: Student centered data collection.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Open source tools, giving more students access.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: The recognition that data science as essential, and technology making it possible to integrate it into the whole curriculum.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: The popularity of data science and interest by students. &lt;/p&gt;
-
-&lt;p&gt;From that question, the discussion really just moved to a more fluid form, where panelists fed off each other&amp;#39;s comments and moved the conversation forward. Here are some of the comments that caught my ear. &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: There isn&amp;#39;t going to be one &amp;quot;intro course,&amp;quot; there will be many courses. A second course needs to cover thinking with data, data wrangling, data munging (or whatever you call it). Hadley&amp;#39;s stuff is good, and uses simple verbs. Students should have the ability to do something with real world data.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: Students need to be exposed to more than one technology. Don&amp;#39;t just turn the R crank. [At some point in the discussion, &lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt; shared that students often call her statistical computing course &amp;quot;the R course,&amp;quot; which makes her cringe.]&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: I struggle to come up with the right verbs (for describing the tasks students need to be able to do, especially in terms of code). But, we all do. Maybe it&amp;#39;s better to start with examples. Visualize point A, point B, see how to do it, and then determine what skills are needed.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: &amp;quot;Data immersion&amp;quot; is an experience everyone should have, regardless of discipline.&lt;/p&gt;
-
-&lt;p&gt;Another question arose here, perhaps raised by Chris Wild. &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;What are the advantages and disadvantages of menu-driven paradigms versus programming?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: I write code that helps people do menu-driven things. Many teachers are unreachable when it comes to code, and menu-driven can help.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: There&amp;#39;s a difference between coding and scripting. Scripting is simpler, coding is more complex. To code, you need some understanding of control flow, etc. Scripting is more interacting at the console. &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: In Fathom, you have a collection, and you can sample from it. That&amp;#39;s essentially a loop. If you&amp;#39;re going to be a data scientist, you need to think computationally. &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: We need to think developmentally. Think about when parents are upset because they can&amp;#39;t toilet train their baby. You say, I&amp;#39;m confident by the time they&amp;#39;re 18, they&amp;#39;ll be okay. Then work backward from there. [Ed: I&amp;#39;ve lost what this analogy was supposed to be about. Is the baby a statistics student, and the toilet-training teaching them to code? Insights on this one would be appreciated].&lt;/p&gt;
-
-&lt;p&gt;Coding lets you document your workflow. It&amp;#39;s much harder to do this in an interface. This helps with reproducibility, which we&amp;#39;ve basically decided is a good thing. Down the line, you want peer reviewers to be able to look at your data and code. Biologists have lab notebooks, that helps them be reproducible, and they see this in courses.  &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: Ubiquitous data computing is coming. Imagine your Personal Data Calculator. Just like you always have something to write with, you will have a PDC. Technology for working with data will be just as pervasive as other technologies. &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Shiny lets me quickly make an applet that would take 6 months for a Java developer. There&amp;#39;s a speed up in the creation of tools.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: In StatCrunch, I want to let textbook authors script their own applets (versus scripting artisanal applets for each author individually). This is coming down the road. &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: In the past, I&amp;#39;ve tried making education games. One was a hospital that you tour around in. This effort was in Java, but we didn&amp;#39;t have the manpower. I had ideas about interactive dynamic documents, same thing. Shiny is making a difference, although I would prefer to be &amp;quot;down one level.&amp;quot; There&amp;#39;s a difference between dynamic and interactive-- dynamic means that output is automatically created for you from code. Interactive means that a reader can play with sliders, etc. &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: [Paraphrasing &lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;] &amp;quot;So, a learning technology is something that will be out of date in 10 years?&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;From &lt;a href=&quot;https://www.stat.auckland.ac.nz/showperson?firstname=Chris&amp;amp;surname=Wild&quot; title=&quot;Chris Wild&quot;&gt;Chris Wild&lt;/a&gt;, &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;there&amp;#39;s a design problem (that&amp;#39;s always the same) and an implementation problem.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Michael Bulmer&amp;#39;s &lt;a href=&quot;http://escholarship.org/uc/item/2q0740hv&quot;&gt;&amp;quot;Island&amp;quot;&lt;/a&gt;. It&amp;#39;s a big thing to take on.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: You can bring design in through simulation studies.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.math.smith.edu/%7Enhorton/&quot; title=&quot;Nick Horton&quot;&gt;NH&lt;/a&gt;: Looking at health services research: they use non-random data (e.g. from billings) to find out things about health. This is much the same as the problem we&amp;#39;re facing now. This is what we should be aiming for.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: There&amp;#39;s a lot of room to grow in computer science at the high school level. This will change what we do at the college level.
-&amp;quot;Have you heard about R.N. Jesus?&amp;quot; Stands for Random Number Generator, but you pray to it to get good numbers in a game. WoW is a super polished game. We don&amp;#39;t have the skills to build something polished like that.&lt;/p&gt;
-
-&lt;p&gt;Some time around here, the panel was opened up to questions from the audience. I&amp;#39;m not sure exactly what point that was. Nonethless, there was another question for the panel-- &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;what will we be talking about at ICOTS 10 in 2018?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: There will be learning log data available. I hope statistics ed people will be using this data.&lt;/p&gt;
-
-&lt;p&gt;Then, someone (maybe &lt;a href=&quot;http://www.stat.ucla.edu/%7Ergould/Home/About_Me.html&quot;&gt;Rob Gould&lt;/a&gt;) proposed a definition for Data Science. From my understanding of the comment, I sketched a Venn diagram in my notes which looked something like this:
-&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/DataScience.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Data Science Venn Diagram&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;An audience member suggested &lt;a href=&quot;coderdojo.com&quot;&gt;CoderDojo&lt;/a&gt; as a resource for students, which makes it cool to code, says every kid can code. [Ed: I think these types of claims are usually very limited to kids with a lot of privilege]&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.calvin.edu/%7Erpruim/&quot;&gt;Randy Pruim&lt;/a&gt; asked the panel, &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;is there a dark side to this? Now, anyone can make a pretty graph, but it might not mean anything. There are thinking skills that are necessary.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.berkeley.edu/%7Enolan/&quot; title=&quot;Deb Nolan&quot;&gt;DN&lt;/a&gt;: We&amp;#39;ve always had this problem.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.stat.tamu.edu/%7Ewest/&quot; title=&quot;Webster West&quot;&gt;WW&lt;/a&gt;: We should be doing things like text analysis in intro classes. Students get out of intro classes, they think data is just numbers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://cadrek12.org/users/william-finzer&quot; title=&quot;Bill Finzer&quot;&gt;BF&lt;/a&gt;: Personal data should be meaningful to individuals. It should be able to be worked with. &lt;/p&gt;
-
-&lt;p&gt;And with that, my transcript ends. See, I told you it might only be interesting to me! Those who were there, what insights did I neglect to capture? &lt;/p&gt;
-</description>
-				<pubDate>Wed, 06 Aug 2014 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/06/ICOTS-Panel-Transcript.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/06/ICOTS-Panel-Transcript.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/2014-07-17 15.44.54-1.jpg" />
-			</item>
-		
-			<item>
-				<title>Yes, and...</title>
-				<description>&lt;p&gt;One of my primary teaching techniques is the improv-inspired &amp;quot;yes and...&amp;quot; move. People who have been trained in improvisational comedy know that the first rule is always to build on what your fellow performers say. If someone says, &amp;quot;now we&amp;#39;re sitting in a cafe, having coffee&amp;quot; you should never respond, &amp;quot;no, we&amp;#39;re outside playing frisbee!&amp;quot; Instead, you should build, &amp;quot;yes, and the waitress is a robot!&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;When I was in college, I had an instructor whose response to any student comment would always start with &amp;quot;no.&amp;quot; Over the course of the semester, this became a running joke with the students in the class, because it didn&amp;#39;t matter how right your answer was. &lt;/p&gt;
-
-&lt;!--more--&gt; 
-
-&lt;p&gt;A typical example would be the instructor asking, &amp;quot;What programming construct am I using here?&amp;quot; A student would answer, &amp;quot;you&amp;#39;re using a for loop&amp;quot; And the response would come back, &amp;quot;No. Well, I guess it is a for loop. But I wanted you to say a control statement.&amp;quot; That one&amp;#39;s actually pretty tame, because both the student&amp;#39;s response and the instructor&amp;#39;s expected response could be considered correct. But this instructor would go through verbal gymnastics to always start with no, even if the student&amp;#39;s response was precisely correct and there was no alternative.&lt;/p&gt;
-
-&lt;p&gt;As a result, many students shut down completely. Even though we joked about the instructor&amp;#39;s love of &amp;quot;no&amp;quot; many people became (consciously or unconsciously) scared off from responding. By the end of the course, I was essentially the only one brave enough to raise my hand, knowing that no matter what I said I would get a negative response. &lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/YesAnd.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Yes And&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Of course, most teachers don&amp;#39;t go to this extreme. But, I know how easy it is to slip into a frame of mind where you want one particular response and no one is &amp;quot;getting it.&amp;quot; So, I make a concerted effort to always start my response to students with &amp;quot;yes&amp;quot; or something else similarly positive. &amp;quot;Sure, that model has some of the qualities I&amp;#39;m describing here. That&amp;#39;s a nice connection to the stuff we were talking about last week. I was looking for one of the models we&amp;#39;ve been discussing today. Does anyone have another idea?&amp;quot; In fact, I try to start with something positive, even if the answer is partly/mostly wrong. For each incorrect response, I try to put myself into my student&amp;#39;s frame of mind and figure out what the connection is that made them say it. &lt;/p&gt;
-
-&lt;p&gt;If I go through several responses and no one is saying what I expected, I&amp;#39;ll eventually say something like, &amp;quot;oh boy, here I go again, expecting you guys to read my mind!&amp;quot; Usually, this gets a laugh from the class. And by explicitly calling myself out when I&amp;#39;m asking unreasonable questions, it helps me reduce that behavior. Sometimes students can even be frustrated by my positivism, because they want to know &lt;em&gt;the&lt;/em&gt; answer to the question. Since I&amp;#39;ll talk my way through almost any response, it detracts from the idea of a correct response. While I try to strike a balance, I think that the idea of many correct responses is very statistical. &lt;/p&gt;
-</description>
-				<pubDate>Fri, 01 Aug 2014 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/01/Yes-And.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/01/Yes-And.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/YesAnd.jpg" />
 			</item>
 		
 	</channel>
