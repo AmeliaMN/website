@@ -7,6 +7,24 @@
 		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Worth adding to your inbox</title>
+				<description>&lt;p&gt;For the most part, I get my data news from the web (blogs like &lt;a href=&quot;http://flowingdata.com/&quot;&gt;flowingdata&lt;/a&gt;, &lt;a href=&quot;http://simplystatistics.org/&quot;&gt;simply statistics&lt;/a&gt;, &lt;a href=&quot;http://www.statschat.org.nz/&quot;&gt;stats chat&lt;/a&gt;) and twitter (check out the &lt;a href=&quot;https://twitter.com/AmeliaMN/following&quot;&gt;people I follow&lt;/a&gt;). However, there are a few email mailing lists I&amp;#39;ve joined that are worth the addional lines in my inbox. Here they are:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://tinyletter.com/data-is-plural&quot;&gt;Data Is Plural&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/jsvine&quot;&gt;Jeremy Singer-Vine&lt;/a&gt;. A great source of open, interesting data sets. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tinyletter.com/abovechart&quot;&gt;Above Chart&lt;/a&gt; by &lt;a href=&quot;https://www.propublica.org/site/author/scott_klein&quot;&gt;Scott Klein&lt;/a&gt;. Historical data visualizations from newspapers. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.oreilly.com/data/newsletter.html&quot;&gt;O&amp;#39;Reilly Data Newsletter&lt;/a&gt;. News about data (often skews toward computer science).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Thu, 23 Jun 2016 00:00:00 -0400</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/misc/2016/06/23/Listservs.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/misc/2016/06/23/Listservs.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/InboxZero.png" />
+			</item>
+		
+			<item>
 				<title>OpenVisConf talk transcript</title>
 				<description>&lt;p&gt;During &lt;a href=&quot;https://openvisconf.com&quot;&gt;OpenVisConf&lt;/a&gt;, I hurriedly &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/blog/conferences/2016/04/25/OpenVisConf.html&quot;&gt;posted&lt;/a&gt; some links from my talk so people could follow up with resources I had mentioned. I kept meaning to write up a fuller blog post, but of course life comes along (in the interim, Smith has finished finals, I&amp;#39;ve graded a ton of projects, gone out of the state twice, and attended commencement). &lt;/p&gt;
 
@@ -42,7 +60,7 @@
 
 &lt;p&gt;Our goal is to be able to identify when something we created is nothing. And in order to do that, I&amp;#39;m going try statistics.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I&#39;m going to try... statistics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I'm going to try... statistics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I am a statistics professor. That means whenever I get in front of a group of people, I try to sneakily teach them some statistics. &lt;/p&gt;
 
@@ -217,7 +235,7 @@ ggplot(Default)+
   geom_point(aes(x=balance, y=income, col=default))
 
 library(nullabor)
-ggplot(lineup(null_permute(&#39;default&#39;), Default))+
+ggplot(lineup(null_permute('default'), Default))+
 geom_point(aes(x=balance, y=income, col=default)) +
  facet_wrap(~.sample)
 
@@ -277,17 +295,17 @@ interaction here. There&amp;#39;s an iPad and you&amp;#39;re controlling the one
 
 &lt;p&gt;The &lt;a href=&quot;http://bit.ly/maup16&quot;&gt;Modifiable Aerial Unit Problem&lt;/a&gt; says that if you aggregate spatial data in different polygonal shapes, you&amp;#39;re going to get different spatial patterns. &lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/maup16&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/MAUP.gif&quot; class=&quot;img-responsive&quot; alt=&quot;Modifiable Aerial Unit Problem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/maup16&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/MAUP.png&quot; class=&quot;img-responsive&quot; alt=&quot;Modifiable Aerial Unit Problem&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This can happen with &lt;a href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;gerrymandering&lt;/a&gt;. &lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/gerrymandering.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;Gerrymandering&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/gerrymandering.png&quot; class=&quot;img-responsive&quot; alt=&quot;Gerrymandering&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;It can happen with different county and zip code data, these different levels of polygons. And there are a lot of statistical problems that go along with that. &lt;/p&gt;
 
 &lt;p&gt;Aran Lunzer and I worked together on &lt;a href=&quot;http://bit.ly/spatial_agg&quot;&gt;this next tool&lt;/a&gt;, which doesn&amp;#39;t really have a name. &lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/spatial_agg&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/spatial_agg.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;Spatial aggregation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/spatial_agg&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/spatial_agg.png&quot; class=&quot;img-responsive&quot; alt=&quot;Spatial aggregation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;It takes point data about earthquakes in southern California and aggregates them into polygons. But instead of making fixed polygons, you can scale and rotate and move the polygons to see some other possible values of the visualization you could have gotten. So you start with your default values and maybe you think there are very obvious trends everyone should be aware of. You can tell some great story about why there is a hot spot of earthquakes in this one place.&lt;/p&gt;
 
@@ -363,7 +381,7 @@ interaction here. There&amp;#39;s an iPad and you&amp;#39;re controlling the one
 			</item>
 		
 			<item>
-				<title>What&#39;s wrong with being data-collecting pigeons?</title>
+				<title>What's wrong with being data-collecting pigeons?</title>
 				<description>&lt;p&gt;As you might know from &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/blog/visualization/2015/01/14/FitbitColors.html&quot;&gt;my blog&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/minebocek/status/484751171374948353&quot;&gt;twitter&lt;/a&gt;, I&amp;#39;ve been a Fitbit person since December 2013. I&amp;#39;m also very interested in participatory sensing and citizen science, and I&amp;#39;ve been thinking about the ways that data can be used for good, both on the personal and societal level. &lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -799,28 +817,6 @@ particular paragraph or sentence.&lt;/p&gt;
 				<link>http://www.science.smith.edu/~amcnamara/blog/tools/2014/10/01/KidPix.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/tools/2014/10/01/KidPix.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/CraigHickman.jpg" />
-			</item>
-		
-			<item>
-				<title>Data Science LA</title>
-				<description>&lt;p&gt;I&amp;#39;m now involved in the recently-launched &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt; blog. While you&amp;#39;ll probably be drawn to the site for the &lt;a href=&quot;http://datascience.la/category/user-conference/sessions/&quot;&gt;useR! conference session videos&lt;/a&gt;, &lt;a href=&quot;http://datascience.la/category/user-conference/interviews/&quot;&gt;interviews with data scientists&lt;/a&gt;, and meetup announcements, there&amp;#39;s going to be much more!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/datascienceLA.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;DataScienceLA&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;ve posted &lt;a href=&quot;http://datascience.la/data-science-goes-to-college-with-datafest/&quot;&gt;Data Science Goes to College with DataFest&lt;/a&gt;, yet another summary of the yearly DataFest we hold at UCLA and that&amp;#39;s going national. &lt;/p&gt;
-
-&lt;p&gt;Then, I wrote &lt;a href=&quot;http://datascience.la/statistics-grad-school-what-is-it-really-like/&quot;&gt;Statistics Grad School-- What is it Really Like?&lt;/a&gt; describing some of the experience of getting a PhD in statistics at UCLA.&lt;/p&gt;
-
-&lt;p&gt;Finally, I&amp;#39;ll be giving a talk at this month&amp;#39;s DataVis LA meetup, &lt;a href=&quot;http://datascience.la/datavis-la-meetup-eyeo-festival-highlights-august-26/&quot;&gt;Eyeo Festival Highlights&lt;/a&gt; on August 26th. Come by Cornerstone OnDemand to hear me talk about the things that inspired me the most from the &lt;a href=&quot;http://eyeofestival.com/&quot;&gt;eyeo festival&lt;/a&gt;. &lt;/p&gt;
-
-&lt;p&gt;If you want to keep up with &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt;, you can follow along via &lt;a href=&quot;https://twitter.com/wwwDSLA&quot;&gt;twitter&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/user/DataScienceLA&quot;&gt;youtube&lt;/a&gt;, add us to your favorite &lt;a href=&quot;http://datascience.la/feed&quot;&gt;rss&lt;/a&gt; reader, or just drop by &lt;a href=&quot;http://datascience.la&quot;&gt;the site&lt;/a&gt;. I&amp;#39;m excited to be a part of it!&lt;/p&gt;
-</description>
-				<pubDate>Thu, 14 Aug 2014 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/14/DataScienceLA.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2014/08/14/DataScienceLA.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/datascienceLA.jpg" />
 			</item>
 		
 	</channel>

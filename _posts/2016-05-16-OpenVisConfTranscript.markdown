@@ -286,17 +286,17 @@ After Aran and I did this work in one dimension, looking at the histograms. I st
 
 The [Modifiable Aerial Unit Problem](http://bit.ly/maup16) says that if you aggregate spatial data in different polygonal shapes, you're going to get different spatial patterns. 
 
-<a class="thumb" href="http://bit.ly/maup16"><img src="{{ site.baseurl }}/img/MAUP.gif" class="img-responsive" alt="Modifiable Aerial Unit Problem"></a>
+<a class="thumb" href="http://bit.ly/maup16"><img src="{{ site.baseurl }}/img/MAUP.png" class="img-responsive" alt="Modifiable Aerial Unit Problem"></a>
 
 This can happen with [gerrymandering](http://bit.ly/exp_gerrymander). 
 
-<a class="thumb" href="http://bit.ly/exp_gerrymander"><img src="{{ site.baseurl }}/img/gerrymandering.jpeg" class="img-responsive" alt="Gerrymandering"></a>
+<a class="thumb" href="http://bit.ly/exp_gerrymander"><img src="{{ site.baseurl }}/img/gerrymandering.png" class="img-responsive" alt="Gerrymandering"></a>
 
 It can happen with different county and zip code data, these different levels of polygons. And there are a lot of statistical problems that go along with that. 
 
 Aran Lunzer and I worked together on [this next tool](http://bit.ly/spatial_agg), which doesn't really have a name. 
 
-<a class="thumb" href="http://bit.ly/spatial_agg"><img src="{{ site.baseurl }}/img/spatial_agg.jpeg" class="img-responsive" alt="Spatial aggregation"></a>
+<a class="thumb" href="http://bit.ly/spatial_agg"><img src="{{ site.baseurl }}/img/spatial_agg.png" class="img-responsive" alt="Spatial aggregation"></a>
 
 It takes point data about earthquakes in southern California and aggregates them into polygons. But instead of making fixed polygons, you can scale and rotate and move the polygons to see some other possible values of the visualization you could have gotten. So you start with your default values and maybe you think there are very obvious trends everyone should be aware of. You can tell some great story about why there is a hot spot of earthquakes in this one place.
 
