@@ -16,6 +16,7 @@ One of the most interesting sessions I attended at ICOTS was the panel session, 
 Because I was so fascinated by the discussion, I ended up creating an almost-complete transcript of the discussion (biased by my personal interests, of course). I thought it was possible that someone else might be interested in my transcript, so I'm posting it here. Beyond my own interest bias, I'm sure that I've mis-attributed an idea here and there. Please let me know if there's something I should change to be closer to the truth!
 
 <!--more--> 
+
 <a class="thumb" href="#"><img src="{{ site.baseurl }}/img/{{ page.img }}" class="img-responsive" alt="The panel"></a>
 *The panelists helping attendees find the last few seats (eventually, it was standing-room only)*
 

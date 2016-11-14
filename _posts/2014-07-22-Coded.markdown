@@ -11,6 +11,7 @@ Last month, I had the opportunity to attend the [eyeo festival](http://eyeofesti
 This was the second annual meeting of the summit (which I also attended last year) and it's organized as an un-conference/wiki-style conference, meaning that there's no set schedule when you arrive. Instead, the participants build the schedule as they arrive, writing down topics they want to talk about themselves or things they'd like to hear others discuss. 
 
 <!--more-->
+
 Here's what the board looked like when we arrived:
 <a class="thumb" href="#"><img src="{{ site.baseurl }}/img/2014-06-10 08.33.25.jpg" class="img-responsive" alt="Blank whiteboard"></a>
 *What the board looked like when we showed up. (Shoutout to the awesome [Intermedia Arts](http://intermediaarts.org/) space!)*

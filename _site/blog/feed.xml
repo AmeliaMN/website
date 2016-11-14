@@ -7,6 +7,81 @@
 		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Statistics graduate school advice</title>
+				<description>&lt;p&gt;It&amp;#39;s that time of year again, the time where I find myself meeting with students thinking about graduate school in statistics. Since I often end up sending people the same things, I figured I&amp;#39;d pull them together into a blog post. You probably already know about &lt;a href=&quot;https://thegradcafe.com/&quot;&gt;the grad cafe&lt;/a&gt;, &lt;a href=&quot;http://theprofessorisin.com/pearlsofwisdom/&quot;&gt;the professor is in&lt;/a&gt;, and &lt;a href=&quot;http://www.phdcomics.com/comics.php&quot;&gt;PhD comics&lt;/a&gt;. These other links might not be as common.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.phdcomics.com/comics.php?f=1286&amp;fb_action_ids=148470391984848&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/PhDcomic.gif&quot; class=&quot;img-responsive&quot; alt=&quot;One of my favorite PhD comics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Q: What is grad school in statistics like?&lt;/h3&gt;
+
+&lt;h3&gt;A: Here are some resources to help you get a taste:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;When I was still in graduate school, I wrote a three-part blog series for &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt; on graduate school: &lt;a href=&quot;http://datascience.la/statistics-grad-school-what-is-it-really-like/&quot;&gt;Statistics grad school-- what is it really like?&lt;/a&gt;, &lt;a href=&quot;http://datascience.la/part-2-of-statistics-grad-school-what-is-it-really-like/&quot;&gt;Part 2 of what statistics grad school is like&lt;/a&gt;, and &lt;a href=&quot;http://datascience.la/paying-for-statistics-grad-school-aka-the/&quot;&gt;Part 3: Paying for statistics graduate school&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;I gave some additional advice in this recent &lt;a href=&quot;http://magazine.amstat.org/blog/2016/09/01/inspire/&quot;&gt;interview&lt;/a&gt; in AmstatNews. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://statsbylopez.com/about/&quot;&gt;Michael Lopez&lt;/a&gt; also has a piece called &lt;a href=&quot;https://statsbylopez.com/2014/07/23/so-you-want-a-graduate-degree-in-statistics/&quot;&gt;So you want a graduate degree in statistics?&lt;/a&gt;, with sections on deciding on a program, thriving once you are there, and much more. He goes in to the difference between biostatistics and statistics, a PhD and an MA, and how to evaluate programs. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Q: Where should I go for grad school?&lt;/h3&gt;
+
+&lt;h3&gt;A: Wherever seems like a good fit!&lt;/h3&gt;
+
+&lt;p&gt;I really think statistics is such an in-demand field that you can get a job with a degree from virtually any school. These show my personal research interests and biases, but a couple of my favorite programs to recommend to students are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stat.iastate.edu/&quot;&gt;Statistics at Iowa State&lt;/a&gt;. This is where &lt;a href=&quot;http://hadley.nz/&quot;&gt;Hadley Wickham&lt;/a&gt; and &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;Yihui Xie&lt;/a&gt; got their PhDs, and current students include &lt;a href=&quot;http://cpsievert.github.io/about/&quot;&gt;Carson Sievert&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/maggiejohnsonmn&quot;&gt;Maggie Johnson&lt;/a&gt;, &lt;a href=&quot;http://andeekaplan.com/&quot;&gt;Andee Kaplan&lt;/a&gt;, &lt;a href=&quot;http://sctyner.github.io/&quot;&gt;Samantha Tyner&lt;/a&gt;, and &lt;a href=&quot;http://erichare.me/&quot;&gt;Eric Hare&lt;/a&gt;. Notable faculty include &lt;a href=&quot;http://www.public.iastate.edu/%7Ehofmann/&quot;&gt;Hieke Hofmann&lt;/a&gt; and &lt;a href=&quot;http://ugenschel.github.io/&quot;&gt;Ulrike Genschel&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;Biostatistics at Johns Hopkins&lt;/a&gt;. This is where &lt;a href=&quot;https://twitter.com/hspter&quot;&gt;Hilary Parker&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/acfrazee&quot;&gt;Alyssa Frazee&lt;/a&gt; and &lt;a href=&quot;http://jennakrall.com/&quot;&gt;Jenna Krall&lt;/a&gt; got their PhDs. Notable faculty include &lt;a href=&quot;http://www.biostat.jhsph.edu/%7Erpeng/&quot;&gt;Roger Peng&lt;/a&gt;, &lt;a href=&quot;http://jtleek.com/&quot;&gt;Jeff Leek&lt;/a&gt;, and &lt;a href=&quot;http://www.bcaffo.com/&quot;&gt;Brian Caffo&lt;/a&gt; (of &lt;a href=&quot;https://www.coursera.org/specializations/jhu-data-science/1&quot;&gt;Coursera data science specialization&lt;/a&gt; fame).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://idl.cs.washington.edu/&quot;&gt;University of Washington Interactive Data Lab&lt;/a&gt;. Not exactly a grad program, because it involves people from both computer science and the school of information, but does awesome work. Notable students include &lt;a href=&quot;http://arvindsatya.com/&quot;&gt;Arvind Satyanarayan&lt;/a&gt;, and faculty include &lt;a href=&quot;http://homes.cs.washington.edu/%7Ejheer/&quot;&gt;Jeff Heer&lt;/a&gt; of the computer science department and &lt;a href=&quot;http://faculty.washington.edu/jhullman/&quot;&gt;Jessica Hullman&lt;/a&gt; in the iSchool. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fun fact I recently learned-- Iowa State was the first US university with a department of statistics, and Johns Hopkins the first (in the world?) to offer biostatistics!&lt;/p&gt;
+
+&lt;h3&gt;Q: How do I get in to grad school?&lt;/h3&gt;
+
+&lt;h3&gt;A: You need lots of things to be a strong candidate, including:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;good (but not necessarily perfect) grades&lt;/li&gt;
+&lt;li&gt;a decent GRE score (particularly on the quantitative section of the regular GRE)&lt;/li&gt;
+&lt;li&gt;a compelling story in your personal statement (email me if you want to read mine, I don&amp;#39;t feel like posting it on the web)&lt;/li&gt;
+&lt;li&gt;solid letters of recommendation, particularly from faculty members who know you well from a variety of contexts, like class, research, etc. &lt;/li&gt;
+&lt;li&gt;I also always recommend reaching out to people from the program you are applying to, whether current grad students, alumni, or professors to get a better sense of a program and whether you would be a good fit. &lt;a href=&quot;http://science-professor.blogspot.com/&quot;&gt;Female Science Professor&lt;/a&gt; has &lt;a href=&quot;http://science-professor.blogspot.com/2011/10/writing-to-me-reprise.html&quot;&gt;a great post&lt;/a&gt; about what to say (and not to say) in an email to a professor. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Q: How do I succeed in grad school?&lt;/h3&gt;
+
+&lt;h3&gt;A: I recommend the following:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://howtoprepforgradschoolwhilepoor.wikispaces.com/&quot;&gt;How to Prep for Grad School if You&amp;#39;re Poor&lt;/a&gt;- a wiki with some information about the application process, but mostly the &amp;quot;cultural capital&amp;quot; you might not have that could be useful when you&amp;#39;re in grad school. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cs.indiana.edu/how.2b/how.2b.research.html&quot;&gt;Doing research&lt;/a&gt;- how to do research (the short story: do a little every day). &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://matt.might.net/articles/advice-for-phd-thesis-proposals/&quot;&gt;A thesis proposal is a contract&lt;/a&gt;. Or at least, it should be. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cs.jhu.edu/%7Ejason/advice/write-the-paper-first.html&quot;&gt;Write the paper first&lt;/a&gt;- an idea about how to frame your work by writing the paper first. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.stat.ucla.edu/%7Efrederic/oralexams.html&quot;&gt;Oral exams&lt;/a&gt;- this is specifically about advancing to candidacy at UCLA in statistics, but I&amp;#39;ve sent it to friends in other programs who don&amp;#39;t have similar guidelines. &lt;/li&gt;
+&lt;li&gt;Leek Group Guides to &lt;a href=&quot;https://github.com/jtleek/reviews&quot;&gt;reviewing papers&lt;/a&gt;, &lt;a href=&quot;https://github.com/jtleek/datasharing&quot;&gt;data sharing&lt;/a&gt;, &lt;a href=&quot;https://github.com/jtleek/firstpaper&quot;&gt;writing your first paper&lt;/a&gt;, or &lt;a href=&quot;https://github.com/jtleek/readingpapers&quot;&gt;reading papers&lt;/a&gt;. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Q: How can I learn more?&lt;/h3&gt;
+
+&lt;h3&gt;A: I recommend getting involved in some online communities.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is a ton of activity in statistics and data science on twitter. Most of the faculty and students I mentioned above have twitter accounts (some linked above, the others easy to find), and if you are into R you can get a taste by looking at the &lt;a href=&quot;https://twitter.com/hashtag/rstats?src=hash&quot;&gt;#rstats&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/hashtag/tidyverse?src=hash&quot;&gt;#tidyverse&lt;/a&gt; hashtags. &lt;/li&gt;
+&lt;li&gt;Roger Peng and Jeff Leek (mentioned above) and &lt;a href=&quot;http://rafalab.github.io/&quot;&gt;Rafa Irizarry&lt;/a&gt; have a blog called &lt;a href=&quot;http://simplystatistics.org/&quot;&gt;Simply Statistics&lt;/a&gt; with all sorts of interesting statistics discussions.&lt;/li&gt;
+&lt;li&gt;Hilary Parker and Roger Peng (mentioned above) have a podcast called &lt;a href=&quot;http://simplystatistics.org/2015/09/17/not-so-standard-deviations-the-podcast/&quot;&gt;Not so standard devations&lt;/a&gt;, available on &lt;a href=&quot;https://soundcloud.com/nssd-podcast&quot;&gt;SoundCloud&lt;/a&gt;, &lt;a href=&quot;https://itunes.apple.com/us/podcast/not-so-standard-deviations/id1040614570?mt=2&quot;&gt;iTunes&lt;/a&gt;, and many more podcast distributors. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What did I miss? What are other questions you have?&lt;/p&gt;
+</description>
+				<pubDate>Wed, 19 Oct 2016 00:00:00 -0400</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2016/10/19/GradSchool.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2016/10/19/GradSchool.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/PhDcomic.gif" />
+			</item>
+		
+			<item>
 				<title>Worth adding to your inbox</title>
 				<description>&lt;p&gt;For the most part, I get my data news from the web (blogs like &lt;a href=&quot;http://flowingdata.com/&quot;&gt;flowingdata&lt;/a&gt;, &lt;a href=&quot;http://simplystatistics.org/&quot;&gt;simply statistics&lt;/a&gt;, &lt;a href=&quot;http://www.statschat.org.nz/&quot;&gt;stats chat&lt;/a&gt;) and twitter (check out the &lt;a href=&quot;https://twitter.com/AmeliaMN/following&quot;&gt;people I follow&lt;/a&gt;). However, there are a few email mailing lists I&amp;#39;ve joined that are worth the addional lines in my inbox. Here they are:&lt;/p&gt;
 
@@ -60,7 +135,7 @@
 
 &lt;p&gt;Our goal is to be able to identify when something we created is nothing. And in order to do that, I&amp;#39;m going try statistics.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I'm going to try... statistics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I&#39;m going to try... statistics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I am a statistics professor. That means whenever I get in front of a group of people, I try to sneakily teach them some statistics. &lt;/p&gt;
 
@@ -235,7 +310,7 @@ ggplot(Default)+
   geom_point(aes(x=balance, y=income, col=default))
 
 library(nullabor)
-ggplot(lineup(null_permute('default'), Default))+
+ggplot(lineup(null_permute(&#39;default&#39;), Default))+
 geom_point(aes(x=balance, y=income, col=default)) +
  facet_wrap(~.sample)
 
@@ -381,7 +456,7 @@ interaction here. There&amp;#39;s an iPad and you&amp;#39;re controlling the one
 			</item>
 		
 			<item>
-				<title>What's wrong with being data-collecting pigeons?</title>
+				<title>What&#39;s wrong with being data-collecting pigeons?</title>
 				<description>&lt;p&gt;As you might know from &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/blog/visualization/2015/01/14/FitbitColors.html&quot;&gt;my blog&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/minebocek/status/484751171374948353&quot;&gt;twitter&lt;/a&gt;, I&amp;#39;ve been a Fitbit person since December 2013. I&amp;#39;m also very interested in participatory sensing and citizen science, and I&amp;#39;ve been thinking about the ways that data can be used for good, both on the personal and societal level. &lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -774,49 +849,6 @@ particular paragraph or sentence.&lt;/p&gt;
 				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/2014-10-27 10.10.06.jpg" />
-			</item>
-		
-			<item>
-				<title>Kid Pix</title>
-				<description>&lt;p&gt;Since a lot of the &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt; meetups are held at &lt;a href=&quot;http://www.crosscamp.us/&quot;&gt;Cross Campus&lt;/a&gt;, I joined their newletter, and I&amp;#39;m so glad I did-- it leads me to all sorts of cool things! One such event was a talk by &lt;a href=&quot;http://red-green-blue.com/about/&quot;&gt;Craig Hickman&lt;/a&gt; about the history and success of &lt;a href=&quot;http://red-green-blue.com/kid-pix-the-early-years/&quot;&gt;Kid Pix&lt;/a&gt;. If you weren&amp;#39;t a child in the &amp;#39;90s, Kid Pix was a fabulously open-ended paint program designed for kids.&lt;/p&gt;
-
-&lt;p&gt;The talk was a great mix of nostalgia and inspiration for me. I loved hearing about the principles that guided Hickman as he worked, like the idea of contextual menus, so kids never had to look in the menu bar. I was also brought back to my childhood, creating artwork, menus for pretend restaurants, birthday cards, notes, and much more, all in Kid Pix. &lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Hickman referenced two papers that inspired him-- &lt;a href=&quot;https://archive.org/stream/byte-magazine-1983-12/1983_12_BYTE_08-12_Easy_Software#page/n143/mode/2up&quot;&gt;Walt Disney and User Oriented Software&lt;/a&gt; and Alan Kay&amp;#39;s &lt;a href=&quot;http://frameworker.files.wordpress.com/2008/05/alan-kay-computer-software-sciam-sept-84.pdf&quot;&gt;Computer Software&lt;/a&gt;. Since I work with Alan, I&amp;#39;ve read Computer Software several times, and love the ideas about software being flexible enough to do things that the designer didn&amp;#39;t foresee, and the importance of computer users &amp;quot;creating&amp;quot; rather than just &amp;quot;using&amp;quot; (something that comes up a lot in the &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/Mobilize.html&quot;&gt;Mobilize project&lt;/a&gt;). &lt;/p&gt;
-
-&lt;p&gt;However, I hadn&amp;#39;t seen the article on Disney before. When I read it, I was surprised to discover I had heard most of the anecdotes before from people in Alan&amp;#39;s group. The article is full of connections between the principles of Disney animators and how they could be applied by software developers. For example, &amp;quot;prepare the audience.&amp;quot; A Disney character will show you what it&amp;#39;s going to do before it begins the action-- for example, by bending its knees before a jump. Software should do the same. The author suggests that a slow in/slow out approach to changing things on the screen can help a user be prepared for what is happening, and not get lost in a transition. &lt;/p&gt;
-
-&lt;p&gt;Kid Pix accomplished a lot of the goals outlined in these two papers. You could see the tools available to you on the left hand side, and you always knew to expect relevant contextual options to appear at the bottom of the screen. Everything was modifiable, including the &lt;a href=&quot;http://en.wikipedia.org/wiki/Susan_Kare&quot;&gt;Susan Kare&lt;/a&gt;-designed font stamps. Hickman explained that he&amp;#39;d loved the hieroglyphic-style font &lt;a href=&quot;http://www.kare.com/portfolio/05_apple_fonts.html&quot;&gt;Cairo&lt;/a&gt;, designed by Kare for the original Macintosh, so he just &amp;quot;put it back&amp;quot; as the stamps you could use in Kid Pix. As a child, I loved the fact that the stamps were modifiable, and I think the goal of a program that is manipulable all the way down is wonderful for any age level. &lt;/p&gt;
-
-&lt;p&gt;One of the unique qualities of Kid Pix, compared to a more standard paint program, is that the process matters as much or more than the final product. Although this had been my experience as a kid, I hadn&amp;#39;t realized that it was explicitly intended to be that way. Listen to Hickman explain,&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F170212262&amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;The original version of Kid Pix was black and white, but Hickman soon created a second version with the software company Broderbund, which was in color and included sounds. This is the version I have the strongest memories of, although I think we had the black-and-white version first. &lt;/p&gt;
-
-&lt;p&gt;I was struck by David Pogue&amp;#39;s review of commercial version, which Hickman showed us. &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Kid Pix 1.0&lt;/p&gt;
-
-&lt;p&gt;Pros: Brilliant; hilarious; innovative; inexpensive.&lt;/p&gt;
-
-&lt;p&gt;Cons: None. &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So that gives you something to aspire to, doesn&amp;#39;t it?&lt;/p&gt;
-
-&lt;p&gt;If you ever used Kid Pix, its sounds will immediately bring you back. Here is Hickman demoing some of the tools, including the popular eraser bomb tool that cleared the entire screen:
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F170212261&amp;show_artwork=true&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;If you want to try out the original (black and white) Kid Pix, James Friend has created a &lt;a href=&quot;http://jamesfriend.com.au/pce-js/&quot;&gt;Mac emulator&lt;/a&gt; that runs it. For Hickman&amp;#39;s complete talk, see &lt;a href=&quot;https://www.youtube.com/watch?v=LqVhK6JgbSU&quot;&gt;this video&lt;/a&gt; from Media Leaders or &lt;a href=&quot;http://red-green-blue.com/kid-pix-the-early-years/&quot;&gt;Hickman&amp;#39;s page on Kid Pix&lt;/a&gt;, which goes through a lot of the material from his talk. Thanks again to &lt;a href=&quot;http://www.crosscamp.us/&quot;&gt;Cross Campus&lt;/a&gt; for hosting such a great event! &lt;/p&gt;
-</description>
-				<pubDate>Wed, 01 Oct 2014 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/tools/2014/10/01/KidPix.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/tools/2014/10/01/KidPix.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/CraigHickman.jpg" />
 			</item>
 		
 	</channel>

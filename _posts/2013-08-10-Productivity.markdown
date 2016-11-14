@@ -6,6 +6,7 @@ categories: tools
 ---
 
 Like most people, I don't feel like there are enough hours in a day to do everything I want to. And, I've been getting caught up in the small stuff because it's so much easier to renew that library book than start writing my dissertation. Here are a few things that have been helping me become more productive lately:
+
 <!--more-->
 
 * [Inbox Zero](http://xph.us/2013/01/22/inbox-zero-for-life.html). There are many explanations of inbox zero floating around out there, but this is the one I've implemented. Now, the only things I see when I log in to gmail are emails that haven't been touched before, and if I want my "to-do list" emails, they're in the starred filter. 
