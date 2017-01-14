@@ -130,6 +130,11 @@ div.tooltip {
               	<li><a href="{{ site.baseurl }}/portfolio.html">Other projects</a></li>
               </ul>
               </li>
+              {% if page.active == "Press" %}
+                <li class="active"><a href="{{ site.baseurl }}/press.html">press</a></li>
+              {% else %}
+                <li><a href="{{ site.baseurl }}/press.html">press</a></li>
+              {% endif %}
               {% if page.active == "Blog" %}
               	<li class="active"><a href="{{ site.baseurl }}/blog/">blog</a></li>
               {% else %}

@@ -7,6 +7,310 @@
 		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>What are the chances my name is Amanda?</title>
+				<description>&lt;p&gt;I get called Amanda a lot. This tends to drive me crazy, because I think
+my real name is much more interesting. But, I realized recently that
+given the prior probabilities, it&amp;#39;s actually a very reasonable thing to
+call me.&lt;/p&gt;
+
+&lt;p&gt;[Note: this blog post has some interactive elements, so it is probably more fun to read on &lt;a href=&quot;http://45.55.32.181/shiny/Amanda/&quot;&gt;my shiny server&lt;/a&gt;. And of course, if you want to see what I did, the &lt;a href=&quot;https://github.com/AmeliaMN/shiny-server/blob/master/Amanda/Amanda.Rmd&quot;&gt;code is on GitHub&lt;/a&gt;.]&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;To investigate this using data, I am using the &lt;code&gt;babynames&lt;/code&gt; R package,
+which has data from the Social Security Administration. It includes all
+names that had at least 5 uses for a particular gender in a given year.
+Obviously, that leaves some people out, but actually this data includes
+most (documented) people in the United States. For more about this, see
+my data appendix.&lt;/p&gt;
+
+&lt;p&gt;The basic idea is to take my (approximate) age and see how likely it is
+that my name is Amanda. I look incredibly young, but given that I have a
+PhD and am a statistics professor, there&amp;#39;s a lower bound on how young I
+could really be. Lets assume that people talking to me believe I was
+born between &lt;strong&gt;1980-1989&lt;/strong&gt;, inclusive. So the question is, given that I
+was born then, &lt;strong&gt;what are the chances my name is Amanda?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In a blog post at the beginning of last semester,
+&lt;a href=&quot;http://www2.stat.duke.edu/%7Emc301/&quot;&gt;Mine&lt;/a&gt;
+&lt;a href=&quot;http://citizen-statistician.org/2016/08/13/a-timely-first-day-of-class-example-for-fall-2016-trump-tweets/&quot;&gt;linked&lt;/a&gt;
+to a 538 article from 2014 that approaches the problem from the other
+side-- &lt;a href=&quot;http://fivethirtyeight.com/features/how-to-tell-someones-age-when-all-you-know-is-her-name/&quot;&gt;How to tell someone&amp;#39;s age when all you know is her
+name&lt;/a&gt;.
+Interestingly, although using this method would help confirm people&amp;#39;s
+suspicions that I&amp;#39;m a child (the &lt;em&gt;A&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;&lt;em&gt;e&lt;/em&gt;|&lt;em&gt;N&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;m&lt;/em&gt;&lt;em&gt;e&lt;/em&gt; method would
+estimate I&amp;#39;m &lt;a href=&quot;http://rhiever.github.io/name-age-calculator/index.html?Gender=F&amp;amp;Name=Amelia&quot;&gt;about 13 years
+old&lt;/a&gt;),
+that&amp;#39;s not how people tend to think about names and ages.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/amelias-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Amelias'&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead, people seem to be taking an approximate age and then just
+grabbing a name out of the hat. In other words, they are using the
+&lt;em&gt;N&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;m&lt;/em&gt;&lt;em&gt;e&lt;/em&gt;|&lt;em&gt;A&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;&lt;em&gt;e&lt;/em&gt; method. With that in mind, let&amp;#39;s see how likely
+Amanda really is. I&amp;#39;m focusing just on girls names for this analysis,
+mostly because Amelia isn&amp;#39;t a common boy&amp;#39;s name (see my data appendix).&lt;/p&gt;
+
+&lt;p&gt;In the eighties, numbers for Amanda and Amelia were as follows:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th align=&quot;left&quot;&gt;name&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;number&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;proportion&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amanda&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;369690&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0215329&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amelia&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;9734&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0005670&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Armed only with the information that I was born between 1985 and 1989,
+there&amp;#39;s a &lt;strong&gt;2% chance my name is Amanda&lt;/strong&gt;. That&amp;#39;s actually pretty
+incredible! (In contrast, there&amp;#39;s just a 0.05% chance my name is
+Amelia.) And, we can figure most people remember at least the first
+letter of a name. So, what if we add the fact that my name starts with
+an A?&lt;/p&gt;
+
+&lt;p&gt;In the eighties, numbers for Amanda and Amelia (out of all A names) were
+as follows:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th align=&quot;left&quot;&gt;name&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;proportion&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amanda&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.1575295&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amelia&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0041478&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Now, there&amp;#39;s a &lt;strong&gt;15.7% chance my name is Amanda&lt;/strong&gt; (and a 0.4% chance my
+name is Amelia). The only A name that was more popular than Amanda in
+the eighties was Ashley, which made up 19.5% of the female names
+starting with A. Of course, Ashley doesn&amp;#39;t have as similar of a sound to
+Amelia as Amanda does. I didn&amp;#39;t go this far, but we could also look at
+the names starting with Am-- I think this would serve to solidify Amanda
+as the much more likely choice.&lt;/p&gt;
+
+&lt;p&gt;So, for those of you that have felt bad about getting my name wrong in
+the past-- the data supports you!&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m not sure if doing this analysis has made me feel better about being
+called Amanda-- for that, I just tell myself &lt;strong&gt;&amp;quot;they&amp;#39;re probably mixing
+me up with &lt;a href=&quot;http://www.nytco.com/amanda-cox-named-editor-the-upshot/&quot;&gt;Amanda
+Cox&lt;/a&gt;.&amp;quot;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;Your name&lt;/h2&gt;
+
+&lt;p&gt;Does this trend hold up with the name people are always calling you? Are
+you a Jacob that always gets called Jason? A Kirstin that gets called
+Kristen? (I&amp;#39;m guilty of that one.)&lt;/p&gt;
+
+&lt;p&gt;[This is the part of the post that is responsive, so you probably want to head to &lt;a href=&quot;http://45.55.32.181/shiny/Amanda/&quot;&gt;my shiny server&lt;/a&gt;.]&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://45.55.32.181/shiny/Amanda/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/ShinyScreenShot.png&quot; class=&quot;img-responsive&quot; alt=&quot;You want to go to my server version&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Data appendix&lt;/h2&gt;
+
+&lt;p&gt;I can get off-track when doing analyses, so here are a couple more
+thoughts.&lt;/p&gt;
+
+&lt;h3&gt;How full is the data?&lt;/h3&gt;
+
+&lt;p&gt;One thing I was worried about was how well the data really represented
+the population. Uncommon names are excluded for privacy purposes, and I
+thought maybe people were getting more (or less) creative with names
+over time. It turns out that may be the case, but only slightly.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;img/missingdata-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Missing data'&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th align=&quot;right&quot;&gt;Min.&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;1st Qu.&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Median&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Mean&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;3rd Qu.&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Max.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td align=&quot;right&quot;&gt;2.462&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;3.535&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;5.592&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;5.406&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;6.793&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;9.374&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;On average, only 5% of people are missing from the data. That feels
+pretty good to me. The article mentioned above, 538 estimated that only
+1% of the data was missing, which I&amp;#39;m not sure how they estimated.&lt;/p&gt;
+
+&lt;h3&gt;How many baby boys are named Amelia?&lt;/h3&gt;
+
+&lt;p&gt;Answer-- not many. In 2004, the year with the most male Amelias, 14 baby
+boys were named Amelia. Or, someone checked the wrong box on a birth
+certificate.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th align=&quot;right&quot;&gt;year&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;sex&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;name&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;n&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td align=&quot;right&quot;&gt;2004&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;M&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Amelia&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;Creativity in naming&lt;/h3&gt;
+
+&lt;p&gt;Of course, there&amp;#39;s a lot deeper I could dig on this analysis. Just by
+scrolling through the data I noticed there are many other ways to spell
+Amanda, which didn&amp;#39;t get taken into account. (Maybe the creative
+spellings of Amelia balance it out.)&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th align=&quot;left&quot;&gt;name&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;number&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;proportion&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Aamanda&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;10&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0000006&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amamda&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;178&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0000104&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amanda&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;369690&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0215329&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amandah&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;16&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0000009&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td align=&quot;left&quot;&gt;Amannda&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;23&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;0.0000013&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;A is for eighties&lt;/h3&gt;
+
+&lt;p&gt;You can actually see the eighties pretty clearly when you look at plots
+of letters names start with. Girls&amp;#39; names starting with A had been on
+the rise since the 1960s, but you see a local maximum in about 1984 and
+then a small decline before continuing to rise.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/nameletters-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Letters over time'&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/nameletters-2.png&quot; class=&quot;img-responsive&quot; alt=&quot;A over time'&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Fri, 13 Jan 2017 00:00:00 -0500</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/amelias-1.png" />
+			</item>
+		
+			<item>
+				<title>Census data: A rant</title>
+				<description>&lt;p&gt;As usual toward the end of the semester, my students begin working in earnest on their final projects. And as usual, this results in my selective amnesia about &lt;a href=&quot;http://www.census.gov&quot;&gt;census.gov&lt;/a&gt; being ruptured yet again. Looking for a way out, I turned to &lt;a href=&quot;https://twitter.com/AmeliaMN/status/798620977202663424&quot;&gt;twitter&lt;/a&gt; and got some good recommendations. In case it&amp;#39;s useful to other teachers/people, I&amp;#39;ll share my thoughts. &lt;/p&gt;
+
+&lt;p&gt;(The tl;dr is that you probably want students to be using &lt;a href=&quot;http://www.socialexplorer.com/&quot;&gt;Social Explorer&lt;/a&gt;, but read on for the full rant.)&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;First, some motivation. A group of students in my class has found some interesting data at the state level, which they think may be related to demographic characteristics of states, like population, poverty level, education, racial makeup, etc. This is where my amnesia kicks in. &amp;quot;It should be really easy to find data like that!&amp;quot; I say. &amp;quot;Let&amp;#39;s go to the &lt;a href=&quot;http://factfinder.census.gov/&quot;&gt;American FactFinder website&lt;/a&gt; and I&amp;#39;ll show you how it works.&amp;quot; We bumble around on the site for a while, clicking on &amp;quot;Data Main&amp;quot; (a page of screenshots and news) &amp;quot;Data tools and apps&amp;quot; (actually has the link to what we want, but buried among other unrelated things), etc. Finally I manage to find FactFinder main page. We select our geography (states) and dismiss the box that is trying to get us to add yet another geography. We search for &amp;quot;poverty&amp;quot; and voila! ...the ugliest dataset you have ever seen.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&amp;prodType=table&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/FactFinder.png&quot; class=&quot;img-responsive&quot; alt=&quot;An ugly table&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I always encourage students to work with data programmatically, but even I have to admit that it would be easier to delete columns and add better names in a spreadsheet. The column names are in multiple &lt;em&gt;rows&lt;/em&gt; for crying out loud! Plus, what you would like to be observations (states) are actually variables. I am now imagining the &lt;code&gt;gather&lt;/code&gt;/&lt;code&gt;spread&lt;/code&gt; in my future. I want students to understand data cleaning and wrangling, but I don&amp;#39;t want their first experience to be hellish. Even my heart is sinking, thinking about doing this all myself. &lt;/p&gt;
+
+&lt;h2&gt;APIs&lt;/h2&gt;
+
+&lt;p&gt;Okay, so what are the alternatives? The Census does offer an API, so I signed up for an API key and started playing with some R packages recommended by folks on twitter. The most commonly-mentioned package was &lt;code&gt;acs&lt;/code&gt; (a CRAN package), although I also heard about &lt;code&gt;acs14lite&lt;/code&gt; and &lt;code&gt;censusapi&lt;/code&gt; (both on GitHub and installable using &lt;code&gt;devtools&lt;/code&gt;). Sadly, none of these packages have vignettes. I&amp;#39;ve been using R for almost 10 years, so yes, I could figure it out from the documentation, but it would take time (which I am short on) and isn&amp;#39;t something I can ask the students I have in this class to do. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.statschat.org.nz/&quot;&gt;Thomas Lumley&lt;/a&gt; pointed me to this blog post on &lt;a href=&quot;http://dlab.berkeley.edu/blog/season-sharing-data-working-newly-released-census-2010-2014-acs-5-year-data-r&quot;&gt;working with ACS data in R&lt;/a&gt; which was much more readable. I&amp;#39;m not thinking about maps for this particular application, but I can read around that part. I was able to reproduce the code in the post (yeah!) and modify the first retrieval command to get data for states:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;stateDemo &amp;lt;- acs14(geography='state', variable = c('B17021_001E'))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But, this isn&amp;#39;t the only variable I&amp;#39;m interested in! So, how do I learn what other variables I want? As far as I can tell, I have to go to the &lt;a href=&quot;http://api.census.gov/&quot;&gt;Census API site&lt;/a&gt; and read &lt;a href=&quot;http://api.census.gov/data/2015/acs1/variables.html&quot;&gt;this table&lt;/a&gt;. Say I&amp;#39;m interested in race. I can search the page for that word, but I get almost 5,000 results. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/RaceSearch.png&quot; class=&quot;img-responsive&quot; alt=&quot;Results of searching for `race.'&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And even if I locate a variable I am interested in, the descriptions are pretty hard to parse. &lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/VariableDescription.png&quot; class=&quot;img-responsive&quot; alt=&quot;Variable description'&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The result of this is that it would be all too easy to think you were getting one thing and actually request another. Plus, when you generate your list of variable strings like &lt;code&gt;B02001_009E&lt;/code&gt;, you also need to maintain a corresponding list of human-readable names like &lt;code&gt;TwoOrMoreCount&lt;/code&gt;. If I were writing a peer-reviewed research paper, I would be grateful for the huge amount of detailed breakdowns and the API access, but for a semester-long student project in a class focused on modeling, it&amp;#39;s too much. &lt;/p&gt;
+
+&lt;h2&gt;Using my network&lt;/h2&gt;
+
+&lt;p&gt;When I asked on Slack, several folks sent me files they had created using the APIs (thanks, &lt;a href=&quot;https://twitter.com/dataandme&quot;&gt;Mara&lt;/a&gt; and Adam!), but of course they didn&amp;#39;t have all the variables I really wanted. And, while I&amp;#39;m grateful to my supportive social media network, I know not everyone has that! &lt;/p&gt;
+
+&lt;h2&gt;User interfaces&lt;/h2&gt;
+
+&lt;p&gt;I had been expecting to be able to find a bunch of GitHub repos full of cleaned up data like the stuff Mara and Adam sent to me on Slack. It seems like people don&amp;#39;t really do that, or if they do it&amp;#39;s not documented in such a way that it is findable. But, &lt;a href=&quot;https://twitter.com/ryan_boyer2&quot;&gt;Ryan&lt;/a&gt; pointed me to the &lt;a href=&quot;http://www.socialexplorer.com/&quot;&gt;Social Explorer&lt;/a&gt;, an online tool mostly designed for making pretty maps online, that includes a Tables functionality that is almost exactly what I was looking for!&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.socialexplorer.com/tables/C2010&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SocialExplorer.png&quot; class=&quot;img-responsive&quot; alt=&quot;Variable description'&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It allows you to select your geography, then you can search by keyword or scroll through a manageable list of variable names and add them to a custom table. You can preview the data (it looks like states will be the variables, but never fear, this changes in the download), then choose the format you want to export it in. Other than a slight loss of reproducibility, the only drawback in my mind is that the variable names are still unintelligible, so you have to also download a data dictionary, but it &lt;em&gt;makes you a custom dictionary&lt;/em&gt; based on the variables you chose so you don&amp;#39;t have to wade through the entire thing!&lt;/p&gt;
+
+&lt;p&gt;It looks like the Tables functionality is mostly for &amp;quot;premium&amp;quot; users, which is too bad, but Smith (like many other academic institutions) has a site license. &lt;/p&gt;
+
+&lt;p&gt;Are there other resources out there I have missed? Why is this such a hard problem? I&amp;#39;d love to hear from you. &lt;/p&gt;
+</description>
+				<pubDate>Wed, 16 Nov 2016 00:00:00 -0500</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2016/11/16/CensusRant.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2016/11/16/CensusRant.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/FactFinder.png" />
+			</item>
+		
+			<item>
 				<title>Statistics graduate school advice</title>
 				<description>&lt;p&gt;It&amp;#39;s that time of year again, the time where I find myself meeting with students thinking about graduate school in statistics. Since I often end up sending people the same things, I figured I&amp;#39;d pull them together into a blog post. You probably already know about &lt;a href=&quot;https://thegradcafe.com/&quot;&gt;the grad cafe&lt;/a&gt;, &lt;a href=&quot;http://theprofessorisin.com/pearlsofwisdom/&quot;&gt;the professor is in&lt;/a&gt;, and &lt;a href=&quot;http://www.phdcomics.com/comics.php&quot;&gt;PhD comics&lt;/a&gt;. These other links might not be as common.&lt;/p&gt;
 
@@ -135,7 +439,7 @@
 
 &lt;p&gt;Our goal is to be able to identify when something we created is nothing. And in order to do that, I&amp;#39;m going try statistics.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I&#39;m going to try... statistics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I'm going to try... statistics&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I am a statistics professor. That means whenever I get in front of a group of people, I try to sneakily teach them some statistics. &lt;/p&gt;
 
@@ -310,7 +614,7 @@ ggplot(Default)+
   geom_point(aes(x=balance, y=income, col=default))
 
 library(nullabor)
-ggplot(lineup(null_permute(&#39;default&#39;), Default))+
+ggplot(lineup(null_permute('default'), Default))+
 geom_point(aes(x=balance, y=income, col=default)) +
  facet_wrap(~.sample)
 
@@ -456,7 +760,7 @@ interaction here. There&amp;#39;s an iPad and you&amp;#39;re controlling the one
 			</item>
 		
 			<item>
-				<title>What&#39;s wrong with being data-collecting pigeons?</title>
+				<title>What's wrong with being data-collecting pigeons?</title>
 				<description>&lt;p&gt;As you might know from &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/blog/visualization/2015/01/14/FitbitColors.html&quot;&gt;my blog&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/minebocek/status/484751171374948353&quot;&gt;twitter&lt;/a&gt;, I&amp;#39;ve been a Fitbit person since December 2013. I&amp;#39;m also very interested in participatory sensing and citizen science, and I&amp;#39;ve been thinking about the ways that data can be used for good, both on the personal and societal level. &lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -736,119 +1040,6 @@ particular paragraph or sentence.&lt;/p&gt;
 				<link>http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/Fitbit1.jpg" />
-			</item>
-		
-			<item>
-				<title>Fabric posters</title>
-				<description>&lt;p&gt;Don&amp;#39;t you hate having to take a poster to conferences? The tube is bulky, it&amp;#39;s easy to forget in the airport (or on the plane!), sometimes you get charged extra for your &amp;quot;additional carry-on&amp;quot; and often the poster doesn&amp;#39;t look great once it arrives. Plus, it&amp;#39;s expensive to print a poster, and you usually only get one use out of it. &lt;/p&gt;
-
-&lt;p&gt;Enter, the fabric poster!&lt;/p&gt;
-
-&lt;!--more--&gt; 
-
-&lt;p&gt;I learned about this wonderful option via twitter, before the Women in Statistics Conference. I was one of three women to bring fabric posters. Shown here are the other two, demonstrating one of the fantastic things about fabric posters-- they&amp;#39;re flexible!&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;Superhero statisticians to the rescue! &lt;a href=&quot;https://twitter.com/kralljr&quot;&gt;@kralljr&lt;/a&gt; &lt;a href=&quot;https://twitter.com/HelenPowell01&quot;&gt;@HelenPowell01&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/WiS2014?src=hash&quot;&gt;#WiS2014&lt;/a&gt; &lt;a href=&quot;http://t.co/uuVl05d40z&quot;&gt;pic.twitter.com/uuVl05d40z&lt;/a&gt;&lt;/p&gt;&amp;mdash; Stephanie Hicks (@stephaniehicks) &lt;a href=&quot;https://twitter.com/stephaniehicks/status/467447722703060994&quot;&gt;May 16, 2014&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Better than that, you can fold them up in your suitcase and they don&amp;#39;t wrinkle (or if they do, you can iron them!). Plus, they have the same DPI as paper, they&amp;#39;re cheaper, and you can easily re-use them (either as a poster or as a superhero cape). Still not sold? Check out these photos from IEEE Vis in Paris. The conference organizers needed to take down the posters quickly, and almost anyone with a paper poster ended up with something ripped, wrinkled, and taped to someone else&amp;#39;s poster.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/AmeliaMN&quot;&gt;@AmeliaMN&lt;/a&gt; Sad paper posters, happy (folded) fabric poster. &lt;a href=&quot;https://twitter.com/hashtag/ieeevis?src=hash&quot;&gt;#ieeevis&lt;/a&gt; &lt;a href=&quot;http://t.co/VFZj2HdOuH&quot;&gt;pic.twitter.com/VFZj2HdOuH&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/533186832344055809&quot;&gt;November 14, 2014&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Okay, so how do you do it? &lt;a href=&quot;http://ascb.org/how-to-print-a-fabric-poster/&quot;&gt;This post&lt;/a&gt; is fantastic, and it&amp;#39;s where I learned how to print a fabric poster. For whatever reason, that link keeps changing, so I&amp;#39;ll summarize the main points:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;use the website &lt;a href=&quot;www.spoonflower.com&quot;&gt;spoonflower.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;choose the &amp;quot;performance knit&amp;quot; fabric, which should cost around $25&lt;/li&gt;
-&lt;li&gt;upload your poster &lt;strong&gt;as a png&lt;/strong&gt; (ignore at your peril!)&lt;/li&gt;
-&lt;li&gt;make sure it looks right, and order!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Printing and shipping is variable, but Spoonflower has a data-driven page that will tell you &lt;a href=&quot;http://help.spoonflower.com/customer/portal/articles/1173283-how-long-will-it-take-to-get-my-order-&quot;&gt;how many days production is currently taking&lt;/a&gt;. If you need your poster quickly, you can pay for rush shipping, but either way the poster will come folded up in one of those soft plastic envelopes that fits easily into any mailbox. What are you waiting for?&lt;/p&gt;
-</description>
-				<pubDate>Fri, 12 Dec 2014 00:00:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2014/12/12/FabricPosters.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2014/12/12/FabricPosters.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/IEEEVisPoster.jpg" />
-			</item>
-		
-			<item>
-				<title>New tools for data analysis and journalism</title>
-				<description>&lt;p&gt;While the &lt;a href=&quot;http://symposium2014.computation-and-journalism.com/&quot;&gt;Computation + Journalism Symposium&lt;/a&gt; continues to be filled with fascinating inlets to journalistic projects and innovative computational approaches (like using drones to map garbage dumps) the component that always catches my attention is the demoing of new tools for data analysis. &lt;/p&gt;
-
-&lt;p&gt;This year&amp;#39;s symposium was hosted at the &lt;a href=&quot;http://brown.columbia.edu/&quot;&gt;Brown Institute&lt;/a&gt; and was no exception-- I saw many projects that approached elements of my &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/FOSP.html&quot;&gt;theory about the future of statistical programming&lt;/a&gt; from different directions.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Many of the data analysis projects were discussed on a panel about journalistic platforms. The panelists were&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://sites.google.com/site/gideonmann/&quot;&gt;Gideon Mann&lt;/a&gt;, of Bloomberg, speaking about &lt;a href=&quot;https://colaboratory.jupyter.org/welcome/&quot;&gt;coLaboratory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.kareemamin.com/&quot;&gt;Kareem Amin&lt;/a&gt;, of &lt;a href=&quot;http://newscorp.com/&quot;&gt;NewsCorp&lt;/a&gt;, talking about a forthcoming tool that uses custom HTML tags&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://brianabelson.com/&quot;&gt;Brian Abelson&lt;/a&gt;, of &lt;a href=&quot;http://enigma.io/&quot;&gt;enigma.io&lt;/a&gt; and the &lt;a href=&quot;http://towcenter.org/&quot;&gt;Tow Center&lt;/a&gt;, on &lt;a href=&quot;http://nytlabs.github.io/streamtools/&quot;&gt;streamtools&lt;/a&gt; from the &lt;a href=&quot;http://nytlabs.com/&quot;&gt;NYT R&amp;amp;D labs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All the tools spoke to the ideas I am engaging with in my dissertation, which I found very encouraging. The context that I have been thinking most deeply about is the high school data science classroom, much like the &lt;a href=&quot;http://www.science.smith.edu/%7Eamcnamara/mobilize.html&quot;&gt;Mobilize&lt;/a&gt; project, which I formerly worked on. &lt;/p&gt;
-
-&lt;p&gt;However, data journalism is the other context that I had been hoping to find relevance in. The fact that the panelists were engaging with the same issues, of being able to get started quickly but develop new modules as needed, of publishability and the need for interactivity, suggests that the two seemingly-different contexts (high school students/teachers, and data journalists) might not be that different in their needs after all. &lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;coLaboratory&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;I had asked my twitterverse about coLaboratory in September,&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;Saw this article on CoLaboratory, &lt;a href=&quot;http://t.co/MylVNfZckI&quot;&gt;http://t.co/MylVNfZckI&lt;/a&gt; but would love to hear from people who use it. &lt;a href=&quot;https://twitter.com/hmason&quot;&gt;@hmason&lt;/a&gt;?&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/515557079642169344&quot;&gt;September 26, 2014&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;but got no response except for &lt;a href=&quot;https://twitter.com/hmason&quot;&gt;Hilary Mason&lt;/a&gt; responding that she didn&amp;#39;t know the project and didn&amp;#39;t know why her photo was used on the article. &lt;/p&gt;
-
-&lt;p&gt;So, it was great to hear about the project straight from the horse&amp;#39;s mouth. &lt;a href=&quot;https://colaboratory.jupyter.org/welcome/&quot;&gt;coLaboratory&lt;/a&gt; seems to be part of &lt;a href=&quot;http://jupyter.org/&quot;&gt;project Jupyter&lt;/a&gt;, and it offers an iPython notebook that allows you to collaborate with others. Sadly, all their documentation seems to be technical, without any of the &amp;quot;so what&amp;quot; that I look for when learning about a tool. I did find a google research &lt;a href=&quot;http://googleresearch.blogspot.com/2014/08/doing-data-science-with-colaboratory.html&quot;&gt;blog post&lt;/a&gt; which gives a little more context and a few examples. &lt;/p&gt;
-
-&lt;p&gt;Essentially, coLaboratory can produce interactive reports (meaning, with sliders and buttons for users to interact with). It also has some focus on making it easy to develop the interface, using simple commands to invoke interactive controls. However, once a user modifies a control they need to re-click on the &amp;quot;run&amp;quot; button to see the updated information. This is my main complaint with iPython notebooks in general, so it&amp;#39;s too bad that the version for creating interactive documents doesn&amp;#39;t manage to jump that hurdle.  The other problem is that the source code really isn&amp;#39;t &lt;em&gt;that&lt;/em&gt; readable when you get down to it.&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Thelma&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;The tool that Amin was talking about had different advantages. First, it is a click-driven interface, so you click on data inputs and outputs and see the results in the browser. By allowing users to build analysis in this way, you make it easier for novices to get started easily while still making nice results. The product he was talking about is based on custom HTML tags, using &lt;a href=&quot;https://www.polymer-project.org/&quot;&gt;Polymer&lt;/a&gt; web components. &lt;/p&gt;
-
-&lt;p&gt;I don&amp;#39;t think that Amin wanted the name of the project to be made public yet, but he showed a demo and several people tweeted out the &lt;a href=&quot;http://thelmanews.github.io/thelma-component-demo/data-demo.html&quot;&gt;link&lt;/a&gt;,
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;As you do data analysis it updates the webpage: &lt;a href=&quot;http://t.co/isWky1uNAV&quot;&gt;http://t.co/isWky1uNAV&lt;/a&gt; -&lt;a href=&quot;https://twitter.com/kareemamin&quot;&gt;@kareemamin&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/cj2014?src=hash&quot;&gt;#cj2014&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nick Diakopoulos (@ndiakopoulos) &lt;a href=&quot;https://twitter.com/ndiakopoulos/status/525677010816090112&quot;&gt;October 24, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;and it appears to be called Thelma. &lt;/p&gt;
-
-&lt;p&gt;Obviously, Thelma needs a lot more work before it&amp;#39;s really made public. It&amp;#39;s not clear how to begin if you want to do something that doesn&amp;#39;t use the data and chart types already on the demo page, and even those aren&amp;#39;t exactly transparent. But, there&amp;#39;s a lot of potential here. The resulting charts are somewhat interactive, and updating happens as soon as you modify the inputs/outputs. &lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;streamtools&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Then, &lt;a href=&quot;http://brianabelson.com/&quot;&gt;Brian Abelson&lt;/a&gt; spoke about &lt;a href=&quot;http://nytlabs.github.io/streamtools/&quot;&gt;streamtools&lt;/a&gt;. Abelson was not involved with the development of streamtools, but he found it useful enough that he was willing to be its advocate on the panel. streamtools is a dataflow programming environment for working with live streaming data. Rather than waiting for data to be presented as a flat file, the lab wanted to allow users to deal directly with data as it streams in. Since I work with the Communications Design Group, it immediately made me think of Dan Ingalls&amp;#39; &lt;a href=&quot;https://en.wikipedia.org/wiki/Fabrik_(software)&quot;&gt;fabrik&lt;/a&gt; (a visual programming environment in which users &amp;quot;wired&amp;quot; components together), but of course there is a rich history of this sort of blocks programming environments. &lt;/p&gt;
-
-&lt;p&gt;The tool does a great job of making explicit the links between components in the system, and giving a visual hint to the data flowing through the system. However, it seems that the intended user of the system is someone who knows quite a bit about data analysis and programming. The blocks do not cue you toward their behavior, and the &amp;quot;parts bin&amp;quot; (to steal a &lt;a href=&quot;http://lively-web.org/welcome.html&quot;&gt;Lively&lt;/a&gt; term) is full of consise but not extremely descriptive labels. &lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;IEEE programming language rating&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;The other project (not from the panel) that caught my eye was &lt;a href=&quot;http://www.nickdiakopoulos.com/&quot;&gt;Nick Diakopoulos&lt;/a&gt;&amp;#39; interactive &lt;a href=&quot;http://spectrum.ieee.org/computing/software/top-10-programming-languages&quot;&gt;ranking of programming languages&lt;/a&gt; for IEEE Spectrum. Sadly, it seems like the &lt;a href=&quot;http://spectrum.ieee.org/static/interactive-the-top-programming-languages&quot;&gt;interactive version&lt;/a&gt; is behind a paywall, but it&amp;#39;s worth the 99¢ to see it. &lt;/p&gt;
-
-&lt;p&gt;The ranking is based on a number of factors, such as position in google results, number of github repositories, and questions on stackoverflow. The interactive tool lets you see four different versions of the rating: IEEE Spectrum, Trending, Jobs, and Open. You can also filter the languages shown to only display Mobile, Web, Enterprise, or Embedded languages. &lt;/p&gt;
-
-&lt;p&gt;But the real beauty in this project is that you can manipulate the parameters used in the rankings to create your own version. If you don&amp;#39;t believe that google page rank is a good measure of a programming language&amp;#39;s ubiquity, you can drag that slider down or even zero it out. This lets you modify the procedure used to create the ranking, and it allows you to perform ad hoc sensitivity analysis. Many changes to parameters do not change the rankings, which could make a reader more confident in the ranking as provided by the IEEE. &lt;/p&gt;
-
-&lt;p&gt;In fact, the list is so robust to parameter manipulation that it was hard for me to tell if the ranking was being updated dynamically, or if you need to click the &amp;quot;Save as Custom&amp;quot; button to see the results! However, they do provide a great &amp;quot;Make a Comparison&amp;quot; button, which shows a sort of slopegraph/bumps chart (see &lt;a href=&quot;http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk&quot;&gt;Tufte&lt;/a&gt;) displaying which languages were displaced and to where.&lt;/p&gt;
-
-&lt;p&gt;This article/interactive can&amp;#39;t really be described as a &amp;quot;tool,&amp;quot; per se, but I loved seeing an example of analysis where the underlying data work was exposed. This is the sort of &amp;quot;interaction all the way down&amp;quot; that I think is the future of data analysis. Not only should creators of data products be able to interact with their work as they produce it, consumers of those products should have the opportunity to deeply critique the process by viewing a transparent representation of the analysis process. &lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Overall&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;I am so invigorated by everything that I saw at the symposium. It&amp;#39;s such a treat to be around people who are thinking about some of the same issues that I am. &lt;/p&gt;
-
-&lt;p&gt;If you want to learn more about any of these projects, they are almost all forkable on github, which is another one of the principles that I think all good software should adhere to! What other interesting projects have you seen recently?&lt;/p&gt;
-</description>
-				<pubDate>Mon, 27 Oct 2014 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2014/10/27/New-tools-for-data.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/2014-10-27 10.10.06.jpg" />
 			</item>
 		
 	</channel>
