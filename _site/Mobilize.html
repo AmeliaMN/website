@@ -85,26 +85,23 @@
 	<div class="row-fluid">
 		<div class="col-lg-12">
 			<h1>Mobilize</h1>
-				<p class="lead"><a href="http://www.mobilizingcs.org">Mobilize</a> aims to bring computational thinking to high school math and science classrooms through 
-				participatory data collection (using a <a href="http://ohmage.org/">smartphone app</a> that allows students 
-				to customize surveys to collect data on an issue that interests them) 
-				and the subsequent data analysis. </p>
-				<p>A lot of my teaching experience is from leading professional development sessions for in-service teachers. 
-				As a graduate student researcher on the Mobilize project I teach high school teachers from the Los Angeles Unified School District (LAUSD) who are participants 
-				in the project.</p>
+
+				<p class="lead"><a href="http://www.mobilizingcs.org">Mobilize</a> is an NSF grant that was written to bring computational thinking to high school math and science classrooms through participatory data collection (using a <a href="http://ohmage.org/">smartphone app</a> that allows students to collect data on themselves and their communities) 
+				and "data science."</p>
+				<p class ="lead">As a graduate student, I worked on the grant writing <a href="http://www.mobilizingcs.org/introduction-to-data-science/curriculum">curriculum</a>, working on an <a href="https://github.com/mobilizingcs/mobilizr">R package</a>, and leading professional development sessions for in-service teachers from the Los Angeles Unified School District. I've written <a href="http://datascience.la/introduction-to-data-science-for-high-school-students/">a blog post</a> about the curriculum we developed, a year-long Introduction to Data Science curriculum at the high school level.</p>
 			</div>
 		</div>
 			
 			<div class="row">
 				<div class="col-md-4">
-					<a class="thumbnail" href="https://github.com/AmeliaMN/MobilizeSimple"><img src="img/map.jpg" class="img-responsive"  alt="Map"></a>
+					<a class="thumbnail" href="https://github.com/mobilizingcs/mobilizr"><img src="img/map.jpg" class="img-responsive"  alt="Map"></a>
 				</div>
 				<div class="col-md-8">	
-					<h2>Mobilize R package</h2>
-					<p>After trying several computational tools for the Mobilize activities, we have decided to move forward with R and <a href="http://www.rstudio.com/">RStudio</a>. 
-					Although most of the basic tasks we ask students and teachers to complete are easy to do in R, some of them would require more coding expertise than the students have. 
-					In the interest of retaining engaging activities without complex code, I wrote an R package, <a href="https://github.com/AmeliaMN/MobilizeSimple"><code>MobilizeSimple</code></a>, which packages tasks like mapmaking 
-					and text analysis into simpler functions. </p>
+					<h2>mobilizr</h2>
+					<p>During my time on the grant we tried several computational tools for the Mobilize activities. Ultimately, we decided to use <a href="https://www.r-project.org/">R</a> and <a href="http://www.rstudio.com/">RStudio</a>. </p>
+					<p>R is a programming language for statistics and data analysis used by many professionals. It is an open-source programming language, which means both that it is free (good for school districts with limited budgets) and it can be easily extended (so we could write our own extensions for Mobilize).</p> 
+					<p>Through my experience with Mobilize, I became convinced that the best way to teach R was with an extremely small number of functions, handpicked for the syntactic consistency. </p> 
+					<p>Many of the tasks we wanted teachers and students to be able to perform were already available in a consistent syntax through the <a href="https://cran.r-project.org/web/packages/mosaic/vignettes/LessVolume-MoreCreativity.html">mosiac</a> package, <a href="https://cran.r-project.org/web/packages/lattice/lattice.pdf">lattice</a> graphics, and the formula syntax more generally. However, for some tasks the syntax was not consistent or the function was not available, so the <a href="">mobilizr</a> package was born. </p>
 				</div>
 			</div>
 			<div class="row">&nbsp;</div>
