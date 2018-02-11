@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<meta name="description" content="Personal website of Amelia McNamara, statistical and data sciences professor at Smith College." />
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
 	
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Censusrant </title>
@@ -14,6 +14,8 @@
     <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
     
       <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
     
     <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
   </head>
@@ -39,10 +41,12 @@
             
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.science.smith.edu/~amcnamara/sds220/index.html">Smith SDS/MTH 220</a></li>
-                <li><a href="https://smithcollege-sds.github.io/136/">Smith SDS 136</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/sds236/index.html">SDS 236</a>
                 <li class="divider">Past classes</li>
                 <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
               </ul>
               </li>
             
@@ -85,50 +89,52 @@
 			<p class="meta">16 Nov 2016</p>
 
 			<div class="post">
-			<p>As usual toward the end of the semester, my students begin working in earnest on their final projects. And as usual, this results in my selective amnesia about <a href="http://www.census.gov">census.gov</a> being ruptured yet again. Looking for a way out, I turned to <a href="https://twitter.com/AmeliaMN/status/798620977202663424">twitter</a> and got some good recommendations. In case it&#39;s useful to other teachers/people, I&#39;ll share my thoughts. </p>
+			<p>As usual toward the end of the semester, my students begin working in earnest on their final projects. And as usual, this results in my selective amnesia about <a href="http://www.census.gov">census.gov</a> being ruptured yet again. Looking for a way out, I turned to <a href="https://twitter.com/AmeliaMN/status/798620977202663424">twitter</a> and got some good recommendations. In case it’s useful to other teachers/people, I’ll share my thoughts.</p>
 
 <p>(The tl;dr is that you probably want students to be using <a href="http://www.socialexplorer.com/">Social Explorer</a>, but read on for the full rant.)</p>
 
 <!--more-->
 
-<p>First, some motivation. A group of students in my class has found some interesting data at the state level, which they think may be related to demographic characteristics of states, like population, poverty level, education, racial makeup, etc. This is where my amnesia kicks in. &quot;It should be really easy to find data like that!&quot; I say. &quot;Let&#39;s go to the <a href="http://factfinder.census.gov/">American FactFinder website</a> and I&#39;ll show you how it works.&quot; We bumble around on the site for a while, clicking on &quot;Data Main&quot; (a page of screenshots and news) &quot;Data tools and apps&quot; (actually has the link to what we want, but buried among other unrelated things), etc. Finally I manage to find FactFinder main page. We select our geography (states) and dismiss the box that is trying to get us to add yet another geography. We search for &quot;poverty&quot; and voila! ...the ugliest dataset you have ever seen.</p>
+<p>First, some motivation. A group of students in my class has found some interesting data at the state level, which they think may be related to demographic characteristics of states, like population, poverty level, education, racial makeup, etc. This is where my amnesia kicks in. “It should be really easy to find data like that!” I say. “Let’s go to the <a href="http://factfinder.census.gov/">American FactFinder website</a> and I’ll show you how it works.” We bumble around on the site for a while, clicking on “Data Main” (a page of screenshots and news) “Data tools and apps” (actually has the link to what we want, but buried among other unrelated things), etc. Finally I manage to find FactFinder main page. We select our geography (states) and dismiss the box that is trying to get us to add yet another geography. We search for “poverty” and voila! …the ugliest dataset you have ever seen.</p>
 
-<p><a class="thumb" href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&prodType=table"><img src="http://www.science.smith.edu/~amcnamara/img/FactFinder.png" class="img-responsive" alt="An ugly table"></a></p>
+<p><a class="thumb" href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&amp;prodType=table"><img src="http://www.science.smith.edu/~amcnamara/img/FactFinder.png" class="img-responsive" alt="An ugly table" /></a></p>
 
-<p>I always encourage students to work with data programmatically, but even I have to admit that it would be easier to delete columns and add better names in a spreadsheet. The column names are in multiple <em>rows</em> for crying out loud! Plus, what you would like to be observations (states) are actually variables. I am now imagining the <code>gather</code>/<code>spread</code> in my future. I want students to understand data cleaning and wrangling, but I don&#39;t want their first experience to be hellish. Even my heart is sinking, thinking about doing this all myself. </p>
+<p>I always encourage students to work with data programmatically, but even I have to admit that it would be easier to delete columns and add better names in a spreadsheet. The column names are in multiple <em>rows</em> for crying out loud! Plus, what you would like to be observations (states) are actually variables. I am now imagining the <code class="highlighter-rouge">gather</code>/<code class="highlighter-rouge">spread</code> in my future. I want students to understand data cleaning and wrangling, but I don’t want their first experience to be hellish. Even my heart is sinking, thinking about doing this all myself.</p>
 
-<h2>APIs</h2>
+<h2 id="apis">APIs</h2>
 
-<p>Okay, so what are the alternatives? The Census does offer an API, so I signed up for an API key and started playing with some R packages recommended by folks on twitter. The most commonly-mentioned package was <code>acs</code> (a CRAN package), although I also heard about <code>acs14lite</code> and <code>censusapi</code> (both on GitHub and installable using <code>devtools</code>). Sadly, none of these packages have vignettes. I&#39;ve been using R for almost 10 years, so yes, I could figure it out from the documentation, but it would take time (which I am short on) and isn&#39;t something I can ask the students I have in this class to do. </p>
+<p>Okay, so what are the alternatives? The Census does offer an API, so I signed up for an API key and started playing with some R packages recommended by folks on twitter. The most commonly-mentioned package was <code class="highlighter-rouge">acs</code> (a CRAN package), although I also heard about <code class="highlighter-rouge">acs14lite</code> and <code class="highlighter-rouge">censusapi</code> (both on GitHub and installable using <code class="highlighter-rouge">devtools</code>). Sadly, none of these packages have vignettes. I’ve been using R for almost 10 years, so yes, I could figure it out from the documentation, but it would take time (which I am short on) and isn’t something I can ask the students I have in this class to do.</p>
 
-<p><a href="http://www.statschat.org.nz/">Thomas Lumley</a> pointed me to this blog post on <a href="http://dlab.berkeley.edu/blog/season-sharing-data-working-newly-released-census-2010-2014-acs-5-year-data-r">working with ACS data in R</a> which was much more readable. I&#39;m not thinking about maps for this particular application, but I can read around that part. I was able to reproduce the code in the post (yeah!) and modify the first retrieval command to get data for states:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">stateDemo &lt;- acs14(geography='state', variable = c('B17021_001E'))
-</code></pre></div>
-<p>But, this isn&#39;t the only variable I&#39;m interested in! So, how do I learn what other variables I want? As far as I can tell, I have to go to the <a href="http://api.census.gov/">Census API site</a> and read <a href="http://api.census.gov/data/2015/acs1/variables.html">this table</a>. Say I&#39;m interested in race. I can search the page for that word, but I get almost 5,000 results. </p>
+<p><a href="http://www.statschat.org.nz/">Thomas Lumley</a> pointed me to this blog post on <a href="http://dlab.berkeley.edu/blog/season-sharing-data-working-newly-released-census-2010-2014-acs-5-year-data-r">working with ACS data in R</a> which was much more readable. I’m not thinking about maps for this particular application, but I can read around that part. I was able to reproduce the code in the post (yeah!) and modify the first retrieval command to get data for states:</p>
 
-<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/RaceSearch.png" class="img-responsive" alt="Results of searching for `race.'"></a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stateDemo &lt;- acs14(geography='state', variable = c('B17021_001E'))
+</code></pre></div></div>
 
-<p>And even if I locate a variable I am interested in, the descriptions are pretty hard to parse. </p>
+<p>But, this isn’t the only variable I’m interested in! So, how do I learn what other variables I want? As far as I can tell, I have to go to the <a href="http://api.census.gov/">Census API site</a> and read <a href="http://api.census.gov/data/2015/acs1/variables.html">this table</a>. Say I’m interested in race. I can search the page for that word, but I get almost 5,000 results.</p>
 
-<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/VariableDescription.png" class="img-responsive" alt="Variable description'"></a></p>
+<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/RaceSearch.png" class="img-responsive" alt="Results of searching for `race.'" /></a></p>
 
-<p>The result of this is that it would be all too easy to think you were getting one thing and actually request another. Plus, when you generate your list of variable strings like <code>B02001_009E</code>, you also need to maintain a corresponding list of human-readable names like <code>TwoOrMoreCount</code>. If I were writing a peer-reviewed research paper, I would be grateful for the huge amount of detailed breakdowns and the API access, but for a semester-long student project in a class focused on modeling, it&#39;s too much. </p>
+<p>And even if I locate a variable I am interested in, the descriptions are pretty hard to parse.</p>
 
-<h2>Using my network</h2>
+<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/VariableDescription.png" class="img-responsive" alt="Variable description'" /></a></p>
 
-<p>When I asked on Slack, several folks sent me files they had created using the APIs (thanks, <a href="https://twitter.com/dataandme">Mara</a> and Adam!), but of course they didn&#39;t have all the variables I really wanted. And, while I&#39;m grateful to my supportive social media network, I know not everyone has that! </p>
+<p>The result of this is that it would be all too easy to think you were getting one thing and actually request another. Plus, when you generate your list of variable strings like <code class="highlighter-rouge">B02001_009E</code>, you also need to maintain a corresponding list of human-readable names like <code class="highlighter-rouge">TwoOrMoreCount</code>. If I were writing a peer-reviewed research paper, I would be grateful for the huge amount of detailed breakdowns and the API access, but for a semester-long student project in a class focused on modeling, it’s too much.</p>
 
-<h2>User interfaces</h2>
+<h2 id="using-my-network">Using my network</h2>
 
-<p>I had been expecting to be able to find a bunch of GitHub repos full of cleaned up data like the stuff Mara and Adam sent to me on Slack. It seems like people don&#39;t really do that, or if they do it&#39;s not documented in such a way that it is findable. But, <a href="https://twitter.com/ryan_boyer2">Ryan</a> pointed me to the <a href="http://www.socialexplorer.com/">Social Explorer</a>, an online tool mostly designed for making pretty maps online, that includes a Tables functionality that is almost exactly what I was looking for!</p>
+<p>When I asked on Slack, several folks sent me files they had created using the APIs (thanks, <a href="https://twitter.com/dataandme">Mara</a> and Adam!), but of course they didn’t have all the variables I really wanted. And, while I’m grateful to my supportive social media network, I know not everyone has that!</p>
 
-<p><a class="thumb" href="http://www.socialexplorer.com/tables/C2010"><img src="http://www.science.smith.edu/~amcnamara/img/SocialExplorer.png" class="img-responsive" alt="Variable description'"></a></p>
+<h2 id="user-interfaces">User interfaces</h2>
 
-<p>It allows you to select your geography, then you can search by keyword or scroll through a manageable list of variable names and add them to a custom table. You can preview the data (it looks like states will be the variables, but never fear, this changes in the download), then choose the format you want to export it in. Other than a slight loss of reproducibility, the only drawback in my mind is that the variable names are still unintelligible, so you have to also download a data dictionary, but it <em>makes you a custom dictionary</em> based on the variables you chose so you don&#39;t have to wade through the entire thing!</p>
+<p>I had been expecting to be able to find a bunch of GitHub repos full of cleaned up data like the stuff Mara and Adam sent to me on Slack. It seems like people don’t really do that, or if they do it’s not documented in such a way that it is findable. But, <a href="https://twitter.com/ryan_boyer2">Ryan</a> pointed me to the <a href="http://www.socialexplorer.com/">Social Explorer</a>, an online tool mostly designed for making pretty maps online, that includes a Tables functionality that is almost exactly what I was looking for!</p>
 
-<p>It looks like the Tables functionality is mostly for &quot;premium&quot; users, which is too bad, but Smith (like many other academic institutions) has a site license. </p>
+<p><a class="thumb" href="http://www.socialexplorer.com/tables/C2010"><img src="http://www.science.smith.edu/~amcnamara/img/SocialExplorer.png" class="img-responsive" alt="Variable description'" /></a></p>
 
-<p>Are there other resources out there I have missed? Why is this such a hard problem? I&#39;d love to hear from you. </p>
+<p>It allows you to select your geography, then you can search by keyword or scroll through a manageable list of variable names and add them to a custom table. You can preview the data (it looks like states will be the variables, but never fear, this changes in the download), then choose the format you want to export it in. Other than a slight loss of reproducibility, the only drawback in my mind is that the variable names are still unintelligible, so you have to also download a data dictionary, but it <em>makes you a custom dictionary</em> based on the variables you chose so you don’t have to wade through the entire thing!</p>
+
+<p>It looks like the Tables functionality is mostly for “premium” users, which is too bad, but Smith (like many other academic institutions) has a site license.</p>
+
+<p>Are there other resources out there I have missed? Why is this such a hard problem? I’d love to hear from you.</p>
 
 			</div>
 		
@@ -165,6 +171,26 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
       		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
     		</li>
   			
@@ -184,26 +210,6 @@ s.setAttribute('data-timestamp', +new Date());
       		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html">OpenVisConf talk transcript</a>
     		</li>
   			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html">Do you know Nothing when you see it?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html">What's wrong with being data-collecting pigeons?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html">Contextual notes</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html">20th New England Isolated Statisticians Meeting (NEISM) </a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html">Fitbit colors</a>
-    		</li>
-  			
 			</ul></div>
 		<div class="row">&nbsp;</div>
 </div>
@@ -211,7 +217,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2017 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
  <!-- Start of StatCounter Code for Default Guide -->

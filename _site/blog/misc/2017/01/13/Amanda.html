@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<meta name="description" content="Personal website of Amelia McNamara, statistical and data sciences professor at Smith College." />
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
 	
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Amanda </title>
@@ -14,6 +14,8 @@
     <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
     
       <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
     
     <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
   </head>
@@ -39,10 +41,12 @@
             
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.science.smith.edu/~amcnamara/sds220/index.html">Smith SDS/MTH 220</a></li>
-                <li><a href="https://smithcollege-sds.github.io/136/">Smith SDS 136</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/sds236/index.html">SDS 236</a>
                 <li class="divider">Past classes</li>
                 <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
               </ul>
               </li>
             
@@ -87,14 +91,14 @@
 			<div class="post">
 			<p>I get called Amanda a lot. This tends to drive me crazy, because I think
 my real name is much more interesting. But, I realized recently that
-given the prior probabilities, it&#39;s actually a very reasonable thing to
+given the prior probabilities, it’s actually a very reasonable thing to
 call me.</p>
 
 <p>[Note: this blog post has some interactive elements, so it is probably more fun to read on <a href="http://45.55.32.181/shiny/Amanda/">my shiny server</a>. And of course, if you want to see what I did, the <a href="https://github.com/AmeliaMN/shiny-server/blob/master/Amanda/Amanda.Rmd">code is on GitHub</a>.]</p>
 
 <!--more-->
 
-<p>To investigate this using data, I am using the <code>babynames</code> R package,
+<p>To investigate this using data, I am using the <code class="highlighter-rouge">babynames</code> R package,
 which has data from the Social Security Administration. It includes all
 names that had at least 5 uses for a particular gender in a given year.
 Obviously, that leaves some people out, but actually this data includes
@@ -103,30 +107,30 @@ my data appendix.</p>
 
 <p>The basic idea is to take my (approximate) age and see how likely it is
 that my name is Amanda. I look incredibly young, but given that I have a
-PhD and am a statistics professor, there&#39;s a lower bound on how young I
+PhD and am a statistics professor, there’s a lower bound on how young I
 could really be. Lets assume that people talking to me believe I was
 born between <strong>1980-1989</strong>, inclusive. So the question is, given that I
 was born then, <strong>what are the chances my name is Amanda?</strong></p>
 
 <p>In a blog post at the beginning of last semester,
-<a href="http://www2.stat.duke.edu/%7Emc301/">Mine</a>
+<a href="http://www2.stat.duke.edu/~mc301/">Mine</a>
 <a href="http://citizen-statistician.org/2016/08/13/a-timely-first-day-of-class-example-for-fall-2016-trump-tweets/">linked</a>
 to a 538 article from 2014 that approaches the problem from the other
-side-- <a href="http://fivethirtyeight.com/features/how-to-tell-someones-age-when-all-you-know-is-her-name/">How to tell someone&#39;s age when all you know is her
+side– <a href="http://fivethirtyeight.com/features/how-to-tell-someones-age-when-all-you-know-is-her-name/">How to tell someone’s age when all you know is her
 name</a>.
-Interestingly, although using this method would help confirm people&#39;s
-suspicions that I&#39;m a child (the <em>A</em><em>g</em><em>e</em>|<em>N</em><em>a</em><em>m</em><em>e</em> method would
-estimate I&#39;m <a href="http://rhiever.github.io/name-age-calculator/index.html?Gender=F&amp;Name=Amelia">about 13 years
+Interestingly, although using this method would help confirm people’s
+suspicions that I’m a child (the <em>A<strong>g</strong>e</em>|<em>N<strong>a</strong>m**e</em> method would
+estimate I’m <a href="http://rhiever.github.io/name-age-calculator/index.html?Gender=F&amp;Name=Amelia">about 13 years
 old</a>),
-that&#39;s not how people tend to think about names and ages.</p>
+that’s not how people tend to think about names and ages.</p>
 
-<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/amelias-1.png" class="img-responsive" alt="Amelias'"></a></p>
+<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/amelias-1.png" class="img-responsive" alt="Amelias'" /></a></p>
 
 <p>Instead, people seem to be taking an approximate age and then just
 grabbing a name out of the hat. In other words, they are using the
-<em>N</em><em>a</em><em>m</em><em>e</em>|<em>A</em><em>g</em><em>e</em> method. With that in mind, let&#39;s see how likely
-Amanda really is. I&#39;m focusing just on girls names for this analysis,
-mostly because Amelia isn&#39;t a common boy&#39;s name (see my data appendix).</p>
+<em>N<strong>a</strong>m<strong>e*|*A</strong>g**e</em> method. With that in mind, let’s see how likely
+Amanda really is. I’m focusing just on girls names for this analysis,
+mostly because Amelia isn’t a common boy’s name (see my data appendix).</p>
 
 <p>In the eighties, numbers for Amanda and Amelia were as follows:</p>
 
@@ -153,8 +157,8 @@ mostly because Amelia isn&#39;t a common boy&#39;s name (see my data appendix).<
 </table>
 
 <p>Armed only with the information that I was born between 1985 and 1989,
-there&#39;s a <strong>2% chance my name is Amanda</strong>. That&#39;s actually pretty
-incredible! (In contrast, there&#39;s just a 0.05% chance my name is
+there’s a <strong>2% chance my name is Amanda</strong>. That’s actually pretty
+incredible! (In contrast, there’s just a 0.05% chance my name is
 Amelia.) And, we can figure most people remember at least the first
 letter of a name. So, what if we add the fact that my name starts with
 an A?</p>
@@ -181,45 +185,45 @@ as follows:</p>
 </tbody>
 </table>
 
-<p>Now, there&#39;s a <strong>15.7% chance my name is Amanda</strong> (and a 0.4% chance my
+<p>Now, there’s a <strong>15.7% chance my name is Amanda</strong> (and a 0.4% chance my
 name is Amelia). The only A name that was more popular than Amanda in
 the eighties was Ashley, which made up 19.5% of the female names
-starting with A. Of course, Ashley doesn&#39;t have as similar of a sound to
-Amelia as Amanda does. I didn&#39;t go this far, but we could also look at
-the names starting with Am-- I think this would serve to solidify Amanda
+starting with A. Of course, Ashley doesn’t have as similar of a sound to
+Amelia as Amanda does. I didn’t go this far, but we could also look at
+the names starting with Am– I think this would serve to solidify Amanda
 as the much more likely choice.</p>
 
 <p>So, for those of you that have felt bad about getting my name wrong in
-the past-- the data supports you!</p>
+the past– the data supports you!</p>
 
-<p>I&#39;m not sure if doing this analysis has made me feel better about being
-called Amanda-- for that, I just tell myself <strong>&quot;they&#39;re probably mixing
+<p>I’m not sure if doing this analysis has made me feel better about being
+called Amanda– for that, I just tell myself <strong>“they’re probably mixing
 me up with <a href="http://www.nytco.com/amanda-cox-named-editor-the-upshot/">Amanda
-Cox</a>.&quot;</strong></p>
+Cox</a>.”</strong></p>
 
-<h2>Your name</h2>
+<h2 id="your-name">Your name</h2>
 
 <p>Does this trend hold up with the name people are always calling you? Are
 you a Jacob that always gets called Jason? A Kirstin that gets called
-Kristen? (I&#39;m guilty of that one.)</p>
+Kristen? (I’m guilty of that one.)</p>
 
 <p>[This is the part of the post that is responsive, so you probably want to head to <a href="http://45.55.32.181/shiny/Amanda/">my shiny server</a>.]</p>
 
-<p><a class="thumb" href="http://45.55.32.181/shiny/Amanda/"><img src="http://www.science.smith.edu/~amcnamara/img/ShinyScreenShot.png" class="img-responsive" alt="You want to go to my server version"></a></p>
+<p><a class="thumb" href="http://45.55.32.181/shiny/Amanda/"><img src="http://www.science.smith.edu/~amcnamara/img/ShinyScreenShot.png" class="img-responsive" alt="You want to go to my server version" /></a></p>
 
-<h2>Data appendix</h2>
+<h2 id="data-appendix">Data appendix</h2>
 
 <p>I can get off-track when doing analyses, so here are a couple more
 thoughts.</p>
 
-<h3>How full is the data?</h3>
+<h3 id="how-full-is-the-data">How full is the data?</h3>
 
 <p>One thing I was worried about was how well the data really represented
 the population. Uncommon names are excluded for privacy purposes, and I
 thought maybe people were getting more (or less) creative with names
 over time. It turns out that may be the case, but only slightly.</p>
 
-<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/missingdata-1.png" class="img-responsive" alt="Missing data'"></a></p>
+<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/missingdata-1.png" class="img-responsive" alt="Missing data'" /></a></p>
 
 <table>
 <thead>
@@ -246,11 +250,11 @@ over time. It turns out that may be the case, but only slightly.</p>
 
 <p>On average, only 5% of people are missing from the data. That feels
 pretty good to me. The article mentioned above, 538 estimated that only
-1% of the data was missing, which I&#39;m not sure how they estimated.</p>
+1% of the data was missing, which I’m not sure how they estimated.</p>
 
-<h3>How many baby boys are named Amelia?</h3>
+<h3 id="how-many-baby-boys-are-named-amelia">How many baby boys are named Amelia?</h3>
 
-<p>Answer-- not many. In 2004, the year with the most male Amelias, 14 baby
+<p>Answer– not many. In 2004, the year with the most male Amelias, 14 baby
 boys were named Amelia. Or, someone checked the wrong box on a birth
 certificate.</p>
 
@@ -273,11 +277,11 @@ certificate.</p>
 </tbody>
 </table>
 
-<h3>Creativity in naming</h3>
+<h3 id="creativity-in-naming">Creativity in naming</h3>
 
-<p>Of course, there&#39;s a lot deeper I could dig on this analysis. Just by
+<p>Of course, there’s a lot deeper I could dig on this analysis. Just by
 scrolling through the data I noticed there are many other ways to spell
-Amanda, which didn&#39;t get taken into account. (Maybe the creative
+Amanda, which didn’t get taken into account. (Maybe the creative
 spellings of Amelia balance it out.)</p>
 
 <table>
@@ -317,16 +321,16 @@ spellings of Amelia balance it out.)</p>
 </tbody>
 </table>
 
-<h3>A is for eighties</h3>
+<h3 id="a-is-for-eighties">A is for eighties</h3>
 
 <p>You can actually see the eighties pretty clearly when you look at plots
-of letters names start with. Girls&#39; names starting with A had been on
+of letters names start with. Girls’ names starting with A had been on
 the rise since the 1960s, but you see a local maximum in about 1984 and
 then a small decline before continuing to rise.</p>
 
-<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/nameletters-1.png" class="img-responsive" alt="Letters over time'"></a></p>
+<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/nameletters-1.png" class="img-responsive" alt="Letters over time'" /></a></p>
 
-<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/nameletters-2.png" class="img-responsive" alt="A over time'"></a></p>
+<p><a class="thumb" href=""><img src="http://www.science.smith.edu/~amcnamara/img/nameletters-2.png" class="img-responsive" alt="A over time'" /></a></p>
 
 			</div>
 		
@@ -363,6 +367,26 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
       		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
     		</li>
   			
@@ -382,26 +406,6 @@ s.setAttribute('data-timestamp', +new Date());
       		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html">OpenVisConf talk transcript</a>
     		</li>
   			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html">Do you know Nothing when you see it?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html">What's wrong with being data-collecting pigeons?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html">Contextual notes</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html">20th New England Isolated Statisticians Meeting (NEISM) </a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html">Fitbit colors</a>
-    		</li>
-  			
 			</ul></div>
 		<div class="row">&nbsp;</div>
 </div>
@@ -409,7 +413,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2017 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
  <!-- Start of StatCounter Code for Default Guide -->

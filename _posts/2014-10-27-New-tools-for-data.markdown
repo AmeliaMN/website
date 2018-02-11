@@ -8,7 +8,7 @@ img: "2014-10-27 10.10.06.jpg"
 
 While the [Computation + Journalism Symposium](http://symposium2014.computation-and-journalism.com/) continues to be filled with fascinating inlets to journalistic projects and innovative computational approaches (like using drones to map garbage dumps) the component that always catches my attention is the demoing of new tools for data analysis. 
 
-This year's symposium was hosted at the [Brown Institute](http://brown.columbia.edu/) and was no exception-- I saw many projects that approached elements of my [theory about the future of statistical programming]({{ site.baseurl }}/FOSP.html) from different directions.
+This year's symposium was hosted at the [Brown Institute](http://brown.columbia.edu/) and was no exception-- I saw many projects that approached elements of my [theory about the future of statistical programming]({{ site.baseurl }}/FoSP.html) from different directions.
 
 <!--more-->
 

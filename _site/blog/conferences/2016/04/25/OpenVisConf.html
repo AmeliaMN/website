@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<meta name="description" content="Personal website of Amelia McNamara, statistical and data sciences professor at Smith College." />
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
 	
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Openvisconf </title>
@@ -14,6 +14,8 @@
     <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
     
       <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
     
     <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
   </head>
@@ -39,10 +41,12 @@
             
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.science.smith.edu/~amcnamara/sds220/index.html">Smith SDS/MTH 220</a></li>
-                <li><a href="https://smithcollege-sds.github.io/136/">Smith SDS 136</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/sds236/index.html">SDS 236</a>
                 <li class="divider">Past classes</li>
                 <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
               </ul>
               </li>
             
@@ -85,51 +89,73 @@
 			<p class="meta">25 Apr 2016</p>
 
 			<div class="post">
-			<p>I&#39;m currently at <a href="https://openvisconf.com/">OpenVisConf</a> and in awe of my fellow presenters. I did my presentation, &quot;Do you know Nothing when you see it?&quot; before lunch and have been slowly unwinding since then. A couple people asked for links to my slides and resources, so here they are!</p>
+			<p>I’m currently at <a href="https://openvisconf.com/">OpenVisConf</a> and in awe of my fellow presenters. I did my presentation, “Do you know Nothing when you see it?” before lunch and have been slowly unwinding since then. A couple people asked for links to my slides and resources, so here they are!</p>
 
-<p>I saved my Keynote slides as HTML and posted them on my website. They seem even lower quality than in Keynote (how is that possible?!) but you can access them  <a href="http://www.science.smith.edu/%7Eamcnamara/OpenVisConf">here</a>.</p>
+<p>I saved my Keynote slides as HTML and posted them on my website. They seem even lower quality than in Keynote (how is that possible?!) but you can access them  <a href="http://www.science.smith.edu/~amcnamara/OpenVisConf">here</a>.</p>
 
 <!--more-->
 
-<p><a class="thumb" href="http://www.science.smith.edu/~amcnamara/OpenVisConf"><img src="http://www.science.smith.edu/~amcnamara/img/titleslide.jpg" class="img-responsive" alt="Nothing" width="400"></a> title slide image from flickr: <a href="https://www.flickr.com/photos/hungry_i/66962027/in/photolist-6VctH-zr4aM-e9mH1t-6XLhY9-qo4Bms-8gyi5q-zr357-4jeF2Y-r8nhEr-3BzwrF-hWLU1-zhqjfS-6akRDL-8oHoz1-Env5V-dLro6N-6Ba6Qx-hcQm7X-45WiW8-45Wj1K-nWoLpt-8Qp68q-6a6dd5-aqc1Ri-dZmw2h-79ykph-rxzvJj-uu5px-JCCFC-9tWqkt-6EGjEv-6Juo8s-eCaru-6VMiSX-dSGL3M-6bsbPs-8cueSK-4waMSd-7zWdYW-5WrAQr-MtpXy-6gH759-MtpXJ-a7uXuC-4THFy2-69GvS-GyDeK-EntY3-a1bJ4u-8HgEn">hungry_i</a></p>
+<p><a class="thumb" href="http://www.science.smith.edu/~amcnamara/OpenVisConf"><img src="http://www.science.smith.edu/~amcnamara/img/titleslide.jpg" class="img-responsive" alt="Nothing" width="400" /></a> title slide image from flickr: <a href="https://www.flickr.com/photos/hungry_i/66962027/in/photolist-6VctH-zr4aM-e9mH1t-6XLhY9-qo4Bms-8gyi5q-zr357-4jeF2Y-r8nhEr-3BzwrF-hWLU1-zhqjfS-6akRDL-8oHoz1-Env5V-dLro6N-6Ba6Qx-hcQm7X-45WiW8-45Wj1K-nWoLpt-8Qp68q-6a6dd5-aqc1Ri-dZmw2h-79ykph-rxzvJj-uu5px-JCCFC-9tWqkt-6EGjEv-6Juo8s-eCaru-6VMiSX-dSGL3M-6bsbPs-8cueSK-4waMSd-7zWdYW-5WrAQr-MtpXy-6gH759-MtpXJ-a7uXuC-4THFy2-69GvS-GyDeK-EntY3-a1bJ4u-8HgEn">hungry_i</a></p>
 
 <p><strong>Resources:</strong> [May be updated to be more descriptive if I get the energy.]</p>
 
 <p>Randomization and the bootstrap:</p>
 
 <ul>
-<li><p>David M Diez,  Christopher D Barr, Mine Çetinkaya-Rundel. <a href="www.openintro.org">Introductory Statistics with Randomization and Simulation.</a></p></li>
-<li><p>Jonathan Stray. <a href="http://bit.ly/OneWeirdStatsTrick">“Solve Every Statistics Problem with One Weird Trick.”</a> NICAR 2016. </p></li>
-<li><p>Tim Hesterberg. <a href="http://bit.ly/KnowAboutBootstrap">“What Teachers Should Know About the Bootstrap.“</a></p></li>
+  <li>
+    <p>David M Diez,  Christopher D Barr, Mine Çetinkaya-Rundel. <a href="www.openintro.org">Introductory Statistics with Randomization and Simulation.</a></p>
+  </li>
+  <li>
+    <p>Jonathan Stray. <a href="http://bit.ly/OneWeirdStatsTrick">“Solve Every Statistics Problem with One Weird Trick.”</a> NICAR 2016.</p>
+  </li>
+  <li>
+    <p>Tim Hesterberg. <a href="http://bit.ly/KnowAboutBootstrap">“What Teachers Should Know About the Bootstrap.“</a></p>
+  </li>
 </ul>
 
 <p>Graphical inference:</p>
 
 <ul>
-<li>Hadley Wickham, Dianne Cook, Heike Hofmann, and Andreas Buja. (2010). <a href="http://bit.ly/graphical_inference">Graphical Inference for Infovis.</a> IEEE Transactions on Visualization and Computer Graphics, 16(6). </li>
+  <li>Hadley Wickham, Dianne Cook, Heike Hofmann, and Andreas Buja. (2010). <a href="http://bit.ly/graphical_inference">Graphical Inference for Infovis.</a> IEEE Transactions on Visualization and Computer Graphics, 16(6).</li>
 </ul>
 
 <p>R packages:</p>
 
 <ul>
-<li><p><a href="https://cran.r-project.org/web/packages/mosaic/index.html">mosaic</a></p></li>
-<li><p><a href="http://ggplot2.org/">ggplot2</a></p></li>
-<li><p><a href="https://cran.r-project.org/web/packages/nullabor/vignettes/nullabor.html">nullabor</a></p></li>
+  <li>
+    <p><a href="https://cran.r-project.org/web/packages/mosaic/index.html">mosaic</a></p>
+  </li>
+  <li>
+    <p><a href="http://ggplot2.org/">ggplot2</a></p>
+  </li>
+  <li>
+    <p><a href="https://cran.r-project.org/web/packages/nullabor/vignettes/nullabor.html">nullabor</a></p>
+  </li>
 </ul>
 
 <p>Modifiable Areal Unit Problem and Gerrymandering</p>
 
 <ul>
-<li><p><a href="http://bit.ly/maup16">An Introduction to the Modifiable Areal Unit Problem</a></p></li>
-<li><p>Christopher Ingraham. <a href="http://bit.ly/exp_gerrymander">This is the best explanation of gerrymandering you will ever see</a>. The Washington Post.</p></li>
+  <li>
+    <p><a href="http://bit.ly/maup16">An Introduction to the Modifiable Areal Unit Problem</a></p>
+  </li>
+  <li>
+    <p>Christopher Ingraham. <a href="http://bit.ly/exp_gerrymander">This is the best explanation of gerrymandering you will ever see</a>. The Washington Post.</p>
+  </li>
 </ul>
 
 <p>Exploring parameter space:</p>
 
 <ul>
-<li><p>Aran Lunzer and Amelia McNamara. (2014). <a href="http://bit.ly/CheckingCharts">It ain’t necessarily so: Checking charts for robustness.</a> In IEEE Vis 2014. </p></li>
-<li><p><a href="http://vimeo.com/93535802">LivelyR introductory video</a></p></li>
-<li><p><a href="http://bit.ly/spatial_agg">Spatial Aggregation Explorer</a></p></li>
+  <li>
+    <p>Aran Lunzer and Amelia McNamara. (2014). <a href="http://bit.ly/CheckingCharts">It ain’t necessarily so: Checking charts for robustness.</a> In IEEE Vis 2014.</p>
+  </li>
+  <li>
+    <p><a href="http://vimeo.com/93535802">LivelyR introductory video</a></p>
+  </li>
+  <li>
+    <p><a href="http://bit.ly/spatial_agg">Spatial Aggregation Explorer</a></p>
+  </li>
 </ul>
 
 <p>Thank you so much to everyone who offered kind words about my presentation!</p>
@@ -169,6 +195,26 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
       		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
     		</li>
   			
@@ -188,26 +234,6 @@ s.setAttribute('data-timestamp', +new Date());
       		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html">OpenVisConf talk transcript</a>
     		</li>
   			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html">Do you know Nothing when you see it?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html">What's wrong with being data-collecting pigeons?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html">Contextual notes</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html">20th New England Isolated Statisticians Meeting (NEISM) </a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html">Fitbit colors</a>
-    		</li>
-  			
 			</ul></div>
 		<div class="row">&nbsp;</div>
 </div>
@@ -215,7 +241,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2017 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
  <!-- Start of StatCounter Code for Default Guide -->

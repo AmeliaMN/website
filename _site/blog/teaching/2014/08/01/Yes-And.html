@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<meta name="description" content="Personal website of Amelia McNamara, statistical and data sciences professor at Smith College." />
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
 	
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Yes And </title>
@@ -14,6 +14,8 @@
     <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
     
       <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
     
     <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
   </head>
@@ -39,10 +41,12 @@
             
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.science.smith.edu/~amcnamara/sds220/index.html">Smith SDS/MTH 220</a></li>
-                <li><a href="https://smithcollege-sds.github.io/136/">Smith SDS 136</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/sds236/index.html">SDS 236</a>
                 <li class="divider">Past classes</li>
                 <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
               </ul>
               </li>
             
@@ -85,21 +89,21 @@
 			<p class="meta">01 Aug 2014</p>
 
 			<div class="post">
-			<p>One of my primary teaching techniques is the improv-inspired &quot;yes and...&quot; move. People who have been trained in improvisational comedy know that the first rule is always to build on what your fellow performers say. If someone says, &quot;now we&#39;re sitting in a cafe, having coffee&quot; you should never respond, &quot;no, we&#39;re outside playing frisbee!&quot; Instead, you should build, &quot;yes, and the waitress is a robot!&quot;</p>
+			<p>One of my primary teaching techniques is the improv-inspired “yes and…” move. People who have been trained in improvisational comedy know that the first rule is always to build on what your fellow performers say. If someone says, “now we’re sitting in a cafe, having coffee” you should never respond, “no, we’re outside playing frisbee!” Instead, you should build, “yes, and the waitress is a robot!”</p>
 
-<p>When I was in college, I had an instructor whose response to any student comment would always start with &quot;no.&quot; Over the course of the semester, this became a running joke with the students in the class, because it didn&#39;t matter how right your answer was. </p>
+<p>When I was in college, I had an instructor whose response to any student comment would always start with “no.” Over the course of the semester, this became a running joke with the students in the class, because it didn’t matter how right your answer was.</p>
 
-<!--more--> 
+<!--more-->
 
-<p>A typical example would be the instructor asking, &quot;What programming construct am I using here?&quot; A student would answer, &quot;you&#39;re using a for loop&quot; And the response would come back, &quot;No. Well, I guess it is a for loop. But I wanted you to say a control statement.&quot; That one&#39;s actually pretty tame, because both the student&#39;s response and the instructor&#39;s expected response could be considered correct. But this instructor would go through verbal gymnastics to always start with no, even if the student&#39;s response was precisely correct and there was no alternative.</p>
+<p>A typical example would be the instructor asking, “What programming construct am I using here?” A student would answer, “you’re using a for loop” And the response would come back, “No. Well, I guess it is a for loop. But I wanted you to say a control statement.” That one’s actually pretty tame, because both the student’s response and the instructor’s expected response could be considered correct. But this instructor would go through verbal gymnastics to always start with no, even if the student’s response was precisely correct and there was no alternative.</p>
 
-<p>As a result, many students shut down completely. Even though we joked about the instructor&#39;s love of &quot;no&quot; many people became (consciously or unconsciously) scared off from responding. By the end of the course, I was essentially the only one brave enough to raise my hand, knowing that no matter what I said I would get a negative response. </p>
+<p>As a result, many students shut down completely. Even though we joked about the instructor’s love of “no” many people became (consciously or unconsciously) scared off from responding. By the end of the course, I was essentially the only one brave enough to raise my hand, knowing that no matter what I said I would get a negative response.</p>
 
-<p><a class="thumb" href="#"><img src="http://www.science.smith.edu/~amcnamara/img/YesAnd.jpg" class="img-responsive" alt="Yes And"></a></p>
+<p><a class="thumb" href="#"><img src="http://www.science.smith.edu/~amcnamara/img/YesAnd.jpg" class="img-responsive" alt="Yes And" /></a></p>
 
-<p>Of course, most teachers don&#39;t go to this extreme. But, I know how easy it is to slip into a frame of mind where you want one particular response and no one is &quot;getting it.&quot; So, I make a concerted effort to always start my response to students with &quot;yes&quot; or something else similarly positive. &quot;Sure, that model has some of the qualities I&#39;m describing here. That&#39;s a nice connection to the stuff we were talking about last week. I was looking for one of the models we&#39;ve been discussing today. Does anyone have another idea?&quot; In fact, I try to start with something positive, even if the answer is partly/mostly wrong. For each incorrect response, I try to put myself into my student&#39;s frame of mind and figure out what the connection is that made them say it. </p>
+<p>Of course, most teachers don’t go to this extreme. But, I know how easy it is to slip into a frame of mind where you want one particular response and no one is “getting it.” So, I make a concerted effort to always start my response to students with “yes” or something else similarly positive. “Sure, that model has some of the qualities I’m describing here. That’s a nice connection to the stuff we were talking about last week. I was looking for one of the models we’ve been discussing today. Does anyone have another idea?” In fact, I try to start with something positive, even if the answer is partly/mostly wrong. For each incorrect response, I try to put myself into my student’s frame of mind and figure out what the connection is that made them say it.</p>
 
-<p>If I go through several responses and no one is saying what I expected, I&#39;ll eventually say something like, &quot;oh boy, here I go again, expecting you guys to read my mind!&quot; Usually, this gets a laugh from the class. And by explicitly calling myself out when I&#39;m asking unreasonable questions, it helps me reduce that behavior. Sometimes students can even be frustrated by my positivism, because they want to know <em>the</em> answer to the question. Since I&#39;ll talk my way through almost any response, it detracts from the idea of a correct response. While I try to strike a balance, I think that the idea of many correct responses is very statistical. </p>
+<p>If I go through several responses and no one is saying what I expected, I’ll eventually say something like, “oh boy, here I go again, expecting you guys to read my mind!” Usually, this gets a laugh from the class. And by explicitly calling myself out when I’m asking unreasonable questions, it helps me reduce that behavior. Sometimes students can even be frustrated by my positivism, because they want to know <em>the</em> answer to the question. Since I’ll talk my way through almost any response, it detracts from the idea of a correct response. While I try to strike a balance, I think that the idea of many correct responses is very statistical.</p>
 
 			</div>
 		
@@ -136,6 +140,26 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
       		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
     		</li>
   			
@@ -155,26 +179,6 @@ s.setAttribute('data-timestamp', +new Date());
       		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html">OpenVisConf talk transcript</a>
     		</li>
   			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html">Do you know Nothing when you see it?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html">What's wrong with being data-collecting pigeons?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html">Contextual notes</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html">20th New England Isolated Statisticians Meeting (NEISM) </a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html">Fitbit colors</a>
-    		</li>
-  			
 			</ul></div>
 		<div class="row">&nbsp;</div>
 </div>
@@ -182,7 +186,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2017 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
  <!-- Start of StatCounter Code for Default Guide -->

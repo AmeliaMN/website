@@ -1,7 +1,12 @@
 name: Amelia McNamara
-description: Personal website of Amelia McNamara, statistical and data sciences professor at Smith College.
-markdown: redcarpet
+description: Personal website of Amelia McNamara statistical and data sciences professor at Smith College.
 highlighter: rouge
+timezone: America/New_York
+markdown: kramdown
+kramdown:
+    input: GFM
+    auto_ids: true
+    syntax_highlighter: rouge
 baseurl: "http://www.science.smith.edu/~amcnamara"
 permalink: blog/:categories/:year/:month/:day/:title.html
 excerpt_separator: <!--more-->

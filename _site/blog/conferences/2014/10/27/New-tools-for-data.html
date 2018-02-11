@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<meta name="description" content="Personal website of Amelia McNamara, statistical and data sciences professor at Smith College." />
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
 	
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | New Tools For Data </title>
@@ -14,6 +14,8 @@
     <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
     
       <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
     
     <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
   </head>
@@ -39,10 +41,12 @@
             
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.science.smith.edu/~amcnamara/sds220/index.html">Smith SDS/MTH 220</a></li>
-                <li><a href="https://smithcollege-sds.github.io/136/">Smith SDS 136</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/sds236/index.html">SDS 236</a>
                 <li class="divider">Past classes</li>
                 <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
               </ul>
               </li>
             
@@ -85,71 +89,70 @@
 			<p class="meta">27 Oct 2014</p>
 
 			<div class="post">
-			<p>While the <a href="http://symposium2014.computation-and-journalism.com/">Computation + Journalism Symposium</a> continues to be filled with fascinating inlets to journalistic projects and innovative computational approaches (like using drones to map garbage dumps) the component that always catches my attention is the demoing of new tools for data analysis. </p>
+			<p>While the <a href="http://symposium2014.computation-and-journalism.com/">Computation + Journalism Symposium</a> continues to be filled with fascinating inlets to journalistic projects and innovative computational approaches (like using drones to map garbage dumps) the component that always catches my attention is the demoing of new tools for data analysis.</p>
 
-<p>This year&#39;s symposium was hosted at the <a href="http://brown.columbia.edu/">Brown Institute</a> and was no exception-- I saw many projects that approached elements of my <a href="http://www.science.smith.edu/%7Eamcnamara/FOSP.html">theory about the future of statistical programming</a> from different directions.</p>
+<p>This year’s symposium was hosted at the <a href="http://brown.columbia.edu/">Brown Institute</a> and was no exception– I saw many projects that approached elements of my <a href="http://www.science.smith.edu/~amcnamara/FoSP.html">theory about the future of statistical programming</a> from different directions.</p>
 
 <!--more-->
 
 <p>Many of the data analysis projects were discussed on a panel about journalistic platforms. The panelists were</p>
 
 <ul>
-<li><a href="https://sites.google.com/site/gideonmann/">Gideon Mann</a>, of Bloomberg, speaking about <a href="https://colaboratory.jupyter.org/welcome/">coLaboratory</a></li>
-<li><a href="http://www.kareemamin.com/">Kareem Amin</a>, of <a href="http://newscorp.com/">NewsCorp</a>, talking about a forthcoming tool that uses custom HTML tags</li>
-<li><a href="http://brianabelson.com/">Brian Abelson</a>, of <a href="http://enigma.io/">enigma.io</a> and the <a href="http://towcenter.org/">Tow Center</a>, on <a href="http://nytlabs.github.io/streamtools/">streamtools</a> from the <a href="http://nytlabs.com/">NYT R&amp;D labs</a></li>
+  <li><a href="https://sites.google.com/site/gideonmann/">Gideon Mann</a>, of Bloomberg, speaking about <a href="https://colaboratory.jupyter.org/welcome/">coLaboratory</a></li>
+  <li><a href="http://www.kareemamin.com/">Kareem Amin</a>, of <a href="http://newscorp.com/">NewsCorp</a>, talking about a forthcoming tool that uses custom HTML tags</li>
+  <li><a href="http://brianabelson.com/">Brian Abelson</a>, of <a href="http://enigma.io/">enigma.io</a> and the <a href="http://towcenter.org/">Tow Center</a>, on <a href="http://nytlabs.github.io/streamtools/">streamtools</a> from the <a href="http://nytlabs.com/">NYT R&amp;D labs</a></li>
 </ul>
 
-<p>All the tools spoke to the ideas I am engaging with in my dissertation, which I found very encouraging. The context that I have been thinking most deeply about is the high school data science classroom, much like the <a href="http://www.science.smith.edu/%7Eamcnamara/mobilize.html">Mobilize</a> project, which I formerly worked on. </p>
+<p>All the tools spoke to the ideas I am engaging with in my dissertation, which I found very encouraging. The context that I have been thinking most deeply about is the high school data science classroom, much like the <a href="http://www.science.smith.edu/~amcnamara/mobilize.html">Mobilize</a> project, which I formerly worked on.</p>
 
-<p>However, data journalism is the other context that I had been hoping to find relevance in. The fact that the panelists were engaging with the same issues, of being able to get started quickly but develop new modules as needed, of publishability and the need for interactivity, suggests that the two seemingly-different contexts (high school students/teachers, and data journalists) might not be that different in their needs after all. </p>
+<p>However, data journalism is the other context that I had been hoping to find relevance in. The fact that the panelists were engaging with the same issues, of being able to get started quickly but develop new modules as needed, of publishability and the need for interactivity, suggests that the two seemingly-different contexts (high school students/teachers, and data journalists) might not be that different in their needs after all.</p>
 
-<h3><strong>coLaboratory</strong></h3>
+<h3 id="colaboratory"><strong>coLaboratory</strong></h3>
 
 <p>I had asked my twitterverse about coLaboratory in September,</p>
 
 <blockquote class="twitter-tweet" lang="en"><p>Saw this article on CoLaboratory, <a href="http://t.co/MylVNfZckI">http://t.co/MylVNfZckI</a> but would love to hear from people who use it. <a href="https://twitter.com/hmason">@hmason</a>?</p>&mdash; Amelia McNamara (@AmeliaMN) <a href="https://twitter.com/AmeliaMN/status/515557079642169344">September 26, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>but got no response except for <a href="https://twitter.com/hmason">Hilary Mason</a> responding that she didn’t know the project and didn’t know why her photo was used on the article.</p>
 
-<p>but got no response except for <a href="https://twitter.com/hmason">Hilary Mason</a> responding that she didn&#39;t know the project and didn&#39;t know why her photo was used on the article. </p>
+<p>So, it was great to hear about the project straight from the horse’s mouth. <a href="https://colaboratory.jupyter.org/welcome/">coLaboratory</a> seems to be part of <a href="http://jupyter.org/">project Jupyter</a>, and it offers an iPython notebook that allows you to collaborate with others. Sadly, all their documentation seems to be technical, without any of the “so what” that I look for when learning about a tool. I did find a google research <a href="http://googleresearch.blogspot.com/2014/08/doing-data-science-with-colaboratory.html">blog post</a> which gives a little more context and a few examples.</p>
 
-<p>So, it was great to hear about the project straight from the horse&#39;s mouth. <a href="https://colaboratory.jupyter.org/welcome/">coLaboratory</a> seems to be part of <a href="http://jupyter.org/">project Jupyter</a>, and it offers an iPython notebook that allows you to collaborate with others. Sadly, all their documentation seems to be technical, without any of the &quot;so what&quot; that I look for when learning about a tool. I did find a google research <a href="http://googleresearch.blogspot.com/2014/08/doing-data-science-with-colaboratory.html">blog post</a> which gives a little more context and a few examples. </p>
+<p>Essentially, coLaboratory can produce interactive reports (meaning, with sliders and buttons for users to interact with). It also has some focus on making it easy to develop the interface, using simple commands to invoke interactive controls. However, once a user modifies a control they need to re-click on the “run” button to see the updated information. This is my main complaint with iPython notebooks in general, so it’s too bad that the version for creating interactive documents doesn’t manage to jump that hurdle.  The other problem is that the source code really isn’t <em>that</em> readable when you get down to it.</p>
 
-<p>Essentially, coLaboratory can produce interactive reports (meaning, with sliders and buttons for users to interact with). It also has some focus on making it easy to develop the interface, using simple commands to invoke interactive controls. However, once a user modifies a control they need to re-click on the &quot;run&quot; button to see the updated information. This is my main complaint with iPython notebooks in general, so it&#39;s too bad that the version for creating interactive documents doesn&#39;t manage to jump that hurdle.  The other problem is that the source code really isn&#39;t <em>that</em> readable when you get down to it.</p>
+<h3 id="thelma"><strong>Thelma</strong></h3>
 
-<h3><strong>Thelma</strong></h3>
+<p>The tool that Amin was talking about had different advantages. First, it is a click-driven interface, so you click on data inputs and outputs and see the results in the browser. By allowing users to build analysis in this way, you make it easier for novices to get started easily while still making nice results. The product he was talking about is based on custom HTML tags, using <a href="https://www.polymer-project.org/">Polymer</a> web components.</p>
 
-<p>The tool that Amin was talking about had different advantages. First, it is a click-driven interface, so you click on data inputs and outputs and see the results in the browser. By allowing users to build analysis in this way, you make it easier for novices to get started easily while still making nice results. The product he was talking about is based on custom HTML tags, using <a href="https://www.polymer-project.org/">Polymer</a> web components. </p>
-
-<p>I don&#39;t think that Amin wanted the name of the project to be made public yet, but he showed a demo and several people tweeted out the <a href="http://thelmanews.github.io/thelma-component-demo/data-demo.html">link</a>,
+<p>I don’t think that Amin wanted the name of the project to be made public yet, but he showed a demo and several people tweeted out the <a href="http://thelmanews.github.io/thelma-component-demo/data-demo.html">link</a>,</p>
 <blockquote class="twitter-tweet" lang="en"><p>As you do data analysis it updates the webpage: <a href="http://t.co/isWky1uNAV">http://t.co/isWky1uNAV</a> -<a href="https://twitter.com/kareemamin">@kareemamin</a> <a href="https://twitter.com/hashtag/cj2014?src=hash">#cj2014</a></p>&mdash; Nick Diakopoulos (@ndiakopoulos) <a href="https://twitter.com/ndiakopoulos/status/525677010816090112">October 24, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>and it appears to be called Thelma. </p>
+<p>and it appears to be called Thelma.</p>
 
-<p>Obviously, Thelma needs a lot more work before it&#39;s really made public. It&#39;s not clear how to begin if you want to do something that doesn&#39;t use the data and chart types already on the demo page, and even those aren&#39;t exactly transparent. But, there&#39;s a lot of potential here. The resulting charts are somewhat interactive, and updating happens as soon as you modify the inputs/outputs. </p>
+<p>Obviously, Thelma needs a lot more work before it’s really made public. It’s not clear how to begin if you want to do something that doesn’t use the data and chart types already on the demo page, and even those aren’t exactly transparent. But, there’s a lot of potential here. The resulting charts are somewhat interactive, and updating happens as soon as you modify the inputs/outputs.</p>
 
-<h3><strong>streamtools</strong></h3>
+<h3 id="streamtools"><strong>streamtools</strong></h3>
 
-<p>Then, <a href="http://brianabelson.com/">Brian Abelson</a> spoke about <a href="http://nytlabs.github.io/streamtools/">streamtools</a>. Abelson was not involved with the development of streamtools, but he found it useful enough that he was willing to be its advocate on the panel. streamtools is a dataflow programming environment for working with live streaming data. Rather than waiting for data to be presented as a flat file, the lab wanted to allow users to deal directly with data as it streams in. Since I work with the Communications Design Group, it immediately made me think of Dan Ingalls&#39; <a href="https://en.wikipedia.org/wiki/Fabrik_(software)">fabrik</a> (a visual programming environment in which users &quot;wired&quot; components together), but of course there is a rich history of this sort of blocks programming environments. </p>
+<p>Then, <a href="http://brianabelson.com/">Brian Abelson</a> spoke about <a href="http://nytlabs.github.io/streamtools/">streamtools</a>. Abelson was not involved with the development of streamtools, but he found it useful enough that he was willing to be its advocate on the panel. streamtools is a dataflow programming environment for working with live streaming data. Rather than waiting for data to be presented as a flat file, the lab wanted to allow users to deal directly with data as it streams in. Since I work with the Communications Design Group, it immediately made me think of Dan Ingalls’ <a href="https://en.wikipedia.org/wiki/Fabrik_(software)">fabrik</a> (a visual programming environment in which users “wired” components together), but of course there is a rich history of this sort of blocks programming environments.</p>
 
-<p>The tool does a great job of making explicit the links between components in the system, and giving a visual hint to the data flowing through the system. However, it seems that the intended user of the system is someone who knows quite a bit about data analysis and programming. The blocks do not cue you toward their behavior, and the &quot;parts bin&quot; (to steal a <a href="http://lively-web.org/welcome.html">Lively</a> term) is full of consise but not extremely descriptive labels. </p>
+<p>The tool does a great job of making explicit the links between components in the system, and giving a visual hint to the data flowing through the system. However, it seems that the intended user of the system is someone who knows quite a bit about data analysis and programming. The blocks do not cue you toward their behavior, and the “parts bin” (to steal a <a href="http://lively-web.org/welcome.html">Lively</a> term) is full of consise but not extremely descriptive labels.</p>
 
-<h3><strong>IEEE programming language rating</strong></h3>
+<h3 id="ieee-programming-language-rating"><strong>IEEE programming language rating</strong></h3>
 
-<p>The other project (not from the panel) that caught my eye was <a href="http://www.nickdiakopoulos.com/">Nick Diakopoulos</a>&#39; interactive <a href="http://spectrum.ieee.org/computing/software/top-10-programming-languages">ranking of programming languages</a> for IEEE Spectrum. Sadly, it seems like the <a href="http://spectrum.ieee.org/static/interactive-the-top-programming-languages">interactive version</a> is behind a paywall, but it&#39;s worth the 99¢ to see it. </p>
+<p>The other project (not from the panel) that caught my eye was <a href="http://www.nickdiakopoulos.com/">Nick Diakopoulos</a>’ interactive <a href="http://spectrum.ieee.org/computing/software/top-10-programming-languages">ranking of programming languages</a> for IEEE Spectrum. Sadly, it seems like the <a href="http://spectrum.ieee.org/static/interactive-the-top-programming-languages">interactive version</a> is behind a paywall, but it’s worth the 99¢ to see it.</p>
 
-<p>The ranking is based on a number of factors, such as position in google results, number of github repositories, and questions on stackoverflow. The interactive tool lets you see four different versions of the rating: IEEE Spectrum, Trending, Jobs, and Open. You can also filter the languages shown to only display Mobile, Web, Enterprise, or Embedded languages. </p>
+<p>The ranking is based on a number of factors, such as position in google results, number of github repositories, and questions on stackoverflow. The interactive tool lets you see four different versions of the rating: IEEE Spectrum, Trending, Jobs, and Open. You can also filter the languages shown to only display Mobile, Web, Enterprise, or Embedded languages.</p>
 
-<p>But the real beauty in this project is that you can manipulate the parameters used in the rankings to create your own version. If you don&#39;t believe that google page rank is a good measure of a programming language&#39;s ubiquity, you can drag that slider down or even zero it out. This lets you modify the procedure used to create the ranking, and it allows you to perform ad hoc sensitivity analysis. Many changes to parameters do not change the rankings, which could make a reader more confident in the ranking as provided by the IEEE. </p>
+<p>But the real beauty in this project is that you can manipulate the parameters used in the rankings to create your own version. If you don’t believe that google page rank is a good measure of a programming language’s ubiquity, you can drag that slider down or even zero it out. This lets you modify the procedure used to create the ranking, and it allows you to perform ad hoc sensitivity analysis. Many changes to parameters do not change the rankings, which could make a reader more confident in the ranking as provided by the IEEE.</p>
 
-<p>In fact, the list is so robust to parameter manipulation that it was hard for me to tell if the ranking was being updated dynamically, or if you need to click the &quot;Save as Custom&quot; button to see the results! However, they do provide a great &quot;Make a Comparison&quot; button, which shows a sort of slopegraph/bumps chart (see <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk">Tufte</a>) displaying which languages were displaced and to where.</p>
+<p>In fact, the list is so robust to parameter manipulation that it was hard for me to tell if the ranking was being updated dynamically, or if you need to click the “Save as Custom” button to see the results! However, they do provide a great “Make a Comparison” button, which shows a sort of slopegraph/bumps chart (see <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk">Tufte</a>) displaying which languages were displaced and to where.</p>
 
-<p>This article/interactive can&#39;t really be described as a &quot;tool,&quot; per se, but I loved seeing an example of analysis where the underlying data work was exposed. This is the sort of &quot;interaction all the way down&quot; that I think is the future of data analysis. Not only should creators of data products be able to interact with their work as they produce it, consumers of those products should have the opportunity to deeply critique the process by viewing a transparent representation of the analysis process. </p>
+<p>This article/interactive can’t really be described as a “tool,” per se, but I loved seeing an example of analysis where the underlying data work was exposed. This is the sort of “interaction all the way down” that I think is the future of data analysis. Not only should creators of data products be able to interact with their work as they produce it, consumers of those products should have the opportunity to deeply critique the process by viewing a transparent representation of the analysis process.</p>
 
-<h3><strong>Overall</strong></h3>
+<h3 id="overall"><strong>Overall</strong></h3>
 
-<p>I am so invigorated by everything that I saw at the symposium. It&#39;s such a treat to be around people who are thinking about some of the same issues that I am. </p>
+<p>I am so invigorated by everything that I saw at the symposium. It’s such a treat to be around people who are thinking about some of the same issues that I am.</p>
 
 <p>If you want to learn more about any of these projects, they are almost all forkable on github, which is another one of the principles that I think all good software should adhere to! What other interesting projects have you seen recently?</p>
 
@@ -188,6 +191,26 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
       		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
     		</li>
   			
@@ -207,26 +230,6 @@ s.setAttribute('data-timestamp', +new Date());
       		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html">OpenVisConf talk transcript</a>
     		</li>
   			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html">Do you know Nothing when you see it?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html">What's wrong with being data-collecting pigeons?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html">Contextual notes</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html">20th New England Isolated Statisticians Meeting (NEISM) </a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html">Fitbit colors</a>
-    		</li>
-  			
 			</ul></div>
 		<div class="row">&nbsp;</div>
 </div>
@@ -234,7 +237,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2017 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
  <!-- Start of StatCounter Code for Default Guide -->

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<meta name="description" content="Personal website of Amelia McNamara, statistical and data sciences professor at Smith College." />
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
 	
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Repping Hadley </title>
@@ -14,6 +14,8 @@
     <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
     
       <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
     
     <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
   </head>
@@ -39,10 +41,12 @@
             
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.science.smith.edu/~amcnamara/sds220/index.html">Smith SDS/MTH 220</a></li>
-                <li><a href="https://smithcollege-sds.github.io/136/">Smith SDS 136</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/sds236/index.html">SDS 236</a>
                 <li class="divider">Past classes</li>
                 <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
               </ul>
               </li>
             
@@ -85,26 +89,27 @@
 			<p class="meta">05 May 2014</p>
 
 			<div class="post">
-			<p>This weekend, we had our fourth annual <a href="http://datafest.stat.ucla.edu/groups/datafest/">DataFest</a> event at UCLA. DataFest is a weekend-long data hackathon, where we give students an interesting dataset, plenty of snacks, and a space to work, and they try to come up with insights. This was the third year I attended, and it seems to just get bigger and better every time. We had about 140 undergraduates from all around Southern California this year. Groups came from UCLA, USC, Cal Poly SLO, UC Riverside, and Pomona College. Our data sponsor was <a href="http://www.gridpoint.com/">GridPoint</a>, an energy-management company. They provide a service that is similar to the <a href="https://nest.com/">Nest</a> (my simplistic interpretation), and they gave us tons of data for the students to analyze. I signed an NDA, so I shouldn&#39;t be very specific about the contents of their proprietary dataset, but students were able to find tons of cool insights.</p>
+			<p>This weekend, we had our fourth annual <a href="http://datafest.stat.ucla.edu/groups/datafest/">DataFest</a> event at UCLA. DataFest is a weekend-long data hackathon, where we give students an interesting dataset, plenty of snacks, and a space to work, and they try to come up with insights. This was the third year I attended, and it seems to just get bigger and better every time. We had about 140 undergraduates from all around Southern California this year. Groups came from UCLA, USC, Cal Poly SLO, UC Riverside, and Pomona College. Our data sponsor was <a href="http://www.gridpoint.com/">GridPoint</a>, an energy-management company. They provide a service that is similar to the <a href="https://nest.com/">Nest</a> (my simplistic interpretation), and they gave us tons of data for the students to analyze. I signed an NDA, so I shouldn’t be very specific about the contents of their proprietary dataset, but students were able to find tons of cool insights.</p>
 
 <!--more-->
 
-<p><a class="thumb" href="#"><img src="http://www.science.smith.edu/~amcnamara/img/DataFest2014.jpg" class="img-responsive" alt="DataFest 2014 students"></a>
+<p><a class="thumb" href="#"><img src="http://www.science.smith.edu/~amcnamara/img/DataFest2014.jpg" class="img-responsive" alt="DataFest 2014 students" /></a>
 <em>Our 2014 DataFest contestants</em></p>
 
 <p>My personal favorite project (and Best Visualization prize winner) was a group who found and analyzed a trend in misusing AC, which they defined as running the air conditioner when outside temperatures were below some cutoff, I believe 60 degrees. Really, all the projects were fantastic.</p>
 
-<p>As a graduate student &quot;consultant&quot; at DataFest, my responsibility was to float around and help the contestants. Since most of the UCLA participants have had me as a TA in a class where we&#39;re using R, I got a lot of programming questions. Invariably, when students were really stuck on something it was a hard problem (which was bad for me looking like a superhero, but means that our students are getting the hang of R!). </p>
+<p>As a graduate student “consultant” at DataFest, my responsibility was to float around and help the contestants. Since most of the UCLA participants have had me as a TA in a class where we’re using R, I got a lot of programming questions. Invariably, when students were really stuck on something it was a hard problem (which was bad for me looking like a superhero, but means that our students are getting the hang of R!).</p>
 
-<p>During the weekend, I realized that I was repping <a href="http://had.co.nz/">Hadley Wickham</a>&#39;s packages even harder than usual. For example, students kept coming to me with incredibly hairy code, filled with multiple <code>for</code> loops using explicit indices and making matches over many factor levels, asking for help debugging why it wasn&#39;t doing what they wanted. Although I would attempt to talk through their code with them, it was usually beyond me getting up to speed quickly enough to catch what was probably a small typo somewhere. Instead, I constantly suggested <a href="http://plyr.had.co.nz/">plyr</a>, and actually became pretty good at it over the weekend. <code>ddply()</code> is such a heavy-hitter! There were definitely a few &quot;whoa&quot;s from students who hadn&#39;t seen the power of plyr before. Most of my students already know <a href="http://ggplot2.org/">ggplot2</a>, but they haven&#39;t gone beyond the basic geoms. I helped another group use <code>geom_polygon()</code> to show an additional layer of data in their plot. Finally, the data was all time stamped, and although the base R functions like <code>as.POSIX()</code> would work, I saw a lot of code trying to make character matches to pull months or years from the data. <a href="http://cran.r-project.org/web/packages/lubridate/index.html">lubridate</a> to the rescue! </p>
+<p>During the weekend, I realized that I was repping <a href="http://had.co.nz/">Hadley Wickham</a>’s packages even harder than usual. For example, students kept coming to me with incredibly hairy code, filled with multiple <code class="highlighter-rouge">for</code> loops using explicit indices and making matches over many factor levels, asking for help debugging why it wasn’t doing what they wanted. Although I would attempt to talk through their code with them, it was usually beyond me getting up to speed quickly enough to catch what was probably a small typo somewhere. Instead, I constantly suggested <a href="http://plyr.had.co.nz/">plyr</a>, and actually became pretty good at it over the weekend. <code class="highlighter-rouge">ddply()</code> is such a heavy-hitter! There were definitely a few “whoa”s from students who hadn’t seen the power of plyr before. Most of my students already know <a href="http://ggplot2.org/">ggplot2</a>, but they haven’t gone beyond the basic geoms. I helped another group use <code class="highlighter-rouge">geom_polygon()</code> to show an additional layer of data in their plot. Finally, the data was all time stamped, and although the base R functions like <code class="highlighter-rouge">as.POSIX()</code> would work, I saw a lot of code trying to make character matches to pull months or years from the data. <a href="http://cran.r-project.org/web/packages/lubridate/index.html">lubridate</a> to the rescue!</p>
 
-<p>In fact, I must have a standard line on Hadley, because at one point a group of students called me over to join a conversation with some of our sponsors from <a href="http://www.summitllc.us/">Summit Consulting</a>. &quot;Amelia, what do you think about Hadley Wickham?&quot; they asked. &quot;He&#39;s great!&quot; I said. &quot;He writes all the best packages!&quot; This got a big laugh, to the point that I think they&#39;d made a bet on what I&#39;d say. </p>
+<p>In fact, I must have a standard line on Hadley, because at one point a group of students called me over to join a conversation with some of our sponsors from <a href="http://www.summitllc.us/">Summit Consulting</a>. “Amelia, what do you think about Hadley Wickham?” they asked. “He’s great!” I said. “He writes all the best packages!” This got a big laugh, to the point that I think they’d made a bet on what I’d say.</p>
 
-<p><a href="http://www.rstudio.com/">RStudio</a> was a generous sponsor of the event, but I think next year they should send some visitors! At the very least, we need to bring back our mini-seminar series during DataFest, and do demos of some of these useful packages. </p>
+<p><a href="http://www.rstudio.com/">RStudio</a> was a generous sponsor of the event, but I think next year they should send some visitors! At the very least, we need to bring back our mini-seminar series during DataFest, and do demos of some of these useful packages.</p>
 
-<hr>
+<hr />
 
-<p>For more on DataFest, check out our <a href="https://twitter.com/ucladatafest">twitter</a> (and the hashtag <a href="https://twitter.com/search?q=%23datafest&amp;src=hash">#datafest</a>), as well as this <a href="http://fivethirtyeight.com/datalab/the-students-most-likely-to-take-our-jobs/">great article</a> from FiveThirtyEight. The article mentions that there were three other DataFests this year, at <a href="http://stat.duke.edu/datafest">Duke</a>, the <a href="http://www.science.smith.edu/departments/math/datafest/">Five Colleges</a> and <a href="http://orfe.princeton.edu/datafest/">Princeton</a>. Next year, we&#39;re hoping to go even more national, with support from the American Statistical Association. I can&#39;t wait to see where it goes in the future!</p>
+<p>For more on DataFest, check out our <a href="https://twitter.com/ucladatafest">twitter</a> (and the hashtag <a href="https://twitter.com/search?q=%23datafest&amp;src=hash">#datafest</a>), as well as this <a href="http://fivethirtyeight.com/datalab/the-students-most-likely-to-take-our-jobs/">great article</a> from FiveThirtyEight. The article mentions that there were three other DataFests this year, at <a href="http://stat.duke.edu/datafest">Duke</a>, the <a href="http://www.science.smith.edu/departments/math/datafest/">Five Colleges</a> and <a href="http://orfe.princeton.edu/datafest/">Princeton</a>. Next year, we’re hoping to go even more national, with support from the American Statistical Association. I can’t wait to see where it goes in the future!</p>
+
 
 			</div>
 		
@@ -141,6 +146,26 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
       		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
     		</li>
   			
@@ -160,26 +185,6 @@ s.setAttribute('data-timestamp', +new Date());
       		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html">OpenVisConf talk transcript</a>
     		</li>
   			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html">Do you know Nothing when you see it?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html">What's wrong with being data-collecting pigeons?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html">Contextual notes</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html">20th New England Isolated Statisticians Meeting (NEISM) </a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html">Fitbit colors</a>
-    		</li>
-  			
 			</ul></div>
 		<div class="row">&nbsp;</div>
 </div>
@@ -187,7 +192,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2017 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
  <!-- Start of StatCounter Code for Default Guide -->

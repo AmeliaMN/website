@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<meta name="description" content="Personal website of Amelia McNamara, statistical and data sciences professor at Smith College." />
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
 	
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Nicarthoughtspt3 </title>
@@ -14,6 +14,8 @@
     <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
     
       <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
     
     <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
   </head>
@@ -39,10 +41,12 @@
             
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.science.smith.edu/~amcnamara/sds220/index.html">Smith SDS/MTH 220</a></li>
-                <li><a href="https://smithcollege-sds.github.io/136/">Smith SDS 136</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/sds236/index.html">SDS 236</a>
                 <li class="divider">Past classes</li>
                 <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
               </ul>
               </li>
             
@@ -85,33 +89,34 @@
 			<p class="meta">16 Apr 2014</p>
 
 			<div class="post">
-			<p>One of the things I was most interested in learning about at NICAR was the processes and tools that journalists use when they&#39;re doing data analysis. And the conference did not disappoint. I feel like I came away with a bunch of insight about how things are typically done, and a couple great places where crossover could be even more useful. </p>
+			<p>One of the things I was most interested in learning about at NICAR was the processes and tools that journalists use when they’re doing data analysis. And the conference did not disappoint. I feel like I came away with a bunch of insight about how things are typically done, and a couple great places where crossover could be even more useful.</p>
 
 <!--more-->
 
 <p><strong>Data diaries</strong></p>
 
-<p>Throughout the conference, I heard several people emphasize the need for a &quot;data diary&quot; to document the process of creating data-driven journalism. This is great! We should all strive to document our work to capture our own process and remember what we do. However, it seems like journalists have a workflow something like, as you do your analysis in Excel, write down in Word what you did. Others write longhand on a piece of paper. But, it would be much better to have the documentation of the process actually <strong>be</strong> the process. For example, if you do your analysis in a language like python or R, you don&#39;t have to write out &quot;I edited the third row, second column to say 10 instead of 10000.&quot; Rather, the code both does the action and documents what happened. Obviously, commenting is important so that you remember what all your hacks were doing, but using a language rather than a graphical user interface makes the process so much more documented. In fact, you can wrap your code and comments in a narrative, using tools like the <a href="http://ipython.org/notebook">iPython</a> notebook or <a href="http://www.rstudio.com/ide/docs/authoring/using_markdown">R Markdown</a>.  </p>
+<p>Throughout the conference, I heard several people emphasize the need for a “data diary” to document the process of creating data-driven journalism. This is great! We should all strive to document our work to capture our own process and remember what we do. However, it seems like journalists have a workflow something like, as you do your analysis in Excel, write down in Word what you did. Others write longhand on a piece of paper. But, it would be much better to have the documentation of the process actually <strong>be</strong> the process. For example, if you do your analysis in a language like python or R, you don’t have to write out “I edited the third row, second column to say 10 instead of 10000.” Rather, the code both does the action and documents what happened. Obviously, commenting is important so that you remember what all your hacks were doing, but using a language rather than a graphical user interface makes the process so much more documented. In fact, you can wrap your code and comments in a narrative, using tools like the <a href="http://ipython.org/notebook">iPython</a> notebook or <a href="http://www.rstudio.com/ide/docs/authoring/using_markdown">R Markdown</a>.</p>
 
-<p>In fact, one of my dreams for data journalism has been that all data-driven stories would be accompanied by a version of the data cleaning and analysis process. This documentation would be available to readers, who could modify and &quot;audit&quot; the code/process to see what their changes do. In my vision, you could also view the raw data, to see where everything started. However, hearing it from the journalistic prospective, that&#39;s probably an unreasonable vision. Sarah Cohen was saying that if you wanted to open-source data, you would need to verify <strong>every cell</strong> in the data set, and have an editor go through it, too. It&#39;s hard for me to imagine &quot;editing&quot; a data set like that, but I can see why it&#39;s necessary. If you did something wrong in your data set, it may not make any impact on the final result (that one value probably isn&#39;t throwing off your mean or plot if it&#39;s not an outlier) but if the public could inspect the data cell by cell, it could be a big deal to have a number wrong. I need to think more about this and see if there&#39;s a solution. If you think of one, let me know in the comments!</p>
+<p>In fact, one of my dreams for data journalism has been that all data-driven stories would be accompanied by a version of the data cleaning and analysis process. This documentation would be available to readers, who could modify and “audit” the code/process to see what their changes do. In my vision, you could also view the raw data, to see where everything started. However, hearing it from the journalistic prospective, that’s probably an unreasonable vision. Sarah Cohen was saying that if you wanted to open-source data, you would need to verify <strong>every cell</strong> in the data set, and have an editor go through it, too. It’s hard for me to imagine “editing” a data set like that, but I can see why it’s necessary. If you did something wrong in your data set, it may not make any impact on the final result (that one value probably isn’t throwing off your mean or plot if it’s not an outlier) but if the public could inspect the data cell by cell, it could be a big deal to have a number wrong. I need to think more about this and see if there’s a solution. If you think of one, let me know in the comments!</p>
 
 <p><strong>Working headlines</strong></p>
 
-<p>Another piece of process that I heard referenced several times in the sessions on &quot;The Data-Driven Story&quot; was the conversation starter, &quot;Tell me what your working headline is. Tell me what your first two paragraphs are.&quot; I work with a lot of education experts, who like the strategy of &quot;sentence starters&quot; which are phrases that help get students speaking in the language of the discipline, while guiding the conversation. This is similar. It&#39;s a simple strategy, but it would be easy for an editor, even one not experienced with data, to understand the response from their journalist. It takes the conversation out of the realm of the data and back into the context. I think it could be a useful conversation (or <a href="http://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber-duck debugging</a> topic) for statisticians and data analysts to work through. </p>
+<p>Another piece of process that I heard referenced several times in the sessions on “The Data-Driven Story” was the conversation starter, “Tell me what your working headline is. Tell me what your first two paragraphs are.” I work with a lot of education experts, who like the strategy of “sentence starters” which are phrases that help get students speaking in the language of the discipline, while guiding the conversation. This is similar. It’s a simple strategy, but it would be easy for an editor, even one not experienced with data, to understand the response from their journalist. It takes the conversation out of the realm of the data and back into the context. I think it could be a useful conversation (or <a href="http://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber-duck debugging</a> topic) for statisticians and data analysts to work through.</p>
 
 <p><strong>Lightning talks</strong></p>
 
-<p>On a more meta level, I thought the exercise of lightning talks was extremely effective. The space was large enough for almost every attendee of the conference to be included, the talks were short enough that they could only tantalize, never bore, and the material was surprisingly complex. The event was kicked off with some stand-up comedy by <a href="http://www.andymboyle.com/">Andy Boyle</a>, who I&#39;ve come to discover is just as funny on <a href="https://twitter.com/andymboyle">twitter</a> talking about journalism. </p>
+<p>On a more meta level, I thought the exercise of lightning talks was extremely effective. The space was large enough for almost every attendee of the conference to be included, the talks were short enough that they could only tantalize, never bore, and the material was surprisingly complex. The event was kicked off with some stand-up comedy by <a href="http://www.andymboyle.com/">Andy Boyle</a>, who I’ve come to discover is just as funny on <a href="https://twitter.com/andymboyle">twitter</a> talking about journalism.</p>
 
-<p>For me, the best three lighting talks were by <a href="http://lenagroeger.com/">Lena Groeger</a>, <a href="http://www.chasedavis.com/">Chase Davis</a> and <a href="http://palewi.re/who-is-ben-welsh/">Ben Welsh</a>. Lena talked about &quot;wee things,&quot; which I thought was a nice contrast to &quot;big data.&quot; Some of the wee things she discussed were small multiples, tiny text, mini maps,  iity-bitty images, and sparklines. The entire talk seems to be available <a href="http://vimeo.com/91429794">online</a> if you want to check it out yourself. She also recommended the book <a href="http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235">The Information</a> which I&#39;m really looking forward to getting into. Chase essentially ran through my entire statistics graduate education in 5 minutes, explaining five algorithms, including Latent Dirichelt Allocation and the Naive Bayes Classifier. The <a href="https://github.com/cjdd3b/nicar2014/tree/master/lightning-talk">code</a> is on github, although the presentation isn&#39;t working for me. He apparently gave a similar talk the previous year, so if you want to catch up with <strong>everything</strong> I&#39;ve learned in my Phd, check out his <a href="https://github.com/cjdd3b/nicar2013">code</a> and learn about Principal Component Analysis, Random Forests, and more. Ben did a talk called &quot;You Must Learn,&quot; although what stuck with me the most (more than what I was supposed to learn, oops) was the graphic styling of his presentation. Each slide was like a comic encapsulation of what he was talking about, and not in a dumb clipart way. The video of the talk is <a href="http://palewi.re/talks/">up</a> too. </p>
+<p>For me, the best three lighting talks were by <a href="http://lenagroeger.com/">Lena Groeger</a>, <a href="http://www.chasedavis.com/">Chase Davis</a> and <a href="http://palewi.re/who-is-ben-welsh/">Ben Welsh</a>. Lena talked about “wee things,” which I thought was a nice contrast to “big data.” Some of the wee things she discussed were small multiples, tiny text, mini maps,  iity-bitty images, and sparklines. The entire talk seems to be available <a href="http://vimeo.com/91429794">online</a> if you want to check it out yourself. She also recommended the book <a href="http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235">The Information</a> which I’m really looking forward to getting into. Chase essentially ran through my entire statistics graduate education in 5 minutes, explaining five algorithms, including Latent Dirichelt Allocation and the Naive Bayes Classifier. The <a href="https://github.com/cjdd3b/nicar2014/tree/master/lightning-talk">code</a> is on github, although the presentation isn’t working for me. He apparently gave a similar talk the previous year, so if you want to catch up with <strong>everything</strong> I’ve learned in my Phd, check out his <a href="https://github.com/cjdd3b/nicar2013">code</a> and learn about Principal Component Analysis, Random Forests, and more. Ben did a talk called “You Must Learn,” although what stuck with me the most (more than what I was supposed to learn, oops) was the graphic styling of his presentation. Each slide was like a comic encapsulation of what he was talking about, and not in a dumb clipart way. The video of the talk is <a href="http://palewi.re/talks/">up</a> too.</p>
 
-<p>I&#39;m on the planning committee for useR! 2014, and I&#39;m hoping that our lightning talks can be even half as awesome as the ones from NICAR. You heard me, statisticians, step it up!</p>
+<p>I’m on the planning committee for useR! 2014, and I’m hoping that our lightning talks can be even half as awesome as the ones from NICAR. You heard me, statisticians, step it up!</p>
 
 <p><strong>Lyra</strong></p>
 
-<p>More of a tool than a process, but I was thrilled to be able to attend a live demo of <a href="http://idl.cs.washington.edu/projects/lyra/">Lyra</a> with <a href="http://arvindsatya.com/">Arvind Satyanarayan</a>, one of the creators of the project. Lyra is fascinating to me because it&#39;s open source, it&#39;s working with an existing framework, and it just makes extremely powerful data visualization tools available to people without much training necessary. If you haven&#39;t already seen it, check out the gallery of plots they&#39;ve been able to reproduce with their tool. </p>
+<p>More of a tool than a process, but I was thrilled to be able to attend a live demo of <a href="http://idl.cs.washington.edu/projects/lyra/">Lyra</a> with <a href="http://arvindsatya.com/">Arvind Satyanarayan</a>, one of the creators of the project. Lyra is fascinating to me because it’s open source, it’s working with an existing framework, and it just makes extremely powerful data visualization tools available to people without much training necessary. If you haven’t already seen it, check out the gallery of plots they’ve been able to reproduce with their tool.</p>
 
-<p>*This is my third (and final) post about NICAR 2014. The other two are <a href="http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html">here</a> and <a href="http://www.stat.ucla.edu/%7Eamelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html">here</a>. </p>
+<p>*This is my third (and final) post about NICAR 2014. The other two are <a href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html">here</a> and <a href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt1.html">here</a>.</p>
+
 
 			</div>
 		
@@ -148,6 +153,26 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
       		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
     		</li>
   			
@@ -167,26 +192,6 @@ s.setAttribute('data-timestamp', +new Date());
       		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html">OpenVisConf talk transcript</a>
     		</li>
   			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html">Do you know Nothing when you see it?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/data/2016/04/08/participatory_sensing.html">What's wrong with being data-collecting pigeons?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2015/11/19/context_notes.html">Contextual notes</a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2015/11/01/NEISM.html">20th New England Isolated Statisticians Meeting (NEISM) </a>
-    		</li>
-  			
-    		<li>
-      		<a href="http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html">Fitbit colors</a>
-    		</li>
-  			
 			</ul></div>
 		<div class="row">&nbsp;</div>
 </div>
@@ -194,7 +199,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2017 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
  <!-- Start of StatCounter Code for Default Guide -->
