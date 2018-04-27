@@ -3,7 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if page.description %}
+
+<meta property="og:description"
+    content="{% if page.excerpt %}
+        {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}
+      {% else %}
+        {{ site.description }}
+      {% endif %}">
+<meta property="og:url"
+    content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  
+  {% if page.active == "Blog" %}
+    <meta property="og:image" content="{{ site.baseurl }}/img/{{page.img}}" />
+    <meta name="twitter:image" content="{{ site.baseurl }}/img/{{page.img}}" />
+    <meta property="og:title" content="{{page.ptitle}}" />
+    <meta property="og:type" content="article" />
+  {% else %}
+    <meta property="og:image" content="{{ site.baseurl }}/img/Portrait2.jpg" />
+    <meta name="twitter:image" content="{{ site.baseurl }}/img/Portrait2.jpg" />
+  {% endif %}
+
+  {% if page.description %}
 	<meta name="description" content="{{page.description}}" />
 	{% else %}
 	<meta name="description" content="{{site.description}}" />

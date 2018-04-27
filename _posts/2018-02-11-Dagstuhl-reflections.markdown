@@ -103,7 +103,7 @@ He also has an idea about scaffolding in language design,
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Mitch Resnik wanted <a href="https://twitter.com/scratch?ref_src=twsrc%5Etfw">@scratch</a> to have a low floor, high ceiling, wise walls. <a href="https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw">@bakerfranke</a> wants a low floor, high ceiling, narrow walls to start, and wider walls as you get closer to the ceiling.</p>&mdash; Amelia McNamara (@AmeliaMN) <a href="https://twitter.com/AmeliaMN/status/961192913714675713?ref_src=twsrc%5Etfw">February 7, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-This was just a selection of the talks that related most directly to my interests. If you want to see the rest of them, they are posted on the [seminar materials page](http://materials.dagstuhl.de/index.php?semnr=18061), and for more context on the people who attended (not all of whom presented), you can read [everyone's introductory slide](http://materials.dagstuhl.de/files/18/18061/18061.SWM.Slides.pdf). 
+This was just a selection of the talks that related most directly to my interests. If you want to see the rest of them, they are posted on the [seminar materials page](http://materials.dagstuhl.de/index.php?semnr=18061), and for more context on the people who attended (not all of whom presented), you can read [everyone's introductory slide](http://materials.dagstuhl.de/files/18/18061/18061.SWM.Slides.pdf), and check out the [twitter list](https://twitter.com/AmeliaMN/lists/evidenceaboutprogrammers) I made of all the participants who are on twitter.  
 
 ### More than talks
 

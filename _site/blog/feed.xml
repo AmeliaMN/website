@@ -7,6 +7,82 @@
 		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Wikipedia in the classroom: Gender, argh</title>
+				<description>&lt;p&gt;The &lt;a href=&quot;http://www.science.smith.edu/~amcnamara/sds236/&quot;&gt;data journalism course&lt;/a&gt; I’m teaching this semester is a new offering for me. I may write up more of my reflections later, but for now I wanted to get some thoughts down about the experience of using Wikipedia as a pedagogical tool. At this point, I feel like it was too real-world of an experience for the class, and I inadvertently exposed my students to some gendered bias.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;For their first writing assignment in the class (I am nothing if not ambitious!) I had the students author Wikipedia articles for people who did not have them. You can look at my &lt;a href=&quot;http://www.science.smith.edu/~amcnamara/sds236/Wikipedia.html&quot;&gt;assignment guidelines&lt;/a&gt;, but essentially I wanted them to research and write an article, but I gave credit for completion, rather than quality (particularly by Wikipedia’s metric). I generated a list of folks I thought were notable enough for articles, but told students they could choose someone else if they had an idea they wanted to pursue.&lt;/p&gt;
+
+&lt;p&gt;It turns out that not everyone I thought was notable actually had enough material on the web to meet the &lt;a href=&quot;https://en.wikipedia.org/wiki/Wikipedia:Notability&quot;&gt;Wikipedia notability standards&lt;/a&gt;. For example, &lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Charlotte_Wickham&quot;&gt;Charlotte Wickham&lt;/a&gt; might fall in that category. She seems notable to me, but there’s only a limited amount of press on her. I also learned a little too late that journalists often do not count as notable, because &lt;a href=&quot;https://en.wikipedia.org/wiki/Wikipedia:Notability_(journalists)&quot;&gt;Wikipedia has not accepted a specific notability standard for them&lt;/a&gt;. So, people like &lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Sisi_Wei&quot;&gt;Sisi Wei&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Ryann_Jones&quot;&gt;Ryann Jones&lt;/a&gt; might fail to meet the standard, even though there is quite a bit of material on the web about them.&lt;/p&gt;
+
+&lt;p&gt;Of the 20 or so articles my students undertook, seven of them are now live on Wikipedia. I’ll admit to being a little confused about how articles end up in the main namespace– some things that I’ve written have just ended up there right away, while others get stuck with an “awaiting review” flag, and others are just in the draft namespace with no such tag. Oliver Keyes and Mikhail Popov offered me some guidance on the Friendly Tech Space Slack (it lives up to its name!) and the most recent conclusion is that I conincidentally had students do this assignment during an &lt;a href=&quot;https://en.wikipedia.org/wiki/Wikipedia:Autoconfirmed_article_creation_trial/Post-trial_Research_Report&quot;&gt;Autoconfirmed article creation trial&lt;/a&gt; at Wikipedia.&lt;/p&gt;
+
+&lt;p&gt;Those seven articles are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Lynn_Cherny&quot;&gt;Lynn Cherny&lt;/a&gt; (saved from deletion from a friendly editor with a female-sounding username)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Janaya_Khan&quot;&gt;Janaya Khan&lt;/a&gt; (probably the best article to come out of this class, and one of the names the students came up with themselves!)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Jeffrey_T._Leek&quot;&gt;Jeff Leek&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Giorgia_Lupi&quot;&gt;Giorgia Lupi&lt;/a&gt; (may not actually have been reviewed yet, perhaps I just dropped it into the main namespace?)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stefanie_Posavec&quot;&gt;Stefanie Posavec&lt;/a&gt; (also may not have been reviewed)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Victoria_Stodden&quot;&gt;Victoria Stodden&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Jer_Thorp&quot;&gt;Jer Thorp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I think those articles are fantastic, and I’m glad to see them added to Wikipedia! But, that means the vast majority of the articles my students wrote are either waiting for review, or have been rejected. The queue of articles waiting for review is long, and the flag says they are “reviewed in no specific order” but that it may take 8 weeks or more to get a review.&lt;/p&gt;
+
+&lt;p&gt;I don’t have enough data here to back this up, but it seems that of the articles my students wrote that have already been reviewed, the ones about men (Jeff Leek and Jer Thorp) were reviewed quickly, given the benefit of the doubt (see the &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Jeffrey_T._Leek&amp;amp;diff=828628510&amp;amp;oldid=824547453&quot;&gt;charitable comments on the article about Jeff Leek&lt;/a&gt;, even though the draft might not have been of the highest quality), and accepted. The ones about women are either still waiting to be reviewed, or have been rejected on grounds that I think are pretty weak (see the &lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Amanda_Cox&quot;&gt;comment on the article about Amanda Cox&lt;/a&gt; that rejects her article because it says she served on the Federal Reserve Board, rather than that she worked at the Fed).&lt;/p&gt;
+
+&lt;p&gt;Here are the rejections that are getting me particularly riled up:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Jennifer_(Jenny)_Bryan&quot;&gt;Jenny Bryan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Amanda_Cox&quot;&gt;Amanda Cox&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Kim_Rees&quot;&gt;Kim Rees&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Julia_Silge&quot;&gt;Julia Silge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I think those people (women) are extremely notable, and we should work to get their pages up to snuff. Will you help me?&lt;/p&gt;
+
+&lt;p&gt;Another place you could jump in is trying to improve the articles we have that are still in the review queue (or that I’ve re-submitted after rejection), to hopefully forestall any issues:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Kennedy_Elliott&quot;&gt;Kennedy Elliot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Meredith_Broussard&quot;&gt;Meredith Broussard&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Beatrice_Fischel-Bock&quot;&gt;Beatrice Fischel-Bock&lt;/a&gt; (another student-generated idea!)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Lena_Groeger&quot;&gt;Lena Groeger&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Mark_Hansen&quot;&gt;Mark Hansen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Sisi_Wei&quot;&gt;Sisi Wei&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Draft:Charlotte_Wickham&quot;&gt;Charlotte Wickham&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And, if you’re looking for folks to write articles about, I’m giving away ideas for free! How about:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mara Averick&lt;/li&gt;
+  &lt;li&gt;Nadieh Bremer&lt;/li&gt;
+  &lt;li&gt;Karl Broman&lt;/li&gt;
+  &lt;li&gt;Jen Christiansen&lt;/li&gt;
+  &lt;li&gt;Jessica Hullman&lt;/li&gt;
+  &lt;li&gt;Michelle Minkoff&lt;/li&gt;
+  &lt;li&gt;Hilary Parker&lt;/li&gt;
+  &lt;li&gt;Roger Peng&lt;/li&gt;
+  &lt;li&gt;Olga Pierce&lt;/li&gt;
+  &lt;li&gt;David Robinson&lt;/li&gt;
+  &lt;li&gt;Irene Ros&lt;/li&gt;
+  &lt;li&gt;Kara Woo&lt;/li&gt;
+  &lt;li&gt;Nathan Yau&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				<pubDate>Tue, 20 Mar 2018 00:00:00 -0400</pubDate>
+				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html</link>
+				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html</guid>
+				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/Jenny_wikipedia.png" />
+			</item>
+		
+			<item>
 				<title>Dagstuhl reflections</title>
 				<description>&lt;p&gt;Over the last 10 days, I had the pleasure of attending &lt;a href=&quot;https://www.rstudio.com/conference/&quot;&gt;rstudio::conf&lt;/a&gt; and the Dagstuhl seminar on &lt;a href=&quot;http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18061&quot;&gt;Evidence about Programmers for Programming Language Design&lt;/a&gt;. At rstudio::conf, I taught a two-day workshop on &lt;a href=&quot;https://github.com/AmeliaMN/IntroToR&quot;&gt;Intro to R &amp;amp; RStudio&lt;/a&gt;, and at the Dagstuhl I mostly thought about exposing novices to programming in scientific contexts. So, there was a lot of overlap.&lt;/p&gt;
 
@@ -102,7 +178,7 @@
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Mitch Resnik wanted &lt;a href=&quot;https://twitter.com/scratch?ref_src=twsrc%5Etfw&quot;&gt;@scratch&lt;/a&gt; to have a low floor, high ceiling, wise walls. &lt;a href=&quot;https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw&quot;&gt;@bakerfranke&lt;/a&gt; wants a low floor, high ceiling, narrow walls to start, and wider walls as you get closer to the ceiling.&lt;/p&gt;&amp;mdash; Amelia McNamara (@AmeliaMN) &lt;a href=&quot;https://twitter.com/AmeliaMN/status/961192913714675713?ref_src=twsrc%5Etfw&quot;&gt;February 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;This was just a selection of the talks that related most directly to my interests. If you want to see the rest of them, they are posted on the &lt;a href=&quot;http://materials.dagstuhl.de/index.php?semnr=18061&quot;&gt;seminar materials page&lt;/a&gt;, and for more context on the people who attended (not all of whom presented), you can read &lt;a href=&quot;http://materials.dagstuhl.de/files/18/18061/18061.SWM.Slides.pdf&quot;&gt;everyone’s introductory slide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This was just a selection of the talks that related most directly to my interests. If you want to see the rest of them, they are posted on the &lt;a href=&quot;http://materials.dagstuhl.de/index.php?semnr=18061&quot;&gt;seminar materials page&lt;/a&gt;, and for more context on the people who attended (not all of whom presented), you can read &lt;a href=&quot;http://materials.dagstuhl.de/files/18/18061/18061.SWM.Slides.pdf&quot;&gt;everyone’s introductory slide&lt;/a&gt;, and check out the &lt;a href=&quot;https://twitter.com/AmeliaMN/lists/evidenceaboutprogrammers&quot;&gt;twitter list&lt;/a&gt; I made of all the participants who are on twitter.&lt;/p&gt;
 
 &lt;h3 id=&quot;more-than-talks&quot;&gt;More than talks&lt;/h3&gt;
 
@@ -777,316 +853,6 @@ then a small decline before continuing to rise.&lt;/p&gt;
 				<link>http://www.science.smith.edu/~amcnamara/blog/misc/2016/06/23/Listservs.html</link>
 				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/misc/2016/06/23/Listservs.html</guid>
 				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/InboxZero.png" />
-			</item>
-		
-			<item>
-				<title>OpenVisConf talk transcript</title>
-				<description>&lt;p&gt;During &lt;a href=&quot;https://openvisconf.com&quot;&gt;OpenVisConf&lt;/a&gt;, I hurriedly &lt;a href=&quot;http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html&quot;&gt;posted&lt;/a&gt; some links from my talk so people could follow up with resources I had mentioned. I kept meaning to write up a fuller blog post, but of course life comes along (in the interim, Smith has finished finals, I’ve graded a ton of projects, gone out of the state twice, and attended commencement).&lt;/p&gt;
-
-&lt;p&gt;So, when the &lt;a href=&quot;https://openvisconf.com/#transcripts&quot;&gt;official transcripts&lt;/a&gt; from the conference were posted, I knew I’d struck gold. &lt;a href=&quot;https://twitter.com/Asignia&quot;&gt;Amanda Lundberg&lt;/a&gt; was the transcriptionist, and she did a fantastic job. The transcripts are provided with a creative commons license, so I grabbed the text from my talk, edited it a bit, and stuck in some images.&lt;/p&gt;
-
-&lt;p&gt;It was quite interesting to read the transcripts as-is. I know Amanda edited out a lot of “um”s and “uh”s as everyone was speaking, but a person’s verbal tics still get through. In my case, I say “that”, “so”, and “really” a LOT. Some of those have been removed here for ease of reading.&lt;/p&gt;
-
-&lt;p&gt;On a more interesting note, the organizers used TF-IDF to identify unique words and bi-grams from each talk. Mine make it &lt;em&gt;pretty&lt;/em&gt; clear I’m a statistician. Words like “distribution”, “statistic”, “observed difference” and “bootstrap” all appeared more in my talk than others.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/text_viz.png&quot; class=&quot;img-responsive&quot; alt=&quot;tf-idf&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;talk&quot;&gt;Talk&lt;/h4&gt;
-
-&lt;p&gt;Probably the easiest way to tell what the heck I’m talking about is to &lt;a href=&quot;https://www.youtube.com/watch?v=hps9r7JZQP8&quot;&gt;watch the video of my talk&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/hps9r7JZQP8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;But, if you’re video-resistant (I usually am) this will probably give you the flavor.&lt;/p&gt;
-
-&lt;h4 id=&quot;transcript&quot;&gt;Transcript:&lt;/h4&gt;
-
-&lt;p&gt;The title of my talk is “Do you know Nothing when you see it?”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/hungry_i/66962027/in/photolist-6VctH-zr4aM-e9mH1t-6XLhY9-qo4Bms-8gyi5q-zr357-4jeF2Y-r8nhEr-3BzwrF-hWLU1-zhqjfS-6akRDL-8oHoz1-Env5V-dLro6N-6Ba6Qx-hcQm7X-45WiW8-45Wj1K-nWoLpt-8Qp68q-6a6dd5-aqc1Ri-dZmw2h-79ykph-rxzvJj-uu5px-JCCFC-9tWqkt-6EGjEv-6Juo8s-eCaru-6VMiSX-dSGL3M-6bsbPs-8cueSK-4waMSd-7zWdYW-5WrAQr-MtpXy-6gH759-MtpXJ-a7uXuC-4THFy2-69GvS-GyDeK-EntY3-a1bJ4u-8HgEn&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/titleslide.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;TV static&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;When I say nothing, I don’t mean nothing like television static, because that’s actually not nothing, that’s something. It’s the image, it just got garbled when it was going through the air. I mean something more like this,&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/randomness.jpeg&quot; class=&quot;img-responsive&quot; alt=&quot;random noise&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;but not really even this, because this is random noise that I generated with my computer. It’s pseudo-random, and probably your awesome human brain is finding patterns like &lt;a href=&quot;http://deepdreamgenerator.com/&quot;&gt;DeepDream&lt;/a&gt; already. You can see the bunnies and hearts and clouds in my random data.&lt;/p&gt;
-
-&lt;p&gt;Our goal is to be able to identify when something we created is nothing. And in order to do that, I’m going try statistics.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/standback.png&quot; class=&quot;img-responsive&quot; alt=&quot;Stand back, I'm going to try... statistics&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I am a statistics professor. That means whenever I get in front of a group of people, I try to sneakily teach them some statistics.&lt;/p&gt;
-
-&lt;p&gt;The question is, &lt;strong&gt;what is statistics about?&lt;/strong&gt; And it’s about many things. It’s about variation, which is one of the main themes we’re going to talk about here. Sometimes there’s modeling– I’m going to ignore modeling almost completely. And when you take an intro stat class or if you’re doing basic science, you’re often asking are these two numbers different? Another way of saying is, is this one number, the difference, different than zero? Sometimes you want to know, this number, what are some other reasonable numbers we could have seen if we hadn’t seen this one?&lt;/p&gt;
-
-&lt;p&gt;In order to answer those questions, we need context about the variation. The first example that came to mind when I was preparing this talk was ants. I don’t know why. Imagine you had some ants, and you had some big-looking ants and little-looking ants.&lt;/p&gt;
-
-&lt;div class=&quot;ants&quot; style=&quot;margin:5px;&quot;&gt;
-&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/bareego/6657872621/in/photolist-b9kkzg-325Ep2-eYdznk-9SBTFj-6tWfjj-6oC1yN-8TifHh-6iAU8p-5nWn6B-6MBDMu-BoQci-dUyXLF-9QxFLR-a51iiR-4V4xA1-558iot-g7NJrP-fktCLP-xhLeW-6sN6Mo-8v9u8H-ozavpA-4eTAda-prJXTS-4ZSm8T-9AbyuJ-YTmUb-bzKnV-4dyx2v-2ZicrS-5Tu9ez-6h1U6q-6i17hn-7iuuib-kAkPyY-n4U475-5qduaP-N4Ws3-qjGbCr-osHjb-tEsAP-3UN759-o76HA-7KjG9k-67edp-xdMVP5-6zLxaT-pgWHT-8k3imL-smJAAa/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/bareego.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Big ant&quot; width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;margin:5px; overflow:hidden;&quot;&gt;
-&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/duncan/3189039332/in/photolist-5RNEhL-rZEoXK-nYZLfC-6nmrKx-pY9yMV-eRhnD5-pSNaGV-6ofFu5-et6vZ7-oD6Ho2-a272Uq-drzFK2-a95asp-nvsEmF-6fVHz9-36MAEJ-9Y51BL-3wGr3i-2KZa9r-6wfRXP-81NL4r-8xKxZp-6nTDi1-9XUUEw-5do5mX-opjwhP-o4kqqh-aaYVKv-83tTzL-c9T3bY-6FyRKs-6sJfKz-eXfmX9-nJttup-4R4gHx-6FyRLq-bMSpZK-5rueY2-6o9yu6-a6ZWN6-bGsWE6-6K9QaB-nJtF1m-69MiSx-bq4sGw-2KZa9M-8gkRfi-nHzf5N-am8cba-4VKSnJ&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/duncan.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Smaller ants&quot; width=&quot;300&quot; style=&quot;float:left&quot; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;And you thought maybe I got unlucky– I got five big-looking ants and five little-looking ants, but really they’re both draws from the same population. And overall the groups don’t have any difference in size. But, you observed differences in the group sizes of three-quarters of an inch.&lt;/p&gt;
-
-&lt;p&gt;You and I know something about ant size variation. That sounds very large, and we’ll see that it actually was.&lt;/p&gt;
-
-&lt;p&gt;In another context, imagine you had some a tug of war game set up, you had two teams. There’s men and women split up into the blue and the pink team.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/illinoisspringfield/17617323816/in/album-72157652398690788/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/illinoisspringfield.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Blue team&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/illinoisspringfield/8686873531/in/album-72157633316473571/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/illinoisspringfield2.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Pink team&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;We mapped their heights, we found the average height, and we learned the average height between the groups was different. Again, we observed a difference of about three quarters of an inch.&lt;/p&gt;
-
-&lt;p&gt;We want to know, is that significant? Are those two teams really different, or did we just observe a difference by nature of the selection process? The random generation we’re assuming is happening behind the scenes?&lt;/p&gt;
-
-&lt;p&gt;If you’ve taken a standard statistics class, you’re now thinking about confidence intervals. You’re thinking “point estimate, plus or minus the standard error times something that has to do with some distribution”.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/CI_mean.gif&quot; class=&quot;img-responsive&quot; alt=&quot;point estimate, plus or minus the standard error times something that has to do with some distribution&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And maybe you’re thinking about some pages in your textbook that had standard error calculations, with a bunch of square roots and fractions.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SE_page1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Standard error forumas&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;We’re thinking about a difference of means. So, we think, we can just pick that first formula. But really, it’s worse than that. There’s all these different proofs about if you have different group sizes, and if the variances are different.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SE_page2.png&quot; class=&quot;img-responsive&quot; alt=&quot;Standard error forumas&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So then you need to pick that formula out. And then it is worse than &lt;strong&gt;that&lt;/strong&gt;, because once you have the standard error calculation, you have to know the degrees of freedom you’re going to look at in your distribution.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SE_page3.png&quot; class=&quot;img-responsive&quot; alt=&quot;Standard error forumas&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And even I– I have a Ph.D. in statistics– I get the heebie-jeebies if you ask me to come up with the right standard error computation. Maybe you’re better at statistics than me, and came up with the right standard error, found the degrees of freedom. Now you’re going to look at some idealized distribution.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://en.wikipedia.org/wiki/Student%27s_t-distribution&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/Student_t_pdf.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;T distribution&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;We call this a sampling distribution. It’s not a distribution of data, it’s a distribution of statistics. Statistics are numbers computed from other numbers. In this case we had the average heights of the two tug of war teams and we’re looking at their difference.&lt;/p&gt;
-
-&lt;p&gt;With your standard error and your degrees of freedom and the distribution, you could come up with some confidence interval and you could see if there was really no relationship between the team and the height, how often would we observe a difference of three-quarters of an inch?&lt;/p&gt;
-
-&lt;p&gt;I’m going to argue that’s not the way you should do that problem. Instead, you should use randomization. And randomization is just what it sounds. You have two things you think might have a relationship. You want to come up with the sampling distribution, and you want it to be the null distribution. The distribution of, essentially, nothing.&lt;/p&gt;
-
-&lt;p&gt;So what you’re going to do is you’re going to take the values, the labels here, and you’re going to mix them up. You’re going to compute the group height means for those different groups in the mixed-up data and compute the difference in the heights.&lt;/p&gt;
-
-&lt;p&gt;So you can see already sometimes you’re getting a positive difference, sometimes you’re getting a negative difference. I think one of those turned out to be zero. We’re going to do this like a thousand times and then we can look at the distribution of that statistic.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/randomization.png&quot; class=&quot;img-responsive&quot; alt=&quot;Randomization distribution&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This distribution is centered around zero because it’s a null distribution. And then we can calculate where is 95% of the data? What’s the middle 95%? And then sort of say “if there really was no difference between the heights of these two tug of war teams, what sorts of differences might we observe?”&lt;/p&gt;
-
-&lt;p&gt;And so in the case of the tug of war teams, if there was really no difference, we could observe height differences that were negative four inches to positive four inches different. Our observed difference of three quarters of an inch is so tiny we think it is nothing. Even though we saw a difference of three-quarters of an inch, that was nothing.&lt;/p&gt;
-
-&lt;p&gt;For the ants, same thing, but the distribution looks different.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/randomizationants.png&quot; class=&quot;img-responsive&quot; alt=&quot;Randomization distribution&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Randomization distributions are not always symmetric. And they’re not always smooth. They can have these lumps. But, again, we can compute where the middle 95% of the data is. So for the ants it goes from negative 0.5 to 0.5. The observed difference of three-quarters of an inch, that would be pretty weird to see if there was no difference between my two different ant size groups.&lt;/p&gt;
-
-&lt;p&gt;I’m a statistician, so the open source programming language of my choice is R. If you wanted to do this yourself in R, this is the code you would use.&lt;/p&gt;
-
-&lt;p&gt;```{r, eval=FALSE}
-library(mosaic)
-diff(mean(~height|team, data=tugowar))&lt;/p&gt;
-
-&lt;p&gt;bootstrap &amp;lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups=team)))&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-So if I wanted to compute one difference in means, it's the first piece of code. And I wanted to do a thousand of them, I could use the second chunk.
-
-But there's another technique we might want to use for assessing whether the number we got is sort of reasonable or what some other possible numbers we could have observed could be. That's bootstrapping. In bootstrapping you take the data you have, kind of like pulling yourself up by your bootstraps. Making something from nothing. That's not really possible, so we're going to make data from our old data. We're going to sample with replacement. Pull out data points. Here we're not breaking the relationship between the two variables. We're just pulling them out directly.
-
-And you can see sometimes I get the same data point more than once in my bootstrap sample. But now I have new data, and I can treat that as my current data. And compute the mean heights, and then the possible difference
-in heights. And so if that observed tug of war game we saw was really representative of the world, other than 0.75 I might have observed 0.6637. 
-
-I can come up with a bootstrap distribution, much in the same way I can with randomization. 
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/boostrap_dist.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Bootstrap distribution&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-The bootstrap distributuon might not be symmetric. It is centered around the estimate from the real data. In this case, centered around the 0.75. And then it shows us some possible numbers we could have observed.
-
-So, again, if that was our data and we were generating bootstrap samples, we might have seen differences from negative 3 to positive 4, and again we think ours is not different from nothing or zero. 
-
-And with the ants, all the observed values we could have seen, they are all negative. 
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/bootstrap_ant.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Bootstrap distribution&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-So, we think there is a relationship. One of those groups is bigger than the other.
-
-If you want to know more about randomization and the bootstrap, you could look at this [open source textbook](www.openintro.org). What? It was written by some really cool statisticians. [The source](https://github.com/OpenIntroOrg) is all on GitHub. You can download the PDF for free. If you like physical books, you can buy this statistics textbook that I used in my class for [$9 on Amazon](http://smile.amazon.com/Introductory-Statistics-Randomization-Simulation-David/dp/1500576697?sa-no-redirect=1). So it's really cool and good. 
-
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/openintro.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Open Intro&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-If you want other resources, Jonathan Stray has a five minute lighting talk from NICAR, [&quot;Solve Every Statistics Problem with One Weird Trick&quot;](http://bit.ly/OneWeirdStatsTrick), and that one weird trick is randomization, so you kind of know about that. 
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;http://jonathanstray.com/me&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/jonathan_stray.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Jonathan Stray&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-And Tim Hesterberg, has a paper, [&quot;What Teachers should know about the Bootstrap&quot;](http://bit.ly/KnowAboutBootstrap). I think it really should be called what everyone should know about the bootstrap.
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;http://www.timhesterberg.net/home/bio&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/tim_hesterberg.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Tim Hesterberg&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/howdoesitrelate.png&quot; class=&quot;img-responsive&quot; alt=&quot;What does this have to do with visualization?&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-
-So what does this all have to do with visualization? We're going to try to do the same thing with visualization as we did with numbers. Try to say is this different than nothing? What are other things we could have observed? And this is going to help us try to not make visualizations that don't show anything. 
-
-When I say that, I don't mean visualizations of the type you see on [WTF-viz](http://viz.wtf/), 
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;http://viz.wtf/post/141788409671/lingerie-chart&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/lingerie.png&quot; class=&quot;img-responsive&quot; alt=&quot;Lingerie chart?&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-although I like making fun of those too. And I don't mean showing nothing in the way Darrell Huff is talking about in the 1950s with How to Lie with Statistics. 
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/Huff.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Darrell Huff&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-Instead, I'm talking about using techniques like randomization. There's an awesome paper by [Hadley Wickham](http://hadley.nz/), [Andreas Buja](http://www-stat.wharton.upenn.edu/~buja/), [Di Cook](http://dicook.github.io/) and [Heike Hofmann](http://hofmann.public.iastate.edu/). 
-
-&amp;lt;div style=&quot;margin:5px;&quot;&amp;gt;
-&amp;lt;a class=&quot;thumb&quot; href=&quot;http://hadley.nz/&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/hadley.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Hadley Wickham&quot;width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&amp;gt;&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div style=&quot;margin:5px;&quot;&amp;gt;
-&amp;lt;a class=&quot;thumb&quot; href=&quot;http://www-stat.wharton.upenn.edu/~buja/&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/andreas.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Andreas Buja&quot;width=&quot;100&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&amp;gt;&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div style=&quot;margin:5px; overflow:hidden;&quot;&amp;gt;
-&amp;lt;a class=&quot;thumb&quot; href=&quot;http://dicook.github.io/&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/di.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Di Cook&quot;width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&amp;gt;&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div style=&quot;margin:5px; overflow:hidden;&quot;&amp;gt;
-&amp;lt;a class=&quot;thumb&quot; href=&quot;http://hofmann.public.iastate.edu/&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/heike.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Heike Hofmann&quot;width=&quot;200&quot; style=&quot;float:left&quot; hspace=&quot;10&quot;&amp;gt;&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-
-It's called [Graphical Inference for InfoVis](http://bit.ly/graphical_inference). I think it's really worth checking out. One of the techniques they suggest in the paper is called the lineup.
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/mike_crane/5188333652/in/photolist-8UtyQu-syKEK-9SHXTx-2azAWL-bCqhR4-7rSB2w-syKgn-bCqiAv-bCqhHt-bCqhWH-9WLjQh-bpvnxY-jHWcxM-bpvniA-Bh14D-bpvnCL-9VekKT-9Vh1Jo-9Vh4TS-765vEj-9Vh9Qd-bmKeHQ-ALLCXL-9Vhc17-9Veatv-oW5cC4-9VebyX-9Vef9H-9VgZFS-9Vh1wy-9VhbtN-9VekZi-9Vh2eJ-9Vh6es-9Vh1jA-9VhaeJ-9Vh8U9-9Vhaqo-9VhbLQ-9Vekxi-9Vec4p-9Vh7RL-9Vh16W-72qhos-9Vh6P5-9VgZeL-9VenuT-9Vea3D-9VeeSa-72mhJi&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/mike_crane.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Lineup&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-The idea of the lineup is you put your data, your plot that you think shows something real, in a lineup with a bunch of innocent plots. If you can pick your accused plot out of the lineup of innocent plots, that means that it's somehow different than nothing. 
-
-To illustrate this, I would break the relationship between X and Y and look at what other plots I could have gotten from the same data with that relationship broken.
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/random6.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Random plot&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-Instead of looking at them all in sequence, I want to look at them all together. Let's take an example. This is some data about loans. And I'm plotting the balance of a loan against the income. And I'm coloring by whether or not a person defaulted on their loan. 
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/default.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Loan defaults&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-And my human brain sees a pattern. I say, it looks like people who default on loans are the ones that have really high loan balances. It doesn't matter if they're rich or poor, it's just those high loan balances.
-
-Is it possible I just sort of made that up? This is what it would look like if you use the protocol in the graphical inference paper and look at the plots. 
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/default_perm.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Loan defaults in lineup&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-There's 20 plots, because we often use a standard p-value cutoff of 0.05, which is the same as one out of 20. If you guessed randomly, you'd get the right one 1 out of 20 times even guessing at random.
-
-So with this one I think you can probably identify which is the real plot. Part of it is I showed you the real one before. You might have recognized it.
-
-In practice you shouldn't look at the accused plot alone before you look at it in the lineup. So either you should build this into your workflow, looking at a lineup of plots every time you make a visualization, or more realistically, if you make a plot and think it might sort of show nothing, make a lineup and show it to someone who hasn't seen the original plot.
-
-```{r, eval=FALSE}
-library(ggplot2)
-ggplot(Default)+
-  geom_point(aes(x=balance, y=income, col=default))
-
-library(nullabor)
-ggplot(lineup(null_permute('default'), Default))+
-geom_point(aes(x=balance, y=income, col=default)) +
- facet_wrap(~.sample)
-
-decrypt(&quot;OlCE bQTQ Aw GWPATAWw d&quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you’re an R person, this is familiar. This is the ggplot code to make a scatterplot. And the bottom is to randomize the data to make null plots. I’m doing a null permute on the label of default versus not default and
-wrapping those facets into an array of plots. When you run the code, they have done a clever thing, it will make a plot in your plotting window, but also prints this text in the console.&lt;/p&gt;
-
-&lt;p&gt;It says decrypt and then it’s a bunch of nonsense characters. And that’s where they hid the answer. So if you were doing this on your computer and you wanted to not know ahead of time which was the real plot, but figure it out afterward, this is how to do it. You take the piece of code, and run the code, tells you where the true data was. So in this case we got it right.&lt;/p&gt;
-
-&lt;p&gt;```{r, eval=FALSE}
-decrypt(“OlCE bQTQ Aw GWPATAWw d”)
-[1] “True data in position 14”&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-You can use the same code for the t-test. This is the tug of war teams again. Somewhere in there I've hidden the real plot of the different heights. The crosses represent the mean heights for each of the groups. The question is if you can pick out the real data. So in your head, make your guess.
-
-&amp;lt;a class=&quot;thumb&quot; href=&quot;&quot;&amp;gt;&amp;lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/visual_t2.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Visual t-test&quot;&amp;gt;&amp;lt;/a&amp;gt;
-
-It says decrypt, if you're good at decrypting quickly, you could see what it is. But the true data is in position 5.
-
-```{r, eval=FALSE}
-decrypt(&quot;OlCE bQTQ Aw GWPATAWw J&quot;)
-[1] &quot;True data in position 5&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s not the one I picked out. Certainly not the most extreme of the possible plots. What this is telling me is the same thing as the permutation test I did with the statistics and the distribution at the beginning of the talk. There really isn’t a difference between these two groups.&lt;/p&gt;
-
-&lt;p&gt;So I’ve given you a positive example and a negative one. But this one, I don’t think you really needed visualization to tell you that answer. You could have used standard statistics. The power of the graphical inference technique, is it’s generalizable. You can use it for anything.&lt;/p&gt;
-
-&lt;p&gt;One thing where I think humans are great at finding patterns in noise is in time series analysis. This is about the steps I take. So it’s from my FitBit. And sometimes I like to make up stories, like the variance is going up. Or the mean seems like it’s changing. Or something happened in December. I’m really good at making up those stories about the distributions.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/ts.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Time series&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So again, the real data is in there. Again, look at it and try to see if you can guess which one it is. And now we’re going to try and decrypt. So there’s the string again.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;{r, eval=FALSE}
-decrypt(&quot;OlCE bQTQ Aw GWPATAWw y&quot;)
-[1] &quot;True data in position 4&quot;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;It says the true data is in position 4. Again, that wasn’t the one I had picked out. But if I had just shown you the one time series plot, you would have believed my stories about what was interesting about that plot.&lt;/p&gt;
-
-&lt;p&gt;With the statistics analog, we’ve been doing the “is this different than zero?” task. Now I want to switch to the “what are some other reasonable values we could have gotten for this?” task. So with the numbers, that was what are some other reasonable values we could have gotten.&lt;/p&gt;
-
-&lt;p&gt;And then I’m going to talk about that in terms of plots. So some of this comes from joint work with a colleague of mine, &lt;a href=&quot;http://www.vpri.org/html/team_bios/aran_lunzer.htm&quot;&gt;Aran Lunzer&lt;/a&gt;, we worked together at the Communications Design Group. This is the highest quality image of Aran I could find.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.vpri.org/html/team_bios/aran_lunzer.htm&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/397f9d5.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Aran Lunzer&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I guess it’s almost life size in the theater, so maybe that’s fine.&lt;/p&gt;
-
-&lt;p&gt;We worked on a tool, a prototype tool, and we called it &lt;a href=&quot;http://vimeo.com/93535802&quot;&gt;LivelyR&lt;/a&gt;. This is real in the sense that if you go on GitHub and &lt;a href=&quot;https://github.com/aranlunzer/shiny&quot;&gt;download the code&lt;/a&gt; you could run it yourself. I don’t recommend it. It’s very buggy. But it really has &lt;a href=&quot;https://cran.r-project.org/&quot;&gt;R&lt;/a&gt; on the back end and &lt;a href=&quot;http://lively-web.org&quot;&gt;LivelyWeb&lt;/a&gt; and javascript on the front end.&lt;/p&gt;
-
-&lt;div class=&quot;video&quot;&gt;&lt;iframe src=&quot;//player.vimeo.com/video/93535802&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;http://vimeo.com/93535802&quot;&gt;LivelyR introductory demo&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user27554411&quot;&gt;Aran Lunzer&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It lets you play with the bin width and bin offset of a histogram. Many things let you do this, but this also lets you overlay a sweep of parameter values. So you can see a variety of histograms with the same bin width and slightly different bin offsets. And they form what I like to call a histogram cloud. Which is like a kernel density estimate, but easier for people to understand.&lt;/p&gt;
-
-&lt;p&gt;There’s one more feature we built into this, which is you can call out the individual histograms if you want to. Instead of seeing them overlaid as a cloud, you could do small multiples. And it’s actually a two-hand
-interaction here. There’s an iPad and you’re controlling the one screen with your right hand and the other with your left hand. So it’s a little bit buggy. But you can see the small multiples of the different possibilities of histograms you could have seen.&lt;/p&gt;
-
-&lt;p&gt;Again, I think it’s really easy with histograms to use the default algorithm, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Histogram&quot;&gt;Sturges algorithm&lt;/a&gt; or whatever it is in your favorite tool, which will make the bin widths for you. If you’re using &lt;a href=&quot;http://ggplot2.org/&quot;&gt;ggplot2&lt;/a&gt;, it will give you a warning, like, I chose a default but you should come up with something better. But, many people don’t. I know that you all do, because you’re visualization professionals.&lt;/p&gt;
-
-&lt;p&gt;But it’s not always obvious to non-professionals that those defaults make a huge difference. You might use the defaults and find what looks like a pattern, but it’s really just the result of the parameter values you chose. So giving people the opportunity to play with the parameters is really powerful.&lt;/p&gt;
-
-&lt;p&gt;After Aran and I did this work in one dimension, looking at the histograms. I started thinking how could we do this in two dimensions? Which got me thinking about maps.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://bit.ly/maup16&quot;&gt;Modifiable Aerial Unit Problem&lt;/a&gt; says that if you aggregate spatial data in different polygonal shapes, you’re going to get different spatial patterns.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/maup16&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/MAUP.png&quot; class=&quot;img-responsive&quot; alt=&quot;Modifiable Aerial Unit Problem&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This can happen with &lt;a href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;gerrymandering&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/exp_gerrymander&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/gerrymandering.png&quot; class=&quot;img-responsive&quot; alt=&quot;Gerrymandering&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It can happen with different county and zip code data, these different levels of polygons. And there are a lot of statistical problems that go along with that.&lt;/p&gt;
-
-&lt;p&gt;Aran Lunzer and I worked together on &lt;a href=&quot;http://bit.ly/spatial_agg&quot;&gt;this next tool&lt;/a&gt;, which doesn’t really have a name.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://bit.ly/spatial_agg&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/spatial_agg.png&quot; class=&quot;img-responsive&quot; alt=&quot;Spatial aggregation&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It takes point data about earthquakes in southern California and aggregates them into polygons. But instead of making fixed polygons, you can scale and rotate and move the polygons to see some other possible values of the visualization you could have gotten. So you start with your default values and maybe you think there are very obvious trends everyone should be aware of. You can tell some great story about why there is a hot spot of earthquakes in this one place.&lt;/p&gt;
-
-&lt;p&gt;But then when you start manipulating the polygons, you can see there are many other possible patterns you could have created.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/sjrohde/4687848929&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/sjrohde.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Nothing, AZ&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;What I want you to take away from this talk is that there are statistical tasks and very analogous visualization tasks. In statistics we want to know if two numbers are different, which is like knowing if one number is different than zero. We could use tools like randomization to answer that question. In the visualization world we can use randomization in a different way to answer the question, is this plot different than nothing?&lt;/p&gt;
-
-&lt;p&gt;In statistics we might want to ask, what are some reasonable, other possible values for this number? What other differences in heights could we have observed? And you can use something like the bootstrap to show you other possible reasonable values. In the visualization space, using parameter manipulation, or giving users the ability to see how your parameter choices impact the visual story they are seeing can be really powerful.&lt;/p&gt;
-</description>
-				<pubDate>Mon, 16 May 2016 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2016/05/16/OpenVisConfTranscript.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/text_viz.png" />
 			</item>
 		
 	</channel>
