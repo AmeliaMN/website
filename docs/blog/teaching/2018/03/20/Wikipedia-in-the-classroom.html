@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:description"
+    content="
+        The data journalism course I’m teaching this semester is a new offering for me. I may write up more of my reflections later, but for now I wanted to get some...
+      ">
+<meta property="og:url"
+    content="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html" />
+  
+  
+    <meta property="og:image" content="http://www.science.smith.edu/~amcnamara/img/Jenny_wikipedia.png" />
+    <meta name="twitter:image" content="http://www.science.smith.edu/~amcnamara/img/Jenny_wikipedia.png" />
+    <meta property="og:title" content="Wikipedia in the classroom: Gender, argh" />
+    <meta property="og:type" content="article" />
+  
+
+  
+	<meta name="description" content="Personal website of Amelia McNamara statistical and data sciences professor at Smith College." />
+	
+    <meta name="author" content="Amelia McNamara">
+    <title>Amelia McNamara  | Blog   | Wikipedia In The Classroom </title>
+    <link rel="shortcut icon" href="http://www.science.smith.edu/~amcnamara/assets/ico/favicon.png">
+    <link rel="stylesheet" href="http://www.science.smith.edu/~amcnamara/dist/font-awesome/css/font-awesome.min.css">
+    <link href="http://www.science.smith.edu/~amcnamara/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://www.science.smith.edu/~amcnamara/dist/css/my.css" rel="stylesheet">
+    
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/post.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/autumn.css" rel="stylesheet">
+      <link href="http://www.science.smith.edu/~amcnamara/dist/css/bclear.css" rel="stylesheet">
+    
+    <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="http://www.science.smith.edu/~amcnamara/blog/feed.xml">
+  </head>
+  <body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#amelia">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Amelia McNamara</a>
+        </div>
+        <div class="navbar-collapse collapse" id="amelia">
+          <ul class="nav navbar-nav">
+           
+            	<li><a href="http://www.science.smith.edu/~amcnamara/index.html">home</a></li>
+        	
+        	
+            	<li class="dropdown">
+            
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="divider">Past classes</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
+              </ul>
+              </li>
+            
+            	<li class="dropdown">
+            
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">research <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.science.smith.edu/~amcnamara/dissertation.html">My dissertation</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/FoSP.html">The future of statistical programming</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/writings.html">Writing</a></li>
+                <li><a href="http://www.science.smith.edu/~amcnamara/presentations.html">Presentations</a></li>
+                <li class="divider"></li>
+              	<li><a href="http://www.science.smith.edu/~amcnamara/portfolio.html">Other projects</a></li>
+              </ul>
+              </li>
+            
+                <li><a href="http://www.science.smith.edu/~amcnamara/press.html">press</a></li>
+              
+              
+              	<li class="active"><a href="http://www.science.smith.edu/~amcnamara/blog/">blog</a></li>
+              
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="friend" href="http://www.facebook.com/amelia.mcnamara" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="add" href="http://plus.google.com/+AmeliaMcNamara" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </nav>
+
+    <div class="container">
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-md-8">
+			<h2>Wikipedia in the classroom: Gender, argh</h2>
+			<p class="meta">20 Mar 2018</p>
+
+			<div class="post">
+			<p>The <a href="http://www.science.smith.edu/~amcnamara/sds236/">data journalism course</a> I’m teaching this semester is a new offering for me. I may write up more of my reflections later, but for now I wanted to get some thoughts down about the experience of using Wikipedia as a pedagogical tool. At this point, I feel like it was too real-world of an experience for the class, and I inadvertently exposed my students to some gendered bias.</p>
+
+<!--more-->
+
+<p>For their first writing assignment in the class (I am nothing if not ambitious!) I had the students author Wikipedia articles for people who did not have them. You can look at my <a href="http://www.science.smith.edu/~amcnamara/sds236/Wikipedia.html">assignment guidelines</a>, but essentially I wanted them to research and write an article, but I gave credit for completion, rather than quality (particularly by Wikipedia’s metric). I generated a list of folks I thought were notable enough for articles, but told students they could choose someone else if they had an idea they wanted to pursue.</p>
+
+<p>It turns out that not everyone I thought was notable actually had enough material on the web to meet the <a href="https://en.wikipedia.org/wiki/Wikipedia:Notability">Wikipedia notability standards</a>. For example, <a href="https://en.wikipedia.org/wiki/Draft:Charlotte_Wickham">Charlotte Wickham</a> might fall in that category. She seems notable to me, but there’s only a limited amount of press on her. I also learned a little too late that journalists often do not count as notable, because <a href="https://en.wikipedia.org/wiki/Wikipedia:Notability_(journalists)">Wikipedia has not accepted a specific notability standard for them</a>. So, people like <a href="https://en.wikipedia.org/wiki/Draft:Sisi_Wei">Sisi Wei</a> and <a href="https://en.wikipedia.org/wiki/Draft:Ryann_Jones">Ryann Jones</a> might fail to meet the standard, even though there is quite a bit of material on the web about them.</p>
+
+<p>Of the 20 or so articles my students undertook, seven of them are now live on Wikipedia. I’ll admit to being a little confused about how articles end up in the main namespace– some things that I’ve written have just ended up there right away, while others get stuck with an “awaiting review” flag, and others are just in the draft namespace with no such tag. Oliver Keyes and Mikhail Popov offered me some guidance on the Friendly Tech Space Slack (it lives up to its name!) and the most recent conclusion is that I conincidentally had students do this assignment during an <a href="https://en.wikipedia.org/wiki/Wikipedia:Autoconfirmed_article_creation_trial/Post-trial_Research_Report">Autoconfirmed article creation trial</a> at Wikipedia.</p>
+
+<p>Those seven articles are:</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Lynn_Cherny">Lynn Cherny</a> (saved from deletion from a friendly editor with a female-sounding username)</li>
+  <li><a href="https://en.wikipedia.org/wiki/Janaya_Khan">Janaya Khan</a> (probably the best article to come out of this class, and one of the names the students came up with themselves!)</li>
+  <li><a href="https://en.wikipedia.org/wiki/Jeffrey_T._Leek">Jeff Leek</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Giorgia_Lupi">Giorgia Lupi</a> (may not actually have been reviewed yet, perhaps I just dropped it into the main namespace?)</li>
+  <li><a href="https://en.wikipedia.org/wiki/Stefanie_Posavec">Stefanie Posavec</a> (also may not have been reviewed)</li>
+  <li><a href="https://en.wikipedia.org/wiki/Victoria_Stodden">Victoria Stodden</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Jer_Thorp">Jer Thorp</a></li>
+</ul>
+
+<p>I think those articles are fantastic, and I’m glad to see them added to Wikipedia! But, that means the vast majority of the articles my students wrote are either waiting for review, or have been rejected. The queue of articles waiting for review is long, and the flag says they are “reviewed in no specific order” but that it may take 8 weeks or more to get a review.</p>
+
+<p>I don’t have enough data here to back this up, but it seems that of the articles my students wrote that have already been reviewed, the ones about men (Jeff Leek and Jer Thorp) were reviewed quickly, given the benefit of the doubt (see the <a href="https://en.wikipedia.org/w/index.php?title=Jeffrey_T._Leek&amp;diff=828628510&amp;oldid=824547453">charitable comments on the article about Jeff Leek</a>, even though the draft might not have been of the highest quality), and accepted. The ones about women are either still waiting to be reviewed, or have been rejected on grounds that I think are pretty weak (see the <a href="https://en.wikipedia.org/wiki/Draft:Amanda_Cox">comment on the article about Amanda Cox</a> that rejects her article because it says she served on the Federal Reserve Board, rather than that she worked at the Fed).</p>
+
+<p>Here are the rejections that are getting me particularly riled up:</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Jennifer_(Jenny)_Bryan">Jenny Bryan</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Amanda_Cox">Amanda Cox</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Kim_Rees">Kim Rees</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Julia_Silge">Julia Silge</a></li>
+</ul>
+
+<p>I think those people (women) are extremely notable, and we should work to get their pages up to snuff. Will you help me?</p>
+
+<p>Another place you could jump in is trying to improve the articles we have that are still in the review queue (or that I’ve re-submitted after rejection), to hopefully forestall any issues:</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Kennedy_Elliott">Kennedy Elliot</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Meredith_Broussard">Meredith Broussard</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Beatrice_Fischel-Bock">Beatrice Fischel-Bock</a> (another student-generated idea!)</li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Lena_Groeger">Lena Groeger</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Mark_Hansen">Mark Hansen</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Sisi_Wei">Sisi Wei</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Draft:Charlotte_Wickham">Charlotte Wickham</a></li>
+</ul>
+
+<p>And, if you’re looking for folks to write articles about, I’m giving away ideas for free! How about:</p>
+
+<ul>
+  <li>Mara Averick</li>
+  <li>Nadieh Bremer</li>
+  <li>Karl Broman</li>
+  <li>Jen Christiansen</li>
+  <li>Jessica Hullman</li>
+  <li>Michelle Minkoff</li>
+  <li>Hilary Parker</li>
+  <li>Roger Peng</li>
+  <li>Olga Pierce</li>
+  <li>David Robinson</li>
+  <li>Irene Ros</li>
+  <li>Kara Woo</li>
+  <li>Nathan Yau</li>
+</ul>
+
+
+			</div>
+		
+<div id="disqus_thread"></div>
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/**
+var disqus_config = function () {
+this.page.url = "http://www.science.smith.edu/~amcnamara/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//lettersfromayoungstatistician.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+			
+		</div>
+		<div class="col-md-4">			
+		<h4>Recent posts</h4>
+			<ul>
+ 			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html">Wikipedia in the classroom: Gender, argh</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html">Dagstuhl reflections</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html">More guys</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">Scientists Programming</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html">R syntax comparison</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html">On microaggressions</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2016/11/16/CensusRant.html">Census data: A rant</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/teaching/2016/10/19/GradSchool.html">Statistics graduate school advice</a>
+    		</li>
+  			
+    		<li>
+      		<a href="http://www.science.smith.edu/~amcnamara/blog/misc/2016/06/23/Listservs.html">Worth adding to your inbox</a>
+    		</li>
+  			
+			</ul></div>
+		<div class="row">&nbsp;</div>
+</div>
+
+
+   <footer>
+      <div class="container">
+        <p class="text-muted credit">Copyright &copy; 2018 Amelia McNamara. All Rights Reserved.</p>
+      </div>
+    </footer>
+ <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+  var sc_project=8403591; 
+  var sc_invisible=1; 
+  var sc_security="445c0f52"; 
+  var scJsHost = (("https:" == document.location.protocol) ?
+  "https://secure." : "http://www.");
+</script>
+<script type="text/javascript"
+  src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="web stats"
+  href="http://statcounter.com/free-web-stats/"
+  target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/8403591/0/445c0f52/1/"
+  alt="web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://www.science.smith.edu/~amcnamara/dist/js/jquery.min.js"></script>
+    <script src="http://www.science.smith.edu/~amcnamara/dist/js/bootstrap.min.js"></script>
+     <script src="http://www.science.smith.edu/~amcnamara/dist/js/Repo.js/repo.js"></script>
+    <script type="text/javascript">
+	$('.tooltip-test').tooltip()
+	$('#collapseOne').collapse("hide");
+	$('#repo').repo({ user: 'AmeliaMN', name: '1000tweets' });
+	$('.more').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='read less' ?  'read more' : 'read less';
+    	});
+    	$(this).blur();
+	});
+	$('.code').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='hide code' ?  'view code' : 'hide code';
+    	});
+    	$(this).blur();
+	});
+	</script>
+    
+  </body>
+</html>
