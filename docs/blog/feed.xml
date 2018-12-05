@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 	<channel>
 		<title>Amelia McNamara</title>
-		<description>Personal website of Amelia McNamara statistical and data sciences professor at Smith College.</description>		
-		<link>http://www.science.smith.edu/~amcnamara</link>
-		<atom:link href="http://www.science.smith.edu/~amcnamara/blog/feed.xml" rel="self" type="application/rss+xml" />
+		<description>Amelia McNamara, assistant professor of statistics in the Department of Computer &amp; Information Sciences at the University of St Thomas</description>		
+		<link>https:://www.amelia.mn</link>
+		<atom:link href="https:://www.amelia.mn/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Wikipedia in the classroom: Gender, argh</title>
@@ -76,10 +76,10 @@
 &lt;/ul&gt;
 
 </description>
-				<pubDate>Tue, 20 Mar 2018 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/Jenny_wikipedia.png" />
+				<pubDate>Tue, 20 Mar 2018 00:00:00 -0500</pubDate>
+				<link>https:://www.amelia.mn/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/Jenny_wikipedia.png" />
 			</item>
 		
 			<item>
@@ -88,7 +88,7 @@
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.dagstuhl.de/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/Dagstuhl.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Schloss Dagstuhl&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.dagstuhl.de/&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/Dagstuhl.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Schloss Dagstuhl&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.dagstuhl.de/&quot;&gt;Schloss Dagstuhl&lt;/a&gt; is a historic castle that hosts workshops on topics related to computer science. The idea is to bring a small group of people (ours was about 35) together for a week to discuss a specific topic, with the goal of advancing the discipline.&lt;/p&gt;
 
@@ -192,10 +192,10 @@ Johannes Hofmeister captured his ideas on video,&lt;/p&gt;
 &lt;p&gt;I can’t wait to see where things go from here.&lt;/p&gt;
 
 </description>
-				<pubDate>Sun, 11 Feb 2018 06:43:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Dagstuhl-reflections.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/Dagstuhl.jpg" />
+				<pubDate>Sun, 11 Feb 2018 05:43:00 -0600</pubDate>
+				<link>https:://www.amelia.mn/blog/conferences/2018/02/11/Dagstuhl-reflections.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/conferences/2018/02/11/Dagstuhl-reflections.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/Dagstuhl.jpg" />
 			</item>
 		
 			<item>
@@ -224,14 +224,14 @@ Johannes Hofmeister captured his ideas on video,&lt;/p&gt;
 
 &lt;p&gt;I don’t want to hear about gender, I want to hear about the work. If you are going to reference a specific person, of course it is okay to indicate their gender and use their pronouns. But, if you’re going to speak about a group of two or more people in the third person, please try to remove the word “guys” from your vocabulary. We’re all people.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://prestosketching.com/blog/2018/01/27/easy-ways-to-show-more-diversity-in-your-sketches/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/faces-hair.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Many diverse face sketches&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://prestosketching.com/blog/2018/01/27/easy-ways-to-show-more-diversity-in-your-sketches/&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/faces-hair.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;Many diverse face sketches&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[Image via &lt;a href=&quot;http://prestosketching.com/blog/2018/01/27/easy-ways-to-show-more-diversity-in-your-sketches/&quot;&gt;prestosketching&lt;/a&gt;]&lt;/p&gt;
 </description>
-				<pubDate>Sun, 11 Feb 2018 05:53:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/More-guys.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/faces-hair.jpg" />
+				<pubDate>Sun, 11 Feb 2018 04:53:00 -0600</pubDate>
+				<link>https:://www.amelia.mn/blog/conferences/2018/02/11/More-guys.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/conferences/2018/02/11/More-guys.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/faces-hair.jpg" />
 			</item>
 		
 			<item>
@@ -240,7 +240,7 @@ Johannes Hofmeister captured his ideas on video,&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/clement127/15236140202/in/photolist-pdncEs-rabMJr-qSKYvp-qPeSji-rmJJdW-btryhH-qK7VJj-cm1Hb-qdaYpW-fWAdZ-9WhgHt-oLa2TT-2vuJD-2vuKd-mk1ib-qAU7wq-r3voVM-8CAcWc-9oggZ-7w3hnt-56tdL-oLa3fV-2vuPq-2vuJ5-oLqNAT-otW1FH-hGxPy-9Gbfpi-kyh6Q-wL7Y9q-anxVft-otW5n1-bWGa2P-qmxh8-otWG7V-nCpBGK-oLa2C2-pqcggk-61RzgT-dgrA8g-gbGJp-nBBqqg-anxVyP-6KVaRB-anAxnS-anxJWP-oJoZ4d-rcEdVP-aySHmX-anxJdr&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/ScientistsProgramming.png&quot; class=&quot;img-responsive&quot; alt=&quot;Female lego scientist&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://www.flickr.com/photos/clement127/15236140202/in/photolist-pdncEs-rabMJr-qSKYvp-qPeSji-rmJJdW-btryhH-qK7VJj-cm1Hb-qdaYpW-fWAdZ-9WhgHt-oLa2TT-2vuJD-2vuKd-mk1ib-qAU7wq-r3voVM-8CAcWc-9oggZ-7w3hnt-56tdL-oLa3fV-2vuPq-2vuJ5-oLqNAT-otW1FH-hGxPy-9Gbfpi-kyh6Q-wL7Y9q-anxVft-otW5n1-bWGa2P-qmxh8-otWG7V-nCpBGK-oLa2C2-pqcggk-61RzgT-dgrA8g-gbGJp-nBBqqg-anxVyP-6KVaRB-anAxnS-anxJWP-oJoZ4d-rcEdVP-aySHmX-anxJdr&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/ScientistsProgramming.png&quot; class=&quot;img-responsive&quot; alt=&quot;Female lego scientist&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In the talk, I broke scientists’ programming tasks three categories:&lt;/p&gt;
 
@@ -332,10 +332,10 @@ Johannes Hofmeister captured his ideas on video,&lt;/p&gt;
 &lt;p&gt;I think the thing I exposed people to that they were most excited about was RMarkdown. While it seemed most people were familiar with the idea of iPython/Jupyter notebooks, they hadn’t seen knitr before. The idea that they could create a fully reproducible journal article interweaving text and code was very appealling. I showed a simple example with HTML output including text, code, and code output, but over the next few days I demoed more complex (Rnw) examples from my own work that produce publication-ready documents. For example, &lt;a href=&quot;https://github.com/COSTDataExpo2013/AmeliaMN/blob/master/PaperFinalDraft.pdf&quot;&gt;this pdf of a paper for Computational Statistics&lt;/a&gt; was generated from &lt;a href=&quot;https://github.com/COSTDataExpo2013/AmeliaMN/blob/master/PaperFinalDraft.Rnw&quot;&gt;this LaTeX/knitr file&lt;/a&gt;. While this group of computer scientists work on experiments surrounding programming language design, and therefore do the same types of data analytic tasks as many scientists, they didn’t have this piece of their workflow.&lt;/p&gt;
 
 </description>
-				<pubDate>Sun, 11 Feb 2018 04:43:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/ScientistsProgramming.png" />
+				<pubDate>Sun, 11 Feb 2018 03:43:00 -0600</pubDate>
+				<link>https:://www.amelia.mn/blog/conferences/2018/02/11/Scientists-Programming.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/conferences/2018/02/11/Scientists-Programming.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/ScientistsProgramming.png" />
 			</item>
 		
 			<item>
@@ -346,7 +346,7 @@ Johannes Hofmeister captured his ideas on video,&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://github.com/rstudio/cheatsheets/raw/master/syntax.pdf&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SyntaxComparisonCheatsheet.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;R syntax comparison cheatsheet&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://github.com/rstudio/cheatsheets/raw/master/syntax.pdf&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/SyntaxComparisonCheatsheet.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;R syntax comparison cheatsheet&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Q: Why didn’t you include data.table syntax?&lt;/strong&gt;&lt;/p&gt;
 
@@ -396,10 +396,10 @@ Johannes Hofmeister captured his ideas on video,&lt;/p&gt;
 &lt;p&gt;Do you have other questions? Ask me in the comments!&lt;/p&gt;
 
 </description>
-				<pubDate>Sun, 11 Feb 2018 03:43:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2018/02/11/Syntax-comparison.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/SyntaxComparisonCheatsheet.jpg" />
+				<pubDate>Sun, 11 Feb 2018 02:43:00 -0600</pubDate>
+				<link>https:://www.amelia.mn/blog/teaching/2018/02/11/Syntax-comparison.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/teaching/2018/02/11/Syntax-comparison.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/SyntaxComparisonCheatsheet.jpg" />
 			</item>
 		
 			<item>
@@ -449,10 +449,10 @@ Johannes Hofmeister captured his ideas on video,&lt;/p&gt;
 
 &lt;p&gt;With the #metoo movement in general and the recent attention on &lt;a href=&quot;https://medium.com/@kristianlum/statistics-we-have-a-problem-304638dc5de5&quot;&gt;harassment in statistics, data science, and machine learning&lt;/a&gt; in particular, I am reminded of the Brandeis quote that “Sunlight is said to be the best of disinfectants.” Of course, this is only true if people believe the stories that are voiced, but we seem to be at a watershed moment. I regret not shining more light on this at the time, and hope that we can be more open about violations of community norms, even if they seem “minor.” They could be indicative of a larger pattern.&lt;/p&gt;
 </description>
-				<pubDate>Tue, 19 Dec 2017 00:00:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/conferences/2017/12/19/On-Microaggressions.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/grr.png" />
+				<pubDate>Tue, 19 Dec 2017 00:00:00 -0600</pubDate>
+				<link>https:://www.amelia.mn/blog/conferences/2017/12/19/On-Microaggressions.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/conferences/2017/12/19/On-Microaggressions.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/grr.png" />
 			</item>
 		
 			<item>
@@ -492,7 +492,7 @@ estimate I’m &lt;a href=&quot;http://rhiever.github.io/name-age-calculator/ind
 old&lt;/a&gt;),
 that’s not how people tend to think about names and ages.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/amelias-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Amelias&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/amelias-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Amelias&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Instead, people seem to be taking an approximate age and then just
 grabbing a name out of the hat. In other words, they are using the
@@ -577,7 +577,7 @@ Kristen? (I’m guilty of that one.)&lt;/p&gt;
 
 &lt;p&gt;[This is the part of the post that is responsive, so you probably want to head to &lt;a href=&quot;http://45.55.32.181/shiny/Amanda/&quot;&gt;my shiny server&lt;/a&gt;.]&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://45.55.32.181/shiny/Amanda/&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/ShinyScreenShot.png&quot; class=&quot;img-responsive&quot; alt=&quot;You want to go to my server version&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://45.55.32.181/shiny/Amanda/&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/ShinyScreenShot.png&quot; class=&quot;img-responsive&quot; alt=&quot;You want to go to my server version&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;data-appendix&quot;&gt;Data appendix&lt;/h2&gt;
 
@@ -591,7 +591,7 @@ the population. Uncommon names are excluded for privacy purposes, and I
 thought maybe people were getting more (or less) creative with names
 over time. It turns out that may be the case, but only slightly.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/missingdata-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Missing data&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/missingdata-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Missing data&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -696,14 +696,14 @@ of letters names start with. Girls’ names starting with A had been on
 the rise since the 1960s, but you see a local maximum in about 1984 and
 then a small decline before continuing to rise.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/nameletters-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Letters over time&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/nameletters-1.png&quot; class=&quot;img-responsive&quot; alt=&quot;Letters over time&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/nameletters-2.png&quot; class=&quot;img-responsive&quot; alt=&quot;A over time&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/nameletters-2.png&quot; class=&quot;img-responsive&quot; alt=&quot;A over time&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-				<pubDate>Fri, 13 Jan 2017 00:00:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/misc/2017/01/13/Amanda.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/amelias-1.png" />
+				<pubDate>Fri, 13 Jan 2017 00:00:00 -0600</pubDate>
+				<link>https:://www.amelia.mn/blog/misc/2017/01/13/Amanda.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/misc/2017/01/13/Amanda.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/amelias-1.png" />
 			</item>
 		
 			<item>
@@ -716,7 +716,7 @@ then a small decline before continuing to rise.&lt;/p&gt;
 
 &lt;p&gt;First, some motivation. A group of students in my class has found some interesting data at the state level, which they think may be related to demographic characteristics of states, like population, poverty level, education, racial makeup, etc. This is where my amnesia kicks in. “It should be really easy to find data like that!” I say. “Let’s go to the &lt;a href=&quot;http://factfinder.census.gov/&quot;&gt;American FactFinder website&lt;/a&gt; and I’ll show you how it works.” We bumble around on the site for a while, clicking on “Data Main” (a page of screenshots and news) “Data tools and apps” (actually has the link to what we want, but buried among other unrelated things), etc. Finally I manage to find FactFinder main page. We select our geography (states) and dismiss the box that is trying to get us to add yet another geography. We search for “poverty” and voila! …the ugliest dataset you have ever seen.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&amp;amp;prodType=table&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/FactFinder.png&quot; class=&quot;img-responsive&quot; alt=&quot;An ugly table&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&amp;amp;prodType=table&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/FactFinder.png&quot; class=&quot;img-responsive&quot; alt=&quot;An ugly table&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I always encourage students to work with data programmatically, but even I have to admit that it would be easier to delete columns and add better names in a spreadsheet. The column names are in multiple &lt;em&gt;rows&lt;/em&gt; for crying out loud! Plus, what you would like to be observations (states) are actually variables. I am now imagining the &lt;code class=&quot;highlighter-rouge&quot;&gt;gather&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;spread&lt;/code&gt; in my future. I want students to understand data cleaning and wrangling, but I don’t want their first experience to be hellish. Even my heart is sinking, thinking about doing this all myself.&lt;/p&gt;
 
@@ -732,11 +732,11 @@ then a small decline before continuing to rise.&lt;/p&gt;
 
 &lt;p&gt;But, this isn’t the only variable I’m interested in! So, how do I learn what other variables I want? As far as I can tell, I have to go to the &lt;a href=&quot;http://api.census.gov/&quot;&gt;Census API site&lt;/a&gt; and read &lt;a href=&quot;http://api.census.gov/data/2015/acs1/variables.html&quot;&gt;this table&lt;/a&gt;. Say I’m interested in race. I can search the page for that word, but I get almost 5,000 results.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/RaceSearch.png&quot; class=&quot;img-responsive&quot; alt=&quot;Results of searching for `race.&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/RaceSearch.png&quot; class=&quot;img-responsive&quot; alt=&quot;Results of searching for `race.&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And even if I locate a variable I am interested in, the descriptions are pretty hard to parse.&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/VariableDescription.png&quot; class=&quot;img-responsive&quot; alt=&quot;Variable description&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/VariableDescription.png&quot; class=&quot;img-responsive&quot; alt=&quot;Variable description&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The result of this is that it would be all too easy to think you were getting one thing and actually request another. Plus, when you generate your list of variable strings like &lt;code class=&quot;highlighter-rouge&quot;&gt;B02001_009E&lt;/code&gt;, you also need to maintain a corresponding list of human-readable names like &lt;code class=&quot;highlighter-rouge&quot;&gt;TwoOrMoreCount&lt;/code&gt;. If I were writing a peer-reviewed research paper, I would be grateful for the huge amount of detailed breakdowns and the API access, but for a semester-long student project in a class focused on modeling, it’s too much.&lt;/p&gt;
 
@@ -748,7 +748,7 @@ then a small decline before continuing to rise.&lt;/p&gt;
 
 &lt;p&gt;I had been expecting to be able to find a bunch of GitHub repos full of cleaned up data like the stuff Mara and Adam sent to me on Slack. It seems like people don’t really do that, or if they do it’s not documented in such a way that it is findable. But, &lt;a href=&quot;https://twitter.com/ryan_boyer2&quot;&gt;Ryan&lt;/a&gt; pointed me to the &lt;a href=&quot;http://www.socialexplorer.com/&quot;&gt;Social Explorer&lt;/a&gt;, an online tool mostly designed for making pretty maps online, that includes a Tables functionality that is almost exactly what I was looking for!&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.socialexplorer.com/tables/C2010&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/SocialExplorer.png&quot; class=&quot;img-responsive&quot; alt=&quot;Variable description&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.socialexplorer.com/tables/C2010&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/SocialExplorer.png&quot; class=&quot;img-responsive&quot; alt=&quot;Variable description&#39;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;It allows you to select your geography, then you can search by keyword or scroll through a manageable list of variable names and add them to a custom table. You can preview the data (it looks like states will be the variables, but never fear, this changes in the download), then choose the format you want to export it in. Other than a slight loss of reproducibility, the only drawback in my mind is that the variable names are still unintelligible, so you have to also download a data dictionary, but it &lt;em&gt;makes you a custom dictionary&lt;/em&gt; based on the variables you chose so you don’t have to wade through the entire thing!&lt;/p&gt;
 
@@ -756,10 +756,10 @@ then a small decline before continuing to rise.&lt;/p&gt;
 
 &lt;p&gt;Are there other resources out there I have missed? Why is this such a hard problem? I’d love to hear from you.&lt;/p&gt;
 </description>
-				<pubDate>Wed, 16 Nov 2016 00:00:00 -0500</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2016/11/16/CensusRant.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2016/11/16/CensusRant.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/FactFinder.png" />
+				<pubDate>Wed, 16 Nov 2016 00:00:00 -0600</pubDate>
+				<link>https:://www.amelia.mn/blog/teaching/2016/11/16/CensusRant.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/teaching/2016/11/16/CensusRant.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/FactFinder.png" />
 			</item>
 		
 			<item>
@@ -768,7 +768,7 @@ then a small decline before continuing to rise.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.phdcomics.com/comics.php?f=1286&amp;amp;fb_action_ids=148470391984848&quot;&gt;&lt;img src=&quot;http://www.science.smith.edu/~amcnamara/img/PhDcomic.gif&quot; class=&quot;img-responsive&quot; alt=&quot;One of my favorite PhD comics&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.phdcomics.com/comics.php?f=1286&amp;amp;fb_action_ids=148470391984848&quot;&gt;&lt;img src=&quot;https:://www.amelia.mn/img/PhDcomic.gif&quot; class=&quot;img-responsive&quot; alt=&quot;One of my favorite PhD comics&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;q-what-is-grad-school-in-statistics-like&quot;&gt;Q: What is grad school in statistics like?&lt;/h3&gt;
 
@@ -832,10 +832,10 @@ then a small decline before continuing to rise.&lt;/p&gt;
 &lt;p&gt;What did I miss? What are other questions you have?&lt;/p&gt;
 
 </description>
-				<pubDate>Wed, 19 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/teaching/2016/10/19/GradSchool.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/teaching/2016/10/19/GradSchool.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/PhDcomic.gif" />
+				<pubDate>Wed, 19 Oct 2016 00:00:00 -0500</pubDate>
+				<link>https:://www.amelia.mn/blog/teaching/2016/10/19/GradSchool.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/teaching/2016/10/19/GradSchool.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/PhDcomic.gif" />
 			</item>
 		
 			<item>
@@ -850,10 +850,10 @@ then a small decline before continuing to rise.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.oreilly.com/data/newsletter.html&quot;&gt;O’Reilly Data Newsletter&lt;/a&gt;. News about data (often skews toward computer science).&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-				<pubDate>Thu, 23 Jun 2016 00:00:00 -0400</pubDate>
-				<link>http://www.science.smith.edu/~amcnamara/blog/misc/2016/06/23/Listservs.html</link>
-				<guid isPermaLink="true">http://www.science.smith.edu/~amcnamara/blog/misc/2016/06/23/Listservs.html</guid>
-				<media:thumbnail url="http://www.science.smith.edu/~amcnamara/img/InboxZero.png" />
+				<pubDate>Thu, 23 Jun 2016 00:00:00 -0500</pubDate>
+				<link>https:://www.amelia.mn/blog/misc/2016/06/23/Listservs.html</link>
+				<guid isPermaLink="true">https:://www.amelia.mn/blog/misc/2016/06/23/Listservs.html</guid>
+				<media:thumbnail url="https:://www.amelia.mn/img/InboxZero.png" />
 			</item>
 		
 	</channel>

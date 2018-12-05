@@ -1,12 +1,13 @@
 name: Amelia McNamara
-description: Personal website of Amelia McNamara statistical and data sciences professor at Smith College.
+description: Amelia McNamara, assistant professor of statistics in the Department of Computer & Information Sciences at the University of St Thomas 
 highlighter: rouge
-timezone: America/New_York
+timezone: America/Chicago
 markdown: kramdown
+destination: docs
 kramdown:
     input: GFM
     auto_ids: true
     syntax_highlighter: rouge
-baseurl: "http://www.science.smith.edu/~amcnamara"
+baseurl: "https:://www.amelia.mn"
 permalink: blog/:categories/:year/:month/:day/:title.html
 excerpt_separator: <!--more-->
