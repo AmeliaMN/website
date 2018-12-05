@@ -8,6 +8,6 @@ kramdown:
     input: GFM
     auto_ids: true
     syntax_highlighter: rouge
-baseurl: "https:://www.amelia.mn"
+baseurl: "https://www.amelia.mn"
 permalink: blog/:categories/:year/:month/:day/:title.html
 excerpt_separator: <!--more-->
