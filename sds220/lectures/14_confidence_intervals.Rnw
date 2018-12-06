@@ -1,0 +1,214 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+\usepackage{soul}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{October 16, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Applying the Normal Model
+  \item Confidence Intervals
+\end{enumerate}
+
+\paragraph{Applying the Normal Model}
+
+Recall the baseball example from last time. 
+
+<<message=FALSE, echo=FALSE,size="footnotesize">>=
+require(Lahman)
+require(mosaic)
+mlb <- Batting %>%
+  mutate(BAvg = H / AB) %>%
+  filter(yearID %in% c(1941, 1980) & AB > 400)
+mlb %>%
+  filter(BAvg > .36) %>%
+  select(playerID, yearID, BAvg)
+mlb %>%
+  group_by(yearID) %>%
+  summarize(N = n(), mean_BAvg = mean(BAvg), sd_BAvg = sd(BAvg))
+@
+
+George Brett, who hit .390 in 1980, won the AL MVP. The player who finished second in the balloting, \href{https://www.google.com/search?q=reggie+jackson+baseball}{Reggie Jackson}, hit .300 (with 41 home runs). Let's examine Jackson's batting average in the context of his peers. What we need is a way to understand the \emph{distribution} of batting average in the AL in 1980. We have three different ways to do this:
+
+\begin{enumerate}
+  \item Use the actual batting averages from the 148 players with at least 400 at-bats:
+  
+<<eval=FALSE>>=
+pdata(~BAvg, q = .300, data = filter(mlb, yearID == 1980))
+@
+
+  \item \emph{Assume that batting average is distributed normally} and use the observed mean and standard deviation to specify the distribuion:
+  
+<<eval=FALSE>>=
+xpnorm(.300, mean = .279, sd = 0.0276)
+pnorm(.300, mean = .279, sd = 0.0276)
+@
+
+  \item Simulate the distribution using R's random number generating capabilities:
+<<eval=FALSE>>=
+sim <- data.frame(BAvg = rnorm(10000, mean = .279, sd = 0.0276))
+pdata(~BAvg, q = .300, data = sim)
+@
+
+<<eval=FALSE, include=FALSE>>=
+ggplot(data = sim, aes(x = BAvg)) + 
+  geom_histogram(aes(y = ..density..), binwidth = 0.01) + 
+  stat_function(fun = dnorm, linetype = 2, 
+                args = list(mean = mean(sim$BAvg), sd = sd(sim$BAvg)))
+@
+
+
+\end{enumerate}
+
+\paragraph{Visualizing Confidence Intervals}
+
+Open the following URL in a web browser:
+
+\begin{center}
+  \url{http://shiny.calvin.edu/rpruim/CIs/}
+\end{center}
+
+\begin{itemize}
+  \itemsep0.25in
+  \item Experiment with changing the sample size. How does that change the coverage rate? How does it change the confidence intervals? 
+%  \item Experiment with changing the number of samples. How does that change the coverage rate? 
+  \item Experiment with changing the confidence level. Does increasing the confidence level make the intervals wider or narrower?
+  \item Experiment with changing the population distribution from normal to something non-normal. How does that change the coverage rate? 
+  \vspace{0.5in}
+\end{itemize}
+
+\paragraph{Twitter Users and News} A poll conducted in 2013 found that 52\% of U.S. adult Twitter users get at least some news on Twitter. The standard error for this estimate was 2.4\%, and a normal distribution may be used to model the sample proportion. 
+\begin{enumerate}
+  \itemsep0.5in
+  \item Draw a picture of the sampling distribution of the proportion of U.S. adult Twitters users who get at least some news on Twitter. 
+  \item Construct a 99\% confidence interval for the fraction of U.S. adult Twitter users who get some news on Twitter.
+  <<message=FALSE>>=
+qnorm(0.995)  
+@
+  <<echo=FALSE, eval=FALSE>>=
+  0.52 + qnorm(c(0.005, 0.995)) * 0.024
+  @
+
+  \item Interpret the confidence interval in context.
+  \item Identify each of the following statements as true or false. Provide an explanation to justify each of your answers.
+  \begin{enumerate}
+    \itemsep0.5in
+    \item The data provide statistically significant evidence that more than half of U.S. adult Twitter users get some news through Twitter. Use a significance level of $\alpha = 0.01$.
+    \item Since the standard error is 2.4\%, we can conclude that 97.6\% of all U.S. adult Twitter users were included in the study.
+    \item If we want to reduce the standard error of the estimate, we should collect less data.
+    \item If we construct a 90\% confidence interval for the percentage of U.S. adults Twitter users who get some news through Twitter, this confidence interval will be wider than a corresponding 99\% confidence interval.
+    \item If we repeated this study 1,000 times and constructed a 99\% confidence interval for each study, then approximately 990 of those confidence intervals whould contain the true fraction of U.S. adult Twitter users who get at least some news on Twitter. 
+    \item The margin of error in this poll is less than 3 percentage points.
+  \end{enumerate}
+\end{enumerate}
+
+
+% \newpage
+% 
+% \subsection*{Instructor's Notes}
+% 
+% 
+% \paragraph{Confidence Intervals}
+% 
+% \begin{itemize}
+%   \item $p$ is the unknown true, fixed, population parameter
+%   \item $\hat{p}$ is the known, fixed, sample statistic
+%   \item $\hat{p}$ is subject to variability due to sampling $\Rightarrow$ it has a sampling distribution!
+%   \item $SE_{\hat{p}}$ is the standard deviation of the sampling distribution of $\hat{p}$
+%   \item General form for a $(1- \alpha)$ \% confidence interval:
+%   \begin{align*}
+%       \text{point estimate} &\pm \text{margin of error} \\
+%       \text{point estimate} &\pm \left( \text{something depending on } \alpha \text{, shape of samp. dist.}\right) \cdot \left( \text{standard error} \right) \\
+%       \hat{p} &\pm z_{\alpha/2}^* \cdot SE_{\hat{p}}
+%   \end{align*}
+%   \item Question: Does CI contain $p$?
+%   \item Answer: Yes or No, but we will never know!
+%   \item Compromise: can we make a statement about \st{probability} \st{how likely} how \href{http://en.wikipedia.org/wiki/Confidence_interval#Misunderstandings}{\emph{confident}} we are that the CI contains $p$?
+%    \item Interpretation: a level $C$ \emph{confidence interval} for the population mean will contain the true population mean $C\%$ of the time in repeated sampling.
+%   \item Connection between significance tests and confidence intervals:
+%   \begin{center}
+%     95\% CI for a population parameter does not include the null value\\
+%     $\Updownarrow$\\
+%     $p$-value associated with the test statistic is less than $0.05$
+%   \end{center}
+% 
+%   \item Key Notions that prevent misinterpretations:
+%   \begin{itemize}
+%     \item $p$ is unknown, and its value \textbf{does not change}.
+%     \item The \textbf{one} sample proportion ($\hat{p}$) does not change either, and the confidence interval that you construct from it either will or will not contain the true mean (no chance involved).
+%     \item Your CI is for the \emph{true proportion}, it doesn't say anything about individual observations.
+%   \end{itemize}
+%   \item Always report \st{$p$-values and} a confidence interval
+%   \item Caveat: The margin of error represents a lower bound on the true uncertainty, for a variety of practical reasons.
+% \end{itemize}
+% 
+% 
+% Let $X$ be a random variable, and suppose that the true population $\mu_X$ is unknown. As statisticians, we want to estimate it. Our process is to draw a sample of $n$ observations of $X$, and take the average value of the items in that sample. This is the sample mean $\bar{x}$. Assume for now that we happen to know $\sigma_X$, the true population standard deviation (even though this is not realistic). What can we say about $\mu_X$? Our intuition tells us that $\bar{x}$ is close to $\mu_X$, but how close? How can we be sure?
+% 
+% \begin{itemize}
+%  \item $SE_{\bar{X}}$ is the standard deviation of the sampling distribution of the mean. Thus far, we have obtained the sampling distributions via simulation, so we can compute the $SE_{\bar{X}}$ as the standard deviation of that simulated distribtion. Thus, $SE_{\bar{X}} = \sigma_{\bar{X}} \neq \sigma_X$.
+%  \item Observation: $\mu_X$ lies within 2 SE's of $\bar{x} \iff \bar{x}$ lies within w SE's of $\mu_X$.
+%  \item We know from the Law of Large Numbers that $\bar{x}$ converges to $\mu_X$ as $n$ increases
+%  \item We know from the CLT that the distribution of $\bar{x}$ is approximately Normal
+% $(\mu_X, \sigma_X / \sqrt{n})$.
+%  \item Idea: We can use this information to make a precise statement about how likely it is that a specified range contains the true, unknown value of $\mu_X$, which is fixed.
+%  \item Thus, a $1-\alpha$\% confidence interval for a population mean is:
+%  $$
+%    \left[ \bar{x} - z_{\alpha/2}^* \cdot SE_{\bar{X}}, \bar{x} + z_{\alpha/2}^* \cdot SE_{\bar{X}} \right]
+%  $$
+%  \item Important: In reality, you typically will have \textbf{one} sample, and the confidence interval that you construct from it either will or will not contain the true mean (no chance involved). Unfortunately, you'll never learn the true value of the population mean, so you won't ever know definitively. Thus, the goal is to make a probabilistic statement reflecting the likelihood that your confidence interval contains the true mean.
+%  \item The sample mean $\bar{x}$ is an unbiased \emph{estimate} of the true population mean $\mu_X$.
+%  \item We'll use our knowledge of the sampling distribution of $\bar{x}$ to construct a \emph{margin of error} around this estimate.
+% 
+% \end{itemize}
+
+
+
+
+\end{document}

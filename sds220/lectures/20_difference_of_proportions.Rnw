@@ -1,0 +1,303 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{November 6, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Inference for a single proportion
+  \item Inference for a difference of two proportions
+\end{enumerate}
+
+\paragraph{Inference for a Single Proportion}
+
+Recall from last time, we discussed three ways to construct the \emph{null distribution} of the sample proportion $\hat{p}$.
+
+<<message=FALSE, fig.show='hide', warning=FALSE>>=
+n <- 123
+p_0 <- 1/2
+p_hat <- 77/123
+require(mosaic)
+@
+
+
+\begin{enumerate}
+  \item Simulation: Use the computer to \emph{simulate} the null distribution.
+  \begin{enumerate}
+    \item Assumptions: independence
+    \item Pros: few assumptions, no math, can simulate very complex situations with a little programming skill
+    \item Cons: requires computer (impossible before 1970), does not always return the same answer
+  \end{enumerate}
+  
+<<message=FALSE, fig.show='hide', warning=FALSE>>=
+library(oilabs)
+sim <- data_frame(soda = c("Coke", "Pepsi")) %>%
+  rep_sample_n(size = n, replace = TRUE, reps = 10000) %>%
+  group_by(replicate) %>%
+  summarize(N = n(), coke = sum(soda == "Coke")) %>%
+  mutate(coke_pct = coke / N)
+qplot(data = sim, x = coke_pct, geom = "density")
+@
+  
+  
+  \item Probability Theory: Use mathematics to \emph{compute} the null distribution.
+  \begin{enumerate}
+    \item Assumptions: independence, probability model
+    \item Pros: gives exact sampling distribution
+    \item Cons: only the simplest situations can be solved in closed form, may be hard to detect mistakes
+  \end{enumerate}
+  
+Last time we proved that if $X \sim Bernoulli(p)$ is a random variable giving the preference of any given person, and $Y = X_1 + X_2 + \cdots + X_n \sim Binomial(n, p)$ is a random variable giving the number of people among $n$ who prefer Coke, and $\hat{p} = Y/n$ is a random variable giving the proportion of people among $n$ who prefer Coke, then:
+  \begin{align*}
+    \Ex[X] = p  \, &\qquad  Var[X] = p(1-p) \\
+    \Ex[Y] = np  \, &\qquad  Var[Y] = np(1-p) \\
+    \Ex[\hat{p}] = p  \, &\qquad  Var[\hat{p}] = \frac{p(1-p)}{n}
+  \end{align*}
+  
+  The binomial distribution is a well-known discrete probability distribution, but its density function is cumbersome to work with, and so it is hard to compute binomial probabilities by hand. It is, of course, easy to do with \R.
+  
+<<eval=FALSE>>=
+plotDist("binom", params = list(size = n, prob = p_0))
+@
+
+  The binomial distribution depends on two parameters: the sample size $n$ and the proportion $p$. We won't talk much more about the binomial distribution in this class (to learn more, take MTH 153 or MTH 246). 
+
+  \item Normal Approximation: Use statistical theory to \emph{approximate} the null distribution. 
+  \begin{enumerate}
+    \item Assumptions: independence, normality, $np > 10$ and $n(1-p) > 10$
+    \item Pros: uses familiar normal distribution, approximation is usually pretty good, possible to compute without computers (kind of)
+    \item Cons: requires more assumptions, not exact
+  \end{enumerate}
+  
+  Since the binomial distribution can be cumbersome to work with, and because under very mild conditions it is approximately normal, scientists often use a normal distribution to approximate the null distribution for a single proportion. Consider the random variable $X$ defined above, and note that the sample proportion $\hat{p}$ can be thought of as the mean of a random sample of $n$ observations of $X$. The Central Limit Theorem implies that:
+  $$
+    \Ex[\bar{X}] = \mu_X = p \,, \qquad Var[\bar{X}] = \frac{\sigma^2_X}{n} = \frac{p(1-p)}{n} \,.
+  $$
+  In particular, this implies that $SE_{\hat{p}} = \sqrt{Var[\bar{X}]} = \sqrt{\frac{p(1-p)}{n}}$. Thus, we can use this formula for the standard error to \emph{approximate} the null distribution. 
+  
+<<fig.show='hide'>>=
+se_p0 <- sqrt(p_0 * (1-p_0) / n)
+plotDist("norm", params = list(mean = p_0, sd = se_p0))
+@
+
+  For a variety of reasons both historical and practical, the normal approximation is the method you are mostly likely to see in your future work, and thus it will be the focus of our attention here. 
+
+\end{enumerate}
+
+Note that the p-value is slightly different in each case (since our approximation of the null distribution is different in each case), but it is very close, and in each case we will easily reject the null hypothesis that $p = 0.5$ at the 5\% level. 
+
+\begin{enumerate}
+  \item Simulation: The p-value can be obtained using the \cmd{pdata} function, since the null distribution comes from simulated \textbf{data} in our workspace.
+
+<<>>=
+2 * pdata(~coke_pct, q = p_hat, data = sim, lower.tail = FALSE)
+@
+  \item Probability Theory: The p-value can be obtained using the \cmd{pbinom} function, since the null distribution follows a \textbf{binom}ial distribution.
+
+<<>>=
+2 * pbinom(p_hat * n, size = n, prob = p_0, lower.tail = FALSE)
+@
+  \item Normal Approximation: The p-value can be obtained using the \cmd{pnorm} function, since the null distribution follows a \textbf{norm}al distribution.
+
+<<>>=
+2 * pnorm(p_hat, mean = p_0, sd = se_p0, lower.tail = FALSE)
+@
+
+\end{enumerate}
+
+
+\paragraph{What Can Go Wrong?}
+
+Most of the time, the null distribution for a proportion will be quite normal. In the previous example, the fit was excellent.
+
+<<eval=FALSE, fig.width=10, fig.height=3, message=FALSE, echo=FALSE>>=
+dbinom_p <- function (x, size, prob, log = FALSE) {
+  n * dbinom(round(x * size), size, prob, log)
+}
+qplot(data = sim, x = coke_pct, geom = "density") +
+  stat_function(fun = dbinom_p, args = c(size = n, prob = p_0), col = "red") + 
+  stat_function(fun = dnorm, args = c(mean = p_0, sd = se_p0), col = "purple")
+@
+
+However, if $np < 10$ or $n(1-p) < 10$, then the normal approximation is likely not sufficiently good. Suppose that we had only sampled 12 people instead of 123. 
+
+<<eval=FALSE, echo=FALSE>>=
+n <- 12
+p <- 0.1
+data_frame(soda = c(rep("Coke", n * p), 
+                    rep("Pepsi", n * (1 - p)))) %>%
+  rep_sample_n(size = n, replace = TRUE, reps = 10000) %>%
+  group_by(replicate) %>%
+  summarize(N = n(), coke = sum(soda == "Coke")) %>%
+  mutate(coke_pct = coke / N) %>%
+  ggplot(aes(x = coke_pct)) + 
+    geom_density(adjust = 2) +
+    stat_function(fun = dbinom_p, args = c(size = n, prob = p), col = "red") + 
+    stat_function(fun = dnorm, args = c(mean = p, sd = sqrt(p * (1-p) / n)), col = "purple")
+@
+
+\paragraph{Exercise: Batting Averages, redux}
+
+Previously, we considered \href{http://en.wikipedia.org/wiki/Ted_Williams}{Ted Williams}' batting average of .406 in 1941, which is unmatched in 75 years and counting. In 1994, \href{http://en.wikipedia.org/wiki/Tony_Gwynn}{Tony Gwynn} of the San Diego Padres hit .394, but a strike by the player's union shortened the season after only 116 games. Thus, Gwynn accumulated 165 hits in 419 at-bats, whereas Williams had 185 hits in 456 at-bats. Let's assume that Gwynn had an unknown, fixed true batting average of $p$ in 1994. 
+
+\begin{enumerate}
+  \itemsep1.5in
+  \item The league average batting average in 1994 was .277. Use the normal approximation to test---at the 5\% level---the hypothesis that Gwynn was a league-average hitter. Do you reject or fail to reject? (\emph{Hint: If you don't have a computer to compute the p-value, find the $z$-score and approximate using the Empirical Rule})
+
+  \item Use the normal approximation to find a 95\% confidence interval for Gwynn's true batting average $p$. (\emph{Hint: Be sure to use $\hat{p}$ when computing the standard error! (see page 125)})
+  
+  
+  \item Does the confidence interval that you found contain the hypothesized proportion of .277? Does it contain .400? 
+  
+  \item A sportswriter claims that Gwynn does not deserve to be mentioned in the same breath as Williams, because Williams hit .400, but Gwynn did not. Does your analysis refute or support this claim? 
+  
+  \vspace{1.5in}
+
+
+\end{enumerate}
+
+
+\paragraph{Difference of two proportions}
+
+In many cases we will also want to make inferences about the difference between two proportions. Continuing the line of reasoning that we pursued last time, let $X$ be a binomial random variable that gives the number of hits that Williams will accrue in $n_1$ at-bats if his true batting average is $p_1$, and let $Y$ be another binomial random variable that gives the number of hits that Gwynn will accrue in $n_2$ at-bats if his true batting average is $p_2$. Then we can define a new random variable 
+  $$
+    Z = \frac{X}{n_1} - \frac{Y}{n_2}
+  $$
+that gives the difference in their respective batting averages. Using linearity of expectation, we can compute the expected value of the difference:
+$$
+  \Ex[Z] = \Ex \left[ \frac{X}{n_1} - \frac{Y}{n_2} \right] = \frac{1}{n_1} \cdot \Ex[X] - \frac{1}{n_2} \cdot \Ex[Y] = \frac{1}{n_1} \cdot n_1 p_1 - \frac{1}{n_2} \cdot n_2 p_2 = p_1 - p_2
+$$
+and the variance:
+\begin{align*}
+  Var[Z] &= Var \left[ \frac{X}{n_1} - \frac{Y}{n_2} \right] = \frac{1}{n_1^2} \cdot Var[X] + \frac{1}{n_2^2} \cdot Var[Y] \\
+  &= \frac{1}{n_1^2} \cdot n_1 \cdot p_1 (1-p_1) + \frac{1}{n_2^2} \cdot n_2 \cdot p_2 (1 - p_2) \\
+  &= \frac{p_1 (1-p_1)}{n_1} + \frac{p_2 (1-p_2)}{n_2}
+\end{align*}
+
+Just as before, this proves that the standard error is $SE_Z = SE_{\widehat{p_1 - p_2}} = \sqrt{SE_{\hat{p}_1}^2 + SE_{\hat{p}_2}^2}$. Once again, we'll typically use the normal approximation to the null distribution.  
+
+\begin{enumerate}
+  \itemsep1in
+  \item Using the normal approximation again, test the hypothesis that Williams and Gwynn had the same true batting averages in 1941 and 1994, respectively. 
+  
+  \item Since we are testing the hyopthesis that $p_1 = p_2$, it is more appropriate to use the \emph{pooled} estimate of the standard error (see page 133). Perform this test.
+  
+  \item Discuss the extent to which you think the performances of Williams and Gwynn were importantly different. 
+\end{enumerate}
+
+
+%' 
+%' \newpage
+%' 
+%' \paragraph{Solution to Exercises}
+%' 
+%' <<message=FALSE>>=
+%' require(Lahman)
+%' require(mosaic)
+%' players <- Batting %>%
+%'   filter(yearID == 1994 & AB > 200) %>%
+%'   mutate(BAvg = H / AB)
+%' favstats(~BAvg, data = players)
+%' @
+%' 
+%' \begin{enumerate}
+%'   \item
+%' 
+%' 
+%' <<>>=
+%' n <- 419
+%' p_hat <- 165/419
+%' p_0 <- .277
+%' se_0 <- sqrt(p_0 * (1 - p_0) / n)
+%' 2 * pnorm(p_hat, mean = p_0, sd = se_0, lower.tail = FALSE)
+%' @
+%' 
+%'   \item
+%' 
+%' <<>>=
+%' se_phat = sqrt(p_hat * (1 - p_hat) / n)
+%' p_hat + c(-1.96, 1.96) * se_phat
+%' @
+%' 
+%' 
+%' <<>>=
+%' t_and_g <- Batting %>%
+%'   filter((playerID == "gwynnto01" & yearID == 1994) |
+%'          (playerID == "willite01" & yearID == 1941)) %>%
+%'   select(playerID, yearID, AB, H) %>%
+%'   mutate(N = AB, p = H / AB, SE = sqrt(p * (1 - p) / N))
+%' t_and_g
+%' @
+%' 
+%'   \item
+%' <<>>=
+%' t_and_g <- t_and_g %>%
+%'   summarize(difference = diff(p), 
+%'             SE = sqrt(sum(SE^2))) %>%
+%'   mutate(ME = qnorm(0.975) * SE, 
+%'          lower = difference - ME, 
+%'          upper = difference + ME)
+%' with(t_and_g, xpnorm(difference, mean = 0, sd = SE))
+%' @
+%' 
+%'   \item
+%' 
+%' <<>>=
+%' p_hat <- (165 + 185) / (419 + 456)
+%' p_hat
+%' se_pooled <- sqrt(p_hat * (1 - p_hat) * (1/ 419 + 1/456))
+%' se_pooled
+%' @
+%' 
+%' \end{enumerate}
+
+
+
+\end{document}

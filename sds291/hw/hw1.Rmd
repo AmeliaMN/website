@@ -1,0 +1,52 @@
+---
+title: "Hw #1"
+author: "Your Name"
+date: "Due Monday, September 17, 2018 by 11:55 pm"
+output: html_document
+---
+
+***
+
+* Reading: Ch. 0
+* Exercises to hand in: 0.7, 0.15.
+    
+***
+
+```{r, message=FALSE}
+library(tidyverse)
+library(Stat2Data)
+library(skimr)
+```
+
+#### Exercise 0.7
+
+Write your answer here!
+
+
+#### Exercise 0.15
+
+> Hint: this is chapter 0. Don't feel like you need to do anything too complicated for your "model." Comparing plots or doing a simple linear regression is fine. 
+
+```{r}
+data(Day1Survey)
+head(Day1Survey)
+```
+
+##### Part a
+
+Does resting pulse differ by gender?
+
+```{r}
+Day1Survey %>%
+  group_by(Sex) %>%
+  skim(Pulse)
+
+ggplot(data=Day1Survey) + geom_density(aes(x=Pulse, color=Sex))
+```
+
+
+
+##### Part b
+
+Think of another question and answer it here!
+

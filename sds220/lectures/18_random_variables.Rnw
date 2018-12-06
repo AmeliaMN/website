@@ -1,0 +1,293 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{October 25, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Random Variables
+\end{enumerate}
+
+\paragraph{Warmup: Viruses} Sally graduated from Thims College and was immediately hired by a shop in downtown Northampton to help customers with computer-related problems. Lately, two different viruses have been bugging many customers (virus A and virus B). It is estimated that about 65\% of the customers with virus problems are bothered by virus A and the remaining 35\% by virus B. If the computer is infected by virus A, Sally has a 90\% chance of fixing the problem. However, if the computer is infected by virus B, this chance is only 70\%. Let A be the event that the computer is infected by virus A, and let F be the event that Sally fixed it. Find: 
+\begin{enumerate}
+  \itemsep0.5in
+  \item $\Pr(F^c | A)$
+  \item $\Pr(A \cap F^c)$
+  \item $\Pr(F)$
+  \item $\Pr(A|F)$
+\end{enumerate}
+
+\vspace{0.5in}
+
+\paragraph{Random Variables}
+
+Here is a brief guide to working with means and variances of random variables. 
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{cccccc}
+    Quantity & Denoted & Formula & $a + bX$ & $X + Y$ & \R \\
+    \hline
+    Mean & $\mu_X$, $\mathbb{E}[X]$ & $\sum_{i=1}^n p_i \cdot x_i$ & $a + b \mu_X$ & $\mu_X + \mu_Y$ & {\tt mean()} \\
+    Variance & $\sigma_X^2$, $Var[X]$ & $\sum_{i=1}^n p_i \cdot (x_i - \mu_X)^2$ & $b^2 \sigma_X^2$ & $\sigma_X^2 + \sigma_Y^2 + 2 \rho_{XY} \sigma_X \sigma_Y$ & {\tt var()} \\
+  \end{tabular}
+  \caption{Note: Here $p_i$ is the probability that $X = x_i$. $\rho_{XY}$ is the correlation between $X$ and $Y$ (Chapter 5).} 
+\end{table}
+
+\paragraph{Example}
+
+On a roulette wheel there are 38 numbered slices: 18 red, 18 black, and two green (labelled 0 and 00). The ball lands in each slice with equal probability. A \$1 bet on red or black pays back \$1. A \$1 bet on a single number pays \$35. What is the expected value of these bets? 
+
+\vspace{1.5in}
+
+\paragraph{In-Class Problems}
+
+\begin{enumerate}
+  \itemsep0.75in
+  
+%   	\item Suppose you have two fair dice, a 12-sided die and a 4-sided die
+%     \begin{enumerate}
+% 		\item Draw the state space (table), Let $X, Y$ be the r.v. for each die
+% 		\begin{enumerate}
+% 			\item $\Pr(X=11 \cap Y=3) = 1/48$
+% 			\item $\Pr((X=11 \cap Y=3) \cup (X=12 \cap Y=2)) = 2/48$ (PIE)
+% 			\item $\Pr(X + Y = 14) = 3/48$
+% 			\item $\Pr(X + Y \neq 14) = 1 - \Pr(X + Y = 14) = 45/48$
+% 			\item $F(X,Y) = \begin{cases} 1 & \text{if } X + Y = 14 \\ 0 & \text{otherwise} \end{cases}$
+% 			\item $\Ex[F] = \frac{45}{48} \cdot 0 + \frac{3}{48} \cdot 1 = \frac{3}{48}$
+% 		\end{enumerate}
+% 		\item $\Pr(X \text{ is prime} \cup 3 | Y) = \frac{24}{48} + \frac{16}{48} - \frac{8}{48} = \frac{2}{3}$
+% 		\item $\Pr(X + Y \text{ is a perfect square} \cup Y \text{ is prime}) = \frac{11}{48} + \frac{5}{12} - \frac{5}{48} = \frac{26}{48} $
+% 		\item $\Ex[X + Y] = \Ex[X] + \Ex[Y] = 6.5 + 2.5 = 9 = \frac{1}{48} \left( 1 + 2 \cdot 2 + 3 \cdot 3 + 4 \cdot \sum_{i=5}^{13} i + 3 \cdot 14 + 2 \cdot 15 + 16 \right) = \frac{18 \cdot 6 \cdot 4}{48} = \frac{432}{48}$
+%     \end{enumerate}
+
+    \item Consider the following card game with a well-shuffled deck of cards. If you draw a red card, you win nothing. If you get a spade, you win \$5. For any club, you win \$10 plus an extra \$20 for the ace of clubs.
+\begin{enumerate}
+\item Determine the probabilities for each amount you could win at this game. Also, find the expected winnings for a single game and the standard deviation of the winnings. Write out the full table. 
+\item What is the maximum amount you would be willing to pay to play this game? Explain.
+\end{enumerate}
+
+
+%   \item \textbf{Blackjack} In blackjack, you are dealt two cards, and all face cards count as 10. The ace can be one or eleven. What is the expected value of a randomly dealt hand from an infinite shoe? What is the probability of being dealt at least a 20? 
+% 
+% 
+% \begin{proof}
+%   Let $X_1, X_2$ be r.v. for the value of the two cards. Then since the shoe is infinite, $\Ex[X_1] = \Ex[X_2]$. Assuming that aces are always worth one, we have:
+%   $$
+%     \Ex[X_i] = \frac{1}{13} \left( \sum_{i=1}^9 i + 4 \cdot 10 \right) = \frac{1}{13} \left( \binom{10}{2} + 40 \right) = \frac{45 + 40}{13} = \frac{85}{13} \approx 6.5
+%   $$
+%   So then $\Ex[X_1 + X_2] \approx 13$. Allowing aces to be more than one improves this slightly. 
+%   
+%   There are $13 \cdot 13 = 169$ possible pairs. There are $4^2 = 16$ ways to get 20 without an ace. There are $2 \cdot 4 = 8$ ways to get blackjack. There are two ways to get 20 with an ace and a 9. Thus, there are $16 + 8 + 2 = 26$ ways to get at least a 20. Thus, the probability $\Pr[X_1 + X_2 \geq 20] = \frac{26}{169} \approx 15.4$\%. 
+% \end{proof}
+
+
+<<echo=FALSE, message=FALSE, warning=FALSE>>=
+require(mosaic)
+softball = c(3,2,6,0,1,1,0,3,2,2,1,1,1,3,2,4,12,3,15,0,2,0,4,3,2,1,1,1,0,1)
+basketball = c(90,80,63,71,70,73,74,68,77,82,82,63,95,50,63,58,65,74,53,79,71,71,52,76,65,61)
+# mean(basketball)
+# var(basketball)
+@
+
+
+  
+  
+  \item The frequency table for the number of runs that the Smith softball team scored in 2012 is shown below. Estimate the expected value of runs scored by computing (by hand) the sample mean.
+<<size='footnotesize'>>=
+tally(~softball)
+@
+  \item Suppose that in their final game, the team scored a season-high 16 runs. Estimate the new mean and variance (compute by hand). 
+  \item What is the probability that a letter selected uniformly at random from the alphabet will be between $B$ and $E$ in alphabetical order (inclusive)? What about between $E$ and $N$ (inclusive)? Is this the same as the probability that the letter will be between $B$ and $N$? Why or why not?
+  \item Suppose the mean gas bill for Nick's house is \$$81.24$ per month with standard deviation \$$66.53$, while the electric bill averages \$$76.67$ per month with a standard deviation of \$$25.34$. What is the mean and variance of Nick's combined utility bill, assuming that the gas and electric bill are independent? 
+%  \item Of course, the gas and electric bills are not independent, but have a $-0.1$ correlation. What is the mean and variance of the combined utility bill now?
+\end{enumerate}
+
+
+%  \newpage
+% 
+%  \subsection*{Instructor's Notes}
+% 
+%    \begin{proof}
+% 
+%    We are told that $\Pr(A) = 0.65$ and $\Pr(B) = 0.35$. We are also told that $\Pr(F |A) = 0.9$ and $\Pr(F | B) = 0.7$. It follows that:
+% 
+% 
+%  \begin{enumerate}
+%    \item $\Pr(F^c | A) = 1 - \Pr(F|A) = 1 - 0.9 = 0.1$
+%    \item $\Pr(A) = \Pr(A \cap F) + \Pr(A \cap F^c) \Rightarrow \Pr(A \cap F^c) = 0.65 - \Pr(F|A) \cdot \Pr(A) = 0.65 - 0.9 \cdot 0.65 = 0.65 \cdot 0.1 = 0.065$
+%    \item $\Pr(F) = \Pr(F \cap A) + \Pr(F \cap B) = \Pr(F|A) \cdot \Pr(A) + \Pr(F|B) \cdot \Pr(B) = 0.9 \cdot 0.65 + 0.7 \cdot 0.35 = 0.83$
+%    \item $\Pr(A|F) = \frac{\Pr(F|A) \cdot \Pr(A)}{\Pr(F)} = \frac{0.65 \cdot 0.9}{0.83} = 0.705$
+%  \end{enumerate}
+% 
+%    \begin{table}[h]
+%    \centering
+%  	\begin{tabular}{c|c|c||c}
+%  	& virus A & virus B & Total \\
+%  	\hline
+%  	fixed 		& $0.585$ 	& $0.245$ & $0.83$ \\
+%  	not fixed 	& $0.065$ 	& $0.105$ & $0.17$ \\
+%  	\hline
+%  	\hline
+%  	Total & \emph{0.65} & \emph{0.35} & \emph{1} \\
+%  	\end{tabular}
+%  	\end{table}
+%  	$$
+%  		\Pr(fix^c | A) = \frac{0.065}{0.65} = 10\%
+%  	$$
+% 
+%  \end{proof}
+% 
+%  \paragraph{Solution to Warmup}
+% 
+% 
+% 
+%  \paragraph{Random Variables}
+% 
+%  \begin{itemize}
+%    \item A \emph{random variable} $X$ does not have a fixed quantity. Rather, it is the description of a random process that can take on many different values, each with an associated probability
+%    \item You can think of $X: S \rightarrow \mathbb{R}$ where $S$ is the sample space of outcomes
+%    \item Every random variable has a probability distribution, which may or may not be \emph{parametric}
+%    \item The mean (aka expected value) of $X$ is just the average of all the values $X$ can take on, weighted by their respective probabilities
+%    \item The variance of $X$ is the same thing, except that its the squared deviations from the mean that are being averaged
+%  %  \item Law of Large Numbers: Let $\bar{x}$ be the average value of random sample of $n$ observations of the random variable $X$. Then as $n$ increases, $\bar{x}$ (the sample mean) approaches $\mu_X$ (the theoretical mean)
+%    \item Expected Value of a random variable $X$, where $k$ is the number of different values that $X$ can take on:
+%  		$$
+%  			\Ex[X] = \sum_{i=1}^k \Pr(X = x_i) \cdot x_i
+%  		$$
+%  	\item Linearity of Expectation: for any two r.v.s $X, Y$
+%  		$$
+%  			\Ex[aX + bY] = a \cdot \Ex[X] + b \cdot \Ex[Y]
+%  		$$
+%    \item If $X, Y$ are independent:
+%  		$$
+%  			Var[aX + bY] = a^2 \cdot Var[X] + b^2 \cdot Var[Y]
+%  		$$
+% 
+%  \end{itemize}
+% 
+%  \paragraph{Solution to Example}
+% 
+% 
+% 
+%  \begin{proof}
+%    Let $X$ be a r.v. giving the payout for a bet on red. Then
+%    $$
+%      \Ex[X] = \sum_{i=-1}^{1} \Pr[X=x_i] \cdot x_i = \frac{18}{38} \cdot 1 + \frac{20}{38} \cdot (-1) = -\frac{2}{38} = -\frac{1}{19}
+%    $$
+%    Now consider a bet on a single number. Let $Y$ be the payout. Then,
+%    $$
+%      \Ex[Y] = \sum_{i=-1}^{1} \Pr[Y=y_i] \cdot y_i = \frac{1}{38} \cdot 35 + \frac{37}{38} \cdot (-1) = -\frac{1}{19} = -\$0.053
+%    $$
+%    In fact, \emph{every} bet in roulette has exactly the same expected value!
+%  \end{proof}
+% 
+%  \paragraph{Solutions to Problems}
+% 
+%  \begin{enumerate}
+% 
+%    \item \begin{enumerate}
+%  \item The probability model and the calculation of the expected value and standard deviation are shown below:
+%  \begin{center}
+%  \renewcommand{\arraystretch}{1.5}
+%  \begin{tabular} { l | l | l | l | l | l}
+%  Event   & $X$ & $P(X)$   & $X \cdot P(X)$   & $(X - E(X))^2$	& $(X - E(X))^2 \cdot P(X)$ \\
+%  \hline
+%  Red		&0 & $\frac{26}{52}$ 		& $0 \times \frac{26}{52} = 0$		& $(0 - 4.14)^2 = 17.1396$
+%  	& $17.1396 \times \frac{26}{52} =  8.5698$ \\
+%  Spade	&5 & $\frac{13}{52}$ 		& $5 \times \frac{13}{52} = 1.25$ 	& $(5 - 4.14)^2 = 0.7396$
+%  	& $0.7396 \times \frac{13}{52} = 0.1849$ \\
+%  Club		&10 & $\frac{12}{52}$ 		& $10 \times \frac{12}{52} = 2.31$	& $(10 - 4.14)^2 = 34.3396$
+%  	& $34.3396 \times \frac{12}{52} = 7.9245$ \\
+%  Ace of clubs	&30 & $\frac{1}{52}$ 	& $30 \times \frac{1}{52} = 0.58$	& $(30 - 4.14)^2 = 668.7396$
+%  	& $668.7396 \times \frac{1}{52} = 12.8604$ \\
+%  \hline
+%  &&& $E(X) = 4.14$	& 	& $V(X) = 29.5396$ \\
+%  \multicolumn{5}{l |}{}  		& $SD(X) = \sqrt{V(X)} = 5.4350$
+%  \end{tabular}
+%  \end{center}
+%  \item If you are playing with the goal of making money, you should not play unless the cost of the game is less than \$4.14.
+%  \end{enumerate}
+% 
+%    \item
+% 
+%  <<>>=
+%  sum(softball)
+%  length(softball)
+%  mean(softball)
+%  var(softball)
+%  @
+% 
+%    \item
+% 
+% <<>>=
+% (sum(softball) + 16) / (length(softball) + 1)
+% @
+% 
+%    \item
+% 
+%    \item
+% 
+% 
+%  <<message=FALSE>>=
+%  require(mosaic)
+%  favstats(~ gasbill, data = Utilities)
+%  favstats(~ elecbill, data = Utilities)
+%  @
+% 
+%   \item
+% 
+%   <<message=FALSE>>=
+%  cor(gasbill ~ elecbill, data = Utilities)
+%  @
+% 
+%  \end{enumerate}
+
+\end{document}

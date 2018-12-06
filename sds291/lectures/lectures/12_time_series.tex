@@ -1,0 +1,171 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Profs. Baumer \& Indurkhya}}
+\chead{\textsc{MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+\DeclareMathOperator{\X}{\mathbf{X}}
+\DeclareMathOperator{\Hatmat}{\mathbf{H}}
+
+\rhead{\textsc{April 20, 2015}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Time Series 
+  \item Moving Averages
+  \item Autoregressive models
+  \item ARIMA models
+\end{enumerate}
+
+
+\paragraph{Time Series}
+
+A Time series is a set of variables measured over time. Some examples are census data taken at equally spaced intervals with a consistency in the method of measurement and the variables measured, meteorological measurements, utility supply and demand measurements.
+
+Before we proceed with modeling any time series data we need to understand the mechanism generating the time series. These include describing any sources of variations, seasonality, trends, cycles inherent in a time series.
+
+\emph{Trend} Trend is a long term pattern in the series that is either decreasing or increasing. It can have a "zig-zag" pattern for shorter time periods within the series.
+
+\emph{Seasonality} Seasonality is a recurring pattern for each period e.g. annual seasonal patterns have a cycle that is 12 periods long, with each month being a period. If the periods are quarters then the annual seasonal pattern is 4 periods long. It is desirable to get an estimate of the seasonal index to assess seasonality in the dataset. A seasonal index measures the extent of seasonal influence for a particular segment of the year i.e. it compares the expected value of each period to the overall or grand mean. In particular, we are interested in estimating how much each value for a period is above or below the grand mean. 
+
+Note: Most time series data from US government websites is deseasonalized i.e. trends to seasonality factors have been removed.
+
+\emph{Cycle} These are patterns in the data which are not due to seasonality.
+
+Decomposition analysis to separate out the Seasonal (S), Trend (T) and Cycle (C) components along with Irregularity (I) and remove their influence from the data (X) before analysis.
+
+$$ X_{t} = S_{t} T_{t} C{t} I
+$$
+
+Moving Averages are smoothing techniques that can help discern the various components above in the data.
+
+\paragraph{Moving Averages}
+In classical time series, Trend-Cycles are removed using "moving averages". A simple moving average of order 'm" is defined as:
+
+$$
+    	\widehat{T_{t}} = \frac{1}{m}{\sum_{j=-k}^{k}} X_{t+j}
+  	$$
+
+Other moving averages methods include weighted moving averages, and other complex smoothing techniques.
+
+
+\paragraph{Autoregressive models}
+
+In an autoregressive model we use multivariate regression to model the variable using a linear combination of the variable values over past time periods. The model for order p is:
+
+Consider the addition of an \emph{interaction} term:
+  	$$
+  		x_t = c + \phi_1 x_{t-1} + \phi_2 x_{t-2} + .....+\phi_{p} x_{t-p}+ \epsilon_{t}
+  	$$
+
+See Time series lab for example of AR(1) and AR(2) models and conditions.
+
+
+
+\paragraph{Autoregressive moving average (ARIMA) Models}
+
+ARIMA models are widely used to model time series data. 
+
+Most forecasting methods in time series also require certain stationarity conditions. Here are some commonly desirable conditions:
+
+\emph{First Order Stationary}: If the expected value of variable X(t) is the same for all t then it is said to be First Order Stationary. This is typically achieved by detrending the data using methods such as differencing.
+
+\emph{Second Order Stationary}: If X(t) is first order stationary and the covariance between X(t) and X(s) is a function of the length (t-s) then is is Second Order Stationary. In econometrics this is commonly achieved by taking a transformation e.g. taking square root of the variable.
+
+Taking differences of two consecutive observations is one approach to making the time series stationary.  Seasonal differencing is used when differences are taken over consecutive periods. More on differencing in R is illustrated in the lab handout.
+
+Maximum likelihood estimation is the method of choice (you used this in logistic regression) as it is similar to the least squares regression estimate in that minimizes the sum of square residuals. Similar to logistic regression, here we find the parameter estimates that maximize the log likelihood. R uses AIC to find the "best" model. Corrected AIC along with details on estimation and order selection can be found in Section 8.6 of Forecasting: principles and practice
+
+\end{document}

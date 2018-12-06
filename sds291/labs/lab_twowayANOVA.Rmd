@@ -1,0 +1,161 @@
+---
+title: "Two-way ANOVA"
+output:
+  html_document:
+    css: lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=FALSE)
+```
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(Stat2Data)
+library(skimr)
+```
+
+### Importing data
+
+For today's work with two-way ANOVA, we'll be considering data about student scores on four exams. The data are often presented to us in a compact, but un-tidy way. Let's begin by reading in the data from a csv file. We haven't done this before in this class-- previously, all our datasets were available through the `Stat2Data` package, and we used the `data()` command to read them into our local environment. With an external file, we will use the `read_csv()` function to read from a file. 
+
+This is where issues with file paths begin to crop up. If you're using RStudio Cloud, make sure your csv file is uploaded to the Files tab of your RStudio. If you're working locally, try to put the file in your working directory (perhaps, a folder titled STAT320, or similar). You can check your working directory by running `getwd()` in the Console. 
+
+I've placed my file in my working directory, so I don't need to use a filepath:
+
+```{r}
+FourExams <- read_csv("FourExams.csv")
+```
+
+If you're having trouble figuring out your filepath, use the RStudio GUI to load in the file. On the Environment tab, click Import Dataset and choose "From text (readr)." Then, browse to the csv file, check to make sure the data looks okay, and click Import. Then, you can copy the code that gets output into your Console to your RMarkdown document. 
+
+### Reshaping data
+
+```{r}
+FourExams
+```
+
+Right now, this data is un-tidy. When we think about the variable we are interested in prediction, it is Exam Score. The scores are present in the data, but locked in the cells, and there is no variable named `score.` We'd prefer the data to have a variable for exam, one for student, and one for score. This would allow us to take a mean of the `score` variable, for example.
+
+In R, there are two functions that allow you to reshape your data, `gather()` and `spread()`. We'll use `gather()` in this case. 
+
+As with most things in R, we would need to use an assigment operator to save over our old data, so we can play with the function a bit without using that, to see what it does. 
+
+```{r}
+FourExams %>% gather()
+```
+
+This is getting closer, but isn't exactly what we want. We want the `exam` column's information to be preserved, so we need to use the `-` operator to preserve it. If you look at the documentation for `gather`, the first argument is `data` (passed in through the pipe), the second is `key`, the third is `value` and then there are dots indicating you can select some columns. So, to use the `-` operator we need to explicitly specify our key and value, rather than letting them stay the default (`key` and `value`). 
+
+```{r}
+FourExams %>% gather(student, score, -exam)
+```
+
+That looks right! Now, we can save over our original version of the data, or give it a new name.
+
+```{r}
+FourExamsRS <- FourExams %>% gather(student, score, -exam)
+```
+
+
+### Summary statistics 
+
+Now that our data is shaped correctly, we can do summary statistics on it. For example,
+
+```{r}
+FourExamsRS %>%
+  group_by(exam) %>%
+  summarize(mean(score))
+
+FourExamsRS %>%
+  group_by(student) %>%
+  summarize(mean(score))
+
+FourExamsRS %>%
+  summarize(mean(score), sd(score))
+```
+
+What is different about each of those summaries?
+
+(We could also have used `skim`, but that produces more output.)
+
+### One-way ANOVA
+
+The approach we've had thus far is to do one-way ANOVA. We could run `aov` with either of our other variables as predictors for `score`. 
+
+```{r}
+a1 <- aov(score~exam, data=FourExamsRS)
+model.tables(a1)
+summary(a1)
+
+a2 <- aov(score~student, data=FourExamsRS)
+model.tables(a2)
+summary(a2)
+```
+
+From this, we can see that the student is a very significant predictor of score, but that exam is not. However, we may believe that **both** these factors are actually relevant. This is where two-way ANOVA comes in.
+
+
+### Two-way ANOVA
+
+Just like multiple regression, we can add additional terms to `aov` using the plus sign.
+
+```{r}
+a3 <- aov(score~exam+student, data=FourExamsRS)
+model.tables(a3)
+summary(a3)
+```
+
+Now, exam **is** a significant predictor, because it is taken in the context of `student.` As with regression, we need to consider the residual plots to assess our model.
+
+```{r}
+plot(a3)
+```
+
+
+### (quick aside) Multiple testing
+
+We've talked about the problem of multiple testing and three possible solutions to the problem,
+- Bonferroni correction
+- Fisher's Least Significant Difference
+- Tukey's Honest Significant Difference
+
+Let's try them out on some cancer data,
+
+```{r}
+data(CancerSurvival)
+a4 <- aov(Survival ~ Organ, data=CancerSurvival)
+summary(a4)
+```
+
+So, there is at least one $$\alpha_i\neq0$$. But, which one? 
+
+The Bonferroni correction is easiest to apply to a pairwise t-test,
+
+```{r}
+pairwise.t.test(CancerSurvival$Survival, CancerSurvival$Organ, p.adjust.method="bonferroni")
+```
+
+The LSD and HSD, on the other hand, work on model objects. 
+
+```{r}
+# install.packages("agricolae")
+library(agricolae)
+
+print(LSD.test(a4, "Organ"))
+```
+
+The place to look is the final `$groups` section, where the letters indicate which groups are similar are which are different. Here, Breast-Colon, Breast-Stomach, Breast-Bronchus, and Ovary-Bronchus show a statistically significant differences. 
+
+Tukey's HSD is perhaps easier to run and interpret. 
+
+```{r}
+TukeyHSD(a1)
+```
+
+Note that Tukey's HSD is more conservative than Fisher's LSD, but less conservative than the Bonferroni correction. In fact, this will always be the case, since the critical values follow these implied inequalities.
+

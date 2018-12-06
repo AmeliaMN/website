@@ -1,0 +1,91 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+
+\rhead{\textsc{October 20, 2016}}
+
+\usepackage{Sweave}
+\begin{document}
+\input{10_exam1review-concordance}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Putting it all together
+  \item Regression summary lab?
+\end{enumerate}
+
+\paragraph{Pulling it all together}
+We use models to help us simplify the world. Linear models assume a linear structure in 2 or many dimensions, and can be used to summarize existing data or predict values for new data. 
+
+Using data, we make estimates of model parameters (statistics) and try to determine how good our estimates are. We're always assuming our data is a random sample of the larger population of interest. 
+\\
+\\ Relationship between the population, the sample, the parameters and the statistics:
+\vspace{1.5in}
+\\
+Lets try to categorize some of the tasks we have learned how to perform. Where in the CFAU process do these fit?
+\\ Checking conditions, performing hypothesis tests on coefficients, interpreting coefficient values, finding confidence intervals for means, finding confidence intervals for specific values (prediction intervals), performing transformations, checking for outliers, looking at $R^2$, looking at $R^2_{adj}$. 
+\\
+What are some more tasks we have performed?
+\\
+\\
+Choose
+\vspace{1in}
+\\
+Fit
+\vspace{1in}
+\\
+Assess
+\vspace{1in}
+\\
+Use
+\vspace{1in}
+
+
+
+
+
+\end{document}

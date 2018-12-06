@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Project Instructions</title>
+
+<script src="lib/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="lib/navigation-1.1/tabsets.js"></script>
+<link href="lib/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="lib/highlightjs-9.12.0/highlight.js"></script>
+<style type="text/css">
+
+/* padding for bootstrap navbar */
+body {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+/* offset scroll position for anchor links (for fixed navbar)  */
+@media (min-width: 980px) {
+  .section h2 {
+    padding-top: 52px;
+    margin-top: -52px;
+  }
+  .section h3 {
+    padding-top: 52px;
+    margin-top: -52px;
+  }
+}
+
+
+/* don't use link color in navbar */
+.dropdown-menu>li>a {
+  color: #666;
+}
+
+
+</style>
+
+<link rel="stylesheet" href="lib/font-awesome-4.1.0/css/font-awesome.min.css"/>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/beanumber.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>
+    </div>    
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Syllabus</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+<li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="RMarkdownTroubleshooting.html">RMarkdown Troubleshooting</a></li>
+              <li><a href="Rtips.html">R and RStudio tips</a></li>
+              <li><a href="RMarkdownTips.html">RMarkdown tips</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lectures <span class="caret"></span></a>
+            <ul class="dropdown-menu scrollable-menu" role="menu">
+               <li class="dropdown-header">Notes</li>
+                <li><a href="lectures/01_intro.pdf">01 - Introduction</a></li>
+                <li><a href="lectures/02_slr.pdf">02 - Simple Linear Regression</a></li>
+                <li><a href="lectures/03_regression_conditions.pdf">03 - Conditions for Regression</a></li>
+                <li><a href="lectures/04_transformations.pdf">04 - Transformations</a></li>
+                <li><a href="lectures/05_slr_inference.pdf">05 - Inference for SLR</a></li>
+                <li><a href="lectures/06_mlr.pdf">06 - Multiple Linear Regression</a></li>
+                <li><a href="lectures/07_interpretation.pdf">07 - Interpretation</a></li>
+                <li><a href="lectures/08_second_order.pdf">08 - Second Order Models</a></li>
+                <li><a href="lectures/09_multicollinearity.pdf">09 - Multicollinearity</a></li>
+                <li><a href="lectures/10_exam1review.pdf">10 - Exam 1 review</a></li>
+                <li><a href="lectures/11_interactionplots.pdf">11 - Interaction plots</a></li>
+                <li><a href="lectures/12_nestedFtests.pdf">12 - Nested F tests</a></li>
+                <li><a href="lectures/13_Ch3cleanup.pdf">13 - Polynomial regression, etc</a></li>
+                <li><a href="lectures/14_modelselection.pdf">14 - Model Selection</a></li>
+                <li><a href="lectures/15_bootstrap.pdf">15 - Randomization & the Bootstrap</a></li>
+                <li><a href="lectures/16_unusualpoints.pdf">16 - Unusual Points</a></li>
+                <li><a href="lectures/17_anova.pdf">17 - ANOVA</a></li>
+                <li><a href="lectures/18_moreANOVA.pdf">18 - More ANOVA</a></li>
+                <li><a href="lectures/19_logistic.pdf">19 - Logistic Regression</a></li>
+                <li><a href="lectures/20_moreLogistic.pdf">20 - More Logistic Regression</a></li>
+                <li><a href="lectures/21_wrapup.pdf">21 - Wrapping up</a></li>
+                <!-- <li><a href="lectures/Logistic_Regression_Cheatsheet.pdf">Logistic Regression Cheatsheet</a></li>
+                <li><a href="lectures/15_time_series.pdf">15 - Time Series</a></li>
+                <li><a href="lectures/11_data_wrangling.pdf">11 - Data Wrangling</a></li>     
+-->        <li class="divider"></li>
+
+        <li class="dropdown-header">Source</li>
+                <li><a href="lectures/01_intro.Rnw">01 - Introduction</a></li>
+                <li><a href="lectures/02_slr.Rnw">02 - Simple Linear Regression</a></li>
+                <li><a href="lectures/03_regression_conditions.Rnw">03 - Conditions for Regression</a></li>
+                <li><a href="lectures/04_transformations.Rnw">04 - Transformations</a></li>
+                <li><a href="lectures/05_slr_inference.Rnw">05 - Inference for SLR</a></li>
+                <li><a href="lectures/06_mlr.Rnw">06 - Multiple Linear Regression</a></li>
+                <li><a href="lectures/07_interpretation.Rnw">07 - Interpretation</a></li>
+                <li><a href="lectures/08_second_order.Rnw">08 - Second Order Models</a></li>
+                <li><a href="lectures/09_multicollinearity.Rnw">09 - Multicollinearity</a></li>
+                <li><a href="lectures/10_exam1review.Rnw">10 - Exam 1 review</a></li>
+                <li><a href="lectures/11_interactionplots.Rnw">11 - Interaction plots</a></li>
+                <li><a href="lectures/12_nestedFtests.Rnw">12 - Nested F tests</a></li>
+                <li><a href="lectures/13_Ch3cleanup.Rnw">13 - Polynomial regression, etc</a></li>
+                <li><a href="lectures/14_modelselection.Rnw">14 - Model Selection</a></li>
+                <li><a href="lectures/15_bootstrap.Rnw">15 - Randomization & the Bootstrap</a></li>
+                <li><a href="lectures/16_unusualpoints.Rnw">16 - Unusual Points</a></li>
+                <li><a href="lectures/17_anova.Rnw">17 - ANOVA</a></li>
+                <li><a href="lectures/18_moreANOVA.Rnw">18 - More ANOVA</a></li>
+                <li><a href="lectures/19_logistic.Rnw">19 - Logistic Regression</a></li>
+                <li><a href="lectures/20_moreLogistic.Rnw">20 - More Logistic Regression</a></li>
+                <li><a href="lectures/21_wrapup.Rnw">21 - Wrapping up</a></li>
+                <!-- <li><a href="lectures/15_time_series.Rnw">15 - Time Series</a></li>
+                <li><a href="lectures/11_data_wrangling.Rnw">11 - Data Wrangling</a></li>
+              
+-->
+
+              </ul>
+          </li>                     
+          <li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Labs <span class="caret"></span></a>
+            <ul class="dropdown-menu scrollable-menu" role="menu">
+               <li class="dropdown-header">Lab</li>
+                <li><a href="labs/lab-intro.html">Introduction to R and RStudio</a></li>
+                <li><a href="labs/lab_residuals.html">Residuals</a></li>
+                <li><a href="labs/lab_transformations.html">Transformations</a></li>
+                <li><a href="labs/lab_intervals.html">Intervals</a></li>
+                <li><a href="labs/lab_regression_summary.html">Regression Summary</a></li>
+                <li><a href="labs/lab_multicollinearity.html">Multicollinearity</a></li>
+                <!-- <li><a href="labs/lab_added_variables.html">Added Variable Plots</a></li> -->
+                <li><a href="labs/lab_stepwise.html">Stepwise Regression</a></li>
+                <li><a href="labs/lab_randomization.html">Randomization & the Bootstrap</a></li>
+                <li><a href="labs/lab_anova.html">ANOVA</a></li>
+                <li><a href="labs/lab_wrangling1.html">Data Wrangling, part I</a></li>
+                <li><a href="labs/lab_multiple_testing.html">Multiple Testing</a></li>
+                <li><a href="labs/lab_logistic_regression.html">Logistic Regression</a></li>
+                <!--<li><a href="labs/lab_logistic_fit.html">Logistic Regression Fit</a></li>--> 
+                <li><a href="labs/lab_wrangling2.html">Data Wrangling, part II</a></li>
+                <!--<li><a href="labs/lab_panel_data.html">Panel Data</a></li>
+                <li><a href="labs/lab_time_series.html">Time Series</a></li>
+                <li><a href="labs/lab_missing.html">Missing Data</a></li>
+--> 
+<li class="divider"></li>
+               <li class="dropdown-header">Source</li>
+                <li><a href="labs/lab-intro.Rmd">Introduction to R and RStudio</a></li>
+                  <li><a href="labs/lab_residuals.Rmd">Residuals</a></li>
+                  <li><a href="labs/lab_transformations.Rmd">Transformations</a></li>
+                  <li><a href="labs/lab_intervals.Rmd">Intervals</a></li>
+                  <li><a href="labs/lab_regression_summary.Rmd">Regression Summary</a></li>
+                  <li><a href="labs/lab_multicollinearity.Rmd">Multicollinearity</a></li>
+                  <!--  <li><a href="labs/lab_added_variables.Rmd">Added Variable Plots</a></li> --> 
+                  <li><a href="labs/lab_stepwise.Rmd">Stepwise Regression</a></li>
+                  <li><a href="labs/lab_randomization.Rmd">Randomization & the Bootstrap</a></li>
+                  <li><a href="labs/lab_anova.Rmd">ANOVA</a></li>
+                  <li><a href="labs/lab_wrangling1.Rmd">Data Wrangling, part I</a></li>
+                  <li><a href="labs/lab_multiple_testing.Rmd">Multiple Testing</a></li>
+                  <li><a href="labs/lab_logistic_regression.Rmd">Logistic Regression</a></li>
+                  <!-- <li><a href="labs/lab_logistic_fit.Rmd">Logistic Regression Fit</a></li> -->
+                  <li><a href="labs/lab_wrangling2.Rmd">Data Wrangling, part II</a></li>
+                  <!--<li><a href="labs/lab_panel_data.Rmd">Panel Data</a></li>
+                  <li><a href="labs/lab_time_series.Rmd">Time Series</a></li>
+            -->
+
+              </ul>
+          </li>     
+          <li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Homework  <span class="caret"></span></a>
+           <ul class="dropdown-menu scrollable-menu" role="menu">
+               <li class="dropdown-header">Homework</li>
+                <li><a href="hw/hw1.Rmd">Homework 1</a></li>
+                <li><a href="hw/hw2.Rmd">Homework 2</a></li>
+                <li><a href="hw/hw3.Rmd">Homework 3</a></li>
+                <li><a href="hw/hw4.Rmd">Homework 4</a></li>
+                <li><a href="hw/hw5.Rmd">Homework 5</a></li>
+                <li><a href="hw/hw6.Rmd">Homework 6</a></li>
+                <li><a href="hw/hw7.Rmd">Homework 7</a></li>
+                <li><a href="hw/hw8.Rmd">Homework 8</a></li>
+                <li><a href="hw/hw9.Rmd">Homework 9</a></li>
+                <li><a href="hw/hw10.Rmd">Homework 10</a></li>
+                <li><a href="hw/hw11.Rmd">Homework 11</a></li>
+
+             <!-- <li class="divider"></li>
+                <li class="dropdown-header">Homework Keys</li>   
+                  <li><a href="hw/hw1_answers.html">Homework 1</a></li>    
+                  <li><a href="hw/hw2_solutions.html">Homework 2</a></li>    
+                  <li><a href="hw/hw3_solutions.html">Homework 3</a></li>    
+                  <li><a href="hw/hw4_answers.html">Homework 4</a></li>    
+                  <li><a href="hw/hw5_solutions.html">Homework 5</a></li>    
+                  <li><a href="hw/hw6_solutions.html">Homework 6</a></li>   
+                  <li><a href="hw/hw7_solutions.html">Homework 7</a></li>     
+                  <li><a href="hw/hw8_solutions.html">Homework 8</a></li>     
+                  <li><a href="hw/hw9_solutions.html">Homework 9</a></li> 
+                  <li><a href="hw/hw10_solutions.html">Homework 10</a></li>
+                  <li><a href="hw/hw11_solutions.html">Homework 11</a></li> -->
+
+              </ul>
+</li>
+                         
+               
+<li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Project, etc  <span class="caret"></span></a>
+           <ul class="dropdown-menu scrollable-menu" role="menu">
+
+               <li class="divider"></li>
+               <li class="dropdown-header">Project</li>              
+                <li><a href="project.html">Instructions</a></li> 
+                <li><a href="project_schedule.html">Schedule</a></li>   
+                <li><a href="DataAppendix.Rmd">Data appendix Rmd (sample)</a></li>
+                <li><a href="DataAppendix.html">Data appendix HTML (sample)</a></li>
+                <li class="dropdown-header">Sample Projects</li> 
+               <!--<li><a href="handouts/SampleWriteup1.html">Sample Report 1</a></li>  
+               <li><a href="handouts/SampleWriteup2.html">Sample Report 2</a></li> -->
+               <li><a href="handouts/gradesheet_s1.pdf">Peer evaluation sheet</a></li>
+
+                <li class="divider"></li>
+
+                <li class="dropdown-header">Exams</li> 
+                <li><a href="exam_corrections.html">Exam correction policy</a></li>                    
+              
+               <!--   <li><a href="handouts/exam1_sample_solutions.pdf">Exam 1: Sample Solutions</a></li>
+                
+              
+              <li><a href="handouts/exam2_sample_solutions.pdf">Exam 2: Sample Solutions</a></li>-->      
+                 
+</ul>
+</li>
+
+            </ul>
+          </li>
+        </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Project Instructions</h1>
+
+</div>
+
+
+<p>As a major component of this class, you (and your group) will conduct a statistical study on a topic of your choice. This task will require you to write a project proposal, acquire and analyze relevant data, present your results orally to the class, and hand in a written report describing your study and its findings. Your project must involve fitting a <em>regression</em> model. The project is an opportunity to show off what you’ve learned about data analysis, visualization, and statistical inference. It is a major component of the class, and successful completion is required to pass.</p>
+<div id="group-formation" class="section level4 unnumbered">
+<h4>Group Formation</h4>
+<p>You will work in a group of three, of your choosing. Each group will be assigned a letter, and you will use <code>Group-X</code> with your particular letter in all communications and file submissions from that point forward.</p>
+</div>
+<div id="assignment" class="section level4 unnumbered">
+<h4>Assignment</h4>
+<p>You should pose a problem that you find interesting and which may be addressed (at least in part) through the analysis of data. Many interesting quantitative questions (and perhaps even more uninteresting ones) involve the relationships among several variables. Recent projects have considered the following questions:</p>
+<ul>
+<li><p>What factors influence the number of Hospital Acquired Infections (HAIs) found in the United States?</p></li>
+<li><p>What is the relationship between the price of real estate in Allegheny County and the size of the house, as measured in square feet, lot size, number of bedrooms and more?</p></li>
+<li><p>Can we predict the price of AirB&amp;B rentals?</p></li>
+<li><p>What factors are associated with a “helpful” Yelp review?</p></li>
+<li><p>What factors influence the incidence of tuberculosis in the U.S.?</p></li>
+<li><p>How can we predict teen alcohol consumption?</p></li>
+</ul>
+<p>You should pose the problem that you want to solve as precisely as possible at the outset. Next, identify the population you want to describe, and think about how you will obtain relevant data. What kind of model might be appropriate in this context? You should also make a hypothesis, <em>a priori</em> (before you analyze the data), about the results you expect to see.</p>
+<p>Most of you will pose your own question and acquire data from the internet, some may wish to analyze data that someone else (e.g., a professor or office at St. Thomas, published data in a magazine or newspaper) has collected for another purpose. Please consult me if you plan to do this.</p>
+</div>
+<div id="general-rules" class="section level4">
+<h4>General Rules</h4>
+<p>You all <em>must</em> speak during the oral presentation. You may discuss your project with other students, but each of you will have a different topic, so there is a limit to how much you can help each other. You may consult other sources for information about the non-statistical, substantive issues in your problem, but you should credit these sources in your report. Feel free to consult with me about statistical questions.</p>
+</div>
+<div id="timeline" class="section level4 unnumbered">
+<h4>Timeline</h4>
+<p>Please see the project schedule for due dates.</p>
+</div>
+<div id="submission" class="section level4 unnumbered">
+<h4>Submission</h4>
+<p>All deliverables described above must be delivered electronically via Canvas by 11:59pm (one minute before midnight) on the due dates. Only one person from the group should submit the group’s product for each checkpoint (with the exception of the Group Dynamic, which is individual).</p>
+</div>
+<div id="components" class="section level4">
+<h4>Components</h4>
+<div id="roster" class="section level5">
+<h5>Roster</h5>
+<p>Form a group of 3 students from your section. Have one person send a group roster electronically by the date listed above, with appropriate cc’s, using the message subject header <code>STAT 320 Group Roster</code>. Take the initiative to ask around and find a group to work with.</p>
+</div>
+<div id="proposals" class="section level5">
+<h5>Proposals</h5>
+<p>Count on brainstorming at least half a dozen serious ideas before you can groom one of them into a mature proposal.</p>
+<p>For the most part, the choice of topic is left up to you. Try to pick something that’s interesting yet substantial and worth studying, and aim for a topic that you think nobody has tried before; remember that part of your overall grade will be based on originality.</p>
+<div id="places-to-find-data" class="section level6 unnumbered">
+<h6>Places to Find Data</h6>
+<p>Finding the right data to answer your particular question is part of your responsibility for this assignment. Public data sets are available from hundreds of different websites, on virtually any topic. You might not be able to find the exact data that you want, but you should be able to find data that is relevant to your topic. You may also want to refine your research question so that it can be more clearly addressed by the data that you found. But be creative! Go find the data that you want!</p>
+<p>Below is a list of places to get started, but this list should be considered grossly non-exhaustive:</p>
+<ul>
+<li><p>Data is Plural <a href="https://tinyletter.com/data-is-plural">tinyletter</a> and associated <a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0">spreadsheet</a></p></li>
+<li><p>FiveThirtyEight <a href="https://github.com/fivethirtyeight/data">data archive</a></p></li>
+<li><p><a href="https://www.data.gov/">Data.gov</a> 186,000+ datasets!</p></li>
+</ul>
+<p>-<a href="http://www.socialexplorer.com/">Social Explorer</a> is a great interface to Census and American Community Survey data (much more user-friendly than the official government sites). Smith has a site license, but you may need to create an account.</p>
+<ul>
+<li><p><a href="http://dasl.datadesk.com/">Data and Story Library</a> (DASL). (This, and <a href="http://it.stlawu.edu/~rlock/">more</a> ideas from Robin Lock.)</p></li>
+<li><p>Jo Hardin at Pomona College has a <a href="http://research.pomona.edu/johardin/datasources/">nice list</a> of data sources on her website.</p></li>
+<li><p>U.S. <a href="http://www.bls.gov/">Bureau of Labor Statistics</a></p></li>
+<li><p>U.S. <a href="http://www.census.gov">Census Bureau</a></p></li>
+<li><p><a href="https://www.gapminder.org/data/">Gapminder</a>, data about the world.</p></li>
+<li><p>IRE and NICAR are good resources for the types of data journalists care about. For example, <a href="https://github.com/InsideEnergy/24-energy-stories-CAR16">Energy data sources</a> and <a href="http://blog.chryswu.com/2016/03/08/nicar16-slides-links-tutorials-resources/">Chrys Wu’s resource page</a>.</p></li>
+<li><p>Nathan Yau’s (old) <a href="http://flowingdata.com/2009/10/01/30-resources-to-find-the-data-you-need/">guide to finding data on the internet</a></p></li>
+</ul>
+<p>Keep the following in mind as you select your topic and dataset:</p>
+<ul>
+<li><p>You need to have enough data to make meaningful inferences. There is no magic number of observations required for all projects. But aim for at least 200 observations and make sure there are at least 20 individuals in each category of each of your categorical variables (if you have any).</p></li>
+<li><p>Most projects will measure a quantitative outcome, with at least two other variables included in the dataset (ideally at least one of which is quantitative). Most of you will use multiple linear regression for your primary analyses.</p></li>
+</ul>
+<p>Once I respond to your initial proposal, you will revise it (perhaps starting with a different dataset), then submit a new proposal that addresses my feedback. Supply essentially the same information required for the initial proposal, but give a bit more detail.</p>
+</div>
+</div>
+<div id="content" class="section level5">
+<h5>Content</h5>
+<p>Your initial and revised proposals should contain the following content:</p>
+<ol style="list-style-type: decimal">
+<li><p>Group Members and Group Letter: List the members of your group, and include the letter that has been assigned to your group</p></li>
+<li><p>Title: Your title</p></li>
+<li><p>Purpose: Describe the general topic/phenomenon you want to study, as well as some focused questions that you hope to answer and specific hypotheses you intend to assess.</p></li>
+<li><p>Data: Describe the data that you plan to use, with specifications of where it can be found (URL) and a short description. Eventually, you may want to combine data from multiple sources into one file. We will discuss data management techniques in the coming weeks, but for now you should simply list multiple sources if you have them.</p></li>
+<li><p>Population: Specify what the observational units are (i.e. the rows of the data frame), describe the larger population/phenomenon to which you’ll try to generalize, and (if appropriate) estimate roughly how many such individuals there are in the population.</p></li>
+<li><p>Response Variable: What the response variable? What are its units? Estimate the range of possible values that it may take on.</p></li>
+<li><p>Explanatory Variables: Describe the variables that you’ll examine for each observational unit (i.e. the columns of the data frame). Carefully define each variable and describe how each was measured. For categorical variables, list the possible categories; for quantitative variables, specify the units of measurement. You may want to add more variables later on, but you should have at least 5 variables already.</p></li>
+</ol>
+</div>
+<div id="data-appendix" class="section level5">
+<h5>Data appendix</h5>
+<p>The data appendix is a first foray into examining your data. It is designed to help you identify issues you may need to address with data cleaning, merging, or other solutions. It should be prepared as an Rmd file, and you will need to submit three documents on moodle:</p>
+<ul>
+<li>Your data file (or a zip folder containing multiple data files) in <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV format</a> (<code>.csv</code>)</li>
+<li>The Rmd file of your data appendix</li>
+<li>A knitted HTML file of your data appendix</li>
+</ul>
+<p>Before you begin, you should re-name your data file(s) to something that incorperates your group letter (e.g. “C”) and something about the type of data contained (e.g. <code>group-C-education-data.csv</code>).</p>
+<p>At the beginning of the Data appendix, you will load your data. This will mean using the <code>read_csv()</code> function. If you are not sure how to use this function, try using the Import Dataset button in RStudio and then copying the resulting code.</p>
+<p>Then, run <code>skim()</code> or <code>str()</code> on your data and check to make sure all the variables are of the type you expect. For example, make sure that zipcodes are being considered as <code>chr</code> or <code>Factor</code> variable, rather than a <code>num</code> or <code>int</code>. Make a bulleted list of variables and whether they are the variable type you were expecting (no need to fix issues at this point).</p>
+<p>Look at the variable names in your data. Are they readable? Do they include spaces, periods, underscores, or other things that will make them hard to type? Are they helpful and contextual? For example, you would want <code>Airport</code> and <code>WaterTemp</code>, not <code>Individuals</code> and <code>Treatments</code>, and certainly not <code>A</code> and <code>B</code> as variable names.</p>
+<p>Look at the category names. Are they readable? Are they understandable phrases or cryptic codes? For example, do they use <code>Male</code> and <code>Female</code> or something like <code>1</code> and <code>2</code>? A binary variable <code>isFemale</code> could be coded 0 for male, and 1 for female (and then is self-documenting). A variable <code>sex</code> coded 1 and 2 is just asking for trouble.</p>
+<p>Look at the min, max, and number of missing values for each of the variables. Do they make sense? Make a bulleted list of variables with comments.</p>
+<p>At the end of your document, write up your three most pressing data wrangling, data cleaning, and merging issues.</p>
+<!--
+
+Draft and Final Handout
+-----------------------
+
+In conjunction with your oral presentation, you should prepare a single
+8-1/2 by 11 double-sided handout. Your handout should summarize the
+points that you hope to make in your presentation, and provide some
+details that may be hard to capture. If we receive your final handout
+(in PDF format – please no Word documents!) by 5:00am on the day of your
+presentation, we will make copies for you.
+
+-->
+</div>
+<div id="technical-report" class="section level5">
+<h5>Technical Report</h5>
+<p>Your technical report will be an annotated R Markdown file (<code>.Rmd</code>) that contains your R code, interspersed with explanations of what the code is doing, and what it tells you about the problem.</p>
+<div id="content-1" class="section level6">
+<h6>Content</h6>
+<p>You should <strong>not</strong> need to present <em>all</em> of the R code that you wrote throughout the process of working on this project. Rather, the technical report should contain the <em>minimal</em> set of R code that is necessary to understand your results and findings in full. If you make a claim, it <em>must</em> be justified by explicit calculation. A knowledgeable reviewer should be able to compile your <code>.Rmd</code> file without modification, and verify every statement that you have made. All of the R code necessary to produce your figures and tables <em>must</em> appear in the technical report. In short, the technical report should enable a reviewer to reproduce your work in full.</p>
+</div>
+<div id="tone" class="section level6">
+<h6>Tone</h6>
+<p>This document should be written for peer reviewers, who comprehend statistics at least as well as you do. You should aim for a level of complexity that is more statistically sophisticated than an article in the <a href="http://www.nytimes.com/pages/science/">Science section of <em>The New York Times</em></a>, but less sophisticated than an academic journal. [<a href="http://chance.amstat.org/"><em>Chance</em> magazine</a> might provide a good example.] For example, you may use terms that that you will likely never see in the <em>Times</em> (e.g. bootstrap), but should not dwell on technical points with no obvious ramifications for the reader (e.g. reporting F-statistics). Your goal for this paper is to convince a statistically-minded reader (e.g. a student in this class, or a student from another school who has taken an introductory statistics class) that you have addressed an interesting research question in a meaningful way. Even a reader with no background in statistics should be able to read your paper and get the gist of it.</p>
+</div>
+<div id="format" class="section level6">
+<h6>Format</h6>
+<p>Your technical report should follow this basic format:</p>
+<ol style="list-style-type: decimal">
+<li><p>Abstract: a short, one paragraph explanation of your project. The abstract should not consist of more than 5 or 6 sentences, but should relate what you studied and what you found. It need only convey a general sense of what you actually did. The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper.</p></li>
+<li><p>Introduction: an overview of your project. In a few paragraphs, you should explain <em>clearly</em> and <em>precisely</em> what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper!</p></li>
+<li><p>Data: a brief description of your data set. What variables are included? Where did they come from? What are units of measurement? What is the population that was sampled? How was the sample collected? You should also include some basic univariate analysis. Much of this can be taken from the data appendix.</p></li>
+<li><p>Results: an explanation of what your model tells us about the research question. You should interpret coefficients in context and explain their relevance. What does your model tell us that we didn’t already know before? You may want to include negative results, but be careful about how you interpret them. For example, you may want to say something along the lines of: “we found no evidence that explanatory variable <span class="math inline">\(x\)</span> is associated with response variable <span class="math inline">\(y\)</span>,” or “explanatory variable <span class="math inline">\(x\)</span> did not provide any additional explanatory power above what was already conveyed by explanatory variable <span class="math inline">\(z\)</span>.” On other hand, you probably shouldn’t claim: “there is no relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.”</p></li>
+<li><p>Conclusion: a summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is <em>not</em> implied by your research.</p></li>
+</ol>
+</div>
+<div id="additional-thoughts" class="section level6">
+<h6>Additional Thoughts</h6>
+<p>The technical report is <em>not</em> simply a dump of all the R code you wrote during this project. Rather, it is a narrative, with technical details, that describes how you addressed your research question. You should <em>not</em> present tables or figures without a written explanation of the information that is supposed to be conveyed by that table or figure. Keep in mind the distinction between <em>data</em> and <em>information</em>. Data is just numbers, whereas information is the result of analyzing that data and digesting it into meaningful ideas that human beings can understand. Your technical report should allow a reviewer to follow your steps from converting data into information. There is no limit to the length of the technical report, but it should not be longer than it needs to be. You will not receive extra credit for simply describing your data <em>ad infinitum</em>. For example, simply displaying a table with the means and standard deviations of your variables is not meaningful. Writing a sentence that reiterates the content of the table (e.g. “the mean of variable <span class="math inline">\(x\)</span> was 34.5 and the standard deviation was 2.8…”) is equally meaningless. What you should strive to do is interpret these values in context (e.g. “although variables <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> have similar means, the spread of <span class="math inline">\(x_1\)</span> is much larger, suggesting…”).</p>
+<p>You should present figures and tables in your technical report in context. These items should be understandable on their own – in the sense that they have understandable titles, axis labels, legends, and captions. Someone glancing through your technical report should be able to make sense of your figures and tables without having to read the entire report. That said, you should also include a discussion of what you want the reader to learn from your figures and tables.</p>
+<p>Your report should be submitted on Canvas as an R Markdown (<code>.Rmd</code>) file and the corresponding rendered output (<code>.html</code>) file.</p>
+</div>
+</div>
+<div id="presentation" class="section level5">
+<h5>Presentation</h5>
+<p>An effective oral presentation is an integral part of this project. One of the objectives of this class is to give you experience conveying the results of a technical investigation to a non-technical audience in a way that they can understand. Whether you choose to stay in academia or pursue a career in industry, the ability to communicate clearly is of paramount importance. As a data analyst, the burden of proof is on you to convince your audience that what you are saying is true. If your audience (who may very well be less knowledgeable about statistics than you are) cannot understand your results or their interpretations, then the technical merit of your project is irrelevant.</p>
+<p>You will make an 8-minute oral presentation to the class. You should make (good) slides. Your goal should be to convey to your audience a clear understanding of your research question, along with a basic understanding of your model, and how well it addresses the research question you posed. You should <strong>not</strong> tell us everything that you did, or show a bunch of models that didn’t work well. After hearing your talk, each student in the class should be able to answer:</p>
+<ol style="list-style-type: decimal">
+<li><p>What was your project about?</p></li>
+<li><p>What kind of model did you build?</p></li>
+<li><p>How well did it work?</p></li>
+</ol>
+<p>You should prepare electronic slides for your talk, using PowerPoint, Keynote, Google Presentation, Beamer (LaTeX), Prezi, or similar. Use your creativity! One thing you should <em>not</em> do is walk us through your calculations in RStudio.</p>
+<p>You will need to submit your slides before your presentation, but you should also bring the slides on a flash drive as a backup. You will not be able to hook up your laptop to the computer in the classroom.</p>
+</div>
+<div id="advice" class="section level5">
+<h5>Advice</h5>
+<p>There are many sources of advice for how to make a good presentation, but an excellent place to start is <a href="http://techspeaking.denison.edu/">Technically Speaking</a>. Watch the videos on this site to identify some common mistakes. You should also read Joe Gallian’s article on how to make a good presentation.</p>
+<p>Here are is some general advice:</p>
+<ul>
+<li><p>Budget your time. You only have 8 minutes, and we will be running a very tight schedule. If your talk runs too short or too long, it makes you seem unprepared. Rehearse your talk ahead of time (with your group) several times in order to get a better feel for your timing. Note also that you may have a tendency to talk faster during your actual talk than you will during your rehearsal. Talking faster in order to speed up is not a good strategy – you are much better off simply cutting material ahead of time. You will probably have a hard time getting through 10 slides in 8 minutes.</p></li>
+<li><p>Don’t write too much on each slide. You don’t want people to have to read your slides, because if the audience is reading your slides, then they aren’t listening to you. You want your slides to provide visual cues to the points that you are making – not substitute for your spoken words. Concentrate on graphical displays and bullet-pointed lists of ideas.</p></li>
+<li><p>Put your problem in context. Remember that most of your audience will have little or no knowledge of your subject matter. The easiest way to lose people is to dive right into technical details that require prior `domain knowledge.&quot; Spend a few minutes at the beginning of your talk introducing your audience to the most basic aspects of your topic and present some motivation for what you are studying.</p></li>
+<li><p>Speak loudly and clearly. Remember that you know more about your topic that anyone else in the room, so speak and act with confidence!</p></li>
+<li><p>Tell a story – not necessarily the whole story. It is unrealistic to expect that you can tell your audience everything that you know about your topic in 8 minutes. You should strive to convey the big ideas in a clear fashion, but not dwell on the details. Your talk will be successful if your audience is able to walk away with an understanding of what your research question was, how you addressed it, and what the implications of your findings are.</p></li>
+</ul>
+</div>
+<div id="group-dynamic-report" class="section level5">
+<h5>Group Dynamic Report</h5>
+<p>Ideally, all group members would be equally involved and able and committed to the project. In reality, it doesn’t always work that way. I’d like to reward people fairly for their efforts in this group endeavor, because it’s inevitable that there will be variation in how high a priority people put on this class and how much effort they put into this project.</p>
+<p>To this end, I’d like each of you (individually) to describe how well (or how poorly!) your project group worked together and shared the load. Also give some specific comments describing each member’s overall effort. Were there certain group members who really put out exceptional effort and deserve special recognition? Conversely, were there group members who really weren’t carrying their own weight? And then, at the end of your assessment, estimate the percentage of the total amount of work/effort done by each member. (Be sure your percentages sum to 100%!)</p>
+<p>For example, suppose you have 3 group members: X, Y and Z. In the (unlikely) event that each member contributed equally, you could assign:</p>
+<ul>
+<li>33.3% for member X, 33.3% for member Y, and 33.3% for member Z</li>
+</ul>
+<p>Or in case person Z did twice as much work as each other member, you could assign:</p>
+<ul>
+<li>25% for member X, 25% for member Y, and 50% for member Z</li>
+</ul>
+<p>Or if member Y didn’t really do squat, you could assign:</p>
+<ul>
+<li>45% for member X, 10% for member Y, and 45% for member Z</li>
+</ul>
+<p>I’ll find a fair way to synthesize the (possibly conflicting) assessments within each group and incorporate this assessment of effort and cooperation in each individual’s overall grade. Don’t pressure one another to give everyone glowing reports unless it’s warranted, and don’t feel pressured to share your reports with one another. Just be fair to yourselves and to one another. Let me know if you have any questions or if you run into any problems.</p>
+</div>
+</div>
+<div id="assessment-criteria" class="section level4">
+<h4>Assessment Criteria</h4>
+<p>Your project will be evaluated based on the following criteria:</p>
+<ul>
+<li><p>General: Is the topic original, interesting, and substantial – or is it trite, pedantic, and trivial? How much creativity, initiative, and ambition did the group demonstrate? Is the basic question driving the project worth investigating, or is it obviously answerable without a data-based study?</p></li>
+<li><p>Design: Are the variables chosen appropriately and defined clearly, and is it clear how they were measured/observed? Can the effects of lurking variables be controlled for? Is there sufficient data to make meaningful conclusions?</p></li>
+<li><p>Analysis: Are the chosen analyses appropriate for the variables/relationships under investigation, and are the assumptions underlying these analyses met? Do the analyses involve fitting and interpreting a multiple regression model? Are the analyses carried out correctly? Is there an effective mix of graphical, numerical, and inferential analyses? Did the group make appropriate conclusions from the analyses, and are these conclusions justified?</p></li>
+<li><p>Technical Report: How effectively does the written report communicate the goals, procedures, and results of the study? Are the claims adequately supported? How well is the report structured and organized? Does the writing style enhance what the group is trying to communicate? How well is the report edited? Are the statistical claims justified? Are text and analyses effectively interwoven in the technical report? Clear writing, correct spelling, and good grammar are important.</p></li>
+<li><p>Oral Presentation: How effectively does the oral presentation communicate the goals, procedures, and results of the study? Do the slides help to illustrate the points being made by the speaker without distracting the audience? Do the presenters seem to be well-rehearsed? Did they properly budget their time? Do they appear to be confident in what they were saying? Were their arguments persuasive?</p></li>
+</ul>
+<!--##### Presentation Evaluation
+
+The form below is an example of what we will use to evaluate your oral
+presentations.-->
+<!-- ###### Example Form -->
+<!-- Your assistance is required in evaluating the presentations of your -->
+<!-- peers. Please the circle the number that best describes your perception -->
+<!-- of each group's presentation. Keep the following grading rubrics in -->
+<!-- mind. -->
+<!-- -   Volume: Are the speakers loud enough? Can you hear them even in the -->
+<!--     back of the room? -->
+<!-- -   Presence: Do the speakers command the room? Do they draw your -->
+<!--     attention or do they just look like they want this to be over as -->
+<!--     soon as possible? -->
+<!-- -   Emphasis: Do the speakers use intonation to signal what words or -->
+<!--     concepts are most important? Or do they appear to be reciting a -->
+<!--     speech flatly? -->
+<!-- -   Eye Contact: Are the speakers engaged with the audience? Do they -->
+<!--     seem connected or do they seem to be going through the motions? -->
+<!-- -   Clarity: Did the speakers convey a clear sense of what the project -->
+<!--     is about? If you had to tell someone what their project was about in -->
+<!--     three sentences could you do it? -->
+<!-- -   Mastery: Do the speakers appear to have full command of the -->
+<!--     material? Were there obvious gaps in their knowledge of the subject -->
+<!--     matter? Were they able to answer questions coherently? -->
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">By <a href="http://www.science.smith.edu/~bbaumer">Ben Baumer</a>, modifications by <a href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

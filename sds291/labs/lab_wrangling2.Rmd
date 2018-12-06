@@ -1,0 +1,228 @@
+---
+title: "Data wrangling, part II"
+output:
+  html_document:
+    css: lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(skimr)
+```
+
+Today's wrangling exercises are modified from [Master the Tidyverse](https://github.com/rstudio-education/master-the-tidyverse).
+
+## Single-table verbs
+
+The `dplyr` package is where the most common data wrangling "verbs" come from. The main ones are:
+
+- `select()` to pick out variables/columns
+- `filter()` to pick out cases/rows
+- `arrange()`, which arranges cases
+- `summarize()`, a many-to-few or many-to-one operation to suummarize
+- `mutate()`, a many-to-many operation to add additional variables. 
+- `group_by()`, a helper to create grouped data frames
+
+We'll focus primarily on `filter()`, `summarize()`, `group_by()`, and `mutate()`. For this section,  we'll be working with the `babynames` data, which comes in its own package
+
+```{r}
+# install.packages("babynames")
+library(babynames)
+head(babynames)
+tail(babynames)
+```
+
+This dataset includes baby name data from the US Social Security Administration, for all names which had at least 5 uses in a particular year. 
+
+### Filter
+
+Recall that we can use `filter()` to exctract just the rows we're interested in, as in
+
+```{r}
+filter(babynames, name == "Amelia")
+```
+
+Other than `==`, you can use other logical tests, such as `<`, `>`, `<=`, `>=`, `!=` (not equal) and `%in%` (group membership).
+
+See if you can use the logical operators to find
+
+1. all of the names where `prop` is greater than or equal to 0.08
+2. all of the children named "Sea"
+
+You can combine several criteria together using Boolean operators, such as `&` (and) and `|` (or). Commas also work in `filter()` for a list of criteria that must all be met. 
+
+```{r}
+filter(babynames, name=="Amelia", year==1880) #this is equivalent to
+filter(babynames, name=="Amelia" & year == 1880)
+```
+
+Try to find 
+
+3. All girls named "Sea"
+4. Names that were used by exactly 5 or 6 children in 1880
+5. Names that are one of Acura, Lexus, or Yugo
+6. The row that corresponds to you (or, a good friend, if you have an uncommon name)
+
+### Summarize
+
+Summarise is a many-to-one or many-to-few operation. It reduces the size of your data by summarizing it. 
+
+```{r}
+babynames %>% 
+  summarize(total = sum(n), max = max(n))
+```
+
+Use summarize to compute:
+
+7. The first (minimum) year in the dataset
+8. The last (maximum) year in the dataset
+
+Now, put together your `filter()` and `summarize()` skills to extract the rows where name == "Khaleesi" and find
+
+9. The total number of children named Khaleesi
+10. The first year Khaleesi appeared in the data
+
+### Group by
+
+We've seen `group_by()` in an incidental way many times this semester. `group_by()` is a `dplyr` verb that creates a grouped data frame. It can be combined with other `dplyr` verbs very powerfully. 
+
+```{r}
+babynames %>%
+  group_by(sex)
+
+babynames %>%
+  group_by(sex) %>%
+  summarize(total = sum(n))
+```
+
+### Mutate
+
+Mutate is the way to make a new variable in a dataset. It is a many-to-many operation. 
+
+```{r}
+babynames %>%
+  mutate(percent = round(prop*100, 2))
+```
+
+Of course, you would need to use the assignment operator or another pipe to do something with this new variable. 
+
+
+## Multiple table verbs
+
+If you have more than one dataset, you may want to do a "join" to connect them together in some way. This is where multiple-table verbs come in. In `dplyr`, they are `left_join()`, `right_join()`, `full_join()`, `inner_join()`, `semi_join()` and `anti_join()`. We will focus primarily on the `left_join()` because I find it to be useful the most often in data wrangling.
+
+For this section, we'll use a baby example about bands to illustrate how these joins differ.
+
+```{r}
+band <- tribble(
+  ~name,  ~band,
+  "Mick", "Stones",
+  "John", "Beatles",
+  "Paul", "Beatles"
+)
+instrument <- tribble(
+  ~name, ~plays,
+  "John", "guitar",
+  "Paul", "bass",
+  "Keith", "guitar"
+)
+```
+
+### Left join
+
+```{r}
+band %>%
+  left_join(instrument, by = "name")
+```
+
+
+### Right join
+
+```{r}
+band %>%
+  right_join(instrument, by = "name")
+```
+
+
+9. How do the results of the left and right joins differ?
+
+### Full join
+
+```{r}
+band %>%
+  full_join(instrument, by = "name")
+```
+
+### Inner join
+
+```{r}
+band %>%
+  inner_join(instrument, by = "name")
+```
+
+### What if the names don't match?
+
+```{r}
+band %>% 
+  left_join(instrument2, by = c("name" = "artist"))
+```
+
+### Filtering joins
+
+The joins we've looked at so far are mutating joins, but there are also filtering joins, which use information from one data set to extract cases from another data set. 
+
+Semi-join
+
+```{r}
+band %>% 
+  semi_join(instrument, by = "name")
+```
+
+Anti-join
+```{r}
+band %>% 
+  anti_join(instrument, by = "name")
+```
+
+### Practice
+
+For this section, we'll use data from the `nycflights13` package, which you will need to install.
+
+```{r}
+# install.packages("nycflights13")
+library(nycflights13)
+```
+
+The package has multiple datasets, with different sets of variables. The main dataset is named `flights`.
+
+```{r}
+flights
+```
+
+But, the variable `carrier` doesn't make much sense to people outside the airline industry. So, we'd like to join on some easier-to-understand names, which are in the `airlines` dataset.
+
+```{r}
+airlines
+```
+
+10. Which airlines had the largest arrival delays? Work in groups to complete the code below.
+
+```{r, eval=FALSE}
+flights %>%
+  drop_na(arr_delay) %>%
+                     %>% # add some joining code here
+  group_by(        ) %>% # add a variable here
+                     %>% # compute the average arrival delay
+  arrange(         ) # arrange by delays
+```
+
+11. How many airports in airports are serviced by flights originating in New York (i.e. flights in our dataset?) Notice that the column to join on is named `faa` in the `airports` dataset and `dest` in the `flights` dataset.

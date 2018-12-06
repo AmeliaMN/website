@@ -1,0 +1,261 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{November 8, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Goodness of fit
+\end{enumerate}
+
+\paragraph{Goodness of Fit}
+
+Previously, we considered inference for a single proportion. That proportion was the fraction of the outcomes of a binary response variable that had a certain value. For example, respondents could either say that they preferred Coke, or that they preferred Pepsi. But what if the variable can have more than two outcomes? Can we still test the hypothesis that the sample was drawn from a known population? 
+
+The \href{https://www.census.gov/prod/2003pubs/c2kbr-30.pdf}{US Census Bureau} reports that in 2000, among the population 15 years and older:
+\begin{itemize}
+  \itemsep0in
+  \item 54.3\% are married
+  \item 27.1\% have never been married
+  \item 9.7\% are divorced
+  \item 6.6\% are widowed
+  \item 2.2\% are separated
+\end{itemize}
+
+We can encode these percentages as a vector in \R:
+
+<<size='footnotesize'>>=
+us <- c("Divorced" = 0.097, "Married" = 0.543, "Never married/single" = 0.271,  "Separated" = 0.022, "Widowed" = 0.066)
+# normalize to make sure proportions sum to 1
+us <- us / sum(us)
+us
+@
+
+The \cmd{openintro} package contains a sample of 500 Americans collected in the 2000 Census. In this sample, the percentages are different: 
+
+<<message=FALSE, fig.show='hide', warning=FALSE, size='footnotesize'>>=
+library(openintro)
+library(mosaic)
+marital_summary <- census %>%
+  mutate(maritalStatus = 
+           forcats::fct_recode(maritalStatus, Married = "Married/spouse absent", 
+                               Married = "Married/spouse present")) %>%
+  group_by(maritalStatus) %>%
+  summarize(status_obs = n()) %>%
+  mutate(marital_status_pct = status_obs / nrow(census), marital_status_us = us)
+marital_summary$marital_status_pct
+@
+
+Is it reasonable to conclude that the sample from 2000 reflects the overall US population? 
+
+In the previous case, the test statistic was the observed sample proportion $\hat{p}$. In this case, we have more than two outcomes, so there is nothing quite analogous to $\hat{p}$. The test statistic that we will use will be labelled $X^2$, and its formula is:
+
+$$
+  X^2 = \sum_{i=1}^k Z_i^2 = \sum_{i=1}^k \left( \frac{observed_i - expected_i}{\sqrt{expected_i}} \right)^2 = \sum_{i=1}^k \frac{(observed_i - expected_i)^2}{expected_i} \,,
+$$
+where $k$ is the number of different outcomes (which in this case is 5). As always, our goal is to put $X^2$ in context by determining where it lies in the null distribution. First, let's compute the test statistic:
+
+<<message=FALSE, fig.show='hide', size='footnotesize'>>=
+n <- nrow(census)
+k <- nrow(marital_summary)
+marital_summary <- marital_summary %>%
+  mutate(status_exp = marital_status_us * n)
+X2_hat <- marital_summary %>%
+  summarize(X2 = sum(((status_obs - status_exp)^2) / status_exp)) %>% unlist()
+@
+
+<<echo=FALSE, eval=FALSE>>=
+marital_summary %>%
+  select(maritalStatus, status_obs, status_exp) %>%
+  tidyr::gather(key = type, value = count, -maritalStatus) %>%
+  ggplot(aes(y = count, x = maritalStatus, fill = type)) + 
+    geom_bar(stat = "identity", position = "dodge")
+@
+
+
+\begin{enumerate}
+  \item Write out the full calculation for $X^2$ using a table
+  \vspace{2in}
+\end{enumerate}
+
+We want to test the null hypothesis that our sample came from the population, whose marital status breakdown is known. Since this implies that the observed counts will match the expected counts exactly, this would result in a test statistic of $\hat{X^2} = 0$. Our observed value of $\hat{X^2}$ is very different from 0, but in order to understand \emph{how} different, we need to know what the null distribution of $\hat{X^2}$ is. In this case, it is \emph{not} normal! 
+
+Just as before, there are at least three different ways to construct the sampling distribution of $\hat{X^2}$:
+
+\begin{enumerate}
+  \item Simulation: The procedure is the same it has been: sample from the hypothesized distribution and compute the test statistic many thousands of times. 
+
+<<fig.show='hide', message=FALSE, size='footnotesize'>>=
+sim <- do(1000) * 
+  marital_summary %>%
+  sample_n(size = n, replace = TRUE, weight = marital_status_us) %>%
+  group_by(maritalStatus) %>%
+  summarize(status_obs = n(), status_exp = first(status_exp)) %>%
+  mutate(X2_i = (status_obs - status_exp)^2 / status_exp) %>%
+  summarize(X2 = sum(X2_i))
+qplot(data = sim, x = X2)
+@
+
+  The p-value can be obtained using the \cmd{pdata} function, since the sampling distribution comes from simulated data in our workspace. Note also that since the distribution is non-negative, our test is one-sided. 
+
+<<>>=
+pdata(~X2, X2_hat, data = sim, lower.tail = FALSE)
+@
+  
+  
+  \item Probability Theory: Last time, we worked with a \emph{binary} variable, and that led to a \emph{binomial} distribution. This time, we have a categorical variable that can take on more than two values, and that leads to a \emph{multinomial} distribution. For the purposes of this class, you do not need to know what a multinomial distribution is, but it is the multivariate extension of the binomial distribution (i.e. the binomial distribution is the special case of the multinomial distribution when the number of outcomes is 2).
+  
+  We will not discuss this approach any further, but based on what you saw last time, hopefully you can believe us that: a) it exists; b) it requires some non-trivial probability theory; and c) it is computationally burdensome. 
+  
+  \item Chi-Squared Test: Since the multinomial distribution is very cumbersome to work with, statisticians have constructed a parametric approximation to the sampling distribution of $\hat{X^2}$. It follows from probability theory that as long as the expected count of each outcome is at least 5, the test statistic follows a distribution that is closely approximated by a $\chi^2$-distribution on $k-1$ degrees of freedom. 
+  
+<<eval=FALSE>>=
+plotDist("chisq", params = list(df = k-1), lwd = 3)
+@
+
+The p-value can be obtained using the \cmd{pchisq} function, since the sampling distribution follows a $\chi^2$-distribution.
+
+<<>>=
+pchisq(X2_hat, df = k-1, lower.tail = FALSE)
+@
+
+  Notice that the p-value is a one-tailed area in this case, since the distribution is non-negative. 
+
+  There is also a built-in function in \R that will perform a $\chi^2$-test. 
+  
+<<fig.show='hide', size='footnotesize'>>=
+with(marital_summary, chisq.test(status_obs, p = marital_status_us))
+@
+
+\end{enumerate}
+
+
+\paragraph{What Can Go Wrong?}
+
+Once again, the condition that the expected count for each category is at least 5 is important, because if that condition is not met, the $\chi^2$-distribution may not be a sufficiently good approximation. Note that the deviation in each count is approximately normal, so the approximation can fail for any of the outcomes. 
+
+<<eval=TRUE, echo=TRUE, fig.height=3, message=FALSE, size='footnotesize'>>=
+n <- 35
+sim <- do(1000) * 
+  marital_summary %>%
+  mutate(status_exp = marital_status_us * n) %>%
+  sample_n(size = n, replace = TRUE, weight = marital_status_us) %>%
+  group_by(maritalStatus) %>%
+  summarize(status_obs = n(), status_exp = first(status_exp)) %>%
+  mutate(X2_i = (status_obs - status_exp)^2 / status_exp) %>%
+  summarize(X2 = sum(X2_i))
+qplot(data = sim, x = X2, geom = "density") + 
+  stat_function(fun = dchisq, args = list(df = k-1), color = "purple")
+@
+
+
+\paragraph{In-Class Exercise, OI, 3.40}
+
+\textbf{Evolution vs. creationism} A Gallup Poll released in December 2010 asked 1019 adults living in the Continental U.S. about their belief in the origin of humans. These results, along with results from a more comprehensive poll from 2001 (that we will assume to be exactly accurate), are summarized in the table below: 
+\begin{center}
+\begin{tabular}{l c c}
+  										& \multicolumn{2}{c}{\textit{Year}} \\
+\cline{2-3}
+\textit{Response}								& 2010	& 2001 \\
+\hline
+Humans evolved, with God guiding (1)				& 38\% 	& 37\% \\
+Humans evolved, but God had no part in process (2) 	& 16\% 	& 12\% \\
+God created humans  in present form (3) 				& 40\% 	& 45\% \\
+Other / No opinion (4)							& 6\% 	& 6\% \\
+\hline
+\end{tabular}
+\end{center} 
+
+\begin{enumerate}
+  \itemsep1.5in
+\item Calculate the actual number of respondents in 2010 that fall in each response category.
+\item State hypotheses for the following research question: have beliefs on the origin of human life changed since 2001?
+\item Calculate the expected number of respondents in each category under the condition that the null hypothesis is true.
+\item Conduct a chi-square test and state your conclusion. (Reminder: verify conditions.)
+\end{enumerate}
+
+% 
+% \newpage
+% 
+% \paragraph{Solution to Exercise}
+% 
+% \begin{enumerate}
+% \item $O_{(1)} = 1,019 \times  0.38 = 387$ \\
+% $O_{(2)} = 1,019 \times  0.16 = 163$ \\
+% $O_{(3)} = 1,019 \times  0.40= 408$ \\
+% $O_{(4)} = 1,019 \times  0.06 = 61$
+% \item The hypotheses are as follows:
+% \begin{description}
+% \item[] $H_0$: Distribution of the belief in evolutionary origins of humans has not changed from 2001 to 2010.
+% \item[] $H_A$: Distribution of the belief in evolutionary origins of humans has changed from 2001 to 2010.
+% \end{description}
+% 
+% \item  $E_{(1)} = 1,019 \times  0.37 = 377$ \\
+% $E_{(2)} = 1,019 \times  0.12 = 122$ \\
+% $E_{(3)} = 1,019 \times  0.45= 459$ \\
+% $E_{(4)} = 1,019 \times  0.06 = 61$
+% \item Before calculating the test statistic we should check that the conditions are satisfied. 
+% \begin{description}
+% \item Independence:  The sample is random, and 1,019 $<$ 10\% of all Americans, therefore respondents' answers are independent of each other.
+% \item Sample size: All expected counts are at least 5.
+% \item Degrees of freedom: $df = k - 1 = 4 - 1 = 3 > 2$.
+% \end{description}
+% 
+% The chi-squared statistic, the degrees of freedom associated with it, and the p-value can be calculated as follows:
+% \begin{align*}
+% X^2 &= \sum \frac{(O - E)^2}{E} =  \frac{(387 - 377)^2} {377} + \frac{(163 - 122)^2} {122} + \frac{(408 - 459)^2} {459} + \frac{(61 - 61)^2}{61} = 19.71 \\
+% df &= 3 \\
+% p-value &< 0.001
+% \end{align*}
+% 
+% Since the p-value $< \alpha$, we reject $H_0$. The data provide strong evidence that the distribution of the belief in evolutionary origins of humans has changed from 2001 to 2010. Since an increase was observed in the response ``Humans evolved, but God had no part in process" there is support for the comment.
+% \end{enumerate}
+
+\end{document}

@@ -1,0 +1,30 @@
+---
+title: "Linear Regression"
+author: "Your Name"
+date: "09/30/2015"
+---
+
+```{r, message=FALSE}
+require(oilabs)
+require(mosaic)
+```
+
+##### Question 1
+
+Choose another traditional variable from **mlb11** that you think might be a good predictor of $runs$. Produce a scatterplot of the two variables and fit a linear model.  At a glance, does there seem to be a linear relationship?
+
+
+##### Question 2
+
+How does this relationship compare to the relationship between $runs$ and $at\_bats$? Use the $R^2$ values from the two model summaries to compare.  Does your variable seem to predict $runs$ better than $at\_bats$?  How can you tell?
+
+
+##### Question 3
+
+Now that you can summarize the linear relationship between two variables, investigate the relationships between $runs$ and each of the other five traditional variables. Which variable best predicts $runs$? Support your conclusion using the graphical and numerical methods we've discussed (for the sake of conciseness, only include output for the best variable, not all five).
+
+
+##### Question 4
+
+Now examine the three newer variables.  These are the statistics used by the protagonists of *Moneyball* to predict a teams success.  In general, are they more or less effective at predicting runs that the old variables?  Explain using appropriate graphical and numerical evidence.  Of all ten variables we've analyzed, which seems to be the best predictor of $runs$?  Using the limited (or not so limited) information you know about these baseball statistics, does your result make sense?
+

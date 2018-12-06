@@ -1,0 +1,235 @@
+---
+title: 'Schedule'
+---
+* Week 1 (9/6):
+    + Questionnaire
+    + Introduction to the course
+    + Why use models?
+    + Homework:
+        + Read Ch. 0
+
+
+***
+
+* Week 2 (9/11, 9/13):
+    + Introduction to R, RStudio, and R Markdown lab 
+    + Understanding statistical models
+    + Four Step process
+    + Homework:
+        + Read Ch. 1
+        + HW #1 due Monday Sept 17 by 11:55 pm, submit on Canvas
+
+    
+***
+
+* Week 3 (9/18, 9/20):
+    + Residuals lab
+    + Assessing Conditions
+    + Making Predictions
+    + Transformations lab
+    + Outliers and Influential Points
+    + Homework:
+        + Read Ch. 2 
+        + HW #2 due Monday Sept 24 by 11:55 pm, submit to Canvas
+      
+  
+***
+
+* Week 4 (9/25, 9/27):
+    + Inference for the Slope Coefficient
+    + ANOVA
+    + Regression and Correlation
+    + Intervals and data wrangling lab
+    + Homework:
+        + Read selection from Modern Data Science with R
+        + HW #3 due Monday, October 1 by 11:55 pm, submit to Canvas
+      
+    
+***
+
+* Week 5 (10/2, 10/4):
+    + Multiple Linear Regression
+    + Assessing Conditions in MLR
+    + Comparing two models
+    + Homework:
+        + Read Ch. 3.1 - 3.3
+        + HW #4 due Monday, October 8 by 11:59 pm, submit to Canvas
+
+      
+***
+
+* Week 6 (10/9, 10/11)
+    + Interaction terms
+    + Multicollinearity
+    + Putting it all together
+    + Homework:
+        + **Project groups due by Monday, 10/15**
+        + Read Ch. 3.4 - 3.8
+        + No homework problems, exam Tuesday
+        
+***
+
+* Week 7 (10/16, 10/18)   
+    + **EXAM 1 Tuesday**
+    + Interpreting nested F-tests
+    + Polynomial regression
+    + Stepwise Regression
+    + Homework:
+        + Read Ch. 4.2 - 4.4 (skipping 4.1)
+        
+<!--
+***
+
+* Week 8 (10/24 - 10/30)
+    + **EXAM 1 ends at 5 pm on Monday**
+    + Finishing up chapter 3
+    + Guest lecture Thursday by Professor Baumer
+    + Homework:
+        + HW #7 due Monday, October 31 by 11:55 pm, submit to Canvas
+    + **Initial Project Proposal** due Friday, October 28 by 11:55 pm, submit to Canvas
+     
+***
+
+* Week 8 (10/31-11/6)
+    
+        + HW #8 due Monday November 7 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+         + Reading quiz on Ch. 3, due Wednesday, Nov. 9 by 11:55 pm, on  [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+        
+
+***    
+
+* Week 9 (11/7-11/13)
+      + Randomization Tests
+      + Bootstrap for Regression
+      + [Bootstrap animations](https://www.stat.auckland.ac.nz/~wild/BootAnim/)
+      + [Randomization animations](http://www.rossmanchance.com/applets/AnovaShuffle.htm?hideExtras=2)
+      + [Do you know Nothing when you see it?](https://www.youtube.com/watch?v=hps9r7JZQP8) Amelia's OpenVisConf talk including randomization and the bootstrap
+      + [Not all forecasters got it wrong](http://simplystatistics.org/2016/11/09/not-all-forecasters-got-it-wrong/)
+      + [A user's guide to 538's 2016 general election forecast](http://fivethirtyeight.com/features/a-users-guide-to-fivethirtyeights-2016-general-election-forecast/)
+      + [Forecasting elections with nonrepresentative polls](http://www.stat.columbia.edu/~gelman/research/published/forecasting-with-nonrepresentative-polls.pdf)
+      + Unusual Points
+      + Homework:
+      + Read Ch. 4.5-4.6
+          + HW #9 due next Wednesday by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+
+
+***      
+
+* Week 10 (11/14 - 11/20) 
+    + ANOVA
+    + More ANOVA
+    + Multiple Testing
+    + Homework:
+          + Read Ch. 5, 7.2
+          + HW #10 due Monday November 28 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+    + **Revised Project Proposal** due Friday 11/18 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+    + **Data appendix** due Monday 11/20 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+
+*** 
+
+ **Thanksgiving Recess Nov. 23-27**
+
+***
+
+* Week 11 (11/28 - 12/4)
+    + Logistic regression
+    + Multiple logistic regression
+    + Homework:
+          + Read Ch. 9, 10
+          + HW #11 due Monday 12/5 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+    
+
+*** 
+
+* Week 12 (12/5-12/11)
+    + Pulling everything together
+    + Data wrangling
+    + **Extra credit talk** Christine Zhang '09 speaking about Data Journalism at the Los Angeles Times. Tuesday, December 6, 4:30 pm, McConnell 103. (Refreshments at 4.)
+    + **Exam opens** Friday 12/9 at noon
+
+*** 
+
+* Week 13 (12/12-12/15)
+    + Data wrangling/work day Tuesday
+    + **Exam closes** Monday 12/12 at library close
+    + **Project presentations** Thursday 12/15
+         + Attendance required
+         + We will stay 10 minutes late
+         + [Peer evaluation sheet](handouts/gradesheet_s1.pdf)
+  
+*** 
+
+**ALL WORK DUE** (12/22/2016)
+
+***
+
+<!--
+  Ch. 3 from book draft?
+  
+
+***    
+
+* Week 11 (4/13 - 4/17)
+   
+    + Data Wrangling in R
+    + `dplyr`
+    + Reshaping with `gather/spread`
+    + [Missing Data](http://en.wikipedia.org/wiki/Missing_data)
+    + **EXAM 3 begins Thursday at 9 am**
+    + Homework:
+        + Read [Ch. 3: Basic Data Wrangling in R](handouts/book_ch3.pdf)
+
+***    
+
+* Week 12 (4/20 - 4/24)
+    + **EXAM 3 ends Sunday at library close**
+    + [Panel Data](http://en.wikipedia.org/wiki/Panel_data)
+    + Time Series ([ARMA models](http://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model))
+    + Homework:
+        + Read [Time series components](https://www.otexts.org/fpp/6/1)
+        
+
+        
+***   
+
+* Week 13 (4/27 - 5/1)
+    + **Project Presentations**
+    + Tuesday:
+        + **Groups S, T, L, R, P**
+    + Wednesday: 
+        + **CLASS STARTS AT 8:40!!**
+        + **Groups F, I, G, J, A**
+    + Thursday:
+        + **Groups O, M, Q, N**
+    + Friday: 
+        + **CLASS STARTS AT 8:40!!**
+        + **Groups C, B, D, E, H**
+        
+***  
+-->  
+<!--
+
+[RStudio Webinar on Git](http://pages.rstudio.net/Webinar---February-2015_Registration.html?mkt_tok=3RkMMJWWfF9wsRonuavKZKXonjHpfsX56u4lWKG3lMI%2F0ER3fOvrPUfGjI4ASMNlI%2BSLDwEYGJlv6SgFTbDMMa541LgKWxc%3D)
+
+[NPR story on publication bias](http://www.npr.org/2015/01/28/382056490/studies-critical-of-bilingual-benefits-often-shelved-because-of-bias)
+
+    + Happenings in the world of Statistical Significance:
+        + [Statistican Wanted](http://www.theallium.com/math/wanted-statistician-to-make-results-significant/)
+        + [Psychology Journal Bans p-Values](http://www.nature.com/news/psychology-journal-bans-p-values-1.17001)
+   + More on [Reproducibility](http://www.nature.com/news/policy-nih-plans-to-enhance-reproducibility-1.14586#/ref-link-1)
+    + [Kaggle March Madness](http://www.nytimes.com/2015/03/22/opinion/sunday/making-march-madness-easy.html)
+    + Review
+     + Extra Credit Talks:
+        + Tuesday: [Nuts and Bolts: Accessing Bigger Datasets Using SQLite in R](http://www.meetup.com/Pioneer-Valley-and-Five-College-R-Statistical-Meetup/events/220849423/?a=wc1d.2_gnl&gj=wc1d.2_e&rv=wc1d.2_e&_af=event&_af_eid=220849423)
+        + Thursday: [Working with Geographic Data in R](http://www.meetup.com/Pioneer-Valley-and-Five-College-R-Statistical-Meetup/events/221124292/?a=wc1d.2_gnl&gj=wc1d.2_e&rv=wc1d.2_e&_af=event&_af_eid=221124292)
+   + [Testing The Standards: Do Gender Differences Matter For Combat?](http://www.npr.org/2015/03/26/395604480/testing-the-standards-do-gender-differences-matter-for-combat)
++ Read [The Economist](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble)
+        + HW #7 due Friday by 5:00 pm, submit to [Moodle](http://moodle.smith.edu)
+        
+  
+    + [Voices: Statistics might be the most important class you take in college](http://college.usatoday.com/2015/04/08/voices-statistics-might-be-the-most-important-class-you-take-in-college/)
+    + [UMass Launches Center for Data Science](http://www.gazettenet.com/home/16446218-95/umass-announces-launch-of-new-center-for-data-science#.VSe0bhpQbRw.mailto)
+    + [Learning to See Data](http://www.nytimes.com/2015/03/29/sunday-review/learning-to-see-data.html)
+    
+     + [Can Data Stop Car Wrecks](http://www.nytimes.com/2015/03/29/opinion/sunday/can-data-stop-car-wrecks.html)
+-->

@@ -1,0 +1,128 @@
+---
+title: "Multicollinearity, VIF, and nested F-tests"
+output:
+  html_document:
+    css: lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=TRUE)
+```
+
+```{r, message=FALSE}
+require(mosaic)
+require(car)
+```
+
+Researchers observed the following data on 20 individuals with high blood pressure:
+
+* blood pressure (`BP`, in mm Hg)
+* age (`Age`, in years)
+* weight (`Weight`, in kg)
+* body surface area (`BSA`, in `m^2`)
+* duration of hypertension (`Dur`, in years)
+* basal pulse (`Pulse`, in beats per minute)
+* stress index (`Stress`)
+
+Our goal is to build a model for blood pressure as a function of (some subset) of the other variables. In this case all of our variables are quantitative, so we can get a quick look at their relationships using the a pairs plot.
+
+```{r}
+BP <- read.csv("http://www.math.smith.edu/~bbaumer/mth247/labs/bloodpress.csv")
+pairs(BP)
+
+# Better than the standard pairs plot is the generalized pairs plot. 
+#install.packages("gpairs")
+#gpairs(BP)
+```
+
+* What do you see in these scatterplots? Which of the variables are most highly correlated with `BP`? 
+
+> Hint: use `cor` to calculate the correlation coefficient matrix. 
+
+
+#### A First Model
+
+`Weight` seems to be highly correlated with `BP`, so as a first step, we should understand how well a simple linear model for blood pressure as a function of weight works. Keep in mind that it accords with our intuition that there would be a strong link between a person's weight and their blood pressure. 
+
+```{r}
+xyplot(BP ~ Weight, data=BP, pch=19, alpha=0.5, cex=1.5, type=c("p", "r"))
+m1 <- lm(BP ~ Weight, data=BP)
+summary(m1)
+```
+
+* How well does the SLR model for blood pressure work? 
+* Check the assumptions for SLR. Are they met? 
+
+```{r}
+plot(m1, which=c(1,2))
+```
+
+#### The Kitchen Sink
+
+The SLR model for blood pressure is pretty effective, but there is one person who generates a large residual. We want to use the additional data that we have to build a better model for blood pressure. 
+
+Without any intution, one way to proceed is to simply throw all of the variables into our regression model. In a sense, we are throwing everything but the kitchen sink into the model. 
+
+```{r}
+# Using the . in the formula interface includes all non-response variables in the data frame
+mfull <- lm(BP ~ ., data=BP)
+summary(mfull)
+plot(mfull, which=c(1,2))
+xyplot(fitted.values(mfull) ~ BP, data=BP)
+```
+
+We have a very high $R^2$, and as such the correlation between the fitted values and the response variable is very strong. However, there are still some issues with the normality of the residuals. Moreover, the coefficient for `Pulse` is negative, suggesting that people with higher pulse rates have lower blood pressure. [Does this make sense?] Three of the coefficients in the model are close to zero and not significant at the 10% level. 
+
+#### Checking for Multicollinearity
+
+The easiest way to check for multicollinearity is by computing the Variance Inflation Factor (VIF) for each explanatory variable. 
+
+```{r}
+# Note that this requires the "car" package!
+require(car)
+vif(mfull)
+```
+
+VIFs higher than 4, such as those for `Weight`, `BSA`, and `Pulse` indicate that those variables are highly correlated with the other explanatory variables. To see this, we can manually compute the VIF for `Weight`, by regressing it against the other explanatory variables. 
+
+```{r}
+mvif <- lm(Weight ~ Age + BSA + Dur + Pulse + Stress, data=BP)
+summary(mvif)
+1 / (1 - rsquared(mvif))
+```
+
+Note that if this kind of regression works well, then the $R^2$ will be high, and the VIF will become very large. A similar computation can be performed for each of the explanatory variables. 
+
+Another window into the entangled web of our explanatory variables is to examine the correlation between every pair. 
+
+```{r}
+cor(BP)
+```
+
+Note that `BSA` and `Weight` are strongly correlated [can you think of why this might be?] Moreover, `Pulse` is fairly strongly correlated with `Age`, `Weight`, and `Stress`. Since we know that `Weight` is so strongly correlated with `BP` to begin with, we'll want to keep this variable in our model. But let's try removing `BSA` and `Pulse`. 
+
+```{r}
+m2 <- lm(BP ~ Weight +  Age + Dur + Stress, data=BP)
+summary(m2)
+vif(m2)
+plot(m2, which=c(1,2))
+```
+
+This simpler model explains almost as much of the variation as the full model, but with two fewer explanatory variables. Moreover, residuals are closer to being normal, and the high VIFs have been eliminated. This model should be preferred to the full model. 
+
+Still, two of the variables in the reduced model (`Dur` and `Stress`), do not seem to be contributing much to the model. Let's see what happens if we eliminate them. 
+
+```{r}
+m3 <- lm(BP ~ Weight +  Age, data=BP)
+summary(m3)
+vif(m3)
+plot(m3, which=c(1,2))
+```
+
+This model is again nearly as effective as the full model, with no evidence of multicollinearity, and more normally distributed residuals. What we have lost in $R^2$, we have more than made up for in simplicity and conformity to our assumptions. 
+
+

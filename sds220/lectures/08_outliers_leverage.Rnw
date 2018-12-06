@@ -1,0 +1,187 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{September 25, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Categorical explanatory variable
+  \item Leverage, influence, and outliers
+\end{enumerate}
+
+
+
+\paragraph{Warmup: Regression}
+In 1966 \href{http://en.wikipedia.org/wiki/Cyril_Burt}{Cyril Burt} published a paper called ``The genetic determination of differences in intelligence: A study of monozygotic twins reared apart." The data consist of IQ scores for [an assumed random sample of] 27 identical twins, one raised by foster parents, the other by the biological parents. 
+
+Here is the regression output for using $Biological$ IQ to predict $Foster$ IQ:
+
+<<message=FALSE, warning=FALSE, size='footnotesize', eval=TRUE>>=
+library(mosaic)
+library(faraway)
+m1 <- lm(Foster ~ Biological, data = twins)
+coef(m1)
+rsquared(m1)
+@
+
+\begin{enumerate}
+\item Which of the following is \textbf{FALSE}? Justify your answers.
+
+\begin{enumerate}
+  \itemsep0.7in
+\item Alice and Beth were raised by their biological parents. If Beth's IQ is 10 points higher than Alice's, then we would expect that her foster twin Bernice's IQ is 9 points higher than the IQ of Alice's foster twin Ashley. 
+\item Roughly 78\% of the foster twins' IQs can be accurately predicted by the model.
+\item The linear model is $\widehat{Foster} = 9.2 + 0.9 \times Biological$.
+\item Foster twins with IQs higher than average are expected to have biological twins with higher than average IQs as well.
+  \vspace{0.5in}
+\end{enumerate}
+
+\item Interpret the coefficients of the model. 
+\end{enumerate}
+
+
+
+
+\clearpage
+\paragraph{Height and weight} The scatterplot and least squares summary below show the relationship between weight measured in kilograms and height measured in centimeters of 507 physically active individuals.
+<<message=FALSE, fig.width=10, fig.height=4, eval=TRUE, size='footnotesize'>>=
+library(openintro)
+qplot(data = bdims, x = hgt, y = wgt, xlab = "Height (cm)", ylab = "Weight (kg)")
+coef(lm(wgt ~ hgt, data = bdims))
+@
+ 
+\begin{enumerate}
+  \itemsep0.7in
+\item Describe the relationship between height and weight.
+\item Write the equation of the regression line. Interpret the slope and intercept in context.
+\item The correlation coefficient for height and weight is 0.72. Calculate $R^2$ and interpret it in context.
+  \vspace{0.5in}
+\end{enumerate}
+
+
+\clearpage
+\paragraph{One Categorical Explanatory Variable}
+
+Recall our Rail Trail data example, and suppose that instead of using temperature as our explanatory variable for ridership on the RailTrail, we just used whether it was a weekday or not. The variable $weekday$ is \emph{binary} in that it only takes on the values 0 and 1. [Such variables are also called \emph{indicator} variables (by mathematicians) or \emph{dummy} variables (by economists).] Such a model has the form:
+\begin{eqnarray*}
+  \widehat{volume} = \hat{\beta}_0 + \hat{\beta}_1 \cdot weekday
+\end{eqnarray*}
+
+<<echo=FALSE, fig.show='hide', size='footnotesize'>>=
+qplot(y = volume, x = weekday, data = RailTrail)
+coef(lm(volume ~ weekday, data = RailTrail))
+@
+
+\begin{enumerate}
+  \itemsep0.5in
+  \item How many riders does the model expect will visit the Rail Trail on a weekday? 
+  \item How many riders does the model expect on a weekend? 
+  \item What if it's a weekend and it's 80 degrees out?
+  \item Draw a scatterplot of the data and indicate this model graphically.
+  \vspace{1in}
+  \item \emph{Estimate} the $R^2$ for this model. Is it greater or less than the $R^2$ for the model with temperature as an explanatory variable?
+\end{enumerate}
+
+
+\clearpage
+\paragraph{Outliers, Leverage, and Influence}
+It is important to identify the outliers and understand their role in determing the regression line.
+\vspace{5in}
+\begin{itemize}
+  \itemsep0in
+  \item An \emph{outlier} is an observation that doesn't seem to fit the general pattern of the data
+  \item An observation with an extreme value of the explanatory variable is a point of high \emph{leverage}
+  \item A high leverage point that exerts disproportionate influence on the slope of the regression line is an \emph{influential point}
+\end{itemize}
+
+<<message=FALSE, fig.height=4, echo=FALSE, eval=FALSE>>=
+ds = reshape(anscombe, direction="long", varying=matrix(names(anscombe), ncol=4, byrow=TRUE), v.names=c("x", "y"))
+ds.out = filter(ds, time == 1)
+xyplot(y ~ x, data=ds.out, type=c("p", "r"), pch=19, cex=2, lwd = 5, ylim=c(5,13))
+ds.out[3, "y"] <- 9
+xyplot(y ~ x, data=ds.out, type=c("p", "r"), pch=19, cex=2, lwd = 5, ylim=c(5,13))
+ds.out[4, "y"] <- 12
+xyplot(y ~ x, data=ds.out, type=c("p", "r"), pch=19, cex=2, lwd = 5, ylim=c(5,13))
+@
+
+\paragraph{Quick True or False}
+
+  \begin{enumerate}
+\item Influential points always change the intercept of the regression line.
+\item Influential points always reduce $R^2$.
+\item It is much more likely for a low leverage point to be influential, than a high leverage point.
+  \end{enumerate}
+
+
+
+% \newpage
+% 
+% \paragraph{Instructor's Notes}
+% notes
+% <<include=FALSE>>=
+% require(mosaic)
+% x = rnorm(100)
+% y = rnorm(100)
+% ds = data.frame(y,x)
+% xyplot(y ~ x, data=ds, type=c("p", "r"), lwd=3)
+% rsquared(lm(y ~ x, data=ds))
+% @
+% 
+% 
+% <<include=FALSE>>=
+% ds = rbind(ds, data.frame(y=2, x=10))
+% xyplot(y ~ x, data=ds, type=c("p", "r"), lwd=3)
+% rsquared(lm(y ~ x, data=ds))
+% @
+% notes
+
+
+
+\end{document}

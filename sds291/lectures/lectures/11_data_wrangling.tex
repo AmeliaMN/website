@@ -1,0 +1,223 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Profs. Baumer \& Indurkhya}}
+\chead{\textsc{MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+\DeclareMathOperator{\X}{\mathbf{X}}
+\DeclareMathOperator{\Hatmat}{\mathbf{H}}
+
+\rhead{\textsc{April 13, 2015}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Data Wrangling
+\end{enumerate}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(mosaic)}
+\hlkwd{require}\hlstd{(Stat2Data)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+\paragraph{Data Wrangling}
+
+\href{http://en.wikipedia.org/wiki/Data_wrangling}{Data wrangling} is a somewhat difficult to define, but highly valuable skill. As you have probably already seen, real-world data analysis projects often involve a significant amount of work just to get the data into a form suitable for analysis. The greater your capacity for accomplishing these tasks, the more quickly and more efficiently you can whip your data into shape, leaving more time for careful analysis. 
+
+People are starting to pay more attention to these skills, and are starting to think about data wrangling as a field of expertise unto itself. Chief among these people is Hadley Wickham of Rice University and RStudio, author of the \href{http://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html}{\cmd{dplyr}} and \cmd{tidyr} packages for R. RStudio has also recently released a \href{http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf}{Data Wrangling Cheatsheet} illustrating many common operations. 
+
+Consider the following data manipulation \emph{verbs}:
+\begin{enumerate}
+  \itemsep0in
+  \item \cmd{mutate}: add or change columns
+  \item \cmd{select}: take a subset of the columns
+  \item \cmd{filter}: take a subset of the rows
+  \item \cmd{arrange}: sort the rows
+  \item \cmd{summarise} (with \cmd{group\_by}): aggregate the rows
+\end{enumerate}
+
+These five relatively simple ideas can be combined to enable powerful analyses. The use of the chaining operator (\texttt{\%>\%}) makes this particularly elegant.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(nycflights13)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\begin{enumerate}
+  \item Count the total number of flights in the \cmd{flights} table. 
+  \item Find all the airports that are destinations. Count how many flights went into and out of each airport?
+  \item Over what time span does this data cover? 
+  \item Find all the flights originating from LaGuardia airport on April 8th, 2013. How many were there? Show only carriers and flight numbers, and sort them by arrival delay. 
+  \item What was the average delay? By airline? By airport? If you had to fly from LaGuardia, JFK, or Newark, which airport would you choose? 
+\end{enumerate}
+
+\paragraph{Linking Two Tables}
+
+Two tables can be joined together using a \emph{key} via the \cmd{inner\_join} function. 
+
+\begin{enumerate}
+  \item Are flights that arrive at mile-high altitude (at least 5,280 feet) more or less likely to be on time?  
+\end{enumerate}
+
+\paragraph{Reshaping}
+
+One popular source of data is Gapminder~\cite{}, the brainchild of Hans Rosling. Gapminder contains data about countries over time for a variety of different variables -- including the prevalence of HIV among adults aged 15 to 49 -- and other health and economic indicators. These data are stored in Google Spreadsheets, or one can download them as Microsoft Excel workbooks. The typical presentation of a small subset of such data is shown below. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{hiv.key} \hlkwb{<-} \hlstr{"pyj6tScZqmEfbZyl0qjbiRQ"}
+\hlstd{hiv} \hlkwb{<-} \hlkwd{fetchGoogle}\hlstd{(}\hlkwc{key} \hlstd{= hiv.key)}
+\hlkwd{names}\hlstd{(hiv)[}\hlnum{1}\hlstd{]} \hlkwb{<-} \hlstr{"Country"}
+\hlstd{hiv} \hlopt{%>%}
+  \hlkwd{filter}\hlstd{(Country} \hlopt{%in%} \hlkwd{c}\hlstd{(}\hlstr{"United States"}\hlstd{,} \hlstr{"France"}\hlstd{,} \hlstr{"South Africa"}\hlstd{))} \hlopt{%>%}
+  \hlkwd{select}\hlstd{(Country, X1979, X1989, X1999, X2009)}
+\end{alltt}
+\begin{verbatim}
+##         Country      X1979 X1989 X1999 X2009
+## 1        France         NA    NA   0.3   0.4
+## 2  South Africa         NA    NA  14.8  17.2
+## 3 United States 0.03176408    NA   0.5   0.6
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Our data takes the form of a two-dimensional array, where each of the $n$ rows represents a country, and each of the $p$ years is a column. Each entry represents the percentage of adults aged 15 to 49 living with HIV in the $i^{th}$ country in the $j^{th}$ year. This presentation of the data has some advantages. First, it is possible (with a big enough monitor) to \emph{see} all of the data. One can quickly follow the trend over time for a particular country, and one can also estimate quite easily the percentage of missing data present. Thus, if visual inspection is the primary analytical technique, this \emph{spreadsheet}-style presentation can be convenient. 
+
+Alternatively, consider this presentation of that same data:
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(tidyr)}
+\hlstd{hivLong} \hlkwb{<-} \hlkwd{gather}\hlstd{(hiv,} \hlkwc{key} \hlstd{= Year,} \hlkwc{value} \hlstd{= hiv.rate,} \hlopt{-}\hlstd{Country)}
+\hlstd{hivLong} \hlkwb{<-} \hlkwd{mutate}\hlstd{(hivLong,} \hlkwc{Year} \hlstd{=} \hlkwd{as.numeric}\hlstd{(}\hlkwd{gsub}\hlstd{(}\hlstr{"X"}\hlstd{,} \hlstr{""}\hlstd{, Year)))}
+\hlstd{hivLong} \hlopt{%>%}
+  \hlkwd{filter}\hlstd{(Country} \hlopt{%in%} \hlkwd{c}\hlstd{(}\hlstr{"United States"}\hlstd{,} \hlstr{"France"}\hlstd{,} \hlstr{"South Africa"}\hlstd{))} \hlopt{%>%}
+  \hlkwd{filter}\hlstd{(Year} \hlopt{%in%} \hlkwd{c}\hlstd{(}\hlnum{1979}\hlstd{,} \hlnum{1989}\hlstd{,} \hlnum{1999}\hlstd{,} \hlnum{2009}\hlstd{))}
+\end{alltt}
+\begin{verbatim}
+##          Country Year    hiv.rate
+## 1         France 1979          NA
+## 2   South Africa 1979          NA
+## 3  United States 1979  0.03176408
+## 4         France 1989          NA
+## 5   South Africa 1989          NA
+## 6  United States 1989          NA
+## 7         France 1999  0.30000000
+## 8   South Africa 1999 14.80000000
+## 9  United States 1999  0.50000000
+## 10        France 2009  0.40000000
+## 11  South Africa 2009 17.20000000
+## 12 United States 2009  0.60000000
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+While our data is still a two-dimensional array, it now has $np$ rows and just three columns. Visual inspection of the data is now more difficult, since our data is now very long and very narrow -- it's aspect ratio is not similar to that of our screen! 
+
+It turns out that there are substantive reasons to prefer the long, narrow version of this data. It is a more efficient way for the computer to store and retrieve the data. It is more convenient for the purpose of data analysis. And it is more scalable, in that the addition of a second variable simply contributes another column, whereas to add another variable to the spreadsheet presentation would require a confusing three-dimensional view (or worse, merged cells). 
+
+These gains come at a cost: we have relinquished our ability to \emph{see all the data at once}. When data is small, being able to see it all at once can be useful, and even comforting. But in this era of big data, a reliance upon seeing all the data at once in a spreadsheet layout is a fool's errand. Learning to manipulate data via programming frees us from the click-and-drag paradigm popularized by spreadsheet applications, and allows us to work with data of arbitrary size. Recording our data manipulation operations in code also makes them reproducible, an increasingly desirable trait in this era of collaboration. It enables us to fully separate the raw data from our analysis, two concepts too often elided in the spreadsheet application. 
+
+
+\end{document}

@@ -1,0 +1,179 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{October 6, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Project groups due today
+  \item Randomization test recap
+  \item Hypothesis testing
+\end{enumerate}
+
+% \paragraph{Exam 1 Recap}
+% The average was 84.6. I am implementing a bootstrap incentive. The threshold for this exam is 80. If you scored below the threshold, your score on \emph{this exam} will be retroactively raised to 80 if you score above the threshold on either of the remaining exams.  
+
+
+\paragraph{Randomization test recap}
+
+In the last class, we designed a simulation to help us answer the question of whether exposure to mites was associated, \emph{to a statistically significant} degree, with a decrease in wilt disease after exposure to Verticillium, a fungus that causes wilt disease. 
+
+Most of us used the `no-wilt-mites' cell in the table as our test statistic. But there are other statistics we might have been interested in. Particularly, we might be interested in the difference in the proportion of plants that wilted between the mites and the no mites groups. To answer this question, we might
+\begin{enumerate}
+\item Count out 19 black cards (no wilt) and 28 red cards (wilt)
+\item Shuffle
+\item Deal into two piles: 26 (mites) and 21 (no mites)
+\item Calculate the proportions of wilt (red cards) for each pile, then finally, the difference in proportions. Record your simulation and do steps 1-4 a bunch more times!
+\end{enumerate}
+
+\paragraph{Questions}
+\begin{enumerate}
+  \itemsep0.75in
+  \item What is the \emph{null hypothesis} for this simulation?
+  \item What is the \emph{test statistic}?
+  \item Where does the test statistic lie in the \emph{null distribution}?
+  \item Does this evidence cause you to \emph{reject} or \emph{fail to reject} the null hypothesis?
+  \item Write \emph{one} sentence summarizing what you've learned about mites and wilt disease.  
+  \vspace{0.5in}
+\end{enumerate}
+
+<<eval=TRUE, message=FALSE, warning=FALSE, size='footnotesize'>>=
+require(mosaic)
+tally(~ outcome + treatment, data = Mites)
+tally(outcome ~ treatment, data = Mites, format = "proportion")
+@
+
+<<size='footnotesize'>>=
+tbl <- tally(outcome ~ treatment, data = Mites, format = "proportion")
+diff_prop <- tbl[2,2] - tbl[2,1]
+diff_prop
+@
+
+<<eval=TRUE, fig.height=4, fig.width=10, message=FALSE, warning=FALSE, size='footnotesize'>>=
+null_dist <- do(5000) * tally(outcome ~ shuffle(treatment), data = Mites)
+null_dist <- null_dist %>%
+mutate(prop_wilt_nomites = wilt.no.mites/(wilt.no.mites+no.wilt.no.mites)) %>%
+mutate(prop_wilt_mites = wilt.mites/(wilt.mites+no.wilt.mites)) %>%
+mutate(diff_prop = prop_wilt_nomites - prop_wilt_mites)
+ggplot(data = null_dist, aes(diff_prop)) +
+geom_histogram(bins = 10)
+@
+
+<<size='footnotesize'>>=
+2 * pdata(~diff_prop, q=.3864, data=null_dist, lower.tail=FALSE)
+@
+
+
+
+\clearpage
+\paragraph{What's Wrong?}
+
+% MMC, 7e, 6.50, 6.51, page 378
+Here are several situations where there is an incorrect application of the ideas presented in this section. Write a short paragraph explaining what is wrong in each situation and why it is wrong. 
+
+\begin{enumerate}
+  \itemsep0.5in
+  \item A researcher tests the following null hypothesis: $H_0 : \bar{x} = 23$
+  \item A study with $\bar{x} = 45$ reports statistical significance for $H_a : \mu > 50$. 
+  \item A researcher tests the hypothesis $H_0 : \mu = 350$ and concludes that the population mean is equal to 350. 
+  \item A test preparation company wants to test that the average score of their students on the ACT is better than the national average score of 21.1. They state their null hypothesis to be $H_0 : \mu > 21.2$. 
+  \item A study summary says that the results are statistically significant and the p-value is 0.98. 
+\end{enumerate}
+% 
+% \newpage
+% 
+% \subsection*{Instructor's Notes}
+% 
+% 
+% \paragraph{Tests of Significance}
+% 
+% \begin{itemize}
+%   \item Important concepts in hypothesis testing:
+%   \begin{itemize}
+%     \item $H_0$: null hypothesis - the state of the world that you assume is true. Typically, this is a world of ``no effect," in which probability distributions are easy to calculate or simulate. $H_0$ is a specific mathematical statement about a population parameter.
+%     \item $H_A$: alternative hypothesis - a state of the world different from the null. Typically, this is a world in which the effect you are testing is real
+%     \item test statistic: the estimate that you are testing. Typically, this is a something that you have computed from data and are trying to understand in the context of the null distribution
+%     \item null distribution: the sampling distribution of the test statistic under the null hypothesis.
+%     \item $p$-value: probability of observing something as strange or stranger as what you observed, \emph{under the assumption that the null hypothesis is true}
+%     \item $\alpha$-level: a threshold beyond which you begin to doubt the null hypothesis. This is a line in the sand that you draw to purposefully gauge your dubiousness.
+%   \end{itemize}
+%   \item Two possible outcomes: 
+%   \begin{itemize}
+%     \item Reject $H_0$ at $\alpha$-significance level: observations are so unlikely under the null hypothesis, that it is likely false
+%     \item Fail to reject $H_0$ at $\alpha$-significance level: observations are reasonably likely under null hypothesis, so can't rule out possibility that it is true
+%   \end{itemize}
+%   \item Important: we never confirm the null hypothesis -- we only fail to reject!
+%   \item Always report $p$-values and a confidence interval
+%   \item One-sided vs. two-sided tests: one-sided test are almost never used in practice
+% \end{itemize}
+% 
+% \paragraph{Testing Outcomes}
+% 
+% For a defendant on trial:
+% \begin{itemize}
+%   \item $H_0$: innocent until proven guilty
+%   \item Type I error: $\Pr(\text{reject} | H_0)$ - convicting an innocent person
+%   \item Type II error: $\Pr(\text{fail to reject} | H_0^c) = 1- Power$ - letting a guilty person go free
+% \end{itemize}
+% 
+% \begin{table}[b]
+% \centering
+% \begin{tabular}{|c|c|c|}
+%   \hline
+%   Decision \textbackslash Truth & $H_0$ is true & $H_0$ is false \\
+%   \hline
+%   Reject & \hspace{1.5in} & \hspace{1.5in} \\
+%   \hline
+%   Fail to Reject &  & \\
+%   \hline
+% \end{tabular}
+% \end{table}
+
+
+\end{document}

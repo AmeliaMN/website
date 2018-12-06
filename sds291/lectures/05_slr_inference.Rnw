@@ -1,0 +1,139 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+
+\rhead{\textsc{September 27, 2016}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Parameters and statistics
+  \item Hypothesis testing
+  \item Partitioning variability
+  \item Confidence and prediction intervals
+\end{enumerate}
+
+\paragraph{Parameters and statistics}
+Let's take another moment to review the relationship between the population and the samples we take. 
+\vspace{1.5in}
+
+\paragraph{Hypothesis testing} In this class, the hypothesis we are most often testing is about the slope coefficient(s).
+
+\begin{eqnarray*}
+H_0: \beta_1 = 0 \\
+H_A: \beta_1 \neq 0
+\end{eqnarray*}
+
+Why do we write the hypothesis test about the parameter?
+\vspace{0.5in}
+
+To test the hypothsis, we will use the following test statistic:
+\begin{eqnarray*}
+t = \frac{\hat{\beta_1}}{SE_{\hat{\beta_1}}}
+\end{eqnarray*}
+Why is the test statistic including the estimate of the parameter?
+\vspace{0.5in}
+
+Similarly, we could also compute a confidence interval for the slope
+\begin{eqnarray*}
+\hat{\beta_1} \pm t* \cdot SE_{\hat{\beta_1}}
+\end{eqnarray*}
+
+
+
+\clearpage
+\paragraph{An example} Let's consider the cereal example again
+<<message=FALSE, warning=FALSE>>=
+require(mosaic)
+require(Stat2Data)
+data(Cereal)
+m1 <- lm(Calories~Sugar, data=Cereal)
+summary(m1)
+@
+\vspace{1.5in}
+
+\paragraph{Partitioning variability}
+When we do Analysis of Variance (ANOVA) we are partitioning the variability. 
+
+Looking at the relationship between the $y_i$s, the $\hat{y}$s, and $\bar{y}$, we can see that
+\begin{eqnarray*}
+(y_i -\bar{y}) = (\hat{y_i}-\bar{y}) + (y_i -\hat{y_i})
+\end{eqnarray*}
+\vspace{1in}
+
+We can use the relationship between those quantities to gain some intuition for this:
+\begin{eqnarray*}
+\sum_{i=1}^n (y_i -\bar{y})^2 &=& \sum_{i=1}^n (\hat{y_i}-\bar{y}) + \sum_{i=1}^n (y_i-\hat{y_i})^2 \\
+SST &=& SSM + SSE
+\end{eqnarray*}
+
+\paragraph{Example} Again, let's think about the cereal example
+<<>>=
+anova(m1)
+@
+\vspace{1.5in}
+
+
+\paragraph{Confidence and prediction intervals} This is one of those places where statisticians shouldn't have been put in charge of the terms. We're going to talk about two different varieties of "confidence intervals," but we're going to call one a confidence interval and the other a prediction interval.
+
+\begin{itemize}
+\item Confidence intervals are about means
+\item Prediction intervals are about individuals
+\end{itemize}
+
+The difference is in the computation of the standard error
+
+\begin{eqnarray*}
+SE_{\hat{\mu}} &=& \hat{\sigma_\epsilon}\sqrt{\frac{1}{n}+\frac{(x*-\bar{x})^2}{\sum(x-\bar{x})^2}} \\
+SE_{\hat{y}} &=& \hat{\sigma_\epsilon}\sqrt{1+\frac{1}{n}+ \frac{(x*-\bar{x})^2}{\sum(x-\bar{x})^2}}
+\end{eqnarray*}
+
+\paragraph{Example}
+If we wanted to create a confidence interval about cereals with 6 grams of sugar, and a prediction interval about a particular cereal with 6 grams of sugar, which interval would be wider?
+
+\end{document}
