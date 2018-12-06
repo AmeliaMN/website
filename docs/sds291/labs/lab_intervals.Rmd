@@ -1,0 +1,177 @@
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=FALSE)
+```
+
+In this lab, we will learn how to construct and interpret confidence intervals and prediction intervals. We'll also pick up some `dplyr` along the way. 
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(skimr)
+```
+
+#### Fuel Economy for Cars
+
+In this example, we consider the fuel economy, as measured in miles per gallon in highway driving (`hwy`) in terms of the size of the car's engine, measured in litres (`displ`). 
+
+This data comes from the `fueleconomy` package. You may have to install this. The data is called `vehicles`. 
+
+```{r}
+# install.packages("fueleconomy")
+library(fueleconomy)
+data(vehicles)
+```
+
+Note that by running the `str` command on the `vehicles` data frame, we discover that this data set is quite large (more than 33,000 rows). 
+
+```{r}
+str(vehicles)
+```
+
+`str` lets us see some of the structure of the data set, although it doesn't give us much of a summary. If we use the `skim` command, we can learn more about the data-- that it contains data on cars from 1984-2015, for example!
+
+```{r}
+skim(vehicles)
+```
+
+#### Filtering data
+
+In this example we will consider only vehicles in the 2000 model year. To do this, we will make a smaller data set consisting of just these cars. As with almost everything in `R`, there are many ways to make a subset of data. However, we will be focusing on the `filter` command, which filters the data to ensure it meets a certain criteria. 
+
+```{r}
+myCars = vehicles %>% 
+  filter(year == 2000)
+nrow(myCars)
+```
+
+Notice that we used the double equals sign to mean "check if it is equal." This is a "logical expression" (meaning it returns a binary, TRUE/FALSE). Other logical expressions are `!=` for not equal, `>` for greater than, `>=` for greater than or equal to, etc. 
+
+Also note that we are creating a new dataset called `myCars`, rather than overwriting the `vehicles` data. This is good practice.
+
+#### Simple Linear Model
+
+We are interested in the relationship between fuel economy and engine size. A scatterplot will help us visualize this relationship. 
+
+```{r}
+ggplot(data=myCars, aes(x=displ, y=hwy)) + geom_point()
+```
+
+* What do you see in this plot? Is the relationship linear? Are there any outliers? How can this information help you to CHOOSE the form of the model to fit? 
+
+
+We proceed by fitting a simple linear regression model for `hwy` as a function of `displ`. 
+
+```{r}
+ggplot(data=myCars, aes(x=displ, y=hwy)) + geom_point() + geom_smooth(method=lm, se=FALSE)
+m1 = lm(hwy ~ displ, data=myCars)
+```
+
+The `summary` command applied to the regression model object (`m1`) will give us lots of information about the model that we fit.
+
+```{r}
+summary(m1)
+anova(m1)
+```
+
+#. Write down the equation for the regression line. 
+#. Write down an interpretation of the coefficient for `displ` in this model. Remember to include units!
+#. Does engine size appear to have a statistically significant relationship with fuel economy? Why or why not? 
+#. How would you characterize the explanatory power of this model? 
+#. What is the total sum of squares?
+
+Now let's check the conditions for inference. 
+
+#. Are the conditions for inference reasonably met? 
+
+```{r}
+plot(m1)
+```
+
+#. What kind of transformation could we make in order to improve this? We'll address this later in the lab.
+
+Some of the observations have very large residuals (standardized residuals $> 3$). What is going on here? We can `slice()` to see what that row of the data looks like. 
+
+```{r}
+myCars %>% 
+  slice(395) 
+# myCars[395,] # This will also work
+```
+
+Notice that I can use `dplyr` commands without an assignment operator. If I just want to look at the data, and not re-use the results, I can just print the data to the Console (or, in the output section of my RMarkdown document) without saving it as something. `dplyr` is actually clever enough not to overwhelm your computer if the data you are printing is large-- it will automatically just show you a small selection of rows. 
+
+
+Looking at that `slice()` above, it seems like this car gets *really* good highway mileage. Maybe even the best in the dataset. Let's use the `dplyr` `arrange()` command to sort the data to see if that is true
+
+```{r}
+myCars %>%
+  arrange(desc(hwy))
+```
+
+#. Pick another outlier and try to determine why it might be so different from the other points. 
+
+#### Adding information to plots
+
+Another skill that can help you sort out what is going on with outliers, clusters of points, etc., is adding additional plotting marks. For example, we could create a plot where the points were colored differently based on whether the car took premium fuel or not. 
+
+In order to do that, we might want to create a new variable using the `mutate()` command. 
+
+```{r}
+myCars = myCars %>%
+  mutate(PremiumYN = if_else(fuel=="Premium", "Yes", "No"))
+```
+
+Notice that we used an `if_else()` statement to say, if `fuel == "Premium"` (`==` is a logical expression to check whether something is equal), set `PremiumYN` to "Yes", otherwise set it to "No." Now we can use that new variable in our plot. 
+
+```{r}
+ggplot(data=myCars, aes(x=displ, y=hwy, col=PremiumYN)) + geom_point()
+```
+
+
+Another option would be to create a set of plots, to compare cars with different numbers of cylinders. 
+
+```{r}
+ggplot(data=myCars, aes(x=displ, y=hwy)) + geom_point() + facet_wrap(~cyl)
+```
+
+
+#. What does this show you about the data?
+
+
+#### Confidence and prediction intervals
+
+To understand how a confidence interval for the mean fuel economy of cars with a specific engine size differs from a prediction interval for the fuel economy of an individual car with a specific engine size, lets create a confidence interval for cars with an engine displacement of 4 litres. 
+
+```{r}
+predict(m1, newdata=data.frame(displ=4), interval="confidence")
+```
+
+#. Interpret the confidence interval. What does it mean?
+
+```{r}
+predict(m1, newdata=data.frame(displ=4), interval="prediction")
+```
+
+#. Interpret the prediction interval. What does it mean?
+
+We can also visualize the confidence interval over the entire model using `se=TRUE`. 
+
+
+```{r}
+ggplot(data=myCars, aes(x=displ, y=hwy)) + geom_point() + geom_smooth(method=lm, se=TRUE)
+```
+
+Note how the confidence interval for the **mean** fuel economy are narrowest towards the mean value of the explanatory variable (`displ`). This will always be true. 
+
+
+#### Performing a transformation
+
+When we checked the conditions above, we thought that a transformation would help the conditions not to be violated. We can use the `mutate()` command to create a new variable in our data with that transformation. 
+
+#. Redo the analysis above, but using the transformation(s) you find appropriate!
+
+
+
+
+
+
+

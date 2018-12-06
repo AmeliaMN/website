@@ -1,0 +1,176 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+\DeclareMathOperator{\X}{\mathbf{X}}
+\DeclareMathOperator{\Hatmat}{\mathbf{H}}
+
+\rhead{\textsc{December 6, 2016}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Presentations and final reports
+  \item A little more logistic regression
+  \item Putting it all together
+\end{enumerate}
+
+<<echo=FALSE>>=
+opts_chunk$set(size='footnotesize')
+@
+
+\paragraph{Project} 
+Some important things to keep in mind:
+\begin{itemize}
+\item For the presentation, you will only have 8 minutes. Going over time is a surefire way to lose points. Going under time is fine.
+\item Please focus your presentation only on one model (your current favorite). You should convince us the problem is interesting, interpret the coefficients in the context of the problem, and (briefly!) show us the conditions for regression. 
+\item We'll spend some time next week talking about ways to make your final project report look pretty, but remembering \verb#message=FALSE# is a big one. 
+\end{itemize}
+
+\paragraph{Coefficient interpretation} Because interpreting coefficients is so important for both your project and your test, lets practice writing out the ``script'' for a variety of cases. 
+
+\begin{enumerate}
+\itemsep0.5in
+\item Multiple regression: categorical variable
+\item Multiple regression: numeric variable
+\item Multiple regression: interaction term
+\item ANOVA $\alpha_i$
+\item ANOVA $\mu_i$
+\item Logistic regression: categorical variable
+\item Logistic regression: numeric variable
+\item Logistic regression: interaction term
+\end{enumerate}
+
+\paragraph{Logistic regression}
+Let's pull the example of med school acceptance through the three `spaces' for logistic regression to see how it applies.
+
+<<fig.height=3, echo=FALSE, message=FALSE>>=
+require(mosaic)
+require(Stat2Data)
+data(Whickham)
+Whickham = Whickham %>%
+  mutate(isAlive = 2 - as.numeric(outcome))
+m1 = glm(isAlive~age, data=Whickham, family=binomial)
+@
+
+<<echo=FALSE>>=
+MedGPA = read.csv("http://www.math.smith.edu/~bbaumer/mth247/MedGPA.csv")
+tally(~Acceptance | Sex, data=MedGPA, format="count")
+@
+
+
+\paragraph{Probability}
+	\begin{eqnarray*}
+			\pi &=& \frac{e^{\beta_0 + \beta_1\cdot X}}{1 + e^{\beta_0 + \beta_1\cdot X}}
+		\end{eqnarray*}
+		The probability form is how the model gets fit, but it does not have an easy interpretation for what happens with a change in $x$. 
+		
+<<fig.height=3, echo=FALSE>>=
+plotModel(m1, ylab="probability", xlab="")
+@
+
+What is the probability of getting into med school for a woman? For a man? 
+\vspace{0.5in}
+\paragraph{Odds}
+		
+		\begin{eqnarray*}
+	    \frac{\pi}{1-\pi} &=& e^{\beta_0 + \beta_1\cdot X}
+		\end{eqnarray*}
+
+Odds are useful when you want to interpret the slope coefficient. We can use the interpretation, ``A one unit increase in $x$ is associated with changing the odds by a factor of $e^{\beta_1}$. 
+
+<<fig.height=2.5, echo=FALSE>>=
+xyplot(fitted.values(m1)/(1-fitted.values(m1))~age, data=Whickham,  type="spline", ylab="odds", xlab="")
+@
+
+What are the odds of getting into med school for a woman? For a man? What is the odds ratio?
+\vspace{0.5in}
+\paragraph{Log odds}
+	\begin{eqnarray*}
+			\log \left( \frac{\pi}{1-\pi} \right) &=& \beta_0 + \beta_1\cdot X \\
+		\end{eqnarray*}
+		
+		Thinking about log odds is useful when you want a linear form of a regression line. You can interpret the coefficients in the standard way we have been doing for linear regression, ``A one unit increase in $x$ is associated with a $\beta_1$ increase in the log odds of $y$''
+		
+<<fig.height=3, echo=FALSE, message=FALSE>>=
+xyplot(log(fitted.values(m1)/(1-fitted.values(m1)))~age, data=Whickham, type=c("l"),ylab="log odds", xlab="")
+@
+	
+What is the empirical logit for getting into med school for a woman? For a man? 
+\vspace{0.5in}
+<<echo=FALSE>>=
+logm = glm(Acceptance ~ Sex, data=MedGPA, family=binomial)
+summary(logm)
+@
+\clearpage
+Write out the equation for the model in each of the three formats. 
+\vspace{2in}
+
+How do you interpret the coefficient on \verb#SexM#?
+\vspace{0.5in}
+
+\paragraph{Putting it all together}
+Lets consider the material we have covered throughout this course. We have tried to focus mostly on applied ideas, some of which are computational (more useful in practice, hard to test) and some which are slightly more theoretical (needed so you understand what you can apply, easier to test).
+
+Lets try to categorize some of the tasks we have learned how to perform. Where in the CFAU process do these fit?
+\\ Interpreting multiple regression coefficients, nested F-tests, added variable plots, stepwise regression, calculating Cook's distance, calculating Fisher's LSD, calculating Tukey's HSD, the Bonferroni correction, randomization tests, bootstrap methods, fitting ANOVA, rewriting ANOVA models in different ways, checking ANOVA p-values, fitting a logistic regression model, translating from log-odds to odds, translating from odds to probability, calculating odds ratios, looking at p-values on logistic regression, interpreting logistic regression coefficients, considering forms of models. 
+\\
+Choose
+\vspace{1in}
+\\
+Fit
+\vspace{1in}
+\\
+Assess
+\vspace{1in}
+\\
+Use
+\vspace{1in}
+
+
+
+\end{document}

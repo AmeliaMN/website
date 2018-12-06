@@ -1,0 +1,237 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture Notes}}
+\rhead{\textsc{September 27, 2017}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{1in}}
+
+\begin{document}
+%\maketitle
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em 
+  \item Finish notes from Monday
+  \item Multiple regression
+\end{enumerate}
+
+
+\paragraph{Multiple Regression}
+
+Multiple regression is a natural extension of simple linear regression.
+\begin{itemize}
+  \itemsep0in
+  \item SLR: one response variable, one explanatory variable
+  $$
+    Y = \beta_0 + \beta_1 \cdot X + \epsilon, \text{ where } \epsilon \sim N(0, \sigma_\epsilon)
+  $$
+  \item MLR: one response variable, \emph{more than one} explanatory variable
+  $$
+    Y = \beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot X_2 + \cdots + \beta_p \cdot X_p + \epsilon, \text{ where } \epsilon \sim N(0, \sigma_\epsilon)
+  $$
+  \item Estimated coefficients (e.g. $\hat{\beta}_i$'s) now are interpreted in relation to (or ``conditional on'') the other variables
+  \item $\beta_i$ reflects the \emph{predicted} change in $Y$ associated with a one unit increase in $X_i$, conditional upon the rest of the $X_i$'s.
+  \item $R^2$ has the same interpretation (proportion of variability explained by the model)
+\end{itemize}
+
+
+\paragraph{Multiple Regression with a Categorical Variable}
+
+Consider the case where $X_1$ is quantitative, but $X_2$ is an \emph{indicator} variable that can only be 0 or 1 (e.g. $coffeeTemp$). Then,
+$$
+  \hat{Y} = \hat{\beta}_0 + \hat{\beta}_1 \cdot X_1 + \hat{\beta}_2 \cdot X_2
+$$
+So then,
+  \begin{align*}
+    \text{For hot coffee, } \qquad \hat{Y} |_{ X_1, X_2 = 0} &= \hat{\beta}_0 + \hat{\beta}_1 \cdot X_1 \\
+    \text{For cold coffee, } \qquad \hat{Y} |_{ X_1, X_2 = 1} &= \hat{\beta}_0 + \hat{\beta}_1 \cdot X_1 + \hat{\beta}_2 \cdot 1 \\
+      &= \left( \hat{\beta}_0 + \hat{\beta}_2 \right) + \hat{\beta}_1 \cdot X_1
+  \end{align*}
+This is called a \emph{parallel slopes} model. [Why?]
+
+\clearpage
+\paragraph{Example: Class data}
+
+Let's think back to the data we collected at the beginning of class again. We're going to try to predict how far from Smith you each were. We could start with a simple linear regression model,
+
+<<echo=FALSE, message=FALSE, warning=FALSE>>=
+library(tidyverse)
+library(mosaic)
+us <- read_csv("/Users/amcnamara/SDS220/student_info/SDS220_Fall2017.csv")
+us <- us %>%
+  mutate(Distance_break = parse_number(Distance_break))
+us <- us %>%
+  mutate(Sheet_color = tolower(Sheet_color))
+us <- us %>%
+  mutate(Sheet_color = if_else(Sheet_color=="lavendar", "purple", Sheet_color))
+us <- us %>%
+  mutate(Sheet_color = if_else(Sheet_color=="green ", "green", Sheet_color))
+@
+
+<<size='footnotesize', warning=FALSE, fig.height=4>>=
+m1 <- lm(Distance_break~Num_languages, data=us)
+coef(m1)
+plotModel(m1)
+@
+
+\begin{enumerate}
+\itemsep1.2in
+\item Write out the equation of the line
+\item Interpret the slope and intercept of the line
+\end{enumerate}
+
+\clearpage
+But, maybe we want to include some additional information. We can add variables into our linear model:
+
+<<size='footnotesize', fig.height=4>>=
+m2 <- lm(Distance_break~Num_languages+Sheet_color, data=us)
+summary(m2)
+plotModel(m2)
+@
+\clearpage
+\begin{enumerate}
+\itemsep1.2in
+\item Write out the equation of the line
+\item Interpret all the coefficeints in the model
+\item Find the predicted value for yourself
+\item Find your residual-- is it negative or positive?
+ \vspace{1in}
+\end{enumerate}
+
+% \paragraph{Italian restaurant data}
+% The Zagat guide contains restaurant ratings and reviews for many major world cities. We want to understand variation in the average $Price$ of a dinner in Italian restaurants in New York City. Specifically, we want to know how customer ratings (measured on a scale of 0 to 30) of the $Food$, $Decor$, and $Service$, as well as whether the restaurant is located to the $East$ or west of 5th Avenue, are associated with the average $Price$ of a meal. The data contains ratings and prices for 168 Italian restaurants in 2001.
+% 
+% <<message=FALSE,fig.show='hold', fig.height=4, size='footnotesize'>>=
+% NYC <- read.csv("http://www.math.smith.edu/~bbaumer/mth241/nyc.csv")
+% ggplot(data = NYC, aes(x = jitter(Service), y = Price)) +
+%   geom_point(alpha = 0.5, size = 2) + geom_smooth(method = "lm", se = 0) +
+%   xlab("Jittered service rating") + ylab("Average Price (US$)")
+% lm(Price ~ Service, data = NYC)
+% @
+% 
+% 
+% \begin{enumerate}
+%   \itemsep1.2in
+%   \item Use {\tt qplot()} to examine the bivariate relationships between $Price$, $Food$ and $Service$.
+%   \item What do you observe? Describe the form, direction, and strength of the relationships.
+%   \item Use {\tt lm()} to build a SLR model for $Price$ as a function of $Food$. Interpret the coefficients of this model. How is the quality of the food at these restaurants associated with its price?
+%   \item Build a parallel slopes model by conditioning on the $East$ variable. Interpret the coefficients of this model. What is the value of being on the East Side of Fifth Avenue?
+%   \vspace{1in}
+% \end{enumerate}
+% 
+% 
+% 
+% 
+% <<echo=FALSE, size='footnotesize'>>=
+% opts_chunk$set(tidy=TRUE, size='footnotesize')
+% @
+% 
+% Let's build a model now for the $Price$ as a function of the $Food$ rating and the location relative to 5th Avenue. 
+% 
+% <<message=FALSE,fig.height=5, fig.show='hide'>>=
+% require(mosaic)
+% NYC <- read.csv("http://www.math.smith.edu/~bbaumer/mth241/nyc.csv")
+% qplot(data = NYC, x = jitter(Food), y = Price) +
+%   geom_smooth(method = "lm", se = 0)
+% mod.fe <- lm(Price ~ Food + East, data = NYC)
+% mod.fe
+% @
+% 
+% 
+% \begin{enumerate}
+%   \itemsep0.7in
+%   \item Interpret the coefficients of this model. What is the value of being on the East Side of Fifth Avenue?
+%   \item Calculate the expected $Price$ of a restaurant in the East Village with a $Food$ rating of 23. 
+%   \item Use \texttt{plotModel()} to visualize your model in the data space. 
+%   
+%   <<eval=FALSE>>=
+% plotModel(mod.fe, xlab = "Jittered food rating", ylab = "Average Price (US$)", system = "ggplot2")
+% @
+%   
+% \end{enumerate}
+
+
+% \paragraph{Multiple Regression with a Second Quantitative Variable}
+% If $X_2$ is a quantitative variable, then we have
+% 
+%   $$
+%     \hat{Y} = \hat{\beta}_0 + \hat{\beta}_1 \cdot X_1 + \hat{\beta}_2 \cdot X_2
+%   $$
+% Notice that our model is no longer a line, rather it is a \emph{plane} that lives in three dimensions!
+% 
+% \paragraph{Italian Restaurants (continued)}
+% 
+% Now suppose that we want to improve our model by considering not only the quality of the $Food$, but also the quality of the $Service$. We can do this in {\tt R} by simply adding another variable to our regression model.
+% 
+% <<message=FALSE,fig.height=3, eval=TRUE>>=
+% mod.fs <- lm(Price ~ Food + Service, data = NYC)
+% coef(mod.fs)
+% @
+% 
+% <<tidy=TRUE, eval=FALSE>>=
+% fit.price <- makeFun(mod.fs)
+% plotFun(fit.price(f,s) ~ f & s, surface=TRUE, f.lim=c(0,30), s.lim=c(0,30), alpha=0.5)
+% @
+% 
+% <<tidy=TRUE, eval=FALSE>>=
+% require(rgl)
+% opacity <- 0.4
+% with(NYC, plot3d(x = Food, y = Service, z = Price, type = "s", size = 0.3,
+%     col = "blue", xlab = "Food Rating", ylab = "Service Rating",
+%     zlab = "Price ($)"))
+% coefs <- coef(mod.fs)
+% planes3d(coefs["Food"], coefs["Service"], -1, coefs["(Intercept)"], alpha = opacity,
+% col = "lightgray")
+% @
+% 
+% \begin{enumerate}
+%   \itemsep0.7in
+%   \item Interpret the coefficients of this model. What does the coefficient of $Food$ mean in the real-world context of the problem? $Service$?
+%   \item How important is $Service$ relative to $Food$? Is it fair to compare the two coefficients?
+%   \item Use {\tt makeFun()} to find the expected $Price$ of a restaurant with a $Food$ rating of 21 but a $Service$ rating of 28. 
+%   \item Calculate the residual for \href{http://www.zagat.com/r/san-pietro-new-york}{San Pietro}. Is it overpriced? 
+%   <<>>=
+% filter(NYC, Restaurant == "San Pietro")
+% @
+% 
+% 
+%   \item What if we added all three explanatory variables to the model? What geometric shape would we have then? 
+% 
+% 
+% <<tidy=TRUE, eval=FALSE>>=
+% with(NYC, plot3d(x = Food, y = Service, z = Price, type = "s", size = 0.8,
+%     col = "blue", xlab = "Food Rating", ylab = "Service Rating",
+%     zlab = "Price ($)"))
+% coefs <- coef(lm(Price ~ Food + Service + East, data=NYC))
+% planes3d(coefs["Food"], coefs["Service"], -1, coefs["(Intercept)"], alpha = opacity, col = "lightgray")
+% planes3d(coefs["Food"], coefs["Service"], -1, coefs["(Intercept)"] + coefs["East"], alpha = opacity, col = "lightgray")
+% @
+% 
+% 
+% \end{enumerate}
+
+\end{document}

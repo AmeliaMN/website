@@ -1,0 +1,186 @@
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=FALSE)
+```
+
+```{r, message=FALSE}
+require(mosaic)
+require(Stat2Data)
+require(agricolae)
+cols <- trellis.par.get()$superpose.symbol$col
+```
+
+#### Motivation to Correct for Multiple Testing
+
+Let $X,Y$ be two random vectors, and consider the model $Y \sim \beta_0 + \beta_1 \cdot X$. The null hypothesis is that $\beta_1 = 0$. In our hypothesis test, we compute the $t$-statistic associated with the likelihood of observing the data ($\hat{\beta_1}$) under the assumption that the true slope is 0 (e.g. $\beta_1 = 0$). If the probability of $\hat{\beta_1}$ is sufficiently small (e.g. less than $\alpha = 0.05$), then we say that we have found a statistically significant association. 
+
+But what if we have 20 variables $X_1,X_2, \ldots, X_{20}$ in our model? Remember the jelly beans!
+
+![jellybeans](http://imgs.xkcd.com/comics/significant.png)
+
+As a thought experiment, suppose that we generate $Y$ and $X_i$ independently and uniformly at random for $i=1,\ldots, 20$. Let $t_i$ be the $t$-statistic associated with the estimated coefficient for $X_i$ in the regression model. Then by definition, 
+$$
+  \Pr(|t_i| \leq t_{\alpha/2, df}) = \alpha = 0.05.
+$$
+However, the probability that *at least one* of the 20 $t$-statistics will show a statistically significant estimated coefficient is very different! This probabiliity is:
+$$
+  \Pr(\text{at least one }|t_i| \leq t_{\alpha/2, df}) 
+  = 1 - \Pr(\text{for every }|t_i| > t_{\alpha/2, df}) 
+  = 1 - \prod_{i=1}^{20} \Pr(|t_i| > t_{\alpha/2, df}) 
+  = 1 - (0.95)^{20} \approx 1 - 0.3584859 = 0.6415141.
+$$
+This means that the chances are almost 2 in 3 that we will find at least one statistically significant variable, even though the variables were generated at independently and uniformly at random!
+
+#### Experimentation
+
+This seems ludicrous. Does this really happen? It's a surprisingly easy thing to test. 
+
+The function **noise** will generate $m+1$ random vectors of length $n$, and build a model for one vector as a function of the other $m$. [Note that is doesn't matter which one you pick to be the response variable.] It returns the number of variables whose $p$-values are below a given threshold $\alpha$. 
+
+```{r}
+noise <- function (n = 1000, m = 20, alpha=0.05) {
+  if (!is.numeric(n)) {
+    n <- 1000
+  }
+  if (!is.numeric(m)) {
+    n <- 20
+  }  
+  if (!is.numeric(alpha) | alpha < 0 | alpha > 1) {
+    n <- 0.05
+  }
+  x <- runif(n*m)
+  X <- data.frame(matrix(x, ncol=m))
+  ds <- cbind(Y = runif(n), X)
+
+  fm <- lm(Y ~ ., data=ds)
+  # p-values
+  p.vals <- summary(fm)$coefficients[-1,4]
+
+  # How many are < alpha?
+  return(sum(p.vals <= alpha))
+}
+```
+
+If we run this function a bunch of times, we'll get a sense of how often we are likely to see statistically significant relationships in random data. 
+
+```{r}
+set.seed(123) # what does this do?
+m <- 20
+alpha <- 0.05
+ds <- do(1000) * noise()
+histogram(~noise, data=ds)
+# How often did we find no statistically significant variables?
+pdata(~noise, q=0, data=ds)
+```
+
+Since our variables are independent, the number of statistically signficiant variables actually follows a binomial distribution. Thus, the observed probability should approach the following:
+
+```{r}
+# binomial distribution
+pbinom(0, m, 1/m)
+```
+
+#### Correcting for Multiple Tests
+
+In general, your data is **not** independent, nor is it likely to follow a known probability distribution. Thus, it is impossible (or at least impractical) to compute the probability of making a family-wise Type I error. However, there are several techniques for reducing the probability of making such an error. 
+
+The simplest is called the **Bonferroni correction**. This is a conservative technique, in that it focuses on reducing the probability of a Type I error. The implementation is just to lower the threshold for rejecting the null hypothesis by dividing $\alpha$ by $m$ (the number of variables). 
+
+```{r}
+# apply Bonferroni correction
+ds <- do(1000) * noise(alpha = alpha/m)
+histogram(~noise, data=ds)
+pdata(~noise, q=0, data=ds)
+# binomial distribution
+pbinom(0, m, alpha/m)
+
+```
+
+#### Multiple Comparisons in ANOVA
+
+When you build an ANOVA model with $k$ levels, then you are implicitly making $\binom{k}{2}$ comparisons. We'll look at several techniques for correcting for multiple comparisons. Specifically, we will consider:
+
+1. No correction
+2. Bonferroni correction
+3. Fisher's Least Significant Difference (LSD)
+4. Tukey's Honestly Significant Different (HSD)
+
+Each of these corrections follows the form:
+$$
+  \bar{y}_i - \bar{y}_j \pm cv \sqrt{MSE \left( \frac{1}{n_i} + \frac{1}{n_j} \right) }, 
+$$
+where $cv$ is a critical value that depends on the desired level of significance $\alpha$, and the number of degrees of freedom $n-k$. 
+
+The data set **CancerSurvival** contains data about the survival time for patients with various types of cancers. We are interested in the differences among those types. 
+
+```{r, fig.width=10}
+data(CancerSurvival)
+fv <- favstats(~Survival | Organ, data=CancerSurvival)
+fv
+bwplot(~Survival | Organ, data=CancerSurvival, layout = c(1, 5))
+```
+
+If we make no adjustments, but simply compute all of the pairwise two-sample $t$-tests, we get the following:
+
+```{r}
+# no adjustment
+with(CancerSurvival, pairwise.t.test(Survival, Organ, p.adjust.method="none"))
+```
+
+Of the 10 pairwise comparisons that we made, four showed statistically significant differences at the 5% level. 
+
+The Bonferroni correction that we saw above can also be applied in the context. Here, the correction is applied before we get the $p$-values. The results are quite severe. 
+
+```{r}
+# Bonferroni
+with(CancerSurvival, pairwise.t.test(Survival, Organ, p.adjust.method="bonferroni"))
+```
+
+Note that now only three of the comparisons appear to be statistically significant. The two comparisons that were previously close to the 5% level (Ovary-Bronchus and Stomach-Ovary) are now nowhere near 5%. 
+
+As we saw previously, Fisher's LSD is a more liberal approach. First, we compute the ANOVA model. 
+
+```{r}
+a1 <- aov(Survival ~ Organ, data=CancerSurvival)
+anova(a1)
+model.tables(a1)
+```
+
+Fisher's LSD only applies if the $F$-test from the ANOVA table shows a statistically signficant difference between the groups taking together. Since we already have confidence that there are differences, we may feel justified in being more aggressive about identifying those differences. 
+
+```{r}
+print(LSD.test(a1, "Organ"))
+```
+
+Note that here, Breast-Colon, Breast-Stomach, Breast-Bronchus, and Ovary-Bronchus show a statistically significant differences. 
+
+The details of Fisher's LSD have been hidden from us, but it is not hard to reproduce them. 
+
+```{r}
+# Compute df and MSE
+my.df <- df.residual(a1)
+my.mse <- summary(a1)[[1]]$"Mean Sq"[2]
+
+# Critical value of t
+t <- qt(0.975, df=my.df)
+t
+# Harmonic mean of Cell Sizes
+hm <- 1/mean(1/fv$n)
+hm
+# Compute LSD
+lsd <- t * sqrt(my.mse * (2/hm))
+lsd
+```
+
+Note that there, a single LSD value has been computed, rather than a different value for each pairwise comparison. 
+
+Finally, we consider Tukey's HSD. The only difference here is that the critical value is based on the [*studentized range distribution*](http://en.wikipedia.org/wiki/Studentized_range), which we will not cover here. 
+
+```{r}
+TukeyHSD(a1)
+```
+
+Note that Tukey's HSD is more conservative than Fisher's LSD, but less conservative than the Bonferroni correction. In fact, this will always be the case, since the critical values follow these implied inequalities. 
+
+> Much of this material was taken from http://rtutorialseries.blogspot.com/2011/03/r-tutorial-series-anova-pairwise.html
+

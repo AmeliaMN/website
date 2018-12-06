@@ -1,0 +1,35 @@
+#### Purpose {#purpose .unnumbered}
+
+Thank you for completing this questionnaire, which is helpful to us in
+structuring the course. All information will be kept confidential.
+
+
+Name | Class Year | Major | Email Address | Registration Status (circle one)
+-----|------------|-------|---------------|---------------------------------
+ | | | | | enrolled / wait list / neither
+
+#### Background {#background .unnumbered}
+
+\setlength{\itemsep}{0.7in}
+
+-   Please tell us about your background (e.g. major and area of
+    interest, other activities, significant orgs or athletics):
+-   Please list the three most recent math courses you’ve taken (which
+    may be in high school):
+-   What was your experience like in those courses?
+
+-   Have you ever taken statistics before (including high school)? If
+    so, please describe:
+
+-   What are your personal goals for this course?
+
+-   In which areas of applied statistics are you most interested (e.g.
+    biology, economics, psychology, finance, sociology, etc.) [list as
+    many as you like]?
+
+-   How strongly do you entertain the notion of working in a
+    quantitative field after graduation (circle one)?
+
+    not at all hardly ever sometimes often OMG, it’s all I think about!
+
+-   Is there any other information that we should know?

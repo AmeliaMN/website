@@ -1,0 +1,58 @@
+***
+
+* Reading: Ch. 1
+* Exercises to hand in: 1.8, 1.9, 1.13, 1.18, 1.26
+
+***
+
+```{r, message=FALSE}
+library(tidyverse)
+library(Stat2Data)
+library(skimr)
+```
+
+
+####  Exercise 1.8
+
+```{r}
+data(Cereal)
+head(Cereal)
+```
+
+#### Exercise 1.9
+
+####  Exercise 1.13
+
+```{r}
+data(Caterpillars)
+head(Caterpillars)
+```
+
+##### a
+
+##### b 
+
+[Instead of the `LogNassim` and `LogMass` variables, make your own logged variables using natural log]
+
+##### c
+
+##### d
+
+Changing colors is fine, you don't need to change the symbols. 
+
+##### e
+
+
+#### Exercise 1.18
+
+```{r}
+data(Pines)
+head(Pines)
+```
+
+####  Exercise 1.26
+
+```{r}
+data(TextPrices)
+head(TextPrices)
+```

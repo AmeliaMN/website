@@ -1,0 +1,34 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 3D nonsense
+
+
+```{r}
+library(openintro)
+library(mosaic)
+data(hsb2)
+m1 <- lm(math ~ read + write, data = hsb2)
+coef(m1)
+fit1 <- makeFun(m1)
+plotFun(fit1(f,s) ~ f & s, surface=TRUE, f.lim=c(0,30), s.lim=c(0,30), alpha=0.5)
+```
+
+```{r}
+library(rgl)
+opacity <- 0.4
+with(hsb2, plot3d(x = read, y = write, z = math, type = "s", size = 0.3, col = "blue", xlab = "reading score", ylab = "writing score", zlab = "math score"))
+coefs <- coef(m1)
+planes3d(coefs["read"], coefs["write"], -1, coefs["(Intercept)"], alpha = opacity, col = "lightgray")
+```
+
+```{r}
+with(hsb2, plot3d(x = read, y = write, z = math, type = "s", size = 0.8, col = "blue", xlab = "reading score", ylab = "writing score", zlab = "math score"))
+
+coefs <- coef(lm(math ~ read + write + ses, data=hsb2))
+planes3d(coefs["read"], coefs["write"], -1, coefs["(Intercept)"], alpha = opacity, col = "lightgray")
+planes3d(coefs["read"], coefs["write"], -1, coefs["(Intercept)"] + coefs["sesmiddle"], alpha = opacity, col = "lightgray")
+planes3d(coefs["read"], coefs["write"], -1, coefs["(Intercept)"] + coefs["seshigh"], alpha = opacity, col = "lightgray")
+```
+

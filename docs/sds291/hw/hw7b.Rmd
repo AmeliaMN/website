@@ -1,0 +1,27 @@
+***
+
+* Reading: Ch. 5
+* Exercises to hand in: 5.24, 5.25, 5.29
+
+***
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(Stat2Data)
+library(skimr)
+```
+#### Exercise 5.24
+
+```{r}
+data(FantasyBaseball)
+head(FantasyBaseball)
+```
+
+#### Exercise 5.25
+
+#### Exercise 5.29
+
+```{r}
+data(Hawks)
+head(Hawks)
+```

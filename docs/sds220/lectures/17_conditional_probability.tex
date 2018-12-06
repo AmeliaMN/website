@@ -1,0 +1,370 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{October 23, 2017}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Conditional Probability
+\end{enumerate}
+
+
+\paragraph{In-Class Problems}
+
+% \begin{enumerate}
+%   \itemsep0.7in
+%   \item 
+%   %MMC, 4.30 (page 247): 
+%   Loaded dice. There are many ways to produce crooked dice. To \emph{load} a die so that 6 comes up too often and 1 (which is opposite 6) comes up too seldom, add a bit of lead to the filling of the spot on the 1 face. Because the spot is solid plastic, this works even with transparent dice. If a die is loaded so that 6 comes up with probability 0.21 and the probabilities of the 2,3,4, and 5 faces are not affected, what is the assignment of probabilities to faces? 
+%   <<echo=FALSE, eval=FALSE>>=
+% 1 - 0.21 - 4 * (1/6)
+% @
+%   
+%   
+% %  \item 4.28 (page 256): Race in the census.
+% %  \item 4.30 (page 257): Are the events independent?
+% %  \item 4.31 (page 257): Roulette.
+%   \item 
+%   %MMC 4.37 (page 247)
+%   Is this calculation correct? Government data show that 6\% of the American population are at least 75 years of age and that about 51\% are women. Explain why it is wrong to conclude that because $(0.06)(0.51) = 0.0306$ about 3\% of the population are women aged 75 or over. 
+%   \item 
+%   %MMC 4.38 (page 247): 
+%   Colored dice. Here's more evidence that our intuition about chance behavior is not very accurate. A six-sided die has four green and two red faces, all equally probable. Psychologists asked students to say which of these color sequences is most likely to come up at the beginning of a long set of rolls of this die:
+%   \begin{center}
+%   RGRRR \qquad RGRRRG \qquad GRRRRR
+%   \end{center}
+%   More than 60\% chose the second sequence. What is the correct probability of each sequence? 
+%   <<echo=FALSE, eval=FALSE>>=
+% (2/3) * (1/3)^4
+% (2/3)^2 * (1/3)^4
+% (2/3)^1 * (1/3)^5
+% @
+% 
+%   
+%   
+% \end{enumerate}
+
+
+% \paragraph{Warmup: Conditional Probability}
+% 
+% Suppose you have three cards: one is red on both sides, one is green on both sides, and the other is red on one side and green on the other. You draw a card and hold it up. You are looking at a red face. What is the probability that when you turn the card over, the other side will also be red? 
+% 
+% 
+% 
+% <<message=FALSE, eval=FALSE, size='footnotesize'>>=
+% deck <- data.frame(Front = c("R", "R", "G"), Back = c("R", "G", "G"))
+% require(dplyr)
+% n <- 100000
+% sim <- deck %>%
+%   sample_n(size = n, replace = TRUE) %>%
+%   mutate(draw = sample(c("Front", "Back"), size = n, replace = TRUE),
+%          see = ifelse(draw == "Front", as.character(Front), as.character(Back)),
+%          flip = ifelse(draw == "Front", as.character(Back), as.character(Front)))
+% sim %>%
+%   filter(see == "R") %>%
+%   summarize(see_red = n(), flip_red = sum(flip == "R")) %>%
+%   mutate(see_red_pct = see_red / n, flip_red_pct = flip_red / see_red)
+% @
+% 
+% \vspace{1in}
+
+
+\paragraph{Conditional Probability}
+Suppose there are three two-layer cakes at a bakery: one is vanilla on both layers, one is chocolate on both layers, and the other is vanilla on one layer and chocolate on the other layer. You cut into only the first layer of a randomly selected cake and take a peek. The first layer is vanilla. What is the probability that when you cut into the second layer, it will also be vanilla? Let's simulate it with R!
+\vspace{0.25in}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{bakery} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{layer_one} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"V"}\hlstd{,} \hlstr{"V"}\hlstd{,} \hlstr{"C"}\hlstd{),} \hlkwc{other_layer} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"V"}\hlstd{,} \hlstr{"C"}\hlstd{,} \hlstr{"C"}\hlstd{))}
+\hlkwd{library}\hlstd{(dplyr)}
+\hlstd{n} \hlkwb{<-} \hlnum{100000}
+\hlstd{sim} \hlkwb{<-} \hlstd{bakery} \hlopt{%>%}
+  \hlkwd{sample_n}\hlstd{(}\hlkwc{size} \hlstd{= n,} \hlkwc{replace} \hlstd{=} \hlnum{TRUE}\hlstd{)} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{cake_order} \hlstd{=} \hlkwd{sample}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"order_one"}\hlstd{,} \hlstr{"order_two"}\hlstd{),} \hlkwc{size} \hlstd{= n,} \hlkwc{replace} \hlstd{=} \hlnum{TRUE}\hlstd{),}
+         \hlkwc{peek} \hlstd{=} \hlkwd{ifelse}\hlstd{(cake_order} \hlopt{==} \hlstr{"order_one"}\hlstd{,}
+                       \hlkwd{as.character}\hlstd{(layer_one),} \hlkwd{as.character}\hlstd{(other_layer)),}
+         \hlkwc{full_cut} \hlstd{=} \hlkwd{ifelse}\hlstd{(cake_order} \hlopt{==} \hlstr{"order_one"}\hlstd{,}
+                           \hlkwd{as.character}\hlstd{(other_layer),} \hlkwd{as.character}\hlstd{(layer_one)))}
+\hlstd{sim} \hlopt{%>%}
+  \hlkwd{filter}\hlstd{(peek} \hlopt{==} \hlstr{"V"}\hlstd{)} \hlopt{%>%}
+  \hlkwd{summarize}\hlstd{(}\hlkwc{peek_vanilla} \hlstd{=} \hlkwd{n}\hlstd{(),} \hlkwc{full_cut_vanilla} \hlstd{=} \hlkwd{sum}\hlstd{(full_cut} \hlopt{==} \hlstr{"V"}\hlstd{))} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{peek_vanilla_pct} \hlstd{= peek_vanilla} \hlopt{/} \hlstd{n,} \hlkwc{full_cut_pct} \hlstd{= full_cut_vanilla} \hlopt{/} \hlstd{peek_vanilla)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+
+\paragraph{In-Class Problems}
+
+\begin{enumerate}
+  \itemsep0.25in
+\item \textbf{Joint and conditional probabilities} $\Pr(A) = 0.3, \Pr(B) = 0.7$
+\begin{enumerate}
+  \itemsep0.25in
+\item Can you compute $\Pr(A \cap B)$ if you only know $\Pr(A)$ and $\Pr(B)$?
+\item Assuming that events A and B arise from independent random processes,
+\begin{enumerate}
+\item what is $\Pr(A \cap B)$?
+\item what is $\Pr(A \cup B)$?
+\item what is $\Pr(A|B)$?
+\end{enumerate}
+\item If we are given that $\Pr(A \cap B) = 0.1$, are the random variables giving rise to events $A$ and $B$ independent?
+\item If we are given that $\Pr(A \cap B) = 0.1$, what is $\Pr(A|B)$?
+% De veaux Q 22 on pg. 357. 
+\item In its monthly report, the local animal shelter states that it currently has 24 dogs and 18 cats available for adoption. Eight of the dogs and 6 cats are male. Find each of the following conditional probabilities if an animal is selected at random.
+  \begin{enumerate}
+    \itemsep0.35in
+    \item The pet is male, given that it's a cat.
+    \item The pet is a cat, given that it's female
+    \item The pet is female, given that it's a dog.
+  \end{enumerate}
+%   Male    Female  
+% Cat   6   12  18
+% Dog   8   16  24
+%   14  28  42
+% a)    P(M|C) = P(M & C)/P(C) = (6/42)/(18/42) = 6/18 = .333
+% b)    P(C|F) = P(C & F)/P(F) = (12/42)/(28/42) = 12/28 = .42857
+% c)    P(F|D) = P(F & D)/P(D) = (16/42)/(24/42) = 16/24 = .667
+\end{enumerate}
+
+
+\item \textbf{Global warming} A 2010 Pew Research poll asked 1,306 Americans ``From what you've read and heard, is there solid evidence that the average temperature on earth has been getting warmer over the past few decades, or not?". The table below In the table below shows the distribution of responses by party and ideology, and the counts have been replaced with a relative frequencies.
+\begin{center}
+\begin{tabular}{ll  ccc c} 
+  						&			& \multicolumn{3}{c}{\textit{Response}} \\
+\cline{3-5}
+							&			& Earth is 		& Not 		& Don't Know	&	\\
+							&			& warming	& warming 	& Refuse		& Total\\
+\cline{2-6}
+				& Conservative Republican	& 0.11	 	& 0.20		& 0.02 		& 0.33 	\\
+\textit{Party and}	& Mod/Lib Republican		& 0.06	 	& 0.06 	 	& 0.01		& 0.13 \\
+\textit{Ideology}		& Mod/Cons Democrat		& 0.25	 	& 0.07 	 	& 0.02 		& 0.34 \\
+				& Liberal Democrat			& 0.18	 	& 0.01 	 	& 0.01 		& 0.20\\
+\cline{2-6}
+							&Total		& 0.60		& 0.34		& 0.06		& 1
+\end{tabular}
+\end{center}
+\begin{enumerate}
+  \itemsep0.25in
+\item What is the probability that a randomly chosen respondent believes the earth is warming or is a liberal Democrat?
+\item What is the probability that a randomly chosen respondent believes the earth is warming given that he is a liberal Democrat?
+\item What is the probability that a randomly chosen respondent believes the earth is warming given that he is a conservative Republican?
+\item Does it appear that whether or not a respondent believes the earth is warming is independent of their party and ideology? Explain your reasoning.
+\item What is the probability that a randomly chosen respondent is a moderate/liberal Republican given that he does not believe that the earth is warming? 
+\end{enumerate}
+
+
+
+\item \textbf{It's never lupus} Lupus is a medical phenomenon where antibodies that are supposed to attack foreign cells to prevent infections instead see plasma proteins as foreign bodies, leading to a high risk of blood clotting. It is believed that 2\% of the population suffer from this disease. 
+
+The test is 98\% accurate if a person actually has the disease. The test is 74\% accurate if a person does not have the disease. 
+
+There is a line from the Fox television show \emph{House}, often used after a patient tests positive for lupus: ``It's never lupus." Do you think there is truth to this statement? Use appropriate probabilities to support your answer.
+
+\ans
+
+
+  
+\end{enumerate}
+%
+% \newpage
+%
+% \subsection*{Instructor's Notes}
+%
+%
+% \paragraph{Solution to Warmup}
+%
+%
+%   \begin{table}[h]
+% 	\centering
+% 	\begin{tabular}{c|c|c||c}
+% 	& front red & front green & Total \\
+% 	\hline
+% 	back red 		& \emph{$1/3$} 	& $1/6$ & \emph{0.5} \\
+% 	back green 	& $1/6$ 	& \emph{$1/3$} & \emph{0.5} \\
+% 	\hline
+% 	\hline
+% 	Total & \emph{0.5} & \emph{0.5} & \emph{1} \\
+% 	\end{tabular}
+% 	\end{table}
+% 	$$
+% 		\Pr(\text{back red} | \text{front red}) = \frac{\Pr(\text{front red} \cap \text{back red})}{\Pr(\text{front red})} = \frac{1/3}{1/2} = \frac{2}{3}
+% 	$$
+%
+%
+% \paragraph{Conditional Probability}
+%
+% Let $A, B$ be two events. Then:
+%
+% \begin{itemize}
+%   \item Law of Total Probability: $\Pr(A) = \Pr(A \cap B) + \Pr(A \cap B^c)$
+%   \item Definition of Conditional Probability:
+%   $$
+%     \Pr(A |B) = \frac{\Pr(A \cap B)}{\Pr(B)}
+%   $$
+%   \item Independence:
+%   $$
+%     A,B \text{ independent} \iff \Pr(A | B) = \Pr(A) \text{ and } \Pr(B | A) = \Pr(B)
+%   $$
+%   Note that this implies $\Pr(A \cap B) = \Pr(A) \cdot \Pr(B)$.
+%   \item Caveat: It is never safe to \emph{assume} that $\Pr(A|B) = \Pr(B|A)$ (draw Venn diagram)
+%   \item Do not confuse independence with disjointness! Two events that are disjoint are \textbf{not} indendent, since if one happens, you know the other one doesn't happen!
+%   \item General multiplication rule: $\Pr(A|B) \cdot \Pr(B) = \Pr(A \cap B) = \Pr(B|A)\cdot \Pr(A) $
+%   \item Bayes' Rule:
+%   $$
+%     \Pr(A|B) = \frac{\Pr(B|A) \cdot \Pr(A)}{\Pr(B)}
+%   $$
+%   \item \emph{Joint} probabilities in the middle of the table, \emph{marginal} probabilities on the outside
+% \end{itemize}
+%
+% \paragraph{Solutions to In-Class Problems}
+%
+%
+% \begin{enumerate}
+%
+%   \item \emph{\begin{enumerate}
+% \item No, we cannot compute $P(A~and~B)$ since we do not know if A and B are independent.
+% \item
+% \begin{enumerate}
+% \item P(A and B) = P(A) $\times$ P(B) = 0.21.
+% \item P(A or B) = P(A) + P(B) - P(A and B) =  0.3 + 0.7 - 0.21 = 0.79.
+% \item P(A$|$B) = P(A) = 0.3.
+% \end{enumerate}
+% \item No, because 0.1 $\ne$ 0.21.
+% \item P(A$|$B) = P(A and B) / P(B) = 0.1 / 0.7 = 0.143.
+% \end{enumerate}
+% }
+%
+%   \item \emph{\begin{enumerate}
+% \item P(earth is warming or liberal Democrat) = \\
+% = P(earth is warming) + P(liberal Democrat)  - P(earth is warming and liberal Democrat) \\
+% = 0.60 + 0.20 - 0.18 = 0.62
+% \item P(earth is warming $|$ liberal Democrat) = $\frac{0.18}{0.20} = 0.9$
+% \item P(earth is warming $|$ conservative Republican) = $\frac{0.11}{0.33} = 0.33$
+% \item No, the two appear to be dependent. The percentages of conservative Republicans and liberal Democrats who believe that there is solid evidence that the average temperature on earth has been getting warmer over the past few decades are very different.
+% \item P(moderate/liberal Republican $|$ not warming) = $\frac{0.06}{0.34} = 0.18$
+% \end{enumerate}
+% }
+%
+%   \item   \begin{table}[h]
+%   \centering
+% 	\begin{tabular}{c|c|c||c}
+% 	& positive & negative & Total \\
+% 	\hline
+% 	lupus 		& 0.0196 	& 0.0004 & \emph{0.02} \\
+% 	no lupus 	& 0.2548 	& 0.7252 & \emph{0.98} \\
+% 	\hline
+% 	\hline
+% 	Total & 0.2744 & 0.7256 & \emph{1} \\
+% 	\end{tabular}
+% 	\end{table}
+%
+%
+%	$$
+%		\Pr(sick | pos) = \frac{0.0196}{0.2744} = 0.0714285 < 10\%
+%	$$
+%
+%
+% \end{enumerate}
+
+
+
+
+\end{document}

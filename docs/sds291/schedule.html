@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Schedule</title>
+
+<script src="lib/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="lib/navigation-1.1/tabsets.js"></script>
+<link href="lib/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="lib/highlightjs-9.12.0/highlight.js"></script>
+<style type="text/css">
+
+/* padding for bootstrap navbar */
+body {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+/* offset scroll position for anchor links (for fixed navbar)  */
+@media (min-width: 980px) {
+  .section h2 {
+    padding-top: 52px;
+    margin-top: -52px;
+  }
+  .section h3 {
+    padding-top: 52px;
+    margin-top: -52px;
+  }
+}
+
+
+/* don't use link color in navbar */
+.dropdown-menu>li>a {
+  color: #666;
+}
+
+
+</style>
+
+<link rel="stylesheet" href="lib/font-awesome-4.1.0/css/font-awesome.min.css"/>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/beanumber.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>
+    </div>    
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Syllabus</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+<li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="RMarkdownTroubleshooting.html">RMarkdown Troubleshooting</a></li>
+              <li><a href="Rtips.html">R and RStudio tips</a></li>
+              <li><a href="RMarkdownTips.html">RMarkdown tips</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lectures <span class="caret"></span></a>
+            <ul class="dropdown-menu scrollable-menu" role="menu">
+               <li class="dropdown-header">Notes</li>
+                <li><a href="lectures/01_intro.pdf">01 - Introduction</a></li>
+                <li><a href="lectures/02_slr.pdf">02 - Simple Linear Regression</a></li>
+                <li><a href="lectures/03_regression_conditions.pdf">03 - Conditions for Regression</a></li>
+                <li><a href="lectures/04_transformations.pdf">04 - Transformations</a></li>
+                <li><a href="lectures/05_slr_inference.pdf">05 - Inference for SLR</a></li>
+                <li><a href="lectures/06_mlr.pdf">06 - Multiple Linear Regression</a></li>
+                <li><a href="lectures/07_interpretation.pdf">07 - Interpretation</a></li>
+                <li><a href="lectures/08_second_order.pdf">08 - Second Order Models</a></li>
+                <li><a href="lectures/09_multicollinearity.pdf">09 - Multicollinearity</a></li>
+                <li><a href="lectures/10_exam1review.pdf">10 - Exam 1 review</a></li>
+                <li><a href="lectures/11_interactionplots.pdf">11 - Interaction plots</a></li>
+                <li><a href="lectures/12_nestedFtests.pdf">12 - Nested F tests</a></li>
+                <li><a href="lectures/13_Ch3cleanup.pdf">13 - Polynomial regression, etc</a></li>
+                <li><a href="lectures/14_modelselection.pdf">14 - Model Selection</a></li>
+                <li><a href="lectures/15_bootstrap.pdf">15 - Randomization & the Bootstrap</a></li>
+                <li><a href="lectures/16_unusualpoints.pdf">16 - Unusual Points</a></li>
+                <li><a href="lectures/17_anova.pdf">17 - ANOVA</a></li>
+                <li><a href="lectures/18_moreANOVA.pdf">18 - More ANOVA</a></li>
+                <li><a href="lectures/19_logistic.pdf">19 - Logistic Regression</a></li>
+                <li><a href="lectures/20_moreLogistic.pdf">20 - More Logistic Regression</a></li>
+                <li><a href="lectures/21_wrapup.pdf">21 - Wrapping up</a></li>
+                <!-- <li><a href="lectures/Logistic_Regression_Cheatsheet.pdf">Logistic Regression Cheatsheet</a></li>
+                <li><a href="lectures/15_time_series.pdf">15 - Time Series</a></li>
+                <li><a href="lectures/11_data_wrangling.pdf">11 - Data Wrangling</a></li>     
+-->        <li class="divider"></li>
+
+        <li class="dropdown-header">Source</li>
+                <li><a href="lectures/01_intro.Rnw">01 - Introduction</a></li>
+                <li><a href="lectures/02_slr.Rnw">02 - Simple Linear Regression</a></li>
+                <li><a href="lectures/03_regression_conditions.Rnw">03 - Conditions for Regression</a></li>
+                <li><a href="lectures/04_transformations.Rnw">04 - Transformations</a></li>
+                <li><a href="lectures/05_slr_inference.Rnw">05 - Inference for SLR</a></li>
+                <li><a href="lectures/06_mlr.Rnw">06 - Multiple Linear Regression</a></li>
+                <li><a href="lectures/07_interpretation.Rnw">07 - Interpretation</a></li>
+                <li><a href="lectures/08_second_order.Rnw">08 - Second Order Models</a></li>
+                <li><a href="lectures/09_multicollinearity.Rnw">09 - Multicollinearity</a></li>
+                <li><a href="lectures/10_exam1review.Rnw">10 - Exam 1 review</a></li>
+                <li><a href="lectures/11_interactionplots.Rnw">11 - Interaction plots</a></li>
+                <li><a href="lectures/12_nestedFtests.Rnw">12 - Nested F tests</a></li>
+                <li><a href="lectures/13_Ch3cleanup.Rnw">13 - Polynomial regression, etc</a></li>
+                <li><a href="lectures/14_modelselection.Rnw">14 - Model Selection</a></li>
+                <li><a href="lectures/15_bootstrap.Rnw">15 - Randomization & the Bootstrap</a></li>
+                <li><a href="lectures/16_unusualpoints.Rnw">16 - Unusual Points</a></li>
+                <li><a href="lectures/17_anova.Rnw">17 - ANOVA</a></li>
+                <li><a href="lectures/18_moreANOVA.Rnw">18 - More ANOVA</a></li>
+                <li><a href="lectures/19_logistic.Rnw">19 - Logistic Regression</a></li>
+                <li><a href="lectures/20_moreLogistic.Rnw">20 - More Logistic Regression</a></li>
+                <li><a href="lectures/21_wrapup.Rnw">21 - Wrapping up</a></li>
+                <!-- <li><a href="lectures/15_time_series.Rnw">15 - Time Series</a></li>
+                <li><a href="lectures/11_data_wrangling.Rnw">11 - Data Wrangling</a></li>
+              
+-->
+
+              </ul>
+          </li>                     
+          <li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Labs <span class="caret"></span></a>
+            <ul class="dropdown-menu scrollable-menu" role="menu">
+               <li class="dropdown-header">Lab</li>
+                <li><a href="labs/lab-intro.html">Introduction to R and RStudio</a></li>
+                <li><a href="labs/lab_residuals.html">Residuals</a></li>
+                <li><a href="labs/lab_transformations.html">Transformations</a></li>
+                <li><a href="labs/lab_intervals.html">Intervals</a></li>
+                <li><a href="labs/lab_regression_summary.html">Regression Summary</a></li>
+                <li><a href="labs/lab_multicollinearity.html">Multicollinearity</a></li>
+                <!-- <li><a href="labs/lab_added_variables.html">Added Variable Plots</a></li> -->
+                <li><a href="labs/lab_stepwise.html">Stepwise Regression</a></li>
+                <li><a href="labs/lab_randomization.html">Randomization & the Bootstrap</a></li>
+                <li><a href="labs/lab_anova.html">ANOVA</a></li>
+                <li><a href="labs/lab_wrangling1.html">Data Wrangling, part I</a></li>
+                <li><a href="labs/lab_multiple_testing.html">Multiple Testing</a></li>
+                <li><a href="labs/lab_logistic_regression.html">Logistic Regression</a></li>
+                <!--<li><a href="labs/lab_logistic_fit.html">Logistic Regression Fit</a></li>--> 
+                <li><a href="labs/lab_wrangling2.html">Data Wrangling, part II</a></li>
+                <!--<li><a href="labs/lab_panel_data.html">Panel Data</a></li>
+                <li><a href="labs/lab_time_series.html">Time Series</a></li>
+                <li><a href="labs/lab_missing.html">Missing Data</a></li>
+--> 
+<li class="divider"></li>
+               <li class="dropdown-header">Source</li>
+                <li><a href="labs/lab-intro.Rmd">Introduction to R and RStudio</a></li>
+                  <li><a href="labs/lab_residuals.Rmd">Residuals</a></li>
+                  <li><a href="labs/lab_transformations.Rmd">Transformations</a></li>
+                  <li><a href="labs/lab_intervals.Rmd">Intervals</a></li>
+                  <li><a href="labs/lab_regression_summary.Rmd">Regression Summary</a></li>
+                  <li><a href="labs/lab_multicollinearity.Rmd">Multicollinearity</a></li>
+                  <!--  <li><a href="labs/lab_added_variables.Rmd">Added Variable Plots</a></li> --> 
+                  <li><a href="labs/lab_stepwise.Rmd">Stepwise Regression</a></li>
+                  <li><a href="labs/lab_randomization.Rmd">Randomization & the Bootstrap</a></li>
+                  <li><a href="labs/lab_anova.Rmd">ANOVA</a></li>
+                  <li><a href="labs/lab_wrangling1.Rmd">Data Wrangling, part I</a></li>
+                  <li><a href="labs/lab_multiple_testing.Rmd">Multiple Testing</a></li>
+                  <li><a href="labs/lab_logistic_regression.Rmd">Logistic Regression</a></li>
+                  <!-- <li><a href="labs/lab_logistic_fit.Rmd">Logistic Regression Fit</a></li> -->
+                  <li><a href="labs/lab_wrangling2.Rmd">Data Wrangling, part II</a></li>
+                  <!--<li><a href="labs/lab_panel_data.Rmd">Panel Data</a></li>
+                  <li><a href="labs/lab_time_series.Rmd">Time Series</a></li>
+            -->
+
+              </ul>
+          </li>     
+          <li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Homework  <span class="caret"></span></a>
+           <ul class="dropdown-menu scrollable-menu" role="menu">
+               <li class="dropdown-header">Homework</li>
+                <li><a href="hw/hw1.Rmd">Homework 1</a></li>
+                <li><a href="hw/hw2.Rmd">Homework 2</a></li>
+                <li><a href="hw/hw3.Rmd">Homework 3</a></li>
+                <li><a href="hw/hw4.Rmd">Homework 4</a></li>
+                <li><a href="hw/hw5.Rmd">Homework 5</a></li>
+                <li><a href="hw/hw6.Rmd">Homework 6</a></li>
+                <li><a href="hw/hw7.Rmd">Homework 7</a></li>
+                <li><a href="hw/hw8.Rmd">Homework 8</a></li>
+                <li><a href="hw/hw9.Rmd">Homework 9</a></li>
+                <li><a href="hw/hw10.Rmd">Homework 10</a></li>
+                <li><a href="hw/hw11.Rmd">Homework 11</a></li>
+
+             <!-- <li class="divider"></li>
+                <li class="dropdown-header">Homework Keys</li>   
+                  <li><a href="hw/hw1_answers.html">Homework 1</a></li>    
+                  <li><a href="hw/hw2_solutions.html">Homework 2</a></li>    
+                  <li><a href="hw/hw3_solutions.html">Homework 3</a></li>    
+                  <li><a href="hw/hw4_answers.html">Homework 4</a></li>    
+                  <li><a href="hw/hw5_solutions.html">Homework 5</a></li>    
+                  <li><a href="hw/hw6_solutions.html">Homework 6</a></li>   
+                  <li><a href="hw/hw7_solutions.html">Homework 7</a></li>     
+                  <li><a href="hw/hw8_solutions.html">Homework 8</a></li>     
+                  <li><a href="hw/hw9_solutions.html">Homework 9</a></li> 
+                  <li><a href="hw/hw10_solutions.html">Homework 10</a></li>
+                  <li><a href="hw/hw11_solutions.html">Homework 11</a></li> -->
+
+              </ul>
+</li>
+                         
+               
+<li class="dropdown">
+            <a href="authoring" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Project, etc  <span class="caret"></span></a>
+           <ul class="dropdown-menu scrollable-menu" role="menu">
+
+               <li class="divider"></li>
+               <li class="dropdown-header">Project</li>              
+                <li><a href="project.html">Instructions</a></li> 
+                <li><a href="project_schedule.html">Schedule</a></li>   
+                <li><a href="DataAppendix.Rmd">Data appendix Rmd (sample)</a></li>
+                <li><a href="DataAppendix.html">Data appendix HTML (sample)</a></li>
+                <li class="dropdown-header">Sample Projects</li> 
+               <!--<li><a href="handouts/SampleWriteup1.html">Sample Report 1</a></li>  
+               <li><a href="handouts/SampleWriteup2.html">Sample Report 2</a></li> -->
+               <li><a href="handouts/gradesheet_s1.pdf">Peer evaluation sheet</a></li>
+
+                <li class="divider"></li>
+
+                <li class="dropdown-header">Exams</li> 
+                <li><a href="exam_corrections.html">Exam correction policy</a></li>                    
+              
+               <!--   <li><a href="handouts/exam1_sample_solutions.pdf">Exam 1: Sample Solutions</a></li>
+                
+              
+              <li><a href="handouts/exam2_sample_solutions.pdf">Exam 2: Sample Solutions</a></li>-->      
+                 
+</ul>
+</li>
+
+            </ul>
+          </li>
+        </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Schedule</h1>
+
+</div>
+
+
+<ul>
+<li>Week 1 (9/6):
+<ul>
+<li>Questionnaire</li>
+<li>Introduction to the course</li>
+<li>Why use models?</li>
+<li>Homework:
+<ul>
+<li>Read Ch. 0</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li>Week 2 (9/11, 9/13):
+<ul>
+<li>Introduction to R, RStudio, and R Markdown lab</li>
+<li>Understanding statistical models</li>
+<li>Four Step process</li>
+<li>Homework:
+<ul>
+<li>Read Ch. 1</li>
+<li>HW #1 due Monday Sept 17 by 11:55 pm, submit on Canvas</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li>Week 3 (9/18, 9/20):
+<ul>
+<li>Residuals lab</li>
+<li>Assessing Conditions</li>
+<li>Making Predictions</li>
+<li>Transformations lab</li>
+<li>Outliers and Influential Points</li>
+<li>Homework:
+<ul>
+<li>Read Ch. 2</li>
+<li>HW #2 due Monday Sept 24 by 11:55 pm, submit to Canvas</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li>Week 4 (9/25, 9/27):
+<ul>
+<li>Inference for the Slope Coefficient</li>
+<li>ANOVA</li>
+<li>Regression and Correlation</li>
+<li>Intervals and data wrangling lab</li>
+<li>Homework:
+<ul>
+<li>Read selection from Modern Data Science with R</li>
+<li>HW #3 due Monday, October 1 by 11:55 pm, submit to Canvas</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li>Week 5 (10/2, 10/4):
+<ul>
+<li>Multiple Linear Regression</li>
+<li>Assessing Conditions in MLR</li>
+<li>Comparing two models</li>
+<li>Homework:
+<ul>
+<li>Read Ch. 3.1 - 3.3</li>
+<li>HW #4 due Monday, October 8 by 11:59 pm, submit to Canvas</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li>Week 6 (10/9, 10/11)
+<ul>
+<li>Interaction terms</li>
+<li>Multicollinearity</li>
+<li>Putting it all together</li>
+<li>Homework:
+<ul>
+<li><strong>Project groups due by Monday, 10/15</strong></li>
+<li>Read Ch. 3.4 - 3.8</li>
+<li>No homework problems, exam Tuesday</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li>Week 7 (10/16, 10/18)
+<ul>
+<li><strong>EXAM 1 Tuesday</strong></li>
+<li>Interpreting nested F-tests</li>
+<li>Polynomial regression</li>
+<li>Stepwise Regression</li>
+<li>Homework:
+<ul>
+<li>Read Ch. 4.2 - 4.4 (skipping 4.1)</li>
+</ul></li>
+</ul></li>
+</ul>
+<!--
+***
+
+* Week 8 (10/24 - 10/30)
+    + **EXAM 1 ends at 5 pm on Monday**
+    + Finishing up chapter 3
+    + Guest lecture Thursday by Professor Baumer
+    + Homework:
+        + HW #7 due Monday, October 31 by 11:55 pm, submit to Canvas
+    + **Initial Project Proposal** due Friday, October 28 by 11:55 pm, submit to Canvas
+     
+***
+
+* Week 8 (10/31-11/6)
+    
+        + HW #8 due Monday November 7 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+         + Reading quiz on Ch. 3, due Wednesday, Nov. 9 by 11:55 pm, on  [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+        
+
+***    
+
+* Week 9 (11/7-11/13)
+      + Randomization Tests
+      + Bootstrap for Regression
+      + [Bootstrap animations](https://www.stat.auckland.ac.nz/~wild/BootAnim/)
+      + [Randomization animations](http://www.rossmanchance.com/applets/AnovaShuffle.htm?hideExtras=2)
+      + [Do you know Nothing when you see it?](https://www.youtube.com/watch?v=hps9r7JZQP8) Amelia's OpenVisConf talk including randomization and the bootstrap
+      + [Not all forecasters got it wrong](http://simplystatistics.org/2016/11/09/not-all-forecasters-got-it-wrong/)
+      + [A user's guide to 538's 2016 general election forecast](http://fivethirtyeight.com/features/a-users-guide-to-fivethirtyeights-2016-general-election-forecast/)
+      + [Forecasting elections with nonrepresentative polls](http://www.stat.columbia.edu/~gelman/research/published/forecasting-with-nonrepresentative-polls.pdf)
+      + Unusual Points
+      + Homework:
+      + Read Ch. 4.5-4.6
+          + HW #9 due next Wednesday by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+
+
+***      
+
+* Week 10 (11/14 - 11/20) 
+    + ANOVA
+    + More ANOVA
+    + Multiple Testing
+    + Homework:
+          + Read Ch. 5, 7.2
+          + HW #10 due Monday November 28 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+    + **Revised Project Proposal** due Friday 11/18 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+    + **Data appendix** due Monday 11/20 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+
+*** 
+
+ **Thanksgiving Recess Nov. 23-27**
+
+***
+
+* Week 11 (11/28 - 12/4)
+    + Logistic regression
+    + Multiple logistic regression
+    + Homework:
+          + Read Ch. 9, 10
+          + HW #11 due Monday 12/5 by 11:55 pm, submit to [Moodle](https://moodle.smith.edu/course/view.php?id=18428)
+    
+
+*** 
+
+* Week 12 (12/5-12/11)
+    + Pulling everything together
+    + Data wrangling
+    + **Extra credit talk** Christine Zhang '09 speaking about Data Journalism at the Los Angeles Times. Tuesday, December 6, 4:30 pm, McConnell 103. (Refreshments at 4.)
+    + **Exam opens** Friday 12/9 at noon
+
+*** 
+
+* Week 13 (12/12-12/15)
+    + Data wrangling/work day Tuesday
+    + **Exam closes** Monday 12/12 at library close
+    + **Project presentations** Thursday 12/15
+         + Attendance required
+         + We will stay 10 minutes late
+         + [Peer evaluation sheet](handouts/gradesheet_s1.pdf)
+  
+*** 
+
+**ALL WORK DUE** (12/22/2016)
+
+***
+
+<!--
+  Ch. 3 from book draft?
+  
+
+***    
+
+* Week 11 (4/13 - 4/17)
+   
+    + Data Wrangling in R
+    + `dplyr`
+    + Reshaping with `gather/spread`
+    + [Missing Data](http://en.wikipedia.org/wiki/Missing_data)
+    + **EXAM 3 begins Thursday at 9 am**
+    + Homework:
+        + Read [Ch. 3: Basic Data Wrangling in R](handouts/book_ch3.pdf)
+
+***    
+
+* Week 12 (4/20 - 4/24)
+    + **EXAM 3 ends Sunday at library close**
+    + [Panel Data](http://en.wikipedia.org/wiki/Panel_data)
+    + Time Series ([ARMA models](http://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model))
+    + Homework:
+        + Read [Time series components](https://www.otexts.org/fpp/6/1)
+        
+
+        
+***   
+
+* Week 13 (4/27 - 5/1)
+    + **Project Presentations**
+    + Tuesday:
+        + **Groups S, T, L, R, P**
+    + Wednesday: 
+        + **CLASS STARTS AT 8:40!!**
+        + **Groups F, I, G, J, A**
+    + Thursday:
+        + **Groups O, M, Q, N**
+    + Friday: 
+        + **CLASS STARTS AT 8:40!!**
+        + **Groups C, B, D, E, H**
+        
+***  
+-->
+<!--
+
+[RStudio Webinar on Git](http://pages.rstudio.net/Webinar---February-2015_Registration.html?mkt_tok=3RkMMJWWfF9wsRonuavKZKXonjHpfsX56u4lWKG3lMI%2F0ER3fOvrPUfGjI4ASMNlI%2BSLDwEYGJlv6SgFTbDMMa541LgKWxc%3D)
+
+[NPR story on publication bias](http://www.npr.org/2015/01/28/382056490/studies-critical-of-bilingual-benefits-often-shelved-because-of-bias)
+
+    + Happenings in the world of Statistical Significance:
+        + [Statistican Wanted](http://www.theallium.com/math/wanted-statistician-to-make-results-significant/)
+        + [Psychology Journal Bans p-Values](http://www.nature.com/news/psychology-journal-bans-p-values-1.17001)
+   + More on [Reproducibility](http://www.nature.com/news/policy-nih-plans-to-enhance-reproducibility-1.14586#/ref-link-1)
+    + [Kaggle March Madness](http://www.nytimes.com/2015/03/22/opinion/sunday/making-march-madness-easy.html)
+    + Review
+     + Extra Credit Talks:
+        + Tuesday: [Nuts and Bolts: Accessing Bigger Datasets Using SQLite in R](http://www.meetup.com/Pioneer-Valley-and-Five-College-R-Statistical-Meetup/events/220849423/?a=wc1d.2_gnl&gj=wc1d.2_e&rv=wc1d.2_e&_af=event&_af_eid=220849423)
+        + Thursday: [Working with Geographic Data in R](http://www.meetup.com/Pioneer-Valley-and-Five-College-R-Statistical-Meetup/events/221124292/?a=wc1d.2_gnl&gj=wc1d.2_e&rv=wc1d.2_e&_af=event&_af_eid=221124292)
+   + [Testing The Standards: Do Gender Differences Matter For Combat?](http://www.npr.org/2015/03/26/395604480/testing-the-standards-do-gender-differences-matter-for-combat)
++ Read [The Economist](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble)
+        + HW #7 due Friday by 5:00 pm, submit to [Moodle](http://moodle.smith.edu)
+        
+  
+    + [Voices: Statistics might be the most important class you take in college](http://college.usatoday.com/2015/04/08/voices-statistics-might-be-the-most-important-class-you-take-in-college/)
+    + [UMass Launches Center for Data Science](http://www.gazettenet.com/home/16446218-95/umass-announces-launch-of-new-center-for-data-science#.VSe0bhpQbRw.mailto)
+    + [Learning to See Data](http://www.nytimes.com/2015/03/29/sunday-review/learning-to-see-data.html)
+    
+     + [Can Data Stop Car Wrecks](http://www.nytimes.com/2015/03/29/opinion/sunday/can-data-stop-car-wrecks.html)
+-->
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">By <a href="http://www.science.smith.edu/~bbaumer">Ben Baumer</a>, modifications by <a href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

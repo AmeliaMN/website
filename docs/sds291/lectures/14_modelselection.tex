@@ -1,0 +1,164 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+
+\rhead{\textsc{November 3, 2016}}
+
+\usepackage{Sweave}
+\begin{document}
+\input{14_modelselection-concordance}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Variable selection methods: Best subsets, backward elimination, forward selection, bidirectional
+  \item Criteria: $R^2$, $C_p$, $AIC$, $BIC$
+\end{enumerate}
+
+
+\paragraph{Variable Selection}
+
+Recall the problem of finding the ``best" model, given a set of potential explanatory variables. How do you know what terms to include in your model? The fundamental difficulty is that if you have $k$ possible explanatory variables, then there are $2^k$ possible models. Thus, while it is straightforward to simply check all the models and pick the best one, the number of models to check grows \emph{exponentially} with respect to the number of variables, and thus this algorithm is unfeasible.
+
+We'll be thinking about the Zagat data, with information about $Price$ of a dinner in Italian restaurants in New York City, as well as the restaurant's customer ratings (measured on a scale of 0 to 30) of the $Food$, $Decor$, and $Service$, as well as whether the restaurant is located to the $East$ or west of 5th Avenue.
+\begin{Schunk}
+\begin{Sinput}
+> nyc <- read.csv("http://www.math.smith.edu/~bbaumer/mth247/sheather/nyc.csv")
+\end{Sinput}
+\end{Schunk}
+
+
+Four related methodologies, under the umbrella of \href{http://en.wikipedia.org/wiki/Stepwise_regression}{stepwise regression}:
+		\begin{itemize}
+			\item Best subsets: Try all the combinations and find the best model for each fixed number of explanatory variables
+
+\begin{Schunk}
+\begin{Sinput}
+> # install.packages("leaps")
+> require(leaps)
+> best <- summary(regsubsets(Price ~ Food + Service + Decor + East, data = nyc, nbest = 1))
+> with(best, data.frame(rsq, adjr2, cp, rss, bic, outmat))
+\end{Sinput}
+\end{Schunk}
+
+This code uses the \texttt{regsubsets()} command to find all the best subsets of different sizes. The parameter \texttt{nbest=1} tells the function to only show the single best subset of each size (best model with one predictor, best model with two, etc.). 
+
+The second line pulls out some information from the summary of that process, to allow us to compare between the models of different sizes. 
+
+\item Backward elimination: Start with the full model and iteratively remove terms that are not significant
+
+
+
+
+\item Forward selection: Start with nothing, and add terms in order of significance
+
+\item Stepwise or bidirectional eliminination: Start with forward selection, but prune using backward elimination
+
+
+\end{itemize}
+
+\paragraph{Criteria}
+In order to stepwise algorithms to make sense, we need a criteria for determining which of two models is ``better". As you might suspect, there is no universally agreed upon criteria for evaluating models.
+
+\begin{itemize}
+\item \href{http://en.wikipedia.org/wiki/Coefficient_of_determination#Adjusted_R2}{Adjusted $R^2$} We've talked about this one quite a bit in class already. 
+\item \href{http://en.wikipedia.org/wiki/Mallows\%27s_Cp}{Mallow's $C_p$} The book prefers Mallow's $C_p$, probably because it can be defined in terms we have been thinking about. $C_p$ is defined as
+  \begin{eqnarray*}
+  C_p = \frac{SSE_m}{MSE_k}+ 2(m+1)-n
+  \end{eqnarray*}
+Where $m$ is the number of predictors in the model you are considering and $k$ is the number of predictors in the full model. The smaller the $C_p$, the better. 
+\item \href{http://en.wikipedia.org/wiki/Akaike_information_criterion}{Akaike Information Criteria (AIC)} $AIC$ is equivalent to Mallow's $C_p$ for linear regression, but is more general. AIC is the default criteria in R, so that's what we will focus on. AIC is defined as
+	\begin{eqnarray*}
+			AIC = 2k - 2 \cdot \ln{(L)}
+  \end{eqnarray*}
+		where $k$ is the number of explanatory variables, and $L$ is the maximized value of the likelihood function for the estimated model. We're not talking explicitly about likelihood in this class, but it gets bigger the more predictors you add. So, we're trying to penalize for model size. In the linear regression case you can think of it like this,
+		\begin{eqnarray*}
+		AIC = 2k + n\ln{(RSS)}
+		\end{eqnarray*}
+		The smaller the AIC, the better. 
+\item \href{http://en.wikipedia.org/wiki/Bayesian_information_criterion}{Bayesian information criterion (BIC)} $BIC$ is similar to $AIC$, but puts a larger penalty on additional terms in the model. BIC is my favorite criteria. It is defined as
+\begin{eqnarray*}
+			BIC = k \cdot \ln{(n)}  -2\cdot\ln{(L)}
+  \end{eqnarray*}
+  Again, for the case of linear regression we can substitute in for the likelihood and get this expression,
+  \begin{eqnarray*}
+  BIC = k\cdot\ln({n}) + n\cdot\ln{(RSS/n)} 
+  \end{eqnarray*}
+  Again, smaller values are better.
+\end{itemize}
+
+Caveats:
+\begin{itemize}
+\item Backward Elimination: All terms in result are significant, and few models are constructed. But can throw out important variables if multicollinearity is an issue
+\item Forward selection: Consider more models, but can add a predictor early that could be replaced by other variables
+\item Word of Caution: automated methods are \emph{not} substitutes for careful analysis. Are assumptions met? Are measurements efficient? Is it worth squeezing out a few drops of $R^2$? What about transformations?
+\end{itemize}
+
+\paragraph{Model selection lab}
+Some code for your convenience. 
+
+\begin{Schunk}
+\begin{Sinput}
+> require(mosaic)
+> require(Stat2Data)
+> data(FirstYearGPA)
+> head(FirstYearGPA)
+> # install.packages("leaps")
+> require(leaps)
+> # Reports the two best models for each number of predictors
+> best <- regsubsets(GPA ~ ., data=FirstYearGPA, nbest=2)
+> with(summary(best), data.frame(rsq, adjr2, cp, rss, outmat))
+> backward <- regsubsets(GPA ~ ., data=FirstYearGPA, nbest = 1, nvmax = 6, method = "backward")
+> summary(backward)
+> with(summary(backward), data.frame(cp, outmat))
+> forward <- regsubsets(GPA ~ ., data=FirstYearGPA, nbest = 1, nvmax = 6, method = "forward")
+> with(summary(forward), data.frame(cp, outmat))
+> stepwise <- regsubsets(GPA ~ ., data=FirstYearGPA, nbest = 1, nvmax = 6, method = "seqrep")
+> with(summary(stepwise), data.frame(cp, outmat))
+\end{Sinput}
+\end{Schunk}
+
+\end{document}

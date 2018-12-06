@@ -1,0 +1,165 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{September 8, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Questionnaire
+  \item Introduction and syllabus
+  \item Is Yawning Contagious?
+  \item HW \#1 due Wednesday (9/13)
+\end{enumerate}
+
+\paragraph{Questionnaire}
+
+You should all have copies of the questionnaire I handed out. It starts something like this:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+	Full Name & Prefer to be called & Pronouns & Email Address \\
+	\hline 
+	Amelia McNamara & Amelia (or, Professor McNamara) & she/her & amcnamara@smith.edu \\
+	\hline
+\end{tabular}
+\end{center}
+
+Please fill it out and return it to me by the end of class. This is how I get to know you, and keep track of how many people are interested in the class. 
+
+\paragraph{Activity: Is Yawning Contagious?}
+
+It is commonly believed that yawning is contagious. According to the Wikipedia:
+\begin{quotation}
+Yawning in adults occurs most often immediately before and after sleep, during tedious activities and as a result of its contagiousness, and is commonly associated with tiredness, stress, overwork, lack of stimulation and boredom, though studies show it may be linked to the cooling of the brain. In humans, yawning is often triggered by others yawning (e.g., seeing a person yawning, talking to someone on the phone who is yawning) and is a typical example of positive feedback. This ``infectious" yawning has also been observed in chimpanzees, dogs, and can occur across species.
+\end{quotation}
+There is even psychological literature on the subject:
+\begin{itemize}
+  \item Anderson, James R.; Meno, Pauline (2003). ``Psychological Influences on Yawning in Children". Current psychology letters 2 (11).
+\end{itemize}
+
+An experiment conducted by \href{http://www.discovery.com/tv-shows/mythbusters/videos/is-yawning-contagious-minimyth/}{MythBusters} tested if a person can be subconsciously influenced into yawning if another person near them yawns. 
+In this study 50 people were randomly assigned to two groups: 34 to a group where a person near them yawned (seeded) and 16 to a control group where there wasn't a yawn seed. The results are as follows:
+
+<<eval=TRUE, message=FALSE, warning=FALSE>>=
+seeded = c(rep(0, 12), rep(1, 24), rep(0, 4), rep(1, 10))
+yawned = c(rep(0, 36), rep(1, 14))
+Yawners = data.frame(seeded, yawned)
+library(mosaic)
+tally(yawned ~ seeded, data = Yawners)
+@
+
+
+Big idea: It was observed that a larger percentage of those who were seeded with a yawn, actually yawned. But how sure are we that that observed difference is meaningful? Can we conclude that there is truly an association between these two variables?  
+\clearpage
+
+\begin{enumerate}
+  \itemsep2cm
+  \item What do you think is the explanatory variable?  Response variable? 
+  \item What is the risk (probability) of yawning, for the seeded group?
+  \item What is the risk (probability) of yawning, for the unseeded group?
+  % \item What is the relative risk (RR) of yawning, comparing the seeded to the unseeded?
+  \item If there were \emph{no association} between yawning and the proximity of another yawner, what would the relative risk be?
+  \item After conditioning on the margins, how many ``degrees of freedom" are there in this table?
+  \item Let $X$ be the number of people in the seeded group that yawned.  What are the possible values for $X$?
+  \item In terms of $X$, what would be a more extreme result?  $X = $
+  \item What would another extreme result be?  $X = $
+\end{enumerate}
+
+\newpage
+
+\paragraph{Group activity} Let's try to put yawning in context by randomizing the placement of the yawners among the experimental group (seeded) and control group (unseeded). 
+\begin{enumerate}
+  \itemsep0cm
+  \item Make a deck with 36 black cards (for the non-yawners) and 14 red cards (for the yawners)
+  \item Shuffle the cards well
+  \item Deal out 34 cards (for the seeded group), and count the number of red cards (yawners)
+  \item Repeat steps 2 \& 3 five times, taking turns.
+  \item When your group is done, add your results to the board
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  $X_1$ & $X_2$ & $X_3$ & $X_4$ & $X_5$ & $X_6$ \\
+  \hline
+  \hspace{0.75in} & \hspace{0.75in} & \hspace{0.75in} & \hspace{0.75in} & \hspace{0.75in} & \hspace{0.75in} \\[5ex]
+  \hline
+\end{tabular}
+\end{center}
+
+\vspace{2.5in}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 \\
+\end{tabular}
+\end{center}
+% 0      1      2      3      4      5      6      7      8      9      10      11     12      13     14    15     16     17     18     19  
+% 
+\begin{enumerate}
+  \itemsep1cm
+  \item How many red cards would we expect (on average?)
+  \item What did we observe?
+  \item How would we summarize these results?   What is the big idea?
+  \ans
+\end{enumerate}
+
+\paragraph{Computing}
+\R (open source general purpose statistical package) code to sample from exact permutation distribution:
+% Connect to the URL \url{http://rstudio.smith.edu:8787} and enter your Smith account info.
+
+
+<<eval=FALSE>>=
+tally(~yawned + seeded, data = Yawners)
+tally(~yawned + seeded, data = Yawners)[2,2]    # grab the cell we care about
+tally(~yawned + shuffle(seeded), data = Yawners)  # shuffle the table
+perms = do(1000) * tally(~ yawned + shuffle(seeded), data = Yawners)[2,2]
+histogram(~result, data = perms)
+@
+
+\end{document}

@@ -1,0 +1,137 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Profs. Baumer \& Indurkhya}}
+\chead{\textsc{MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+\DeclareMathOperator{\X}{\mathbf{X}}
+\DeclareMathOperator{\Hatmat}{\mathbf{H}}
+
+\rhead{\textsc{April 13, 2015}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Data Wrangling
+\end{enumerate}
+
+<<message=FALSE, warning=FALSE>>=
+require(mosaic)
+require(Stat2Data)
+@
+
+
+\paragraph{Data Wrangling}
+
+\href{http://en.wikipedia.org/wiki/Data_wrangling}{Data wrangling} is a somewhat difficult to define, but highly valuable skill. As you have probably already seen, real-world data analysis projects often involve a significant amount of work just to get the data into a form suitable for analysis. The greater your capacity for accomplishing these tasks, the more quickly and more efficiently you can whip your data into shape, leaving more time for careful analysis. 
+
+People are starting to pay more attention to these skills, and are starting to think about data wrangling as a field of expertise unto itself. Chief among these people is Hadley Wickham of Rice University and RStudio, author of the \href{http://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html}{\cmd{dplyr}} and \cmd{tidyr} packages for R. RStudio has also recently released a \href{http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf}{Data Wrangling Cheatsheet} illustrating many common operations. 
+
+Consider the following data manipulation \emph{verbs}:
+\begin{enumerate}
+  \itemsep0in
+  \item \cmd{mutate}: add or change columns
+  \item \cmd{select}: take a subset of the columns
+  \item \cmd{filter}: take a subset of the rows
+  \item \cmd{arrange}: sort the rows
+  \item \cmd{summarise} (with \cmd{group\_by}): aggregate the rows
+\end{enumerate}
+
+These five relatively simple ideas can be combined to enable powerful analyses. The use of the chaining operator (\texttt{\%>\%}) makes this particularly elegant.
+
+<<message=FALSE>>=
+require(nycflights13)
+@
+
+\begin{enumerate}
+  \item Count the total number of flights in the \cmd{flights} table. 
+  \item Find all the airports that are destinations. Count how many flights went into and out of each airport?
+  \item Over what time span does this data cover? 
+  \item Find all the flights originating from LaGuardia airport on April 8th, 2013. How many were there? Show only carriers and flight numbers, and sort them by arrival delay. 
+  \item What was the average delay? By airline? By airport? If you had to fly from LaGuardia, JFK, or Newark, which airport would you choose? 
+\end{enumerate}
+
+\paragraph{Linking Two Tables}
+
+Two tables can be joined together using a \emph{key} via the \cmd{inner\_join} function. 
+
+\begin{enumerate}
+  \item Are flights that arrive at mile-high altitude (at least 5,280 feet) more or less likely to be on time?  
+\end{enumerate}
+
+\paragraph{Reshaping}
+
+One popular source of data is Gapminder~\cite{}, the brainchild of Hans Rosling. Gapminder contains data about countries over time for a variety of different variables -- including the prevalence of HIV among adults aged 15 to 49 -- and other health and economic indicators. These data are stored in Google Spreadsheets, or one can download them as Microsoft Excel workbooks. The typical presentation of a small subset of such data is shown below. 
+
+<<message=FALSE, echo=TRUE>>=
+hiv.key <- "pyj6tScZqmEfbZyl0qjbiRQ"
+hiv <- fetchGoogle(key = hiv.key)
+names(hiv)[1] <- "Country"
+hiv %>%
+  filter(Country %in% c("United States", "France", "South Africa")) %>%
+  select(Country, X1979, X1989, X1999, X2009)
+@
+
+Our data takes the form of a two-dimensional array, where each of the $n$ rows represents a country, and each of the $p$ years is a column. Each entry represents the percentage of adults aged 15 to 49 living with HIV in the $i^{th}$ country in the $j^{th}$ year. This presentation of the data has some advantages. First, it is possible (with a big enough monitor) to \emph{see} all of the data. One can quickly follow the trend over time for a particular country, and one can also estimate quite easily the percentage of missing data present. Thus, if visual inspection is the primary analytical technique, this \emph{spreadsheet}-style presentation can be convenient. 
+
+Alternatively, consider this presentation of that same data:
+
+<<message=FALSE, echo=TRUE>>=
+require(tidyr)
+hivLong <- gather(hiv, key = Year, value = hiv.rate, -Country)
+hivLong <- mutate(hivLong, Year = as.numeric(gsub("X", "", Year)))
+hivLong %>%
+  filter(Country %in% c("United States", "France", "South Africa")) %>%
+  filter(Year %in% c(1979, 1989, 1999, 2009))
+@
+
+While our data is still a two-dimensional array, it now has $np$ rows and just three columns. Visual inspection of the data is now more difficult, since our data is now very long and very narrow -- it's aspect ratio is not similar to that of our screen! 
+
+It turns out that there are substantive reasons to prefer the long, narrow version of this data. It is a more efficient way for the computer to store and retrieve the data. It is more convenient for the purpose of data analysis. And it is more scalable, in that the addition of a second variable simply contributes another column, whereas to add another variable to the spreadsheet presentation would require a confusing three-dimensional view (or worse, merged cells). 
+
+These gains come at a cost: we have relinquished our ability to \emph{see all the data at once}. When data is small, being able to see it all at once can be useful, and even comforting. But in this era of big data, a reliance upon seeing all the data at once in a spreadsheet layout is a fool's errand. Learning to manipulate data via programming frees us from the click-and-drag paradigm popularized by spreadsheet applications, and allows us to work with data of arbitrary size. Recording our data manipulation operations in code also makes them reproducible, an increasingly desirable trait in this era of collaboration. It enables us to fully separate the raw data from our analysis, two concepts too often elided in the spreadsheet application. 
+
+
+\end{document}

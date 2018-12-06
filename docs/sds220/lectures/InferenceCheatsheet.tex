@@ -1,0 +1,153 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+\usepackage[landscape]{geometry}
+
+\oddsidemargin -0.75in  %0.5in
+\topmargin     0in
+\leftmargin    -1.25in
+\rightmargin   0in
+\textheight    9in
+\textwidth     11in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Inference overview}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{December 1, 2017}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+We are always trying to make inference about a population parameter from a sample statistic. We have three methods for inference:
+\begin{enumerate}
+\item Simulation/randomization methods
+\item Exact/probability methods
+\item Distributional approximations
+\end{enumerate}
+We have focused (perhaps too much) on the distributional approximation methods. However, all of the problems we have studied could be solved with any of the three methods. \vspace{0.25in}
+
+\begin{tabular}{|cclll|}
+\hline 
+Parameter & Statistic & Hypothesis test & Confidence inteval & Conditions \\
+\hline
+$p$ & $\hat{p}$ & $H_0: p = p_0$, $z=\frac{\hat{p}-p_0}{SE}$, $SE=\sqrt{\frac{p_0(1-p_0)}{n}}$ & $\hat{p}\pm z^*SE$, $SE=\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ & \textbf{I}, $np>10$, $n(1-p)>10$ \\ 
+&&$H_A: p\neq p_0$ && \\
+
+$p_1-p_2$ & $\hat{p_1}-\hat{p_2}$ & $H_0: p_1-p_2 = p_0$, $z=\frac{\hat{p_1}-\hat{p_2}-p_0}{SE}$, $SE=\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}$ & $\hat{p_1}-\hat{p_2} \pm z^* SE$, $SE=\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}$ & \textbf{I}, \textbf{N} \\
+&&$H_A: p_1 - p_2 \neq p_0$ && \\
+
+$p_1-p_2$ & $\hat{p_1}-\hat{p_2}$ & $H_0: p_1-p_2 = 0$, $z=\frac{\hat{p_1}-\hat{p_2}}{SE}$, $SE=\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}$ &  & \textbf{I}, \textbf{N} \\
+&&$H_A: p_1 - p_2 \neq 0$ && \\
+
+$X^2$ & $\hat{X}^2$ & $H_0:$ the counts are the same, $X^2=\sum \frac{(O_i-E_i)^2}{E_i}$ &  & \textbf{I}, 5 successes, $df\geq 2$ \\
+&& $H_A:$ the counts are different && \\
+$\mu$ & $\bar{x}$ & $H_0: \mu = \mu_0$, $t=\frac{\bar{x}-\mu_0}{SE}$, $SE=\frac{s}{\sqrt{n}}$ & $\bar{x} \pm t^*SE$, $SE=\frac{s}{\sqrt{n}}$ & \textbf{I}, \textbf{N} \\
+&& $H_A: \mu\neq\mu_0$ && \\
+
+$\mu_{diff}$ & $\bar{x}_{diff}$ & $H_0: \mu_{diff} = \mu_0$, $t=\frac{\bar{x}_{diff}-\mu_0}{SE_{diff}}$, $SE_{diff}=\frac{s_{diff}}{\sqrt{n}}$ & $\bar{x} \pm t^*SE$, $SE=\frac{s_{diff}}{\sqrt{n}}$ & \textbf{I}, \textbf{N} \\
+&& $H_A: \mu_{diff}\neq\mu_0$ && \\
+
+$\mu_1 -\mu_2$ & $\bar{x_1}-\bar{x_2}$ & $H_0: \mu_1 - \mu_2 = \mu_0$, $t=\frac{\bar{x_1}-\bar{x_2}-\mu_0}{SE}$, $SE=\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$ & $\bar{x_1}-\bar{x_2}\pm t^*SE$, $SE=\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$ & \textbf{I},\textbf{N} \\
+&& $H_A: \mu_1 - \mu_2 \neq \mu_0$ && \\
+$\mu_1, \mu_2, \dots, \mu_n$ & $\bar{x}_1, \bar{x}_2, \dots \bar{x}_n$ & $H_0: \mu_1= \mu_2= \dots = \mu_n$, $F=\frac{MSG}{MSE}$ & & \textbf{I} (between and within), \textbf{N}, \textbf{E}\\
+&& $H_A:$ at least one of the $\mu_i$ is different && \\
+$\beta_i$ & $\hat{\beta_1}$ & $H_0:\beta_1 = 0$, $t=\frac{\hat{\beta_1}-0}{SE}$ & $\hat{\beta_1}\pm t*SE$ & \textbf{L}, \textbf{I}, \textbf{N}, \textbf{E} \\
+&& $H_A: \beta_i \neq 0$ && \\
+\hline
+\end{tabular}
+
+ \vspace{0.25in}
+Where 
+\begin{itemize}
+\item \textbf{L}inearity 
+\item \textbf{I}ndependence
+\item \textbf{N}ormality
+\item \textbf{E}quality of variance
+\end{itemize}
+
+
+
+
+\end{document}

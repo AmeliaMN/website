@@ -1,0 +1,6 @@
+These are not exactly coding tricks, but rather ways to make your life easier using key commands. 
+
+- The **up arrow** on your keyboard will allow you to scroll up through your past commands. I use this a lot-- if I type a function and it didn't work, I'll hit the up arrow and edit what I had from before. 
+- The **tab key** on your keyboard will help you (particularly in RStudio) by offering ways to finish your code. If you start typing `mea` and hit tab, it will suggest `mean()` among other things. If you type `mean(~hwy, data=vehicles,` and hit tab, it will tell you the other arguments you can use for the `mean()` function. 
+- When working within a .R or .Rmd file, you can put your cursor on a line and hit **Cntrl + Enter** to get the code to execute in the Console. (On a mac, **Command + Enter**.)
+- If you get stuck with some syntax (usually, mismatched parentheses or quotes), the R Console will change from the `>` at the beginning of the line (which means it is waiting for a new command) to the `+` at the beginning of the line (which means it is waiting for you to finish a command). To get out, hit the **Escape** key. 

@@ -1,0 +1,147 @@
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=TRUE)
+```
+
+We will use the dataset `elecequip` from the package `fpp` for this Lab. These data show the number of new orders for electrical equipment (computer, electronic and optical products) in the Eurozone area (16 countries). The data have already been adjusted by the number of working days and normalized so a value of 100 corresponds to 2005.
+
+```{r, message=FALSE, warning=FALSE}
+require(fpp)
+```
+
+Let us see if there is a trend in the dataset `elecequip` over the years:
+
+```{r}
+data(elecequip)
+head(elecequip) # see what is in the dataset
+plot(elecequip,main="Time series plot for Electrical Equipment Manufacturing", xlab="", ylab="New orders index")
+```
+
+Note that `elecequip` is a `ts` object.
+
+```{r}
+class(elecequip)
+```
+
+Let us decompose the variable in `elecequip` into the time series components: Cycle, Trend, Seasonal and Irregularity. The additive model is:
+
+$$
+  Y_t = S_t + T_t + \epsilon_t
+$$
+
+```{r}
+fit <- decompose(elecequip, type="additive") #additive decomposition
+plot(fit)
+
+fitm <- decompose(elecequip, type="multiplicative") #multiplicative
+plot(fitm)
+
+```
+
+Let us now see how the seasonal data looks for each month in the series:
+
+```{r}
+fits <- stl(elecequip, s.window=7)
+plot(elecequip, col="gray",
+ main="Electrical equipment manufacturing",
+ ylab="New orders index", xlab="")
+lines(fits$time.series[, "trend"], col="red", ylab="Trend")
+monthplot(fits, choice = "seasonal")
+monthplot(fits, choice = "trend")
+monthplot(fits, choice = "remainder")
+```
+
+Let us see what the seasonally adjusted plot would look like:
+
+```{r}
+plot(elecequip, col="grey",
+ main="Electrical equipment manufacturing",
+  xlab="", ylab="New orders index")
+lines(seasadj(fit),col="red",ylab="Seasonally adjusted")
+```
+
+#### Seasonal Trend Lowess approach
+
+How about if we detrend the series using STL (seasonal trend using lowess)? Note the trend window is set to 15 months and seasonal is set to periodic.
+
+```{r}
+eeadj <- seasadj(stl(elecequip, s.window="periodic"))
+plot(eeadj) # plot with only seasonal adjustment
+
+fitloess <- stl(elecequip, t.window=15, s.window="periodic", robust=TRUE)
+plot(fitloess)#plot with both trend and seasonal adjusment
+```
+
+#### Autoregressive models
+
+An [autoregressive model](http://en.wikipedia.org/wiki/Autoregressive_model) uses previous instances of each measurement as a predictor in a linear model for future instances. 
+
+$$
+  Y_t = \beta_0 + \sum_{i=1}^p \beta_i Y_{t-i} + \epsilon_t \,,
+$$
+where the parameters to be fit are the $\beta_i$'s. As usual, the error terms are assumed to follow a normal distribution with mean 0 (e.g. $\epsilon \sim N(0, \sigma)$). We can fit the model using OLS regression, but here we will use a special function in R. 
+
+The autoregressive model $AR(p)$ uses $p$ lagged terms. 
+
+```{r}
+ar.mod <- ar(eeadj, order.max = 5)
+ar.mod
+ar.hats <- predict(ar.mod, n.ahead=24)
+plot(eeadj, xlim=c(1996, 2014))
+lines(ar.hats$pred, col="blue")
+lines(ar.hats$pred + ar.hats$se, col="red")
+lines(ar.hats$pred - ar.hats$se, col="red")
+```
+
+#### Moving Average 
+
+[Moving average](http://en.wikipedia.org/wiki/Moving-average_model) models are similar, but use the error terms rather than the previous values. That is, here the measurements are based on the lagged *errors*, rather than the lagged *observed values*. 
+
+The moving average model of order $q$ is denoted $MA(q)$:
+
+$$
+  Y_t = \mu + \sum_{i=1}^q \theta_i \epsilon_{t-i} + \epsilon_t \,,
+$$
+where the parameters to be fit are the $\theta_i$'s. 
+
+Note that the above plot is not adjusted for trend or cycles so is not very useful.
+Let us look at a plot after computing a 2x12 [moving average](http://en.wikipedia.org/wiki/Moving-average_model) which is suitable for monthly data.
+
+```{r}
+ma.mod <- ma(eeadj, order = 12)
+plot(eeadj, ylab="New orders index", col="gray",
+ main="Electrical equipment manufacturing (Euro area)")
+lines(ma.mod, col="red") #moving average for m=12
+```
+
+#### ARIMA model
+
+An [ARMA model](http://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model) combines the ideas of autoregressive model with moving average models. 
+
+$$
+  Y_t = \mu + \sum_{i=1}^p \beta_i Y_{t-i} + \sum_{i=1}^q \theta_i \epsilon_{t-i} + \epsilon_t \,.
+$$
+
+Let us detrend using the difference method
+```{r}
+tsdisplay(diff(eeadj), main="")
+```
+
+The [ARIMA model](http://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average) is a generalization of the ARMA model that includes a third parameter for taking the differences of consecutive terms. This the parameter $d$ in the $ARIMA(p,d,q)$ model. 
+
+Now let us fit the ARIMA model to find the lowest AIC. Choices include $ARIMA (2, 1, 0)$, $ARIMA(3, 1, 0)$, $ARIMA(3, 1, 1)$. Try a few choices of your own and see if you can get a lower AIC.
+
+```{r}
+fitarima <- arima(eeadj, order=c(3,1,1)) # gave the lowest AIC from above choices
+summary(fitarima)
+```
+
+After you decide on a model you need to check the [residual plots](http://en.wikipedia.org/wiki/Ljung%E2%80%93Box_test) for autocorrelation.
+
+```{r}
+Acf(residuals(fitarima))
+Box.test(residuals(fitarima), lag=24, fitdf=4, type="Ljung")
+```
+
+Much of this material was taken from [Forecasting: Prinicples and Practice](http://www.otexts.org/fpp/6/1) by Hyndman and Athanaosopoulos.
+

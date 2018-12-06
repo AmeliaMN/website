@@ -1,0 +1,176 @@
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=TRUE, cache=TRUE)
+```
+
+```{r, message=FALSE}
+require(mosaic)
+```
+
+#### Panel Data
+
+* Cross-sectional data is a snapshot of a population at one time.
+* Longitudinal data repeats measurements over time for each individual.
+* **Panel data** is both cross-sectional and longitudinal. You may also hear the term *repeated measures* to describe this type of data. 
+
+Many of you are working with panel data. For example, if you have data in which many countries are measured repeatedly over time, then you have panel data. 
+
+If we have a set of $N$ entities measured over $T$ time periods, then our panel data matrix has the form: 
+$$
+  X_{it}, \text{ for } i = 1,\ldots,N \text{ and } t=1,\ldots,T.
+$$
+Note that the total number of observations is thus $NT$. Each observation corresponds to one row of the data frame that we will put into R. 
+
+For example, the following data set contains observations on the expenditures of six major U.S. airlines for each year from 1970-1984. 
+
+```{r}
+airline <- read.csv("http://www.math.smith.edu/~bbaumer/mth247/labs/airline.csv")
+# library(Ecdat)
+# airline <- Airline
+```
+
+This data is both cross-sectional (since we have 6 different airlines) and longitudinal (since we have 15 different years). In this case $N = 6$ and $T = 15$. Thus, the number of rows in the data frame is 90. 
+
+```{r}
+nrow(airline)
+```
+
+A random selection of the rows of this data set looks like this:
+
+```{r}
+airline %>%
+  filter(row_number() %in% sample(1:90, 10))
+```
+
+> Aside: Note that even if what you want to analyze is panel data, you may not have downloaded the data in the so-called "long" format that we see here. For example, you may have downloaded data from Gapminder where each row corresponds to a country, and each column corresponds to a year, and each cell in that matrix represents the value of one variable for that country in that year. You may have many such data frames that you would like to combine. This multidimensional data must be transformed into order to conform to the panel data model that we are presenting here. The `gather` and `inner_join` commands in R will be your assistants for this process. 
+
+Our goal in this example is to build a model for an airline's `cost`, as a function of its `fuel` costs, an index of how many passenger miles they flew (`output`), and the percentage of seats that were filled on their flights (`load`). We will be paying particular attention to how the `airline` and the `year` factor into our model. 
+
+Let's start by examining the pairwise relationships among the data.
+
+```{r}
+plot(airline)
+```
+
+* What problems do you anticipate encountering with this data?
+* Which variables are strongly correlated? 
+* What trends do you see? 
+
+Before we begin, we want the `year` variable to be treated as a categorical variable, as opposed to a quantitative variable. (Why?)
+
+```{r}
+airline <- airline %>%
+  mutate( year = as.factor(year))
+```
+
+Let's start with a simple model for `cost` as a function of `fuel`. 
+
+```{r, eval=TRUE}
+xyplot(cost ~ fuel, data=airline, type=c("p", "r"))
+fm <- lm(cost ~ fuel, data=airline)
+summary(fm)
+plot(fm)
+```
+
+Here, we have built the model
+$$
+  cost_j = \beta_0 + \beta_1 \cdot fuel_j + \epsilon_j, \text{ where } \epsilon \sim N(0, \sigma_\epsilon^2).
+$$
+
+In this setup, each row $j$ of the data set corresponds to *one airline in one year*. One problem with this model is that one of the conditions for linear regression is that the residuals be uncorrelated. 
+
+* Why might these residuals be correlated? 
+* Construct diagnostic plots for this regression model. Is the correlation in the residuals revealed in the diagnostic plot?
+
+##### Fixed Effects Models
+
+###### Group Effects
+
+Since there might be important differences between the cost structure of different airlines, a potentially better model would include an indicator variable for `airline`. The model
+$$
+  cost_{it} = \beta_0 + \beta_1 \cdot fuel_{it} + airline_i + \epsilon_{it}, \text{ where } \epsilon \sim N(0, \sigma_\epsilon^2).
+$$
+is known as a [**fixed effects**](http://en.wikipedia.org/wiki/Fixed_effects_model) regression model. [Other possible models include [random effects](http://en.wikipedia.org/wiki/Random_effects_model) and [mixed effects models](http://en.wikipedia.org/wiki/Mixed_model).] We have seen this before (as a parallel slopes model). Here, we have added an indicator variable for the **group effect** of the airline. Each airline will now have a different regression line, but all of those lines will share the same slope. 
+
+Adding the group effects to the plot makes the correlations in the residuals obvious. 
+
+```{r, eval=FALSE}
+xyplot(cost ~ fuel, groups=airline, data=airline, auto.key=TRUE)
+fm.ge <- lm(cost ~ fuel + airline, data=airline)
+summary(fm.ge)
+fit.cost <- makeFun(fm.ge)
+plotFun(fit.cost(fuel, airline="American") ~ fuel, col=1, add=TRUE)
+plotFun(fit.cost(fuel, airline="Delta") ~ fuel, col=2, add=TRUE)
+plotFun(fit.cost(fuel, airline="Northwest") ~ fuel, col=3, add=TRUE)
+plotFun(fit.cost(fuel, airline="Transamerica") ~ fuel, col=4, add=TRUE)
+plotFun(fit.cost(fuel, airline="United") ~ fuel, col=5, add=TRUE)
+plotFun(fit.cost(fuel, airline="USAir") ~ fuel, col=6, add=TRUE)
+```
+
+```{r}
+xyplot(residuals(fm) ~ fitted.values(fm), groups=airline, data=airline, auto.key=TRUE)
+```
+
+It is important to understand the the group effects are **time-invariant**. That is, the term in the regression model associated with the group is a property of that group, and does not change over time. In this example, it might be the case that Delta Airlines tends to fly less fuel-efficient airplanes, and thus their cost structure is higher than that of American Airlines, even when accounting for change in fuel cost. In general, a group effect might yield an interesting interpretation, but you might not always be able to explain why it exists. It might be enough to simply assert that there is something about Delta Airlines cost structure that is simply different, to a statistically significant degree, than the cost structure for American Airlines. 
+
+In this case many of the group effects are statistically significant, but not all. But we should include all of the group effect terms if the *set* of group effect coefficients are significant. We test this using a nested $F$-test.
+
+```{r, eval=FALSE}
+anova(fm, fm.ge)
+```
+
+##### Time Effects
+
+Recall that panel data is both cross-sectional and longitudinal. Group effects correspond to the cross-sections. But what about the effects of time? 
+
+For example, it is clear from the data that `fuel` costs have, in general, risen over time. We can see this graphically:
+
+```{r}
+xyplot(fuel ~ year, data=airline, type=c("p", "smooth"))
+```
+
+and by computing the average `fuel` cost for each `year`. 
+
+```{r}
+mean(~fuel | year, data=airline)
+```
+
+In a manner similar to what we have done above, we can now add **time effects** to our model:
+$$
+  cost_{it} = \beta_0 + \beta_1 \cdot fuel_{it} + airline_i + year_t + \epsilon_{it}, \text{ where } \epsilon \sim N(0, \sigma_\epsilon^2).
+$$
+Note that the subscripts on the `airline` and `year` variable are different!
+
+```{r, eval=FALSE}
+fm.gte <- lm(cost ~ fuel + airline + year, data=airline)
+summary(fm.gte)
+```
+
+For the sake of completeness, let's also compute the model with only the time effects, but not the group effects. 
+
+```{r, eval=FALSE}
+fm.te <- lm(cost ~ fuel + year, data=airline)
+summary(fm.te)
+```
+
+* Interpret the coefficients on the models with time effects? What do you notice? 
+
+Do we really want to include the time effects? Let's use a nested $F$-test to help us decide
+
+```{r, eval=FALSE}
+anova(fm, fm.ge, fm.gte)
+anova(fm, fm.te, fm.gte)
+```
+
+* Which of the four models do you find to be most informative? Why? 
+* How many regression lines are there now? 
+* Add some of the regression lines to the plot in the manner we did above. What do you see? 
+* What are some of the issues that you see in this regression model?
+
+###### Caveats
+
+We have assumed throughout that there were no missing observations. That is, if there were 6 groups, *each* had 15 observations. Thus, we have assumed that our panel data is *balanced*. Applying these techniques to unbalanced panel data can be problematic. 
+
+Secondly, you don't want to have too many groups or time periods. If you do, then then your coefficients may become unreliable. One remedy for this problem is to create "supergroups" and use those for the group effects.
+
+> Much of this material was taken from “Park, Hun Myoung. 2009. Linear Regression Models for Panel Data Using SAS, Stata, LIMDEP, and SPSS. Working Paper. The University Information Technology Services (UITS) Center for Statistical and Mathematical Computing, Indiana University.” (http://www.indiana.edu/~statmath/stat/all/panel/panel.pdf)

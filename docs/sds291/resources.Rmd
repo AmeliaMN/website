@@ -1,0 +1,52 @@
+* [Moodle](https://moodle.smith.edu/course/view.php?id=12202)
+* Textbook
+    + [Stat2: Building Models for a World of Data](http://bcs.whfreeman.com/stat2/#t_831766____)
+    + install the `Stat2Data` package in `R`
+    + Susan Wang's CFAU [companion to the Stat2 book](https://www3.amherst.edu/~swang/STAT2/)
+* RStudio IDE
+    + Choose one of two options:
+        1. Log on to the Smith College [RStudio Server](http://rstudio.smith.edu:8787)
+        2. Use RStudio locally.
+            + Download and install [RStudio Desktop](http://www.rstudio.com/products/rstudio/)
+            + Download and install [R](http://cran.us.r-project.org/)
+    + Learn more about [R Markdown](http://rmarkdown.rstudio.com/)
+        + printable [Reference Guide for R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+    + RStudio's [cheatsheets](http://www.rstudio.com/resources/cheatsheets/) for:
+        + [RStudio IDE](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)
+        + [Data Wrangling with `dplyr`](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+        + [Shiny](https://www.rstudio.com/wp-content/uploads/2016/01/shiny-cheatsheet.pdf)
+* Calculators
+    + On exams, you may bring a scientific calculator with you to perform calculations. You may *not* use your phone for this. If you do not have a calculator, the Spinelli Center lends calculators to students. Email [spinelli@smith.edu](mailto:spinelli@smith.edu) to reserve a calculator. 
+
+* Using `R`
+    + Packages you should install: `mosaic`, `knitr`, `markdown`
+    + [Quick R](http://www.statmethods.net/)
+    + [R Tutorial](http://www.r-tutor.com/)
+    + Interactive tutorials via [swirl](http://swirlstats.com/students.html), [DataCamp](https://www.datacamp.com/)
+    + Nick Horton's videos [introducing RStudio at Amherst](http://www3.amherst.edu/~nhorton/rstudio/)
+    
+* Using `R` with the `mosaic` package 
+    + the `mosaic` [package](http://cran.r-project.org/web/packages/mosaic/index.html)
+    + [graphics](http://cran.r-project.org/web/packages/mosaic/vignettes/GraphicsWithMosaic.html) with `mosaic`
+    + [Minimal R](https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf) for Intro Stats: one page handout with R commands
+    + [A Compendium of Commands to Teach Statistics with R](http://mosaic-web.org/go/Master-Core.pdf): a longer illustrated guide to using `mosaic`
+    + [Resampling-based inference using the mosaic package](https://cran.r-project.org/web/packages/mosaic/vignettes/Resampling.pdf)    
+    
+  
+* Using `R` with the `dplyr` [package](http://cran.r-project.org/web/packages/dplyr/index.html)
+    + Read the vignettes
+    + RStudio's [cheatsheets](http://www.rstudio.com/resources/cheatsheets/) for:
+        + [Data Wrangling with `dplyr`](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+* Quantitative Resources on campus
+    + [Statistics TAs](http://www.smith.edu/qlc/tutoring.html#S2) are available Sunday through Thursday from 7-9 pm in Burton 301
+    + [Data Assistants](https://www.smith.edu/qlc/tutoring.html#D1) are available Mondays, Tuesdays, Fridays, and by appointment. They can help you with R and data-related questions. 
+    + visit the [Spinelli Center for Quantitative Learning](http://www.smith.edu/qlc/)
+    + visit the [Spatial Analysis Lab](http://www.science.smith.edu/sal/about/teaching-learning-opportunities/)
+
+
+* Refresher on introductory statistics: [OpenIntro with Randomization](http://www.openintro.org/stat/index.php?stat_book=isrs)
+    + [PDF](http://www.openintro.org/download.php?file=isrs1&referrer=/stat/textbook.php) of the textbook
+
+
+

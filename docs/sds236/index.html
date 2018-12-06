@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>SDS 236: Data Journalism</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SDS 236 - Spring 2018</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="DataDiary.html">Data Diary</a>
+    </li>
+    <li>
+      <a href="Wikipedia.html">Wikipedia</a>
+    </li>
+    <li>
+      <a href="OneNumberStory.html">One-number story</a>
+    </li>
+    <li>
+      <a href="FOIAtheDead.html">FOIA the dead</a>
+    </li>
+    <li>
+      <a href="OneVariablePlot.html">One-variable visualization</a>
+    </li>
+    <li>
+      <a href="ScienceReporting.html">Science reporting</a>
+    </li>
+    <li>
+      <a href="FreeingData.html">Freeing data from PDFs</a>
+    </li>
+    <li>
+      <a href="StandardStory.html">Standard Story</a>
+    </li>
+    <li>
+      <a href="MakingMaps.html">Making maps</a>
+    </li>
+    <li>
+      <a href="https://ameliamn.shinyapps.io/Interactives/">Interactives</a>
+    </li>
+    <li>
+      <a href="FinalProject.html">Final project</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users">Getting started with Slack</a>
+    </li>
+    <li>
+      <a href="https://www.smith.edu/qlc/tutoring.html#D1">Data Assistants</a>
+    </li>
+    <li>
+      <a href="http://libguides.smith.edu/news">Finding News</a>
+    </li>
+    <li>
+      <a href="http://libguides.smith.edu/c.php?g=813426">Library guide for SDS 236</a>
+    </li>
+    <li>
+      <a href="https://www.significancemagazine.com/component/content/article/10-news/579-our-2018-writing-competition-for-early-career-statisticians-is-underway">Significance writing competition</a>
+    </li>
+    <li>
+      <a href="WritingTips.html">Writing tips</a>
+    </li>
+    <li>
+      <a href="https://www.tableau.com/learn/training">Tableau tutorials</a>
+    </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy git with R</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">SDS 236: Data Journalism</h1>
+
+</div>
+
+
+<div id="about-the-course" class="section level2 smith">
+<h2>About the Course</h2>
+<div id="the-course" class="section level4">
+<h4>The course</h4>
+<p>The course meets Tuesdays and Thursdays from 10:30 am - 11:50 am in Bass 002 (the new psychology/SDS lab in the basement).</p>
+</div>
+<div id="instructors" class="section level4">
+<h4>Instructors</h4>
+<ul>
+<li>Amelia McNamara (<code>amcnamara@smith.edu</code>, McConnell 211), office hours 2-3 pm Monday, 1-2 pm Thursday and Friday.</li>
+</ul>
+</div>
+<div id="description" class="section level4">
+<h4>Description</h4>
+<p>Data journalism is the practice of telling stories with data. This course will focus on journalistic practices, interviewing data as a source, and interpreting results in context. We will discuss the importance of audience in a journalistic context, and will focus on statistical ideas of variation and bias. The course will include hands-on work with data, using appropriate computational tools such as R, Python, and data APIs. In addition, we will explore the use of visualization and storytelling tools such as Tableau, plot.ly, and D3. No prior experience with programming or journalism is required.</p>
+<p><strong>Prerequisite</strong>: Enforced prerequisite: An introductory statistics course, including SDS 220, MTH 220, SDS 201, PSY 201, ECO 220, GOV 203, AP Statistics, or permission of the instructor.</p>
+</div>
+<div id="textbook" class="section level4">
+<h4>Textbook</h4>
+<p><em>Numbers in the newsroom: Using math and statistics in news</em> Sarah Cohen, 2nd edition. The textbook is available in two formats:</p>
+<ul>
+<li><a href="https://store.ire.org/collections/frontpage/products/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition-e-version">electronic edition</a></li>
+<li>paperback edition from the Smith bookstore</li>
+</ul>
+<p>We will also be reading many articles, both examples of data journalism and readings specifically about the practice of data journalism, but these will be made available via links on moodle.</p>
+</div>
+<div id="other-materials" class="section level4">
+<h4>Other materials</h4>
+<p>You will need a notebook to use for notetaking while interviewing. Many reporters prefer notebooks with spiral binding at the top of the page like <a href="https://smile.amazon.com/Reporters-Notebook-Inches-4-Count-80304/dp/B002OU6NO6?sa-no-redirect=1">this</a>.</p>
+<p>You will also want some method of recording audio, again for interviewing. If you have a smartphone, it probably has an app for this. If not (or you want higher-quality audio), the Center for Media Production lends audio recorders to students.</p>
+<p>We’ll be using <a href="https://drive.google.com/drive/u/1/folders/0AIdSvQFjp7RrUk9PVA">Google Drive</a> to organize our documents, and <a href="https://sds236.slack.com">Slack</a> for communication.</p>
+<p>This course will explore many computing technologies, including R and RStudio (either the server version on the <a href="http://rstudio.smith.edu:8787">web</a>, or a desktop version).</p>
+<p>This class is supported by <a href="https://www.datacamp.com/home">DataCamp</a>, the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.”</p>
+<p>Depending on the stories we pursue, we will explore Tableau, plot.ly, d3, OpenRefine, Tabula, and more. All software should be available for free, and instructions for installation will be provided.</p>
+<p>If you have financial constraints you find are limiting your ability to be successful in this course, please see me. There are resources at the college for laptop loans and textbook purchase, and I will do everything I can to help you meet your needs.</p>
+</div>
+<div id="classes" class="section level4">
+<h4>Classes</h4>
+<p>Classes meet Tuesday and Thursday. I expect you to attend class. Your participation is an important part of the learning process. If you cannot attend a particular class I would appreciate the courtesy of advanced notice and an explanation for your absence. Class participation and attendance contribute 20% to your final grade.</p>
+<p>I hope it goes without saying, but while the class is in session, you should not use your computer or cell phone for personal email, web browsing, Facebook, or any activity that’s not related to the class. Please try to bring a laptop to class (we’ll often need to have sufficient numbers of both to allow students to work in pairs).</p>
+</div>
+</div>
+<div id="policies" class="section level2 unnumbered">
+<h2>Policies</h2>
+<div id="collaboration" class="section level4">
+<h4>Collaboration</h4>
+<p>Much of this course will operate on a collaborative basis, and you are often expected to work together with a partner or in small groups to complete assignments. However, <strong>every word that you write must be your own</strong>. Copying and pasting sentences, paragraphs, or blocks of code from another student is not acceptable and will receive no credit. All students, staff and faculty are bound by the Smith College Honor Code, which Smith has had since 1944.</p>
+</div>
+<div id="academic-honor-code-statement" class="section level4">
+<h4>Academic Honor Code Statement</h4>
+<blockquote>
+<p>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.</p>
+</blockquote>
+<p>Cases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.</p>
+</div>
+</div>
+<div id="assignments" class="section level2 unnumbered">
+<h2>Assignments</h2>
+<ol style="list-style-type: decimal">
+<li><p>Data diary [15%]: To get you in the practice of writing regularly, you will keep a Data Diary on Google Drive. Diaries will be checked on Sunday evenings, and most weeks you are expected to have four entries. Entries can be short (three sentences) but should be written throughout the week rather than all at once.</p></li>
+<li><p>Short writing [35%]: There will be regular short writing assignments, generally due on Monday evening.</p></li>
+<li><p>Large reporting projects [30%]: Three times throughout the semester, you will create a more significant piece of long-form journalism.</p></li>
+<li><p>Participation [20%]: Our classes will be highly interactive. The remainder of your grade will be based on your participation in our in-class discussions. This category includes our regular news briefing.</p></li>
+<li><p>Extra Credit [?]: Extra credit may be offered for attending an out-of-class lecture (as will be announced) and writing a short review of it.</p></li>
+</ol>
+<div id="reporting" class="section level4">
+<h4>Reporting</h4>
+<p>We will be exploring the concept of reporting throughout this course. You will be producing regular written assignments, following the quick pace of a standard newsroom and news cycle.</p>
+<p>In general, assignments will include the following components:</p>
+<ul>
+<li>A pitch. In the first half of the course, I will provide the pitch to you. As the course progresses, you will be expected to research and pitch your own stories to me.</li>
+<li>Data research. This may include: searching on the web for data, reaching out to sources, submitting Freedom of Information Act (FOIA) requests.</li>
+<li>Initial writing. Each piece of reporting you produce must go through a series of editing stages. Your initial draft should be produced quickly, and include the basic structure of a data story (headline, byline, lede, explanation, and additional information).</li>
+<li>Editing. This will primarily be done by someone serving in an “editor” role (sometimes me, sometimes your fellow students). Editing will include copyediting, proofreading, and reading for clarity.</li>
+<li>Finished product. Your finished product should be print-ready.</li>
+</ul>
+<p>For assignments that include visualization, the components will be largely the same, with “visualization” substituted for “writing.” Visualizations still need to be pitched, go through a draft process, and be edited for clarity and accuracy.</p>
+</div>
+<div id="grading" class="section level4">
+<h4>Grading</h4>
+<p>When grading your written work, we are looking for writing this both technically correct and clearly explained. Assessment will take into account the intended audience, the venue for publication, the word count and other reporting briefs, accuracy of reporting, and grammatical clarity.</p>
+<p>Your ability to communicate results, which may be technical in nature, to your audience, which is likely to be non-technical, is critical to your success as a data analyst. The assignments in this class will place an emphasis on the clarity of your writing.</p>
+</div>
+</div>
+<div id="resources" class="section level2 unnumbered">
+<h2>Resources</h2>
+<div id="course-website" class="section level4">
+<h4>Course Website</h4>
+<p>The course website and Moodle page will be regularly updated with lecture handouts, project information, assignments, and other course resources. Announcements will primarily be made via Slack. It is your responsibility to check these resources regularly.</p>
+</div>
+<div id="tentative-schedule" class="section level4">
+<h4>Tentative Schedule</h4>
+<p>The following is a brief outline of the course. Please refer to the complete <a href="schedule.html">day-to-day schedule</a> for more detailed information.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Week</th>
+<th align="left">Reading</th>
+<th align="left">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Ch. 1</td>
+<td align="left">Introduction to Data Journalism</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Ch. 2</td>
+<td align="left">Fractions, rates, percents, and per capita</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Ch. 2</td>
+<td align="left">Averages, central tendency</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">Ch. 3</td>
+<td align="left">Data visualization</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">Ch. 3</td>
+<td align="left">Data visualization</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">Ch. 4</td>
+<td align="left">Standard stories</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">Ch. 5</td>
+<td align="left">Working with survey data</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">Ch. 6</td>
+<td align="left">Mistakes in the news</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left"></td>
+<td align="left">Mapping</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left"></td>
+<td align="left">Reporting on algorithms and AI</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left"></td>
+<td align="left">Timelines</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left"></td>
+<td align="left">Interactivity</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left"></td>
+<td align="left">Deep-dive reporting</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
