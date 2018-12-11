@@ -11,7 +11,7 @@ my real name is much more interesting. But, I realized recently that
 given the prior probabilities, it's actually a very reasonable thing to
 call me.
 
-[Note: this blog post has some interactive elements, so it is probably more fun to read on [my shiny server](http://45.55.32.181/shiny/Amanda/). And of course, if you want to see what I did, the [code is on GitHub](https://github.com/AmeliaMN/shiny-server/blob/master/Amanda/Amanda.Rmd).]
+[Note: this blog post has some interactive elements, so it is probably more fun to read on [my shiny server](https://ameliamn.shinyapps.io/Amanda/). And of course, if you want to see what I did, the [code is on GitHub](https://github.com/AmeliaMN/shiny-server/blob/master/Amanda/Amanda.Rmd).]
 
 <!--more-->
 
