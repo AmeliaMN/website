@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>STAT 360 Syllabus</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/amelia.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">STAT 360 -- Spring 2019</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li>
+  <a href="assignments.html">Assignments</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources - students
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users">Getting started with Slack</a>
+    </li>
+    <li>
+      <a href="https://www.causeweb.org/usproc/USCLAP%20Competition">Undergraduate Statistics Project Competition</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="resources_fac.html">Resources - faculty</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">STAT 360 Syllabus</h1>
+
+</div>
+
+
+<div id="about-the-course" class="section level2 smith">
+<h2>About the Course</h2>
+<div id="instructor" class="section level4">
+<h4>Instructor</h4>
+<p>Amelia McNamara (<code>amelia.mcnamara@stthomas.edu</code>, OSS 407)</p>
+<p>Student hours: Mondays from 1:00-2:00, Wednesdays from 11-noon, and by appointment, in OSS 407.</p>
+</div>
+<div id="description" class="section level4">
+<h4>Description</h4>
+<p>This course introduces students to an advanced statistical software package to effectively apply statistical methods, in general. Students create data sets from raw data files, create variables within a data set, append and/or modify data sets, create subsets, then apply a whole host of statistical procedures, create graphs and produce reports. The course will be based on several leading advanced statistical software packages, which will be chosen from semester to semester to match the needs of the community.</p>
+<p><strong>Prerequisite</strong>: STAT 220 or STAT 314</p>
+</div>
+<div id="textbooks" class="section level4">
+<h4>Textbooks</h4>
+<p>There are two required texts for this course:</p>
+<ul>
+<li><a href="https://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham and Garrett Grolemund</li>
+<li><a href="http://adv-r.had.co.nz/">Advanced R</a> by Hadley Wickham</li>
+</ul>
+<p>These books are available for purchase in the university book store, online at Amazon and other online retailers, or freely available on the websites linked above. You don’t need a physical copy of either book, but many students prefer to have a hard copy.</p>
+<p>We will supplement these two texts with additional readings from other materials, including (but not limited to):</p>
+<ul>
+<li><a href="https://happygitwithr.com/">Happy git with R</a> by Jenny Bryan, STAT 545 TAs, and Jim Hester (online only)</li>
+<li><a href="http://r-pkgs.had.co.nz/">R packages</a>, by Hadley Wickham (paper book available)</li>
+</ul>
+</div>
+<div id="computing" class="section level4">
+<h4>Computing</h4>
+<p>This course is structured to be as authentic as possible with regard to statistical computing. This means we will be coding in the <code>R</code> language, creating literate programming files (mixing text and code) in the <code>rmarkdown</code> format, versioning code with <code>git</code>, sharing and collaborating on <a href="https://github.com/">GitHub</a> and communicating via <a href="https://stat360workspace.slack.com/signup">Slack</a>. All of these technologies have a learning curve, but I believe they are useful both pedagogically and practically (in terms of getting a job).</p>
+</div>
+<div id="inclusive-classroom" class="section level4">
+<h4>Inclusive classroom</h4>
+<p>Because data is collected by and about humans, it necessarily encodes aspects of our proclivities and biases. As a result, this course will likely touch upon difficult topics related to race, gender, inequality, class, and oppression. We each come into this class with different perspectives that can be shared to enhance our understanding of these issues. I ask that you enter these conversations with respect, curiosity, and cultural humility. You should be open to alternative perspectives and willing to revise beliefs that are based on misinformation. As a general rule, your ideas and experiences can always be shared during these conversation but please refrain from dismissing the experiences of others. Personal attacks of any kind will not be tolerated.</p>
+<p>Please plan to treat me and your classmates with respect. This includes things like arriving at class on time, coming in quietly if you are late, and focusing on the task at hand, as well as using your classmates’ preferred name and pronouns.</p>
+</div>
+<div id="disability-statement" class="section level4">
+<h4>Disability Statement</h4>
+<p>Academic accommodations will be provided for qualified students with documented disabilities including but not limited to mental health diagnoses, learning disabilities, Attention Deficit Disorder, Autism, chronic medical conditions, visual, mobility, and hearing disabilities. Students are invited to contact the Disability Resources office about accommodations early in the semester. Appointments can be made by calling 651-962-6315 or in person in Murray Herrick, room 110. For further information, you can locate the Disability Resources office on the web at <a href="http://www.stthomas.edu/enhancementprog/" class="uri">http://www.stthomas.edu/enhancementprog/</a>.</p>
+</div>
+<div id="collaboration" class="section level4">
+<h4>Collaboration</h4>
+<p>Much of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete homework assignments, and work on projects. However, <strong>every word that you write must be your own</strong>. Copying and pasting sentences, paragraphs, or blocks of code from another student or the internet is not acceptable and will receive no credit. No interaction with anyone but the instructor is allowed on any exams or quizzes. All students are bound by the university Rules of Conduct. Cases of dishonesty, plagiarism, etc., will be reported to the dean.</p>
+</div>
+</div>
+<div id="resources" class="section level2 unnumbered">
+<h2>Resources</h2>
+<div id="course-website-and-other-technology" class="section level4">
+<h4>Course website and other technology</h4>
+<p>The <a href="https://amelia.mn/stat360/">course website</a> will be regularly updated with lecture handouts, project information, assignments, and other course resources. Course discussion will take place on <a href="https://stat360workspace.slack.com/signup">Slack</a>. Labs will be completed using R and git/GitHub.</p>
+</div>
+</div>
+<div id="assignments" class="section level2 unnumbered">
+<h2>Assignments</h2>
+<ol style="list-style-type: decimal">
+<li><p>Assignments [40%]: Assignments will take the form of short coding exercises.</p></li>
+<li><p>Labs [30%]: Labs will primarily take place in the open-source programming language R. Students are encouraged to work in pairs during these labs.</p></li>
+<li><p>Final Project [20%]: The final project will see you applying what you have learned to create an R package for a task of your choice. There will be several (graded) milestones along the way to help you prepare, and we will hold a demonstration session on the final day of class.</p></li>
+<li><p>Class participation [10%]: Classes meet Tuesday and Thursday in OSS 415. Your participation is an important part of the learning process. Active participation in class will comprise the remainder of your grade.</p></li>
+</ol>
+<div id="tentative-schedule" class="section level4">
+<h4>Tentative Schedule</h4>
+<p>The following is a brief outline of the course. Please refer to the complete day-to-day schedule for more detailed information.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Reading</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>r4ds 1-3</td>
+<td>Introduction to the course, data visualization</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>r4ds 4-5</td>
+<td>Workflow basics, data wrangling</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>r4ds 6 and happygitwithR 4</td>
+<td>Scripts, intro to git and GitHub</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>r4ds 12-13</td>
+<td>Tidy data and joins</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>r4ds 14-16</td>
+<td>Special data types</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>r4ds 17-21</td>
+<td>Intro to programming in R</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>advR 2-4</td>
+<td>Data structures in R, subsetting, vocab</td>
+</tr>
+<tr class="even">
+<td>March 25-April 1</td>
+<td></td>
+<td><strong>Midterm Break</strong></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>advR 5-6, Rpkg 3</td>
+<td>Style, functions, simulation</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>advR 7</td>
+<td>OO field guide, spatial data</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>advR 8-9</td>
+<td>Environments, debugging</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>happygitwithR 22, 28</td>
+<td>Collaboration</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Rpkg 2, 4</td>
+<td>R package structure</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Rpkg 5-6</td>
+<td>Documentation</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td></td>
+<td><strong>Project Work Time</strong> and <strong>Project Presentations</strong></td>
+</tr>
+<tr class="even">
+<td>May 24</td>
+<td></td>
+<td><strong>All work due</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://www.amelia.mn">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
