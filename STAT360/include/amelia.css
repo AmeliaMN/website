@@ -1,0 +1,30 @@
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.table-condensed td, .table-condensed th {
+    padding: 1px;  
+}
+
+
+ol > li .test {
+    position:relative; /* Create a positioning context */
+    padding-bottom:40px; /* Add some spacing around the content */
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+.past {
+    color: darkgray;
+}
