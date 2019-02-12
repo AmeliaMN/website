@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Schedule</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/amelia.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">STAT 360 -- Spring 2019</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li>
+  <a href="assignments.html">Assignments</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources - students
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users">Getting started with Slack</a>
+    </li>
+    <li>
+      <a href="https://www.causeweb.org/usproc/USCLAP%20Competition">Undergraduate Statistics Project Competition</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="references_fac.html">Resources - faculty</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Schedule</h1>
+
+</div>
+
+
+<table>
+<colgroup>
+<col width="8%" />
+<col width="27%" />
+<col width="13%" />
+<col width="33%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Date</th>
+<th align="left">Topic</th>
+<th align="left">Reading</th>
+<th align="left">Materials</th>
+<th align="left">Assignments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2/5</td>
+<td align="left">Introduction to the course, <a href="slides/00-Intro">intro to R</a>, <a href="slides/01-Visualize.pdf">Visualization</a></td>
+<td align="left"><a href="https://r4ds.had.co.nz/introduction.html">r4ds 1-2</a></td>
+<td align="left"><a href="https://happygitwithr.com/github-acct.html">Github username tips</a>, <a href="https://www.rstudio.com/resources/cheatsheets/">RStudio cheatsheets</a></td>
+<td align="left">Make a <a href="https://github.com/">Github username</a> and <a href="https://www.surveymonkey.com/r/WVQGGF7">tell me your username</a>, make <a href="https://stat360workspace.slack.com/signup">Slack account</a>, introduce yourself on Slack</td>
+</tr>
+<tr class="even">
+<td align="left">2/7</td>
+<td align="left">More <a href="slides/01-Visualize.pdf">Visualization</a></td>
+<td align="left"><a href="https://r4ds.had.co.nz/data-visualisation.html">r4ds 3</a></td>
+<td align="left"><a href="https://www.rstudio.com/resources/cheatsheets/">RStudio cheatsheets</a>, including the <a href="https://github.com/rstudio/cheatsheets/raw/master/syntax.pdf">Syntax cheatsheet</a> and <a href="https://www.rstudio.com/resources/cheatsheets/#ggplot2">Data Visualization cheatsheet</a></td>
+<td align="left">just reading</td>
+</tr>
+<tr class="odd">
+<td align="left">2/12</td>
+<td align="left">Workflow basics, rmarkdown, git and Github basics</td>
+<td align="left"><a href="https://r4ds.had.co.nz/workflow-basics.html">r4ds 4</a>, <a href="https://r4ds.had.co.nz/r-markdown.html">r4ds 27</a></td>
+<td align="left"><a href="https://happygitwithr.com/hello-git.html">hello git</a></td>
+<td align="left"><a href="https://classroom.github.com/a/f_Ii8tyT">Hw 1: viz</a></td>
+</tr>
+<tr class="even">
+<td align="left">2/14</td>
+<td align="left">Data wrangling</td>
+<td align="left"><a href="https://r4ds.had.co.nz/transform.html">r4ds 5</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<!--9/25 | [Visualization fundamentals pt. 2](04_GestaltAndBarcharts.pdf) | | 
+9/27 | | [Visualizing one variable](05_Aggregation.pdf) ([data](https://docs.google.com/a/smith.edu/spreadsheets/d/1fhMYD__IiBd6uxdF-s0NZUsb61ilLX0Tm_CqMX4eg2A/edit?usp=sharing)) | 
+10/2 | |  [Visualizing two variables](06_filtering.pdf) ([data](https://docs.google.com/a/smith.edu/spreadsheets/d/1blEcuuc_L_g_q7fYZ3w7dScxFy_4f58rreQ4NsSHJuE/edit?usp=sharing)) |
+10/4 | [Color theory](07_color.pdf) |  | 
+10/9  |  **Autumn recess**      |  |
+10/11 | [Graphical perception](08_perception.pdf) | | 
+10/16 |  [Design principles](09_principles.pdf) | Mini-lab |  
+10/18 | [Artistic visualization](10_art.pdf) | Hand-drawn viz [data](https://docs.google.com/a/smith.edu/spreadsheets/d/1PnJ8_nmE827Vf-QtDaMC7r91oIYjC1C3ETDyJ1S0Dd8/edit?usp=sharing) |
+10/23 | Museum and special collections visit | |
+10/25 |  Museum and special collections visit | | 
+10/30 |  [Visualization of higher-dimensional data](11_multidimensional.pdf) | Pairs plots and 3D viz ([data](college.csv)) |
+11/1  | [Spatial data](12_spatial.pdf) | Maps ([data](who.csv)) |
+11/6  | [Visualizing uncertainty](13_uncertainty.pdf)  | |
+11/8  |  [Narrative](https://www.youtube.com/watch?v=PMtWFjjVM5E) (**No class**) | |
+11/13 | | **Final project workshop 1**  |
+11/15 | **Visualization in the wild presentations** | |
+11/20 | **Visualization in the wild presentations** | |
+11/22 | **Thanksgiving recess** | |
+11/27 | [Text Data](14_text.pdf)  | Text visualization |
+11/29 |[Interactivity, iteration, and animation](15_interactivity.pdf) | Interactivity |
+12/4  | [Weird visualizations](16_misc.pdf) |  |
+12/6  | **Final project workshop 2** |  [R](static/IntroToR_slides.html), (data: [atus](static/atus.csv), [PartD](static/PartD_Providers.csv)) |
+12/11 | What next? ||
+12/13 | **Project Presentations** || -->
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://www.amelia.mn">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
