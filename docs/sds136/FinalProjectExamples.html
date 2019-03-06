@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Final project examples</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SDS 136 - Fall 2017</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li>
+  <a href="assignments.html">Assignments</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users">Getting started with Slack</a>
+    </li>
+    <li>
+      <a href="https://help.plot.ly/tutorials/">Plotly documentation</a>
+    </li>
+    <li>
+      <a href="https://community.plot.ly/">Plotly community help center</a>
+    </li>
+    <li>
+      <a href="https://www.causeweb.org/usproc/USCLAP%20Competition">Undergraduate Statistics Project Competition</a>
+    </li>
+    <li>
+      <a href="https://www.smith.edu/qlc/tutoring.html#D1">Data Assistants</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Final project examples</h1>
+
+</div>
+
+
+<p>When I taught this class in Fall 2017, I left our final project assignment relatively open-ended. You can read more about the assignment on the <a href="assignments.html">assignments</a> page, but essentially, groups of students created data visualization on data they found interesting. To showcase our work, we held a “poster” presentation in the atrium of Ford Hall, where students showed their work, either as paper printouts, 3D items, or digital artifacts on their laptop. A few of my favorite projects are detailed below.</p>
+<p>Please note, I asked students if it was okay to share these projects, and got the okay from all students (including all members of group projects). I’ve decided to share projects without names for consistency, since several students asked to have their work shared anonymously. If you would like attribution information for graphics, please feel free to ask me. A few student authors were okay with having their names shared.</p>
+<div id="the-race-for-congress-2018---geography-gender-and-the-generic-ballot" class="section level3">
+<h3>The Race for Congress 2018 - Geography, Gender, and the Generic Ballot</h3>
+<p>This project used data about the generic congressional ballot vote to show party support over time. It was inspired by a piece in FiveThirtyEight, <a href="https://projects.fivethirtyeight.com/congress-generic-ballot-polls/">Are Democrats/Republicans Winning The Race For Congress?</a>. The FiveThirtyEight piece was national, but this student wanted to see the data broken down by region and gender. So, the student found data from RealClearPolitics and Huffington Post, and parsed and filtered it to the appropriate data. For their final project, they created a Plotly dashboard with a “memo” to the reader about the overall story. For anonymity, I’ve forked the project to my plotly account. See <a href="https://plot.ly/dashboard/AmeliaMN:24/#/">the memo and interactive visualizations here</a>. In case that link breaks, here are a few static graphics from the piece.</p>
+<div class="figure">
+<img src="img/GenericPlot.png" alt="Figure 1. Overall graph of congressional ballot vote" />
+<p class="caption">Figure 1. Overall graph of congressional ballot vote</p>
+</div>
+<div class="figure">
+<img src="img/ByRegion.png" alt="Figure 2. Graph broken down by region" />
+<p class="caption">Figure 2. Graph broken down by region</p>
+</div>
+<div class="figure">
+<img src="img/ByGender.png" alt="Figure 3. Graph broken down by gender" />
+<p class="caption">Figure 3. Graph broken down by gender</p>
+</div>
+</div>
+<div id="looking-at-language" class="section level3">
+<h3>Looking at Language</h3>
+<p>This project used data from the Foreign Language Enrollment Survey Report to generate hand-drawn visualizations about the foreign languages studied by K-12 students.</p>
+<div class="figure">
+<img src="img/Language1.jpg" alt="Figure 1. Enrollment for Major Languages" />
+<p class="caption">Figure 1. Enrollment for Major Languages</p>
+</div>
+<div class="figure">
+<img src="img/Language2.jpg" alt="Figure 2. Foreign Language Enrollment Map" />
+<p class="caption">Figure 2. Foreign Language Enrollment Map</p>
+</div>
+<div class="figure">
+<img src="img/Language3.jpg" alt="Figure 3. Enrollment for Languages by State" />
+<p class="caption">Figure 3. Enrollment for Languages by State</p>
+</div>
+</div>
+<div id="a-brief-overview-of-ted-from-2013-2017" class="section level3">
+<h3>A brief overview of TED from 2013-2017</h3>
+<p>This project used plotly to explore TED talks over time and by event type. Before the visualization could be made in plotly, this student did data wrangling and cleaning in R using the <code>dplyr</code> package.</p>
+<p>Again, to preserve student privacy, I’ve made a copy of this plotly dashboard. You can <a href="https://plot.ly/dashboard/AmeliaMN:25/present">view the visualization here</a>. And again, static versions of the graphs are presented below.</p>
+<div class="figure">
+<img src="img/TED1.png" alt="Figure 1. Total TED talks from 2013-2017" />
+<p class="caption">Figure 1. Total TED talks from 2013-2017</p>
+</div>
+<div class="figure">
+<img src="img/TED2.png" alt="Figure 2. TED talks by Event Type" />
+<p class="caption">Figure 2. TED talks by Event Type</p>
+</div>
+<div class="figure">
+<img src="img/TED3.png" alt="Figure 3. Comments and views by event type" />
+<p class="caption">Figure 3. Comments and views by event type</p>
+</div>
+</div>
+<div id="earthquake-preparedness" class="section level3">
+<h3>Earthquake preparedness</h3>
+<p>This group project used data from FiveThirtyEight to study earthquake preparedness. The students created hand-drawn visualizations, and were inspired by Mona Chalabi’s work where she “uses a physical representation or a drawing of the representation of the data she is showing.” The students wrote, “The main point of this visualization was to show the range of earthquake counts of U.S regions in a creative way. By using the height of a skyscraper we can see the difference between the Pacific region which had an earthquake count of 1772 and the South Atlantic region which had an earthquake count of zero.”</p>
+<div class="figure">
+<img src="img/Earthquakes1.jpg" alt="Figure 1. Earthquake counts by region" />
+<p class="caption">Figure 1. Earthquake counts by region</p>
+</div>
+<p>The students also created two choropleth maps, one of earthquake precuations and the other about beliefs on the “big one.”</p>
+<div class="figure">
+<img src="img/Earthquakes2.jpg" alt="Figure 2. Choropleth maps" />
+<p class="caption">Figure 2. Choropleth maps</p>
+</div>
+</div>
+<div id="mapping-portlands-public-art" class="section level3">
+<h3>Mapping Portland’s Public Art</h3>
+<p>This student used data from “a CSV file from CivicApps (a collaborative website from local Metro area governments and Oregon State University’s Open Source Lab), and a search engine on the Regional Art and Cultural Council website.” They used R to do data wrangling, and then created an interactive map of public art in Portland. The map uses the <code>leaflet</code> library. An interactive version of this map is <a href="publicart_anon.html">hosted on this site</a>, but it seems like the base map may not be working (my fault, not the student’s). Again, here are some static graphics that capture the project.</p>
+<div class="figure">
+<img src="img/publicart1.png" alt="Figure 1. Screenshots of interactive map of public art" />
+<p class="caption">Figure 1. Screenshots of interactive map of public art</p>
+</div>
+<p><img src="img/publicart2.png" alt="Figure 2. Public art by media type" /> ### Examining Smith College Athletics</p>
+<p>This group project by four Smith student-athletes examined the academic work of athletes at Smith. The students surveyed their fellow student athletes, and received 103 survey responses. They created hand-drawn visualizations to display their results.</p>
+<p>The first was inspired by a visualization from Dear Data, by Giorgia Lupi and Stefanie Posavec. “Each line of the flower head represents 1 hour spent on homework. Each whole flower represents a varsity team, which is measured on the x-axis. The length of the stem represents the number of athletes who responded to the survey, which is measured on the y-axis. The longer the stem, the more survey responses received from that specific team.”</p>
+<p><img src="img/Athletes1.jpg" alt="Figure 1. Time spent on homework by team" /> The students also created three additional visualizations,</p>
+<div class="figure">
+<img src="img/Athletes2.jpg" alt="Figure 2. Majors of student athletes" />
+<p class="caption">Figure 2. Majors of student athletes</p>
+</div>
+<div class="figure">
+<img src="img/Athletes3.jpg" alt="Figure 3. Time commitment on competition day, by sport" />
+<p class="caption">Figure 3. Time commitment on competition day, by sport</p>
+</div>
+<div class="figure">
+<img src="img/Athletes4.jpg" alt="Figure 4. Home state of student athletes" />
+<p class="caption">Figure 4. Home state of student athletes</p>
+</div>
+</div>
+<div id="addictivity-of-drugs-used-by-teenagers." class="section level3">
+<h3>Addictivity of drugs used by teenagers.</h3>
+<p>This group project used data about drug use in the United States by 14-year-olds. and visualized the relationship between the most commonly-used drugs, and their addictivity. The visualization was a large scale bar graph, with one bar representing the percentage of teenagers who reported using the drug, and the other the number of times a user went back to that drug. For example, 18.1% of those surveyed said they drank in the past year, and those that drank had done so an average of 5 times over the course of a year. The visualization used 8.5x11&quot; sheets of paper as units of measurement. For the percentage bar, each sheet represented 2%, and for the number of uses, a sheet represented 2 uses of a drug per year. The overall visualization was large-scale and visually striking.</p>
+<div class="figure">
+<img src="img/DrugBarChart.png" alt="Drug bar chart" />
+<p class="caption">Drug bar chart</p>
+</div>
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
