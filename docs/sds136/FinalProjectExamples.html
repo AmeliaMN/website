@@ -389,8 +389,20 @@ div.tocify {
 <li>
   <a href="schedule.html">Schedule</a>
 </li>
-<li>
-  <a href="assignments.html">Assignments</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="assignments.html">Assignments</a>
+    </li>
+    <li>
+      <a href="FinalProjectExamples.html">Final Project Examples</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -435,8 +447,8 @@ div.tocify {
 
 <p>When I taught this class in Fall 2017, I left our final project assignment relatively open-ended. You can read more about the assignment on the <a href="assignments.html">assignments</a> page, but essentially, groups of students created data visualization on data they found interesting. To showcase our work, we held a “poster” presentation in the atrium of Ford Hall, where students showed their work, either as paper printouts, 3D items, or digital artifacts on their laptop. A few of my favorite projects are detailed below.</p>
 <p>Please note, I asked students if it was okay to share these projects, and got the okay from all students (including all members of group projects). I’ve decided to share projects without names for consistency, since several students asked to have their work shared anonymously. If you would like attribution information for graphics, please feel free to ask me. A few student authors were okay with having their names shared.</p>
-<div id="the-race-for-congress-2018---geography-gender-and-the-generic-ballot" class="section level3">
-<h3>The Race for Congress 2018 - Geography, Gender, and the Generic Ballot</h3>
+<div id="the-race-for-congress-2018" class="section level3">
+<h3>The Race for Congress 2018</h3>
 <p>This project used data about the generic congressional ballot vote to show party support over time. It was inspired by a piece in FiveThirtyEight, <a href="https://projects.fivethirtyeight.com/congress-generic-ballot-polls/">Are Democrats/Republicans Winning The Race For Congress?</a>. The FiveThirtyEight piece was national, but this student wanted to see the data broken down by region and gender. So, the student found data from RealClearPolitics and Huffington Post, and parsed and filtered it to the appropriate data. For their final project, they created a Plotly dashboard with a “memo” to the reader about the overall story. For anonymity, I’ve forked the project to my plotly account. See <a href="https://plot.ly/dashboard/AmeliaMN:24/#/">the memo and interactive visualizations here</a>. In case that link breaks, here are a few static graphics from the piece.</p>
 <div class="figure">
 <img src="img/GenericPlot.png" alt="Figure 1. Overall graph of congressional ballot vote" />
@@ -499,7 +511,7 @@ div.tocify {
 </div>
 <div id="mapping-portlands-public-art" class="section level3">
 <h3>Mapping Portland’s Public Art</h3>
-<p>This student used data from “a CSV file from CivicApps (a collaborative website from local Metro area governments and Oregon State University’s Open Source Lab), and a search engine on the Regional Art and Cultural Council website.” They used R to do data wrangling, and then created an interactive map of public art in Portland. The map uses the <code>leaflet</code> library. An interactive version of this map is <a href="publicart_anon.html">hosted on this site</a>, but it seems like the base map may not be working (my fault, not the student’s). Again, here are some static graphics that capture the project.</p>
+<p>This student used data from “a CSV file from CivicApps (a collaborative website from local Metro area governments and Oregon State University’s Open Source Lab), and a search engine on the Regional Art and Cultural Council website.” They used R to do data wrangling, and then created an interactive map of public art in Portland. The map uses the <code>leaflet</code> library. An interactive version of this map is <a href="publicart_anon.html">hosted on this site</a>. Again, here are some static graphics that capture the project.</p>
 <div class="figure">
 <img src="img/publicart1.png" alt="Figure 1. Screenshots of interactive map of public art" />
 <p class="caption">Figure 1. Screenshots of interactive map of public art</p>
