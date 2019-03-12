@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Github-first workflow</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/amelia.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">STAT 360 -- Spring 2019</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://classroom.github.com/a/f_Ii8tyT">Homework 1: visualization</a>
+    </li>
+    <li>
+      <a href="https://classroom.github.com/g/5uxcrcBk">Group Assigment: comic characters</a>
+    </li>
+    <li>
+      <a href="tidyverse-quiz-guide.pdf">Tidyverse quiz study guide</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources - students
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users">Getting started with Slack</a>
+    </li>
+    <li>
+      <a href="https://www.causeweb.org/usproc/USCLAP%20Competition">Undergraduate Statistics Project Competition</a>
+    </li>
+    <li>
+      <a href="https://www.datacamp.com/groups/shared_links/1909cffdb8000c2ae433b3310899835b1b1024f8">DataCamp</a>
+    </li>
+    <li>
+      <a href="github-first_workflow.html">Github-first workflow</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="references_fac.html">Resources - faculty</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Github-first workflow</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#click-on-assignment-link">Click on assignment link</a></li>
+<li><a href="#copy-the-git-url">Copy the git URL</a></li>
+<li><a href="#make-new-rstudio-project">Make new RStudio Project</a></li>
+<li><a href="#introduce-yourself-to-git">Introduce yourself to git</a></li>
+</ul>
+</div>
+
+<div id="click-on-assignment-link" class="section level2">
+<h2>Click on assignment link</h2>
+<p>The first step to get code I’m providing to you is to click on the link to the Github Classroom “assignment.” (Maybe <a href="https://classroom.github.com/classrooms/44240876-stat360-advanced-statistical-software">this link</a> will take you to our classroom? Otherwise, click on the link I’ve provided for a particular assignment.)</p>
+<p>Github may ask you to authorize Github classroom, you should click Authorize github to allow access.</p>
+<div class="figure">
+<img src="img/01_AuthorizeGithub.png" alt="Authorize Classroom" />
+<p class="caption">Authorize Classroom</p>
+</div>
+<p>Then, you need to accept the assignment,</p>
+<div class="figure">
+<img src="img/02_AcceptAssignment.png" alt="Accept assignment" />
+<p class="caption">Accept assignment</p>
+</div>
+<p>doing this makes a copy of my code into a new Github repository with a similar name, but your Github username appended. For example, our first assignment was called <code>hw1viz</code>, and when I used my student Github account (called <code>amelia-student</code>) I got a new repository called <code>hw1viz-amelia-student</code>.</p>
+<p>This is analogous to “forking” a repository in standard Github. We’re making a copy, but just working on the website of Github</p>
+</div>
+<div id="copy-the-git-url" class="section level2">
+<h2>Copy the git URL</h2>
+<p>Our next big goal is to get the code from Github into our RStudio. But, this takes a couple steps. The first one is to copy the URL to your repository.</p>
+<p>Click the “Clone or Download” button, and then copy the URL there. Make sure it says “Clone with HTTPS” at the top.</p>
+<div class="figure">
+<img src="img/03_CopyURL.png" alt="Copy URL" />
+<p class="caption">Copy URL</p>
+</div>
+</div>
+<div id="make-new-rstudio-project" class="section level2">
+<h2>Make new RStudio Project</h2>
+<p>Go to your <a href="rstudio.cloud" class="uri">rstudio.cloud</a>, and within our STAT360 workspace, click the dropdown next to New Project and selct “New Project from Git Repo”</p>
+<div class="figure">
+<img src="img/04_NewRStudioProj.png" alt="Make new RStudio project" />
+<p class="caption">Make new RStudio project</p>
+</div>
+<p>In the pop-up window, paste the URL of the git repostory that you copied in the previous step</p>
+<div class="figure">
+<img src="img/05_PasteURL.png" alt="Paste URL" />
+<p class="caption">Paste URL</p>
+</div>
+<p>RStudio will ask you to enter your Github username and password. Enter those, and be patient as RStudio generates a new project.</p>
+<div class="figure">
+<img src="img/06_EnterCredentials.png" alt="Enter Github credentials" />
+<p class="caption">Enter Github credentials</p>
+</div>
+<p>Don’t try to edit the name of the project yet, as that will make the import from Github fail. Another way it fails is if you enter your Github username and/or password incorrectly. This is a fragile point in the process! If it doesn’t work, go back to the STAT360 workspace and try making a new project again.</p>
+</div>
+<div id="introduce-yourself-to-git" class="section level2">
+<h2>Introduce yourself to git</h2>
+<p>Perhaps the most annoying part of this process is that you have to (re)introduce yourself to git <em>every time you make a new project.</em> I <a href="https://community.rstudio.com/t/introducing-yourself-to-git-in-rstudio-cloud/24959">asked RStudio</a>, and that’s really what you have to do.</p>
+<p>To introduce yourself to git, open the Terminal (the tab next to the Console)</p>
+<div class="figure">
+<img src="img/07_IntroduceYourself.png" alt="Introduce yourself to git" />
+<p class="caption">Introduce yourself to git</p>
+</div>
+<p>In that window, type each of these statements, one at a time, and then hit Enter.</p>
+<p><code>git config --global user.name 'Jane Doe'</code></p>
+<p><code>git config --global user.email 'jane@example.com'</code></p>
+<p><code>git config --global credential.helper 'cache --timeout 3600'</code></p>
+<p><code>git config --global --list</code></p>
+<p>Remember to write your name where it says Jane Doe, and your email address where it says <code>jane@example.com</code>. The cache timeout stuff will make RStudio remember your Github username/password for an hour.</p>
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://www.amelia.mn">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
