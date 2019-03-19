@@ -11,7 +11,7 @@
 
 
 
-<title>Github-first workflow</title>
+<title>Final project</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -267,6 +270,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -348,77 +446,28 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Github-first workflow</h1>
+<h1 class="title toc-ignore">Final project</h1>
 
 </div>
 
-<div id="TOC">
+
+<p>For your final project, you must work together in a group of 4-5 to produce a substantive product in R. What “substantive product” means can vary, but I expect most projects will be:</p>
+<div id="an-r-package" class="section level3">
+<h3>An R package</h3>
+<p>This is what I envisioned as the final project for this course when I was developing it. An R package is just a group of functions, data, and documentation that can be easily installed. R packages that make it to <a href="https://cran.r-project.org/">CRAN</a> need to be “serious” and useful to more people than just you. But, there are many, many R packages that don’t live on CRAN. For example, <a href="https://github.com/search?l=&amp;q=filename%3ANAMESPACE+language%3AR&amp;type=Repositories">many packages live on Github</a>. That’s the sort that I’m envisioning. Some broad ideas of types of packages you might want to contemplate:</p>
 <ul>
-<li><a href="#click-on-assignment-link">Click on assignment link</a></li>
-<li><a href="#copy-the-git-url">Copy the git URL</a></li>
-<li><a href="#make-new-rstudio-project">Make new RStudio Project</a></li>
-<li><a href="#introduce-yourself-to-git">Introduce yourself to git</a></li>
+<li>a package that is mostly about sharing interesting data with people who might want to use it, like the fivethirtyeight package</li>
+<li>a package that is mostly about packaging up some data analysis you have done, like a <a href="https://peerj.com/preprints/3192/">research compendium</a></li>
 </ul>
+<p>Of course, you could also think of a new statistical idea that needs to be implemented as an R package and do that, but I think that’s probably outside the scope of the class.</p>
 </div>
-
-<div id="click-on-assignment-link" class="section level2">
-<h2>Click on assignment link</h2>
-<p>The first step to get code I’m providing to you is to click on the link to the Github Classroom “assignment.” (Maybe <a href="https://classroom.github.com/classrooms/44240876-stat360-advanced-statistical-software">this link</a> will take you to our classroom? Otherwise, click on the link I’ve provided for a particular assignment.)</p>
-<p>Github may ask you to authorize Github classroom, you should click Authorize github to allow access.</p>
-<div class="figure">
-<img src="img/01_AuthorizeGithub.png" alt="Authorize Classroom" />
-<p class="caption">Authorize Classroom</p>
+<div id="a-shiny-app" class="section level3">
+<h3>A shiny app</h3>
+<p>Another possibility for a substantive product made using R is a <a href="https://shiny.rstudio.com/">shiny app</a>. Shiny apps are reactive web applications made using R code. They get used in business quite frequently, because they make it easy to generate a dashboard. For this type of project, you would probably do some cool data analysis with an interactive component. You may want to look through the <a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">gallery of examples</a> to get some idea of what Shiny apps can do.</p>
 </div>
-<p>Then, you need to accept the assignment,</p>
-<div class="figure">
-<img src="img/02_AcceptAssignment.png" alt="Accept assignment" />
-<p class="caption">Accept assignment</p>
-</div>
-<p>doing this makes a copy of my code into a new Github repository with a similar name, but your Github username appended. For example, our first assignment was called <code>hw1viz</code>, and when I used my student Github account (called <code>amelia-student</code>) I got a new repository called <code>hw1viz-amelia-student</code>.</p>
-<p>This is analogous to “forking” a repository in standard Github. We’re making a copy, but just working on the website of Github</p>
-</div>
-<div id="copy-the-git-url" class="section level2">
-<h2>Copy the git URL</h2>
-<p>Our next big goal is to get the code from Github into our RStudio. But, this takes a couple steps. The first one is to copy the URL to your repository.</p>
-<p>Click the “Clone or Download” button, and then copy the URL there. Make sure it says “Clone with HTTPS” at the top.</p>
-<div class="figure">
-<img src="img/03_CopyURL.png" alt="Copy URL" />
-<p class="caption">Copy URL</p>
-</div>
-</div>
-<div id="make-new-rstudio-project" class="section level2">
-<h2>Make new RStudio Project</h2>
-<p>Go to your <a href="rstudio.cloud" class="uri">rstudio.cloud</a>, and within our STAT360 workspace, click the dropdown next to New Project and selct “New Project from Git Repo”</p>
-<div class="figure">
-<img src="img/04_NewRStudioProj.png" alt="Make new RStudio project" />
-<p class="caption">Make new RStudio project</p>
-</div>
-<p>In the pop-up window, paste the URL of the git repostory that you copied in the previous step</p>
-<div class="figure">
-<img src="img/05_PasteURL.png" alt="Paste URL" />
-<p class="caption">Paste URL</p>
-</div>
-<p>RStudio will ask you to enter your Github username and password. Enter those, and be patient as RStudio generates a new project.</p>
-<div class="figure">
-<img src="img/06_EnterCredentials.png" alt="Enter Github credentials" />
-<p class="caption">Enter Github credentials</p>
-</div>
-<p>Don’t try to edit the name of the project yet, as that will make the import from Github fail. Another way it fails is if you enter your Github username and/or password incorrectly. This is a fragile point in the process! If it doesn’t work, go back to the STAT360 workspace and try making a new project again.</p>
-</div>
-<div id="introduce-yourself-to-git" class="section level2">
-<h2>Introduce yourself to git</h2>
-<p>Perhaps the most annoying part of this process is that you have to (re)introduce yourself to git <em>every time you make a new project.</em> I <a href="https://community.rstudio.com/t/introducing-yourself-to-git-in-rstudio-cloud/24959">asked RStudio</a>, and that’s really what you have to do.</p>
-<p>To introduce yourself to git, open the Terminal (the tab next to the Console)</p>
-<div class="figure">
-<img src="img/07_IntroduceYourself.png" alt="Introduce yourself to git" />
-<p class="caption">Introduce yourself to git</p>
-</div>
-<p>In that window, type each of these statements, one at a time, and then hit Enter.</p>
-<p><code>git config --global user.name 'Jane Doe'</code></p>
-<p><code>git config --global user.email 'jane@example.com'</code></p>
-<p><code>git config --global credential.helper 'cache --timeout 3600'</code></p>
-<p><code>git config --global --list</code></p>
-<p>Remember to write your name where it says Jane Doe, and your email address where it says <code>jane@example.com</code>. The cache timeout stuff will make RStudio remember your Github username/password for an hour.</p>
+<div id="something-else" class="section level3">
+<h3>Something else??</h3>
+<p>I suppose it’s possible there are additional possibilities for final projects. If you have a brilliant idea, talk to me!</p>
 </div>
 
     <div id="footer">
@@ -428,6 +477,8 @@ $(document).ready(function () {
     </div>
 
 
+</div>
+</div>
 
 </div>
 
