@@ -291,8 +291,26 @@ $(document).ready(function () {
 <li>
   <a href="schedule.html">Schedule</a>
 </li>
-<li>
-  <a href="assignments.html">Assignments</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://classroom.github.com/a/f_Ii8tyT">Homework 1: visualization</a>
+    </li>
+    <li>
+      <a href="https://classroom.github.com/g/5uxcrcBk">Group Assigment: comic characters</a>
+    </li>
+    <li>
+      <a href="tidyverse-quiz-guide.pdf">Tidyverse quiz study guide</a>
+    </li>
+    <li>
+      <a href="final_project.html">Final project</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -306,6 +324,12 @@ $(document).ready(function () {
     </li>
     <li>
       <a href="https://www.causeweb.org/usproc/USCLAP%20Competition">Undergraduate Statistics Project Competition</a>
+    </li>
+    <li>
+      <a href="github-first_workflow.html">Github-first workflow</a>
+    </li>
+    <li>
+      <a href="DataFestPoster2019.pdf">DataFest 2019</a>
     </li>
   </ul>
 </li>
@@ -338,6 +362,7 @@ $(document).ready(function () {
 <li>Kylie Ariel Bemis’s <a href="https://kuwisdelu.github.io/ds5110-fall18.html">DS 5110</a></li>
 <li>Jeff Boichuk’s <a href="https://docs.google.com/document/d/1vUF8nXaCyMwZcn0f2Yk8T3yRyJqzJe6K0eJbKI2bhSc/edit">GCOM 7140</a></li>
 <li>Heike Hofmann’s <a href="https://hofmann.public.iastate.edu/stat579/">stat579</a></li>
+<li>Mark Hansen’s <a href="http://www.stat.ucla.edu/~cocteau/stat202a/index.html">STAT 202a</a></li>
 </ul>
 <p>Also, as a reference to myself for the next time I teach this class, and perhaps helpful suggestions for you, here are some prep steps that I/you may want to do in advance of this class:</p>
 <div id="rstudio-cloud" class="section level4">
@@ -352,9 +377,14 @@ $(document).ready(function () {
 <div id="github" class="section level4">
 <h4>Github</h4>
 <ul>
-<li>Request a Github classroom account.</li>
-<li>Get your students to sign up for Github accounts, and send you their usernames.</li>
-<li>Add students to Github classroom</li>
+<li>Make a Github organization for your class. Mine is <a href="www.github.com/STAT360">github.com/STAT306</a>.</li>
+<li>Request a Github classroom account. (Maybe you don’t want this? Organizations do mmost of the heavy lifting. But, the rest of these instructions refer to using Classroom.)</li>
+<li>When your request is approved, associate your Classroom with your Organization.</li>
+<li>Make a first assignment for students. It sounds like the best thing to do is make the first assignment a group assignment, because this will help get the students in as members of the Organization. Using an individual assignment will add students as “Outside Contributors,” which can be frustrating later.</li>
+<li>Add a roster to your Github classroom. This means adding a list of student IDs, student names, or any other identifier. The Classroom folks told me there is a way to create groups for that first assignment using just the roster identifiers, even before your students have Github accounts.</li>
+<li>Get your students to sign up for Github accounts if they don’t already have one.</li>
+<li>Send the link to the assignment to your students. They will have to approve Classroom as an application with access to their Github account.</li>
+<li>If you’ve done it right, your students will now be members of your Github organization. If you did an individual assignment first (like I did), they will be outside contributors, and you will need to go through the tab on your Github organization and individually invite each student to join the organization. Then, make sure students accept your invitation (invites often end up in spam/junk mail). This step is necessary if you want to use groups <em>later</em> after not having used them initially.</li>
 </ul>
 </div>
 <div id="slack" class="section level4">

@@ -291,8 +291,26 @@ $(document).ready(function () {
 <li>
   <a href="schedule.html">Schedule</a>
 </li>
-<li>
-  <a href="assignments.html">Assignments</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://classroom.github.com/a/f_Ii8tyT">Homework 1: visualization</a>
+    </li>
+    <li>
+      <a href="https://classroom.github.com/g/5uxcrcBk">Group Assigment: comic characters</a>
+    </li>
+    <li>
+      <a href="tidyverse-quiz-guide.pdf">Tidyverse quiz study guide</a>
+    </li>
+    <li>
+      <a href="final_project.html">Final project</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -306,6 +324,12 @@ $(document).ready(function () {
     </li>
     <li>
       <a href="https://www.causeweb.org/usproc/USCLAP%20Competition">Undergraduate Statistics Project Competition</a>
+    </li>
+    <li>
+      <a href="github-first_workflow.html">Github-first workflow</a>
+    </li>
+    <li>
+      <a href="DataFestPoster2019.pdf">DataFest 2019</a>
     </li>
   </ul>
 </li>
@@ -384,49 +408,82 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">2/21</td>
-<td align="left"><a href="slides/MoreGitAndGithub.pdf">More git and Github</a></td>
+<td align="left"><a href="slides/04-MoreGitAndGithub.pdf">More git and Github</a></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">Reproducing <a href="https://fivethirtyeight.com/features/women-in-comic-books/">Comic Books Are Still Made By Men, For Men And About Men</a>, <a href="https://classroom.github.com/g/5uxcrcBk">assignment link</a></td>
 </tr>
 <tr class="odd">
 <td align="left">2/26</td>
-<td align="left"><a href="slides/05-Tidy.pdf">Tidy data</a></td>
-<td align="left"></td>
+<td align="left">A little <a href="slides/05-Tidy.pdf">tidy data</a>, and time to work</td>
+<td align="left"><a href="https://r4ds.had.co.nz/tidy-data.html">r4ds 12-13</a></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">2/28</td>
-<td align="left">More <a href="slides/05-Tidy.pdf">Tidy data</a></td>
+<td align="left">More <a href="slides/05-Tidy.pdf">tidy data</a>, a little time to work</td>
+<td align="left"><a href="https://r4ds.had.co.nz/tidy-data.html">r4ds 12-13</a></td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"><a href="https://classroom.github.com/a/H6jbEiea">tidy data “assignment”</a></td>
+</tr>
+<tr class="odd">
+<td align="left">3/5</td>
+<td align="left">Finish <a href="slides/05-Tidy.pdf">tidy data</a>, start talking about <a href="slides/06-Data-Types.pdf">special data types</a></td>
+<td align="left"><a href="https://r4ds.had.co.nz/strings.html">r4ds 14-16</a></td>
+<td align="left"><a href="https://www.rstudio.com/resources/cheatsheets/#stringr">stringr cheatsheet</a>, <a href="https://www.rstudio.com/resources/cheatsheets/#forcats">forcats cheatsheet</a>, <a href="https://www.rstudio.com/resources/cheatsheets/#lubridate">lubridate cheatsheet</a></td>
+</tr>
+<tr class="even">
+<td align="left">3/7</td>
+<td align="left">Finish <a href="slides/06-Data-Types.pdf">special data types</a></td>
+<td align="left"><a href="https://r4ds.had.co.nz/strings.html">r4ds 14-16</a></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">3/12</td>
+<td align="left"><a href="slides/07-ProgrammingInR.pdf">Intro to programming in R</a></td>
+<td align="left"><a href="https://r4ds.had.co.nz/program-intro.html">r4ds 17-21</a></td>
+<td align="left"><a href="07-DataTypes.Rmd">Corresponding RMarkdown document</a></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">3/14</td>
+<td align="left">Tidyverse quiz, <a href="slides/08-Functions.pdf">functions in R</a></td>
+<td align="left"></td>
+<td align="left"><a href="tidyverse-quiz-guide.pdf">quiz study guide</a></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">3/19</td>
+<td align="left">More functions, <a href="https://PollEv.com/surveys/QOOY6Gh3PVET1q3yBb1wL/web">midterm survey</a></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">3/21</td>
+<td align="left"><a href="slides/09-Tidyverse-Case-Study.pdf">Tidyverse case study</a>, a little time to work</td>
+<td align="left"></td>
+<td align="left"><a href="rmarkdown/09-Case-Study.Rmd">rmarkdown for case study</a></td>
+<td align="left"><a href="https://classroom.github.com/g/6P5m4hy2">final project proposal</a></td>
+</tr>
+<tr class="odd">
+<td align="left">4/2</td>
+<td align="left"><a href="slides/10-MoreFunctions.pdf">More functions</a></td>
+<td align="left"><a href="http://adv-r.had.co.nz/Functions.html">advR 5-6</a></td>
+<td align="left"><a href="img/learningAboutFunctions.R">learningAboutFunctions.R</a></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">4/4</td>
+<td align="left"><a href="slides/12-MoarFunctions.pdf">Moar functions</a></td>
+<td align="left"><a href="http://adv-r.had.co.nz/Functions.html">advR 5-6</a></td>
+<td align="left"></td>
+<td align="left"><a href="https://classroom.github.com/a/dHGAB1si">bootstrap function</a></td>
 </tr>
 </tbody>
 </table>
-<!--10/2 | |  [Visualizing two variables](06_filtering.pdf) ([data](https://docs.google.com/a/smith.edu/spreadsheets/d/1blEcuuc_L_g_q7fYZ3w7dScxFy_4f58rreQ4NsSHJuE/edit?usp=sharing)) |
-10/4 | [Color theory](07_color.pdf) |  | 
-10/9  |  **Autumn recess**      |  |
-10/11 | [Graphical perception](08_perception.pdf) | | 
-10/16 |  [Design principles](09_principles.pdf) | Mini-lab |  
-10/18 | [Artistic visualization](10_art.pdf) | Hand-drawn viz [data](https://docs.google.com/a/smith.edu/spreadsheets/d/1PnJ8_nmE827Vf-QtDaMC7r91oIYjC1C3ETDyJ1S0Dd8/edit?usp=sharing) |
-10/23 | Museum and special collections visit | |
-10/25 |  Museum and special collections visit | | 
-10/30 |  [Visualization of higher-dimensional data](11_multidimensional.pdf) | Pairs plots and 3D viz ([data](college.csv)) |
-11/1  | [Spatial data](12_spatial.pdf) | Maps ([data](who.csv)) |
-11/6  | [Visualizing uncertainty](13_uncertainty.pdf)  | |
-11/8  |  [Narrative](https://www.youtube.com/watch?v=PMtWFjjVM5E) (**No class**) | |
-11/13 | | **Final project workshop 1**  |
-11/15 | **Visualization in the wild presentations** | |
-11/20 | **Visualization in the wild presentations** | |
-11/22 | **Thanksgiving recess** | |
-11/27 | [Text Data](14_text.pdf)  | Text visualization |
-11/29 |[Interactivity, iteration, and animation](15_interactivity.pdf) | Interactivity |
-12/4  | [Weird visualizations](16_misc.pdf) |  |
-12/6  | **Final project workshop 2** |  [R](static/IntroToR_slides.html), (data: [atus](static/atus.csv), [PartD](static/PartD_Providers.csv)) |
-12/11 | What next? ||
-12/13 | **Project Presentations** || -->
 
     <div id="footer">
       <div class="container">

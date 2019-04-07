@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Schedule</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SDS 236 - Spring 2018</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="DataDiary.html">Data Diary</a>
+    </li>
+    <li>
+      <a href="Wikipedia.html">Wikipedia</a>
+    </li>
+    <li>
+      <a href="OneNumberStory.html">One-number story</a>
+    </li>
+    <li>
+      <a href="FOIAtheDead.html">FOIA the dead</a>
+    </li>
+    <li>
+      <a href="OneVariablePlot.html">One-variable visualization</a>
+    </li>
+    <li>
+      <a href="ScienceReporting.html">Science reporting</a>
+    </li>
+    <li>
+      <a href="FreeingData.html">Freeing data from PDFs</a>
+    </li>
+    <li>
+      <a href="StandardStory.html">Standard Story</a>
+    </li>
+    <li>
+      <a href="MakingMaps.html">Making maps</a>
+    </li>
+    <li>
+      <a href="https://ameliamn.shinyapps.io/Interactives/">Interactives</a>
+    </li>
+    <li>
+      <a href="FinalProject.html">Final project</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users">Getting started with Slack</a>
+    </li>
+    <li>
+      <a href="https://www.smith.edu/qlc/tutoring.html#D1">Data Assistants</a>
+    </li>
+    <li>
+      <a href="http://libguides.smith.edu/news">Finding News</a>
+    </li>
+    <li>
+      <a href="http://libguides.smith.edu/c.php?g=813426">Library guide for SDS 236</a>
+    </li>
+    <li>
+      <a href="https://www.significancemagazine.com/component/content/article/10-news/579-our-2018-writing-competition-for-early-career-statisticians-is-underway">Significance writing competition</a>
+    </li>
+    <li>
+      <a href="WritingTips.html">Writing tips</a>
+    </li>
+    <li>
+      <a href="https://www.tableau.com/learn/training">Tableau tutorials</a>
+    </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy git with R</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Schedule</h1>
+
+</div>
+
+
+<div class="past">
+<div class="row">
+<div class="col-md-6">
+
+</div>
+<div class="col-md-6">
+<h4 id="section">1/25</h4>
+<ul>
+<li>Introduction to the practice of data journalism</li>
+<li>Paper and pencil data collection on NYTimes</li>
+<li>What is newsworthy?</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-1">1/30</h4>
+<ul>
+<li>Wrapping up NYTimes data collection</li>
+<li>Discussing Chapter 1 of Numbers in the Newsroom</li>
+<li>Starting Wikipedia entry</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-2">2/1</h4>
+<ul>
+<li>No class</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-3">2/6</h4>
+<ul>
+<li>Zoom meeting</li>
+<li>Discuss the experience of writing a Wikipedia article</li>
+<li>Discussing Chapter 2 (beginning) of Numbers in the Newsroom</li>
+<li>Journalistic style/elements</li>
+<li>Beginning to interview a dataset (natural amenities score)</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-4">2/8</h4>
+<ul>
+<li>Zoom meeting</li>
+<li>Discuss <a href="https://archives.cjr.org/realtalk/the_art_of_the_interview.php">interviewing</a> versus <a href="http://rex-analytics.com/data-analysis-questions-to-ask-the-first-time/">starting a data analysis</a></li>
+<li>More interviewing the natural amenities score</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-5">2/13</h4>
+<ul>
+<li>More on journalistic structure</li>
+<li>Discuss experience of writing One Number Story. Was it hard? Easy? How was the length? How did you keep track of your work?</li>
+<li>Talk about ground rules for peer editing</li>
+<li>Discuss <a href="https://www.npr.org/2017/04/01/522284735/finding-fbi-files-of-the-dead">Finding FBI files of the dead</a></li>
+<li>Discuss <a href="https://www.theguardian.com/science/2014/mar/28/news-story-research-paper-wellcome-trust-science-writing-prize">How to write a science news story based on a research paper</a></li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-6">2/15</h4>
+<ul>
+<li>FOIA the dead</li>
+<li>Science writing</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-7">2/20</h4>
+<ul>
+<li>Data visualization</li>
+<li><a href="L1-tableau.pdf">Introduction to Tableau</a></li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-8">2/22</h4>
+<ul>
+<li>Discussion of one-number story</li>
+<li><a href="WritingTips.html">Writing Tips</a></li>
+<li>More on data visualization</li>
+<li>Time to work in groups for <a href="ScienceReporting.html">Science Reporting</a></li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-9">2/27</h4>
+<ul>
+<li>More on data visualization</li>
+<li>What makes something data journalism?</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-10">3/1</h4>
+<ul>
+<li>Pulling data from PDFs using Tabula</li>
+<li>Research tips from the library</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-11">3/6</h4>
+<ul>
+<li>Standard stories</li>
+<li>Standardizing data and writing a data dictionary</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-12">3/8</h4>
+<ul>
+<li>Standard stories</li>
+<li><a href="https://www.muckrock.com/news/archives/2016/sep/02/college-journalists-guide-public-records/">Story ideas</a></li>
+<li>git and GitHub: fork, clone</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<h3 id="spring-break">Spring break</h3>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-13">3/20</h4>
+<ul>
+<li>Visit to the Smith Archives</li>
+<li>Presentation of the SDS major, Ford 240</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-14">3/22</h4>
+<ul>
+<li>OpenRefine</li>
+<li>More git and GitHub: fetching upstream</li>
+<li>Working with survey data</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-15">3/27</h4>
+<ul>
+<li>Final story idea brainstorming</li>
+<li>Intro to R</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-16">3/29</h4>
+<ul>
+<li>Survey data</li>
+<li>More R</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-17">4/3</h4>
+<ul>
+<li>Taking a step back</li>
+<li>What is journalism?</li>
+<li>What is data journalism?</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-18">4/5</h4>
+<ul>
+<li>Sentence workshopping</li>
+<li>Mapping in R</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-19">4/10</h4>
+<ul>
+<li>More mapping</li>
+<li>Algorithms</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-20">4/12</h4>
+<ul>
+<li>Algorithms</li>
+</ul>
+</div>
+</div>
+</div>
+<p><!-- end past --></p>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-21">4/17</h4>
+<ul>
+<li>Timelines</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-22">4/19</h4>
+<ul>
+<li>Rachel Schutt visiting class</li>
+<li><strong>Extra credit opportunity</strong> Rachel Schutt’s talk, A Humanistic Approach to Data Science. 5 pm in Stoddard G2.</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-23">4/24</h4>
+<ul>
+<li>Interactivity</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-24">4/26</h4>
+<ul>
+<li>Interactivity</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<h4 id="section-25">5/1</h4>
+<ul>
+<li>Final workshop?</li>
+</ul>
+</div>
+<div class="col-md-6">
+<h4 id="section-26">5/3</h4>
+<ul>
+<li>Present final work</li>
+</ul>
+</div>
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

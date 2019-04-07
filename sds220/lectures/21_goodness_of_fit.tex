@@ -121,14 +121,20 @@ The \href{https://www.census.gov/prod/2003pubs/c2kbr-30.pdf}{US Census Bureau} r
 
 We can encode these percentages as a vector in \R:
 
-\begin{knitrout}
+\begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{us} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"Divorced"} \hlstd{=} \hlnum{0.097}\hlstd{,} \hlstr{"Married"} \hlstd{=} \hlnum{0.543}\hlstd{,} \hlstr{"Never married/single"} \hlstd{=} \hlnum{0.271}\hlstd{,}
-        \hlstr{"Separated"} \hlstd{=} \hlnum{0.022}\hlstd{,} \hlstr{"Widowed"} \hlstd{=} \hlnum{0.066}\hlstd{)}
+\hlstd{us} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"Divorced"} \hlstd{=} \hlnum{0.097}\hlstd{,} \hlstr{"Married"} \hlstd{=} \hlnum{0.543}\hlstd{,} \hlstr{"Never married/single"} \hlstd{=} \hlnum{0.271}\hlstd{,}  \hlstr{"Separated"} \hlstd{=} \hlnum{0.022}\hlstd{,} \hlstr{"Widowed"} \hlstd{=} \hlnum{0.066}\hlstd{)}
 \hlcom{# normalize to make sure proportions sum to 1}
 \hlstd{us} \hlkwb{<-} \hlstd{us} \hlopt{/} \hlkwd{sum}\hlstd{(us)}
+\hlstd{us}
 \end{alltt}
+\begin{verbatim}
+##             Divorced              Married Never married/single 
+##           0.09709710           0.54354354           0.27127127 
+##            Separated              Widowed 
+##           0.02202202           0.06606607
+\end{verbatim}
 \end{kframe}
 \end{knitrout}
 
@@ -171,7 +177,7 @@ where $k$ is the number of different outcomes (which in this case is 5). As alwa
 \hlstd{marital_summary} \hlkwb{<-} \hlstd{marital_summary} \hlopt{%>%}
   \hlkwd{mutate}\hlstd{(}\hlkwc{status_exp} \hlstd{= marital_status_us} \hlopt{*} \hlstd{n)}
 \hlstd{X2_hat} \hlkwb{<-} \hlstd{marital_summary} \hlopt{%>%}
-  \hlkwd{summarize}\hlstd{(}\hlkwc{X2} \hlstd{=} \hlkwd{sum}\hlstd{((status_obs} \hlopt{-} \hlstd{status_exp)}\hlopt{^}\hlnum{2} \hlopt{/} \hlstd{status_exp))} \hlopt{%>%} \hlkwd{unlist}\hlstd{()}
+  \hlkwd{summarize}\hlstd{(}\hlkwc{X2} \hlstd{=} \hlkwd{sum}\hlstd{(((status_obs} \hlopt{-} \hlstd{status_exp)}\hlopt{^}\hlnum{2}\hlstd{)} \hlopt{/} \hlstd{status_exp))} \hlopt{%>%} \hlkwd{unlist}\hlstd{()}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -295,7 +301,6 @@ Once again, the condition that the expected count for each category is at least 
 
 \end{knitrout}
 
-\newpage
 
 \paragraph{In-Class Exercise, OI, 3.40}
 

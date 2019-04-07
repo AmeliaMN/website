@@ -26,7 +26,7 @@ title: 'Resources'
     + Packages you should install: `mosaic`, `knitr`, `markdown`
     + [Quick R](http://www.statmethods.net/)
     + [R Tutorial](http://www.r-tutor.com/)
-    + Interactive tutorials via [swirl](http://swirlstats.com/students.html), [DataCamp](https://www.datacamp.com/)
+    + Interactive tutorials via [swirl](http://swirlstats.com/students.html)
     + Nick Horton's videos [introducing RStudio at Amherst](http://www3.amherst.edu/~nhorton/rstudio/)
     
 * Using `R` with the `mosaic` package 

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Syllabus</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SDS 136 - Fall 2017</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="assignments.html">Assignments</a>
+    </li>
+    <li>
+      <a href="FinalProjectExamples.html">Final Project Examples</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users">Getting started with Slack</a>
+    </li>
+    <li>
+      <a href="https://help.plot.ly/tutorials/">Plotly documentation</a>
+    </li>
+    <li>
+      <a href="https://community.plot.ly/">Plotly community help center</a>
+    </li>
+    <li>
+      <a href="https://www.causeweb.org/usproc/USCLAP%20Competition">Undergraduate Statistics Project Competition</a>
+    </li>
+    <li>
+      <a href="https://www.smith.edu/qlc/tutoring.html#D1">Data Assistants</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Syllabus</h1>
+
+</div>
+
+
+<div id="about-the-course" class="section level2 smith">
+<h2>About the Course</h2>
+<div id="instructor" class="section level4">
+<h4>Instructor</h4>
+<p>Amelia McNamara (<code>amcnamara@smith.edu</code>, McConnell 211) Student hours: Mondays from 3:00-4:30, Thursdays from 10:30-12:00, and by appointment, in McConnell 211.</p>
+</div>
+<div id="description" class="section level4">
+<h4>Description</h4>
+<p>The world is growing increasingly reliant on collecting and analyzing information to help people make decisions. Because of this, the ability to communicate effectively about data is an important component of future job prospects across nearly all disciplines. In this course, students will learn the foundations of information visualization and sharpen their skills in communicating using data. Throughout the semester, we will explore concepts in decision-making, human perception, color theory, and storytelling as they apply to data-driven communication. Whether you’re an aspiring data scientist or you just want to learn new ways of presenting information, this course will help you build a strong foundation in how to talk to people about data.</p>
+<p><strong>Prerequisite</strong>: None.</p>
+</div>
+</div>
+<div id="assignments" class="section level2 unnumbered">
+<h2>Assignments</h2>
+<ol style="list-style-type: decimal">
+<li><p>Assignments [40%]: Assignments will take the form of short visualization exercises and responses to course readings. Most assignments will be posted on <a href="https://sds136.slack.com/signup">Slack</a>.</p></li>
+<li><p>Labs [30%]: Labs will primarily take place in the open-source data visualization software <a href="plot.ly">Plotly</a>. Students are encouraged to work in pairs during these labs.</p></li>
+<li><p>Final Project [20%]: The final project will see you applying what you have learned to a dataset of your choice. There will be several (graded) milestones along the way to help you prepare, and we will hold a demonstration session on the final day of class.</p></li>
+<li><p>Class participation [10%]: Classes meet Monday and Wednesday in Stoddard G2. Your participation is an important part of the learning process. Active participation in class and regular attendance will comprise the remainder of your grade.</p></li>
+</ol>
+<div id="academic-honor-code-statement" class="section level4">
+<h4>Academic Honor Code Statement</h4>
+<p>All students, staff and faculty are bound by the Smith College Honor Code, which Smith established in 1944.</p>
+<blockquote>
+<p>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.</p>
+</blockquote>
+<p>Cases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.</p>
+</div>
+</div>
+<div id="resources" class="section level2 unnumbered">
+<h2>Resources</h2>
+<div id="course-website-and-other-technology" class="section level4">
+<h4>Course website and other technology</h4>
+<p>The <a href="https://smithcollege-sds.github.io/136/">course website</a> will be regularly updated with lecture handouts, project information, assignments, and other course resources. Course discussion will take place on <a href="https://sds136.slack.com/signup">Slack</a>. Labs will be completed using <a href="https://plot.ly">Plotly</a>.</p>
+</div>
+<div id="accomodation" class="section level4">
+<h4>Accomodation</h4>
+<p>Smith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the Disability Services Office at the beginning of the semester. To do so, call (413) 585-2071 to arrange an appointment with Laura Rauscher, Director of Disability Services.</p>
+</div>
+<div id="schedule" class="section level4">
+<h4>Schedule</h4>
+<p>Please refer to the <a href="schedule.html">day-to-day schedule</a> for complete details.</p>
+</div>
+<div id="acknowledgement" class="section level4">
+<h4>Acknowledgement</h4>
+<p>Some of the materials used in this course are derived from lectures, notes, or similar courses taught elsewhere. Appropriate references will be included on all such material. Particular thanks to Jordan Crouser and Mark Hansen for their materials and inspiration.</p>
+</div>
+</div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 ```{r global-options, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE)
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(oilabs)
 ```
 
@@ -25,7 +26,8 @@ companion package for OpenIntro labs, `oilabs`.
 Let's load the packages.
 
 ```{r load-packages, message=FALSE}
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(oilabs)
 ```
 
@@ -219,11 +221,6 @@ Note that we can separate the conditions using commas if we want flights that
 are both headed to SFO **and** in February. If we are interested in either
 flights headed to SFO **or** in February we can use the `|` instead of the comma.
 
-```{r}
-sfo_and_feb <- nyflights %>%
-  filter(dest == "SFO" | month == 2)
-```
-
 1.  Create a new data frame that includes flights headed to SFO in February, 
     and save this data frame as `sfo_feb_flights`. How many flights 
     meet these criteria? 
@@ -328,12 +325,11 @@ nycflights %>%
 1.  If you were selecting an airport simply based on on time departure 
     percentage, which NYC airport would you choose to fly out of?
 
-We could also visualize the relationship between departure time and 
-arrival delay, coloring by whether the departure was delayed or not using 
-a scatterplot. 
+We can also visualize the distribution of on on time departure rate across 
+the three airports using a segmented bar plot.
 
 ```{r}
-qplot(x=dep_time, y=arr_delay, color=dep_type, data=nycflights, geom="point")
+qplot(x = origin, fill = dep_type, data = nycflights, geom = "bar")
 ```
 
 * * *
@@ -355,4 +351,8 @@ qplot(x=dep_time, y=arr_delay, color=dep_type, data=nycflights, geom="point")
     the plot, determine (roughly) what the cutoff point is for departure
     delays where you can still expect to get to your destination on time.
 
-![](DepDelay.jpeg)
+```{r echo=FALSE, eval=TRUE, fig.width=7, fig.height=4}
+dl_aa_ua <- nycflights %>%
+  filter(carrier == "AA" | carrier == "DL" | carrier == "UA")
+qplot(x = dep_delay, y = arr_delay, data = dl_aa_ua, color = carrier)
+```

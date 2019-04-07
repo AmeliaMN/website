@@ -94,33 +94,43 @@
 \newcommand{\R}{{\sf R}\xspace}
 \newcommand{\cmd}[1]{\texttt{#1}}
 
-\rhead{\textsc{February 24, 2017}}
+\rhead{\textsc{October 6, 2017}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
 \paragraph{Agenda}
 \begin{enumerate}
   \itemsep0em
-  \item Exam 1 Recap
+  \item Project groups due today
   \item Randomization test recap
-  \item Hypothesis Testing
+  \item Hypothesis testing
 \end{enumerate}
 
 % \paragraph{Exam 1 Recap}
 % The average was 84.6. I am implementing a bootstrap incentive. The threshold for this exam is 80. If you scored below the threshold, your score on \emph{this exam} will be retroactively raised to 80 if you score above the threshold on either of the remaining exams.  
 
+
 \paragraph{Randomization test recap}
 
-Recall the randomized simulation that we performed in the last class. Our goal was to assess the likelihood that exposure to mites was associated, \emph{to a statistically significant} degree, with a decrease in wilt disease after exposure to Verticillium, a fungus that causes wilt disease. 
+In the last class, we designed a simulation to help us answer the question of whether exposure to mites was associated, \emph{to a statistically significant} degree, with a decrease in wilt disease after exposure to Verticillium, a fungus that causes wilt disease. 
 
+Most of us used the `no-wilt-mites' cell in the table as our test statistic. But there are other statistics we might have been interested in. Particularly, we might be interested in the difference in the proportion of plants that wilted between the mites and the no mites groups. To answer this question, we might
+\begin{enumerate}
+\item Count out 19 black cards (no wilt) and 28 red cards (wilt)
+\item Shuffle
+\item Deal into two piles: 26 (mites) and 21 (no mites)
+\item Calculate the proportions of wilt (red cards) for each pile, then finally, the difference in proportions. Record your simulation and do steps 1-4 a bunch more times!
+\end{enumerate}
+
+\paragraph{Questions}
 \begin{enumerate}
   \itemsep0.75in
-  \item What was the \emph{null hypothesis} for your simulation?
-  \item What was the \emph{test statistic}?
-  \item Where did the test statistic lie in the \emph{null distribution}? 
-  \item Did this evidence cause you to \emph{reject} or \emph{fail to reject} the null hypothesis?
-  \item Write \emph{one} sentence to Oprah Winfrey summarizing what you've learned about mites and wilt disease.  
-  \ans
+  \item What is the \emph{null hypothesis} for this simulation?
+  \item What is the \emph{test statistic}?
+  \item Where does the test statistic lie in the \emph{null distribution}?
+  \item Does this evidence cause you to \emph{reject} or \emph{fail to reject} the null hypothesis?
+  \item Write \emph{one} sentence summarizing what you've learned about mites and wilt disease.  
+  \vspace{0.5in}
 \end{enumerate}
 
 \begin{knitrout}\footnotesize
@@ -135,46 +145,61 @@ Recall the randomized simulation that we performed in the last class. Our goal w
 ##   no wilt    15        4
 ##   wilt       11       17
 \end{verbatim}
+\begin{alltt}
+\hlkwd{tally}\hlstd{(outcome} \hlopt{~} \hlstd{treatment,} \hlkwc{data} \hlstd{= Mites,} \hlkwc{format} \hlstd{=} \hlstr{"proportion"}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+##          treatment
+## outcome       mites  no mites
+##   no wilt 0.5769231 0.1904762
+##   wilt    0.4230769 0.8095238
+\end{verbatim}
 \end{kframe}
 \end{knitrout}
 
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlstd{null_dist} \hlkwb{<-} \hlkwd{do}\hlstd{(}\hlnum{5000}\hlstd{)} \hlopt{*} \hlkwd{tally}\hlstd{(}\hlopt{~} \hlstd{outcome} \hlopt{+} \hlkwd{shuffle}\hlstd{(treatment),} \hlkwc{data} \hlstd{= Mites)}
-\hlstd{ds} \hlkwb{<-} \hlstd{tidyr}\hlopt{::}\hlkwd{gather}\hlstd{(null_dist,} \hlkwc{key} \hlstd{= type,} \hlkwc{value} \hlstd{= N)}
-\hlkwd{qplot}\hlstd{(}\hlkwc{data} \hlstd{= ds,} \hlkwc{x} \hlstd{= N,} \hlkwc{facets} \hlstd{=} \hlopt{~}\hlstd{type,} \hlkwc{binwidth} \hlstd{=} \hlnum{1}\hlstd{)}
+\hlstd{tbl} \hlkwb{<-} \hlkwd{tally}\hlstd{(outcome} \hlopt{~} \hlstd{treatment,} \hlkwc{data} \hlstd{= Mites,} \hlkwc{format} \hlstd{=} \hlstr{"proportion"}\hlstd{)}
+\hlstd{diff_prop} \hlkwb{<-} \hlstd{tbl[}\hlnum{2}\hlstd{,}\hlnum{2}\hlstd{]} \hlopt{-} \hlstd{tbl[}\hlnum{2}\hlstd{,}\hlnum{1}\hlstd{]}
+\hlstd{diff_prop}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.3864469
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{null_dist} \hlkwb{<-} \hlkwd{do}\hlstd{(}\hlnum{5000}\hlstd{)} \hlopt{*} \hlkwd{tally}\hlstd{(outcome} \hlopt{~} \hlkwd{shuffle}\hlstd{(treatment),} \hlkwc{data} \hlstd{= Mites)}
+\hlstd{null_dist} \hlkwb{<-} \hlstd{null_dist} \hlopt{%>%}
+\hlkwd{mutate}\hlstd{(}\hlkwc{prop_wilt_nomites} \hlstd{= wilt.no.mites}\hlopt{/}\hlstd{(wilt.no.mites}\hlopt{+}\hlstd{no.wilt.no.mites))} \hlopt{%>%}
+\hlkwd{mutate}\hlstd{(}\hlkwc{prop_wilt_mites} \hlstd{= wilt.mites}\hlopt{/}\hlstd{(wilt.mites}\hlopt{+}\hlstd{no.wilt.mites))} \hlopt{%>%}
+\hlkwd{mutate}\hlstd{(}\hlkwc{diff_prop} \hlstd{= prop_wilt_nomites} \hlopt{-} \hlstd{prop_wilt_mites)}
+\hlkwd{ggplot}\hlstd{(}\hlkwc{data} \hlstd{= null_dist,} \hlkwd{aes}\hlstd{(diff_prop))} \hlopt{+}
+\hlkwd{geom_histogram}\hlstd{(}\hlkwc{bins} \hlstd{=} \hlnum{10}\hlstd{)}
 \end{alltt}
 \end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-2-1} 
-\begin{kframe}\begin{alltt}
-\hlnum{2} \hlopt{*} \hlkwd{pdata}\hlstd{(}\hlopt{~}\hlstd{N,} \hlkwc{q} \hlstd{=} \hlnum{11}\hlstd{,} \hlkwc{data} \hlstd{=} \hlkwd{filter}\hlstd{(ds, type} \hlopt{==} \hlstr{"wilt.mites"}\hlstd{))}
-\end{alltt}
-\begin{verbatim}
-## [1] 0.0128
-\end{verbatim}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-3-1} 
+
+\end{knitrout}
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlnum{2} \hlopt{*} \hlkwd{pdata}\hlstd{(}\hlopt{~}\hlstd{N,} \hlkwc{q} \hlstd{=} \hlnum{17}\hlstd{,} \hlkwc{data} \hlstd{=} \hlkwd{filter}\hlstd{(ds, type} \hlopt{==} \hlstr{"wilt.no.mites"}\hlstd{),} \hlkwc{lower.tail} \hlstd{=} \hlnum{FALSE}\hlstd{)}
+\hlnum{2} \hlopt{*} \hlkwd{pdata}\hlstd{(}\hlopt{~}\hlstd{diff_prop,} \hlkwc{q}\hlstd{=}\hlnum{.3864}\hlstd{,} \hlkwc{data}\hlstd{=null_dist,} \hlkwc{lower.tail}\hlstd{=}\hlnum{FALSE}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
-## [1] 0.0028
-\end{verbatim}
-\begin{alltt}
-\hlnum{2} \hlopt{*} \hlkwd{pdata}\hlstd{(}\hlopt{~}\hlstd{N,} \hlkwc{q} \hlstd{=} \hlnum{15}\hlstd{,} \hlkwc{data} \hlstd{=} \hlkwd{filter}\hlstd{(ds, type} \hlopt{==} \hlstr{"no.wilt.mites"}\hlstd{),} \hlkwc{lower.tail} \hlstd{=} \hlnum{FALSE}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## [1] 0.0028
-\end{verbatim}
-\begin{alltt}
-\hlnum{2} \hlopt{*} \hlkwd{pdata}\hlstd{(}\hlopt{~}\hlstd{N,} \hlkwc{q} \hlstd{=} \hlnum{4}\hlstd{,} \hlkwc{data} \hlstd{=} \hlkwd{filter}\hlstd{(ds, type} \hlopt{==} \hlstr{"no.wilt.no.mites"}\hlstd{))}
-\end{alltt}
-\begin{verbatim}
-## [1] 0.0128
+## [1] 0.0156
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
 
+
+\clearpage
 \paragraph{What's Wrong?}
 
 % MMC, 7e, 6.50, 6.51, page 378

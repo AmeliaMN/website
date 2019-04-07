@@ -148,7 +148,7 @@ picked with replacement)?
 \end{alltt}
 \begin{verbatim}
 ##   mean(event_yes)
-## 1            0.08
+## 1            0.04
 \end{verbatim}
 \begin{alltt}
 \hlstd{true_prob} \hlkwb{<-} \hlkwd{dbinom}\hlstd{(}\hlnum{3}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{.3}\hlstd{)} \hlopt{+} \hlkwd{dbinom}\hlstd{(}\hlnum{4}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{.3}\hlstd{)}
@@ -263,7 +263,7 @@ Extra Credit: Provide a mathematical solution to the above problem.
 
 
 
-  
+%' 
 %' \newpage
 %' 
 %' \subsection*{Instructor's Notes}
@@ -371,41 +371,41 @@ Extra Credit: Provide a mathematical solution to the above problem.
 %'   ggtitle(paste("Number of Flips =", n))
 %' @
 %' 
-  
-  % \paragraph{Probability}
-  % 
-  % Let $A, B$ be any two events in a sample space $S$.
-  % 
-  % \begin{enumerate}
-  %   \item $0 \leq \Pr(A) \leq 1$: That is, every event occurs with a probability between 0 and 1.
-  %   \item $\Pr(S) = 1$: That is, \emph{something} in the sample space has to happen.
-  %   \item If $A$ and $B$ are disjoint, then they have no outcomes in common, and so
-  %   $$
-  %     \Pr(A \text{ or } B) \equiv \Pr( A \vee B) = \Pr(A) + \Pr(B) \, .
-  %   $$
-  %   Note that this is \emph{not} true if $A$ and $B$ are not disjoint.
-  %   \item This is a special case of the General Addition Rule (or Inclusion-Exclusion Principle):
-  %   $$
-  %     \Pr(A \text{ or } B) \equiv \Pr( A \vee B) = \Pr(A) + \Pr(B) + \Pr(A \wedge B)\, .
-  %   $$
-  %   \item $\Pr(A^c) \equiv \Pr (\bar{A}) = 1 - \Pr(A)$: That is, the probability of $A$ not happening is 1 minus the probability of $A$ happening.
-  %   \item Independence: If $A$ and $B$ are independent, then
-  %   $$
-  %     \Pr(A \text{ and } B) \equiv \Pr(A \wedge B) \equiv \Pr(AB) = \Pr(A) \cdot \Pr(B) \, .
-  %   $$
-  %   Note that independence and disjointness are the \emph{not} the same. In fact, disjointness precludes independence (since you cannot have both!).
-  % \end{enumerate}
-  % 
-  % \paragraph{Examples}
-  % Consider the roll of a fair die.
-  %   \begin{itemize}
-  %     \item The sample space is $S = \{1,2,3,4,5,6\}$.
-  %     \item $E = \{2,4,6\}$, the event that the outcome is even.
-  %     \item $\Pr(E) = 1/2$
-  %     \item $\Pr(prime) = 1/2$
-  %     \item $\Pr(\text{even or prime}) =  1/2 + 1/2 - 1/6 = 5/6$
-  %     \item $\Pr(\text{even and prime}) = 1/6$
-  %   \end{itemize}
+%' 
+%' \paragraph{Probability}
+%' 
+%' Let $A, B$ be any two events in a sample space $S$.
+%' 
+%' \begin{enumerate}
+%'   \item $0 \leq \Pr(A) \leq 1$: That is, every event occurs with a probability between 0 and 1.
+%'   \item $\Pr(S) = 1$: That is, \emph{something} in the sample space has to happen.
+%'   \item If $A$ and $B$ are disjoint, then they have no outcomes in common, and so
+%'   $$
+%'     \Pr(A \text{ or } B) \equiv \Pr( A \vee B) = \Pr(A) + \Pr(B) \, .
+%'   $$
+%'   Note that this is \emph{not} true if $A$ and $B$ are not disjoint.
+%'   \item This is a special case of the General Addition Rule (or Inclusion-Exclusion Principle):
+%'   $$
+%'     \Pr(A \text{ or } B) \equiv \Pr( A \vee B) = \Pr(A) + \Pr(B) + \Pr(A \wedge B)\, .
+%'   $$
+%'   \item $\Pr(A^c) \equiv \Pr (\bar{A}) = 1 - \Pr(A)$: That is, the probability of $A$ not happening is 1 minus the probability of $A$ happening.
+%'   \item Independence: If $A$ and $B$ are independent, then
+%'   $$
+%'     \Pr(A \text{ and } B) \equiv \Pr(A \wedge B) \equiv \Pr(AB) = \Pr(A) \cdot \Pr(B) \, .
+%'   $$
+%'   Note that independence and disjointness are the \emph{not} the same. In fact, disjointness precludes independence (since you cannot have both!).
+%' \end{enumerate}
+%' 
+%' \paragraph{Examples}
+%' Consider the roll of a fair die.
+%'   \begin{itemize}
+%'     \item The sample space is $S = \{1,2,3,4,5,6\}$.
+%'     \item $E = \{2,4,6\}$, the event that the outcome is even.
+%'     \item $\Pr(E) = 1/2$
+%'     \item $\Pr(prime) = 1/2$
+%'     \item $\Pr(\text{even or prime}) =  1/2 + 1/2 - 1/6 = 5/6$
+%'     \item $\Pr(\text{even and prime}) = 1/6$
+%'   \end{itemize}
 
 
 

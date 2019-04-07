@@ -95,7 +95,7 @@
 \newcommand{\cmd}[1]{\texttt{#1}}
 \newcommand{\Ex}{\mathbb{E}}
 
-\rhead{\textsc{November 13, 2017}}
+\rhead{\textsc{April 10, 2017}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -112,13 +112,11 @@ An investigator is interested in understanding the relationship, if any, between
 For 25 of the 36 children, the child's mother's IQ was higher than that of the father. Find a 95\% confidence interval for the true proportion of gifted children whose mothers have higher IQs than their fathers. 
 
 
-\vspace{1.2in}
+\vspace{2in}
 
 \paragraph{Inference for a Mean}
 
 We know how to make inferences about the value of a population proportion $p$, for a binary variable. The critical step was to construct an approximation of the sampling distribution of the sample proportion, $\hat{p}$. What if the the variable that we want to make inferences about is \emph{numerical}? In this case we need to approximate the sampling distribution of the sample mean, $\bar{x}$. How can we do this?
-
-\vspace{1in}
 
 \paragraph{Gifted Children's scores}
 
@@ -131,15 +129,13 @@ Use the information presented below to construct a 95\% confidence interval for 
 \hlkwd{require}\hlstd{(mosaic)}
 \hlkwd{favstats}\hlstd{(}\hlopt{~}\hlstd{score,} \hlkwc{data} \hlstd{= gifted)}
 \end{alltt}
-\begin{verbatim}
-##  min  Q1 median  Q3 max     mean       sd  n missing
-##  150 155    159 162 169 159.1389 4.630043 36       0
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in favstats(\textasciitilde{}score, data = gifted): object 'gifted' not found}}\end{kframe}
 \end{knitrout}
 
 \begin{enumerate}
-  \itemsep1in
+  \itemsep1.2in
   \item Compute the standard error of the mean.
 %  \item Compute the $t$-statistic.
   \item Find the appropriate critical value in the appropriate $t$-distribution. [Use the \cmd{qt} function in \R.]
@@ -152,25 +148,6 @@ Use the information presented below to construct a 95\% confidence interval for 
 \paragraph{Inference for Paired Data: Gifted Children's Parents}
 
 Since in this data set, the IQ of both parents is recorded for all children, the IQ data is naturally paired. 
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlkwd{favstats}\hlstd{(}\hlopt{~}\hlstd{motheriq,} \hlkwc{data} \hlstd{= gifted)}
-\end{alltt}
-\begin{verbatim}
-##  min     Q1 median     Q3 max     mean       sd  n missing
-##  101 113.75    118 122.25 131 118.1667 6.504943 36       0
-\end{verbatim}
-\begin{alltt}
-\hlkwd{favstats}\hlstd{(}\hlopt{~}\hlstd{fatheriq,} \hlkwc{data} \hlstd{= gifted)}
-\end{alltt}
-\begin{verbatim}
-##  min  Q1 median     Q3 max     mean      sd  n missing
-##  110 112    115 116.25 126 114.7778 3.48147 36       0
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
 
 \begin{enumerate}
   \itemsep1.5in

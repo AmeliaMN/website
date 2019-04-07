@@ -9,14 +9,14 @@ output:
 ---
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
-require(knitr)
+library(knitr)
 opts_chunk$set(eval=TRUE)
 ```
 
 ```{r, message=FALSE}
-require(mosaic)
-require(mosaicData)
-require(lmtest)
+library(mosaic)
+library(mosaicData)
+library(lmtest)
 cols = trellis.par.get()$superpose.symbol$col
 ```
 
@@ -115,7 +115,7 @@ Note that even if our model had no predictive power, it would still be right abo
 
 ```{r}
 X = data.frame(a = runif(10000), b = runif(10000))
-require(Hmisc)
+library(Hmisc)
 rcorrcens(a~b, data=X)
 ```
 

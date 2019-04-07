@@ -117,19 +117,31 @@ Here is the regression output for using $Biological$ IQ to predict $Foster$ IQ:
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hlstd{(mosaic)}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'dplyr' was built under R version 3.4.1}}\begin{alltt}
 \hlkwd{library}\hlstd{(faraway)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in library(faraway): there is no package called 'faraway'}}\begin{alltt}
 \hlstd{m1} \hlkwb{<-} \hlkwd{lm}\hlstd{(Foster} \hlopt{~} \hlstd{Biological,} \hlkwc{data} \hlstd{= twins)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in is.data.frame(data): object 'twins' not found}}\begin{alltt}
 \hlkwd{coef}\hlstd{(m1)}
 \end{alltt}
-\begin{verbatim}
-## (Intercept)  Biological 
-##    9.207599    0.901436
-\end{verbatim}
-\begin{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in coef(m1): object 'm1' not found}}\begin{alltt}
 \hlkwd{rsquared}\hlstd{(m1)}
 \end{alltt}
-\begin{verbatim}
-## [1] 0.7779022
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in summary(x, ...): restarting interrupted promise evaluation}}\begin{verbatim}
+## NULL
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -158,18 +170,20 @@ Here is the regression output for using $Biological$ IQ to predict $Foster$ IQ:
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hlstd{(openintro)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in library(openintro): there is no package called 'openintro'}}\begin{alltt}
 \hlkwd{qplot}\hlstd{(}\hlkwc{data} \hlstd{= bdims,} \hlkwc{x} \hlstd{= hgt,} \hlkwc{y} \hlstd{= wgt,} \hlkwc{xlab} \hlstd{=} \hlstr{"Height (cm)"}\hlstd{,} \hlkwc{ylab} \hlstd{=} \hlstr{"Weight (kg)"}\hlstd{)}
 \end{alltt}
-\end{kframe}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-2-1} 
-\begin{kframe}\begin{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in ggplot(data, aesthetics, environment = env): object 'bdims' not found}}\begin{alltt}
 \hlkwd{coef}\hlstd{(}\hlkwd{lm}\hlstd{(wgt} \hlopt{~} \hlstd{hgt,} \hlkwc{data} \hlstd{= bdims))}
 \end{alltt}
-\begin{verbatim}
-## (Intercept)         hgt 
-## -105.011254    1.017617
-\end{verbatim}
-\end{kframe}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in is.data.frame(data): object 'bdims' not found}}\end{kframe}
 \end{knitrout}
  
 \begin{enumerate}
@@ -204,7 +218,6 @@ Recall our Rail Trail data example, and suppose that instead of using temperatur
   \item How many riders does the model expect on a weekend? 
   \item What if it's a weekend and it's 80 degrees out?
   \item Draw a scatterplot of the data and indicate this model graphically.
-  \vspace{1in}
   \item \emph{Estimate} the $R^2$ for this model. Is it greater or less than the $R^2$ for the model with temperature as an explanatory variable?
 \end{enumerate}
 

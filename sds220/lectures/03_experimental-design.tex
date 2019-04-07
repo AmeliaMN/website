@@ -119,12 +119,12 @@
 \end{alltt}
 \begin{verbatim}
 ##      staff     wage
-## 1 women-ft 23.93226
-## 2 women-ft 26.16794
-## 3 women-ft 24.32665
-## 4 women-ft 24.98453
-## 5 women-ft 24.82832
-## 6 women-ft 24.98034
+## 1 women-ft 24.24287
+## 2 women-ft 25.49924
+## 3 women-ft 25.73812
+## 4 women-ft 25.80283
+## 5 women-ft 26.09438
+## 6 women-ft 26.54672
 \end{verbatim}
 \begin{alltt}
 \hlkwd{nrow}\hlstd{(ds)}
@@ -141,6 +141,10 @@ Note that wages are similar \emph{within} the four groups, but dissimilar \emph{
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{require}\hlstd{(mosaic)}
+\end{alltt}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'dplyr' was built under R version 3.4.1}}\begin{alltt}
 \hlkwd{qplot}\hlstd{(}\hlkwc{x} \hlstd{= wage,} \hlkwc{color} \hlstd{= staff,} \hlkwc{geom} \hlstd{=} \hlstr{"density"}\hlstd{,} \hlkwc{data} \hlstd{= ds)}
 \end{alltt}
 \end{kframe}
@@ -161,7 +165,7 @@ We want to estimate the mean wage among all 180 workers. In this case, since we 
 \hlkwd{mean}\hlstd{(}\hlopt{~}\hlstd{wage,} \hlkwc{data} \hlstd{= ds)}
 \end{alltt}
 \begin{verbatim}
-## [1] 20.34711
+## [1] 20.36328
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -175,7 +179,7 @@ But recall that for the purposes of this exercise, we don't actually know all 18
 \hlkwd{mean}\hlstd{(}\hlopt{~}\hlstd{wage,} \hlkwc{data} \hlstd{=} \hlkwd{sample}\hlstd{(ds,} \hlnum{40}\hlstd{))}
 \end{alltt}
 \begin{verbatim}
-## [1] 20.15235
+## [1] 20.00752
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -197,7 +201,7 @@ Now let's implement the \emph{stratified sampling} scheme.
 \hlkwd{mean}\hlstd{(}\hlopt{~}\hlstd{wage,} \hlkwc{data} \hlstd{= strat_samp)}
 \end{alltt}
 \begin{verbatim}
-## [1] 20.21956
+## [1] 20.3993
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
