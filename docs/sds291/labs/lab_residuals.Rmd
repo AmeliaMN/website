@@ -1,5 +1,7 @@
-```{r, echo=FALSE}
+```{r setup, echo=FALSE}
 library(knitr)
+library(ggplot2)
+library(dplyr)
 opts_chunk$set(message=FALSE)
 ```
 
@@ -24,7 +26,7 @@ ds = data.frame(y = beta0 + beta1 * x + e)
 
 Now, we can look at the relationship and check the conditions. 
 ```{r}
-ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, SE=false)
+ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, se=FALSE)
 mod = lm(y ~ x, data=ds)
 plot(mod, which=1)
 plot(mod, which=2)
@@ -38,7 +40,7 @@ ds = data.frame(y = beta0 + beta1 * x + 15*x^2 + e)
 ```
 
 ```{r}
-ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, SE=false)
+ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, se=FALSE)
 mod = lm(y ~ x, data=ds)
 plot(mod, which=1)
 plot(mod, which=2)
@@ -53,7 +55,7 @@ ds = data.frame(y = beta0 + beta1 * x + e*x)
 ```
 
 ```{r}
-ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, SE=false)
+ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, se=FALSE)
 mod = lm(y ~ x, data=ds)
 plot(mod, which=1)
 plot(mod, which=2)
@@ -68,7 +70,7 @@ ds = data.frame(y = beta0 + beta1 * x + rbeta(n, shape1 = 2, shape2 = 5))
 ```
 
 ```{r}
-ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, SE=false)
+ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, se=FALSE)
 mod = lm(y ~ x, data=ds)
 plot(mod, which=1)
 plot(mod, which=2)
@@ -90,11 +92,11 @@ ds = data.frame(x = rnorm(n))
 ds = ds %>%
   mutate(y = 10 + 3 * x + rnorm(n))
 
-ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, SE=false)
-mod = lm(y ~ x, data=ds)
+ggplot(ds, aes(x=x, y=y)) + geom_point() + stat_smooth(method=lm, se=FALSE)
+mod1 = lm(y ~ x, data=ds)
 plot(mod1, which=1)
 plot(mod1, which=2)
-ggplot(ds, aes(x=mod$residuals)) + geom_histogram()
+ggplot(ds, aes(x=mod1$residuals)) + geom_histogram()
 ```
 
 Run this chunk several times, with several different choices of $n$. What do you notice?

@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -20,8 +20,8 @@
 <script src="lib/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="lib/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="lib/navigation-1.1/tabsets.js"></script>
-<link href="lib/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="lib/highlightjs-1.1/highlight.js"></script>
+<link href="lib/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="lib/highlightjs-9.12.0/highlight.js"></script>
 <style type="text/css">
 
 /* padding for bootstrap navbar */
@@ -65,10 +65,12 @@ body {
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -124,8 +126,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -134,14 +142,74 @@ button.code-folding-btn:focus {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -362,17 +430,6 @@ collegedata &lt;- read_csv(&quot;~/collegedata.csv&quot;)</code></pre>
 <div id="structure-and-names" class="section level2">
 <h2>Structure and names</h2>
 <pre class="r"><code>str(collegedata)</code></pre>
-<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    81 obs. of  10 variables:
-##  $                             : int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ rank                        : int  1 2 3 4 4 4 7 8 9 10 ...
-##  $ score                       : int  100 99 97 95 95 95 93 92 91 90 ...
-##  $ name                        : chr  &quot;Princeton University&quot; &quot;Harvard University&quot; &quot;Yale University&quot; &quot;Columbia University&quot; ...
-##  $ location                    : chr  &quot;Princeton, NJ&quot; &quot;Cambridge, MA&quot; &quot;New Haven, CT&quot; &quot;New York, NY&quot; ...
-##  $ tuitionAndFees              : chr  &quot;$43,450&quot; &quot;$45,278&quot; &quot;$47,600&quot; &quot;$51,008&quot; ...
-##  $ totalEnrollment             : int  8088 19929 12336 24221 16795 12558 11319 15856 21296 2209 ...
-##  $ fall2013AcceptanceRate      : num  0.074 0.06 0.063 0.07 0.051 0.088 0.079 0.114 0.104 0.088 ...
-##  $ averageFreshmanRetentionRate: num  0.98 0.97 0.99 0.99 0.98 0.99 0.98 0.97 0.98 0.97 ...
-##  $ sixYearGraduationRate       : num  0.97 0.98 0.96 0.96 0.95 0.93 0.91 0.95 0.96 0.92 ...</code></pre>
 <p>There are 10 variables in the data, and 81 observations. The variables are:</p>
 <ul>
 <li>an unnamed variable that seems to just be row numbers</li>
@@ -391,12 +448,8 @@ collegedata &lt;- read_csv(&quot;~/collegedata.csv&quot;)</code></pre>
 <div id="variable-analysis" class="section level2">
 <h2>Variable analysis</h2>
 <pre class="r"><code>favstats(~rank, data=collegedata)</code></pre>
-<pre><code>##  min Q1 median Q3 max     mean       sd  n missing
-##    1 21     41 61  75 39.85185 22.90366 81       0</code></pre>
 <p>Minimum rank is 1, max is 75, no missing data. This all makes sense.</p>
 <pre class="r"><code>favstats(~score, data=collegedata)</code></pre>
-<pre><code>##  min Q1 median Q3 max     mean       sd  n missing
-##   49 55     61 76 100 67.12346 14.91424 81       0</code></pre>
 <p>Minimum is 49 (need to look in to what this means) maximum is 100 (makes sense!). No missing data.</p>
 <pre class="r"><code>tally(~name, data=collegedata)</code></pre>
 <p>Tried this and it is just a bunch of 1s and school names.</p>
@@ -439,7 +492,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
