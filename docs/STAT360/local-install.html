@@ -376,16 +376,17 @@ $(document).ready(function () {
 <div id="install-rstudio" class="section level2">
 <h2>Install RStudio</h2>
 <p>The desktop version of RStudio is free, but it can be a little tricky to see on their site. Go to <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a> and select RStudio desktop, then your operating system.</p>
+<p>Note! If you have a slightly-older Mac OS, the new version of RStudio desktop may not be compatible. In that case, go to <a href="https://support.rstudio.com/hc/en-us/articles/206569407-Older-Versions-of-RStudio">older versions of RStudio</a> and pick the relevant version. My (older) laptop has El Capitan, so I can use the most recent (older) version, 1.1.463.</p>
 <div class="figure">
 <img src="img/02_InstallRStudio.png" alt="Install RStudio" />
 <p class="caption">Install RStudio</p>
 </div>
-<p>If you want to be fancy, you could download the <a href="https://www.rstudio.com/products/rstudio/download/preview/">preview version of RStudio</a>, which usually has additional features but isn’t as fully tested.</p>
+<p>If you want to be fancy, you could download the <a href="https://www.rstudio.com/products/rstudio/download/preview/">preview version of RStudio</a>, which usually has additional features but isn’t as fully tested. Again, this won’t work on slightly older computers.</p>
 </div>
 <div id="install-packages" class="section level2">
 <h2>Install packages</h2>
 <p>Once you have R and RStudio, you can launch RStudio and use it like normally! But, you won’t have any packages. You can use the <code>install.packages()</code> function to install packages. Here are some you may want to install</p>
-<pre class="r"><code>install.packages(c(&quot;babynames&quot;, &quot;fivethirtyeight&quot;, &quot;formatR&quot;, &quot;gapminder&quot;, &quot;hexbin&quot;, &quot;mgcv&quot;, &quot;maps&quot;, &quot;mapproj&quot;, &quot;nycflights13&quot;, &quot;rmarkdown&quot;, &quot;skimr&quot;, &quot;tidyverse&quot;, &quot;viridis&quot;))</code></pre>
+<pre class="r"><code>install.packages(c(&quot;babynames&quot;, &quot;fivethirtyeight&quot;, &quot;formatR&quot;, &quot;gapminder&quot;, &quot;hexbin&quot;, &quot;mgcv&quot;, &quot;maps&quot;, &quot;mapproj&quot;, &quot;nycflights13&quot;, &quot;rmarkdown&quot;, &quot;skimr&quot;, &quot;tidyverse&quot;, &quot;viridis&quot;, &quot;rgdal&quot;, &quot;sf&quot;, ))</code></pre>
 </div>
 <div id="install-git" class="section level2">
 <h2>Install git</h2>

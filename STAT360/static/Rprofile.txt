@@ -1,0 +1,55 @@
+# An .Rprofile file helps keep you lazy (or undistracted) by setting 
+# options every time R starts.
+# - to open *your* .Rprofile file, usethis::edit_r_profile()
+# - please make sure that your .Rprofile file ends with a newline, 
+#   or R will ignore it
+# - some things you want to run all the time, others only when you are
+#   running R interactively
+# - this is a minimal file, you will likely want to add your own "stuff"
+#
+# More information: https://whattheyforgot.org/r-startup.html#rprofile
+#
+
+# The .First() function can be useful because if you create variables, 
+# they "stay" in your function, and do not "pollute" your global 
+# environment.
+#
+.First <- function() {
+
+  # options are used to help define how R "interacts with the world"
+  # - where to install packages from?
+  # - how to sign emails?
+  # - which protocol to use with GitHub?
+  #
+  options(
+    # where does R look when you install.packages()?
+    repos = c(
+      # redirects to "best" among worldwide servers, sponsored by RStudio
+      CRAN = "https://cloud.r-project.org/"
+    ),
+    # if you submit a package to CRAN using devtools, 
+    # it will send an email on your behalf
+    # - this the name it uses to sign the email
+    devtools.name = "Amelia McNamara",
+    # when you create a package using usethis::create_package(), this 
+    # is used to populate the Author field in the DESCRIPTION file
+    # - an ORCID can be useful, but it is not mandatory: https://orcid.org/
+    usethis.description = list(
+      `Authors@R` = 'person("Amelia A", "McNamara", 
+                            email = "amelia.mcnamara@stthomas.edu", 
+                            role = c("aut", "cre"))'
+    ),
+    # depends on your situation to choose ssh or https:
+    # - https a useful default
+    # - if you also use GitHub Enterprise, ssh can be useful
+    usethis.protocol = "https"
+  )
+}
+
+if (interactive()) {
+  # will load these packages automatically in interactive sessions
+  suppressMessages(require("devtools"))
+  suppressMessages(require("usethis"))
+  suppressMessages(require("testthat"))
+  suppressMessages(require("reprex"))
+}
