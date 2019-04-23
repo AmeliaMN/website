@@ -1,0 +1,4 @@
+1. What type of code goes into the ui object?
+2. What type of code goes into the server object?
+3. Describe the correspondence between HTML tags and shiny functions
+4. Where can you put code to have it run just once, when you launch your app?
