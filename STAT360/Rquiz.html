@@ -11,7 +11,7 @@
 
 
 
-<title>References for faculty</title>
+<title>R programming quiz</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -354,62 +354,69 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">References for faculty</h1>
+<h1 class="title toc-ignore">R programming quiz</h1>
 
 </div>
 
 
-<p>This course has been inspired by a variety of other materials, many of which I discovered through <a href="https://twitter.com/AmeliaMN/status/1062837460353331204">soliciting suggestions on twitter</a>. If you are considering teaching a similar class, you are of course welcome to use my materials with attribution.</p>
-<p>Wherever I use others’ materials, I attempt to attribute them. However, as a blanket statement (and an additional resource), here are some of the courses I consulted while developing my syllabus:</p>
+<div id="quiz-topics" class="section level2">
+<h2>Quiz topics</h2>
+<ol style="list-style-type: decimal">
+<li><p>Errors and where they come from</p>
+<ol style="list-style-type: lower-alpha">
+<li>haven’t imported package/library</li>
+</ol>
+<pre class="r"><code>mtcars %&gt;%
+  summarize(mean(mpg))</code></pre>
+<pre><code>## Error in mtcars %&gt;% summarize(mean(mpg)): could not find function &quot;%&gt;%&quot;</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>haven’t installed package/library</li>
+</ol>
+<pre class="r"><code>library(skimr)</code></pre>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>argument missing</li>
+</ol>
+<pre class="r"><code>cor(y = mtcars$mpg)</code></pre>
+<pre><code>## Error in is.data.frame(x): argument &quot;x&quot; is missing, with no default</code></pre>
+<pre><code>provide argument
+add default to function</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>filepath wrong</li>
+</ol>
+<pre class="r"><code>read_csv(&quot;amcnamara/Documents/projects/cooldata.csv&quot;)</code></pre>
+<pre><code>## Error: &#39;amcnamara/Documents/projects/cooldata.csv&#39; does not exist in current working directory (&#39;/Users/amcnamara/STAT360/www&#39;).</code></pre>
 <ul>
-<li>RStudio’s <a href="https://github.com/rstudio-education/master-the-tidyverse">Master the tidyverse</a> and Data Science in the Tidyverse by <a href="https://github.com/cwickham/data-science-in-tidyverse">Charlotte Wickham</a> and <a href="https://github.com/ameliamn/data-science-in-tidyverse">me</a></li>
-<li>My <a href="https://github.com/AmeliaMN/IntroToR">intro to R workshop</a></li>
-<li>Jo Hardin’s <a href="https://research.pomona.edu/johardin/math154f17/">MATH 154: Computational Statistics</a></li>
-<li>Colin Rundel’s <a href="https://www2.stat.duke.edu/~cr173/Sta323_Sp18/">Sta 323</a></li>
-<li>Stephanie Hicks and Roger Peng’s <a href="https://jhu-advdatasci.github.io/2018/">Advanced Data Science</a></li>
-<li>Kylie Ariel Bemis’s <a href="https://kuwisdelu.github.io/ds5110-fall18.html">DS 5110</a></li>
-<li>Jeff Boichuk’s <a href="https://docs.google.com/document/d/1vUF8nXaCyMwZcn0f2Yk8T3yRyJqzJe6K0eJbKI2bhSc/edit">GCOM 7140</a></li>
-<li>Heike Hofmann’s <a href="https://hofmann.public.iastate.edu/stat579/">stat579</a></li>
-<li>Mark Hansen’s <a href="http://www.stat.ucla.edu/~cocteau/stat202a/index.html">STAT 202a</a></li>
-</ul>
-<p>Also, as a reference to myself for the next time I teach this class, and perhaps helpful suggestions for you, here are some prep steps that I/you may want to do in advance of this class:</p>
-<div id="rstudio-cloud" class="section level4">
-<h4>RStudio Cloud</h4>
+<li>(use <code>getwd()</code> or <code>here()</code> to debug)</li>
+</ul></li>
+<li>Function programming
+<ol style="list-style-type: lower-alpha">
+<li>what the parts of a function are</li>
+</ol>
 <ul>
-<li>Make sure your RStudio cloud account can support many members in a workspace. This may require clicking a button to request an account status change, or contacting RStudio support. In my case, because I have a paid shinyapps.io account, I already had this ability.</li>
-<li>Set up your RStudio cloud workspace. You want a workspace for your class, and you should make and set a base repository. This is where you install all the packages you want to have in each subsequent project.</li>
-<li>Either add all your students to the workspace as collaborators (annoying, because there’s no way to enter multiple email addresses at once), or allow anyone with a link to register. If you choose this second option, you’ll want to <strong>turn off</strong> that capability after a day or so.</li>
-<li>Generate at least one project within your RStudio cloud workspace. Make sure you make it available to everyone in your workspace (click the lock icon). You’ll probably want to select “Make Assignment” so that when students click on it, they get a derived workspace, which you can get into to help troubleshoot code.</li>
-<li>You don’t want to be using RStudio Cloud when you get to package development, because <code>usethis</code> isn’t designed to deal with Cloud Projects. Get students to install locally first.</li>
+<li>body</li>
+<li>formal arguments</li>
 </ul>
-</div>
-<div id="github" class="section level4">
-<h4>Github</h4>
-<ul>
-<li>Make a Github organization for your class. Mine is <a href="www.github.com/STAT360">github.com/STAT306</a>.</li>
-<li>Request a Github classroom account. (Maybe you don’t want this? Organizations do mmost of the heavy lifting. But, the rest of these instructions refer to using Classroom.)</li>
-<li>When your request is approved, associate your Classroom with your Organization.</li>
-<li>Make a first assignment for students. It sounds like the best thing to do is make the first assignment a group assignment, because this will help get the students in as members of the Organization. Using an individual assignment will add students as “Outside Contributors,” which can be frustrating later.</li>
-<li>Add a roster to your Github classroom. This means adding a list of student IDs, student names, or any other identifier. The Classroom folks told me there is a way to create groups for that first assignment using just the roster identifiers, even before your students have Github accounts.</li>
-<li>Get your students to sign up for Github accounts if they don’t already have one.</li>
-<li>Send the link to the assignment to your students. They will have to approve Classroom as an application with access to their Github account.</li>
-<li>If you’ve done it right, your students will now be members of your Github organization. If you did an individual assignment first (like I did), they will be outside contributors, and you will need to go through the tab on your Github organization and individually invite each student to join the organization. Then, make sure students accept your invitation (invites often end up in spam/junk mail). This step is necessary if you want to use groups <em>later</em> after not having used them initially.</li>
-</ul>
-</div>
-<div id="slack" class="section level4">
-<h4>Slack</h4>
-<ul>
-<li>Set up a slack workspace</li>
-<li>Add a picture, channels, channel descriptions</li>
-<li>Invite your students via email address, or set it up so that anyone with an email address from your school can register. Again, if you choose this second option, <strong>turn off</strong> that capability after a bit.</li>
-</ul>
-</div>
-<div id="misc" class="section level4">
-<h4>Misc</h4>
-<ul>
-<li>Need to start having students turn in “Your Turn” exercises earlier</li>
-<li>Should push the initial visualization assignment off a little later</li>
-</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><code>stop()</code> function</li>
+<li>control structures (<code>for</code> loops– generate from memory)</li>
+</ol></li>
+<li>Getting the code from functions
+<ol style="list-style-type: lower-alpha">
+<li>by writing the name of the function and hitting enter</li>
+<li>generics… might need a dot or might need three colons (<code>:::</code>) for unexported functions</li>
+</ol></li>
+<li>Environments and search paths
+<ol style="list-style-type: lower-alpha">
+<li>What’s first in my search path– <code>.Globalenv</code></li>
+<li>What’s second in my search path (after <code>.Globalenv</code>): the most recently loaded package</li>
+<li>double colon to specify a version of a function. To specify the <code>dplyr</code> version of <code>filter</code>, we use <code>dplyr::filter</code></li>
+</ol></li>
+<li>Accessing parts of objects
+<ol style="list-style-type: lower-alpha">
+<li>Accessing a variable <code>df$variablename</code></li>
+<li>In s4 objects, using <code>@</code> to get at slots. If I want a variable from the data in the data slot, <code>df@data$variablename</code></li>
+</ol></li>
+</ol>
 </div>
 
     <div id="footer">
