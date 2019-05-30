@@ -1,0 +1,6 @@
+1. What type of code goes into the ui object?
+2. What type of code goes into the server object?
+3. Describe the correspondence between HTML tags and shiny functions
+4. Where can you put code to have it run just once, when you launch your app?
+5. What is reactivity in shiny? What does it accomplish for you?
+6. What is your current working directory? Please use code to show me in your Rmd. 
