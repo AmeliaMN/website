@@ -24,7 +24,7 @@ Better than that, you can fold them up in your suitcase and they don't wrinkle (
 
 Okay, so how do you do it? [This post](http://ascb.org/how-to-print-a-fabric-poster/) is fantastic, and it's where I learned how to print a fabric poster. For whatever reason, that link keeps changing, so I'll summarize the main points:
 
-* use the website [spoonflower.com](www.spoonflower.com)
+* use the website [spoonflower.com](http://www.spoonflower.com)
 * choose the "performance knit" fabric, which should cost around $25
 * upload your poster **as a png** (ignore at your peril!)
 * make sure it looks right, and order!
