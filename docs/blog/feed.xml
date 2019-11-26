@@ -7,6 +7,86 @@
 		<atom:link href="https://www.amelia.mn/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Key Attributes of a Modern Statistical Computing Tool</title>
+				<description>&lt;p&gt;A few weeks ago, I &lt;a href=&quot;https://twitter.com/AmeliaMN/status/1191464296779255814?s=20&quot;&gt;tweeted&lt;/a&gt; that the first paper to come out of my dissertation was published. I got my PhD in 2015, and it’s now 2019. That means I’ve been thinking about this work for more than four years (in fact, it’s probably closer to seven!).&lt;/p&gt;
+
+&lt;p&gt;If you want to read the paper, it’s &lt;a href=&quot;https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1482784&quot;&gt;now published&lt;/a&gt; in Volume 73, Issue 4 of The American Statistician. I was given 100 free e-prints, which are available until they run out &lt;a href=&quot;https://www.tandfonline.com/eprint/WNRYZCHGUMCEUIEC9C9X/full?target=10.1080/00031305.2018.1482784&quot;&gt;here&lt;/a&gt;. A pre-print of this paper is also available on &lt;a href=&quot;https://arxiv.org/abs/1610.00985&quot;&gt;the arXiv&lt;/a&gt; if you want a non-paywalled version.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I am so delighted to finally have this thing I have been thinking about since 2012 finally off my mental list and into the real world!&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;&quot;&gt;&lt;img src=&quot;https://www.amelia.mn/img/KeyAttributes.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;The print version of this paper!&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some of the story of how this paper came to be is written into &lt;a href=&quot;https://escholarship.org/uc/item/1mm9303x&quot;&gt;my dissertation&lt;/a&gt;, but I thought I would summarize it briefly here.&lt;/p&gt;
+
+&lt;p&gt;Essentially, as a graduate student I had the opportunity to run some professional development (PD) for high school teachers to help them develop their R skills. The PD was about a week long, and it was for the &lt;a href=&quot;http://www.exploringcs.org/&quot;&gt;Exploring Computer Science&lt;/a&gt; (ECS) curriculum. Over the course of the week, I managed to prove myself to the PIs of the grant (particularly &lt;a href=&quot;https://gseis.ucla.edu/directory/jane-margolis/&quot;&gt;Jane Margolis&lt;/a&gt;) because of my ability to communicate with both technical folks and tech-phobic people. The ECS team immediately found some hours for me to continue work with them, and then I was quickly incorporated into the next grant the team developed– Mobilize. The Mobilize project had some big goals, including developing data science technology and curriculum for the high school level, running PD, research and evaluation of our products, changing educational policy at the national and state level, and more.&lt;/p&gt;
+
+&lt;p&gt;Over the course of the next three years, I ran hundreds of hours of professional development for teachers, mostly teaching them technical skills to support data science curriculum, but also some basic statistical concepts. This was extremely difficult task, because many teachers had never taken a statistics course (or if they had, it was years before), or programmed in any language. Over the course of the grant, we iterated on a number of tools. In order, we tried:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;base R, with the standard R GUI&lt;/li&gt;
+  &lt;li&gt;Deducer&lt;/li&gt;
+  &lt;li&gt;formula syntax R, through an RStudio server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The experience of iterating through tools and attempting to teach them to novices gave me a lot of perspective on what makes a good tool for someone who is just starting out. Since then, I’ve taught R in many other contexts (in undergraduate college courses, at conference workshops for biostatisticians, data journalists, and generally for data practitioners).&lt;/p&gt;
+
+&lt;p&gt;In parallel to my experience starting to teach R and other technical tools, as a graduate student I had the time and opportunity to read hundreds of papers. This allowed me to think deeply about concepts from human-computer interaction, user experience design, and programming language design, and how these concepts interact with ideas of statistical computing. If you look at the references of &lt;a href=&quot;https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1482784&quot;&gt;my recent paper&lt;/a&gt;, I think it’s clear this paper came from a dissertation, because it has almost 100 references. The two most influential pieces to my dissertation (and this derived work) were&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amstat.tandfonline.com/doi/abs/10.1080/00031305.1965.10479711#.XdA6_pNKjBI&quot;&gt;The Technical Tools of Statistics&lt;/a&gt;, by John Tukey (1965)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://iase-web.org/documents/intstatreview/97.Biehler.pdf&quot;&gt;Software for Learning and for Doing Statistics&lt;/a&gt;, by Rolf Biehler (1997)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Both of these papers lay out idealized attributes of statistical tools, and by clearly articulating the way tools should work in the future, they were able to manifest that future. (As &lt;a href=&quot;http://amturing.acm.org/award_winners/kay_3972189.cfm&quot;&gt;Alan Kay&lt;/a&gt; &lt;a href=&quot;https://quoteinvestigator.com/2012/09/27/invent-the-future/&quot;&gt;says&lt;/a&gt;, “the best way to predict the future is to create it.”)&lt;/p&gt;
+
+&lt;p&gt;In Tukey’s case, his paper clearly influenced his own software work (e.g., &lt;a href=&quot;https://www.youtube.com/watch?v=B7XoW2qiFUA&quot;&gt;prim9&lt;/a&gt;, a tool for visualizing high-dimensional data from the 1970s, which you interacted with using a light pen), as well as tools like S, S-Plus, and R.&lt;/p&gt;
+
+&lt;p&gt;Biehler’s paper laid the groundwork for &lt;a href=&quot;https://www.tinkerplots.com/&quot;&gt;TinkerPlots&lt;/a&gt; and &lt;a href=&quot;https://fathom.concord.org/&quot;&gt;Fathom&lt;/a&gt;, two tools for teaching statistics that allowed learners to directly interact with their data and build intuition about statistics. Sadly, both TinkerPlots and Fathom are now mostly defunct, although The Concord Consortium is working on a next-generation tool called &lt;a href=&quot;https://codap.concord.org/&quot;&gt;CODAP&lt;/a&gt;, the Common Online Data Analysis Platform (full disclosure, I have consulted with The Concord Consortium).&lt;/p&gt;
+
+&lt;p&gt;I found these papers influential, and I saw an opportunity to reconsider the necessary components for statistical software again. Nearly 20 years had passed since Biehler’s paper, and advances in computer graphics and software in general have made more things possible. Working from the inspiration of Tukey and Biehler, and guided by my on-the-ground experience teaching R as well as my extensive literature review, I developed a list of ten attributes I think are necessary for a modern statistical computing tool. These are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Accessibility&lt;/li&gt;
+  &lt;li&gt;Easy entry for novice users&lt;/li&gt;
+  &lt;li&gt;Data as a first-order persistent object&lt;/li&gt;
+  &lt;li&gt;Support for a cycle of exploratory and confirmatory analysis&lt;/li&gt;
+  &lt;li&gt;Flexible plot creation&lt;/li&gt;
+  &lt;li&gt;Support for randomization throughout&lt;/li&gt;
+  &lt;li&gt;Interactivity at every level&lt;/li&gt;
+  &lt;li&gt;Inherent documentation&lt;/li&gt;
+  &lt;li&gt;Simple support for narrative, publishing, and reproducibility&lt;/li&gt;
+  &lt;li&gt;Flexibility to build extensions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As a tl;dr, I’ll summarize those for you here.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Accessibility: The tool should be accessible to lots of people. It needs to work on all major operating systems, be free or cheap, and be accessible to people with disabilities.&lt;/li&gt;
+  &lt;li&gt;Easy entry for novice users: The tool should be easy to get started using, with little or no guidance. The “threshold” to success should be low.&lt;/li&gt;
+  &lt;li&gt;Data as a first-order persistent object: Data should be the foundational object for a statistical tool. When you work with data, it should always be as a copy (looking at you, Excel).&lt;/li&gt;
+  &lt;li&gt;Support for a cycle of exploratory and confirmatory analysis: It should be easy to iterate through the “data cycle” in the tool.&lt;/li&gt;
+  &lt;li&gt;Flexible plot creation: Statistical tools should allow you to create new visualization types, following the Grammar of Graphics.&lt;/li&gt;
+  &lt;li&gt;Support for randomization throughout: As a pedagogical tool and a more flexible method for inference, it is important a tool support simulation methods like randomization and the bootstrap, both for numerical statistics and for graphics.&lt;/li&gt;
+  &lt;li&gt;Interactivity at every level: An analyst should find it easy to adjust parameters as they work and see the effects of parameters early in their analysis on later pieces of the analysis. Published results should be interactive to allow readers to do the same.&lt;/li&gt;
+  &lt;li&gt;Inherent documentation: The tool should tell (or show) you what it is going to do. Textual languages should aim for function names that are as human-readable as possible, and graphical user interfaces should strive to visualize what is happening in each step.&lt;/li&gt;
+  &lt;li&gt;Simple support for narrative, publishing, and reproducibility: Whatever you do in your tool should be easily documented, whether as a static document with textual code or a list of operations in a GUI. Narrative and analysis should be encouraged to mix in literate documents.&lt;/li&gt;
+  &lt;li&gt;Flexibility to build extensions: The complement to 2), the tool needs a high ceiling, so you don’t “experience out” of the tool. It should be possible to implement new functions and extend functionality.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I think these attributes encompass a lot of what is important for a tool. Over the years I’ve been thinking about this, I’ve refined the attributes and tried to make them as comprehensive as possible. But, I’m sure there are pieces that are missing. For example, it has been pointed out that I don’t talk about the correctness of the implementations. To me, that goes without saying– if it’s a tool for statistical computing, it needs to do statistics properly! But of course, we have seen that isn’t always a safe assumption. I explicitly didn’t touch things like computing speed, because I was considering this from a human usability perspective. If you have a good, usable tool, and it allows you to build extensions, someone will fix the speed issue. Much harder to fix are things like inherent documentation, which we have seen Hadley Wickham working through with things like &lt;code class=&quot;highlighter-rouge&quot;&gt;pivot_longer()&lt;/code&gt;, the next generation of what was formerly  &lt;code class=&quot;highlighter-rouge&quot;&gt;gather()&lt;/code&gt;, formerly &lt;code class=&quot;highlighter-rouge&quot;&gt;cast()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;My goal with writing this paper was to give practitioners and educators a framework for evaluating a tool, and to inspire people who build tools themselves. I hadn’t seen anything like this since 1997, so I decided it was time to re-open the conversation. But, I do want it to be a conversation. What else should we be aiming for as we design the next iteration of statistical computing tools?&lt;/p&gt;
+
+</description>
+				<pubDate>Tue, 26 Nov 2019 00:00:00 -0600</pubDate>
+				<link>https://www.amelia.mn/blog/papers/2019/11/26/Key-Attributes.html</link>
+				<guid isPermaLink="true">https://www.amelia.mn/blog/papers/2019/11/26/Key-Attributes.html</guid>
+				<media:thumbnail url="https://www.amelia.mn/img/KeyAttributes.jpg" />
+			</item>
+		
+			<item>
 				<title>A tidy dress</title>
 				<description>&lt;p&gt;That’s right ya’ll, I made myself a R hex logo dress!&lt;/p&gt;
 
@@ -847,82 +927,6 @@ then a small decline before continuing to rise.&lt;/p&gt;
 				<link>https://www.amelia.mn/blog/teaching/2016/11/16/CensusRant.html</link>
 				<guid isPermaLink="true">https://www.amelia.mn/blog/teaching/2016/11/16/CensusRant.html</guid>
 				<media:thumbnail url="https://www.amelia.mn/img/FactFinder.png" />
-			</item>
-		
-			<item>
-				<title>Statistics graduate school advice</title>
-				<description>&lt;p&gt;It’s that time of year again, the time where I find myself meeting with students thinking about graduate school in statistics. Since I often end up sending people the same things, I figured I’d pull them together into a blog post. You probably already know about &lt;a href=&quot;https://thegradcafe.com/&quot;&gt;the grad cafe&lt;/a&gt;, &lt;a href=&quot;http://theprofessorisin.com/pearlsofwisdom/&quot;&gt;the professor is in&lt;/a&gt;, and &lt;a href=&quot;http://www.phdcomics.com/comics.php&quot;&gt;PhD comics&lt;/a&gt;. These other links might not be as common.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;a class=&quot;thumb&quot; href=&quot;http://www.phdcomics.com/comics.php?f=1286&amp;amp;fb_action_ids=148470391984848&quot;&gt;&lt;img src=&quot;https://www.amelia.mn/img/PhDcomic.gif&quot; class=&quot;img-responsive&quot; alt=&quot;One of my favorite PhD comics&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;q-what-is-grad-school-in-statistics-like&quot;&gt;Q: What is grad school in statistics like?&lt;/h3&gt;
-
-&lt;h3 id=&quot;a-here-are-some-resources-to-help-you-get-a-taste&quot;&gt;A: Here are some resources to help you get a taste:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;When I was still in graduate school, I wrote a three-part blog series for &lt;a href=&quot;http://datascience.la&quot;&gt;datascience.la&lt;/a&gt; on graduate school: &lt;a href=&quot;http://datascience.la/statistics-grad-school-what-is-it-really-like/&quot;&gt;Statistics grad school– what is it really like?&lt;/a&gt;, &lt;a href=&quot;http://datascience.la/part-2-of-statistics-grad-school-what-is-it-really-like/&quot;&gt;Part 2 of what statistics grad school is like&lt;/a&gt;, and &lt;a href=&quot;http://datascience.la/paying-for-statistics-grad-school-aka-the/&quot;&gt;Part 3: Paying for statistics graduate school&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;I gave some additional advice in this recent &lt;a href=&quot;http://magazine.amstat.org/blog/2016/09/01/inspire/&quot;&gt;interview&lt;/a&gt; in AmstatNews.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://statsbylopez.com/about/&quot;&gt;Michael Lopez&lt;/a&gt; also has a piece called &lt;a href=&quot;https://statsbylopez.com/2014/07/23/so-you-want-a-graduate-degree-in-statistics/&quot;&gt;So you want a graduate degree in statistics?&lt;/a&gt;, with sections on deciding on a program, thriving once you are there, and much more. He goes in to the difference between biostatistics and statistics, a PhD and an MA, and how to evaluate programs.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;q-where-should-i-go-for-grad-school&quot;&gt;Q: Where should I go for grad school?&lt;/h3&gt;
-
-&lt;h3 id=&quot;a-wherever-seems-like-a-good-fit&quot;&gt;A: Wherever seems like a good fit!&lt;/h3&gt;
-
-&lt;p&gt;I really think statistics is such an in-demand field that you can get a job with a degree from virtually any school. These show my personal research interests and biases, but a couple of my favorite programs to recommend to students are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stat.iastate.edu/&quot;&gt;Statistics at Iowa State&lt;/a&gt;. This is where &lt;a href=&quot;http://hadley.nz/&quot;&gt;Hadley Wickham&lt;/a&gt; and &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;Yihui Xie&lt;/a&gt; got their PhDs, and current students include &lt;a href=&quot;http://cpsievert.github.io/about/&quot;&gt;Carson Sievert&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/maggiejohnsonmn&quot;&gt;Maggie Johnson&lt;/a&gt;, &lt;a href=&quot;http://andeekaplan.com/&quot;&gt;Andee Kaplan&lt;/a&gt;, &lt;a href=&quot;http://sctyner.github.io/&quot;&gt;Samantha Tyner&lt;/a&gt;, and &lt;a href=&quot;http://erichare.me/&quot;&gt;Eric Hare&lt;/a&gt;. Notable faculty include &lt;a href=&quot;http://www.public.iastate.edu/~hofmann/&quot;&gt;Hieke Hofmann&lt;/a&gt; and &lt;a href=&quot;http://ugenschel.github.io/&quot;&gt;Ulrike Genschel&lt;/a&gt;. [Update, 11/27/17, I believe &lt;em&gt;all&lt;/em&gt; of those students now have PhDs!]&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jhsph.edu/departments/biostatistics/index.html&quot;&gt;Biostatistics at Johns Hopkins&lt;/a&gt;. This is where &lt;a href=&quot;https://twitter.com/hspter&quot;&gt;Hilary Parker&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/acfrazee&quot;&gt;Alyssa Frazee&lt;/a&gt; and &lt;a href=&quot;http://jennakrall.com/&quot;&gt;Jenna Krall&lt;/a&gt; got their PhDs. Notable faculty include &lt;a href=&quot;http://www.biostat.jhsph.edu/~rpeng/&quot;&gt;Roger Peng&lt;/a&gt;, &lt;a href=&quot;http://jtleek.com/&quot;&gt;Jeff Leek&lt;/a&gt;, and &lt;a href=&quot;http://www.bcaffo.com/&quot;&gt;Brian Caffo&lt;/a&gt; (of &lt;a href=&quot;https://www.coursera.org/specializations/jhu-data-science/1&quot;&gt;Coursera data science specialization&lt;/a&gt; fame).&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://idl.cs.washington.edu/&quot;&gt;University of Washington Interactive Data Lab&lt;/a&gt;. Not exactly a grad program, because it involves people from both computer science and the school of information, but does awesome work. Notable students include &lt;a href=&quot;http://arvindsatya.com/&quot;&gt;Arvind Satyanarayan&lt;/a&gt; [Update 11/27/17, he has his PhD!], and faculty include &lt;a href=&quot;http://homes.cs.washington.edu/~jheer/&quot;&gt;Jeff Heer&lt;/a&gt; of the computer science department and &lt;a href=&quot;http://faculty.washington.edu/jhullman/&quot;&gt;Jessica Hullman&lt;/a&gt; in the iSchool.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fun fact I recently learned– Iowa State was the first US university with a department of statistics, and Johns Hopkins the first (in the world?) to offer biostatistics!&lt;/p&gt;
-
-&lt;h3 id=&quot;q-how-do-i-get-in-to-grad-school&quot;&gt;Q: How do I get in to grad school?&lt;/h3&gt;
-
-&lt;h3 id=&quot;a-you-need-lots-of-things-to-be-a-strong-candidate-including&quot;&gt;A: You need lots of things to be a strong candidate, including:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;good (but not necessarily perfect) grades&lt;/li&gt;
-  &lt;li&gt;a decent GRE score (particularly on the quantitative section of the regular GRE)&lt;/li&gt;
-  &lt;li&gt;a compelling story in your personal statement (email me if you want to read mine, I don’t feel like posting it on the web)&lt;/li&gt;
-  &lt;li&gt;solid letters of recommendation, particularly from faculty members who know you well from a variety of contexts, like class, research, etc.&lt;/li&gt;
-  &lt;li&gt;I also always recommend reaching out to people from the program you are applying to, whether current grad students, alumni, or professors to get a better sense of a program and whether you would be a good fit. &lt;a href=&quot;http://science-professor.blogspot.com/&quot;&gt;Female Science Professor&lt;/a&gt; has &lt;a href=&quot;http://science-professor.blogspot.com/2011/10/writing-to-me-reprise.html&quot;&gt;a great post&lt;/a&gt; about what to say (and not to say) in an email to a professor.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;q-how-do-i-succeed-in-grad-school&quot;&gt;Q: How do I succeed in grad school?&lt;/h3&gt;
-
-&lt;h3 id=&quot;a-i-recommend-the-following&quot;&gt;A: I recommend the following:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://howtoprepforgradschoolwhilepoor.wikispaces.com/&quot;&gt;How to Prep for Grad School if You’re Poor&lt;/a&gt;- a wiki with some information about the application process, but mostly the “cultural capital” you might not have that could be useful when you’re in grad school.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cs.indiana.edu/how.2b/how.2b.research.html&quot;&gt;Doing research&lt;/a&gt;- how to do research (the short story: do a little every day).&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://matt.might.net/articles/advice-for-phd-thesis-proposals/&quot;&gt;A thesis proposal is a contract&lt;/a&gt;. Or at least, it should be.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cs.jhu.edu/~jason/advice/write-the-paper-first.html&quot;&gt;Write the paper first&lt;/a&gt;- an idea about how to frame your work by writing the paper first.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.stat.ucla.edu/~frederic/oralexams.html&quot;&gt;Oral exams&lt;/a&gt;- this is specifically about advancing to candidacy at UCLA in statistics, but I’ve sent it to friends in other programs who don’t have similar guidelines.&lt;/li&gt;
-  &lt;li&gt;Leek Group Guides to &lt;a href=&quot;https://github.com/jtleek/reviews&quot;&gt;reviewing papers&lt;/a&gt;, &lt;a href=&quot;https://github.com/jtleek/datasharing&quot;&gt;data sharing&lt;/a&gt;, &lt;a href=&quot;https://github.com/jtleek/firstpaper&quot;&gt;writing your first paper&lt;/a&gt;, or &lt;a href=&quot;https://github.com/jtleek/readingpapers&quot;&gt;reading papers&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;q-how-can-i-learn-more&quot;&gt;Q: How can I learn more?&lt;/h3&gt;
-
-&lt;h3 id=&quot;a-i-recommend-getting-involved-in-some-online-communities&quot;&gt;A: I recommend getting involved in some online communities.&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There is a ton of activity in statistics and data science on twitter. Most of the faculty and students I mentioned above have twitter accounts (some linked above, the others easy to find), and if you are into R you can get a taste by looking at the &lt;a href=&quot;https://twitter.com/hashtag/rstats?src=hash&quot;&gt;#rstats&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/hashtag/tidyverse?src=hash&quot;&gt;#tidyverse&lt;/a&gt; hashtags.&lt;/li&gt;
-  &lt;li&gt;Roger Peng and Jeff Leek (mentioned above) and &lt;a href=&quot;http://rafalab.github.io/&quot;&gt;Rafa Irizarry&lt;/a&gt; have a blog called &lt;a href=&quot;http://simplystatistics.org/&quot;&gt;Simply Statistics&lt;/a&gt; with all sorts of interesting statistics discussions.&lt;/li&gt;
-  &lt;li&gt;Hilary Parker and Roger Peng (mentioned above) have a podcast called &lt;a href=&quot;http://simplystatistics.org/2015/09/17/not-so-standard-deviations-the-podcast/&quot;&gt;Not so standard devations&lt;/a&gt;, available on &lt;a href=&quot;https://soundcloud.com/nssd-podcast&quot;&gt;SoundCloud&lt;/a&gt;, &lt;a href=&quot;https://itunes.apple.com/us/podcast/not-so-standard-deviations/id1040614570?mt=2&quot;&gt;iTunes&lt;/a&gt;, and many more podcast distributors.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What did I miss? What are other questions you have?&lt;/p&gt;
-
-</description>
-				<pubDate>Wed, 19 Oct 2016 00:00:00 -0500</pubDate>
-				<link>https://www.amelia.mn/blog/teaching/2016/10/19/GradSchool.html</link>
-				<guid isPermaLink="true">https://www.amelia.mn/blog/teaching/2016/10/19/GradSchool.html</guid>
-				<media:thumbnail url="https://www.amelia.mn/img/PhDcomic.gif" />
 			</item>
 		
 	</channel>
