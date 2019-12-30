@@ -88,8 +88,6 @@
 				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
-				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="friend" href="http://www.facebook.com/amelia.mcnamara" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
-				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="add" href="http://plus.google.com/+AmeliaMcNamara" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -121,9 +119,8 @@
 
 <p><a href="http://www.statschat.org.nz/">Thomas Lumley</a> pointed me to this blog post on <a href="http://dlab.berkeley.edu/blog/season-sharing-data-working-newly-released-census-2010-2014-acs-5-year-data-r">working with ACS data in R</a> which was much more readable. I’m not thinking about maps for this particular application, but I can read around that part. I was able to reproduce the code in the post (yeah!) and modify the first retrieval command to get data for states:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>stateDemo &lt;- acs14(geography='state', variable = c('B17021_001E'))
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stateDemo &lt;- acs14(geography='state', variable = c('B17021_001E'))
+</code></pre></div></div>
 
 <p>But, this isn’t the only variable I’m interested in! So, how do I learn what other variables I want? As far as I can tell, I have to go to the <a href="http://api.census.gov/">Census API site</a> and read <a href="http://api.census.gov/data/2015/acs1/variables.html">this table</a>. Say I’m interested in race. I can search the page for that word, but I get almost 5,000 results.</p>
 
@@ -186,6 +183,10 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="https://www.amelia.mn/blog/misc/2019/12/29/Deleting-Facebook.html">Deleting Facebook</a>
+    		</li>
+  			
+    		<li>
       		<a href="https://www.amelia.mn/blog/papers/2019/11/26/Key-Attributes.html">Key Attributes of a Modern Statistical Computing Tool</a>
     		</li>
   			
@@ -219,10 +220,6 @@ s.setAttribute('data-timestamp', +new Date());
   			
     		<li>
       		<a href="https://www.amelia.mn/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="https://www.amelia.mn/blog/teaching/2016/11/16/CensusRant.html">Census data: A rant</a>
     		</li>
   			
 			</ul></div>

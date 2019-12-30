@@ -88,8 +88,6 @@
 				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
-				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="friend" href="http://www.facebook.com/amelia.mcnamara" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
-				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="add" href="http://plus.google.com/+AmeliaMcNamara" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -217,128 +215,128 @@
 library(mosaic)
 diff(mean(~height|team, data=tugowar))</p>
 
-<p>bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups=team)))
-```</p>
+<p>bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups=team)))</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+So if I wanted to compute one difference in means, it's the first piece of code. And I wanted to do a thousand of them, I could use the second chunk.
 
-<p>So if I wanted to compute one difference in means, it’s the first piece of code. And I wanted to do a thousand of them, I could use the second chunk.</p>
+But there's another technique we might want to use for assessing whether the number we got is sort of reasonable or what some other possible numbers we could have observed could be. That's bootstrapping. In bootstrapping you take the data you have, kind of like pulling yourself up by your bootstraps. Making something from nothing. That's not really possible, so we're going to make data from our old data. We're going to sample with replacement. Pull out data points. Here we're not breaking the relationship between the two variables. We're just pulling them out directly.
 
-<p>But there’s another technique we might want to use for assessing whether the number we got is sort of reasonable or what some other possible numbers we could have observed could be. That’s bootstrapping. In bootstrapping you take the data you have, kind of like pulling yourself up by your bootstraps. Making something from nothing. That’s not really possible, so we’re going to make data from our old data. We’re going to sample with replacement. Pull out data points. Here we’re not breaking the relationship between the two variables. We’re just pulling them out directly.</p>
+And you can see sometimes I get the same data point more than once in my bootstrap sample. But now I have new data, and I can treat that as my current data. And compute the mean heights, and then the possible difference
+in heights. And so if that observed tug of war game we saw was really representative of the world, other than 0.75 I might have observed 0.6637. 
 
-<p>And you can see sometimes I get the same data point more than once in my bootstrap sample. But now I have new data, and I can treat that as my current data. And compute the mean heights, and then the possible difference
-in heights. And so if that observed tug of war game we saw was really representative of the world, other than 0.75 I might have observed 0.6637.</p>
+I can come up with a bootstrap distribution, much in the same way I can with randomization. 
 
-<p>I can come up with a bootstrap distribution, much in the same way I can with randomization.</p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/boostrap_dist.jpg" class="img-responsive" alt="Bootstrap distribution"&gt;&lt;/a&gt;
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/boostrap_dist.jpg" class="img-responsive" alt="Bootstrap distribution" /></a></p>
+The bootstrap distributuon might not be symmetric. It is centered around the estimate from the real data. In this case, centered around the 0.75. And then it shows us some possible numbers we could have observed.
 
-<p>The bootstrap distributuon might not be symmetric. It is centered around the estimate from the real data. In this case, centered around the 0.75. And then it shows us some possible numbers we could have observed.</p>
+So, again, if that was our data and we were generating bootstrap samples, we might have seen differences from negative 3 to positive 4, and again we think ours is not different from nothing or zero. 
 
-<p>So, again, if that was our data and we were generating bootstrap samples, we might have seen differences from negative 3 to positive 4, and again we think ours is not different from nothing or zero.</p>
+And with the ants, all the observed values we could have seen, they are all negative. 
 
-<p>And with the ants, all the observed values we could have seen, they are all negative.</p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/bootstrap_ant.jpg" class="img-responsive" alt="Bootstrap distribution"&gt;&lt;/a&gt;
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/bootstrap_ant.jpg" class="img-responsive" alt="Bootstrap distribution" /></a></p>
+So, we think there is a relationship. One of those groups is bigger than the other.
 
-<p>So, we think there is a relationship. One of those groups is bigger than the other.</p>
+If you want to know more about randomization and the bootstrap, you could look at this [open source textbook](www.openintro.org). What? It was written by some really cool statisticians. [The source](https://github.com/OpenIntroOrg) is all on GitHub. You can download the PDF for free. If you like physical books, you can buy this statistics textbook that I used in my class for [$9 on Amazon](http://smile.amazon.com/Introductory-Statistics-Randomization-Simulation-David/dp/1500576697?sa-no-redirect=1). So it's really cool and good. 
 
-<p>If you want to know more about randomization and the bootstrap, you could look at this <a href="www.openintro.org">open source textbook</a>. What? It was written by some really cool statisticians. <a href="https://github.com/OpenIntroOrg">The source</a> is all on GitHub. You can download the PDF for free. If you like physical books, you can buy this statistics textbook that I used in my class for <a href="http://smile.amazon.com/Introductory-Statistics-Randomization-Simulation-David/dp/1500576697?sa-no-redirect=1">$9 on Amazon</a>. So it’s really cool and good.</p>
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/openintro.jpg" class="img-responsive" alt="Open Intro" /></a></p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/openintro.jpg" class="img-responsive" alt="Open Intro"&gt;&lt;/a&gt;
 
-<p>If you want other resources, Jonathan Stray has a five minute lighting talk from NICAR, <a href="http://bit.ly/OneWeirdStatsTrick">“Solve Every Statistics Problem with One Weird Trick”</a>, and that one weird trick is randomization, so you kind of know about that.</p>
+If you want other resources, Jonathan Stray has a five minute lighting talk from NICAR, ["Solve Every Statistics Problem with One Weird Trick"](http://bit.ly/OneWeirdStatsTrick), and that one weird trick is randomization, so you kind of know about that. 
 
-<p><a class="thumb" href="http://jonathanstray.com/me"><img src="https://www.amelia.mn/img/jonathan_stray.jpg" class="img-responsive" alt="Jonathan Stray" /></a></p>
+&lt;a class="thumb" href="http://jonathanstray.com/me"&gt;&lt;img src="https://www.amelia.mn/img/jonathan_stray.jpg" class="img-responsive" alt="Jonathan Stray"&gt;&lt;/a&gt;
 
-<p>And Tim Hesterberg, has a paper, <a href="http://bit.ly/KnowAboutBootstrap">“What Teachers should know about the Bootstrap”</a>. I think it really should be called what everyone should know about the bootstrap.</p>
+And Tim Hesterberg, has a paper, ["What Teachers should know about the Bootstrap"](http://bit.ly/KnowAboutBootstrap). I think it really should be called what everyone should know about the bootstrap.
 
-<p><a class="thumb" href="http://www.timhesterberg.net/home/bio"><img src="https://www.amelia.mn/img/tim_hesterberg.jpg" class="img-responsive" alt="Tim Hesterberg" /></a></p>
+&lt;a class="thumb" href="http://www.timhesterberg.net/home/bio"&gt;&lt;img src="https://www.amelia.mn/img/tim_hesterberg.jpg" class="img-responsive" alt="Tim Hesterberg"&gt;&lt;/a&gt;
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/howdoesitrelate.png" class="img-responsive" alt="What does this have to do with visualization?" /></a></p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/howdoesitrelate.png" class="img-responsive" alt="What does this have to do with visualization?"&gt;&lt;/a&gt;
 
-<p>So what does this all have to do with visualization? We’re going to try to do the same thing with visualization as we did with numbers. Try to say is this different than nothing? What are other things we could have observed? And this is going to help us try to not make visualizations that don’t show anything.</p>
 
-<p>When I say that, I don’t mean visualizations of the type you see on <a href="http://viz.wtf/">WTF-viz</a>,</p>
+So what does this all have to do with visualization? We're going to try to do the same thing with visualization as we did with numbers. Try to say is this different than nothing? What are other things we could have observed? And this is going to help us try to not make visualizations that don't show anything. 
 
-<p><a class="thumb" href="http://viz.wtf/post/141788409671/lingerie-chart"><img src="https://www.amelia.mn/img/lingerie.png" class="img-responsive" alt="Lingerie chart?" /></a></p>
+When I say that, I don't mean visualizations of the type you see on [WTF-viz](http://viz.wtf/), 
 
-<p>although I like making fun of those too. And I don’t mean showing nothing in the way Darrell Huff is talking about in the 1950s with How to Lie with Statistics.</p>
+&lt;a class="thumb" href="http://viz.wtf/post/141788409671/lingerie-chart"&gt;&lt;img src="https://www.amelia.mn/img/lingerie.png" class="img-responsive" alt="Lingerie chart?"&gt;&lt;/a&gt;
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/Huff.jpg" class="img-responsive" alt="Darrell Huff" /></a></p>
+although I like making fun of those too. And I don't mean showing nothing in the way Darrell Huff is talking about in the 1950s with How to Lie with Statistics. 
 
-<p>Instead, I’m talking about using techniques like randomization. There’s an awesome paper by <a href="http://hadley.nz/">Hadley Wickham</a>, <a href="http://www-stat.wharton.upenn.edu/~buja/">Andreas Buja</a>, <a href="http://dicook.github.io/">Di Cook</a> and <a href="http://hofmann.public.iastate.edu/">Heike Hofmann</a>.</p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/Huff.jpg" class="img-responsive" alt="Darrell Huff"&gt;&lt;/a&gt;
 
-<div style="margin:5px;">
-<a class="thumb" href="http://hadley.nz/">&lt;img src="https://www.amelia.mn/img/hadley.jpg" class="img-responsive" alt="Hadley Wickham"width="200" style="float:left" hspace="10"&gt;</a>
-</div>
-<div style="margin:5px;">
-<a class="thumb" href="http://www-stat.wharton.upenn.edu/~buja/">&lt;img src="https://www.amelia.mn/img/andreas.jpg" class="img-responsive" alt="Andreas Buja"width="100" style="float:left" hspace="10"&gt;</a>
-</div>
-<div style="margin:5px; overflow:hidden;">
-<a class="thumb" href="http://dicook.github.io/">&lt;img src="https://www.amelia.mn/img/di.jpg" class="img-responsive" alt="Di Cook"width="200" style="float:left" hspace="10"&gt;</a>
-</div>
-<div style="margin:5px; overflow:hidden;">
-<a class="thumb" href="http://hofmann.public.iastate.edu/">&lt;img src="https://www.amelia.mn/img/heike.jpg" class="img-responsive" alt="Heike Hofmann"width="200" style="float:left" hspace="10"&gt;</a>
-</div>
+Instead, I'm talking about using techniques like randomization. There's an awesome paper by [Hadley Wickham](http://hadley.nz/), [Andreas Buja](http://www-stat.wharton.upenn.edu/~buja/), [Di Cook](http://dicook.github.io/) and [Heike Hofmann](http://hofmann.public.iastate.edu/). 
 
-<p>It’s called <a href="http://bit.ly/graphical_inference">Graphical Inference for InfoVis</a>. I think it’s really worth checking out. One of the techniques they suggest in the paper is called the lineup.</p>
+&lt;div style="margin:5px;"&gt;
+&lt;a class="thumb" href="http://hadley.nz/"&gt;&lt;img src="https://www.amelia.mn/img/hadley.jpg" class="img-responsive" alt="Hadley Wickham"width="200" style="float:left" hspace="10"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div style="margin:5px;"&gt;
+&lt;a class="thumb" href="http://www-stat.wharton.upenn.edu/~buja/"&gt;&lt;img src="https://www.amelia.mn/img/andreas.jpg" class="img-responsive" alt="Andreas Buja"width="100" style="float:left" hspace="10"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div style="margin:5px; overflow:hidden;"&gt;
+&lt;a class="thumb" href="http://dicook.github.io/"&gt;&lt;img src="https://www.amelia.mn/img/di.jpg" class="img-responsive" alt="Di Cook"width="200" style="float:left" hspace="10"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div style="margin:5px; overflow:hidden;"&gt;
+&lt;a class="thumb" href="http://hofmann.public.iastate.edu/"&gt;&lt;img src="https://www.amelia.mn/img/heike.jpg" class="img-responsive" alt="Heike Hofmann"width="200" style="float:left" hspace="10"&gt;&lt;/a&gt;
+&lt;/div&gt;
 
-<p><a class="thumb" href="https://www.flickr.com/photos/mike_crane/5188333652/in/photolist-8UtyQu-syKEK-9SHXTx-2azAWL-bCqhR4-7rSB2w-syKgn-bCqiAv-bCqhHt-bCqhWH-9WLjQh-bpvnxY-jHWcxM-bpvniA-Bh14D-bpvnCL-9VekKT-9Vh1Jo-9Vh4TS-765vEj-9Vh9Qd-bmKeHQ-ALLCXL-9Vhc17-9Veatv-oW5cC4-9VebyX-9Vef9H-9VgZFS-9Vh1wy-9VhbtN-9VekZi-9Vh2eJ-9Vh6es-9Vh1jA-9VhaeJ-9Vh8U9-9Vhaqo-9VhbLQ-9Vekxi-9Vec4p-9Vh7RL-9Vh16W-72qhos-9Vh6P5-9VgZeL-9VenuT-9Vea3D-9VeeSa-72mhJi"><img src="https://www.amelia.mn/img/mike_crane.jpg" class="img-responsive" alt="Lineup" /></a></p>
+It's called [Graphical Inference for InfoVis](http://bit.ly/graphical_inference). I think it's really worth checking out. One of the techniques they suggest in the paper is called the lineup.
 
-<p>The idea of the lineup is you put your data, your plot that you think shows something real, in a lineup with a bunch of innocent plots. If you can pick your accused plot out of the lineup of innocent plots, that means that it’s somehow different than nothing.</p>
+&lt;a class="thumb" href="https://www.flickr.com/photos/mike_crane/5188333652/in/photolist-8UtyQu-syKEK-9SHXTx-2azAWL-bCqhR4-7rSB2w-syKgn-bCqiAv-bCqhHt-bCqhWH-9WLjQh-bpvnxY-jHWcxM-bpvniA-Bh14D-bpvnCL-9VekKT-9Vh1Jo-9Vh4TS-765vEj-9Vh9Qd-bmKeHQ-ALLCXL-9Vhc17-9Veatv-oW5cC4-9VebyX-9Vef9H-9VgZFS-9Vh1wy-9VhbtN-9VekZi-9Vh2eJ-9Vh6es-9Vh1jA-9VhaeJ-9Vh8U9-9Vhaqo-9VhbLQ-9Vekxi-9Vec4p-9Vh7RL-9Vh16W-72qhos-9Vh6P5-9VgZeL-9VenuT-9Vea3D-9VeeSa-72mhJi"&gt;&lt;img src="https://www.amelia.mn/img/mike_crane.jpg" class="img-responsive" alt="Lineup"&gt;&lt;/a&gt;
 
-<p>To illustrate this, I would break the relationship between X and Y and look at what other plots I could have gotten from the same data with that relationship broken.</p>
+The idea of the lineup is you put your data, your plot that you think shows something real, in a lineup with a bunch of innocent plots. If you can pick your accused plot out of the lineup of innocent plots, that means that it's somehow different than nothing. 
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/random6.jpg" class="img-responsive" alt="Random plot" /></a></p>
+To illustrate this, I would break the relationship between X and Y and look at what other plots I could have gotten from the same data with that relationship broken.
 
-<p>Instead of looking at them all in sequence, I want to look at them all together. Let’s take an example. This is some data about loans. And I’m plotting the balance of a loan against the income. And I’m coloring by whether or not a person defaulted on their loan.</p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/random6.jpg" class="img-responsive" alt="Random plot"&gt;&lt;/a&gt;
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/default.jpg" class="img-responsive" alt="Loan defaults" /></a></p>
+Instead of looking at them all in sequence, I want to look at them all together. Let's take an example. This is some data about loans. And I'm plotting the balance of a loan against the income. And I'm coloring by whether or not a person defaulted on their loan. 
 
-<p>And my human brain sees a pattern. I say, it looks like people who default on loans are the ones that have really high loan balances. It doesn’t matter if they’re rich or poor, it’s just those high loan balances.</p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/default.jpg" class="img-responsive" alt="Loan defaults"&gt;&lt;/a&gt;
 
-<p>Is it possible I just sort of made that up? This is what it would look like if you use the protocol in the graphical inference paper and look at the plots.</p>
+And my human brain sees a pattern. I say, it looks like people who default on loans are the ones that have really high loan balances. It doesn't matter if they're rich or poor, it's just those high loan balances.
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/default_perm.jpg" class="img-responsive" alt="Loan defaults in lineup" /></a></p>
+Is it possible I just sort of made that up? This is what it would look like if you use the protocol in the graphical inference paper and look at the plots. 
 
-<p>There’s 20 plots, because we often use a standard p-value cutoff of 0.05, which is the same as one out of 20. If you guessed randomly, you’d get the right one 1 out of 20 times even guessing at random.</p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/default_perm.jpg" class="img-responsive" alt="Loan defaults in lineup"&gt;&lt;/a&gt;
 
-<p>So with this one I think you can probably identify which is the real plot. Part of it is I showed you the real one before. You might have recognized it.</p>
+There's 20 plots, because we often use a standard p-value cutoff of 0.05, which is the same as one out of 20. If you guessed randomly, you'd get the right one 1 out of 20 times even guessing at random.
 
-<p>In practice you shouldn’t look at the accused plot alone before you look at it in the lineup. So either you should build this into your workflow, looking at a lineup of plots every time you make a visualization, or more realistically, if you make a plot and think it might sort of show nothing, make a lineup and show it to someone who hasn’t seen the original plot.</p>
+So with this one I think you can probably identify which is the real plot. Part of it is I showed you the real one before. You might have recognized it.
 
-<p>```{r, eval=FALSE}
+In practice you shouldn't look at the accused plot alone before you look at it in the lineup. So either you should build this into your workflow, looking at a lineup of plots every time you make a visualization, or more realistically, if you make a plot and think it might sort of show nothing, make a lineup and show it to someone who hasn't seen the original plot.
+
+```{r, eval=FALSE}
 library(ggplot2)
 ggplot(Default)+
-  geom_point(aes(x=balance, y=income, col=default))</p>
+  geom_point(aes(x=balance, y=income, col=default))
 
-<p>library(nullabor)
-ggplot(lineup(null_permute(‘default’), Default))+
+library(nullabor)
+ggplot(lineup(null_permute('default'), Default))+
 geom_point(aes(x=balance, y=income, col=default)) +
- facet_wrap(~.sample)</p>
+ facet_wrap(~.sample)
 
-<p>decrypt(“OlCE bQTQ Aw GWPATAWw d”)
-```</p>
+decrypt("OlCE bQTQ Aw GWPATAWw d")
+</code></pre></div></div>
 
 <p>If you’re an R person, this is familiar. This is the ggplot code to make a scatterplot. And the bottom is to randomize the data to make null plots. I’m doing a null permute on the label of default versus not default and
 wrapping those facets into an array of plots. When you run the code, they have done a clever thing, it will make a plot in your plotting window, but also prints this text in the console.</p>
 
 <p>It says decrypt and then it’s a bunch of nonsense characters. And that’s where they hid the answer. So if you were doing this on your computer and you wanted to not know ahead of time which was the real plot, but figure it out afterward, this is how to do it. You take the piece of code, and run the code, tells you where the true data was. So in this case we got it right.</p>
 
-<p><code class="highlighter-rouge"><span class="p">{</span><span class="err">r,</span><span class="w"> </span><span class="err">eval=FALSE</span><span class="p">}</span><span class="w">
-</span><span class="err">decrypt(</span><span class="s2">"OlCE bQTQ Aw GWPATAWw d"</span><span class="err">)</span><span class="w">
-</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"True data in position 14"</span><span class="w">
-</span></code></p>
+<p>```{r, eval=FALSE}
+decrypt(“OlCE bQTQ Aw GWPATAWw d”)
+[1] “True data in position 14”</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+You can use the same code for the t-test. This is the tug of war teams again. Somewhere in there I've hidden the real plot of the different heights. The crosses represent the mean heights for each of the groups. The question is if you can pick out the real data. So in your head, make your guess.
 
-<p>You can use the same code for the t-test. This is the tug of war teams again. Somewhere in there I’ve hidden the real plot of the different heights. The crosses represent the mean heights for each of the groups. The question is if you can pick out the real data. So in your head, make your guess.</p>
+&lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/visual_t2.jpg" class="img-responsive" alt="Visual t-test"&gt;&lt;/a&gt;
 
-<p><a class="thumb" href=""><img src="https://www.amelia.mn/img/visual_t2.jpg" class="img-responsive" alt="Visual t-test" /></a></p>
+It says decrypt, if you're good at decrypting quickly, you could see what it is. But the true data is in position 5.
 
-<p>It says decrypt, if you’re good at decrypting quickly, you could see what it is. But the true data is in position 5.</p>
-
-<p><code class="highlighter-rouge"><span class="p">{</span><span class="err">r,</span><span class="w"> </span><span class="err">eval=FALSE</span><span class="p">}</span><span class="w">
-</span><span class="err">decrypt(</span><span class="s2">"OlCE bQTQ Aw GWPATAWw J"</span><span class="err">)</span><span class="w">
-</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"True data in position 5"</span><span class="w">
-</span></code></p>
+```{r, eval=FALSE}
+decrypt("OlCE bQTQ Aw GWPATAWw J")
+[1] "True data in position 5"
+</code></pre></div></div>
 
 <p>That’s not the one I picked out. Certainly not the most extreme of the possible plots. What this is telling me is the same thing as the permutation test I did with the statistics and the distribution at the beginning of the talk. There really isn’t a difference between these two groups.</p>
 
@@ -350,10 +348,10 @@ wrapping those facets into an array of plots. When you run the code, they have d
 
 <p>So again, the real data is in there. Again, look at it and try to see if you can guess which one it is. And now we’re going to try and decrypt. So there’s the string again.</p>
 
-<p><code class="highlighter-rouge"><span class="p">{</span><span class="err">r,</span><span class="w"> </span><span class="err">eval=FALSE</span><span class="p">}</span><span class="w">
-</span><span class="err">decrypt(</span><span class="s2">"OlCE bQTQ Aw GWPATAWw y"</span><span class="err">)</span><span class="w">
-</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"True data in position 4"</span><span class="w">
-</span></code></p>
+<p><code class="highlighter-rouge">{r, eval=FALSE}
+decrypt("OlCE bQTQ Aw GWPATAWw y")
+[1] "True data in position 4"
+</code></p>
 
 <p>It says the true data is in position 4. Again, that wasn’t the one I had picked out. But if I had just shown you the one time series plot, you would have believed my stories about what was interesting about that plot.</p>
 
@@ -440,6 +438,10 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="https://www.amelia.mn/blog/misc/2019/12/29/Deleting-Facebook.html">Deleting Facebook</a>
+    		</li>
+  			
+    		<li>
       		<a href="https://www.amelia.mn/blog/papers/2019/11/26/Key-Attributes.html">Key Attributes of a Modern Statistical Computing Tool</a>
     		</li>
   			
@@ -473,10 +475,6 @@ s.setAttribute('data-timestamp', +new Date());
   			
     		<li>
       		<a href="https://www.amelia.mn/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="https://www.amelia.mn/blog/teaching/2016/11/16/CensusRant.html">Census data: A rant</a>
     		</li>
   			
 			</ul></div>

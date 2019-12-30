@@ -88,8 +88,6 @@
 				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
-				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="friend" href="http://www.facebook.com/amelia.mcnamara" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
-				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="add" href="http://plus.google.com/+AmeliaMcNamara" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -137,60 +135,60 @@
 
 <p>In my talk, I showed some arbitrarily-chosen code from their repo to display how the tidyverse syntax makes code more human-readable.</p>
 
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">monitoring_indicator_mean_loc</span><span class="o">=</span> <span class="n">monitoring_indicator_mean</span> <span class="o">%&gt;%</span> 
-        <span class="n">left_join</span><span class="p">(</span><span class="err">.</span><span class="p">,</span> <span class="n">select</span><span class="p">(</span><span class="n">coastal_fish_loc</span><span class="p">,</span> <span class="n">station_cleaned</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">),</span> 
-                                    <span class="n">by</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">"monitoring_area"</span> <span class="o">=</span> <span class="s2">"station_cleaned"</span><span class="p">))</span>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">monitoring_indicator_mean_loc</span><span class="o">=</span><span class="w"> </span><span class="n">monitoring_indicator_mean</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+        </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">coastal_fish_loc</span><span class="p">,</span><span class="w"> </span><span class="n">station_cleaned</span><span class="p">,</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span><span class="w"> </span><span class="n">lon</span><span class="p">),</span><span class="w"> 
+                                    </span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"monitoring_area"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"station_cleaned"</span><span class="p">))</span><span class="w">
 
-<span class="n">coastal_fish_loc</span> <span class="o">=</span> <span class="n">coastal_fish_loc</span> <span class="o">%&gt;%</span>
-                    <span class="n">mutate</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="n">DECWGSN</span><span class="p">,</span>
-                           <span class="n">lon</span> <span class="o">=</span> <span class="n">DECWGSE</span><span class="p">)</span> <span class="o">%&gt;%</span>
-                    <span class="n">mutate</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 31"</span><span class="p">,</span> <span class="m">64.207281</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 30"</span><span class="p">,</span> <span class="m">61.679815</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 29"</span><span class="p">,</span> <span class="m">59.705518</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 32"</span><span class="p">,</span> <span class="m">60.108130</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"Rectangle 23 &amp; 28"</span><span class="p">,</span> <span class="m">63.505817</span><span class="p">,</span>
-                                 		<span class="n">lat</span><span class="p">))))),</span>
-                           <span class="n">lon</span> <span class="o">=</span> <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 31"</span><span class="p">,</span> <span class="m">23.511161</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 30"</span><span class="p">,</span> <span class="m">21.269112</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 29"</span><span class="p">,</span> <span class="m">21.264879</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"ICES SD 32"</span><span class="p">,</span> <span class="m">25.772410</span><span class="p">,</span>
-                                 <span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span> <span class="s2">"Rectangle 23 &amp; 28"</span><span class="p">,</span> <span class="m">21.351243</span><span class="p">,</span> 
-                                 		<span class="n">lon</span><span class="p">))))))</span> <span class="o">%&gt;%</span>
-                    <span class="n">mutate</span><span class="p">(</span><span class="n">station_cleaned</span> <span class="o">=</span> <span class="n">as.character</span><span class="p">(</span><span class="n">station_cleaned</span><span class="p">),</span>
-                           <span class="n">station</span> <span class="o">=</span> <span class="n">as.character</span><span class="p">(</span><span class="n">station</span><span class="p">))</span></code></pre></figure>
+</span><span class="n">coastal_fish_loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coastal_fish_loc</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+                    </span><span class="n">mutate</span><span class="p">(</span><span class="n">lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DECWGSN</span><span class="p">,</span><span class="w">
+                           </span><span class="n">lon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DECWGSE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+                    </span><span class="n">mutate</span><span class="p">(</span><span class="n">lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 31"</span><span class="p">,</span><span class="w"> </span><span class="m">64.207281</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 30"</span><span class="p">,</span><span class="w"> </span><span class="m">61.679815</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 29"</span><span class="p">,</span><span class="w"> </span><span class="m">59.705518</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 32"</span><span class="p">,</span><span class="w"> </span><span class="m">60.108130</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"Rectangle 23 &amp; 28"</span><span class="p">,</span><span class="w"> </span><span class="m">63.505817</span><span class="p">,</span><span class="w">
+                                 		</span><span class="n">lat</span><span class="p">))))),</span><span class="w">
+                           </span><span class="n">lon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 31"</span><span class="p">,</span><span class="w"> </span><span class="m">23.511161</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 30"</span><span class="p">,</span><span class="w"> </span><span class="m">21.269112</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 29"</span><span class="p">,</span><span class="w"> </span><span class="m">21.264879</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"ICES SD 32"</span><span class="p">,</span><span class="w"> </span><span class="m">25.772410</span><span class="p">,</span><span class="w">
+                                 </span><span class="n">ifelse</span><span class="p">(</span><span class="n">station_cleaned</span><span class="o">==</span><span class="w"> </span><span class="s2">"Rectangle 23 &amp; 28"</span><span class="p">,</span><span class="w"> </span><span class="m">21.351243</span><span class="p">,</span><span class="w"> 
+                                 		</span><span class="n">lon</span><span class="p">))))))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+                    </span><span class="n">mutate</span><span class="p">(</span><span class="n">station_cleaned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">station_cleaned</span><span class="p">),</span><span class="w">
+                           </span><span class="n">station</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">station</span><span class="p">))</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">temp_long</span> <span class="o">=</span> <span class="n">coastal_fish_scores</span> <span class="o">%&gt;%</span> 
-            <span class="n">select</span><span class="p">(</span><span class="n">monitoring_area</span><span class="p">,</span><span class="n">core_indicator</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span> <span class="n">score1</span><span class="p">,</span><span class="n">score2</span><span class="p">,</span><span class="n">score3</span><span class="p">)</span> <span class="o">%&gt;%</span>
-            <span class="n">group_by</span><span class="p">(</span><span class="n">monitoring_area</span><span class="p">,</span> <span class="n">core_indicator</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span> <span class="o">%&gt;%</span>
-            <span class="n">gather</span><span class="p">(</span><span class="n">score_type</span><span class="p">,</span><span class="n">score</span><span class="p">,</span><span class="n">score1</span><span class="p">,</span><span class="n">score2</span><span class="p">,</span><span class="n">score3</span><span class="p">)</span> <span class="o">%&gt;%</span>
-            <span class="n">ungroup</span><span class="p">()</span>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">temp_long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coastal_fish_scores</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+            </span><span class="n">select</span><span class="p">(</span><span class="n">monitoring_area</span><span class="p">,</span><span class="n">core_indicator</span><span class="p">,</span><span class="n">taxa</span><span class="p">,</span><span class="w"> </span><span class="n">score1</span><span class="p">,</span><span class="n">score2</span><span class="p">,</span><span class="n">score3</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+            </span><span class="n">group_by</span><span class="p">(</span><span class="n">monitoring_area</span><span class="p">,</span><span class="w"> </span><span class="n">core_indicator</span><span class="p">,</span><span class="n">taxa</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+            </span><span class="n">gather</span><span class="p">(</span><span class="n">score_type</span><span class="p">,</span><span class="n">score</span><span class="p">,</span><span class="n">score1</span><span class="p">,</span><span class="n">score2</span><span class="p">,</span><span class="n">score3</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+            </span><span class="n">ungroup</span><span class="p">()</span><span class="w">
 
-<span class="n">slope2</span> <span class="o">=</span> <span class="n">slope2</span> <span class="o">%&gt;%</span>
-        <span class="n">group_by</span><span class="p">(</span><span class="n">basin_name</span><span class="p">,</span> <span class="n">core_indicator</span><span class="p">)</span> <span class="o">%&gt;%</span>
-        <span class="n">mutate</span><span class="p">(</span><span class="n">slope_mean_basin_indicator</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">slope_mean_basin_taxa</span><span class="p">))</span><span class="o">%&gt;%</span>
-        <span class="n">ungroup</span><span class="p">()</span>
+</span><span class="n">slope2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slope2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+        </span><span class="n">group_by</span><span class="p">(</span><span class="n">basin_name</span><span class="p">,</span><span class="w"> </span><span class="n">core_indicator</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+        </span><span class="n">mutate</span><span class="p">(</span><span class="n">slope_mean_basin_indicator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">slope_mean_basin_taxa</span><span class="p">))</span><span class="o">%&gt;%</span><span class="w">
+        </span><span class="n">ungroup</span><span class="p">()</span><span class="w">
 
-<span class="n">basin_n_obs</span> <span class="o">=</span> <span class="n">coastal_fish_scores_long</span> <span class="o">%&gt;%</span> 
-                            <span class="n">filter</span><span class="p">(</span><span class="n">score_type</span><span class="o">==</span><span class="s2">"score1"</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-                            <span class="n">select</span><span class="p">(</span><span class="n">Basin_HOLAS</span><span class="p">)</span> <span class="o">%&gt;%</span>
-                            <span class="n">count</span><span class="p">(</span><span class="n">Basin_HOLAS</span><span class="p">)</span></code></pre></figure>
+</span><span class="n">basin_n_obs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coastal_fish_scores_long</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+                            </span><span class="n">filter</span><span class="p">(</span><span class="n">score_type</span><span class="o">==</span><span class="s2">"score1"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+                            </span><span class="n">select</span><span class="p">(</span><span class="n">Basin_HOLAS</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+                            </span><span class="n">count</span><span class="p">(</span><span class="n">Basin_HOLAS</span><span class="p">)</span></code></pre></figure>
 
 <p>Interestingly, the programming language designers found this code hard to read and confusing. Although I’ve heard computer scientists complain about R many times before, I wasn’t anticipating this. I thought that the piped sequence of function calls would be pretty readable. Maybe it was the <code class="highlighter-rouge">%&gt;%</code> for the pipe rather than <code class="highlighter-rouge">|</code>, or maybe they would have preferred to see it as separate steps.</p>
 
 <p>I wish I had shown this example, taken from Garrett Grolemund’s Master the Tidyverse materials (which I also showed in my <a href="https://github.com/AmeliaMN/IntroToR">Intro to R &amp; RStudio</a> workshop).</p>
 
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">arrange</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">filter</span><span class="p">(</span><span class="n">babynames</span><span class="p">,</span> <span class="n">year</span> <span class="o">==</span> <span class="m">2015</span><span class="p">,</span> 
-  <span class="n">sex</span> <span class="o">==</span> <span class="s2">"M"</span><span class="p">),</span> <span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">arrange</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">filter</span><span class="p">(</span><span class="n">babynames</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2015</span><span class="p">,</span><span class="w"> 
+  </span><span class="n">sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"M"</span><span class="p">),</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">),</span><span class="w"> </span><span class="n">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">boys_2015</span> <span class="o">&lt;-</span> <span class="n">filter</span><span class="p">(</span><span class="n">babynames</span><span class="p">,</span> <span class="n">year</span> <span class="o">==</span> <span class="m">2015</span><span class="p">,</span> <span class="n">sex</span> <span class="o">==</span> <span class="s2">"M"</span><span class="p">)</span>
-<span class="n">boys_2015</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">boys_2015</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-<span class="n">boys_2015</span> <span class="o">&lt;-</span> <span class="n">arrange</span><span class="p">(</span><span class="n">boys_2015</span><span class="p">,</span> <span class="n">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-<span class="n">boys_2015</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">boys_2015</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">filter</span><span class="p">(</span><span class="n">babynames</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2015</span><span class="p">,</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"M"</span><span class="p">)</span><span class="w">
+</span><span class="n">boys_2015</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">boys_2015</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w">
+</span><span class="n">boys_2015</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">arrange</span><span class="p">(</span><span class="n">boys_2015</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="w">
+</span><span class="n">boys_2015</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">babynames</span> <span class="o">%&gt;%</span>
-  <span class="n">filter</span><span class="p">(</span><span class="n">year</span> <span class="o">==</span> <span class="m">2015</span><span class="p">,</span> <span class="n">sex</span> <span class="o">==</span> <span class="s2">"M"</span><span class="p">)</span> <span class="o">%&gt;%</span>
-  <span class="n">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">%&gt;%</span>
-  <span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">babynames</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">filter</span><span class="p">(</span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2015</span><span class="p">,</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"M"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">select</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span></code></pre></figure>
 
 <p>I think with this comparison, it’s easier to see why the piped approach is better for people. With the nested function calls, you have to do a lot of checking in your head to make sure the parentheses are matched, and it’s hard to follow the logic. The incremental approach is good, but you type the name of the data many times. In the last example, the data flows through the piped sequence in a clearer way.</p>
 
@@ -234,6 +232,10 @@ s.setAttribute('data-timestamp', +new Date());
 			<ul>
  			
     		<li>
+      		<a href="https://www.amelia.mn/blog/misc/2019/12/29/Deleting-Facebook.html">Deleting Facebook</a>
+    		</li>
+  			
+    		<li>
       		<a href="https://www.amelia.mn/blog/papers/2019/11/26/Key-Attributes.html">Key Attributes of a Modern Statistical Computing Tool</a>
     		</li>
   			
@@ -267,10 +269,6 @@ s.setAttribute('data-timestamp', +new Date());
   			
     		<li>
       		<a href="https://www.amelia.mn/blog/misc/2017/01/13/Amanda.html">What are the chances my name is Amanda?</a>
-    		</li>
-  			
-    		<li>
-      		<a href="https://www.amelia.mn/blog/teaching/2016/11/16/CensusRant.html">Census data: A rant</a>
     		</li>
   			
 			</ul></div>
