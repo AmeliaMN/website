@@ -36,7 +36,7 @@ to a 538 article from 2014 that approaches the problem from the other
 side-- [How to tell someone's age when all you know is her
 name](http://fivethirtyeight.com/features/how-to-tell-someones-age-when-all-you-know-is-her-name/).
 Interestingly, although using this method would help confirm people's
-suspicions that I'm a child (the *A**g**e*|*N**a**m**e* method would
+suspicions that I'm a child (the *Age|Name* method would
 estimate I'm [about 13 years
 old](http://rhiever.github.io/name-age-calculator/index.html?Gender=F&Name=Amelia)),
 that's not how people tend to think about names and ages.
@@ -45,7 +45,7 @@ that's not how people tend to think about names and ages.
 
 Instead, people seem to be taking an approximate age and then just
 grabbing a name out of the hat. In other words, they are using the
-*N**a**m**e*|*A**g**e* method. With that in mind, let's see how likely
+*Name|Age* method. With that in mind, let's see how likely
 Amanda really is. I'm focusing just on girls names for this analysis,
 mostly because Amelia isn't a common boy's name (see my data appendix).
 
