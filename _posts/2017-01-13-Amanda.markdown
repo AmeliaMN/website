@@ -30,7 +30,7 @@ born between **1980-1989**, inclusive. So the question is, given that I
 was born then, **what are the chances my name is Amanda?**
 
 In a blog post at the beginning of last semester,
-[Mine](http://www2.stat.duke.edu/~mc301/)
+[Mine Cetinkaya-Rundel](http://www2.stat.duke.edu/~mc301/)
 [linked](http://citizen-statistician.org/2016/08/13/a-timely-first-day-of-class-example-for-fall-2016-trump-tweets/)
 to a 538 article from 2014 that approaches the problem from the other
 side-- [How to tell someone's age when all you know is her
@@ -125,9 +125,9 @@ Does this trend hold up with the name people are always calling you? Are
 you a Jacob that always gets called Jason? A Kirstin that gets called
 Kristen? (I'm guilty of that one.)
 
-[This is the part of the post that is responsive, so you probably want to head to [my shiny server](http://45.55.32.181/shiny/Amanda/).]
+[This is the part of the post that is responsive, so you probably want to head to [my shiny server](https://ameliamn.shinyapps.io/Amanda/).]
 
-<a class="thumb" href="http://45.55.32.181/shiny/Amanda/"><img src="{{ site.baseurl }}/img/ShinyScreenShot.png" class="img-responsive" alt="You want to go to my server version"></a>
+<a class="thumb" href="https://ameliamn.shinyapps.io/Amanda/"><img src="{{ site.baseurl }}/img/ShinyScreenShot.png" class="img-responsive" alt="You want to go to my server version"></a>
 
 
 Data appendix
