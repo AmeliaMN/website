@@ -119,8 +119,9 @@
 
 <p><a href="http://www.statschat.org.nz/">Thomas Lumley</a> pointed me to this blog post on <a href="http://dlab.berkeley.edu/blog/season-sharing-data-working-newly-released-census-2010-2014-acs-5-year-data-r">working with ACS data in R</a> which was much more readable. I’m not thinking about maps for this particular application, but I can read around that part. I was able to reproduce the code in the post (yeah!) and modify the first retrieval command to get data for states:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stateDemo &lt;- acs14(geography='state', variable = c('B17021_001E'))
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>stateDemo &lt;- acs14(geography='state', variable = c('B17021_001E'))
+</code></pre>
+</div>
 
 <p>But, this isn’t the only variable I’m interested in! So, how do I learn what other variables I want? As far as I can tell, I have to go to the <a href="http://api.census.gov/">Census API site</a> and read <a href="http://api.census.gov/data/2015/acs1/variables.html">this table</a>. Say I’m interested in race. I can search the page for that word, but I get almost 5,000 results.</p>
 

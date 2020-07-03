@@ -23,6 +23,8 @@ background-size: contain
 background-position: bottom left 
 
 
+
+
 # Speaking R
 
 ### Amelia McNamara, PhD
@@ -141,7 +143,7 @@ I found Felienne's 2019 keynote at rstudio::conf extremely inspiring. In particu
 
 ---
 # Carpentries 
-&lt;br&gt;
+
 
 ### <i class="fas  fa-award "></i> Teach the most useful thing first 
 ### <i class="fas  fa-brain "></i> Reduce cognitive load 
@@ -173,167 +175,10 @@ I'm probably already losing some of you, because you are not interested in teach
 ---
 # Remote work
 
+Covid19 pandemic
+
 ???
 If you need to debug or pair program from afar, you may need to speak about your code over the phone or video conferencing
-
----
-class: center, middle
-
-# speaking R
-
-
-
----
-# &lt;-
-
-
-```r
-a &lt;- 4
-```
-
-- "gets" 
-- "is"
-- "set"
-
-???
-Okay, so maybe I've convinced you that we should be verbalizing code (either out loud, or at least in our heads), and that it would be good to be consistent. But, there are so many inconsistencies in how things are pronounced in R!
-
----
-# = 
-
-
-```r
-a = 4
-```
-
-- "equal"
-- "is"
-- "gets"
-
----
-# ~ 
-
-
-```r
-y~x
-```
-
-```
-## y ~ x
-```
-
-- "tilde"
-- "by"
-
----
-# str()
-
-
-```r
-str(penguins)
-```
-
-```
-## tibble [344 × 7] (S3: tbl_df/tbl/data.frame)
-##  $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
-##  $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
-##  $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
-##  $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
-##  $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
-##  $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
-```
-
-- "ess tee arr"
-- "stir"
-
-???
-Trying to save characters...
-
----
-# runif()
-
-
-```r
-runif(10)
-```
-
-```
-##  [1] 0.8123663 0.5042180 0.2770609 0.1014805 0.2109600 0.7965961 0.8094680
-##  [8] 0.6230130 0.3747159 0.4256229
-```
-
-- "run-if" (Nope!)
-- "r unif" (Yep!)
-
-randunif might have been better
-
----
-# parentheses
-
-
-```r
-# install.packages("remotes")
-# remotes::install_github("allisonhorst/palmerpenguins")
-library(palmerpenguins)
-head(penguins)
-```
-
-```
-## # A tibble: 6 x 7
-##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g
-##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt;
-## 1 Adelie  Torge…           39.1          18.7              181        3750
-## 2 Adelie  Torge…           39.5          17.4              186        3800
-## 3 Adelie  Torge…           40.3          18                195        3250
-## 4 Adelie  Torge…           NA            NA                 NA          NA
-## 5 Adelie  Torge…           36.7          19.3              193        3450
-## 6 Adelie  Torge…           39.3          20.6              190        3650
-## # … with 1 more variable: sex &lt;fct&gt;
-```
-
-- "open paren close paren"
-- "left paren right paren"
-- function notation, f(), "of"
-
----
-# lm()
-
-
-```r
-m1 &lt;- lm(mpg ~ wt, data = mtcars)
-```
-
-???
-
-"Linear model of mpg by wt, data equals mtcars"
-
----
-# %&gt;%
-
-
-```r
-penguins %&gt;%
-  head()
-```
-
-```
-## # A tibble: 6 x 7
-##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g
-##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt;
-## 1 Adelie  Torge…           39.1          18.7              181        3750
-## 2 Adelie  Torge…           39.5          17.4              186        3800
-## 3 Adelie  Torge…           40.3          18                195        3250
-## 4 Adelie  Torge…           NA            NA                 NA          NA
-## 5 Adelie  Torge…           36.7          19.3              193        3450
-## 6 Adelie  Torge…           39.3          20.6              190        3650
-## # … with 1 more variable: sex &lt;fct&gt;
-```
-
-- "percent greater than percent"
-- "pipe"
-- "then"
-
 
 ---
 # Universal design 
@@ -374,55 +219,305 @@ Emily Shea - "Perl Out Loud" ([video](https://www.youtube.com/watch?v=Mz3JeYfBTc
 ---
 # A shared mental model of how to read code
 
-Felienne 
-
-
-
 &gt; [...T]he students of the experimental group scored significantly higher in the Remembering-level questions [...] There is no significant difference between the two groups in their answers to the Understanding-level questions. [...] participants in both groups followed some of the instructed vocalizations more frequently such as the variable's assignment (is). Vocalizing the indentation spaces in a for-loop was among the least followed. 
 
 
-.footnote[
-Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students
-
-[CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504)
-] 
-
----
-# "silent" characters
-
-- close paren ```)```
-- comma ```,```
-- underscores! ```_```
-- spaces ```  ```
-- linebreaks 
-
-Sometimes, people don't say characters that appear on the screen. I have heard both `read.csv()` and `read_csv()` pronounced as "read cee ess vee" 
+.footnote[Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students [CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504)] 
 
 
 ---
-&gt; "It’s a language for data analysis. And if you think that the language is a little incoherent, a little confusing, a bit of a maze, well then all I have to say is welcome to data analysis."
-- Roger Peng, [useR 2018 keynote](https://www.youtube.com/watch?v=5033jBHFiHE)
+class: center, middle
+
+# speaking R
+
+
 
 ---
-# Phonetic punctuation
+# &lt;-
 
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/xJiHlt8NRqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+```r
+a &lt;- 4
+```
+
+- "a gets four" 
+- "a is four"
+- "set a to 4"
 
 ???
-https://www.youtube.com/watch?v=bcGA4alhPas 5:10 ish
+Okay, so maybe I've convinced you that we should be verbalizing code (either out loud, or at least in our heads), and that it would be good to be consistent. But, there are so many inconsistencies in how things are pronounced in R!
 
-https://www.youtube.com/watch?v=xJiHlt8NRqk
+---
+# = 
+
+
+```r
+a = 4
+```
+
+- "a equal four"
+- "a is four"
+- "a gets four"
+
+---
+&gt;It’s a language for data analysis. And if you think that the language is a little incoherent, a little confusing, a bit of a maze, well then all I have to say is welcome to data analysis.
+
+&gt; - Roger Peng, [useR 2018 keynote](https://www.youtube.com/watch?v=5033jBHFiHE)
+
+---
+# ASCII characters
+
+Sometimes, we just say the name of the ASCII character. [ASCII Pronunciation Rules for Programmers](https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/)
+
+- exclamation mark
+- hash, pound sign, number sign
+- dollar sign
+- bracket
+- brace
+
+
+
+---
+# ~
+
+
+```r
+y~x
+```
+
+```
+## y ~ x
+```
+
+- "tilde"
+- "twiddle"
+- "by"
+
+---
+# brackets
+
+
+```r
+letters[4]
+```
+
+```
+## [1] "d"
+```
+
+- bracket
+- square bracket
+
+---
+# braces
+
+
+```r
+if(a == 4){
+a
+}
+```
+
+```
+## [1] 4
+```
+
+- curly brace
+- squiggly brace
+- brace
+
+---
+# parentheses
+
+
+
+
+```r
+head(penguins)
+```
+
+```
+## # A tibble: 6 x 7
+##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex   
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; 
+## 1 Adelie  Torgersen           39.1          18.7               181        3750 male  
+## 2 Adelie  Torgersen           39.5          17.4               186        3800 female
+## 3 Adelie  Torgersen           40.3          18                 195        3250 female
+## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;  
+## 5 Adelie  Torgersen           36.7          19.3               193        3450 female
+## 6 Adelie  Torgersen           39.3          20.6               190        3650 male
+```
+
+- "head open paren penguins close paren"
+- "head left paren penguins right paren"
+- function notation, f(), "of"
+- "head of penguins"
+
+---
+# str()
+
+
+
+
+```r
+str(penguins)
+```
+
+```
+## tibble [344 × 7] (S3: tbl_df/tbl/data.frame)
+##  $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
+##  $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+##  $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+##  $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
+##  $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+##  $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
+```
+
+- "ess tee arr penguins"
+- "stir penguins"
+
+???
+Trying to save characters...
+
+---
+# runif()
+
+
+```r
+runif(10)
+```
+
+```
+##  [1] 0.6262213 0.1015973 0.9522270 0.5305731 0.3581318 0.6785425 0.2916985 0.6909426 0.8048314 0.3047633
+```
+
+- "run-if ten" (Nope!)
+- "r unif ten" (Yep!)
+
+randunif might have been better
+
+---
+# lm()
+
+
+```r
+m1 &lt;- lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+
+???
+
+"el em of em pee gee by double u tee, data equals em tee cars"
+
+
+---
+# plot()
+
+```r
+plot(penguins$bill_length_mm,
+     penguins$flipper_length_mm)
+```
+
+&lt;img src="SpeakingR_files/figure-html/plotpenguin1-1.png" width="504" /&gt;
+
+
+
+---
+# plot()
+.pull-left[
+
+```r
+plot(flipper_length_mm~bill_length_mm, data=penguins)
+```
+]
+.pull-right[
+&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
+]
+
+---
+# %&gt;%
+
+
+
+
+```r
+penguins %&gt;%
+  head()
+```
+
+```
+## # A tibble: 6 x 7
+##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex   
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; 
+## 1 Adelie  Torgersen           39.1          18.7               181        3750 male  
+## 2 Adelie  Torgersen           39.5          17.4               186        3800 female
+## 3 Adelie  Torgersen           40.3          18                 195        3250 female
+## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;  
+## 5 Adelie  Torgersen           36.7          19.3               193        3450 female
+## 6 Adelie  Torgersen           39.3          20.6               190        3650 male
+```
+
+- "percent greater than percent"
+- "pipe"
+- "then"
+- "penguins then head"
+
+---
+# "Ceci n'est pas un pipe"
+
+Generally, | is the pipe (as in unix), but we use that to mean "or" in R. 
+
+---
+# silent characters
+
+
+```r
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+
+- close paren 
+- square brackets
+- comma 
+- underscores
+- periods
+- spaces 
+- linebreaks
+
+
+Sometimes, people don't say characters that appear on the screen. I have heard both `read.csv()` and `read_csv()` pronounced as "read cee ess vee"
+
+???
+
+
+
+
+---
+class: middle, center
+# Victor Borge, Phonetic Punctuation
+
+
+&lt;iframe width="1120" height="630" src="https://www.youtube.com/embed/xJiHlt8NRqk?start=72" frameborder="0" allow="accelerometer; autoPlay="1"; mute="1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+???
+Starts at 1:12, stop at 2:02 (audience member's face)
 
 
 ---
 # Screen readers
 
+[Insert screen reader video]
+
+---
+class: center, middle
+
+# syntax
+
+
 ---
 &gt; For this article, we conducted **four empirical studies on programming language syntax** as part of a larger analysis [...] two surveys [...] on the intuitiveness of syntax,  two studies on the accuracy rates of novices using a total of six programming languages: Ruby, Java, Perl, Python, Randomo, and Quorum. Randomo was designed by randomly choosing some keywords from the ASCII table (a metaphorical placebo). To our surprise, **we found that languages using a more traditional C-style syntax** (both Perl and Java) **did not afford accuracy rates significantly higher than a language with randomly generated keywords**, **but that languages which deviate** (Quorum, Python, and Ruby) **did**.
-http://bit.ly/EmpiricalProgrammingSyntax
-An Empirical Investigation into Programming Language Syntax
-	Andreas Stefik and Susanna Siebert
-	
+
+&gt; http://bit.ly/EmpiricalProgrammingSyntax An Empirical Investigation into Programming Language Syntax Andreas Stefik and Susanna Siebert
+
 ---
 # data8 exercise 1 (python)
 
@@ -447,7 +542,7 @@ plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 
 .footnote[
 [data8 lesson 1.3](https://predictablynoisy.com/data8-template/textbook/01/3/1/literary-characters/)
-] 
+]
 
 ---
 # Exercise ported to tidyverse R
@@ -604,7 +699,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
   facet_grid(~cyl)
 ```
 
-![](SpeakingR_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
+&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-26-1.png" width="504" /&gt;
 
 
 
@@ -621,7 +716,7 @@ tl;dr they (we?) didn't find a difference between base, formula, and tidyverse s
 
 .footnote[
 [ ICER '19: Proceedings of the 2019 ACM Conference on International Computing Education ResearchJuly 2019 Pages 239–247](https://dl.acm.org/doi/10.1145/3291279.3339421)
-] 
+]
 
 ---
 # Another "experiment"
@@ -632,29 +727,72 @@ tl;dr they (we?) didn't find a difference between base, formula, and tidyverse s
 
 ```r
 GSS &lt;- readr::read_csv("data/GSS_clean.csv")
+library(infer)
 boot &lt;- GSS %&gt;%
-  infer::specify(response = highest_year_of_school_completed) %&gt;%
-  infer::generate(reps = 1000, type = "bootstrap") %&gt;%
-  infer::calculate(stat = "mean")
+  specify(response = highest_year_of_school_completed) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "mean")
 ```
 
 
 ```r
-boot &lt;- mosaic::do(1000) * mosaic::mean(~highest_year_of_school_completed, data = resample(GSS))
+library(mosaic)
+boot &lt;- do(1000) * mean(~highest_year_of_school_completed, 
+                        data = resample(GSS))
 ```
+
+---
+class: center, middle
+# Syntax-specific pronunciation
+
+---
+# -&gt;
+
+In tidyverse syntax, perhaps the right assignment operator makes more sense,
+
+
+```r
+GSS %&gt;%
+  specify(response = highest_year_of_school_completed) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "mean") -&gt;
+  boot
+```
+
+- "into"?
+
+---
+# |
+
+Sometimes, in formula syntax, | takes on other meanings,
+
+
+```r
+gf_point(bill_length_mm~flipper_length_mm|sex, data=penguins)
+```
+
+&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-30-1.png" width="504" /&gt;
+
+- "given"
+
+Is this an R homonym/homograph?
+
+???
+homonym has the same pronunciation but different meanings
+homograph is spelled the same, but different meanings
 
 ---
 # What's hard about learning R?
 
+- inconsistency
 - variables
-- inconsistency 
-- 
+
 
 ---
 class: title-slide, left, top
 background-image: url(img/comments.png)
 background-size: contain
-background-position: bottom left 
+background-position: bottom left
 
 
 # Thank you
@@ -663,10 +801,9 @@ background-position: bottom left
 ### Assistant Professor of Computer &amp; &lt;br&gt;Information Sciences
 ### University of St Thomas&lt;br&gt;St Paul, MN, USA
 
-[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)  
-[<i class="fab  fa-github "></i> AmeliaMN](www.github.com/AmeliaMN)  
+[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)
+[<i class="fab  fa-github "></i> AmeliaMN](www.github.com/AmeliaMN)
 
----
 
 
 
