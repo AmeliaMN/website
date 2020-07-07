@@ -40,12 +40,20 @@ background-position: bottom left
 
 Hi, I'm Amelia McNamara. I'm an assistant professor at the University of St Thomas in Minnesota. I tweet at AmeliaMN, which is a double entendre because my last name is McNamara and I live in Minnesota. I just tweeted a link to these slides if you want to follow along. 
 
----
+- Statistics professor
+- Teacher of R
+    - high school students
+    - high school teachers
+    - college students
+    - data science professionals
+    - other statisticians
+- Interested in language (college English major)
 
-class: middle
+---
 background-image: url(img/mpls-stp-8.5x11-DakotaMap.jpg)
 background-size: cover
 background-position: top left
+
 
 .footnote[
  Dakota landmap by [Marlena Myles](https://marlenamyl.es/) 
@@ -53,29 +61,45 @@ background-position: top left
 
 ???
 
-Wahpekute 
+Even though we're at a virtual conference, I want us to take a moment to consider the physical space we are each in, and the history of that space. The United States is built on land forcibly taken from Native Americans, and where I am physically located is no different. What is now called Minneapolis and St Paul was originally Dakota land, and continues to have a vibrant Native community. 
 
-Even though we're at a virtual conference, I want us to take a moment to consider the physical space we are each in, and the history of that space. The United States is built on land forcibly taken from Native Americans, and where I am physically located is no different. What is now called Minneapolis and St Paul was originally [Dakota] land, and continues to have a vibrant Native community. 
-
-Sioux? Anishinabewaki?
-https://native-land.ca/maps/territories/wahpekute/
-http://aktalakota.stjo.org/site/News2?page=NewsArticle&amp;id=8309
-
-I chose this beautiful map of sites in the Twin Cities, labeled in the  [Dakota] language, to show you where I'm physically grounded, and the idea of language is one I'm going to take into my talk.
+I chose this beautiful map of sites in the Twin Cities, labeled in the Dakota language, to show you where I'm physically grounded, and the idea of language is one I'm going to take into my talk.
 
 ---
-class: top
-background-image: url(img/CodeAsLanguage.png)
-background-size: contain
-background-position: top center
+# Big ideas
 
-.footnote[
- [Tweet](https://twitter.com/AmeliaMN/status/1016569243947724800) 
+- code as language
+- specifically, R code as language
+
+```r
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+- how this relates to teaching R, as well as writing R
+- syntax considerations
+- speak code out loud!
+
+.pull-right[
+&lt;img src="img/lter_penguins.png" width="800" /&gt;
 ]
 
+.footnote[[Penguin data](https://github.com/allisonhorst/palmerpenguins) and [penguin art](https://github.com/allisonhorst/palmerpenguins/tree/master/man/figures) by [Allison Horst](https://twitter.com/allison_horst)
+]
 
 ???
 In particular, I am interested in the idea of code as language. I'm a teacher, and have taught thousands of people how to program, mostly in R. So, I'm interested in how best to teach people programming languages, as well as how thinking of code as a language can help everyone (even experts) be more productive. 
+
+---
+name: cheatsheet
+class: center, middle
+background-image: url(img/Syntax-cheatsheet.jpg)
+background-size: contain
+
+.footnote[
+Syntax cheatsheet available from the &lt;br&gt; RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+]
+
+???
+I think of three main R syntaxes, so I made this cheatsheet for my students to show them what the other syntaxes look like. 
 
 ---
 class: top
@@ -90,11 +114,28 @@ background-position: top center
 Another aspect I'm interested in is how programming languages shape the way we think. We know human language shapes our thinking, so why should programming languages be different? 
 
 ---
+name: KAMSC
+class: big-bullet
 # Key Attributes of a Modern Statistical Computing Tool
 
-- Accessibility
+
+.footnote[McNamara, A. Key Attributes of a Modern Statistical Computing Tool. [The American Statistician, Volume 73, Issue 4. 2019](https://www.tandfonline.com/doi/abs/10.1080/00031305.2018.1482784). Or, [free pre-print on arXiv](https://arxiv.org/abs/1610.00985).
+]
+
+{{content}}
+
+
+???
+Last year, I published a paper in The American Statistician, based on my dissertation research. In it, I outline an updated set of attributes for a statistical computing tool. I was inspired by the work of John Tukey in the 1960s, and Rolf Biehler, in the 1990s, both of whom thought about how our statistical interfaces could make us more productive, and how they could better support students. 
+
+One of the attributes that I outlined is "inherent documentation." Essentially, this means that a tool should make it clear what it is doing. In a Graphical User Interface, that might mean an icon or animation that visually shows what a button does. In a programming language, it means language attributes that closely mimic human language. 
+
+---
+template: KAMSC
+
+- **Accessibility**
 - Easy entry for novice users
-- Data as a first-order persistent object
+- Data as a first/order persistent object
 - Support for a cycle of exploratory and confirmatory analysis
 - Flexible plot creation
 - Support for randomization throughout
@@ -103,16 +144,92 @@ Another aspect I'm interested in is how programming languages shape the way we t
 - Simple support for narrative, publishing, and reproducibility
 - Flexibility to build extensions
 
+---
+template: KAMSC
 
-[The American Statistician, Volume 73, Issue 4. 2019. ](https://www.tandfonline.com/doi/abs/10.1080/00031305.2018.1482784)
-[Free pre-print on arXiv](https://arxiv.org/abs/1610.00985)
-
-???
-Last year, I published a paper in The American Statistician, based on my dissertation research. In it, I outline an updated set of attributes for a statistical computing tool. I was inspired by the work of John Tukey in the 1960s, and Rolf Biehler, in the 1990s, both of whom thought about how our statistical interfaces could make us more productive, and how they could better support students. 
-
-One of the attributes that I outlined is "inherent documentation." Essentially, this means that a tool should make it clear what it is doing. In a Graphical User Interface, that might mean an icon or animation that visually shows what a button does. In a programming language, it means language attributes that closely mimic human language. 
+- Accessibility
+- **Easy entry for novice users**
+- Data as a first/order persistent object
+- Support for a cycle of exploratory and confirmatory analysis
+- Flexible plot creation
+- Support for randomization throughout
+- Interactivity at every level
+- Inherent documentation
+- Simple support for narrative, publishing, and reproducibility
+- Flexibility to build extensions
 
 ---
+template: KAMSC
+
+- Accessibility
+- Easy entry for novice users
+- Data as a first/order persistent object
+- Support for a cycle of exploratory and confirmatory analysis
+- Flexible plot creation
+- Support for randomization throughout
+- Interactivity at every level
+- **Inherent documentation**
+- Simple support for narrative, publishing, and reproducibility
+- Flexibility to build extensions
+
+---
+layout: false
+class: center, middle
+# Accessibility 
+
+---
+# Universal design 
+
+&gt; "Universal Design is the design and composition of an environment so that it can be accessed, understood and used to the greatest extent possible by all people regardless of their age, size, ability or disability."
+
+&gt; "An environment (or any building, product, or service in that environment) should be designed to meet the needs of all people who wish to use it."
+
+.footnote[What is Universal Design? [Centre for Excellence in Universal Design](http://universaldesign.ie/What-is-Universal-Design/)
+]
+
+???
+
+Some people can't see. Some people can't type
+
+
+
+
+---
+class: big-bullet
+# People who can't type
+
+Two main strategies:
+- Speak to the computer:
+    - Naomi Saphra, ["What Does a Coder Do If They Can't Type?"](http://nsaphra.github.io/post/hands/)
+    - Emily Shea, ["Perl Out Loud"](https://www.youtube.com/watch?v=Mz3JeYfBTcY)
+- Speak to another person: 
+    - Ian Gilman, ["Wrists &amp; Apprentices"](https://blog.iangilman.com/2018/06/wrists-apprentices.html)
+
+&gt; "by the time I was 20 I had developed a chronic wrist injury that I still have decades later. Maybe I should have walked away from computers, but by then I was hooked! That was a dark time, but eventually I struck upon a solution... I could dictate my code to someone else who could be my hands."
+
+&gt; - Ian Gilman
+
+???
+
+Emily speaks Perl code outloud, and 
+
+
+
+---
+class: big-bullet
+# People who can't see
+
+Main strategy:
+- have the computer speak to you
+    - Jonathan Godfrey and Thodor Loots. "Statistical Software (R, SAS, SPSS, and Minitab) for Blind Students and Practitioners" [JSS, Volume 58 Software Review 1](https://www.jstatsoft.org/article/view/v058s01)
+    - Jonathan Godfrey, [Statistical software and blind users](https://r-resources.massey.ac.nz/StatSoftware/) (tl;dr R is best, but could be better)
+    - Jonathan Godfrey, [Interactive graphs for blind and print disabled people](https://www.youtube.com/watch?v=E1wS-sK2RLs) useR! 2017 ("SAS is catching up")
+
+.footnote[I guess I'm saying, check out [Dr. Jonathan Godfrey's work](https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=416430)
+]
+
+---
+class: big-bullet
 # English as the language of computing
 
 - C
@@ -122,21 +239,40 @@ One of the attributes that I outlined is "inherent documentation." Essentially, 
 - C#
 - Visual Basic
 - JavaScript
-- PHP
 - R
+- PHP
+- Swift
+
+.footnote[Top 10 programming languages for July 2020, [TIOBE Index](https://www.tiobe.com/tiobe-index/) ([Commentary by Hadley Wickham](https://twitter.com/hadleywickham/status/1279405379449913344?s=20))
+]
 
 ???
 Of course, even this seemingly-uncontroversial statement is loaded with implicit cultural implications, most specifically about what is "inherently" clear about English. The top ten programming languages in the TIOBE index are all based on English, and there are very few programming languages based in other languages. 
 
 So, "clear for whom" is obviously a question. 
 
+
 ---
-# How to teach programming (and other things)
+class: center, middle
+# Ease of entry
 
-Felienne’s rstudio::conf 2019 keynote, Explicit Direct Instruction in Programming Education
-&lt;video src="https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2"&gt;video&lt;/video&gt;
 
-([video](https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2))
+---
+class: big-bullet
+## <i class="fas  fa-chalkboard-teacher "></i> How to teach programming (and other things)
+
+- Minimal guidance does not work
+- There is research about how people learn!
+- Not enough debate in CS education
+- Phonetics versus whole language debate in teaching/learning reading
+- We teach kids how to sound things out
+- Silent reading comes later
+
+
+
+.footnote[
+Felienne’s rstudio::conf 2019 keynote, Explicit Direct Instruction in Programming Education ([video](https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2))
+]
 
 ???
 I found Felienne's 2019 keynote at rstudio::conf extremely inspiring. In particular, one of her takeaways was how verbalizing code helps people learn better. She drew on the literature of [linguistics], and has done some studies on having students read code out loud. This was already something I was doing in my teaching, but I immediately became even more dedicated to it.
@@ -150,91 +286,150 @@ I found Felienne's 2019 keynote at rstudio::conf extremely inspiring. In particu
 ### <i class="fas  fa-keyboard "></i> Don't touch the learner's keyboard 
 ### <i class="fas  fa-volume-up "></i> Verbalize what you are doing 
 
+.footnote[[The Carpentries](https://carpentries.org/) is a global non-profit with the goal of increasing access to computational and data skills. You can become a certified [Instructor](https://carpentries.org/become-instructor/) by taking their training. 
+]
+
 ???
 In the summer of 2019, I had the opportunity to get Carpentries certified, where I beefed up on data-driven practices for teaching coding, one of which is "don't touch the learners keyboard" and another is "verbalize what you are doing." 
 
-These two practices go hand in hand, particularly when you're debugging code. 
+These two practices go hand in hand, particularly when you're debugging code.
+
+And, they tie in with what Felienne was saying. If we are going to start with "sounding out" code, students will have fewer objects to hold in their working memory. 
 
 ---
-# Language acquisition 
+# Pair programming 
 
-This is a well-established field. We know (some things) about how humans acquire spoken language
+.center[
+&lt;iframe width="800" height="500"  src="https://www.youtube.com/embed/vgkahOzFH2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+.footnote[[Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+]
 
 ???
-Maybe we can use this information to support people acquiring programming languages
+One person "drives" (hands on keyboard), and the other "navigates" (helps guide). 
 
 ---
-# Efficiency 
+class: center, middle
+# Flexibility to build extensions
+
+---
+# Why should I care?
+
+## Efficiency 
 
 Coders do things like work to improve their typing speed to improve their programming, why not think about the language issues, as well?
+
+## Remote work
+
+Covid19 pandemic
+
+## Increasing use of packages
 
 
 ???
 I'm probably already losing some of you, because you are not interested in teaching and learning. But, I believe these concepts can also help you work more efficiently. If programmers are spending time trying to speed up their typing speeds, maybe they can spend some time thinking about other ways in which their 
 
----
-# Remote work
-
-Covid19 pandemic
-
-???
 If you need to debug or pair program from afar, you may need to speak about your code over the phone or video conferencing
 
 ---
-# Universal design 
+class: center, middle
 
-&gt; "Universal Design is the design and composition of an environment so that it can be accessed, understood and used to the greatest extent possible by all people regardless of their age, size, ability or disability."
+# Okay, we should speak R out loud. How do we do it?
 
-&gt; - [Centre for Excellence in Universal Design](universaldesign.ie/What-is-Universal-Design/)
 
-???
-
-Some people can't see. Some people can't type
 
 ---
-# Statistical software and blind users
+# "Standards for reading code out loud?"
 
-tl;dr R is best, but could be better
+!["If you say "hash bang bin bash" or "shebang bash", just about everyone will know that means "#!/bin/bash". If they don't they'll say, "Huh?", and you step it down a notch "At the top of the file: Pound sign, exclamation mark, slash, bin, slash, bash, newline". If they still don't get it, you step it down yet again: "See that keyboard in front of you? See the "3" key? That mark on the top when you press shift is a pound sign, that.""](img/StackExchange1.png)
 
-.footnote[Jonathan Godfrey, [Statistical software and blind users](https://r-resources.massey.ac.nz/StatSoftware/)]
 
----
-# Perl Out Loud
-
-Emily Shea - "Perl Out Loud" ([video](https://www.youtube.com/watch?v=Mz3JeYfBTcY))
+.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
+]
 
 ---
-&gt; Due to this disability, I cannot type or write by hand. Many people have asked me about the stack that enables me to be productive in spite of this limitation. I hope this information is helpful both for people with more severe limitations, and for programmers with mild repetitive stress injuries who can benefit from reducing their keyboard use.
-- Naomi Saphra, ["What Does a Coder Do If They Can't Type?"](nsaphra.github.io/post/hands/)
+# "Standards for reading code out loud?"
+
+!["I agree. I almost never read the code "word for word" I just explain what it is doing [...] But I would never try to type it with my tongue"](img/StackExchange2.png)
+
+
+.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
+]
 
 ---
-&gt; […] by the time I was 20 I had developed a chronic wrist injury that I still have decades later. Maybe I should have walked away from computers, but by then I was hooked! That was a dark time, but eventually I struck upon a solution… I could dictate my code to someone else who could be my hands.
-- Ian Gilman, ["Wrists &amp; Apprentices"](https://blog.iangilman.com/2018/06/wrists-apprentices.html)
-
----
-# Pair programming 
-
-[Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q)
-
----
+class: big-bullet
 # A shared mental model of how to read code
 
-&gt; [...T]he students of the experimental group scored significantly higher in the Remembering-level questions [...] There is no significant difference between the two groups in their answers to the Understanding-level questions. [...] participants in both groups followed some of the instructed vocalizations more frequently such as the variable's assignment (is). Vocalizing the indentation spaces in a for-loop was among the least followed. 
+- "The students of the experimental group scored significantly higher in the Remembering-level questions"
+- "There is no significant difference between the two groups in their answers to the Understanding-level questions."
+- "Participants in both groups followed some of the instructed vocalizations more frequently such as the variable's assignment (is)."
+- "Vocalizing the indentation spaces in a for-loop was among the least followed."
 
 
 .footnote[Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students [CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504)] 
-
 
 ---
 class: center, middle
 
 # speaking R
 
+---
+# Some pronunciations are clear
 
+
+```r
+mean()
+summary()
+help()
+paste()
+```
+
+???
+
+Again, remembering that this is based on English
 
 ---
-# &lt;-
+# Others are... less so 
+.pull-left[
+## str()
 
+
+```r
+str(penguins)
+```
+
+- "ess tee arr penguins"
+- "stir penguins"
+]
+
+.pull-right[
+## runif()
+
+
+```r
+runif(10)
+```
+
+```
+##  [1] 0.7962136 0.9595775 0.6976004 0.4761702 0.2948626 0.4687127 0.6978841 0.1616418 0.2586518 0.5456262
+```
+
+- "run-if ten" (Nope!)
+- "r unif ten" (Yep!)
+
+randunif might have been better
+]
+
+???
+Trying to save characters...
+
+tapply, sqrt
+
+---
+# Assignment operators
+
+.pull-left[
 
 ```r
 a &lt;- 4
@@ -242,22 +437,43 @@ a &lt;- 4
 
 - "a gets four" 
 - "a is four"
-- "set a to 4"
+- "set a to 4"] 
 
-???
-Okay, so maybe I've convinced you that we should be verbalizing code (either out loud, or at least in our heads), and that it would be good to be consistent. But, there are so many inconsistencies in how things are pronounced in R!
-
----
-# = 
-
+.pull-right[
 
 ```r
-a = 4
+a &lt;- 4
 ```
 
 - "a equal four"
 - "a is four"
 - "a gets four"
+]
+
+???
+Okay, so maybe I've convinced you that we should be verbalizing code (either out loud, or at least in our heads), and that it would be good to be consistent. But, there are so many inconsistencies in how things are pronounced in R!
+
+---
+# Even more assignment operators
+
+.pull-left[
+In tidyverse syntax, perhaps the right assignment operator makes more sense,
+
+
+```r
+penguins %&gt;%
+  head() -&gt;
+first_penguins
+```
+
+- "into"?
+- "gets"?
+]
+
+.pull-right[
+
+]
+
 
 ---
 &gt;It’s a language for data analysis. And if you think that the language is a little incoherent, a little confusing, a bit of a maze, well then all I have to say is welcome to data analysis.
@@ -265,16 +481,32 @@ a = 4
 &gt; - Roger Peng, [useR 2018 keynote](https://www.youtube.com/watch?v=5033jBHFiHE)
 
 ---
+# Sadly, I can't tell you "the" answer
+
+- LaTeX 
+- gif
+
+![Screenshot of the Merriam-Webster dictionary entry for the word gif](img/gif.png)
+.footnote[
+Merriam-Webster [entry for the word gif](https://www.merriam-webster.com/dictionary/GIF)
+]
+???
+I say "lay-tech" and "gif" but there are many other accepted pronunciations. Most important thing is consistency. 
+
+
+---
 # ASCII characters
 
-Sometimes, we just say the name of the ASCII character. [ASCII Pronunciation Rules for Programmers](https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/)
+Sometimes, we just say the name of the ASCII character. 
 
-- exclamation mark
-- hash, pound sign, number sign
-- dollar sign
-- bracket
-- brace
+- **!** exclamation mark 
+- **#** hash, pound sign, number sign
+- **$** dollar sign
+- **[** bracket
+- **{** brace
 
+
+.footnote[[ASCII Pronunciation Rules for Programmers](https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/)]
 
 
 ---
@@ -282,7 +514,7 @@ Sometimes, we just say the name of the ASCII character. [ASCII Pronunciation Rul
 
 
 ```r
-y~x
+y ~ x
 ```
 
 ```
@@ -294,8 +526,10 @@ y~x
 - "by"
 
 ---
-# brackets
+# brackets, braces, and parentheses
 
+.pull-left[
+## brackets
 
 ```r
 letters[4]
@@ -307,14 +541,14 @@ letters[4]
 
 - bracket
 - square bracket
-
----
-# braces
+]
+.pull-right[
+## braces
 
 
 ```r
-if(a == 4){
-a
+if (a == 4) {
+  a
 }
 ```
 
@@ -325,6 +559,7 @@ a
 - curly brace
 - squiggly brace
 - brace
+] 
 
 ---
 # parentheses
@@ -350,89 +585,43 @@ head(penguins)
 
 - "head open paren penguins close paren"
 - "head left paren penguins right paren"
-- function notation, f(), "of"
+- function notation, `\(f()\)`, "of"
 - "head of penguins"
 
 ---
-# str()
+# Functions that work well this way 
 
-
-
-
-```r
-str(penguins)
-```
-
-```
-## tibble [344 × 7] (S3: tbl_df/tbl/data.frame)
-##  $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
-##  $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
-##  $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
-##  $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
-##  $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
-##  $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
-```
-
-- "ess tee arr penguins"
-- "stir penguins"
-
-???
-Trying to save characters...
-
----
-# runif()
+## lm()
 
 
 ```r
-runif(10)
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
 ```
 
-```
-##  [1] 0.6262213 0.1015973 0.9522270 0.5305731 0.3581318 0.6785425 0.2916985 0.6909426 0.8048314 0.3047633
-```
-
-- "run-if ten" (Nope!)
-- "r unif ten" (Yep!)
-
-randunif might have been better
-
----
-# lm()
-
+## plot()
 
 ```r
-m1 &lt;- lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+plot(penguins$bill_length_mm, penguins$flipper_length_mm)
+plot(flipper_length_mm ~ bill_length_mm, data = penguins)
 ```
 
 ???
 
 "el em of em pee gee by double u tee, data equals em tee cars"
 
-
 ---
-# plot()
+# Less effective as things get more verbose
+
 
 ```r
-plot(penguins$bill_length_mm,
-     penguins$flipper_length_mm)
+summary(lm(bill_length_mm ~ flipper_length_mm, data = penguins))
+
+m1 &lt;- lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+summary(m1)
 ```
 
-&lt;img src="SpeakingR_files/figure-html/plotpenguin1-1.png" width="504" /&gt;
+`\(f(g(h(x)))\)`
 
-
-
----
-# plot()
-.pull-left[
-
-```r
-plot(flipper_length_mm~bill_length_mm, data=penguins)
-```
-]
-.pull-right[
-&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
-]
 
 ---
 # %&gt;%
@@ -462,10 +651,100 @@ penguins %&gt;%
 - "then"
 - "penguins then head"
 
+???
+
+Idea for pronunciation may have come from Heike. 
+I struggle because I don't know how to say a line break. 
+
+
+
 ---
+
+&lt;iframe width="1008" height="630" src="https://www.youtube.com/embed/K-ss_ag2k9E?start=1316" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+
+.footnote[Hadley Wickham, [Data Science with R](https://www.youtube.com/watch?v=K-ss_ag2k9E). Reed College, 2016.]
+
+---
+smart: false
 # "Ceci n'est pas un pipe"
 
-Generally, | is the pipe (as in unix), but we use that to mean "or" in R. 
+In programming, **|** is often thought of as "the pipe" (as in unix), but we use that symbol to mean "or" in R. 
+
+
+```r
+penguins %&gt;%
+  filter(species == "Adelie" | bill_length_mm &gt; 50)
+```
+
+.pull-left[
+&lt;img src="img/pipe.png" width="980" /&gt;
+]
+.pull-right[
+&lt;img src="img/MagrittePipe.jpg" width="168" /&gt;
+]
+
+.footnote[[maggritr package](https://magrittr.tidyverse.org/), Magritte's [The Trachery of Images](https://en.wikipedia.org/wiki/The_Treachery_of_Images)]
+
+---
+class: center, middle
+
+# What makes learning language hard?
+
+---
+## homonyms, homophones, and homographs
+
+.pull-left[
+## homophones
+
+Pronounced the same, spelled differently, different meanings. 
+- pear/pair
+- week/weak
+- meet/meat
+- sea/see
+
+![](img/homonym.gif)
+
+]
+
+.pull-right[
+## homographs
+
+Spelled the same, different pronunciation, different meaning.
+
+- bass
+- buffet
+- tear
+
+]
+
+???
+Bass drum, go fishing and catch a bass.
+Eat at the buffet, get buffetted about
+A tear ran down my face because I got a tear in my dress
+
+---
+# R examples
+
+## vbar, |
+
+Usually, "or"
+
+```r
+penguins %&gt;%
+  filter(species == "Adelie" | bill_length_mm &gt; 50)
+```
+
+Sometimes, in formula syntax, the vbar **|** takes on another meaning, "given" or "by"
+
+
+```r
+gf_point(bill_length_mm ~ flipper_length_mm | sex, data = penguins)
+```
+
+???
+homonym has the same pronunciation but different meanings
+homograph is spelled the same, but different meanings
 
 ---
 # silent characters
@@ -477,35 +756,54 @@ lm(bill_length_mm ~ flipper_length_mm, data = penguins)
 
 - close paren 
 - square brackets
-- comma 
-- underscores
-- periods
+- commas
 - spaces 
 - linebreaks
+
+- underscores
+- periods
 
 
 Sometimes, people don't say characters that appear on the screen. I have heard both `read.csv()` and `read_csv()` pronounced as "read cee ess vee"
 
+---
+# periods
+
+Periods don't hold their semantic meaning in R, sometimes they indicate a method, 
+
+
+```r
+plot.dendrogram
+plot.factor
+plot.lm
+```
+
+and sometimes they are just delimiters,
+
+
+```r
+read.csv()
+as.character()
+```
+
+
 ???
-
-
-
+as.character, plot.data.frame, plot.dendrogram, etc. 
 
 ---
 class: middle, center
 # Victor Borge, Phonetic Punctuation
 
 
-&lt;iframe width="1120" height="630" src="https://www.youtube.com/embed/xJiHlt8NRqk?start=72" frameborder="0" allow="accelerometer; autoPlay="1"; mute="1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="1008" height="630" src="https://www.youtube.com/embed/xJiHlt8NRqk?start=72" frameborder="0" allow="accelerometer; autoPlay="1"; mute="1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.footnote[Victor Borge, [Phonetic Punctuation](https://www.youtube.com/embed/xJiHlt8NRqk)
+]
 
 ???
 Starts at 1:12, stop at 2:02 (audience member's face)
 
 
----
-# Screen readers
-
-[Insert screen reader video]
 
 ---
 class: center, middle
@@ -514,9 +812,16 @@ class: center, middle
 
 
 ---
-&gt; For this article, we conducted **four empirical studies on programming language syntax** as part of a larger analysis [...] two surveys [...] on the intuitiveness of syntax,  two studies on the accuracy rates of novices using a total of six programming languages: Ruby, Java, Perl, Python, Randomo, and Quorum. Randomo was designed by randomly choosing some keywords from the ASCII table (a metaphorical placebo). To our surprise, **we found that languages using a more traditional C-style syntax** (both Perl and Java) **did not afford accuracy rates significantly higher than a language with randomly generated keywords**, **but that languages which deviate** (Quorum, Python, and Ruby) **did**.
 
-&gt; http://bit.ly/EmpiricalProgrammingSyntax An Empirical Investigation into Programming Language Syntax Andreas Stefik and Susanna Siebert
+
+![](img/Quorum.png)
+C-style languages (Perl and Java) were no better than Randomo, but non-C-style were better (Quorum, Python, Ruby). 
+
+.footnote[Andreas Stefik and Susanna Siebert.  An Empirical Investigation into Programming Language Syntax. [ACM Transactions on Computing Education, Volume 13 Number 4, 2013](https://dl.acm.org/doi/10.1145/2534973) ]
+
+???
+
+For this article, we conducted **four empirical studies on programming language syntax** as part of a larger analysis [...] two surveys [...] on the intuitiveness of syntax,  two studies on the accuracy rates of novices using a total of six programming languages: Ruby, Java, Perl, Python, Randomo, and Quorum. Randomo was designed by randomly choosing some keywords from the ASCII table (a metaphorical placebo). To our surprise, **we found that languages using a more traditional C-style syntax** (both Perl and Java) **did not afford accuracy rates significantly higher than a language with randomly generated keywords**, **but that languages which deviate** (Quorum, Python, and Ruby) **did**.
 
 ---
 # data8 exercise 1 (python)
@@ -544,6 +849,10 @@ plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 [data8 lesson 1.3](https://predictablynoisy.com/data8-template/textbook/01/3/1/literary-characters/)
 ]
 
+???
+
+Looks like arrange is misspelled, but it's actually "a range." 
+
 ---
 # Exercise ported to tidyverse R
 
@@ -570,13 +879,7 @@ ggplot(cum_counts) +
 
 
 ---
-class: center, middle
-background-image: url(img/Syntax-cheatsheet.jpg)
-background-size: contain
-
-.footnote[
-[contributed cheatsheets](https://github.com/rstudio/cheatsheets/raw/master/syntax.pdf)
-]
+template: cheatsheet
 
 ---
 &gt;"Less volume, more creativity."
@@ -699,7 +1002,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
   facet_grid(~cyl)
 ```
 
-&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-26-1.png" width="504" /&gt;
+&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-37-1.png" width="504" /&gt;
 
 
 
@@ -718,8 +1021,17 @@ tl;dr they (we?) didn't find a difference between base, formula, and tidyverse s
 [ ICER '19: Proceedings of the 2019 ACM Conference on International Computing Education ResearchJuly 2019 Pages 239–247](https://dl.acm.org/doi/10.1145/3291279.3339421)
 ]
 
+???
+
+No teaching!
+
 ---
 # Another "experiment"
+
+Pre-labs available on [GitHub](https://github.com/AmeliaMN/STAT220-labs)
+
+???
+Lots of teaching
 
 ---
 # Bootstrap
@@ -737,49 +1049,32 @@ boot &lt;- GSS %&gt;%
 
 ```r
 library(mosaic)
-boot &lt;- do(1000) * mean(~highest_year_of_school_completed, 
-                        data = resample(GSS))
+boot &lt;- do(1000) * mean(~highest_year_of_school_completed,
+  data = resample(GSS)
+)
 ```
+
+
 
 ---
 class: center, middle
-# Syntax-specific pronunciation
+
+# So, what do we do?
 
 ---
-# -&gt;
+.pull-left[
+&lt;img src="img/xaringan.png" width="796" /&gt;
 
-In tidyverse syntax, perhaps the right assignment operator makes more sense,
-
-
-```r
-GSS %&gt;%
-  specify(response = highest_year_of_school_completed) %&gt;%
-  generate(reps = 1000, type = "bootstrap") %&gt;%
-  calculate(stat = "mean") -&gt;
-  boot
-```
-
-- "into"?
-
----
-# |
-
-Sometimes, in formula syntax, | takes on other meanings,
+One way to standardize pronunciation is to use the International Phonetic Alphabet, like Yihui Xie has here on the GitHub page for xaringan. 
+]
+.pull-right[
+&lt;img src="img/IPA.jpg" width="567" /&gt;
+]
 
 
-```r
-gf_point(bill_length_mm~flipper_length_mm|sex, data=penguins)
-```
-
-&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-30-1.png" width="504" /&gt;
-
-- "given"
-
-Is this an R homonym/homograph?
-
-???
-homonym has the same pronunciation but different meanings
-homograph is spelled the same, but different meanings
+.footnote[
+[International Phonetic Association](https://www.internationalphoneticassociation.org/), IPA image via [wikipedia](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet). [GitHub page for xaringan](https://github.com/yihui/xaringan)
+]
 
 ---
 # What's hard about learning R?
@@ -789,6 +1084,24 @@ homograph is spelled the same, but different meanings
 
 
 ---
+# So what?
+
+When teaching:
+
+- read code out loud
+- be consistent
+    - one syntax
+    - one pronunciation
+- have students read code out loud
+
+When developing functions and packages:
+
+- consider pronunciation 
+- be consistent 
+    - within your own code
+    - with the syntax you want to work with
+
+---
 class: title-slide, left, top
 background-image: url(img/comments.png)
 background-size: contain
@@ -796,6 +1109,9 @@ background-position: bottom left
 
 
 # Thank you
+
+- Stefik and graduate students
+- Sean, Julia, Ian, Jesse, Kara
 
 ### Amelia McNamara, PhD
 ### Assistant Professor of Computer &amp; &lt;br&gt;Information Sciences
@@ -821,7 +1137,7 @@ todo:
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false,
-"ratio": "16:10",
+"ratio": "16:8",
 "output": null
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
