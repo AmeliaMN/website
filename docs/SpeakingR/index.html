@@ -412,7 +412,8 @@ runif(10)
 ```
 
 ```
-##  [1] 0.7962136 0.9595775 0.6976004 0.4761702 0.2948626 0.4687127 0.6978841 0.1616418 0.2586518 0.5456262
+##  [1] 0.21007664 0.03999274 0.84504994 0.62477107 0.07228566 0.56369504
+##  [7] 0.47196580 0.08864068 0.94262897 0.79636329
 ```
 
 - "run-if ten" (Nope!)
@@ -442,7 +443,7 @@ a &lt;- 4
 .pull-right[
 
 ```r
-a &lt;- 4
+a = 4
 ```
 
 - "a equal four"
@@ -458,6 +459,9 @@ Okay, so maybe I've convinced you that we should be verbalizing code (either out
 
 .pull-left[
 In tidyverse syntax, perhaps the right assignment operator makes more sense,
+
+
+```
 
 
 ```r
@@ -573,14 +577,14 @@ head(penguins)
 
 ```
 ## # A tibble: 6 x 7
-##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex   
-##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; 
-## 1 Adelie  Torgersen           39.1          18.7               181        3750 male  
-## 2 Adelie  Torgersen           39.5          17.4               186        3800 female
-## 3 Adelie  Torgersen           40.3          18                 195        3250 female
-## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;  
-## 5 Adelie  Torgersen           36.7          19.3               193        3450 female
-## 6 Adelie  Torgersen           39.3          20.6               190        3650 male
+##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex  
+##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt;
+## 1 Adelie  Torge…           39.1          18.7              181        3750 male 
+## 2 Adelie  Torge…           39.5          17.4              186        3800 fema…
+## 3 Adelie  Torge…           40.3          18                195        3250 fema…
+## 4 Adelie  Torge…           NA            NA                 NA          NA &lt;NA&gt; 
+## 5 Adelie  Torge…           36.7          19.3              193        3450 fema…
+## 6 Adelie  Torge…           39.3          20.6              190        3650 male
 ```
 
 - "head open paren penguins close paren"
@@ -636,14 +640,14 @@ penguins %&gt;%
 
 ```
 ## # A tibble: 6 x 7
-##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex   
-##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; 
-## 1 Adelie  Torgersen           39.1          18.7               181        3750 male  
-## 2 Adelie  Torgersen           39.5          17.4               186        3800 female
-## 3 Adelie  Torgersen           40.3          18                 195        3250 female
-## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;  
-## 5 Adelie  Torgersen           36.7          19.3               193        3450 female
-## 6 Adelie  Torgersen           39.3          20.6               190        3650 male
+##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex  
+##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt;
+## 1 Adelie  Torge…           39.1          18.7              181        3750 male 
+## 2 Adelie  Torge…           39.5          17.4              186        3800 fema…
+## 3 Adelie  Torge…           40.3          18                195        3250 fema…
+## 4 Adelie  Torge…           NA            NA                 NA          NA &lt;NA&gt; 
+## 5 Adelie  Torge…           36.7          19.3              193        3450 fema…
+## 6 Adelie  Torge…           39.3          20.6              190        3650 male
 ```
 
 - "percent greater than percent"
@@ -1002,7 +1006,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
   facet_grid(~cyl)
 ```
 
-&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-37-1.png" width="504" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-37-1.png" width="504" /&gt;
 
 
 
@@ -1137,7 +1141,7 @@ todo:
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false,
-"ratio": "16:8",
+"ratio": "16:9",
 "output": null
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
