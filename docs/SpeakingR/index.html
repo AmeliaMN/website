@@ -47,7 +47,6 @@ Hi, I'm Amelia McNamara. I'm an assistant professor at the University of St Thom
     - college students
     - data science professionals
     - other statisticians
-- Interested in language (college English major)
 
 ---
 background-image: url(img/mpls-stp-8.5x11-DakotaMap.jpg)
@@ -66,24 +65,28 @@ Even though we're at a virtual conference, I want us to take a moment to conside
 I chose this beautiful map of sites in the Twin Cities, labeled in the Dakota language, to show you where I'm physically grounded, and the idea of language is one I'm going to take into my talk.
 
 ---
+class: big-bullet
 # Big ideas
-
-- code as language
-- specifically, R code as language
 
 ```r
 lm(bill_length_mm ~ flipper_length_mm, data = penguins)
 ```
-- how this relates to teaching R, as well as writing R
-- syntax considerations
-- speak code out loud!
-
+.pull-left[
+- code is language
+- specifically, R code is language
+- consistency is key
+- code should be speakable
+- there are levels of verbalization for code
+- words are easy, symbols are hard
+- we need a style guide for speaking R
+]
 .pull-right[
 &lt;img src="img/lter_penguins.png" width="800" /&gt;
 ]
 
 .footnote[[Penguin data](https://github.com/allisonhorst/palmerpenguins) and [penguin art](https://github.com/allisonhorst/palmerpenguins/tree/master/man/figures) by [Allison Horst](https://twitter.com/allison_horst)
 ]
+
 
 ???
 In particular, I am interested in the idea of code as language. I'm a teacher, and have taught thousands of people how to program, mostly in R. So, I'm interested in how best to teach people programming languages, as well as how thinking of code as a language can help everyone (even experts) be more productive. 
@@ -95,11 +98,28 @@ background-image: url(img/Syntax-cheatsheet.jpg)
 background-size: contain
 
 .footnote[
-Syntax cheatsheet available from the &lt;br&gt; RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+Syntax cheatsheet available from the RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
 ]
 
 ???
-I think of three main R syntaxes, so I made this cheatsheet for my students to show them what the other syntaxes look like. 
+I'm going to be talking a lot about R code, and how it is like human language. Like many languages, R has different dialects, and when learning the language it's best to stick to just one. 
+
+I think of three main R dialects (call them syntaxes or DSLs), so I made this cheatsheet for my students to show them what the other syntaxes look like. 
+
+data.table is not on here, because I don't know how to do data.table visualizations or data.table summary statistics. If you want to implement these same tasks in data.table and send them to me, I'd love to see them! 
+
+---
+class: middle
+![](img/Syntax-cheatsheet-zoomed.jpg)
+.footnote[
+Syntax cheatsheet available from the RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+]
+
+???
+
+Of course, practitioners really mix and match the syntaxes shown here, and more, when they are working. But, this has been useful to show students which "column" we are working in, and what the other approaches are. 
+
+I'm interested in how the different syntaxes may impact learning, and whether they lead to different conceptions of data. 
 
 ---
 class: top
@@ -111,12 +131,12 @@ background-position: top center
  Lera Boroditsky, "How language shapes the way we think" ([video](http://bit.ly/LanguageShapesThinking))]
 
 ???
-Another aspect I'm interested in is how programming languages shape the way we think. We know human language shapes our thinking, so why should programming languages be different? 
+We know human language shapes our thinking, so why should programming languages be different? 
 
 ---
 name: KAMSC
 class: big-bullet
-# Key Attributes of a Modern Statistical Computing Tool
+### Key Attributes of a Modern Statistical Computing Tool
 
 
 .footnote[McNamara, A. Key Attributes of a Modern Statistical Computing Tool. [The American Statistician, Volume 73, Issue 4. 2019](https://www.tandfonline.com/doi/abs/10.1080/00031305.2018.1482784). Or, [free pre-print on arXiv](https://arxiv.org/abs/1610.00985).
@@ -124,6 +144,22 @@ class: big-bullet
 
 {{content}}
 
+
+
+
+---
+template: KAMSC
+
+- Accessibility
+- Easy entry for novice users
+- Data as a first/order persistent object
+- Support for a cycle of exploratory and confirmatory analysis
+- Flexible plot creation
+- Support for randomization throughout
+- Interactivity at every level
+- Inherent documentation
+- Simple support for narrative, publishing, and reproducibility
+- Flexibility to build extensions
 
 ???
 Last year, I published a paper in The American Statistician, based on my dissertation research. In it, I outline an updated set of attributes for a statistical computing tool. I was inspired by the work of John Tukey in the 1960s, and Rolf Biehler, in the 1990s, both of whom thought about how our statistical interfaces could make us more productive, and how they could better support students. 
@@ -173,11 +209,33 @@ template: KAMSC
 - Flexibility to build extensions
 
 ---
+template: KAMSC
+
+- Accessibility
+- Easy entry for novice users
+- Data as a first/order persistent object
+- Support for a cycle of exploratory and confirmatory analysis
+- Flexible plot creation
+- Support for randomization throughout
+- Interactivity at every level
+- Inherent documentation
+- Simple support for narrative, publishing, and reproducibility
+- **Flexibility to build extensions**
+
+???
+I'm probably already losing some of you, because you are not interested in teaching and learning. But, I believe these concepts can also help you work more efficiently. If programmers are spending time trying to speed up their typing speeds, maybe they can spend some time thinking about other ways in which their 
+
+If you need to debug or pair program from afar, you may need to speak about your code over the phone or video conferencing
+
+If you make code that is speakable, that may increase the use of your packages. 
+
+---
 layout: false
 class: center, middle
 # Accessibility 
 
 ---
+class: middle
 # Universal design 
 
 &gt; "Universal Design is the design and composition of an environment so that it can be accessed, understood and used to the greatest extent possible by all people regardless of their age, size, ability or disability."
@@ -205,14 +263,9 @@ Two main strategies:
 - Speak to another person: 
     - Ian Gilman, ["Wrists &amp; Apprentices"](https://blog.iangilman.com/2018/06/wrists-apprentices.html)
 
-&gt; "by the time I was 20 I had developed a chronic wrist injury that I still have decades later. Maybe I should have walked away from computers, but by then I was hooked! That was a dark time, but eventually I struck upon a solution... I could dictate my code to someone else who could be my hands."
-
-&gt; - Ian Gilman
+"By the time I was 20 I had developed a chronic wrist injury that I still have decades later. Maybe I should have walked away from computers, but by then I was hooked! That was a dark time, but eventually I struck upon a solution... I could dictate my code to someone else who could be my hands." - Ian Gilman
 
 ???
-
-Emily speaks Perl code outloud, and 
-
 
 
 ---
@@ -221,12 +274,20 @@ class: big-bullet
 
 Main strategy:
 - have the computer speak to you
-    - Jonathan Godfrey and Thodor Loots. "Statistical Software (R, SAS, SPSS, and Minitab) for Blind Students and Practitioners" [JSS, Volume 58 Software Review 1](https://www.jstatsoft.org/article/view/v058s01)
+    - Jonathan Godfrey and Thodor Loots. "Statistical Software (R, SAS, SPSS, and Minitab) for Blind Students and Practitioners" [JSS, Volume 58 Software Review 1](https://www.jstatsoft.org/article/view/v058s01). 2013.
     - Jonathan Godfrey, [Statistical software and blind users](https://r-resources.massey.ac.nz/StatSoftware/) (tl;dr R is best, but could be better)
     - Jonathan Godfrey, [Interactive graphs for blind and print disabled people](https://www.youtube.com/watch?v=E1wS-sK2RLs) useR! 2017 ("SAS is catching up")
 
 .footnote[I guess I'm saying, check out [Dr. Jonathan Godfrey's work](https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=416430)
 ]
+
+???
+
+Blind folks use screen readers, which read code outloud to them. I know people do this for all programming languages, but I'm most familiar with R. 
+
+RStudio used to not be accessible, now is minimally accessible. But, R itself is good. 
+
+I don't know much about how Deaf folks learn to read. 
 
 ---
 class: big-bullet
@@ -249,7 +310,9 @@ class: big-bullet
 ???
 Of course, even this seemingly-uncontroversial statement is loaded with implicit cultural implications, most specifically about what is "inherently" clear about English. The top ten programming languages in the TIOBE index are all based on English, and there are very few programming languages based in other languages. 
 
-So, "clear for whom" is obviously a question. 
+So, "clear for whom" is obviously a question.
+
+And, there is likely intersectionality. If you are blind and your first language isn't English, likely to be doubly hard. 
 
 
 ---
@@ -264,15 +327,16 @@ class: big-bullet
 - Minimal guidance does not work
 - There is research about how people learn!
 - Not enough debate in CS education
-- Phonetics versus whole language debate in teaching/learning reading
-- We teach kids how to sound things out
+- Teach people how to read out loud
 - Silent reading comes later
 
 
 
 .footnote[
-Felienne’s rstudio::conf 2019 keynote, Explicit Direct Instruction in Programming Education ([video](https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2))
+Felienne’s rstudio::conf 2019 keynote, Explicit Direct Instruction in Programming Education ([video](https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2)), &lt;br&gt; Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students [CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504)
 ]
+
+
 
 ???
 I found Felienne's 2019 keynote at rstudio::conf extremely inspiring. In particular, one of her takeaways was how verbalizing code helps people learn better. She drew on the literature of [linguistics], and has done some studies on having students read code out loud. This was already something I was doing in my teaching, but I immediately became even more dedicated to it.
@@ -287,6 +351,7 @@ I found Felienne's 2019 keynote at rstudio::conf extremely inspiring. In particu
 ### <i class="fas  fa-volume-up "></i> Verbalize what you are doing 
 
 .footnote[[The Carpentries](https://carpentries.org/) is a global non-profit with the goal of increasing access to computational and data skills. You can become a certified [Instructor](https://carpentries.org/become-instructor/) by taking their training. 
+Mine Çetinkaya-Rundel's [data science in a box](https://datasciencebox.org/hello/design-principles/) follows these principles, including "start with cake."
 ]
 
 ???
@@ -309,73 +374,16 @@ And, they tie in with what Felienne was saying. If we are going to start with "s
 ???
 One person "drives" (hands on keyboard), and the other "navigates" (helps guide). 
 
----
-class: center, middle
-# Flexibility to build extensions
+Common in computer science education, reminds me of Gilman's wrists and apprentices
 
----
-# Why should I care?
-
-## Efficiency 
-
-Coders do things like work to improve their typing speed to improve their programming, why not think about the language issues, as well?
-
-## Remote work
-
-Covid19 pandemic
-
-## Increasing use of packages
-
-
-???
-I'm probably already losing some of you, because you are not interested in teaching and learning. But, I believe these concepts can also help you work more efficiently. If programmers are spending time trying to speed up their typing speeds, maybe they can spend some time thinking about other ways in which their 
-
-If you need to debug or pair program from afar, you may need to speak about your code over the phone or video conferencing
 
 ---
 class: center, middle
 
-# Okay, we should speak R out loud. How do we do it?
-
-
+# Inherent documentation
 
 ---
-# "Standards for reading code out loud?"
-
-!["If you say "hash bang bin bash" or "shebang bash", just about everyone will know that means "#!/bin/bash". If they don't they'll say, "Huh?", and you step it down a notch "At the top of the file: Pound sign, exclamation mark, slash, bin, slash, bash, newline". If they still don't get it, you step it down yet again: "See that keyboard in front of you? See the "3" key? That mark on the top when you press shift is a pound sign, that.""](img/StackExchange1.png)
-
-
-.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
-]
-
----
-# "Standards for reading code out loud?"
-
-!["I agree. I almost never read the code "word for word" I just explain what it is doing [...] But I would never try to type it with my tongue"](img/StackExchange2.png)
-
-
-.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
-]
-
----
-class: big-bullet
-# A shared mental model of how to read code
-
-- "The students of the experimental group scored significantly higher in the Remembering-level questions"
-- "There is no significant difference between the two groups in their answers to the Understanding-level questions."
-- "Participants in both groups followed some of the instructed vocalizations more frequently such as the variable's assignment (is)."
-- "Vocalizing the indentation spaces in a for-loop was among the least followed."
-
-
-.footnote[Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students [CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504)] 
-
----
-class: center, middle
-
-# speaking R
-
----
-# Some pronunciations are clear
+# Some R function pronunciations are clear
 
 
 ```r
@@ -408,24 +416,60 @@ str(penguins)
 
 
 ```r
-runif(10)
+runif(4)
 ```
 
 ```
-##  [1] 0.21007664 0.03999274 0.84504994 0.62477107 0.07228566 0.56369504
-##  [7] 0.47196580 0.08864068 0.94262897 0.79636329
+## [1] 0.6112587 0.3194828 0.4140225 0.6779386
 ```
 
-- "run-if ten" (Nope!)
-- "r unif ten" (Yep!)
+- "run-if four" (Nope!)
+- "r unif four" (Yep!)
 
-randunif might have been better
+`randunif` might have been better
 ]
 
 ???
 Trying to save characters...
 
 tapply, sqrt
+
+
+---
+# "Standards for reading code out loud?"
+
+
+&lt;img src="img/StackExchange1.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
+]
+
+???
+"If you say "hash bang bin bash" or "shebang bash", just about everyone will know that means "#!/bin/bash". If they don't they'll say, "Huh?", and you step it down a notch "At the top of the file: Pound sign, exclamation mark, slash, bin, slash, bash, newline". If they still don't get it, you step it down yet again: "See that keyboard in front of you? See the "3" key? That mark on the top when you press shift is a pound sign, that.""
+
+---
+# "Standards for reading code out loud?"
+
+&lt;img src="img/StackExchange2.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
+]
+
+???
+"I agree. I almost never read the code "word for word" I just explain what it is doing [...] But I would never try to type it with my tongue"
+
+I'll bring in the codinghorror page later. 
+
+There are levels of verbalization for code
+ 
+
+---
+class: center, middle
+
+# speaking R
+
+
 
 ---
 # Assignment operators
@@ -443,7 +487,7 @@ a &lt;- 4
 .pull-right[
 
 ```r
-a = 4
+a &lt;- 4
 ```
 
 - "a equal four"
@@ -451,17 +495,9 @@ a = 4
 - "a gets four"
 ]
 
-???
-Okay, so maybe I've convinced you that we should be verbalizing code (either out loud, or at least in our heads), and that it would be good to be consistent. But, there are so many inconsistencies in how things are pronounced in R!
-
----
-# Even more assignment operators
-
-.pull-left[
 In tidyverse syntax, perhaps the right assignment operator makes more sense,
 
 
-```
 
 
 ```r
@@ -471,18 +507,18 @@ first_penguins
 ```
 
 - "into"?
-- "gets"?
-]
-
-.pull-right[
-
-]
+- "gives"?
 
 
----
-&gt;It’s a language for data analysis. And if you think that the language is a little incoherent, a little confusing, a bit of a maze, well then all I have to say is welcome to data analysis.
 
-&gt; - Roger Peng, [useR 2018 keynote](https://www.youtube.com/watch?v=5033jBHFiHE)
+
+
+???
+Okay, so maybe I've convinced you that we should be verbalizing code (either out loud, or at least in our heads), and that it would be good to be consistent. But, there are so many inconsistencies in how things are pronounced in R!
+
+Right assignment operator?
+
+"Participants in both groups followed some of the instructed vocalizations more frequently such as the variable's assignment (is)." Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students [CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504))
 
 ---
 # Sadly, I can't tell you "the" answer
@@ -497,99 +533,69 @@ Merriam-Webster [entry for the word gif](https://www.merriam-webster.com/diction
 ???
 I say "lay-tech" and "gif" but there are many other accepted pronunciations. Most important thing is consistency. 
 
+---
+class: middle
+&gt;It’s a language for data analysis. And if you think that the language is a little incoherent, a little confusing, a bit of a maze, well then all I have to say is welcome to data analysis.
+
+&gt; - Roger Peng, [useR 2018 keynote](https://www.youtube.com/watch?v=5033jBHFiHE)
+
+
+
 
 ---
+class: big-bullet
 # ASCII characters
 
-Sometimes, we just say the name of the ASCII character. 
-
-- **!** exclamation mark 
-- **#** hash, pound sign, number sign
-- **$** dollar sign
-- **[** bracket
-- **{** brace
-
+Sometimes, we just say the name of the ASCII character, but sometimes it has additional meaning in R.
 
 .footnote[[ASCII Pronunciation Rules for Programmers](https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/)]
 
 
----
-# ~
+- **"** quotation mark
+
+--
+
+- **$** dollar sign
+
+--
+
+- **!** exclamation mark, or "not"
+
+--
+
+- **#** pound sign, number sign, or "comment"
+
+--
+
+- **~** tilde, twiddle, or "by"
+
+--
+
+- **|** bar, vertical bar, vbar, or "or"
 
 
-```r
-y ~ x
-```
-
-```
-## y ~ x
-```
-
-- "tilde"
-- "twiddle"
-- "by"
-
----
-# brackets, braces, and parentheses
-
-.pull-left[
-## brackets
-
-```r
-letters[4]
-```
-
-```
-## [1] "d"
-```
-
-- bracket
-- square bracket
-]
-.pull-right[
-## braces
 
 
-```r
-if (a == 4) {
-  a
-}
-```
+???
 
-```
-## [1] 4
-```
+Here's the coding horror reference 
 
-- curly brace
-- squiggly brace
-- brace
-] 
+comes back to levels of verbalization
+
+
 
 ---
+class: big-bullet
 # parentheses
-
-
 
 
 ```r
 head(penguins)
 ```
 
-```
-## # A tibble: 6 x 7
-##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex  
-##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt;
-## 1 Adelie  Torge…           39.1          18.7              181        3750 male 
-## 2 Adelie  Torge…           39.5          17.4              186        3800 fema…
-## 3 Adelie  Torge…           40.3          18                195        3250 fema…
-## 4 Adelie  Torge…           NA            NA                 NA          NA &lt;NA&gt; 
-## 5 Adelie  Torge…           36.7          19.3              193        3450 fema…
-## 6 Adelie  Torge…           39.3          20.6              190        3650 male
-```
-
 - "head open paren penguins close paren"
 - "head left paren penguins right paren"
-- function notation, `\(f()\)`, "of"
+- function notation, `\(f(x)\)`, "f of x"
 - "head of penguins"
 
 ---
@@ -624,10 +630,17 @@ m1 &lt;- lm(bill_length_mm ~ flipper_length_mm, data = penguins)
 summary(m1)
 ```
 
-`\(f(g(h(x)))\)`
+Much like `\(f(g(h(x)))\)`
+
+???
+
+This is more efficient, like Luke Tierney was saying in his keynote, but I don't think it's as readable. 
+
+Even with the two-line approach, you need to figure out what `m1` refers to, almost like determining what a pronoun refers to in human language. In essence, you're doing the nesting yourself. 
 
 
 ---
+class: big-bullet
 # %&gt;%
 
 
@@ -636,18 +649,6 @@ summary(m1)
 ```r
 penguins %&gt;%
   head()
-```
-
-```
-## # A tibble: 6 x 7
-##   species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g sex  
-##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt;
-## 1 Adelie  Torge…           39.1          18.7              181        3750 male 
-## 2 Adelie  Torge…           39.5          17.4              186        3800 fema…
-## 3 Adelie  Torge…           40.3          18                195        3250 fema…
-## 4 Adelie  Torge…           NA            NA                 NA          NA &lt;NA&gt; 
-## 5 Adelie  Torge…           36.7          19.3              193        3450 fema…
-## 6 Adelie  Torge…           39.3          20.6              190        3650 male
 ```
 
 - "percent greater than percent"
@@ -663,17 +664,40 @@ I struggle because I don't know how to say a line break.
 
 
 ---
+# %&gt;%'s power comes from longer pipelines
 
-&lt;iframe width="1008" height="630" src="https://www.youtube.com/embed/K-ss_ag2k9E?start=1316" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+```r
+foo_foo &lt;- little_bunny()
+
+bop_on(
+  scoop_up(
+    hop_through(foo_foo, forest),
+    field_mouse
+  ),
+  head
+)
+
+# vs
+
+foo_foo %&gt;%
+  hop_through(forest) %&gt;%
+  scoop_up(field_mouse) %&gt;%
+  bop_on(head)
+```
 
 
-.footnote[Hadley Wickham, [Data Science with R](https://www.youtube.com/watch?v=K-ss_ag2k9E). Reed College, 2016.]
+.footnote[Via Hadley Wickham's [Data Science with R](https://www.youtube.com/watch?v=K-ss_ag2k9E). Reed College, 2016.]
+
+???
+
+Less efficient in compute time, more efficient in human brains
 
 ---
 smart: false
 # "Ceci n'est pas un pipe"
 
-In programming, **|** is often thought of as "the pipe" (as in unix), but we use that symbol to mean "or" in R. 
+**|** is often thought of as "the pipe" (as in unix), but we use that symbol to mean "or" in R. 
 
 
 ```r
@@ -682,13 +706,16 @@ penguins %&gt;%
 ```
 
 .pull-left[
-&lt;img src="img/pipe.png" width="980" /&gt;
+&lt;img src="img/pipe.png" width="50%" /&gt;
 ]
 .pull-right[
-&lt;img src="img/MagrittePipe.jpg" width="168" /&gt;
+&lt;img src="img/MagrittePipe.jpg" width="110%" /&gt;
 ]
 
-.footnote[[maggritr package](https://magrittr.tidyverse.org/), Magritte's [The Trachery of Images](https://en.wikipedia.org/wiki/The_Treachery_of_Images)]
+.footnote[[maggritr package](https://magrittr.tidyverse.org/), René Magritte's [The Treachery of Images](https://en.wikipedia.org/wiki/The_Treachery_of_Images)]
+
+???
+In his keynote yesterday, Luke Tierney talked about the possible addition of **|&gt;** as a pipe in base R!
 
 ---
 class: center, middle
@@ -722,106 +749,145 @@ Spelled the same, different pronunciation, different meaning.
 
 ]
 
+.footnote[gif from &lt;a href="https://en.wikipedia.org/wiki/The_Beginning_of_the_End_(30_Rock)"&gt;30 Rock&lt;/a&gt;
+]
+
 ???
+Homonyms can be either homophones or homographs. A more restrictive definition says they need to be **both**-- spelled the same, pronounced the same, different meanings. 
+
 Bass drum, go fishing and catch a bass.
-Eat at the buffet, get buffetted about
+Eat at the buffet, get buffeted about
 A tear ran down my face because I got a tear in my dress
 
+Felienne mentioned these in her keynote, too. 
+
+
 ---
-# R examples
+# R homophones and homographs
 
-## vbar, |
+I have a habit of saying "then" to mean both `%&gt;%` and "linebreak." Those both get pronounced the same, but are spelled very differently, and have different meanings.  
 
-Usually, "or"
+The vbar `|` is usually  "or"
 
 ```r
 penguins %&gt;%
-  filter(species == "Adelie" | bill_length_mm &gt; 50)
+  filter(species == "Chinstrap" | bill_length_mm &gt; 50)
 ```
 
-Sometimes, in formula syntax, the vbar **|** takes on another meaning, "given" or "by"
+but in formula syntax, it takes on another meaning, "given."
 
 
 ```r
 gf_point(bill_length_mm ~ flipper_length_mm | sex, data = penguins)
 ```
 
-???
-homonym has the same pronunciation but different meanings
-homograph is spelled the same, but different meanings
-
 ---
-# silent characters
+# R homophones and homographs
 
+Periods are homonyms-- they sometimes they indicate a method, 
 
 ```r
-lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+plot.dendrogram()
+plot.factor()
+plot.lm()
+as.character()
+data.frame()
 ```
 
-- close paren 
-- square brackets
-- commas
-- spaces 
-- linebreaks
-
-- underscores
-- periods
-
-
-Sometimes, people don't say characters that appear on the screen. I have heard both `read.csv()` and `read_csv()` pronounced as "read cee ess vee"
-
----
-# periods
-
-Periods don't hold their semantic meaning in R, sometimes they indicate a method, 
-
-
-```r
-plot.dendrogram
-plot.factor
-plot.lm
-```
-
-and sometimes they are just delimiters,
+and sometimes are just delimiters,
 
 
 ```r
 read.csv()
-as.character()
+contrib.url()
 ```
 
 
 ???
 as.character, plot.data.frame, plot.dendrogram, etc. 
 
+Usually read "dot." 
+
+
+???
+Homophone-- "then." Spelled differently, different meanings
+Homograph-- vbar. Spelled the same, but different meanings
+
 ---
-class: middle, center
-# Victor Borge, Phonetic Punctuation
+class: big-bullet
+# silent characters
+
+In English, silent letters show up in words like debt, hustle, knight, and many more. In R, there are characters we rarely pronounce.
 
 
-&lt;iframe width="1008" height="630" src="https://www.youtube.com/embed/xJiHlt8NRqk?start=72" frameborder="0" allow="accelerometer; autoPlay="1"; mute="1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+```r
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+.pull-left[
+- close paren 
+- commas
+- spaces 
+- linebreaks
+]
+.pull-right[
+- square brackets 
 
-.footnote[Victor Borge, [Phonetic Punctuation](https://www.youtube.com/embed/xJiHlt8NRqk)
+```r
+letters[4]
+```
+- periods
+- underscores
+
+```r
+read.csv()
+read_csv()
+```
+]
+
+
+???
+Sometimes, people don't say characters that appear on the screen. I have heard both pronounced as "read cee ess vee"
+
+"Vocalizing the indentation spaces in a for-loop was among the least followed." Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students [CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504)
+
+
+---
+# Style
+
+We have style guides for written code, but no style guides for verbal code (yet!). Since the best practice for object names is snake case, we need a way to pronounce the underscore.
+
+
+```r
+penguins$bill_length_mm
+```
+.pull-right[
+&lt;iframe width="504" height="315" src="https://www.youtube.com/embed/xJiHlt8NRqk?start=72" frameborder="0" allow="accelerometer; autoPlay="1"; mute="1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+.footnote[[tidyverse style guide](https://style.tidyverse.org/), Victor Borge, [Phonetic Punctuation](https://www.youtube.com/embed/xJiHlt8NRqk)
 ]
 
 ???
-Starts at 1:12, stop at 2:02 (audience member's face)
+"It was derived from Google’s original R Style Guide - but Google’s current guide is derived from the tidyverse style guide."
 
-
+No good way to pronounce capital letters, so camel case isn't better for verbalization
 
 ---
 class: center, middle
 
 # syntax
 
+???
+
+So, one way to judge a programming language, syntax, or DSL, is by it's "speakability." 
+
 
 ---
+&lt;img src="img/Quorum.png" width="95%" /&gt;
 
 
-![](img/Quorum.png)
-C-style languages (Perl and Java) were no better than Randomo, but non-C-style were better (Quorum, Python, Ruby). 
 
-.footnote[Andreas Stefik and Susanna Siebert.  An Empirical Investigation into Programming Language Syntax. [ACM Transactions on Computing Education, Volume 13 Number 4, 2013](https://dl.acm.org/doi/10.1145/2534973) ]
+.footnote[C-style languages (Perl, Java) were no better than Randomo, but non-C-style (Quorum, Python, Ruby) were. &lt;br&gt; Andreas Stefik and Susanna Siebert.  An Empirical Investigation into Programming Language Syntax. [ACM Transactions on Computing Education, Volume 13 Number 4, 2013](https://dl.acm.org/doi/10.1145/2534973) ]
 
 ???
 
@@ -843,17 +909,21 @@ counts = Table().with_columns([
 # Plot the cumulative counts:
 # how many times in Chapter 1, how many times in Chapters 1 and 2, and so on.
 
-cum_counts = counts.cumsum().with_column('Chapter', np.arange(1, 44, 1))
+*cum_counts = counts.cumsum().with_column('Chapter', np.arange(1, 44, 1))
 cum_counts.plot(column_for_xticks=3)
 plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
 ```
 
 
-.footnote[
-[data8 lesson 1.3](https://predictablynoisy.com/data8-template/textbook/01/3/1/literary-characters/)
+.footnote[[data8.org](http://data8.org/), 
+[data8 lesson 1.3](https://www.inferentialthinking.com/chapters/01/3/Plotting_the_Classics.html)
 ]
 
 ???
+
+Data8 may be the largest data science class ever. Thousands of students take the course in person at UC Berkeley, thousands more on edX
+
+I'm not going to read you all this code. It takes a long time to get through. In a pedagogical setting, that time is not "wasted"-- it's necessary! But I don't think you need me to do it today. 
 
 Looks like arrange is misspelled, but it's actually "a range." 
 
@@ -881,11 +951,14 @@ ggplot(cum_counts) +
   ggtitle("Cumulative Number of Times Each Name Appears")
 ```
 
+???
+
+Similarly, not going to read all this code to you. But, I think it is much more readable. 
 
 ---
 template: cheatsheet
 
----
+???
 &gt;"Less volume, more creativity."
 
 &gt; -Mike McCarthy / mosaic package philosophy
@@ -893,179 +966,210 @@ template: cheatsheet
 
 
 
-
-
-
 ---
 # Summary statistics three ways
 
-
-### base
-
-```r
-mean(mtcars$mpg[mtcars$cyl == 4])
-mean(mtcars$mpg[mtcars$cyl == 6])
-mean(mtcars$mpg[mtcars$cyl == 8])
-
-tapply(mtcars$mpg, mtcars$cyl, mean)
-```
-
-### formula
+**base**
 
 ```r
-library(mosaic)
-mean(mpg ~ cyl, data = mtcars)
+mean(penguins$body_mass_g[penguins$species == "Adelie"])
+mean(penguins$body_mass_g[penguins$species == "Chinstrap"])
+mean(penguins$body_mass_g[penguins$species == "Gentoo"])
+
+tapply(penguins$body_mass_g, penguins$species, mean)
 ```
 
-```
-##        4        6        8 
-## 26.66364 19.74286 15.10000
-```
-
-
-### tidyverse
+**formula**
 
 ```r
-library(dplyr)
-mtcars %&gt;%
-  group_by(cyl) %&gt;%
-  summarize(mean(mpg))
+mean(body_mass_g ~ species, data = penguins)
 ```
 
+**tidyverse**
+
+```r
+penguins %&gt;%
+  group_by(species) %&gt;%
+  summarize(mean(body_mass_g))
 ```
-## # A tibble: 3 x 2
-##     cyl `mean(mpg)`
-##   &lt;dbl&gt;       &lt;dbl&gt;
-## 1     4        26.7
-## 2     6        19.7
-## 3     8        15.1
-```
+
 
 ???
-"of"
+The GAISE guidelines say "Give students experience with multivariable thinking." [GAISE guidelines](https://www.amstat.org/asa/education/Guidelines-for-Assessment-and-Instruction-in-Statistics-Education-Reports.aspx), for PreK-12, and college. Harder in base!
 
 ---
 # Scatterplot three ways
-.pull-left[
-### base
+
+**base**
 
 ```r
-plot(mtcars$disp, mtcars$mpg)
+plot(penguins$flipper_length_mm, penguins$bill_length_mm)
 ```
 
-### formula
+**formula**
 
 ```r
-xyplot(mpg ~ disp, data = mtcars)
+xyplot(bill_length_mm ~ flipper_length_mm, data = penguins)
+
+gf_point(bill_length_mm ~ flipper_length_mm, data = penguins)
 ```
 
-
-```r
-gf_point(mpg ~ disp, data = mtcars)
-```
-]
-.pull-right[
-### tidyverse
+**tidyverse**
 
 ```r
-library(ggplot2)
-ggplot(mtcars) +
-  geom_point(aes(x = disp, y = mpg))
+ggplot(penguins) +
+  geom_point(aes(x = flipper_length_mm, y = bill_length_mm))
 ```
-]
+
 
 ---
 # Sets of scatterplots three ways
 
 
-### base
+**base**
 
 ```r
 par(mfrow = c(1, 3))
-plot(mtcars$disp[mtcars$cyl == 4], mtcars$mpg[mtcars$cyl == 4])
-plot(mtcars$disp[mtcars$cyl == 6], mtcars$mpg[mtcars$cyl == 6])
-plot(mtcars$disp[mtcars$cyl == 8], mtcars$mpg[mtcars$cyl == 8])
+plot(penguins$flipper_length_mm[penguins$species == "Adelie"], penguins$bill_length_mm[penguins$species == "Adelie"])
+plot(penguins$flipper_length_mm[penguins$species == "Chinstrap"], penguins$bill_length_mm[penguins$species == "Chinstrap"])
+plot(penguins$flipper_length_mm[penguins$species == "Gentoo"], penguins$bill_length_mm[penguins$species == "Gentoo"])
 # apply solution?
+```
+
+**formula**
+
+```r
+gf_point(bill_length_mm ~ flipper_length_mm | species, data = penguins)
+```
+
+**tidyverse**
+
+```r
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point() +
+  facet_grid(~species)
+```
+
+
+???
+In programming, if you are repeating yourself a lot, that probably means you can be more efficient.
+
+If you're speaking code, it gets especially tedious to repeat yourself!
+
+
+
+
+
+---
+
+.pull-left[
+&lt;img src="img/syntax_WWW1.png" width="150%" /&gt;
+]
+.pull-right[
+&lt;img src="img/syntax_WWW2.png" width="150%" /&gt;
+]
+
+
+
+.footnote[Timothy Rafalski, P. Merlin Uesbeck, Cristina Panks-Meloney, Patrick Daleiden, William Allee, Amelia McNamara, Andreas Stefik. "A Randomized Controlled Trial on the Wild Wild West of Scientific Computing with Student Learners." [ICER '19: Proceedings of the 2019 ACM Conference on International Computing Education Research July 2019 Pages 239–247](https://dl.acm.org/doi/10.1145/3291279.3339421)
+]
+
+???
+tl;dr they (we?) didn't find a difference between base, formula, and tidyverse syntaxes in completion time or number of errors (qualitative or interpreter)
+
+When I look at the results, what I see is a lot of misunderstanding about variables and dataframes. 
+
+No teaching!
+
+---
+class: big-bullet
+# Another "experiment"
+
+- I've taught R **a lot**, including in introductory statistics labs. 
+    - all base R
+    - all formula
+    - all tidyverse
+- Spring 2020 was my first opportunity to teach introductory statistics labs at St Thomas
+- Decided to teach one lab in formula, one in tidyverse
+- Lab assignments are standardized across all labs (JMP, SPSS, Minitab, Excel, and R)
+- Pre-labs for formula and tidyverse are available on [GitHub](https://github.com/AmeliaMN/STAT220-labs)
+- Videos of labs 5-11 are available on my YouTube channel, [formula labs](https://www.youtube.com/playlist?list=PLik6fAQnSI90QbcUrjizKEn-eFbGM3MkP), [tidyverse labs](https://www.youtube.com/playlist?list=PLik6fAQnSI91S_rKq5T9KRgjHG-dClFzN)
+
+???
+Standardized labs meant I couldn't change what I asked based on syntax
+
+---
+# Bootstrap
+
+### tidyverse
+
+```r
+library(infer)
+boot &lt;- penguins %&gt;%
+  specify(response = flipper_length_mm) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "mean")
 ```
 
 ### formula
 
 ```r
-xyplot(mpg ~ disp | as.factor(cyl), data = mtcars)
-
-library(ggformula)
-gf_point(mpg ~ disp | cyl, data = mtcars)
-```
-
-### tidyverse
-
-```r
-library(ggplot2)
-ggplot(mtcars, aes(x = wt, y = mpg)) +
-  geom_point() +
-  facet_grid(~cyl)
-```
-
-&lt;img src="index_files/figure-html/unnamed-chunk-37-1.png" width="504" /&gt;
-
-
-
-
-
-
-
-
----
-&gt;A Randomized Controlled Trial on the Wild Wild West of Scientific Computing with Student Learners
-Timothy Rafalski, P. Merlin Uesbeck, Cristina Panks-Meloney, Patrick Daleiden, William Allee, Amelia McNamara, Andreas Stefik
-
-tl;dr they (we?) didn't find a difference between base, formula, and tidyverse syntaxes in completion time or number of errors (qualitative or interpreter)
-
-.footnote[
-[ ICER '19: Proceedings of the 2019 ACM Conference on International Computing Education ResearchJuly 2019 Pages 239–247](https://dl.acm.org/doi/10.1145/3291279.3339421)
-]
-
-???
-
-No teaching!
-
----
-# Another "experiment"
-
-Pre-labs available on [GitHub](https://github.com/AmeliaMN/STAT220-labs)
-
-???
-Lots of teaching
-
----
-# Bootstrap
-
-
-```r
-GSS &lt;- readr::read_csv("data/GSS_clean.csv")
-library(infer)
-boot &lt;- GSS %&gt;%
-  specify(response = highest_year_of_school_completed) %&gt;%
-  generate(reps = 1000, type = "bootstrap") %&gt;%
-  calculate(stat = "mean")
-```
-
-
-```r
 library(mosaic)
-boot &lt;- do(1000) * mean(~highest_year_of_school_completed,
-  data = resample(GSS)
+boot &lt;- do(1000) * mean(~flipper_length_mm,
+  data = resample(penguins)
 )
 ```
 
+---
 
+.pull-left[
+**formula**
+- easy
+    - introducing `lm()`, `aov()`, `chisq.test()`, etc after students were familiar with `tally()`, `mean()`, `gf_point()`, etc. (thanks, `mosaic` and `ggformula`!)
+    - inference using distributional approximations, `prop.test()`, `t.test()`
+- hard
+    - dealing with `NA` values
+    - installing packages when we suddenly had to move off RStudio Cloud
+    - data wrangling. I used `filter(penguins,  body_mass_g&gt;6000)` to avoid introducing the `%&gt;%`
+    
+]
+.pull-right[
+**tidyverse**
+- easy
+    - explaining concepts from bootstrap and randomization (thanks, `infer`!)
+    - installing packages when we suddenly had to move off RStudio Cloud
+- hard
+    - explaining the difference between the `%&gt;%` and `+` operators
+    - inconsistency when we got to modeling, `lm()` and `aov()`
+    - inference using distributional approximations (infer has `chisq_test()`, but nothing parallel to `prop.test()` or `t.test()`)
+
+]
+
+**overall**
+- easy
+    - explaining RMarkdown
+    - debugging with hands off the keyboard (even after moving online!)
+- hard
+    - **variables** Students would struggle to understand that `species` was the variable, not `Adelie`, `Chinstrap` and `Gentoo` (levels). 
+    - moving files from a local computer to RStudio Cloud
+    - filepaths
+   - students using the internet to troubleshoot (too much inconsistency online)
+
+???
+Overall, the formula syntax felt more consistent. The folks who work on mosaic, ggformula, etc., have made sure the entire introductory statistics curriculum can be accomplished using that syntax. Those students didn't have to see any dollar signs, and almost every single thing they saw used a formula. 
+
+The tidyverse syntax feels more "useful" to me (bigger use in the wider community), but isn't quite ready for primetime when it comes to the entire intro stats curriculum. 
+
+But, I didn't end up deciding that one was "better" and I'm going to teach both again in the fall. 
 
 ---
 class: center, middle
+# So what?
 
-# So, what do we do?
 
 ---
+# Pronunciation guides for code? 
+
 .pull-left[
 &lt;img src="img/xaringan.png" width="796" /&gt;
 
@@ -1080,30 +1184,35 @@ One way to standardize pronunciation is to use the International Phonetic Alphab
 [International Phonetic Association](https://www.internationalphoneticassociation.org/), IPA image via [wikipedia](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet). [GitHub page for xaringan](https://github.com/yihui/xaringan)
 ]
 
----
-# What's hard about learning R?
 
-- inconsistency
-- variables
 
 
 ---
-# So what?
+class: big-bullet
+# Big ideas
 
-When teaching:
+```r
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+.pull-left[
+- code is language
+- specifically, R code is language
+- consistency is key
+- code should be speakable
+- there are levels of verbalization for code
+- words are easy, symbols are hard
+- we need a style guide for speaking R
+]
+.pull-right[
+&lt;img src="img/lter_penguins.png" width="800" /&gt;
+]
 
-- read code out loud
-- be consistent
-    - one syntax
-    - one pronunciation
-- have students read code out loud
+.footnote[[Penguin data](https://github.com/allisonhorst/palmerpenguins) and [penguin art](https://github.com/allisonhorst/palmerpenguins/tree/master/man/figures) by [Allison Horst](https://twitter.com/allison_horst)
+]
 
-When developing functions and packages:
+???
 
-- consider pronunciation 
-- be consistent 
-    - within your own code
-    - with the syntax you want to work with
+When you are teaching, consider this. When you are developing new packages, new DSLs, new language elements, consider this. How will we pronounce the new pipe?
 
 ---
 class: title-slide, left, top
@@ -1114,25 +1223,24 @@ background-position: bottom left
 
 # Thank you
 
-- Stefik and graduate students
-- Sean, Julia, Ian, Jesse, Kara
+
 
 ### Amelia McNamara, PhD
 ### Assistant Professor of Computer &amp; &lt;br&gt;Information Sciences
 ### University of St Thomas&lt;br&gt;St Paul, MN, USA
 
-[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)
+[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)  
 [<i class="fab  fa-github "></i> AmeliaMN](www.github.com/AmeliaMN)
 
 
 
 
 ???
-todo:
-- post pre-labs to github
-- look at video lengths to add to lab notes txt file
-- look at pre/post data
-- figure out what the rules are about sharing data about students
+Thank you to 
+- Stefik and graduate students
+- Sean, Julia, Ian, Jesse, Kara
+- useR organizing committee
+- you! for watching
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.js"></script>
