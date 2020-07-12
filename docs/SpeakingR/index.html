@@ -81,7 +81,10 @@ lm(bill_length_mm ~ flipper_length_mm, data = penguins)
 - we need a style guide for speaking R
 ]
 .pull-right[
-&lt;img src="img/lter_penguins.png" width="800" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/lter_penguins.png" alt="Drawing of three species of penguins to accompany the penguins data by Allison Horst" width="800" /&gt;
+&lt;p class="caption"&gt;Drawing of three species of penguins to accompany the penguins data by Allison Horst&lt;/p&gt;
+&lt;/div&gt;
 ]
 
 .footnote[[Penguin data](https://github.com/allisonhorst/palmerpenguins) and [penguin art](https://github.com/allisonhorst/palmerpenguins/tree/master/man/figures) by [Allison Horst](https://twitter.com/allison_horst)
@@ -110,7 +113,7 @@ data.table is not on here, because I don't know how to do data.table visualizati
 
 ---
 class: middle
-![](img/Syntax-cheatsheet-zoomed.jpg)
+![Portion of syntax cheatsheet showing how to do summary statistics in all three R syntaxes](img/Syntax-cheatsheet-zoomed.jpg)
 .footnote[
 Syntax cheatsheet available from the RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
 ]
@@ -164,7 +167,9 @@ template: KAMSC
 ???
 Last year, I published a paper in The American Statistician, based on my dissertation research. In it, I outline an updated set of attributes for a statistical computing tool. I was inspired by the work of John Tukey in the 1960s, and Rolf Biehler, in the 1990s, both of whom thought about how our statistical interfaces could make us more productive, and how they could better support students. 
 
-One of the attributes that I outlined is "inherent documentation." Essentially, this means that a tool should make it clear what it is doing. In a Graphical User Interface, that might mean an icon or animation that visually shows what a button does. In a programming language, it means language attributes that closely mimic human language. 
+There are 10 attributes, and not all of them are related to speaking code out loud, but several are. 
+
+
 
 ---
 template: KAMSC
@@ -180,6 +185,10 @@ template: KAMSC
 - Simple support for narrative, publishing, and reproducibility
 - Flexibility to build extensions
 
+???
+
+Accessibility means that a tool needs to be free, or very cheap. It needs to be able to be installed on a variety of operating systems. And, it needs to work for all sorts of people. 
+
 ---
 template: KAMSC
 
@@ -194,6 +203,9 @@ template: KAMSC
 - Simple support for narrative, publishing, and reproducibility
 - Flexibility to build extensions
 
+???
+Easy entry for novices is about getting started using a tool. This is also called "low threshold." It's important to have something that people can get into. 
+
 ---
 template: KAMSC
 
@@ -207,6 +219,9 @@ template: KAMSC
 - **Inherent documentation**
 - Simple support for narrative, publishing, and reproducibility
 - Flexibility to build extensions
+
+???
+The most relevant to speaking code out loud is "inherent documentation." Essentially, this means that a tool should make it clear what it is doing. In a Graphical User Interface, that might mean an icon or animation that visually shows what a button does. In a programming language, it means language attributes that closely mimic human language. 
 
 ---
 template: KAMSC
@@ -223,6 +238,8 @@ template: KAMSC
 - **Flexibility to build extensions**
 
 ???
+Finally, a tool needs to have the flexibility to build extensions. CS ed researchers call this a "high ceiling." Novices should not age-out or experience-out. 
+
 I'm probably already losing some of you, because you are not interested in teaching and learning. But, I believe these concepts can also help you work more efficiently. If programmers are spending time trying to speed up their typing speeds, maybe they can spend some time thinking about other ways in which their 
 
 If you need to debug or pair program from afar, you may need to speak about your code over the phone or video conferencing
@@ -420,7 +437,7 @@ runif(4)
 ```
 
 ```
-## [1] 0.0790570 0.4404925 0.3136728 0.8461065
+## [1] 0.2114302 0.8947885 0.5360934 0.8321805
 ```
 
 - "run-if four" (Nope!)
@@ -439,7 +456,10 @@ tapply, sqrt
 # "Standards for reading code out loud?"
 
 
-&lt;img src="img/StackExchange1.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/StackExchange1.png" alt="Screenshot of StackExchange post about standards for reading code outloud. Text in footnote of this slide." width="75%" /&gt;
+&lt;p class="caption"&gt;Screenshot of StackExchange post about standards for reading code outloud. Text in footnote of this slide.&lt;/p&gt;
+&lt;/div&gt;
 
 
 .footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
@@ -451,7 +471,10 @@ tapply, sqrt
 ---
 # "Standards for reading code out loud?"
 
-&lt;img src="img/StackExchange2.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/StackExchange2.png" alt="Screenshot of StackExchange post about standards for reading code outloud. Text in footnote of this slide." width="75%" /&gt;
+&lt;p class="caption"&gt;Screenshot of StackExchange post about standards for reading code outloud. Text in footnote of this slide.&lt;/p&gt;
+&lt;/div&gt;
 
 .footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
 ]
@@ -706,10 +729,16 @@ penguins %&gt;%
 ```
 
 .pull-left[
-&lt;img src="img/pipe.png" width="50%" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/pipe.png" alt="magrittr hex sticker, with %&amp;gt;% operator" width="50%" /&gt;
+&lt;p class="caption"&gt;magrittr hex sticker, with %&gt;% operator&lt;/p&gt;
+&lt;/div&gt;
 ]
 .pull-right[
-&lt;img src="img/MagrittePipe.jpg" width="110%" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/MagrittePipe.jpg" alt="Rene Magritte's painting, The Treachery of Images" width="110%" /&gt;
+&lt;p class="caption"&gt;Rene Magritte's painting, The Treachery of Images&lt;/p&gt;
+&lt;/div&gt;
 ]
 
 .footnote[[maggritr package](https://magrittr.tidyverse.org/), René Magritte's [The Treachery of Images](https://en.wikipedia.org/wiki/The_Treachery_of_Images)]
@@ -734,7 +763,7 @@ Pronounced the same, spelled differently, different meanings.
 - meet/meat
 - sea/see
 
-![](img/homonym.gif)
+![gif from the TV show 30 Rock, of a male game show host saying "Sorry, it's the other one."](img/homonym.gif)
 
 ]
 
@@ -808,8 +837,6 @@ as.character, plot.data.frame, plot.dendrogram, etc.
 
 Usually read "dot." 
 
-
-???
 Homophone-- "then." Spelled differently, different meanings
 Homograph-- vbar. Spelled the same, but different meanings
 
@@ -883,7 +910,10 @@ So, one way to judge a programming language, syntax, or DSL, is by it's "speakab
 
 
 ---
-&lt;img src="img/Quorum.png" width="95%" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/Quorum.png" alt="Figure from Stefik's paper, comparing Quorum, Perl, Randomo, and Python code for the same task" width="95%" /&gt;
+&lt;p class="caption"&gt;Figure from Stefik's paper, comparing Quorum, Perl, Randomo, and Python code for the same task&lt;/p&gt;
+&lt;/div&gt;
 
 
 
@@ -954,6 +984,8 @@ ggplot(cum_counts) +
 ???
 
 Similarly, not going to read all this code to you. But, I think it is much more readable. 
+
+I wouldn't start with this exercise for novices!! 
 
 ---
 template: cheatsheet
@@ -1063,10 +1095,16 @@ If you're speaking code, it gets especially tedious to repeat yourself!
 ---
 
 .pull-left[
-&lt;img src="img/syntax_WWW1.png" width="150%" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/syntax_WWW1.png" alt="Figure from Rafalinski's paper, showing the setup to the experiment for the formula syntax, and an example of the task" width="150%" /&gt;
+&lt;p class="caption"&gt;Figure from Rafalinski's paper, showing the setup to the experiment for the formula syntax, and an example of the task&lt;/p&gt;
+&lt;/div&gt;
 ]
 .pull-right[
-&lt;img src="img/syntax_WWW2.png" width="150%" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/syntax_WWW2.png" alt="Figure from Rafalinski's paper, showing a variety of student errors for the task in the previous figure." width="150%" /&gt;
+&lt;p class="caption"&gt;Figure from Rafalinski's paper, showing a variety of student errors for the task in the previous figure.&lt;/p&gt;
+&lt;/div&gt;
 ]
 
 
@@ -1171,12 +1209,18 @@ class: center, middle
 # Pronunciation guides for code? 
 
 .pull-left[
-&lt;img src="img/xaringan.png" width="796" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/xaringan.png" alt="Screenshot of the GitHub page for the xaringan package, including pronunciation guide." width="796" /&gt;
+&lt;p class="caption"&gt;Screenshot of the GitHub page for the xaringan package, including pronunciation guide.&lt;/p&gt;
+&lt;/div&gt;
 
 One way to standardize pronunciation is to use the International Phonetic Alphabet, like Yihui Xie has here on the GitHub page for xaringan. 
 ]
 .pull-right[
-&lt;img src="img/IPA.jpg" width="567" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/IPA.jpg" alt="Guide to International Phonetic Alphabet" width="567" /&gt;
+&lt;p class="caption"&gt;Guide to International Phonetic Alphabet&lt;/p&gt;
+&lt;/div&gt;
 ]
 
 
@@ -1204,7 +1248,10 @@ lm(bill_length_mm ~ flipper_length_mm, data = penguins)
 - we need a style guide for speaking R
 ]
 .pull-right[
-&lt;img src="img/lter_penguins.png" width="800" /&gt;
+&lt;div class="figure"&gt;
+&lt;img src="img/lter_penguins.png" alt="Drawing of three species of penguins to accompany the penguins data by Allison Horst" width="800" /&gt;
+&lt;p class="caption"&gt;Drawing of three species of penguins to accompany the penguins data by Allison Horst&lt;/p&gt;
+&lt;/div&gt;
 ]
 
 .footnote[[Penguin data](https://github.com/allisonhorst/palmerpenguins) and [penguin art](https://github.com/allisonhorst/palmerpenguins/tree/master/man/figures) by [Allison Horst](https://twitter.com/allison_horst)
