@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Speaking R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Amelia McNamara, PhD" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+class: title-slide, left, top
+background-image: url(img/comments.png)
+background-size: contain
+background-position: bottom left 
+
+
+
+
+# Speaking R
+
+### Amelia McNamara, PhD
+### Assistant Professor of Computer &amp; &lt;br&gt;Information Sciences
+### University of St Thomas&lt;br&gt;St Paul, MN, USA
+
+[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)  
+[<i class="fab  fa-github "></i> AmeliaMN](www.github.com/AmeliaMN)  
+
+
+
+???
+
+Hi, I'm Amelia McNamara. I'm an assistant professor at the University of St Thomas in Minnesota. I tweet at AmeliaMN, which is a double entendre because my last name is McNamara and I live in Minnesota. I just tweeted a link to these slides if you want to follow along. 
+
+- Statistics professor
+- Teacher of R
+    - high school students
+    - high school teachers
+    - college students
+    - data science professionals
+    - other statisticians
+- Interested in language (college English major)
+
+---
+background-image: url(img/mpls-stp-8.5x11-DakotaMap.jpg)
+background-size: cover
+background-position: top left
+
+
+.footnote[
+ Dakota landmap by [Marlena Myles](https://marlenamyl.es/) 
+]
+
+???
+
+Even though we're at a virtual conference, I want us to take a moment to consider the physical space we are each in, and the history of that space. The United States is built on land forcibly taken from Native Americans, and where I am physically located is no different. What is now called Minneapolis and St Paul was originally Dakota land, and continues to have a vibrant Native community. 
+
+I chose this beautiful map of sites in the Twin Cities, labeled in the Dakota language, to show you where I'm physically grounded, and the idea of language is one I'm going to take into my talk.
+
+---
+# Big ideas
+
+- code as language
+- specifically, R code as language
+
+```r
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+- how this relates to teaching R, as well as writing R
+- syntax considerations
+- speak code out loud!
+
+.pull-right[
+&lt;img src="img/lter_penguins.png" width="800" /&gt;
+]
+
+.footnote[[Penguin data](https://github.com/allisonhorst/palmerpenguins) and [penguin art](https://github.com/allisonhorst/palmerpenguins/tree/master/man/figures) by [Allison Horst](https://twitter.com/allison_horst)
+]
+
+???
+In particular, I am interested in the idea of code as language. I'm a teacher, and have taught thousands of people how to program, mostly in R. So, I'm interested in how best to teach people programming languages, as well as how thinking of code as a language can help everyone (even experts) be more productive. 
+
+---
+name: cheatsheet
+class: center, middle
+background-image: url(img/Syntax-cheatsheet.jpg)
+background-size: contain
+
+.footnote[
+Syntax cheatsheet available from the &lt;br&gt; RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+]
+
+???
+I think of three main R syntaxes, so I made this cheatsheet for my students to show them what the other syntaxes look like. 
+
+---
+class: top
+background-image: url(img/LanguageTED.png)
+background-size: contain
+background-position: top center
+
+.footnote[
+ Lera Boroditsky, "How language shapes the way we think" ([video](http://bit.ly/LanguageShapesThinking))]
+
+???
+Another aspect I'm interested in is how programming languages shape the way we think. We know human language shapes our thinking, so why should programming languages be different? 
+
+---
+name: KAMSC
+class: big-bullet
+# Key Attributes of a Modern Statistical Computing Tool
+
+
+.footnote[McNamara, A. Key Attributes of a Modern Statistical Computing Tool. [The American Statistician, Volume 73, Issue 4. 2019](https://www.tandfonline.com/doi/abs/10.1080/00031305.2018.1482784). Or, [free pre-print on arXiv](https://arxiv.org/abs/1610.00985).
+]
+
+{{content}}
+
+
+???
+Last year, I published a paper in The American Statistician, based on my dissertation research. In it, I outline an updated set of attributes for a statistical computing tool. I was inspired by the work of John Tukey in the 1960s, and Rolf Biehler, in the 1990s, both of whom thought about how our statistical interfaces could make us more productive, and how they could better support students. 
+
+One of the attributes that I outlined is "inherent documentation." Essentially, this means that a tool should make it clear what it is doing. In a Graphical User Interface, that might mean an icon or animation that visually shows what a button does. In a programming language, it means language attributes that closely mimic human language. 
+
+---
+template: KAMSC
+
+- **Accessibility**
+- Easy entry for novice users
+- Data as a first/order persistent object
+- Support for a cycle of exploratory and confirmatory analysis
+- Flexible plot creation
+- Support for randomization throughout
+- Interactivity at every level
+- Inherent documentation
+- Simple support for narrative, publishing, and reproducibility
+- Flexibility to build extensions
+
+---
+template: KAMSC
+
+- Accessibility
+- **Easy entry for novice users**
+- Data as a first/order persistent object
+- Support for a cycle of exploratory and confirmatory analysis
+- Flexible plot creation
+- Support for randomization throughout
+- Interactivity at every level
+- Inherent documentation
+- Simple support for narrative, publishing, and reproducibility
+- Flexibility to build extensions
+
+---
+template: KAMSC
+
+- Accessibility
+- Easy entry for novice users
+- Data as a first/order persistent object
+- Support for a cycle of exploratory and confirmatory analysis
+- Flexible plot creation
+- Support for randomization throughout
+- Interactivity at every level
+- **Inherent documentation**
+- Simple support for narrative, publishing, and reproducibility
+- Flexibility to build extensions
+
+---
+layout: false
+class: center, middle
+# Accessibility 
+
+---
+# Universal design 
+
+&gt; "Universal Design is the design and composition of an environment so that it can be accessed, understood and used to the greatest extent possible by all people regardless of their age, size, ability or disability."
+
+&gt; "An environment (or any building, product, or service in that environment) should be designed to meet the needs of all people who wish to use it."
+
+.footnote[What is Universal Design? [Centre for Excellence in Universal Design](http://universaldesign.ie/What-is-Universal-Design/)
+]
+
+???
+
+Some people can't see. Some people can't type
+
+
+
+
+---
+class: big-bullet
+# People who can't type
+
+Two main strategies:
+- Speak to the computer:
+    - Naomi Saphra, ["What Does a Coder Do If They Can't Type?"](http://nsaphra.github.io/post/hands/)
+    - Emily Shea, ["Perl Out Loud"](https://www.youtube.com/watch?v=Mz3JeYfBTcY)
+- Speak to another person: 
+    - Ian Gilman, ["Wrists &amp; Apprentices"](https://blog.iangilman.com/2018/06/wrists-apprentices.html)
+
+&gt; "by the time I was 20 I had developed a chronic wrist injury that I still have decades later. Maybe I should have walked away from computers, but by then I was hooked! That was a dark time, but eventually I struck upon a solution... I could dictate my code to someone else who could be my hands."
+
+&gt; - Ian Gilman
+
+???
+
+Emily speaks Perl code outloud, and 
+
+
+
+---
+class: big-bullet
+# People who can't see
+
+Main strategy:
+- have the computer speak to you
+    - Jonathan Godfrey and Thodor Loots. "Statistical Software (R, SAS, SPSS, and Minitab) for Blind Students and Practitioners" [JSS, Volume 58 Software Review 1](https://www.jstatsoft.org/article/view/v058s01)
+    - Jonathan Godfrey, [Statistical software and blind users](https://r-resources.massey.ac.nz/StatSoftware/) (tl;dr R is best, but could be better)
+    - Jonathan Godfrey, [Interactive graphs for blind and print disabled people](https://www.youtube.com/watch?v=E1wS-sK2RLs) useR! 2017 ("SAS is catching up")
+
+.footnote[I guess I'm saying, check out [Dr. Jonathan Godfrey's work](https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=416430)
+]
+
+---
+class: big-bullet
+# English as the language of computing
+
+- C
+- Java
+- Python
+- C++
+- C#
+- Visual Basic
+- JavaScript
+- R
+- PHP
+- Swift
+
+.footnote[Top 10 programming languages for July 2020, [TIOBE Index](https://www.tiobe.com/tiobe-index/) ([Commentary by Hadley Wickham](https://twitter.com/hadleywickham/status/1279405379449913344?s=20))
+]
+
+???
+Of course, even this seemingly-uncontroversial statement is loaded with implicit cultural implications, most specifically about what is "inherently" clear about English. The top ten programming languages in the TIOBE index are all based on English, and there are very few programming languages based in other languages. 
+
+So, "clear for whom" is obviously a question. 
+
+
+---
+class: center, middle
+# Ease of entry
+
+
+---
+class: big-bullet
+## <i class="fas  fa-chalkboard-teacher "></i> How to teach programming (and other things)
+
+- Minimal guidance does not work
+- There is research about how people learn!
+- Not enough debate in CS education
+- Phonetics versus whole language debate in teaching/learning reading
+- We teach kids how to sound things out
+- Silent reading comes later
+
+
+
+.footnote[
+Felienne’s rstudio::conf 2019 keynote, Explicit Direct Instruction in Programming Education ([video](https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2))
+]
+
+???
+I found Felienne's 2019 keynote at rstudio::conf extremely inspiring. In particular, one of her takeaways was how verbalizing code helps people learn better. She drew on the literature of [linguistics], and has done some studies on having students read code out loud. This was already something I was doing in my teaching, but I immediately became even more dedicated to it.
+
+---
+# Carpentries 
+
+
+### <i class="fas  fa-award "></i> Teach the most useful thing first 
+### <i class="fas  fa-brain "></i> Reduce cognitive load 
+### <i class="fas  fa-keyboard "></i> Don't touch the learner's keyboard 
+### <i class="fas  fa-volume-up "></i> Verbalize what you are doing 
+
+.footnote[[The Carpentries](https://carpentries.org/) is a global non-profit with the goal of increasing access to computational and data skills. You can become a certified [Instructor](https://carpentries.org/become-instructor/) by taking their training. 
+]
+
+???
+In the summer of 2019, I had the opportunity to get Carpentries certified, where I beefed up on data-driven practices for teaching coding, one of which is "don't touch the learners keyboard" and another is "verbalize what you are doing." 
+
+These two practices go hand in hand, particularly when you're debugging code.
+
+And, they tie in with what Felienne was saying. If we are going to start with "sounding out" code, students will have fewer objects to hold in their working memory. 
+
+---
+# Pair programming 
+
+.center[
+&lt;iframe width="800" height="500"  src="https://www.youtube.com/embed/vgkahOzFH2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+.footnote[[Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+]
+
+???
+One person "drives" (hands on keyboard), and the other "navigates" (helps guide). 
+
+---
+class: center, middle
+# Flexibility to build extensions
+
+---
+# Why should I care?
+
+## Efficiency 
+
+Coders do things like work to improve their typing speed to improve their programming, why not think about the language issues, as well?
+
+## Remote work
+
+Covid19 pandemic
+
+## Increasing use of packages
+
+
+???
+I'm probably already losing some of you, because you are not interested in teaching and learning. But, I believe these concepts can also help you work more efficiently. If programmers are spending time trying to speed up their typing speeds, maybe they can spend some time thinking about other ways in which their 
+
+If you need to debug or pair program from afar, you may need to speak about your code over the phone or video conferencing
+
+---
+class: center, middle
+
+# Okay, we should speak R out loud. How do we do it?
+
+
+
+---
+# "Standards for reading code out loud?"
+
+!["If you say "hash bang bin bash" or "shebang bash", just about everyone will know that means "#!/bin/bash". If they don't they'll say, "Huh?", and you step it down a notch "At the top of the file: Pound sign, exclamation mark, slash, bin, slash, bash, newline". If they still don't get it, you step it down yet again: "See that keyboard in front of you? See the "3" key? That mark on the top when you press shift is a pound sign, that.""](img/StackExchange1.png)
+
+
+.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
+]
+
+---
+# "Standards for reading code out loud?"
+
+!["I agree. I almost never read the code "word for word" I just explain what it is doing [...] But I would never try to type it with my tongue"](img/StackExchange2.png)
+
+
+.footnote[[https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud](https://softwareengineering.stackexchange.com/questions/89833/standards-for-reading-code-out-loud)
+]
+
+---
+class: big-bullet
+# A shared mental model of how to read code
+
+- "The students of the experimental group scored significantly higher in the Remembering-level questions"
+- "There is no significant difference between the two groups in their answers to the Understanding-level questions."
+- "Participants in both groups followed some of the instructed vocalizations more frequently such as the variable's assignment (is)."
+- "Vocalizing the indentation spaces in a for-loop was among the least followed."
+
+
+.footnote[Alaaeddin Swidan and Felienne Hermans. The Effect of Reading Code Aloud on Comprehension: An Empirical Study with School Students [CompEd '19: Proceedings of the ACM Conference on Global Computing Education](https://dl.acm.org/doi/10.1145/3300115.3309504)] 
+
+---
+class: center, middle
+
+# speaking R
+
+---
+# Some pronunciations are clear
+
+
+```r
+mean()
+summary()
+help()
+paste()
+```
+
+???
+
+Again, remembering that this is based on English
+
+---
+# Others are... less so 
+.pull-left[
+## str()
+
+
+```r
+str(penguins)
+```
+
+- "ess tee arr penguins"
+- "stir penguins"
+]
+
+.pull-right[
+## runif()
+
+
+```r
+runif(10)
+```
+
+```
+##  [1] 0.7962136 0.9595775 0.6976004 0.4761702 0.2948626 0.4687127 0.6978841 0.1616418 0.2586518 0.5456262
+```
+
+- "run-if ten" (Nope!)
+- "r unif ten" (Yep!)
+
+randunif might have been better
+]
+
+???
+Trying to save characters...
+
+tapply, sqrt
+
+---
+# Assignment operators
+
+.pull-left[
+
+```r
+a &lt;- 4
+```
+
+- "a gets four" 
+- "a is four"
+- "set a to 4"] 
+
+.pull-right[
+
+```r
+a &lt;- 4
+```
+
+- "a equal four"
+- "a is four"
+- "a gets four"
+]
+
+???
+Okay, so maybe I've convinced you that we should be verbalizing code (either out loud, or at least in our heads), and that it would be good to be consistent. But, there are so many inconsistencies in how things are pronounced in R!
+
+---
+# Even more assignment operators
+
+.pull-left[
+In tidyverse syntax, perhaps the right assignment operator makes more sense,
+
+
+```r
+penguins %&gt;%
+  head() -&gt;
+first_penguins
+```
+
+- "into"?
+- "gets"?
+]
+
+.pull-right[
+
+]
+
+
+---
+&gt;It’s a language for data analysis. And if you think that the language is a little incoherent, a little confusing, a bit of a maze, well then all I have to say is welcome to data analysis.
+
+&gt; - Roger Peng, [useR 2018 keynote](https://www.youtube.com/watch?v=5033jBHFiHE)
+
+---
+# Sadly, I can't tell you "the" answer
+
+- LaTeX 
+- gif
+
+![Screenshot of the Merriam-Webster dictionary entry for the word gif](img/gif.png)
+.footnote[
+Merriam-Webster [entry for the word gif](https://www.merriam-webster.com/dictionary/GIF)
+]
+???
+I say "lay-tech" and "gif" but there are many other accepted pronunciations. Most important thing is consistency. 
+
+
+---
+# ASCII characters
+
+Sometimes, we just say the name of the ASCII character. 
+
+- **!** exclamation mark 
+- **#** hash, pound sign, number sign
+- **$** dollar sign
+- **[** bracket
+- **{** brace
+
+
+.footnote[[ASCII Pronunciation Rules for Programmers](https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/)]
+
+
+---
+# ~
+
+
+```r
+y ~ x
+```
+
+```
+## y ~ x
+```
+
+- "tilde"
+- "twiddle"
+- "by"
+
+---
+# brackets, braces, and parentheses
+
+.pull-left[
+## brackets
+
+```r
+letters[4]
+```
+
+```
+## [1] "d"
+```
+
+- bracket
+- square bracket
+]
+.pull-right[
+## braces
+
+
+```r
+if (a == 4) {
+  a
+}
+```
+
+```
+## [1] 4
+```
+
+- curly brace
+- squiggly brace
+- brace
+] 
+
+---
+# parentheses
+
+
+
+
+```r
+head(penguins)
+```
+
+```
+## # A tibble: 6 x 7
+##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex   
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; 
+## 1 Adelie  Torgersen           39.1          18.7               181        3750 male  
+## 2 Adelie  Torgersen           39.5          17.4               186        3800 female
+## 3 Adelie  Torgersen           40.3          18                 195        3250 female
+## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;  
+## 5 Adelie  Torgersen           36.7          19.3               193        3450 female
+## 6 Adelie  Torgersen           39.3          20.6               190        3650 male
+```
+
+- "head open paren penguins close paren"
+- "head left paren penguins right paren"
+- function notation, `\(f()\)`, "of"
+- "head of penguins"
+
+---
+# Functions that work well this way 
+
+## lm()
+
+
+```r
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+
+## plot()
+
+```r
+plot(penguins$bill_length_mm, penguins$flipper_length_mm)
+plot(flipper_length_mm ~ bill_length_mm, data = penguins)
+```
+
+???
+
+"el em of em pee gee by double u tee, data equals em tee cars"
+
+---
+# Less effective as things get more verbose
+
+
+```r
+summary(lm(bill_length_mm ~ flipper_length_mm, data = penguins))
+
+m1 &lt;- lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+summary(m1)
+```
+
+`\(f(g(h(x)))\)`
+
+
+---
+# %&gt;%
+
+
+
+
+```r
+penguins %&gt;%
+  head()
+```
+
+```
+## # A tibble: 6 x 7
+##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex   
+##   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; 
+## 1 Adelie  Torgersen           39.1          18.7               181        3750 male  
+## 2 Adelie  Torgersen           39.5          17.4               186        3800 female
+## 3 Adelie  Torgersen           40.3          18                 195        3250 female
+## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;  
+## 5 Adelie  Torgersen           36.7          19.3               193        3450 female
+## 6 Adelie  Torgersen           39.3          20.6               190        3650 male
+```
+
+- "percent greater than percent"
+- "pipe"
+- "then"
+- "penguins then head"
+
+???
+
+Idea for pronunciation may have come from Heike. 
+I struggle because I don't know how to say a line break. 
+
+
+
+---
+
+&lt;iframe width="1008" height="630" src="https://www.youtube.com/embed/K-ss_ag2k9E?start=1316" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+
+.footnote[Hadley Wickham, [Data Science with R](https://www.youtube.com/watch?v=K-ss_ag2k9E). Reed College, 2016.]
+
+---
+smart: false
+# "Ceci n'est pas un pipe"
+
+In programming, **|** is often thought of as "the pipe" (as in unix), but we use that symbol to mean "or" in R. 
+
+
+```r
+penguins %&gt;%
+  filter(species == "Adelie" | bill_length_mm &gt; 50)
+```
+
+.pull-left[
+&lt;img src="img/pipe.png" width="980" /&gt;
+]
+.pull-right[
+&lt;img src="img/MagrittePipe.jpg" width="168" /&gt;
+]
+
+.footnote[[maggritr package](https://magrittr.tidyverse.org/), Magritte's [The Trachery of Images](https://en.wikipedia.org/wiki/The_Treachery_of_Images)]
+
+---
+class: center, middle
+
+# What makes learning language hard?
+
+---
+## homonyms, homophones, and homographs
+
+.pull-left[
+## homophones
+
+Pronounced the same, spelled differently, different meanings. 
+- pear/pair
+- week/weak
+- meet/meat
+- sea/see
+
+![](img/homonym.gif)
+
+]
+
+.pull-right[
+## homographs
+
+Spelled the same, different pronunciation, different meaning.
+
+- bass
+- buffet
+- tear
+
+]
+
+???
+Bass drum, go fishing and catch a bass.
+Eat at the buffet, get buffetted about
+A tear ran down my face because I got a tear in my dress
+
+---
+# R examples
+
+## vbar, |
+
+Usually, "or"
+
+```r
+penguins %&gt;%
+  filter(species == "Adelie" | bill_length_mm &gt; 50)
+```
+
+Sometimes, in formula syntax, the vbar **|** takes on another meaning, "given" or "by"
+
+
+```r
+gf_point(bill_length_mm ~ flipper_length_mm | sex, data = penguins)
+```
+
+???
+homonym has the same pronunciation but different meanings
+homograph is spelled the same, but different meanings
+
+---
+# silent characters
+
+
+```r
+lm(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+
+- close paren 
+- square brackets
+- commas
+- spaces 
+- linebreaks
+
+- underscores
+- periods
+
+
+Sometimes, people don't say characters that appear on the screen. I have heard both `read.csv()` and `read_csv()` pronounced as "read cee ess vee"
+
+---
+# periods
+
+Periods don't hold their semantic meaning in R, sometimes they indicate a method, 
+
+
+```r
+plot.dendrogram
+plot.factor
+plot.lm
+```
+
+and sometimes they are just delimiters,
+
+
+```r
+read.csv()
+as.character()
+```
+
+
+???
+as.character, plot.data.frame, plot.dendrogram, etc. 
+
+---
+class: middle, center
+# Victor Borge, Phonetic Punctuation
+
+
+&lt;iframe width="1008" height="630" src="https://www.youtube.com/embed/xJiHlt8NRqk?start=72" frameborder="0" allow="accelerometer; autoPlay="1"; mute="1"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.footnote[Victor Borge, [Phonetic Punctuation](https://www.youtube.com/embed/xJiHlt8NRqk)
+]
+
+???
+Starts at 1:12, stop at 2:02 (audience member's face)
+
+
+
+---
+class: center, middle
+
+# syntax
+
+
+---
+
+
+![](img/Quorum.png)
+C-style languages (Perl and Java) were no better than Randomo, but non-C-style were better (Quorum, Python, Ruby). 
+
+.footnote[Andreas Stefik and Susanna Siebert.  An Empirical Investigation into Programming Language Syntax. [ACM Transactions on Computing Education, Volume 13 Number 4, 2013](https://dl.acm.org/doi/10.1145/2534973) ]
+
+???
+
+For this article, we conducted **four empirical studies on programming language syntax** as part of a larger analysis [...] two surveys [...] on the intuitiveness of syntax,  two studies on the accuracy rates of novices using a total of six programming languages: Ruby, Java, Perl, Python, Randomo, and Quorum. Randomo was designed by randomly choosing some keywords from the ASCII table (a metaphorical placebo). To our surprise, **we found that languages using a more traditional C-style syntax** (both Perl and Java) **did not afford accuracy rates significantly higher than a language with randomly generated keywords**, **but that languages which deviate** (Quorum, Python, and Ruby) **did**.
+
+---
+# data8 exercise 1 (python)
+
+
+```python
+# Count how many times the names Jim, Tom, and Huck appear in each chapter.
+
+counts = Table().with_columns([
+        'Jim', np.char.count(huck_finn_chapters, 'Jim'),
+        'Tom', np.char.count(huck_finn_chapters, 'Tom'),
+        'Huck', np.char.count(huck_finn_chapters, 'Huck')
+    ])
+
+# Plot the cumulative counts:
+# how many times in Chapter 1, how many times in Chapters 1 and 2, and so on.
+
+cum_counts = counts.cumsum().with_column('Chapter', np.arange(1, 44, 1))
+cum_counts.plot(column_for_xticks=3)
+plots.title('Cumulative Number of Times Each Name Appears', y=1.08);
+```
+
+
+.footnote[
+[data8 lesson 1.3](https://predictablynoisy.com/data8-template/textbook/01/3/1/literary-characters/)
+]
+
+???
+
+Looks like arrange is misspelled, but it's actually "a range." 
+
+---
+# Exercise ported to tidyverse R
+
+
+```r
+# Count how many times the names Jim, Tom, and Huck appear in each chapter.
+
+counts &lt;- huck_finn_chapters %&gt;%
+  filter(word %in% c("jim", "tom", "huck")) %&gt;%
+  group_by(chapter, word) %&gt;%
+  summarize(count = n())
+
+# Plot the cumulative counts:
+# how many times in Chapter 1, how many times in Chapters 1 and 2, and so on.
+
+cum_counts &lt;- counts %&gt;%
+  group_by(word) %&gt;%
+  mutate(cumulativesum = cumsum(count))
+
+ggplot(cum_counts) +
+  geom_line(aes(x = chapter, y = cumulativesum, color = word)) +
+  ggtitle("Cumulative Number of Times Each Name Appears")
+```
+
+
+---
+template: cheatsheet
+
+---
+&gt;"Less volume, more creativity."
+
+&gt; -Mike McCarthy / mosaic package philosophy
+
+
+
+
+
+
+
+---
+# Summary statistics three ways
+
+
+### base
+
+```r
+mean(mtcars$mpg[mtcars$cyl == 4])
+mean(mtcars$mpg[mtcars$cyl == 6])
+mean(mtcars$mpg[mtcars$cyl == 8])
+
+tapply(mtcars$mpg, mtcars$cyl, mean)
+```
+
+### formula
+
+```r
+library(mosaic)
+mean(mpg ~ cyl, data = mtcars)
+```
+
+```
+##        4        6        8 
+## 26.66364 19.74286 15.10000
+```
+
+
+### tidyverse
+
+```r
+library(dplyr)
+mtcars %&gt;%
+  group_by(cyl) %&gt;%
+  summarize(mean(mpg))
+```
+
+```
+## # A tibble: 3 x 2
+##     cyl `mean(mpg)`
+##   &lt;dbl&gt;       &lt;dbl&gt;
+## 1     4        26.7
+## 2     6        19.7
+## 3     8        15.1
+```
+
+???
+"of"
+
+---
+# Scatterplot three ways
+.pull-left[
+### base
+
+```r
+plot(mtcars$disp, mtcars$mpg)
+```
+
+### formula
+
+```r
+xyplot(mpg ~ disp, data = mtcars)
+```
+
+
+```r
+gf_point(mpg ~ disp, data = mtcars)
+```
+]
+.pull-right[
+### tidyverse
+
+```r
+library(ggplot2)
+ggplot(mtcars) +
+  geom_point(aes(x = disp, y = mpg))
+```
+]
+
+---
+# Sets of scatterplots three ways
+
+
+### base
+
+```r
+par(mfrow = c(1, 3))
+plot(mtcars$disp[mtcars$cyl == 4], mtcars$mpg[mtcars$cyl == 4])
+plot(mtcars$disp[mtcars$cyl == 6], mtcars$mpg[mtcars$cyl == 6])
+plot(mtcars$disp[mtcars$cyl == 8], mtcars$mpg[mtcars$cyl == 8])
+# apply solution?
+```
+
+### formula
+
+```r
+xyplot(mpg ~ disp | as.factor(cyl), data = mtcars)
+
+library(ggformula)
+gf_point(mpg ~ disp | cyl, data = mtcars)
+```
+
+### tidyverse
+
+```r
+library(ggplot2)
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  facet_grid(~cyl)
+```
+
+&lt;img src="SpeakingR_files/figure-html/unnamed-chunk-37-1.png" width="504" /&gt;
+
+
+
+
+
+
+
+
+---
+&gt;A Randomized Controlled Trial on the Wild Wild West of Scientific Computing with Student Learners
+Timothy Rafalski, P. Merlin Uesbeck, Cristina Panks-Meloney, Patrick Daleiden, William Allee, Amelia McNamara, Andreas Stefik
+
+tl;dr they (we?) didn't find a difference between base, formula, and tidyverse syntaxes in completion time or number of errors (qualitative or interpreter)
+
+.footnote[
+[ ICER '19: Proceedings of the 2019 ACM Conference on International Computing Education ResearchJuly 2019 Pages 239–247](https://dl.acm.org/doi/10.1145/3291279.3339421)
+]
+
+???
+
+No teaching!
+
+---
+# Another "experiment"
+
+Pre-labs available on [GitHub](https://github.com/AmeliaMN/STAT220-labs)
+
+???
+Lots of teaching
+
+---
+# Bootstrap
+
+
+```r
+GSS &lt;- readr::read_csv("data/GSS_clean.csv")
+library(infer)
+boot &lt;- GSS %&gt;%
+  specify(response = highest_year_of_school_completed) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "mean")
+```
+
+
+```r
+library(mosaic)
+boot &lt;- do(1000) * mean(~highest_year_of_school_completed,
+  data = resample(GSS)
+)
+```
+
+
+
+---
+class: center, middle
+
+# So, what do we do?
+
+---
+.pull-left[
+&lt;img src="img/xaringan.png" width="796" /&gt;
+
+One way to standardize pronunciation is to use the International Phonetic Alphabet, like Yihui Xie has here on the GitHub page for xaringan. 
+]
+.pull-right[
+&lt;img src="img/IPA.jpg" width="567" /&gt;
+]
+
+
+.footnote[
+[International Phonetic Association](https://www.internationalphoneticassociation.org/), IPA image via [wikipedia](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet). [GitHub page for xaringan](https://github.com/yihui/xaringan)
+]
+
+---
+# What's hard about learning R?
+
+- inconsistency
+- variables
+
+
+---
+# So what?
+
+When teaching:
+
+- read code out loud
+- be consistent
+    - one syntax
+    - one pronunciation
+- have students read code out loud
+
+When developing functions and packages:
+
+- consider pronunciation 
+- be consistent 
+    - within your own code
+    - with the syntax you want to work with
+
+---
+class: title-slide, left, top
+background-image: url(img/comments.png)
+background-size: contain
+background-position: bottom left
+
+
+# Thank you
+
+- Stefik and graduate students
+- Sean, Julia, Ian, Jesse, Kara
+
+### Amelia McNamara, PhD
+### Assistant Professor of Computer &amp; &lt;br&gt;Information Sciences
+### University of St Thomas&lt;br&gt;St Paul, MN, USA
+
+[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)
+[<i class="fab  fa-github "></i> AmeliaMN](www.github.com/AmeliaMN)
+
+
+
+
+???
+todo:
+- post pre-labs to github
+- look at video lengths to add to lab notes txt file
+- look at pre/post data
+- figure out what the rules are about sharing data about students
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current% of %total%",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:8",
+"output": null
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
