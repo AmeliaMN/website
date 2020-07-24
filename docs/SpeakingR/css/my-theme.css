@@ -94,10 +94,12 @@ blockquote {
 }
 
 .big-bullet li {
-  font-size: 30px;
+  font-size: 28px;
   margin: 5px 0;
 }
-
+.big-bullet p{
+  font-size: 28px;
+}
 .footnote {
 	bottom: 0.2em;
 }
@@ -107,6 +109,7 @@ blockquote {
   padding-bottom: 5px;
   padding-right: 10px;
   padding-left: 10px;
+  font-size: 20px;
 }
 
 .r{
@@ -125,4 +128,6 @@ pre {
   opacity: 1;
 }
 
-
+p {
+  font-size: 24px;
+}
