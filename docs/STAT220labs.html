@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:description"
+    content="
+        STAT 220 labs, formula and tidy syntax
+      ">
+<meta property="og:url"
+    content="https://www.amelia.mn/STAT220labs" />
+  
+  
+    <meta property="og:image" content="https://www.amelia.mn/img/Portrait2.jpg" />
+    <meta name="twitter:image" content="https://www.amelia.mn/img/Portrait2.jpg" />
+  
+
+  
+	<meta name="description" content="Amelia McNamara, assistant professor of statistics in the Department of Computer & Information Sciences at the University of St Thomas" />
+	
+    <meta name="author" content="Amelia McNamara">
+    <title>Amelia McNamara  | Teaching   | STAT 220 labs </title>
+    <link rel="shortcut icon" href="https://www.amelia.mn/assets/ico/favicon.png">
+    <link rel="stylesheet" href="https://www.amelia.mn/dist/font-awesome/css/font-awesome.min.css">
+    <link href="https://www.amelia.mn/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.amelia.mn/dist/css/my.css" rel="stylesheet">
+    
+    <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="https://www.amelia.mn/blog/feed.xml">
+  </head>
+  <body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#amelia">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Amelia McNamara</a>
+        </div>
+        <div class="navbar-collapse collapse" id="amelia">
+          <ul class="nav navbar-nav">
+           
+            	<li><a href="https://www.amelia.mn/index.html">home</a></li>
+        	
+        	
+            	<li class="dropdown active">
+            
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.amelia.mn/STAT220labs">STAT 220 R labs</a></li>
+                <li><a href="https://www.amelia.mn/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="https://www.amelia.mn/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting RMarkdown</a></li>
+              </ul>
+              </li>
+            
+            	<li class="dropdown">
+            
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">research <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.amelia.mn/dissertation.html">My dissertation</a></li>
+                <li><a href="https://www.amelia.mn/FoSP.html">The future of statistical programming</a></li>
+                <li class="divider"></li>
+                <li><a href="https://www.amelia.mn/writings.html">Writing</a></li>
+                <li><a href="https://www.amelia.mn/presentations.html">Presentations</a></li>
+                <li class="divider"></li>
+              	<li><a href="https://www.amelia.mn/portfolio.html">Other projects</a></li>
+              </ul>
+              </li>
+            
+                <li><a href="https://www.amelia.mn/press.html">press</a></li>
+              
+              
+              	<li><a href="https://www.amelia.mn/blog/">blog</a></li>
+              
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </nav>
+
+  <div class="container">
+<div class="row">
+  <div class="col-lg-12"> 	
+    <h2 id="stat-220-labs">STAT 220 labs</h2>
+
+<p>In Spring 2020 and Fall 2020, I embarked on an “experiment” of sorts to compare the formula and tidyverse syntaxes for teaching introductory statistics.</p>
+
+<p>Prior to this experiement, I had taught a full-semester introductory statistics course soley using formula syntax, as well as a full-semester course in tidyverse syntax. Both semesters were at my previous institution (Smith College). However, I had never compared the two syntaxes head to head. This made it difficult to compare, because groups of students vary so much semester to semester. In addition, when I wrote the instructional materials for a tidy semester (for example) I would be implicitly thinking of tasks that would be easy to do in tidy syntax.</p>
+
+<p>At St Thomas, the STAT 220 are written to be software-agnostic (they are used across all the STAT 220 labs, including labs taught in Excel, Minitab, JMP, and SPSS), which allowed me to produce materials without being influenced as much by the tasks that would easy in a particular syntax. I developed pre-labs for each of the 12 labs in each of the two syntaxes.</p>
+
+<p>The pre-labs are written and provided to students in RMarkdown format, and walk students through the code necessary to accomplish the tasks in the real lab for the week. Some code is provided in the document, but there are also blank code chunks and questions throughout the pre-lab, which students work through as they go. The pre-labs for the two syntaxes are typically similar in text content, but different in the code they display, although differences in the syntax mean that they occasionally deviate.</p>
+
+<p>When I teach in person, I guide students through th pre-lab material live, stopping periodically to give them time to work on questions. For the first several weeks of this experiment (in Spring 2020) I was able to do this sort of live teaching. When the pandemic forced courses online in March 2020, I began providing the pre-lab material as YouTube videos students could watch asynchronously. In the Fall 2020 semester, each pre-lab has been provided as a YouTube video. During synchronous classtime, I help students get started on the real lab, and stay on Zoom to answer questions from students as they arise.</p>
+
+<h3 id="formula-syntax">formula syntax</h3>
+
+<p>I provide students with a cheatsheet entitled <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/all_the_R_you_need_formula.Rmd">All the R you need for intro stat</a>, which gives them an overview of the most important code for the semester. Each week, I post RMarkdown documents on Canvas (also <a href="https://github.com/AmeliaMN/STAT220-labs/tree/main/formula">hosted on GitHub</a> for sharing), and accompanying videos on <a href="https://www.youtube.com/playlist?list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S">the YouTube playlist for the class</a>.</p>
+
+<ul>
+  <li>Describing data. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/01-STAT_220_DescribingDataPreLab-formula.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=4cfkNnwJH4A&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=2&amp;">YouTube video</a></li>
+  <li>Categorical variables. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/02-STAT_220_CategoricalVariablesPreLab-formula.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=_nztp2ZGd6I&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=3">video 1</a>, <a href="https://www.youtube.com/watch?v=JgejphW9re0&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=4">video 2</a>.</li>
+  <li>Quantitative variables. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/03-STAT_220_QuantitativeVariablesPreLab-formula.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=K0GPIZBJd_0&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=5">video 1</a>, <a href="https://www.youtube.com/watch?v=sdD982FqoYA&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=6">video 2</a></li>
+  <li>Correlation and regression. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/04-STAT_220_RegressionPreLab-formula.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=VVqvEgYkNcs&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=7">YouTube video</a></li>
+  <li>Bootstrap intervals. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/05-STAT_220_BootstrapPreLab-formula.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=AyK0ko_aEWw&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=8">video 1</a>, <a href="https://www.youtube.com/watch?v=31Gy5OnjcPA&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=9">video 2</a></li>
+  <li>Randomization tests. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/06-STAT_220_RandomizationPreLab-formula.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=CuvKLvAGb68&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=10">YouTube video</a></li>
+  <li>Inference for a single sample. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/07-STAT_220_InferenceSinglePreLab-formula.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=MNvJll40ras&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=11">video 1</a>, <a href="https://www.youtube.com/watch?v=51ubvJt3fu4&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=12">video 2</a>, <a href="https://www.youtube.com/watch?v=iQuVZiBqy2s&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=13">video 3</a></li>
+  <li>Inference for two samples. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/09-STAT_220_TwoSamplePreLab-formula.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=Mwt1FHU2xVM&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=14">video 1</a>, <a href="https://www.youtube.com/watch?v=m1DDEvAdlKI&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=15">video 2</a></li>
+  <li>ANOVA. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/10-STAT_220_ANOVAPreLab-formula.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=v3ozvy6G7Ns&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=16">video 1</a>, <a href="https://www.youtube.com/watch?v=tuYOjkvvwlg&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=17">video 2</a></li>
+  <li>Chi-square. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/11-STAT_220_ChiSquarePreLab-formula.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=UDOno8z9Txw&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=18">YouTube video</a></li>
+  <li>Inference for Regression. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/12-STAT_220_RegressionInferencePreLab-formula.Rmd">RMarkdown</a>. YouTube <a href="https://www.youtube.com/watch?v=KqBatgijU60&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=19">video 1</a>, <a href="https://www.youtube.com/watch?v=MkjiMRhKNt4&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=20">video 2</a>, <a href="https://www.youtube.com/watch?v=Xy8zbV9bA7A&amp;list=PLik6fAQnSI90bHK9fapPS-eZCUhgROh6S&amp;index=21">video 3</a>.</li>
+</ul>
+
+<h3 id="tidy-syntax">tidy syntax</h3>
+
+<p>I provide students with a cheatsheet entitled <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/all_the_R_you_need_tidy.Rmd">All the R you need for intro stat</a>, which gives them an overview of the most important code for the semester. Each week, I post RMarkdown documents on Canvas (also <a href="https://github.com/AmeliaMN/STAT220-labs/tree/main/tidy">hosted on GitHub</a> for sharing), and accompanying videos on <a href="https://www.youtube.com/playlist?list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX">the YouTube playlist for the class</a>.</p>
+
+<ul>
+  <li>Describing data. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/01-STAT_220_DescribingDataPreLab_tidy.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=vMZXK_RJ-_k&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=2">YouTube video</a></li>
+  <li>Categorical variables. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/02-STAT_220_CategoricalVariablesPreLab_tidy.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=Ir-LeWndP70&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=3">video 1</a>, <a href="https://www.youtube.com/watch?v=Q3HJSCG3GOQ&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=4">video 2</a></li>
+  <li>Quantitative variables. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/03-STAT_220_QuantitativeVariablesPreLab_tidy.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=f2TKQYizfqA&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=5">video 1</a>, <a href="https://www.youtube.com/watch?v=siB6pydmQYY&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=6">video 2</a></li>
+  <li>Correlation and regression. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/04-STAT_220_RegressionPreLab_tidy.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=j5mu5XcJD_w&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=7">YouTube video</a></li>
+  <li>Bootstrap intervals. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/05-STAT_220_BootstrapPreLab-tidy.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=FE6_NrUXgMI&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=8">video 1</a>, <a href="https://www.youtube.com/watch?v=IPQaqi6rP0o&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=9">video 2</a></li>
+  <li>Randomization tests. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/06-STAT_220_RandomizationPreLab-tidy.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=2KwN-JrVfwQ&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=10">YouTube video</a></li>
+  <li>Inference for a single proportion. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/07-STAT_220_InferenceSingleProportionPreLab-tidy.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=H8msMGkUmp0&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=11">YouTube video</a></li>
+  <li>Inference for a single mean. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/08-STAT_220_InferenceSingleMeanPreLab-tidy.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=VvjImYrUobA&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=12">YouTube video</a></li>
+  <li>Inference for two samples. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/09-STAT_220_TwoSamplePreLab-tidy.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=4zVAN4gqAmQ&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=13">video 1</a>, <a href="https://www.youtube.com/watch?v=lvZphz3-oXE&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=14">video 2</a></li>
+  <li>ANOVA. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/10-STAT_220_ANOVAPreLab-tidy.Rmd">RMarkdown</a>, YouTube <a href="https://www.youtube.com/watch?v=iul28zUiCM4&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=15">video 1</a>, <a href="https://www.youtube.com/watch?v=kXJOwsRqd8g&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=16">video 2</a></li>
+  <li>Chi-square. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/11-STAT_220_ChiSquarePreLab-tidy.Rmd">RMarkdown</a>, <a href="https://www.youtube.com/watch?v=WfNRZfd9z-Y&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=17">YouTube video</a></li>
+  <li>Inference for Regression. <a href="https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/12-STAT_220_RegressionInferencePreLab-tidy.Rmd">RMarkdown</a>. YouTube <a href="https://www.youtube.com/watch?v=TY30JLeYwKA&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=18">video 1</a>, <a href="https://www.youtube.com/watch?v=MkjiMRhKNt4&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=19">video 2</a>, <a href="https://www.youtube.com/watch?v=Xy8zbV9bA7A&amp;list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&amp;index=20">video 3</a></li>
+</ul>
+
+
+
+ 	</div>
+</div>
+<div class="row">&nbsp;</div>
+   </div>
+
+   <footer>
+      <div class="container">
+        <p class="text-muted credit">Copyright &copy; 2021 Amelia McNamara. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://www.amelia.mn/dist/js/jquery.min.js"></script>
+    <script src="https://www.amelia.mn/dist/js/bootstrap.min.js"></script>
+     <script src="https://www.amelia.mn/dist/js/Repo.js/repo.js"></script>
+    <script type="text/javascript">
+	$('.tooltip-test').tooltip()
+	$('#collapseOne').collapse("hide");
+	$('#repo').repo({ user: 'AmeliaMN', name: '1000tweets' });
+	$('.more').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='read less' ?  'read more' : 'read less';
+    	});
+    	$(this).blur();
+	});
+	$('.code').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='hide code' ?  'view code' : 'hide code';
+    	});
+    	$(this).blur();
+	});
+	</script>
+    
+  </body>
+</html>
