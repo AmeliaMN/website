@@ -1,0 +1,345 @@
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, warning = FALSE, message = FALSE, verbose = FALSE, htmltools.preserve.raw = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.retina = 3)
+
+# devtools::install_github("rstudio/fontawesome")
+# devtools::install_github("ropenscilabs/icon")
+library(xaringan)
+library(fontawesome)
+library(tweetrmd)
+```
+
+
+class: title-slide, left, top
+background-image: url(img/comments.png)
+background-size: contain
+background-position: bottom left 
+
+
+
+
+# `r rmarkdown::metadata$title`
+
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$role`
+### `r rmarkdown::metadata$institute`
+
+[`r icon::fontawesome("twitter")` @AmeliaMN](https://twitter.com/AmeliaMN)  
+[`r icon::fontawesome("github")` AmeliaMN](www.github.com/AmeliaMN)  
+[slides]()
+
+
+???
+
+Hi, I'm Amelia McNamara. I'm an assistant professor at the University of St Thomas in Minnesota. I tweet at AmeliaMN, which is a double entendre because my last name is McNamara and I live in Minnesota. 
+
+---
+background-image: url(img/mpls-stp-8.5x11-DakotaMap.jpg)
+background-size: cover
+background-position: top left
+
+
+.footnote[
+ Dakota landmap by [Marlena Myles](https://marlenamyl.es/) 
+]
+
+???
+
+Even though we're at a virtual conference, I want us to take a moment to consider the physical space we are each in, and the history of that space. The United States is built on land forcibly taken from Native Americans, and where I am physically located is no different. What is now called Minneapolis and St Paul was originally Dakota land, and continues to have a vibrant Native community. 
+
+I chose this beautiful map of sites in the Twin Cities, labeled in the Dakota language, to show you where I'm physically grounded, and the idea of language is one I'm going to take into my talk.
+
+---
+# I am a massive R nerd. 
+
+```{r, echo=FALSE, eval=TRUE, results='asis'}
+include_tweet("https://twitter.com/AmeliaMN/status/1223042166580101120")
+```
+
+---
+One of the killer apps that makes R so appealing when you're teaching reproducibility is RMarkdown. RMarkdown is a variant of Markdown.
+.pull-left[
+```
+# Pound signs make titles
+```
+Text is just text.
+
+````
+```{r}`r ''`
+# code gets executed
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins) + geom_histogram(aes(x=bill_length_mm))
+```
+````
+]
+
+.pull-right[
+### Pound signs make titles
+Text is just text.
+```{r,  message=FALSE, warning = FALSE, fig.height=4, out.width = "80%", size='footnotesize'}
+# code gets executed
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins) + geom_histogram(aes(x=bill_length_mm))
+```
+]
+.footnote[Learn [RMarkdown](https://rmarkdown.rstudio.com/)]
+
+---
+class: center, middle
+# This talk is not about RMarkdown 😭
+
+---
+class: center, middle
+# But, it is about R! 🎉
+
+--
+
+# Specifically, about teaching R
+
+---
+# Speaking R
+
+.center[
+<iframe width="800" height="500"  src="https://www.youtube.com/embed/ckW9sSdIVAc?start=676" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+.footnote[[Speaking R](https://www.youtube.com/watch?v=ckW9sSdIVAc&t=676s), useR! 2020 keynote by Amelia McNamara
+]
+
+???
+Reading code out loud is important for learners
+
+---
+## Programming syntax/dialect/domain specific language (DSL)
+
+> In programming, syntax refers to the rules that specify the correct combined sequence of symbols that can be used to form a correctly structured program using a given programming language. Programmers communicate with computers through the correctly structured syntax, semantics and grammar of a programming language.
+
+## Most programming languages only have one correct syntax. R has many!
+
+
+.footnote[Definition via [techopedia](https://www.techopedia.com/definition/3959/syntax)]
+
+---
+name: cheatsheet
+class: center, middle
+background-image: url(img/Syntax-cheatsheet.jpg)
+background-size: contain
+
+.footnote[
+Syntax cheatsheet available from the RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+]
+
+---
+class: middle
+![Portion of syntax cheatsheet showing how to do summary statistics in all three R syntaxes](img/Syntax-cheatsheet-zoomed.jpg)
+.footnote[
+Syntax cheatsheet available from the RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+]
+
+???
+
+Lots of debate in the stat ed community
+
+Of course, practitioners really mix and match the syntaxes shown here, and more, when they are working. But, this has been useful to show students which "column" we are working in, and what the other approaches are. 
+
+I'm interested in how the different syntaxes may impact learning, and whether they lead to different conceptions of data. 
+
+
+
+---
+```{r, echo=FALSE, out.width='95%', fig.cap="Figure from Stefik's paper, comparing Quorum, Perl, Randomo, and Python code for the same task"}
+knitr::include_graphics("img/Quorum.png")
+```
+
+
+
+.footnote[C-style languages (Perl, Java) were no better than Randomo, but non-C-style (Quorum, Python, Ruby) were. <br> Andreas Stefik and Susanna Siebert.  An Empirical Investigation into Programming Language Syntax. [ACM Transactions on Computing Education, Volume 13 Number 4, 2013](https://dl.acm.org/doi/10.1145/2534973) ]
+
+???
+
+For this article, we conducted **four empirical studies on programming language syntax** as part of a larger analysis [...] two surveys [...] on the intuitiveness of syntax,  two studies on the accuracy rates of novices using a total of six programming languages: Ruby, Java, Perl, Python, Randomo, and Quorum. Randomo was designed by randomly choosing some keywords from the ASCII table (a metaphorical placebo). To our surprise, **we found that languages using a more traditional C-style syntax** (both Perl and Java) **did not afford accuracy rates significantly higher than a language with randomly generated keywords**, **but that languages which deviate** (Quorum, Python, and Ruby) **did**.
+
+
+
+---
+# Summary statistics three ways
+
+**base**
+```{r, echo=TRUE, eval=FALSE}
+mean(penguins$body_mass_g[penguins$species == "Adelie"])
+mean(penguins$body_mass_g[penguins$species == "Chinstrap"])
+mean(penguins$body_mass_g[penguins$species == "Gentoo"])
+
+tapply(penguins$body_mass_g, penguins$species, mean)
+```
+
+**formula**
+```{r, echo=TRUE, eval=FALSE}
+mean(body_mass_g ~ species, data = penguins)
+```
+
+**tidyverse**
+```{r, echo=TRUE, eval=FALSE}
+penguins %>%
+  group_by(species) %>%
+  summarize(mean(body_mass_g))
+```
+
+
+???
+The GAISE guidelines say "Give students experience with multivariable thinking." [GAISE guidelines](https://www.amstat.org/asa/education/Guidelines-for-Assessment-and-Instruction-in-Statistics-Education-Reports.aspx), for PreK-12, and college. Harder in base!
+
+---
+# Scatterplot three ways
+
+**base**
+```{r, echo = TRUE, eval=FALSE}
+plot(penguins$flipper_length_mm, penguins$bill_length_mm)
+```
+
+**formula**
+```{r, echo = TRUE, eval=FALSE}
+xyplot(bill_length_mm ~ flipper_length_mm, data = penguins)
+
+gf_point(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+
+**tidyverse**
+```{r, echo = TRUE, eval=FALSE}
+ggplot(penguins) +
+  geom_point(aes(x = flipper_length_mm, y = bill_length_mm))
+```
+
+
+---
+# Sets of scatterplots three ways
+
+
+**base**
+```{r, echo = TRUE, eval = FALSE}
+par(mfrow = c(1, 3))
+plot(penguins$flipper_length_mm[penguins$species == "Adelie"], penguins$bill_length_mm[penguins$species == "Adelie"])
+plot(penguins$flipper_length_mm[penguins$species == "Chinstrap"], penguins$bill_length_mm[penguins$species == "Chinstrap"])
+plot(penguins$flipper_length_mm[penguins$species == "Gentoo"], penguins$bill_length_mm[penguins$species == "Gentoo"])
+# apply solution?
+```
+
+**formula**
+```{r, echo = TRUE, eval=FALSE}
+gf_point(bill_length_mm ~ flipper_length_mm | species, data = penguins)
+```
+
+**tidyverse**
+```{r, echo = TRUE, eval=FALSE}
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point() +
+  facet_grid(~species)
+```
+
+---
+
+.pull-left[
+```{r, echo=FALSE, out.width='150%', fig.cap="Figure from Rafalinski's paper, showing the setup to the experiment for the formula syntax, and an example of the task"}
+knitr::include_graphics("img/syntax_WWW1.png")
+```
+]
+.pull-right[
+```{r, echo=FALSE, out.width='150%', fig.cap="Figure from Rafalinski's paper, showing a variety of student errors for the task in the previous figure."}
+knitr::include_graphics("img/syntax_WWW2.png")
+```
+]
+
+
+
+.footnote[Timothy Rafalski, P. Merlin Uesbeck, Cristina Panks-Meloney, Patrick Daleiden, William Allee, Amelia McNamara, Andreas Stefik. "A Randomized Controlled Trial on the Wild Wild West of Scientific Computing with Student Learners." [ICER '19: Proceedings of the 2019 ACM Conference on International Computing Education Research July 2019 Pages 239–247](https://dl.acm.org/doi/10.1145/3291279.3339421)
+]
+
+???
+tl;dr they (we?) didn't find a difference between base, formula, and tidyverse syntaxes in completion time or number of errors (qualitative or interpreter)
+
+When I look at the results, what I see is a lot of misunderstanding about variables and dataframes. 
+
+No teaching!
+
+---
+class: big-bullet
+# Another "experiment"
+
+- I've taught R **a lot**, including in introductory statistics labs. 
+    - all base R
+    - all formula
+    - all tidyverse
+- Spring 2020 was my first opportunity to teach introductory statistics labs at St Thomas
+- Decided to teach one lab in formula, one in tidyverse
+- Lab assignments are standardized across all labs (JMP, SPSS, Minitab, Excel, and R)
+- Pre-labs for formula and tidyverse are available on [GitHub](https://github.com/AmeliaMN/STAT220-labs)
+- Videos of labs 5-11 are available on my YouTube channel, [formula labs](https://www.youtube.com/playlist?list=PLik6fAQnSI90QbcUrjizKEn-eFbGM3MkP), [tidyverse labs](https://www.youtube.com/playlist?list=PLik6fAQnSI91S_rKq5T9KRgjHG-dClFzN)
+
+???
+Standardized labs meant I couldn't change what I asked based on syntax
+
+---
+# Bootstrap
+
+### tidyverse
+```{r, echo=TRUE, eval=FALSE}
+library(infer)
+boot <- penguins %>%
+  specify(response = flipper_length_mm) %>%
+  generate(reps = 1000, type = "bootstrap") %>%
+  calculate(stat = "mean")
+```
+
+### formula
+```{r, echo=TRUE, eval=FALSE}
+library(mosaic)
+boot <- do(1000) * mean(~flipper_length_mm,
+  data = resample(penguins)
+)
+```
+
+---
+
+.pull-left[
+**formula**
+- easy
+    - introducing `lm()`, `aov()`, `chisq.test()`, etc after students were familiar with `tally()`, `mean()`, `gf_point()`, etc. (thanks, `mosaic` and `ggformula`!)
+    - inference using distributional approximations, `prop.test()`, `t.test()`
+- hard
+    - dealing with `NA` values
+    - installing packages when we suddenly had to move off RStudio Cloud
+    - data wrangling. I used `filter(penguins,  body_mass_g>6000)` to avoid introducing the `%>%`
+    
+]
+.pull-right[
+**tidyverse**
+- easy
+    - explaining concepts from bootstrap and randomization (thanks, `infer`!)
+    - installing packages when we suddenly had to move off RStudio Cloud
+- hard
+    - explaining the difference between the `%>%` and `+` operators
+    - inconsistency when we got to modeling, `lm()` and `aov()`
+    - inference using distributional approximations (infer has `chisq_test()`, but nothing parallel to `prop.test()` or `t.test()`)
+
+]
+
+**overall**
+- easy
+    - explaining RMarkdown
+    - debugging with hands off the keyboard (even after moving online!)
+- hard
+    - **variables** Students would struggle to understand that `species` was the variable, not `Adelie`, `Chinstrap` and `Gentoo` (levels). 
+    - moving files from a local computer to RStudio Cloud
+    - filepaths
+   - students using the internet to troubleshoot (too much inconsistency online)
+
+???
+Overall, the formula syntax felt more consistent. The folks who work on mosaic, ggformula, etc., have made sure the entire introductory statistics curriculum can be accomplished using that syntax. Those students didn't have to see any dollar signs, and almost every single thing they saw used a formula. 
+
+The tidyverse syntax feels more "useful" to me (bigger use in the wider community), but isn't quite ready for primetime when it comes to the entire intro stats curriculum. 
+
+But, I didn't end up deciding that one was "better" and I'm going to teach both again in the fall. 

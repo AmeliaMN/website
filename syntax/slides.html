@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Consistency is key: A case study in R Syntaxes</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Amelia McNamara, PhD" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/twitter-widget/widgets.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+class: title-slide, left, top
+background-image: url(img/comments.png)
+background-size: contain
+background-position: bottom left 
+
+
+
+
+# Consistency is key: A case study in R Syntaxes
+
+### Amelia McNamara, PhD
+### Assistant Professor of Computer &amp; Information Sciences
+### University of St Thomas&lt;br&gt;St Paul, MN, USA
+
+[&lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @AmeliaMN](https://twitter.com/AmeliaMN)  
+[&lt;svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"&gt;&lt;/path&gt;&lt;/svg&gt; AmeliaMN](www.github.com/AmeliaMN)  
+[slides]()
+
+
+???
+
+Hi, I'm Amelia McNamara. I'm an assistant professor at the University of St Thomas in Minnesota. I tweet at AmeliaMN, which is a double entendre because my last name is McNamara and I live in Minnesota. 
+
+---
+background-image: url(img/mpls-stp-8.5x11-DakotaMap.jpg)
+background-size: cover
+background-position: top left
+
+
+.footnote[
+ Dakota landmap by [Marlena Myles](https://marlenamyl.es/) 
+]
+
+???
+
+Even though we're at a virtual conference, I want us to take a moment to consider the physical space we are each in, and the history of that space. The United States is built on land forcibly taken from Native Americans, and where I am physically located is no different. What is now called Minneapolis and St Paul was originally Dakota land, and continues to have a vibrant Native community. 
+
+I chose this beautiful map of sites in the Twin Cities, labeled in the Dakota language, to show you where I'm physically grounded, and the idea of language is one I'm going to take into my talk.
+
+---
+# I am a massive R nerd. 
+
+<blockquote class="twitter-tweet" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">I did get a photo of just me blending into the hex wall. <a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a><br><br>📸 <a href="https://twitter.com/ijlyttle?ref_src=twsrc%5Etfw">@ijlyttle</a> <a href="https://t.co/MJdZMK5idY">pic.twitter.com/MJdZMK5idY</a></p>&mdash; Amelia McNamara (@AmeliaMN) <a href="https://twitter.com/AmeliaMN/status/1223042166580101120?ref_src=twsrc%5Etfw">January 31, 2020</a></blockquote>
+
+
+---
+One of the killer apps that makes R so appealing when you're teaching reproducibility is RMarkdown. RMarkdown is a variant of Markdown.
+.pull-left[
+```
+# Pound signs make titles
+```
+Text is just text.
+
+````
+```{r}
+# code gets executed
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins) + geom_histogram(aes(x=bill_length_mm))
+```
+````
+]
+
+.pull-right[
+### Pound signs make titles
+Text is just text.
+
+```r
+# code gets executed
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+ggplot(penguins) + geom_histogram(aes(x=bill_length_mm))
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-2-1.png" width="80%" /&gt;
+]
+.footnote[Learn [RMarkdown](https://rmarkdown.rstudio.com/)]
+
+---
+class: center, middle
+# This talk is not about RMarkdown 😭
+
+---
+class: center, middle
+# But, it is about R! 🎉
+
+--
+
+# Specifically, about teaching R
+
+---
+# Speaking R
+
+.center[
+&lt;iframe width="800" height="500"  src="https://www.youtube.com/embed/ckW9sSdIVAc?start=676" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+.footnote[[Speaking R](https://www.youtube.com/watch?v=ckW9sSdIVAc&amp;t=676s), useR! 2020 keynote by Amelia McNamara
+]
+
+???
+Reading code out loud is important for learners
+
+---
+## Programming syntax/dialect/domain specific language (DSL)
+
+&gt; In programming, syntax refers to the rules that specify the correct combined sequence of symbols that can be used to form a correctly structured program using a given programming language. Programmers communicate with computers through the correctly structured syntax, semantics and grammar of a programming language.
+
+## Most programming languages only have one correct syntax. R has many!
+
+
+.footnote[Definition via [techopedia](https://www.techopedia.com/definition/3959/syntax)]
+
+---
+name: cheatsheet
+class: center, middle
+background-image: url(img/Syntax-cheatsheet.jpg)
+background-size: contain
+
+.footnote[
+Syntax cheatsheet available from the RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+]
+
+---
+class: middle
+![Portion of syntax cheatsheet showing how to do summary statistics in all three R syntaxes](img/Syntax-cheatsheet-zoomed.jpg)
+.footnote[
+Syntax cheatsheet available from the RStudio [contributed cheatsheets](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) page
+]
+
+???
+
+Lots of debate in the stat ed community
+
+Of course, practitioners really mix and match the syntaxes shown here, and more, when they are working. But, this has been useful to show students which "column" we are working in, and what the other approaches are. 
+
+I'm interested in how the different syntaxes may impact learning, and whether they lead to different conceptions of data. 
+
+
+
+---
+&lt;div class="figure"&gt;
+&lt;img src="img/Quorum.png" alt="Figure from Stefik's paper, comparing Quorum, Perl, Randomo, and Python code for the same task" width="95%" /&gt;
+&lt;p class="caption"&gt;Figure from Stefik's paper, comparing Quorum, Perl, Randomo, and Python code for the same task&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+.footnote[C-style languages (Perl, Java) were no better than Randomo, but non-C-style (Quorum, Python, Ruby) were. &lt;br&gt; Andreas Stefik and Susanna Siebert.  An Empirical Investigation into Programming Language Syntax. [ACM Transactions on Computing Education, Volume 13 Number 4, 2013](https://dl.acm.org/doi/10.1145/2534973) ]
+
+???
+
+For this article, we conducted **four empirical studies on programming language syntax** as part of a larger analysis [...] two surveys [...] on the intuitiveness of syntax,  two studies on the accuracy rates of novices using a total of six programming languages: Ruby, Java, Perl, Python, Randomo, and Quorum. Randomo was designed by randomly choosing some keywords from the ASCII table (a metaphorical placebo). To our surprise, **we found that languages using a more traditional C-style syntax** (both Perl and Java) **did not afford accuracy rates significantly higher than a language with randomly generated keywords**, **but that languages which deviate** (Quorum, Python, and Ruby) **did**.
+
+
+
+---
+# Summary statistics three ways
+
+**base**
+
+```r
+mean(penguins$body_mass_g[penguins$species == "Adelie"])
+mean(penguins$body_mass_g[penguins$species == "Chinstrap"])
+mean(penguins$body_mass_g[penguins$species == "Gentoo"])
+
+tapply(penguins$body_mass_g, penguins$species, mean)
+```
+
+**formula**
+
+```r
+mean(body_mass_g ~ species, data = penguins)
+```
+
+**tidyverse**
+
+```r
+penguins %&gt;%
+  group_by(species) %&gt;%
+  summarize(mean(body_mass_g))
+```
+
+
+???
+The GAISE guidelines say "Give students experience with multivariable thinking." [GAISE guidelines](https://www.amstat.org/asa/education/Guidelines-for-Assessment-and-Instruction-in-Statistics-Education-Reports.aspx), for PreK-12, and college. Harder in base!
+
+---
+# Scatterplot three ways
+
+**base**
+
+```r
+plot(penguins$flipper_length_mm, penguins$bill_length_mm)
+```
+
+**formula**
+
+```r
+xyplot(bill_length_mm ~ flipper_length_mm, data = penguins)
+
+gf_point(bill_length_mm ~ flipper_length_mm, data = penguins)
+```
+
+**tidyverse**
+
+```r
+ggplot(penguins) +
+  geom_point(aes(x = flipper_length_mm, y = bill_length_mm))
+```
+
+
+---
+# Sets of scatterplots three ways
+
+
+**base**
+
+```r
+par(mfrow = c(1, 3))
+plot(penguins$flipper_length_mm[penguins$species == "Adelie"], penguins$bill_length_mm[penguins$species == "Adelie"])
+plot(penguins$flipper_length_mm[penguins$species == "Chinstrap"], penguins$bill_length_mm[penguins$species == "Chinstrap"])
+plot(penguins$flipper_length_mm[penguins$species == "Gentoo"], penguins$bill_length_mm[penguins$species == "Gentoo"])
+# apply solution?
+```
+
+**formula**
+
+```r
+gf_point(bill_length_mm ~ flipper_length_mm | species, data = penguins)
+```
+
+**tidyverse**
+
+```r
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point() +
+  facet_grid(~species)
+```
+
+---
+
+.pull-left[
+&lt;div class="figure"&gt;
+&lt;img src="img/syntax_WWW1.png" alt="Figure from Rafalinski's paper, showing the setup to the experiment for the formula syntax, and an example of the task" width="150%" /&gt;
+&lt;p class="caption"&gt;Figure from Rafalinski's paper, showing the setup to the experiment for the formula syntax, and an example of the task&lt;/p&gt;
+&lt;/div&gt;
+]
+.pull-right[
+&lt;div class="figure"&gt;
+&lt;img src="img/syntax_WWW2.png" alt="Figure from Rafalinski's paper, showing a variety of student errors for the task in the previous figure." width="150%" /&gt;
+&lt;p class="caption"&gt;Figure from Rafalinski's paper, showing a variety of student errors for the task in the previous figure.&lt;/p&gt;
+&lt;/div&gt;
+]
+
+
+
+.footnote[Timothy Rafalski, P. Merlin Uesbeck, Cristina Panks-Meloney, Patrick Daleiden, William Allee, Amelia McNamara, Andreas Stefik. "A Randomized Controlled Trial on the Wild Wild West of Scientific Computing with Student Learners." [ICER '19: Proceedings of the 2019 ACM Conference on International Computing Education Research July 2019 Pages 239–247](https://dl.acm.org/doi/10.1145/3291279.3339421)
+]
+
+???
+tl;dr they (we?) didn't find a difference between base, formula, and tidyverse syntaxes in completion time or number of errors (qualitative or interpreter)
+
+When I look at the results, what I see is a lot of misunderstanding about variables and dataframes. 
+
+No teaching!
+
+---
+class: big-bullet
+# Another "experiment"
+
+- I've taught R **a lot**, including in introductory statistics labs. 
+    - all base R
+    - all formula
+    - all tidyverse
+- Spring 2020 was my first opportunity to teach introductory statistics labs at St Thomas
+- Decided to teach one lab in formula, one in tidyverse
+- Lab assignments are standardized across all labs (JMP, SPSS, Minitab, Excel, and R)
+- Pre-labs for formula and tidyverse are available on [GitHub](https://github.com/AmeliaMN/STAT220-labs)
+- Videos of labs 5-11 are available on my YouTube channel, [formula labs](https://www.youtube.com/playlist?list=PLik6fAQnSI90QbcUrjizKEn-eFbGM3MkP), [tidyverse labs](https://www.youtube.com/playlist?list=PLik6fAQnSI91S_rKq5T9KRgjHG-dClFzN)
+
+???
+Standardized labs meant I couldn't change what I asked based on syntax
+
+---
+# Bootstrap
+
+### tidyverse
+
+```r
+library(infer)
+boot &lt;- penguins %&gt;%
+  specify(response = flipper_length_mm) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "mean")
+```
+
+### formula
+
+```r
+library(mosaic)
+boot &lt;- do(1000) * mean(~flipper_length_mm,
+  data = resample(penguins)
+)
+```
+
+---
+
+.pull-left[
+**formula**
+- easy
+    - introducing `lm()`, `aov()`, `chisq.test()`, etc after students were familiar with `tally()`, `mean()`, `gf_point()`, etc. (thanks, `mosaic` and `ggformula`!)
+    - inference using distributional approximations, `prop.test()`, `t.test()`
+- hard
+    - dealing with `NA` values
+    - installing packages when we suddenly had to move off RStudio Cloud
+    - data wrangling. I used `filter(penguins,  body_mass_g&gt;6000)` to avoid introducing the `%&gt;%`
+    
+]
+.pull-right[
+**tidyverse**
+- easy
+    - explaining concepts from bootstrap and randomization (thanks, `infer`!)
+    - installing packages when we suddenly had to move off RStudio Cloud
+- hard
+    - explaining the difference between the `%&gt;%` and `+` operators
+    - inconsistency when we got to modeling, `lm()` and `aov()`
+    - inference using distributional approximations (infer has `chisq_test()`, but nothing parallel to `prop.test()` or `t.test()`)
+
+]
+
+**overall**
+- easy
+    - explaining RMarkdown
+    - debugging with hands off the keyboard (even after moving online!)
+- hard
+    - **variables** Students would struggle to understand that `species` was the variable, not `Adelie`, `Chinstrap` and `Gentoo` (levels). 
+    - moving files from a local computer to RStudio Cloud
+    - filepaths
+   - students using the internet to troubleshoot (too much inconsistency online)
+
+???
+Overall, the formula syntax felt more consistent. The folks who work on mosaic, ggformula, etc., have made sure the entire introductory statistics curriculum can be accomplished using that syntax. Those students didn't have to see any dollar signs, and almost every single thing they saw used a formula. 
+
+The tidyverse syntax feels more "useful" to me (bigger use in the wider community), but isn't quite ready for primetime when it comes to the entire intro stats curriculum. 
+
+But, I didn't end up deciding that one was "better" and I'm going to teach both again in the fall.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current% of %total%",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"output": null
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
