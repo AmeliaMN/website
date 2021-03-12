@@ -27,6 +27,7 @@ background-position: bottom left
 [`r icon::fontawesome("twitter")` @AmeliaMN](https://twitter.com/AmeliaMN)  
 [`r icon::fontawesome("github")` AmeliaMN](www.github.com/AmeliaMN)  
 slides online at [amelia.mn/syntax](http://www.amelia.mn/syntax/index.html)
+video recording of talk [on YouTube](https://www.youtube.com/watch?v=aq5SrjXZDy4)
 
 
 ???
