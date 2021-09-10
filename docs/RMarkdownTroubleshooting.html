@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:description"
+    content="
+        Amelia McNamara, assistant professor of statistics in the Department of Computer & Information Sciences at the University of St Thomas
+      ">
+<meta property="og:url"
+    content="https://www.amelia.mn/RMarkdownTroubleshooting" />
+  
+  
+    <meta property="og:image" content="https://www.amelia.mn/img/Portrait2.jpg" />
+    <meta name="twitter:image" content="https://www.amelia.mn/img/Portrait2.jpg" />
+  
+
+  
+	<meta name="description" content="Amelia McNamara, assistant professor of statistics in the Department of Computer & Information Sciences at the University of St Thomas" />
+	
+    <meta name="author" content="Amelia McNamara">
+    <title>Amelia McNamara  | Teaching   | RMarkdown troubleshooting and tips </title>
+    <link rel="shortcut icon" href="https://www.amelia.mn/assets/ico/favicon.png">
+    <link rel="stylesheet" href="https://www.amelia.mn/dist/font-awesome/css/font-awesome.min.css">
+    <link href="https://www.amelia.mn/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.amelia.mn/dist/css/my.css" rel="stylesheet">
+    
+    <link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="https://www.amelia.mn/blog/feed.xml">
+  </head>
+  <body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#amelia">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Amelia McNamara</a>
+        </div>
+        <div class="navbar-collapse collapse" id="amelia">
+          <ul class="nav navbar-nav">
+           
+            	<li><a href="https://www.amelia.mn/index.html">home</a></li>
+        	
+        	
+            	<li class="dropdown active">
+            
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.amelia.mn/STAT220labs">STAT 220 R labs</a></li>
+                <li><a href="https://www.amelia.mn/pastcourses.html">Past courses</a></li>
+                <li class="divider">Resources</li>
+                <li><a href="https://www.amelia.mn/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
+                <li><a href="RMarkdownTroubleshooting.html">Troubleshooting RMarkdown</a></li>
+              </ul>
+              </li>
+            
+            	<li class="dropdown">
+            
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">research <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.amelia.mn/writings.html">Writing</a></li>
+                <li><a href="https://www.amelia.mn/presentations.html">Presentations</a></li>
+              </ul>
+              </li>
+            
+                <li><a href="https://www.amelia.mn/press.html">press</a></li>
+              
+              
+              	<li><a href="https://www.amelia.mn/blog/">blog</a></li>
+              
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </nav>
+
+    <div id="troubleshooting" class="section level1">
+<h1>Troubleshooting</h1>
+<p>There are a few common problems that people have had with their labs and problem sets.</p>
+<div id="document-wont-knit" class="section level2">
+<h2>Document won’t knit</h2>
+<p>There could be many reasons for this, but the most common are:</p>
+<ul>
+<li>including output in your code chunks, like</li>
+</ul>
+<pre class="r"><code>Salaries %&gt;%
+   summarize(mean(salary), sd(salary))
+  mean(salary) sd(salary)
+1     113706.5   30289.04</code></pre>
+<ul>
+<li>including the &gt; or + prompts that come from the console in your code chunks, like</li>
+</ul>
+<pre class="r"><code>&gt; Salaries %&gt;%
+   summarize(mean(salary), sd(salary))</code></pre>
+<p>or</p>
+<pre class="r"><code>Salaries %&gt;%
++   summarize(mean(salary), sd(salary))</code></pre>
+<ul>
+<li>Asking R to print out an entire data set. This one is often tricky to spot, because the code will work fine in the console, saying something like “[ reached getOption("max.print") – omitted 18684 rows ]”, but in the RMarkdown it will try to include everything and then run out of memory. The easiest way to spot this is if you have included</li>
+</ul>
+<pre class="r"><code>Salaries</code></pre>
+<p>in your document, but also dplyr expressions that aren’t saved into an object can do it, like</p>
+<pre class="r"><code>Salaries %&gt;%
+   filter(salary&gt;100000)</code></pre>
+<ul>
+<li>Not including all the packages you need for your code. You typically need to include at least</li>
+</ul>
+<pre class="r"><code>library(tidyverse)
+library(Stat2Data)</code></pre>
+<p>and often you also need</p>
+<pre class="r"><code>library(car)</code></pre>
+</div>
+<div id="code-not-being-evaluated" class="section level2">
+<h2>Code not being evaluated</h2>
+<p>If you have code showing up in your document like this</p>
+<pre><code>Salaries %&gt;%
+   summarize(mean(salary), sd(salary))</code></pre>
+<p>where the code isn’t colored nicely and the output isn’t showing, that’s often because your chunk delimiters weren’t specified correctly. You need three “ticks” (the key on the upper left corner of the keyboard, usually, the same one with the ~): ``` Then you need curly braces with an “r” in the middle, {r}, then a line break, then your code, and finally three more ticks.</p>
+<p>If you’re having trouble getting the formatting correct, you can click the Insert button at the upper right corner of the RMarkdown window and select R to insert an R chunk. This will do all the formatting for you.</p>
+</div>
+<div id="no-knit-button" class="section level2">
+<h2>No Knit button</h2>
+<p>This means that RStudio doesn’t understand your document is supposed to be an RMarkdown document, often because your file extension is .txt. To fix this, go to the Files tab (lower right corner, same pane as Plots and Help) and select the checkbox next to your document’s name. Then select Rename and remove the .txt and make sure the extension is .Rmd.</p>
+</div>
+</div>
+<div id="tips" class="section level1">
+<h1>Tips</h1>
+<p>Want your RMarkdown document to be even fancier? Try some of these tips.</p>
+<div id="text-formatting" class="section level2">
+<h2>Text Formatting</h2>
+<p>RMarkdown documents are just Markdown documents. You can format text the same way you would in plain Markdown.</p>
+<ul>
+<li>wrap a word in single asterisks for <em>italics</em> <code>*</code></li>
+<li>wrap a word in double asterisks for <strong>bold</strong> <code>**</code></li>
+<li>highlight inline <code>code</code> with backticks <code></code> `</li>
+<li>create section headers with pound signs <code>#</code></li>
+</ul>
+<p>For more options, see <a href="http://daringfireball.net/projects/markdown/syntax">this page on Markdown syntax</a> or the <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">RMarkdown cheatsheet</a>.</p>
+</div>
+<div id="rmarkdown-options" class="section level2">
+<h2>RMarkdown Options</h2>
+<div id="overall-document-options" class="section level4">
+<h4>Overall document options</h4>
+<p>You have probably seen the odd chunk I often include in the top of my lecture documents, which has something like <code>knitr::opts_chunk$set(echo = TRUE)</code> in it. This code sets the overall document options, so I can do something for every chunk in my document.</p>
+</div>
+<div id="particular-chunk-options" class="section level4">
+<h4>Particular chunk options</h4>
+<p>You can set the same options on a per-chunk basis, by putting the options in the chunk header, like <code>```{r, eval=FALSE}</code></p>
+</div>
+<div id="important-options-to-know-about" class="section level4">
+<h4>Important options to know about</h4>
+<ul>
+<li><code>message=FALSE</code> stops packages like <code>tidyverse</code> from printing all their messages when they load</li>
+<li><code>warning=FALSE</code> stops packages from displaying warnings if there is a version conflict</li>
+<li><code>error=FALSE</code> can be used to make a document knit even if there is a problem in one chunk (that chunk will just run and print its error)</li>
+<li><code>echo=TRUE</code> shows the code, where <code>echo=FALSE</code> would hide the code.</li>
+<li><code>eval=TRUE</code> means to evaluate (run) the code, where <code>eval=FALSE</code> will just show the code but not evaluate it.</li>
+<li><code>cache=TRUE</code> – see below for “shortening knit time.”</li>
+</ul>
+<p>The <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">RMarkdown cheatsheet</a> has information on many more options, and Yihui (who wrote knitr) has a <a href="http://yihui.name/knitr/options/">great website</a> with more verbose information.</p>
+</div>
+</div>
+<div id="shortening-knit-time" class="section level2">
+<h2>Shortening knit time</h2>
+<p>[This is one of those, “with great power comes great responsibility” tips.]</p>
+<p>If you set <code>cache=TRUE</code> in a chunk’s options (or in your overall document options), R will “cache” the results (basically, save them) so they don’t get run every time. This is awesome if you are not changing your code anymore, just trying to get the document to look nice. If you do change something about the code, R will realize and re-run just the chunk or chunks that got changed, and save those new results.</p>
+<p>The issue is that sometimes the cache does not behave how you expect, so it can lead to debugging errors that are hard to track down. I recommend setting it for your document overall when you are basically done with the code (maybe just changing models around), and then turning the option off before you knit for the final time. This will allow R to run through everything one last time to ensure all the results work out like you want them to.</p>
+</div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+   </div>
+
+
+
+   <footer>
+      <div class="container">
+        <p class="text-muted credit">Copyright &copy; 2021 Amelia McNamara. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://www.amelia.mn/dist/js/jquery.min.js"></script>
+    <script src="https://www.amelia.mn/dist/js/bootstrap.min.js"></script>
+     <script src="https://www.amelia.mn/dist/js/Repo.js/repo.js"></script>
+    <script type="text/javascript">
+	$('.tooltip-test').tooltip()
+	$('#collapseOne').collapse("hide");
+	$('#repo').repo({ user: 'AmeliaMN', name: '1000tweets' });
+	$('.more').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='read less' ?  'read more' : 'read less';
+    	});
+    	$(this).blur();
+	});
+	$('.code').click(function(){
+    	$(this).text(function(i,old){
+        	return old=='hide code' ?  'view code' : 'hide code';
+    	});
+    	$(this).blur();
+	});
+	</script>
+    
+  </body>
+</html>
