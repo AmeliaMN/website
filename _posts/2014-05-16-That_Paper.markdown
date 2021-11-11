@@ -10,7 +10,7 @@ I was joking at lunch with some colleagues that I should have a few of my favori
 
 <!--more-->
 
-* [Evaluating the Design of the R Language](http://r.cs.purdue.edu/pub/ecoop12.pdf): I'll admit, I don't understand everything that's in this paper. And it certainly wasn't necessary to sell me on R! But, I interact with a lot of computer scientists who ask me "why R?" and this paper seems to be a much better answer than anything I manage to come up with. 
+* [Evaluating the Design of the R Language](http://janvitek.org/pubs/ecoop12.pdf): I'll admit, I don't understand everything that's in this paper. And it certainly wasn't necessary to sell me on R! But, I interact with a lot of computer scientists who ask me "why R?" and this paper seems to be a much better answer than anything I manage to come up with. 
 * [Technical Tools of Statistics](ftp://cm.bell-labs.com/cm/stat/tukey/memo/techtools.html): Tukey's vision of the future, from the 1960s. Interesting because we're **still** trying to figure this stuff out. 
 * [Six Provocations for Big Data](http://softwarestudies.com/cultural_analytics/Six_Provocations_for_Big_Data.pdf): This article, by danah boyd and Kate Crawford, gives a great response to the buzzword trend of "Big Data."
 * [Research Directions in Data Wrangling](http://vis.stanford.edu/files/2011-DataWrangling-IVJ.pdf): Just a great paper summing up some directions for research/development in the realm of data processes. 
