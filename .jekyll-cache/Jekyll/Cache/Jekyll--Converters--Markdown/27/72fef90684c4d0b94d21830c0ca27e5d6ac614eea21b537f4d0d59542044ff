@@ -1,0 +1,43 @@
+I"Z<p>This past weekend, I attended the <a href="http://ire.org/">IRE</a> <a href="http://ire.org/conferences/nicar-2014/">NICAR</a> conference in Baltimore, MD. 
+It took me a while to figure out what those acronyms stand for, but they’re Investigative Reporters and Editors and National Institute of Computer-Assisted Reporting. 
+Now, I am not a reporter, editor, or computer-assisted journalist, but I found the entire conference fascinating and learned a lot. I thought I’d write up some of my 
+impressions to keep them fresh for myself, and in case anyone might be interested in what a statistician thought of a journalism conference.</p>
+
+<!--more-->
+
+<p>I had a lot of thoughts, so I’ll be breaking this into a couple pieces. The first thing I’ll say is that I’m taking Matt Waite’s <a href="http://blog.mattwaite.com/post/78333096044/a-5-step-nicar-recovery-plan">advice</a>, and putting my learning into action immediately following NICAR. That’s what this blog is! I’ve been meaning to learn <a href="http://jekyllrb.com/">jekyll</a> for months now, and writing about NICAR provided the perfect motivating project to learn the tool. I’ve already switched my entire website to jekyll, and I’m learning how to build blogs (what jekyll is really good at ) now.</p>
+
+<p>Some resources that have been helpful to me on this journey include:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>xcodebuild <span class="nt">-license</span></code></pre></figure>
+
+<p>This turns out to be one of the things that was hanging up my jekyll install. I kept thinking it was a problem with my ruby version, or with some other dependency, but once I had run that and agreed to the xcode user agreement, doing</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem <span class="nb">install </span>jekyll</code></pre></figure>
+
+<p>worked right out of the box.</p>
+
+<p>Once I had jekyll running, I referred to a bunch of other peoples’ blog posts and github repositories, notably:</p>
+
+<ul>
+  <li>
+    <p>Anna Debenham’s blog on <a href="http://24ways.org/2013/get-started-with-github-pages/">getting started with github pages (plus bonus jekyll)</a></p>
+  </li>
+  <li>
+    <p>Josh Branchaud’s blog on <a href="http://joshbranchaud.com/blog/2013/03/02/Running-Your-Jekyll-Blog-from-a-Subdirectory.html">running your jekyll blog from a subdirectory</a></p>
+  </li>
+  <li>
+    <p>The snaptortoise github repository on <a href="https://github.com/snaptortoise/jekyll-rss-feeds">jekyll rss feeds</a> (found via Drew Inglis’ post on <a href="http://blog.drewinglis.com/2013/03/18/adding-rss.html">adding RSS to jekyll</a>)</p>
+  </li>
+  <li>
+    <p>Daring Fireball <a href="http://daringfireball.net/projects/markdown/syntax">guide to markdown syntax</a></p>
+  </li>
+  <li>
+    <p>And of course, the jekyll documentation on things like <a href="http://jekyllrb.com/docs/posts/">writing posts</a>.</p>
+  </li>
+</ul>
+
+<p>Obviously, this is a work in progress. But I’m feeling good about jumping right on something that I’ve been wanting to try for ages, especially since it came up so much at the conference. <a href="http://en.wikipedia.org/wiki/Separation_of_presentation_and_content">Separation of presentation and content</a>. It is good.</p>
+
+<p><em>This is the first in a series of three posts about NICAR. The second is <a href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt2.html">here</a> and the third is <a href="http://www.stat.ucla.edu/~amelia.mcnamara/blog/conferences/2014/03/04/NICARthoughtsPt3.html">here</a>.</em></p>
+:ET

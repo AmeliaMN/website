@@ -212,7 +212,7 @@ library(mosaic)
 diff(mean(~height|team, data=tugowar))</p>
 
 <p>bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups=team)))</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 So if I wanted to compute one difference in means, it's the first piece of code. And I wanted to do a thousand of them, I could use the second chunk.
 
 But there's another technique we might want to use for assessing whether the number we got is sort of reasonable or what some other possible numbers we could have observed could be. That's bootstrapping. In bootstrapping you take the data you have, kind of like pulling yourself up by your bootstraps. Making something from nothing. That's not really possible, so we're going to make data from our old data. We're going to sample with replacement. Pull out data points. Here we're not breaking the relationship between the two variables. We're just pulling them out directly.
@@ -322,7 +322,7 @@ wrapping those facets into an array of plots. When you run the code, they have d
 <p>```{r, eval=FALSE}
 decrypt(“OlCE bQTQ Aw GWPATAWw d”)
 [1] “True data in position 14”</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 You can use the same code for the t-test. This is the tug of war teams again. Somewhere in there I've hidden the real plot of the different heights. The crosses represent the mean heights for each of the groups. The question is if you can pick out the real data. So in your head, make your guess.
 
 &lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/visual_t2.jpg" class="img-responsive" alt="Visual t-test"&gt;&lt;/a&gt;
@@ -344,7 +344,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw J")
 
 <p>So again, the real data is in there. Again, look at it and try to see if you can guess which one it is. And now we’re going to try and decrypt. So there’s the string again.</p>
 
-<p><code class="highlighter-rouge">{r, eval=FALSE}
+<p><code class="language-plaintext highlighter-rouge">{r, eval=FALSE}
 decrypt("OlCE bQTQ Aw GWPATAWw y")
 [1] "True data in position 4"
 </code></p>
