@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <title>Syllabus</title>
+
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+  <script src="site_libs/navigation-1.1/tabsets.js"></script>
+  <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+  <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+    pre:not([class]) {
+      background-color: white;
+    }
+  </style>
+  <script type="text/javascript">
+    if (window.hljs) {
+      hljs.configure({languages: []});
+      hljs.initHighlightingOnLoad();
+      if (document.readyState && document.readyState === "complete") {
+        window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+      }
+    }
+  </script>
+
+
+
+  <style type="text/css">
+    h1 {
+      font-size: 34px;
+    }
+    h1.title {
+      font-size: 38px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 12px;
+    }
+    .table th:not([align]) {
+      text-align: left;
+    }
+  </style>
+
+  <link rel="stylesheet" href="include/smith.css" type="text/css" />
+
+</head>
+
+<body>
+
+  <style type = "text/css">
+    .main-container {
+      max-width: 940px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    code {
+      color: inherit;
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    img {
+      max-width:100%;
+      height: auto;
+    }
+    .tabbed-pane {
+      padding-top: 12px;
+    }
+    .html-widget {
+      margin-bottom: 20px;
+    }
+    button.code-folding-btn:focus {
+      outline: none;
+    }
+    summary {
+      display: list-item;
+    }
+  </style>
+
+
+  <style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+  <!-- tabsets -->
+
+  <style type="text/css">
+    .tabset-dropdown > .nav-tabs {
+      display: inline-table;
+      max-height: 500px;
+      min-height: 44px;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .tabset-dropdown > .nav-tabs > li.active:before {
+      content: "";
+      font-family: 'Glyphicons Halflings';
+      display: inline-block;
+      padding: 10px;
+      border-right: 1px solid #ddd;
+    }
+
+    .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+      content: "&#xe258;";
+      border: none;
+    }
+
+    .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+      content: "";
+      font-family: 'Glyphicons Halflings';
+      display: inline-block;
+      padding: 10px;
+      border-right: 1px solid #ddd;
+    }
+
+    .tabset-dropdown > .nav-tabs > li.active {
+      display: block;
+    }
+
+    .tabset-dropdown > .nav-tabs > li > a,
+    .tabset-dropdown > .nav-tabs > li > a:focus,
+    .tabset-dropdown > .nav-tabs > li > a:hover {
+      border: none;
+      display: inline-block;
+      border-radius: 4px;
+    }
+
+    .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+      display: block;
+      float: none;
+    }
+
+    .tabset-dropdown > .nav-tabs > li {
+      display: none;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      window.buildTabsets("TOC");
+    });
+
+    $(document).ready(function () {
+      $('.tabset-dropdown > .nav-tabs > li').click(function () {
+        $(this).parent().toggleClass('nav-tabs-open')
+      });
+    });
+  </script>
+
+  <!-- code folding -->
+
+
+
+
+
+  <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">STAT 336 - Fall 2021</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="index.html">
+              <span class="fa fa-home"></span>
+
+              Syllabus
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Mini projects
+
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="OneNumberStory.html">One number story</a>
+              </li>
+              <li>
+                <a href="deardata.html">Dear data</a>
+              </li>
+              <li>
+                <a href="copy-the-masters.html">Copy the masters</a>
+              </li>
+              <li>
+                <a href="wikipedia.html">Wikipedia article</a>
+              </li>
+              <li>
+                <a href="lightning_talks.html">Lightning talk</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Other assignments
+
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="DataDiary.html">Data diaries</a>
+              </li>
+              <li>
+                <a href="FinalProject.html">Final project</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+  </div><!--/.navbar -->
+
+  <div class="fluid-row" id="header">
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Data Diary</h1>
+
+</div>
+
+
+<p>One recurring theme for our discussion posts will be a “Data Diary.” A data diary entry can be written in a casual and conversational style, and should be focused on things you have observed/read/thought that connect to our class. For example, if you see a particular piece of data visualization that sparked your interest, you could write about that. Questions are also good, particularly if they might be something you could answer using data.</p>
+<p>Entries can be short, just a few sentences, but should strive to explain briefly what the data source is (or could be), how the data was communicated (visualization? written statistics?), and provide a link if it is relevant.</p>
+<p>Some examples of Data Diary entries:</p>
+<p>"As a big baseball fan and a huge Twins fan, I am always looking for breaking news on the sport. One major event this offseason was the Houston Astros sign-stealing dilemma, and I was researching the statistics of the event to see the full nature of the importance of it. One Twitter user named Tony Adams published a great thread on Twitter about the statistics of the sign-stealing by each player through graph visualization. To someone not familiar with the situation, the Houston Astros used trash-cans to signal what type of pitch is coming through banging of trash-cans, and this statistically benefited Astros batters with their home-field advantage. This is a wonderful thread that I believe any baseball fan and sports fan should glimpse at, as it is a wonderful visualization of the impact of the dilemma.</p>
+<p>Source: <a href="https://twitter.com/adams_at/status/1222506644761911296" class="uri">https://twitter.com/adams_at/status/1222506644761911296</a>"</p>
+<p>“I went for a run this evening at the UST gym. The treadmills were all replaced within the last year and the new ones all show the same statistics while people exercise on them. The numbers include the number of miles run, the speed, the amount of time on the machine and the number of calories burned. I run because I enjoy it and it makes me feel good. I have never monitored the calories I expend closely, but still noticed this number. I ended up talking to friends who got on the treadmills next to me, so I never checked the number when I finished my run. However, sometime in the run when I was thinking about the data diaries I remember it saying 341 calories. Different bodies have different metabolisms and I wondered what data was used to calculate the number of calories I had burned. It seems to me that this number should vary between different people based on factors like weight, height and gender. Therefore, it was interesting this would be one of the numbers shown along with miles, time and speed. I wondered what data they used to calculate this output and if the treadmill kept track of statistics like my work out tonight.”</p>
+<p>“For my ECON 252 class, I’ve been tasked with finding a relevant article that shows some sort of shift in supply or demand in recent history. I came across an article talking about what sort of effect the coronavirus has had on”Corona" beer, that being a decrease in demand. Although the company argues that their sales are as high as ever, recent reports have shown that 38% of Americans will not buy Corona “under any circumstances” due to the virus. This number absolutely shocks me, as I can’t believe how many people will unknowingly associate two completely unrelated things simply because of a name. It makes me wonder how dangerous titles can actually be for things such as diseases (or even hurricanes at that) and how these sorts of names affect the public and even individuals. It would be interesting to see a chart showing how certain things decline following tragic events that use a certain name.</p>
+<p>Article - <a href="https://www.cnn.com/2020/02/28/business/corona-beer-marketing/index.html" class="uri">https://www.cnn.com/2020/02/28/business/corona-beer-marketing/index.html</a>"</p>
+<p>"When going through my Spotify this morning I chose to play the playlist of songs that’s suggested weekly. I really like this aspect of the app as it helps you discover music you haven’t heard or might have forgotten about. I looked up how their algorithms choose these and found that the app uses data from other users with similar music tastes and finds patterns between the songs.</p>
+<p>I liked reading this article on it and found the graph the author included on music tastes to be an interesting way of explaining the process!</p>
+<p><a href="https://qz.com/571007/the-magic-that-makes-spotifys-discover-weekly-playlists-so-damn-good/" class="uri">https://qz.com/571007/the-magic-that-makes-spotifys-discover-weekly-playlists-so-damn-good/</a>"</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
