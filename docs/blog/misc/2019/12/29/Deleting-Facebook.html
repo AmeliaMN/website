@@ -24,7 +24,7 @@
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Deleting Facebook </title>
     <link rel="shortcut icon" href="https://www.amelia.mn/assets/ico/favicon.png">
-    <link rel="stylesheet" href="https://www.amelia.mn/dist/font-awesome/css/font-awesome.min.css">
+   <script src="https://kit.fontawesome.com/040465c08e.js" crossorigin="anonymous"></script>
     <link href="https://www.amelia.mn/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://www.amelia.mn/dist/css/my.css" rel="stylesheet">
     
@@ -57,6 +57,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="https://www.amelia.mn/STAT220labs">STAT 220 R labs</a></li>
+                <li><a href = "https://www.amelia.mn/STAT336">STAT 336: Data Communication and Visualization</a></li>
                 <li><a href="https://www.amelia.mn/pastcourses.html">Past courses</a></li>
                 <li class="divider">Resources</li>
                 <li><a href="https://www.amelia.mn/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
@@ -83,6 +84,7 @@
               <ul class="nav navbar-nav navbar-right">
 				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="watch" href="https://www.youtube.com/ameliamcnamara" target="_blank"><i class="fa fa-youtube-square fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
           </ul>
@@ -133,9 +135,9 @@
 
 <p>My first move was to download all the data Facebook makes available to users through their Download Your Information tool. <a href="https://www.facebook.com/help/1701730696756992?helpref=hc_global_nav">Facebook has instructions on how to do this</a>. My main piece of advice is to think carefully about whether you want .html or .json files.</p>
 
-<p>HTML is probably the most appropriate for most (non-programmer) people, because the HTML file structure makes it easy to browse through your data on your computer. The files kind of mimic the Facebook experience, so you can click on a file called <code class="highlighter-rouge">your_photos.html</code> and see a page with links to each of your Facebook photo albums. If you click through to an album, you will get a page with each photo and the associated comments on the picture. It’s a nice interface.</p>
+<p>HTML is probably the most appropriate for most (non-programmer) people, because the HTML file structure makes it easy to browse through your data on your computer. The files kind of mimic the Facebook experience, so you can click on a file called <code class="language-plaintext highlighter-rouge">your_photos.html</code> and see a page with links to each of your Facebook photo albums. If you click through to an album, you will get a page with each photo and the associated comments on the picture. It’s a nice interface.</p>
 
-<p>However, the HTML file structures are nasty. I didn’t see the JSON option, so I thought my only option was to use the HTML files. In order to parse out my friend list to a useful csv file, I had to use <code class="highlighter-rouge">rvest</code>. My code is <a href="https://github.com/AmeliaMN/deleting_facebook/blob/master/FacebookFriends.md">available on GitHub</a> in case you find yourself in that same situation. But, to avoid this, I recommend getting at least some of your information in JSON format. Eventually, I downloaded all my data twice, once in each format.</p>
+<p>However, the HTML file structures are nasty. I didn’t see the JSON option, so I thought my only option was to use the HTML files. In order to parse out my friend list to a useful csv file, I had to use <code class="language-plaintext highlighter-rouge">rvest</code>. My code is <a href="https://github.com/AmeliaMN/deleting_facebook/blob/master/FacebookFriends.md">available on GitHub</a> in case you find yourself in that same situation. But, to avoid this, I recommend getting at least some of your information in JSON format. Eventually, I downloaded all my data twice, once in each format.</p>
 
 <p>Once I had the parsed csv file, I turned it into a Google Sheet. This is both a backup of my data and a centrally-accessible place to store it. (A side note– I have put my Facebook data all over the cloud. This might seem counter-intuitive, but I’m not worried about an individual hacker accessing my data, I wanted to remove myself from Facebook using my data in their ad machine.)</p>
 
@@ -155,7 +157,7 @@
 
 <p><a class="thumb" href=""><img src="https://www.amelia.mn/img/facebook_friends_how.jpg" class="img-responsive" alt="Distribution of how I know people" /></a></p>
 
-<p>I was homeschooled as a child, so that covers the elementary and middle school years. Cincinnati was my first year of college, Macalester was where I transferred and finished my BA, UCLA was my PhD. I like the big categories of “friend of a friend” and “family of a friend.” I used <code class="highlighter-rouge">forcats::fct_lump</code> to lump together small categories, because there were a lot of little categories that I’m less comfortable sharing with the wider internet! But again, cool insight.</p>
+<p>I was homeschooled as a child, so that covers the elementary and middle school years. Cincinnati was my first year of college, Macalester was where I transferred and finished my BA, UCLA was my PhD. I like the big categories of “friend of a friend” and “family of a friend.” I used <code class="language-plaintext highlighter-rouge">forcats::fct_lump</code> to lump together small categories, because there were a lot of little categories that I’m less comfortable sharing with the wider internet! But again, cool insight.</p>
 
 <p>Once I had my friend list in an accessible place, and notes to myself about how I knew people, I felt pretty comfortable with my data. But, there were still two more big things I wanted from Facebook that didn’t come in their data download:</p>
 
@@ -166,7 +168,7 @@
 
 <p>Facebook used to let users download their friends’ birthdays to a local calendar. However, they recently <a href="https://www.digitaltrends.com/news/facebook-removes-friends-birthday-export/">changed their policy</a>, and that feature has been removed. I dug around online, and found a python scraper by <a href="https://github.com/mobeigi">Mo Beigi</a> <a href="https://github.com/mobeigi/fb2cal">on GitHub</a>. As he warns, using this script made facebook temporarily suspend my account because of suspected security issues. However, this was a good reminder to change my Facebook password (something which happened repeatedly as I was working on scraping data). The script worked so well that I don’t have a clear memory of it anymore!</p>
 
-<p>Once I ran the scraper, I had a .ics file with all 625 Facebook friends’ birthdays. However, I didn’t want to add all of them to my calendar, just my 104 close friends. So, I had to parse the .ics file and filter out just those birthdays. This process was tricky, mostly because I couldn’t make the <code class="highlighter-rouge">calendar</code> package work on the ics file I got from the scraper. Again, my code is <a href="https://github.com/AmeliaMN/deleting_facebook/blob/master/parsing_birthdays.md">on GitHub</a>, scroll down to get to the useful stuff.</p>
+<p>Once I ran the scraper, I had a .ics file with all 625 Facebook friends’ birthdays. However, I didn’t want to add all of them to my calendar, just my 104 close friends. So, I had to parse the .ics file and filter out just those birthdays. This process was tricky, mostly because I couldn’t make the <code class="language-plaintext highlighter-rouge">calendar</code> package work on the ics file I got from the scraper. Again, my code is <a href="https://github.com/AmeliaMN/deleting_facebook/blob/master/parsing_birthdays.md">on GitHub</a>, scroll down to get to the useful stuff.</p>
 
 <p>One interesting insight from this process was that 21% of my close friends didn’t have their birthdays on Facebook. I’d guess this is in response to the feeling that Facebook is too invasive with their data collection. So now I have a list of people who I need to ask for their birthday!</p>
 
@@ -174,7 +176,7 @@
 
 <p>What Facebook does not give you in your data download are your tagged photos. It considers them to be your friends’ data, which I guess is fair. But, I wanted those photos! I had 878 tagged photos on Facebook, so going through them one by one and right-clicking to download didn’t make sense. I looked into scrapers online, and found several in python. However, I wasn’t able to get any of those scrapers to work. My suspicion is that Facebook changed their page structure to thwart those particular scrapers, and I’m not good enough at python to debug that.</p>
 
-<p>So, <a href="https://github.com/AmeliaMN/deleting_facebook/blob/master/FacebookPhotosOfYou.md">I wrote my own scraper in R</a>. This scraper was very likely not the most efficient– it used <code class="highlighter-rouge">RSelenium</code> to drive a browser, a <code class="highlighter-rouge">for</code> loop to click through each picture because I couldn’t think of how to vectorize it, and the whole thing happened in real time (the browser was up and I got to watch it go through all the photos). In <code class="highlighter-rouge">RSelenium</code> I just grabbed the image urls, because I couldn’t figure out how to do the download right there, and I used another <code class="highlighter-rouge">for</code> loop and the <code class="highlighter-rouge">curl</code> library to download the images after the fact. However, this scraping code has the advantage of being (I think) very easy to read, so if Facebook changes their page structure I’d guess it will be possible to adjust the code to work again.</p>
+<p>So, <a href="https://github.com/AmeliaMN/deleting_facebook/blob/master/FacebookPhotosOfYou.md">I wrote my own scraper in R</a>. This scraper was very likely not the most efficient– it used <code class="language-plaintext highlighter-rouge">RSelenium</code> to drive a browser, a <code class="language-plaintext highlighter-rouge">for</code> loop to click through each picture because I couldn’t think of how to vectorize it, and the whole thing happened in real time (the browser was up and I got to watch it go through all the photos). In <code class="language-plaintext highlighter-rouge">RSelenium</code> I just grabbed the image urls, because I couldn’t figure out how to do the download right there, and I used another <code class="language-plaintext highlighter-rouge">for</code> loop and the <code class="language-plaintext highlighter-rouge">curl</code> library to download the images after the fact. However, this scraping code has the advantage of being (I think) very easy to read, so if Facebook changes their page structure I’d guess it will be possible to adjust the code to work again.</p>
 
 <p>Once I had my 1781 uploaded photos and 878 tagged photos on my computer, I decided I wanted some of them physically printed. Somehow, when those photos were on Facebook they felt “safe” and like I would have access to them forever. But once they were on my computer, even though they were backed up, they felt insecure. Of those ~2500 photos, I chose ~500 I wanted printed, and uploaded them to Shutterfly.</p>
 
@@ -316,7 +318,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2021 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2022 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
 

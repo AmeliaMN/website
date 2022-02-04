@@ -24,7 +24,7 @@
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Openvisconftranscript </title>
     <link rel="shortcut icon" href="https://www.amelia.mn/assets/ico/favicon.png">
-    <link rel="stylesheet" href="https://www.amelia.mn/dist/font-awesome/css/font-awesome.min.css">
+   <script src="https://kit.fontawesome.com/040465c08e.js" crossorigin="anonymous"></script>
     <link href="https://www.amelia.mn/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://www.amelia.mn/dist/css/my.css" rel="stylesheet">
     
@@ -57,6 +57,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="https://www.amelia.mn/STAT220labs">STAT 220 R labs</a></li>
+                <li><a href = "https://www.amelia.mn/STAT336">STAT 336: Data Communication and Visualization</a></li>
                 <li><a href="https://www.amelia.mn/pastcourses.html">Past courses</a></li>
                 <li class="divider">Resources</li>
                 <li><a href="https://www.amelia.mn/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
@@ -83,6 +84,7 @@
               <ul class="nav navbar-nav navbar-right">
 				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="watch" href="https://www.youtube.com/ameliamcnamara" target="_blank"><i class="fa fa-youtube-square fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
           </ul>
@@ -212,7 +214,7 @@ library(mosaic)
 diff(mean(~height|team, data=tugowar))</p>
 
 <p>bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups=team)))</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 So if I wanted to compute one difference in means, it's the first piece of code. And I wanted to do a thousand of them, I could use the second chunk.
 
 But there's another technique we might want to use for assessing whether the number we got is sort of reasonable or what some other possible numbers we could have observed could be. That's bootstrapping. In bootstrapping you take the data you have, kind of like pulling yourself up by your bootstraps. Making something from nothing. That's not really possible, so we're going to make data from our old data. We're going to sample with replacement. Pull out data points. Here we're not breaking the relationship between the two variables. We're just pulling them out directly.
@@ -322,7 +324,7 @@ wrapping those facets into an array of plots. When you run the code, they have d
 <p>```{r, eval=FALSE}
 decrypt(“OlCE bQTQ Aw GWPATAWw d”)
 [1] “True data in position 14”</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 You can use the same code for the t-test. This is the tug of war teams again. Somewhere in there I've hidden the real plot of the different heights. The crosses represent the mean heights for each of the groups. The question is if you can pick out the real data. So in your head, make your guess.
 
 &lt;a class="thumb" href=""&gt;&lt;img src="https://www.amelia.mn/img/visual_t2.jpg" class="img-responsive" alt="Visual t-test"&gt;&lt;/a&gt;
@@ -344,7 +346,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw J")
 
 <p>So again, the real data is in there. Again, look at it and try to see if you can guess which one it is. And now we’re going to try and decrypt. So there’s the string again.</p>
 
-<p><code class="highlighter-rouge">{r, eval=FALSE}
+<p><code class="language-plaintext highlighter-rouge">{r, eval=FALSE}
 decrypt("OlCE bQTQ Aw GWPATAWw y")
 [1] "True data in position 4"
 </code></p>
@@ -480,7 +482,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2021 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2022 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
 

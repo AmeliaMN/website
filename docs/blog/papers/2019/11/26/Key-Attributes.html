@@ -24,7 +24,7 @@
     <meta name="author" content="Amelia McNamara">
     <title>Amelia McNamara  | Blog   | Key Attributes </title>
     <link rel="shortcut icon" href="https://www.amelia.mn/assets/ico/favicon.png">
-    <link rel="stylesheet" href="https://www.amelia.mn/dist/font-awesome/css/font-awesome.min.css">
+   <script src="https://kit.fontawesome.com/040465c08e.js" crossorigin="anonymous"></script>
     <link href="https://www.amelia.mn/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://www.amelia.mn/dist/css/my.css" rel="stylesheet">
     
@@ -57,6 +57,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">teaching <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="https://www.amelia.mn/STAT220labs">STAT 220 R labs</a></li>
+                <li><a href = "https://www.amelia.mn/STAT336">STAT 336: Data Communication and Visualization</a></li>
                 <li><a href="https://www.amelia.mn/pastcourses.html">Past courses</a></li>
                 <li class="divider">Resources</li>
                 <li><a href="https://www.amelia.mn/Syntax-cheatsheet.pdf">R Syntax Comparison Cheatsheet</a></li>
@@ -83,6 +84,7 @@
               <ul class="nav navbar-nav navbar-right">
 				<li><a class="tooltip-test" data-placement="bottom" title="" data-original-title="email" href="mailto:amelia.mcnamara@stthomas.edu" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="follow" href="http://www.twitter.com/AmeliaMN" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="watch" href="https://www.youtube.com/ameliamcnamara" target="_blank"><i class="fa fa-youtube-square fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="connect" href="http://www.linkedin.com/in/AmeliaMcNamara" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
 				<li><a class="tooltip-test"  data-placement="bottom" title="" data-original-title="fork" href="https://github.com/AmeliaMN" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
           </ul>
@@ -164,7 +166,7 @@
   <li>Flexibility to build extensions: The complement to 2), the tool needs a high ceiling, so you don’t “experience out” of the tool. It should be possible to implement new functions and extend functionality.</li>
 </ol>
 
-<p>I think these attributes encompass a lot of what is important for a tool. Over the years I’ve been thinking about this, I’ve refined the attributes and tried to make them as comprehensive as possible. But, I’m sure there are pieces that are missing. For example, it has been pointed out that I don’t talk about the correctness of the implementations. To me, that goes without saying– if it’s a tool for statistical computing, it needs to do statistics properly! But of course, we have seen that isn’t always a safe assumption. I explicitly didn’t touch things like computing speed, because I was considering this from a human usability perspective. If you have a good, usable tool, and it allows you to build extensions, someone will fix the speed issue. Much harder to fix are things like inherent documentation, which we have seen Hadley Wickham working through with things like <code class="highlighter-rouge">pivot_longer()</code>, the next generation of what was formerly  <code class="highlighter-rouge">gather()</code>, formerly <code class="highlighter-rouge">cast()</code>.</p>
+<p>I think these attributes encompass a lot of what is important for a tool. Over the years I’ve been thinking about this, I’ve refined the attributes and tried to make them as comprehensive as possible. But, I’m sure there are pieces that are missing. For example, it has been pointed out that I don’t talk about the correctness of the implementations. To me, that goes without saying– if it’s a tool for statistical computing, it needs to do statistics properly! But of course, we have seen that isn’t always a safe assumption. I explicitly didn’t touch things like computing speed, because I was considering this from a human usability perspective. If you have a good, usable tool, and it allows you to build extensions, someone will fix the speed issue. Much harder to fix are things like inherent documentation, which we have seen Hadley Wickham working through with things like <code class="language-plaintext highlighter-rouge">pivot_longer()</code>, the next generation of what was formerly  <code class="language-plaintext highlighter-rouge">gather()</code>, formerly <code class="language-plaintext highlighter-rouge">cast()</code>.</p>
 
 <p>My goal with writing this paper was to give practitioners and educators a framework for evaluating a tool, and to inspire people who build tools themselves. I hadn’t seen anything like this since 1997, so I decided it was time to re-open the conversation. But, I do want it to be a conversation. What else should we be aiming for as we design the next iteration of statistical computing tools?</p>
 
@@ -250,7 +252,7 @@ s.setAttribute('data-timestamp', +new Date());
 
    <footer>
       <div class="container">
-        <p class="text-muted credit">Copyright &copy; 2021 Amelia McNamara. All Rights Reserved.</p>
+        <p class="text-muted credit">Copyright &copy; 2022 Amelia McNamara. All Rights Reserved.</p>
       </div>
     </footer>
 
