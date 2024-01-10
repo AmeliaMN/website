@@ -9,15 +9,16 @@ toc: false
 ::: {.column width="37%"}
 ![Photo courtesy [Mark Brown](http://www.twintownmedia.com/about)](img/Portrait3.jpg)
 :::
+
 ::: {.column width="6%"}
 :::
-::: {.column width="57%}
+
+::: {.column width="\"57%"}
 ## Associate Professor, University of St Thomas [Department of Computer and Information Sciences](https://www.stthomas.edu/cisc/)
 
 My work is focused on learning what makes it easier to do and to understand statistics, and my research interests include statistics education, statistical computing, data visualization, and spatial statistics.
 :::
 :::
-
 
 Recent notable work of mine includes
 

@@ -19,29 +19,29 @@ When I teach in person, I guide students through th pre-lab material live, stopp
 
 I provide students with a cheatsheet entitled \[All the R you need for intro stat\](), which gives them an overview of the most important code for the semester.
 
-			Describing data. RMarkdown, YouTube video
+Describing data. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/01-STAT_220_DescribingDataPreLab_tidy.Rmd), [YouTube video]()
 
-			Categorical variables. RMarkdown, YouTube videos
+Categorical variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/02-STAT_220_CategoricalVariablesPreLab_tidy.Rmd), YouTube [video 1](), [video 2]()
 
-			Quantitative variables. RMarkdown, YouTube videos
+Quantitative variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/03-STAT_220_QuantitativeVariablesPreLab_tidy.Rmd), YouTube [video 1](), [video 2]()
 
-			Correlation and regression. RMarkdown, YouTube videos
+Correlation and regression. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/04-STAT_220_RegressionPreLab_tidy.Rmd), [YouTube video]()
 
-			Bootstrap intervals. RMarkdown, YouTube videos
+Bootstrap intervals. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/05-STAT_220_BootstrapPreLab-tidy.Rmd), YouTube [video 1](), [video 2]()
 
-			Randomization tests. RMarkdown, YouTube videos
+Randomization tests. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/06-STAT_220_RandomizationPreLab-tidy.Rmd), [YouTube video]()
 
-			Inference for a single proportion. RMarkdown, YouTube videos
+Inference for a single proportion. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/07-STAT_220_InferenceSingleProportionPreLab-formula.Rmd), [YouTube video]()
 
-			Inference for a single mean. RMarkdown, YouTube videos
+Inference for a single mean. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/08-STAT_220_InferenceSinglePreLab-formula.Rmd), [YouTube video]()
 
-			Inference for two samples. RMarkdown, YouTube videos
+Inference for two samples. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/09-STAT_220_TwoSamplePreLab-formula.Rmd), YouTube [video 1](), [video 2]()
 
-			ANOVA. RMarkdown, YouTube videos
+ANOVA. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/10-STAT_220_ANOVAPreLab-formula.Rmd), YouTube [video 1](), [video 2]()
 
-			Chi-square. RMarkdown, YouTube videos
+Chi-square. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/11-STAT_220_ChiSquarePreLab-formula.Rmd) YouTube videos
 
-			Inference for Regression. RMarkdown. YouTube videos
+Inference for Regression. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/12-STAT_220_RegressionInferencePreLab-formula.Rmd) YouTube videos
 
 ## tidy syntax
 
