@@ -2,3 +2,5 @@ _drafts/
 .DS_Store
 .Rproj.user
 .jekyll-cache/
+
+/.quarto/
