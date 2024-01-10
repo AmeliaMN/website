@@ -1,0 +1,51 @@
+project:
+  type: website
+
+website:
+  title: "Amelia McNamara"
+  site-url: https://www.amelia.mn
+  description: "Personal website of Associate Professor of data science Amelia McNamara"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Teaching"
+        menu:
+          - STAT220labs.qmd
+          - pastcourses.qmd
+          - href: SyntaxCheatsheet.pdf
+            text: R Syntax Comparison Cheatsheet
+          - wikipedia.qmd
+      - text: "Research"
+        menu:
+          - writing.qmd
+          - presentations.qmd
+      - press.qmd
+      - text: Blog
+        href: blog.qmd
+    right:
+      - icon: envelope
+        href: mailto:amelia.mcnamara@stthomas.edu
+      - icon: mastodon
+        href: https://vis.social/@amelia
+      - icon: youtube
+        href: https://www.youtube.com/ameliamcnamara
+      - icon: linkedin
+        href: http://www.linkedin.com/in/AmeliaMcNamara
+      - icon: github
+        href: https://github.com/AmeliaMN/
+  page-footer: 
+    left:
+      - text: "Copyright © 2024 Amelia McNamara. All Rights Reserved."
+      
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    toc: true
+execute: 
+  freeze: auto
+
+editor: visual
+

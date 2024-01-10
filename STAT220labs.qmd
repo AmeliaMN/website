@@ -1,0 +1,72 @@
+---
+title: "STAT 220 labs"
+editor: visual
+---
+
+::: lead
+In Spring 2020 and Fall 2020, I embarked on an "experiment" of sorts to compare the formula and tidyverse syntaxes for teaching introductory statistics.
+:::
+
+Prior to this experiement, I had taught a full-semester introductory statistics course soley using formula syntax, as well as a full-semester course in tidyverse syntax. Both semesters were at my previous institution (Smith College). However, I had never compared the two syntaxes head to head. This made it difficult to compare, because groups of students vary so much semester to semester. In addition, when I wrote the instructional materials for a tidy semester (for example) I would be implicitly thinking of tasks that would be easy to do in tidy syntax.
+
+At St Thomas, the STAT 220 are written to be software-agnostic (they are used across all the STAT 220 labs, including labs taught in Excel, Minitab, JMP, and SPSS), which allowed me to produce materials without being influenced as much by the tasks that would easy in a particular syntax. I developed pre-labs for each of the 11 labs in each of the two syntaxes.
+
+The pre-labs are written and provided to students in RMarkdown format, and walk students through the code necessary to accomplish the tasks in the real lab for the week. Some code is provided in the document, but there are also blank code chunks and questions throughout the pre-lab. The pre-labs for the two syntaxes are typically similar in text content, but different in the code they display, although differences in the syntax mean that they occasionally deviate.
+
+When I teach in person, I guide students through th pre-lab material live, stopping periodically to give them time to work on questions. So, for the first several weeks of this experiment I was able to do this sort of live teaching. When the pandemic forced courses online mid-Spring 2020, I began providing the pre-lab material as YouTube videos students could watch asynchronously. In the Fall 2020 semester, each pre-lab has been provided as a YouTube video. During synchronous classtime, I help students get started on the real lab, and stay on Zoom to answer questions from students as they arise.
+
+## formula syntax
+
+I provide students with a cheatsheet entitled \[All the R you need for intro stat\](), which gives them an overview of the most important code for the semester.
+
+			Describing data. RMarkdown, YouTube video
+
+			Categorical variables. RMarkdown, YouTube videos
+
+			Quantitative variables. RMarkdown, YouTube videos
+
+			Correlation and regression. RMarkdown, YouTube videos
+
+			Bootstrap intervals. RMarkdown, YouTube videos
+
+			Randomization tests. RMarkdown, YouTube videos
+
+			Inference for a single proportion. RMarkdown, YouTube videos
+
+			Inference for a single mean. RMarkdown, YouTube videos
+
+			Inference for two samples. RMarkdown, YouTube videos
+
+			ANOVA. RMarkdown, YouTube videos
+
+			Chi-square. RMarkdown, YouTube videos
+
+			Inference for Regression. RMarkdown. YouTube videos
+
+## tidy syntax
+
+I provide students with a cheatsheet entitled [All the R you need for intro stat](https://github.com/AmeliaMN/STAT220-labs/blob/main/all_the_R_you_need_tidy.Rmd) which gives them an overview of the most important code for the semester. Each week, I post RMarkdown documents on Canvas (also [hosted on GitHub](https://github.com/AmeliaMN/STAT220-labs/tree/main/tidy) for sharing), and accompanying videos on [the YouTube playlist for the class](https://www.youtube.com/playlist?list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX).
+
+Describing data. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/01-STAT_220_DescribingDataPreLab_tidy.Rmd), [YouTube video](https://www.youtube.com/watch?v=vMZXK_RJ-_k&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=2)
+
+Categorical variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/02-STAT_220_CategoricalVariablesPreLab_tidy.Rmd), YouTube [video 1](https://www.youtube.com/watch?v=Ir-LeWndP70&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=3), [video 2](https://www.youtube.com/watch?v=Q3HJSCG3GOQ&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=4)
+
+Quantitative variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/03-STAT_220_QuantitativeVariablesPreLab_tidy.Rmd), YouTube [video 1](https://www.youtube.com/watch?v=f2TKQYizfqA&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=5), [video 2](https://www.youtube.com/watch?v=siB6pydmQYY&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=6)
+
+Correlation and regression. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/04-STAT_220_RegressionPreLab_tidy.Rmd), [YouTube video](https://www.youtube.com/watch?v=j5mu5XcJD_w&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=7)
+
+Bootstrap intervals. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/05-STAT_220_BootstrapPreLab-tidy.Rmd), YouTube [video 1](https://www.youtube.com/watch?v=FE6_NrUXgMI&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=8), [video 2](https://www.youtube.com/watch?v=IPQaqi6rP0o&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=9)
+
+Randomization tests. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/06-STAT_220_RandomizationPreLab-tidy.Rmd), [YouTube video](https://www.youtube.com/watch?v=2KwN-JrVfwQ&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=10)
+
+Inference for a single proportion. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/07-STAT_220_InferenceSingleProportionPreLab-tidy.Rmd), [YouTube video](https://www.youtube.com/watch?v=H8msMGkUmp0&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=11)
+
+Inference for a single mean. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/08-STAT_220_InferenceSingleMeanPreLab-tidy.Rmd), [YouTube video](https://www.youtube.com/watch?v=VvjImYrUobA&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=12)
+
+Inference for two samples. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/09-STAT_220_TwoSamplePreLab-tidy.Rmd), YouTube [video 1](https://www.youtube.com/watch?v=4zVAN4gqAmQ&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=13), [video 2](https://www.youtube.com/watch?v=lvZphz3-oXE&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=14)
+
+ANOVA. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/10-STAT_220_ANOVAPreLab-tidy.Rmd), YouTube [video 1](https://www.youtube.com/watch?v=iul28zUiCM4&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=15), [video 2](https://www.youtube.com/watch?v=kXJOwsRqd8g&list=PLik6fAQnSI93eBVuAONFBCVdOd7VFhKQX&index=16)
+
+Chi-square. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/11-STAT_220_ChiSquarePreLab-tidy.Rmd) YouTube videos
+
+Inference for Regression. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/tidy/12-STAT_220_RegressionInferencePreLab-tidy.Rmd) YouTube videos

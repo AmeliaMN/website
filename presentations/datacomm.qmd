@@ -1,0 +1,5 @@
+---
+title: "Data Communication and Visualization at the University of St Thomas"
+author: Amelia McNamara
+format: revealjs
+---

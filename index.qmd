@@ -1,0 +1,52 @@
+---
+title: "Amelia McNamara"
+image: img/Portrait3.jpg
+type: home
+toc: false
+---
+
+::: columns
+::: {.column width="37%"}
+![Photo courtesy [Mark Brown](http://www.twintownmedia.com/about)](img/Portrait3.jpg)
+:::
+::: {.column width="6%"}
+:::
+::: {.column width="57%}
+## Associate Professor, University of St Thomas [Department of Computer and Information Sciences](https://www.stthomas.edu/cisc/)
+
+My work is focused on learning what makes it easier to do and to understand statistics, and my research interests include statistics education, statistical computing, data visualization, and spatial statistics.
+:::
+:::
+
+
+Recent notable work of mine includes
+
+-   **Speaking R**, a keynote presentation at the 2020 [useR! 2020](https://user2020.r-project.org) conference. In this talk, I advocate for speaking code aloud, particularly as a pedagogical strategy. I offer some suggestions about how to vocalize R code. You can watch the talk [on YouTube](https://www.youtube.com/watch?v=ckW9sSdIVAc&t=676s) and follow along with the [slides](SpeakingR/index.html).
+
+<!-- -->
+
+-   **Key attributes of a modern statistical computing tool**, a paper that builds on the work of John Tukey and Rolf Biehler by providing a list of 10 attributes necessary for a modern tool for data analysis and statistics. Attributes are provided as a way to assess existing tools, or to inspire tool creators. Read online at [The American Statistician](https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1482784), Vol. 73, Issue 4., or as a [pre-print](https://arxiv.org/abs/1610.00985). I've also written a [blog post](http://www.amelia.mn/blog/papers/2019/11/21/Key-Attributes.html) that summarizes some of the salient details.
+
+-   **Wrangling categorical data in R**, a paper co-authored with [Nick Horton](https://www.amherst.edu/people/facstaff/nhorton). This paper describes some common mistakes data analysts make when working with categorical data (factors) in R. The paper was published jointly in [The American Statistician](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1356375), Vol. 72, Issue 1 and as a [pre-print](https://peerj.com/preprints/3163/) in the [Practical Data Science for Stats](https://peerj.com/collections/50-practicaldatascistats) collection on PeerJ.
+
+-   Going back a few years, [my dissertation](http://escholarship.org/uc/item/1mm9303x%22) was entitled **Bridging the Gap Between Tools for Learning and for Doing Statistics**.
+
+For a more detailed look at my recent work, see my [writings](writing.qmd) and [presentations](presentations.qmd).
+
+I have research projects in progress about the impact of R syntax on learning and teaching, the Modifiable Areal Unit Problem in spatial statistics, and the ways in which data analysts check their work. I employ several undergraduate research assistants and I am always willing to work with students on research projects.
+
+### Teaching
+
+At the University of St Thomas, I regularly teach STAT 220: Introduction to statistics, STAT 320: Applied Regression Analysis, and [STAT 336: Data Communication and Visualization](STAT336/index.html) If you are interested in seeing materials from these courses (syllabi, assignments, etc) please email me. I keep meaning to post them online here but there's never enough time! (Update: 336 is up!)
+
+At Smith College, I taught Multiple Regression (Spring 2016, Fall 2016), Introduction to Probability and Statistics (Fall 2015, Spring 2017, Fall 2017), Communicating with Data (Fall 2017), and Data Journalism (Spring 2018).
+
+At both Smith and St Thomas, I have had students author Wikipedia pages as part of my course. I've written about some of the frustration with this assignment on [my blog](blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html), and also have [a list](wikipedia.html) of all the successful pages my students have written.
+
+For three years, I was a graduate student researcher on the Mobilize project, which developed a year-long data science curriculum for high school students called [Introduction to Data Science](https://www.introdatascience.org/). When I last checked, the IDS curriculum has been used in 15 school districts and has had almost 10,000 students take it. The curriculum includes participatory sensing and computational analysis in R and RStudio. My work with Mobilize has been a source of inspiration for my ongoing research into computational tools for novices.
+
+### Curriculum vitae
+
+My CV is available [here](McNamaraCV.pdf), although like many academics I don't always do the best job of keeping it up-to-date. If you're curious about how I TeXed it up, you can view [a version of the code on GitHub](https://github.com/AmeliaMN/CV/blob/master/CV.tex)
+
+### Contact me

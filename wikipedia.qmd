@@ -1,0 +1,73 @@
+---
+title: "List of student-authored Wikipedia pages"
+toc: false
+---
+
+Here are some links to Wikipedia pages my students have authored in the past. I wrote about some frustrations with Wikipedia on [my blog](blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html) a few years ago, but I realized it would be better to have a centralized place to update about the pages that have made it! I've done the assignment four times now, once as a "rogue professor" and three times using the [Wikipedia Education](https://dashboard.wikiedu.org/) dashboard. I highly highly recommend using the dashboard. For more advice, see this [presentation](presentations/WikipediaJSM.pdf) I gave at JSM 2020.
+
+### Data Communication and Visualization (Fall 2021)
+
+-   [Christo Allegra](https://en.wikipedia.org/wiki/Christo_Allegra)
+-   [Carmen Batanero](https://en.wikipedia.org/wiki/Carmen_Batanero)
+-   [Ida Benedetto](https://en.wikipedia.org/wiki/Ida_Benedetto_(artist))
+-   [Jeff Bezanson](https://en.wikipedia.org/wiki/Jeff_Bezanson_(programmer))
+-   [Tim Hesterberg](https://en.wikipedia.org/wiki/Tim_Hesterberg)
+-   [Susie Lu](https://en.wikipedia.org/wiki/Susie_Lu)
+-   [Jan Malcolm](https://en.wikipedia.org/wiki/Jan_Malcolm)
+-   [Chi Nguyen](https://en.wikipedia.org/wiki/Chi_Nguyen)
+-   [Jonathan Schwabish](https://en.wikipedia.org/wiki/Jonathan_Schwabish)
+-   [Julia Stewart Lowndes](https://en.wikipedia.org/wiki/Julia_Stewart_Lowndes)
+-   [April Soetarman](https://en.wikipedia.org/wiki/April_Soetarman)
+-   [Noam Ross](https://en.wikipedia.org/wiki/Noam_Ross)
+-   [Christobal Valenzuela](https://en.wikipedia.org/wiki/Crist%C3%B3bal_Valenzuela)
+
+### Data Communication and Visualization (Spring 2021)
+
+-   [Ruth Agbakoba](https://en.wikipedia.org/wiki/Ruth_Agbakoba)
+-   [Nick Horton](https://en.wikipedia.org/wiki/Nicholas_Horton)
+-   [Jessica Hullman](https://en.wikipedia.org/wiki/Jessica_Hullman)
+-   [Chantilly Jaggernauth](https://en.wikipedia.org/wiki/Chantilly_Jaggernauth)
+-   [Josh Katz](https://en.wikipedia.org/wiki/Josh_Katz_(journalist))
+-   [Jen Lowe](https://en.wikipedia.org/wiki/Jen_Lowe)
+-   [Thomas Lumley](https://en.wikipedia.org/wiki/Thomas_Lumley_(statistician))
+-   [Ayodele Odubela](https://en.wikipedia.org/wiki/Ayodele_Odubela)
+-   [Tawana Petty](https://en.wikipedia.org/wiki/Tawana_Petty)
+-   [Karthik Ram](https://en.wikipedia.org/wiki/Karthik_Ram%22)
+-   [Andreas Stefik](https://en.wikipedia.org/wiki/Andreas_Stefik)
+-   [Luke Tierney](https://en.wikipedia.org/wiki/Luke_Tierney)
+-   [Shirley Wu](https://en.wikipedia.org/wiki/Shirley_Wu)
+
+### Data Commuication and Visualization (Spring 2020)
+
+-   [Ingrid Burrington](https://en.wikipedia.org/wiki/Ingrid_Burrington)
+-   [Nadieh Bremer](https://en.wikipedia.org/wiki/Nadieh_Bremer)
+-   [Karl Broman](https://en.wikipedia.org/wiki/Karl_Broman)
+-   [Andreas Buja](https://en.wikipedia.org/wiki/Andreas_Buja)
+-   [Jen Christiansen](https://en.wikipedia.org/wiki/Jen_Christiansen)
+-   [Catherine D'Ignazio](https://en.wikipedia.org/wiki/Catherine_D'Ignazio)
+-   [Adam Harvey](https://en.wikipedia.org/wiki/Adam_Harvey_(artist))
+-   [Kyle McDonald](https://en.wikipedia.org/wiki/Kyle_McDonald)
+-   [Regina Nuzzo](https://en.wikipedia.org/wiki/Regina_Nuzzo)
+-   [Hilary Parker](https://en.wikipedia.org/wiki/Hilary_Parker)
+-   [Roger Peng](https://en.wikipedia.org/wiki/Roger_Peng)
+-   [David Robinson](https://en.wikipedia.org/wiki/David_G._Robinson_(data_scientist))
+-   [Robert Simmon](https://en.wikipedia.org/wiki/Robert_Simmon)
+-   [Antony Unwin](https://en.wikipedia.org/wiki/Antony_Unwin)
+-   [Colin Ware](https://en.wikipedia.org/wiki/Colin_Ware)
+
+### Data Journalism (Spring 2018)
+
+-   [Meredith Broussard](https://en.wikipedia.org/wiki/Meredith_Broussard)
+-   [Jenny Bryan](https://en.wikipedia.org/wiki/Jenny_Bryan)
+-   [Lynn Cherny](https://en.wikipedia.org/wiki/Lynn_Cherny)
+-   [Amanda Cox](https://en.wikipedia.org/wiki/Amanda_Cox)
+-   [Lena Groeger](https://en.wikipedia.org/wiki/Lena_Groeger)
+-   [Mark Hansen](https://en.wikipedia.org/wiki/Mark_Henry_Hansen)
+-   [Janaya Khan](https://en.wikipedia.org/wiki/Janaya_Khan)
+-   [Jeff Leek](https://en.wikipedia.org/wiki/Jeffrey_T._Leek)
+-   [Giorgia Lupi](https://en.wikipedia.org/wiki/Giorgia_Lupi)
+-   [Stefanie Posavec](https://en.wikipedia.org/wiki/Stefanie_Posavec)
+-   [Kim Rees](https://en.wikipedia.org/wiki/Kim_Rees)
+-   [Julia Silge](https://en.wikipedia.org/wiki/Julia_Silge)
+-   [Victoria Stodden](https://en.wikipedia.org/wiki/Victoria_Stodden)
+-   [Jer Thorp](https://en.wikipedia.org/wiki/Jer_Thorp)

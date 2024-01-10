@@ -1,0 +1,10 @@
+---
+title: "Recent posts"
+listing:
+  contents: blog
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+  max-description-length: 300
+---
