@@ -1,0 +1,263 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+
+\rhead{\textsc{September 13, 2016}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Simple Linear Regression: Mathematical Form
+  \item Parameters and statistics
+  \item Data collection
+  \item R and RStudio intro
+\end{enumerate}
+
+% \paragraph{The four-step process}
+% \begin{enumerate}
+% \item \textbf{C}hoose
+% \item \textbf{F}it
+% \item \textbf{A}ssess
+% \item \textbf{U}se
+% \end{enumerate}
+
+\paragraph{Model notation}
+
+
+  $$
+		Y = f(X) + \epsilon
+	$$		
+	\begin{itemize}
+		\item $Y$: response variable
+		\item $f$: a function that makes up the model -- there are \emph{infinitely} many possible functions!
+		\item $X$: explanatory variables (i.e. the data)
+		\item $\epsilon$: error or noise term
+	\end{itemize}
+
+
+
+
+\paragraph{Simple Linear Regression}
+
+Simple linear regression is a special case of the model above, wherein:
+
+\begin{itemize}
+  \item $Y$ is a quantitative variable
+  \item $f$ makes a \emph{line}!\
+  \item $X$ is a single quantitative variable
+  \item $\epsilon \sim N(0, \sigma_\epsilon)$, where $\sigma_\epsilon$ is fixed
+\end{itemize}
+
+\noindent Notation for this may vary. Note that:
+
+	\begin{itemize}
+		\item $Y,X$: the (idea of the) quantities (e.g. Age, Price)
+		\item $y,x$: specific values of those quantities (e.g. 22, \$35,748)
+		\item $y_i,x_i$: the $i$th specific value of a collection
+		\item $\bar{y}, \bar{x}$: average (mean) value of a collection of values
+		$$
+			\bar{y} = \frac{1}{n} \sum_{i=1}^n y_i
+		$$
+		\item $\hat{y}$: an \emph{estimate} of an unknown value based on the model
+	\end{itemize}
+	
+We can write the model as follows:
+$$
+Y = \beta_0 + \beta_1\cdot X + \epsilon, \, \epsilon \sim N(0, \sigma_\epsilon)
+$$
+and we estimate it using the following notation
+$$
+\hat{Y} = \hat{\beta_0} + \hat{\beta_1}\cdot X
+$$
+\clearpage
+\paragraph{Parameters and statistics}
+If we have time, we'll go through this fun explanation of polling, \url{http://rocknpoll.graphics/}. It's focused on election polling (quite relevant today!) but also helps show the difference between population parameters and sample statistics. 
+
+\paragraph{Data collection}
+We are going to choose some variables we want to study about our class as a whole. This isn't going to be a sampling activity (hopefully, we will capture data about the entire class) but we will use linear modeling as a descriptive method. First, we need to brainstorm some variables to collect. Last year, the class collected variables about students credits for the semester, number of siblings, number of pairs of shoes, number of facebook friends, and distance travelled to Smith after winter break. But, we don't have to use those!
+\\ Go to \href{https://docs.google.com/spreadsheets/d/111z767D_pbHg58QCfndbmB22wki86fk5v4DGPTb7Nkc/edit?usp=sharing}{this spreadsheet} and enter your information.
+
+
+\paragraph{R and RStudio intro}
+We're going go through the first lab in the course, and we'll see how far we get. Depending on time, we'll do some analysis of your data! 
+
+
+<<eval=FALSE>>=
+install.packages(c("mosaic", "dplyr", "ggplot2", "Stat2Data", "car", "googlesheets"))
+require(mosaic)
+require(car)
+
+data(Salaries)
+str(Salaries)
+
+histogram(~salary, data=Salaries)
+densityplot(~salary, data=Salaries)
+barchart(tally(~rank, data=Salaries))
+
+require(ggplot2)
+ggplot(Salaries) + geom_histogram(aes(x=salary))
+ggplot(Salaries) + geom_density(aes(x=salary))
+ggplot(Salaries) + geom_bar(aes(x=rank))
+
+xyplot(salary~yrs.since.phd, data=Salaries)
+bwplot(salary~sex, data=Salaries)
+mosaicplot(sex~rank, data=Salaries, las=1)
+
+ggplot(Salaries) + geom_point(aes(x=yrs.since.phd, y=salary))
+ggplot(Salaries) + geom_boxplot(aes(x=sex, y=salary)) 
+
+help(xyplot)
+?geom_histogram
+
+mean(~salary, data=Salaries)
+sd(~salary, data=Salaries)
+favstats(~salary, data=Salaries)
+tally(~rank, data=Salaries)
+
+require(googlesheets)
+url = gs_url("https://docs.google.com/spreadsheets/d/111z767D_pbHg58QCfndbmB22wki86fk5v4DGPTb7Nkc/pub?gid=0&single=true&output=csv")
+ds = gs_read_csv(url)
+
+xyplot(distance_home ~ num_countries, data=ds, type = c("p", "r"))
+mod = lm(distance_home ~ num_countries, data=ds)
+summary(mod)
+@
+
+
+
+
+
+
+
+% \newpage
+% 
+% \section{Instructor's Notes}
+
+% \paragraph{How good is my model?}
+%   \begin{quotation}
+% 		``All \href{http://bolt.mph.ufl.edu/files/2012/07/big_picture_example.png}{statistical models} are wrong, but some are useful" --George Box
+% 	\end{quotation}
+% 	\begin{itemize}
+% 		\item Every model makes assumptions that aren't true -- understanding those assumptions is critical!
+% 		\item Every model only \emph{estimates} the \emph{expected} value of the response variable
+% 		\item Delicate balance between simplicity \& accuracy
+% 		\item There is no ``correct" model and probably not a ``best" one either!!
+% 	\end{itemize}
+% 
+% % 	\begin{figure}
+% % 		% Define block styles
+% % \tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=5em, text centered, rounded corners, minimum height=4em]
+% % \tikzstyle{line} = [draw, -latex']
+% % \tikzstyle{cloud} = [draw, ellipse,fill=red!20, minimum height=4em]
+% % 
+% % \begin{tikzpicture}[node distance = 5cm, auto]
+% %     % Place nodes
+% %     \node [block] (params) {parameters};
+% %     \node [cloud, left of=params] (pop) {population};
+% %     \node [cloud, below of=pop] (sample) {sample};
+% %     \node [block, below of=params] (stats) {statistics};
+% %     % Draw edges
+% %     \path [line,dashed] (pop) -- node [above] {sampling} (sample);
+% %     \path [line] (sample) -- node {compute} (stats);
+% %     \path [line,dashed] (stats) -- node {model} (params);
+% %     \path [line] (params) -- node {inference} (pop);
+% % \end{tikzpicture}
+% % 	\end{figure}
+% 
+% 	\begin{figure}
+% %		\includegraphics[width=0.9\textwidth]{../gfx/big_picture_example}
+% 	\end{figure}
+%
+% \paragraph{Naive Model (not SLR)}
+% 	\begin{itemize}
+% 		\item Goal: Estimate the age of a new student entering the class
+% 		\item Ignore all explanatory variables
+% 		$$
+% 			Age = \overline{Age} + \epsilon
+% 		$$
+% 		\item I predict that a new student will be the average age of the current students
+% 		\item Do this via GoogleDocs and RStudio
+% 	\end{itemize}
+%
+% \paragraph{SLR}
+% 	\begin{itemize}
+% 		\item Goal: Estimate the age of a new student entering the class
+% 		\item Consider $numCourses$: the number of courses taken at Smith previously
+% 		$$
+% 			Age = \beta_0 + \beta_1 \cdot numCourses + \epsilon
+% 		$$
+% 		\item Do this via GoogleDocs and RStudio
+% 		\item Find estimates for $\beta_0, \beta_1$
+% 		\item I predict that a new student's age will be a function of how many courses she has taken at Smith
+% 	\end{itemize}
+%
+% \paragraph{Which model was better?}
+% 	\begin{itemize}
+% 		\item Residuals: $\hat{y} - y$ (fundamental idea!)
+% 		$$
+% 			SSE = \sum_{i=1}^n \hat{y} - y
+% 		$$
+% 		\item Least Squares: technique for minimizing SSE
+% 		\item Finds \emph{unique} straight line between scatterplot of points
+% 		\item Will develop quantitative methods for comparing residuals later
+% 	\end{itemize}
+%
+% \paragraph{Estimation}
+% \begin{eqnarray*}
+% 		Y = \beta_0 + \beta_1 \cdot X + \epsilon, \text{ where } \epsilon \sim N(0, \sigma_\epsilon)
+% \end{eqnarray*}
+% 	\begin{itemize}
+% 		\item Need to estimate 3 unknown quantities $\beta_0, \beta_1, \sigma_\epsilon$
+% 		\item $\beta_0, \beta_1$ are estimated by OLS
+% 		\item Regression standand error $\sigma_\epsilon$
+% \begin{eqnarray*}
+% 			\hat{\sigma}_\epsilon = \sqrt{\frac{\sum_{i=1}^n (\hat{y} - y)^2}{n-2}} = \sqrt{\frac{SSE}{n-2}}
+% \end{eqnarray*}
+% 	\end{itemize}
+
+\end{document}

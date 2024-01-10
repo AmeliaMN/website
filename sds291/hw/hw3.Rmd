@@ -1,0 +1,44 @@
+---
+title: "Hw #3"
+author: "Your name"
+date: "Due Monday, October 1, 2018 by 11:59 pm"
+output: html_document
+---
+
+***
+
+* Reading: Ch. 2
+* Exercises to hand in:  2.12, 2.14, 2.15, 2.30, 2.44
+
+***
+
+```{r, message=FALSE}
+library(tidyverse)
+library(Stat2Data)
+library(skimr)
+```
+
+
+#### Exercise 2.12
+
+#### Exercise 2.14
+
+```{r}
+data(TextPrices)
+head(TextPrices)
+```
+
+#### Exercise 2.15
+
+
+
+#### Exercise 2.30
+
+```{r}
+data(ChildSpeaks)
+head(ChildSpeaks)
+```
+
+#### Exercise 2.44
+
+For this question, use R as a calculator to show your arithmetic. 

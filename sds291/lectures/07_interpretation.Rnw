@@ -1,0 +1,135 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+
+\rhead{\textsc{October 6th, 2016}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Interpreting coefficients
+  \item Comparing models
+  \item Interpreting t- and p-values
+\end{enumerate}
+
+
+
+
+
+
+\paragraph{Interpreting coefficients}
+Our general recipe for interpretation of a regression coefficient is,
+``For a 1-\textbf{unit} increase in \textbf{X}, we would expect to see a \textbf{[blah]}-\textbf{unit} \textbf{increase} in \textbf{Y}.''
+\\ Ideally, you should substitute in something more specific for each of the bolded areas. The units of your response and explanatory variables, the quantities the variables represent, whether the coefficient on the explanatory variable is negative or positive, etc. 
+\begin{enumerate}
+\itemsep0.5in
+\item How does the recipe change for a categorical variable?
+\item How does the recipe change for multiple regression?
+\end{enumerate}
+\vspace{0.5in}
+
+\paragraph{Predicting Math Scores}
+
+<<message=FALSE>>=
+require(openintro)
+m1 <- lm(math~read+write+socst, data=hsb2)
+summary(m1)
+@
+
+\begin{enumerate}
+  \itemsep1in
+  \item How would you interpret the coefficient on \texttt{read}?
+  \item How would you interpret the coefficient on \texttt{write}?
+  \item How would you interpret the coefficient on \texttt{socst}? Does it make sense? \vspace{0.5in}
+\end{enumerate}
+  
+<<>>=
+m2 <- lm(math~read+write+socst+gender, data=hsb2)
+summary(m2)
+@
+
+\begin{enumerate}
+  \itemsep1in
+  \item How would you interpret the coefficient on \texttt{gendermale}?
+  \vspace{0.5in}
+\end{enumerate}
+
+<<>>=
+m3 <- lm(math~read+write+ses, data=hsb2)
+summary(m3)
+@
+
+\begin{enumerate}
+  \itemsep1in
+  \item How would you interpret the coefficient on \texttt{sesmiddle}?
+  \item How would you interpret the coefficient on \texttt{seshigh}?
+  \vspace{0.5in}
+\end{enumerate}
+
+\paragraph{Comparing Models}
+We can't use multiple $R^2$ to compare models, because it will increase no matter what additional variables we add.  For example, compare the previous model with the following:
+
+<<>>=
+m4 <-  lm(math~read+write+ses+rnorm(200), data=hsb2)
+summary(m4)
+@
+
+But, $R^2_{adj}$ allows us to make comparisons. With that in mind, which is the best model we have seen so far?
+
+\paragraph{Assessing conditions}
+Assessing the LINE conditions is the same for multiple regression as it was for simple linear regression. However, the residual vs. fitted plot becomes even more useful.
+
+<<message=FALSE, warning=FALSE>>=
+par(mfrow=c(2,2))
+plot(m3, which=1)
+plot(m3, which=2)
+plot(m3, which=3)
+hist(m3$residuals)
+@
+
+\end{document}

@@ -1,0 +1,29 @@
+---
+title: "Hw #5"
+author: "Your name"
+date: "Due Monday, October 22, 2018 by 11:59 pm"
+output: html_document
+---
+
+* Reading: Ch. 4.2 - 4.4
+* Exercises to hand in: 4.3
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(Stat2Data)
+library(leaps)
+```
+
+
+#### Exercise 4.3
+
+```{r}
+data(MLB2007Standings)
+head(MLB2007Standings)
+MLB2007Standings <- MLB2007Standings %>%
+  select(-Wins, -Losses, -Team)
+```
+
+> For part a: The answer in the back of the book is wrong (they used forward selection). I would like you to use stepwise regression, as the question asks.
+> For part d, please use AIC instead of Mallow's Cp.
+

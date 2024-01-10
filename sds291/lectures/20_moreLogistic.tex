@@ -1,0 +1,275 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\newcommand{\shortans}{\vspace{1in}}
+\newcommand{\mediumans}{\vspace{1.5in}}
+\newcommand{\longans}{\vspace{2in}}
+
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+\DeclareMathOperator{\X}{\mathbf{X}}
+\DeclareMathOperator{\Hatmat}{\mathbf{H}}
+
+\rhead{\textsc{December 1, 2016}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Logistic Regression
+  \item Assessing Fit in Logistic Regression
+\end{enumerate}
+
+
+\paragraph{Interpretation of coefficients in logistic model}
+	\begin{itemize}
+		\item $\beta_0$: Shifts the curve side-to-side, $\beta_1$: changes the shape
+		\item Play with \url{http://rstudio.smith.edu:3838/log_app/} to see
+		\item If $\pi$ is a probability, then $\frac{\pi}{1 - \pi}$ is the corresponding odds
+		\item The $\log$ of the odds is \emph{linear}
+		\begin{itemize}			
+			\item $\hat{\beta_1}$ is the typical change in $\log{(odds)}$ for each one unit increase
+			\item The odds of success are multiplied by $e^{\hat{\beta_1}}$ for each one unit increase
+			\item These changes are constant
+		\end{itemize}
+		\begin{align*}
+			odds_X 		&= \frac{\hat{\pi}_X}{1 - \hat{\pi}_X} = e^{\hat{\beta}_0 + \hat{\beta}_1 X} \\
+			odds_{X+1} 	&= \frac{\hat{\pi}_{X+1}}{1 - \hat{\pi}_{X+1}} = e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)} \\
+			\frac{odds_{X+1}}{odds_X} &= \frac{e^{\hat{\beta}_0 + \hat{\beta}_1 (X + 1)}}{e^{\hat{\beta}_0 + \hat{\beta}_1 X}} = e^{\hat{\beta}_1}
+		\end{align*}
+	\end{itemize}
+	
+
+
+\paragraph{Checking conditions}
+	\begin{itemize}
+		\item Conditions:
+		\begin{itemize}
+			\item Linearity of the logit (or $\log{(odds)}$)
+			\item Independence
+			\item Random
+		\end{itemize}
+		\item Constant Variance and Normality are no longer applicable
+		\end{itemize}
+		
+\paragraph{Assessing fit}
+\begin{itemize}
+		\item Since we don't have sum of squares, we can't use $R^2$, ANOVA, or $F$-tests
+		\item Instead, since we fit the model using MLE, we compute the likelihood:
+		$$
+			L(success) = \hat{\pi}, \qquad L(failure) = 1-\hat{\pi}, \qquad L(model) = \prod_{i=1}^n L(y_i)
+		$$
+		\item Because these numbers are usually very small, it is more convenient to speak of the log-likelihood $\log(L)$, which are always negative 
+		\item A larger $\log(L)$ is closer to zero and therefore a better fit
+
+		\item Likelihood Ratio Test (LRT) for simple logistic regression
+		\item $H_0: \beta_1= \beta_2 = \beta_3 \cdots \beta_k = 0$, vs. $H_A: \exists \beta_i \neq 0$
+		\item Test statistic = $G = -2 \log(L_0) - (-2 \log(L))$
+		\item $G$ follows a $\chi^2$ distribution with $k$ d.f.
+		\item $2 \times 2$ tables are basically equivalent to logistic regression with binary response and a single binary explanatory variable
+	\end{itemize}
+\paragraph{Lab} Code
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 0, 0}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(mosaic)}
+\hlkwd{require}\hlstd{(mosaicData)}
+\hlkwd{require}\hlstd{(lmtest)}
+\hlstd{cols} \hlkwb{=}  \hlkwd{trellis.par.get}\hlstd{()}\hlopt{$}\hlstd{superpose.symbol}\hlopt{$}\hlstd{col}
+
+\hlkwd{data}\hlstd{(Whickham)}
+\hlstd{Whickham} \hlkwb{=} \hlstd{Whickham} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{isAlive} \hlstd{=} \hlnum{2} \hlopt{-} \hlkwd{as.numeric}\hlstd{(outcome))}
+
+\hlstd{logm} \hlkwb{=} \hlkwd{glm}\hlstd{(isAlive} \hlopt{~} \hlstd{age} \hlopt{+} \hlstd{smoker,} \hlkwc{data}\hlstd{=Whickham,} \hlkwc{family}\hlstd{=binomial)}
+\hlkwd{summary}\hlstd{(logm)}
+
+\hlstd{myplot} \hlkwb{=} \hlkwd{xyplot}\hlstd{(}\hlkwd{jitter}\hlstd{(isAlive)} \hlopt{~} \hlstd{age,} \hlkwc{groups}\hlstd{=smoker,} \hlkwc{data}\hlstd{=Whickham,} \hlkwc{alpha}\hlstd{=}\hlnum{0.5}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{,} \hlkwc{cex}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{ylab}\hlstd{=}\hlstr{"isAlive"}\hlstd{)}
+\hlstd{fit.outcome} \hlkwb{=} \hlkwd{makeFun}\hlstd{(logm)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"Yes"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{lwd}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{plot}\hlstd{=myplot,} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"No"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{col}\hlstd{=cols[}\hlnum{2}\hlstd{],} \hlkwc{lwd}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+
+\hlstd{Whickham} \hlkwb{=} \hlstd{Whickham} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{ageGroup} \hlstd{=} \hlkwd{cut}\hlstd{(age,} \hlkwc{breaks}\hlstd{=}\hlnum{10}\hlstd{))}
+
+\hlkwd{favstats}\hlstd{(}\hlopt{~}\hlstd{isAlive} \hlopt{|} \hlstd{ageGroup,} \hlkwc{data}\hlstd{=Whickham)}
+\hlcom{# print(myplot)}
+\hlstd{binned.y} \hlkwb{=} \hlkwd{mean}\hlstd{(}\hlopt{~}\hlstd{isAlive} \hlopt{|} \hlstd{ageGroup,} \hlkwc{data}\hlstd{=Whickham)}
+\hlstd{binned.x} \hlkwb{=} \hlkwd{mean}\hlstd{(}\hlopt{~}\hlstd{age} \hlopt{|} \hlstd{ageGroup,} \hlkwc{data}\hlstd{=Whickham)}
+\hlstd{binplot} \hlkwb{=} \hlkwd{xyplot}\hlstd{(binned.y} \hlopt{~} \hlstd{binned.x,} \hlkwc{cex}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{,} \hlkwc{col}\hlstd{=}\hlstr{"orange"}\hlstd{,} \hlkwc{lwd}\hlstd{=}\hlnum{3}\hlstd{)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"Yes"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{lwd}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{plot}\hlstd{=binplot)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"No"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{col}\hlstd{=cols[}\hlnum{2}\hlstd{],} \hlkwc{lwd}\hlstd{=}\hlnum{3}\hlstd{,} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlkwd{xyplot}\hlstd{(}\hlkwd{logit}\hlstd{(binned.y)} \hlopt{~} \hlstd{binned.x,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{,} \hlkwc{cex}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{col}\hlstd{=}\hlstr{"orange"}\hlstd{)}
+
+\hlstd{Whickham} \hlkwb{=} \hlstd{Whickham} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{logm.link} \hlstd{=} \hlkwd{predict}\hlstd{(logm,} \hlkwc{type}\hlstd{=}\hlstr{"link"}\hlstd{))}
+
+\hlkwd{ladd}\hlstd{(}\hlkwd{with}\hlstd{(}\hlkwd{subset}\hlstd{(Whickham, smoker}\hlopt{==}\hlstr{"Yes"}\hlstd{),} \hlkwd{panel.xyplot}\hlstd{(age, logm.link,} \hlkwc{col}\hlstd{=cols[}\hlnum{1}\hlstd{],} \hlkwc{type}\hlstd{=}\hlstr{"l"}\hlstd{)))}
+\hlkwd{ladd}\hlstd{(}\hlkwd{with}\hlstd{(}\hlkwd{subset}\hlstd{(Whickham, smoker}\hlopt{==}\hlstr{"No"}\hlstd{),} \hlkwd{panel.xyplot}\hlstd{(age, logm.link,} \hlkwc{col}\hlstd{=cols[}\hlnum{2}\hlstd{],} \hlkwc{type}\hlstd{=}\hlstr{"l"}\hlstd{)))}
+
+\hlkwd{exp}\hlstd{(}\hlkwd{confint}\hlstd{(logm))}
+\hlkwd{logLik}\hlstd{(logm)}
+\hlstd{pi} \hlkwb{=} \hlkwd{fitted.values}\hlstd{(logm)}
+\hlstd{likelihood} \hlkwb{=} \hlkwd{ifelse}\hlstd{(Whickham}\hlopt{$}\hlstd{isAlive} \hlopt{==} \hlnum{1}\hlstd{, pi,} \hlnum{1} \hlopt{-} \hlstd{pi)}
+\hlkwd{log}\hlstd{(}\hlkwd{prod}\hlstd{(likelihood))}
+\hlkwd{lrtest}\hlstd{(logm)}
+
+\hlstd{linteract} \hlkwb{=} \hlkwd{glm}\hlstd{(isAlive} \hlopt{~} \hlstd{age} \hlopt{+} \hlstd{smoker} \hlopt{+} \hlstd{age}\hlopt{*}\hlstd{smoker,} \hlkwc{data}\hlstd{=Whickham,} \hlkwc{family}\hlstd{=binomial)}
+\hlkwd{summary}\hlstd{(linteract)}
+\hlstd{lquad} \hlkwb{=} \hlkwd{glm}\hlstd{(isAlive} \hlopt{~} \hlstd{age} \hlopt{+} \hlstd{smoker} \hlopt{+} \hlstd{age}\hlopt{*}\hlstd{smoker} \hlopt{+} \hlkwd{I}\hlstd{(age}\hlopt{^}\hlnum{2}\hlstd{)} \hlopt{+} \hlkwd{I}\hlstd{(age}\hlopt{^}\hlnum{2}\hlstd{)}\hlopt{:}\hlstd{smoker,} \hlkwc{data}\hlstd{=Whickham,} \hlkwc{family}\hlstd{=binomial)}
+\hlkwd{summary}\hlstd{(lquad)}
+
+\hlkwd{lrtest}\hlstd{(logm, linteract, lquad)}
+
+\hlkwd{print}\hlstd{(myplot)}
+\hlstd{fit.qalive} \hlkwb{=} \hlkwd{makeFun}\hlstd{(lquad)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"Yes"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{lty}\hlstd{=}\hlnum{2}\hlstd{)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"No"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{col}\hlstd{=cols[}\hlnum{2}\hlstd{],} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{lty}\hlstd{=}\hlnum{2}\hlstd{)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.qalive}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"Yes"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.qalive}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"No"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{col}\hlstd{=cols[}\hlnum{2}\hlstd{],} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+
+\hlstd{MedGPA} \hlkwb{=} \hlkwd{read.csv}\hlstd{(}\hlstr{"http://www.math.smith.edu/~bbaumer/mth247/MedGPA.csv"}\hlstd{)}
+\hlstd{logm} \hlkwb{=} \hlkwd{glm}\hlstd{(Acceptance} \hlopt{~} \hlstd{Sex,} \hlkwc{data}\hlstd{=MedGPA,} \hlkwc{family}\hlstd{=binomial)}
+\hlkwd{summary}\hlstd{(logm)}
+
+\hlstd{two.way} \hlkwb{=} \hlkwd{tally}\hlstd{(}\hlopt{~}\hlstd{Acceptance} \hlopt{|} \hlstd{Sex,} \hlkwc{data}\hlstd{=MedGPA,} \hlkwc{format}\hlstd{=}\hlstr{"count"}\hlstd{)}
+\hlstd{two.way}
+
+\hlstd{fit.accept} \hlkwb{=} \hlkwd{makeFun}\hlstd{(logm)}
+\hlkwd{fit.accept}\hlstd{(}\hlkwc{Sex}\hlstd{=}\hlstr{"M"}\hlstd{)}
+\hlkwd{fit.accept}\hlstd{(}\hlkwc{Sex}\hlstd{=}\hlstr{"F"}\hlstd{)}
+
+\hlkwd{oddsRatio}\hlstd{(two.way)}
+\hlcom{# Since the coefficients is negative, we add a negative here to match the 2-way table}
+\hlkwd{exp}\hlstd{(}\hlopt{-}\hlkwd{coef}\hlstd{(logm))}
+\hlkwd{chisq.test}\hlstd{(two.way[}\hlnum{1}\hlopt{:}\hlnum{2}\hlstd{,}\hlnum{1}\hlopt{:}\hlnum{2}\hlstd{],} \hlkwc{correct}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+
+\hlstd{Whickham} \hlkwb{=} \hlstd{Whickham} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{isAlive} \hlstd{=} \hlnum{2} \hlopt{-} \hlkwd{as.numeric}\hlstd{(outcome))}
+\hlstd{logm} \hlkwb{=} \hlkwd{glm}\hlstd{(isAlive} \hlopt{~} \hlstd{age} \hlopt{+} \hlstd{smoker,} \hlkwc{data}\hlstd{=Whickham,} \hlkwc{family}\hlstd{=binomial)}
+\hlkwd{summary}\hlstd{(logm)}
+
+\hlkwd{plotPoints}\hlstd{(}\hlkwd{jitter}\hlstd{(isAlive)} \hlopt{~} \hlstd{age,} \hlkwc{groups}\hlstd{=smoker,} \hlkwc{data}\hlstd{=Whickham,} \hlkwc{alpha}\hlstd{=}\hlnum{0.3}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{,} \hlkwc{cex}\hlstd{=}\hlnum{2}\hlstd{,}
+           \hlkwc{ylab}\hlstd{=}\hlstr{"Probability of Being Alive (units)"}\hlstd{,}
+           \hlkwc{xlab}\hlstd{=}\hlstr{"Age (years)"}\hlstd{,} \hlkwc{main}\hlstd{=}\hlstr{"Whickham Study Outcomes"}\hlstd{,}
+           \hlkwc{sub}\hlstd{=}\hlkwd{paste}\hlstd{(}\hlstr{"Number of Cases = "}\hlstd{,} \hlkwd{nrow}\hlstd{(Whickham)),}
+           \hlkwc{auto.key}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlstd{fit.outcome} \hlkwb{=} \hlkwd{makeFun}\hlstd{(logm)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"Yes"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlkwd{plotFun}\hlstd{(}\hlkwd{fit.outcome}\hlstd{(}\hlkwc{age}\hlstd{=x,} \hlkwc{smoker}\hlstd{=}\hlstr{"No"}\hlstd{)} \hlopt{~} \hlstd{x,} \hlkwc{col}\hlstd{=cols[}\hlnum{2}\hlstd{],} \hlkwc{add}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+
+\hlstd{Whickham} \hlkwb{=} \hlstd{Whickham} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{fitted} \hlstd{=} \hlkwd{fitted.values}\hlstd{(logm))} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{fit.alive} \hlstd{=} \hlkwd{ifelse}\hlstd{(fitted} \hlopt{>=} \hlnum{0.5}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{0}\hlstd{))}
+
+\hlkwd{tally}\hlstd{(}\hlopt{~}\hlstd{isAlive} \hlopt{|} \hlstd{fit.alive,} \hlkwc{data}\hlstd{=Whickham)}
+\hlstd{tbl} \hlkwb{=} \hlkwd{tally}\hlstd{(}\hlopt{~}\hlstd{isAlive} \hlopt{|} \hlstd{fit.alive,} \hlkwc{data}\hlstd{=Whickham,} \hlkwc{format}\hlstd{=}\hlstr{"count"}\hlstd{)}
+
+\hlkwd{sum}\hlstd{(}\hlkwd{diag}\hlstd{(tbl))} \hlopt{/} \hlkwd{nrow}\hlstd{(Whickham)}
+\hlkwd{mean}\hlstd{(}\hlopt{~}\hlstd{isAlive,} \hlkwc{data}\hlstd{=Whickham)}
+
+\hlstd{Whickham} \hlkwb{=} \hlstd{Whickham} \hlopt{%>%}
+   \hlkwd{mutate}\hlstd{(}\hlkwc{fit.alive} \hlstd{=} \hlkwd{sample}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,}\hlnum{1}\hlstd{),} \hlkwc{size}\hlstd{=}\hlnum{1314}\hlstd{,} \hlkwc{replace}\hlstd{=}\hlnum{TRUE}\hlstd{))}
+\hlkwd{tally}\hlstd{(}\hlopt{~}\hlstd{isAlive} \hlopt{|} \hlstd{fit.alive,} \hlkwc{data}\hlstd{=Whickham)}
+
+\hlstd{X} \hlkwb{=} \hlkwd{data.frame}\hlstd{(}\hlkwc{a} \hlstd{=} \hlkwd{runif}\hlstd{(}\hlnum{10000}\hlstd{),} \hlkwc{b} \hlstd{=} \hlkwd{runif}\hlstd{(}\hlnum{10000}\hlstd{))}
+\hlkwd{require}\hlstd{(Hmisc)}
+\hlkwd{rcorrcens}\hlstd{(a}\hlopt{~}\hlstd{b,} \hlkwc{data}\hlstd{=X)}
+\hlkwd{rcorrcens}\hlstd{(isAlive} \hlopt{~} \hlkwd{fitted.values}\hlstd{(logm),} \hlkwc{data}\hlstd{=Whickham)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{document}

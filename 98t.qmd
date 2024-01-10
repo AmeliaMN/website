@@ -1,0 +1,20 @@
+---
+title: "Stat 98T, Data Visualization"
+---
+
+
+In Spring 2015, I taught a general education seminar on data visualization at UCLA.
+
+#### Collegium of University Teaching Fellows (CUTF)
+
+This class was made possible by my appointment to the UCLA CUTF for the 2014-2015 school year. In the Fall quarter, I took a seminar led by [Kumiko Haas](http://www.oid.ucla.edu/about/people/haas) of the [Office of Instructional Development](http://www.oid.ucla.edu/). The goal of the seminar is to help the fellows to develop their university-level syllabi and work on pedagogical techniques. Fellows come from a wide variety of disciplines across the campus, so there is opportunity for cross-disciplinary learning.
+
+#### Syllabus
+
+The syllabus is available [here](DataVisSyllabus.pdf). Many of the listed readings were bound into a course reader, available for purchase at the UCLA bookstore during the term the course was held.
+
+#### Readings 
+Readings include selections from Nathan Yau's books [Visualize This](http://book.flowingdata.com/) and [Data Points](http://www.wiley.com/WileyCDA/WileyTitle/productCd-111846219X.html), William Cleveland's [The Elements of Graphing Data](http://smile.amazon.com/Elements-Graphing-Data-William-Cleveland/dp/0963488414?sa-no-redirect=1), and Leland Wilkinson's [The Grammar of Graphics](http://smile.amazon.com/The-Grammar-Graphics-Statistics-Computing/dp/0387245448?sa-no-redirect=1). 
+
+#### Course Structure 
+During the course, we read the texts and used them to critique data visualizations we found "in the wild," including in newspapers, magazines, and scientific journals. The course was open to any student at UCLA (no prerequisities), and enrolled 15 students majoring in everything from art to math. We had rich discussions about what makes a data graphic "good" or "bad" and how to trust what we read in visualizations. 

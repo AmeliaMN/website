@@ -1,0 +1,109 @@
+---
+title: "Summer Data Viz"
+---
+
+# MassMutual Summer Data Viz seminar: 2016
+
+August 15-19, 2016 is a week-long internal data viz seminar for MassMutual at the MassMutual Amherst offices, joint with [Jordan Crouser](http://www.science.smith.edu/~jcrouser/). Shortlink to this page: [bit.ly/MMdataviz](bit.ly/MMdataviz)
+
+#### Monday: Intro to data viz 
+
+Resources
+- [>Everything we know about how humans interpret graphics](https://www.youtube.com/watch?v=s0J6EDvlN30) by [Kennedy Elliott](https://twitter.com/kennelliott). Accompanying [Medium post](https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73#.jtkx5wz26). 
+- Reproducing Cleveland and McGill. [Survey](https://visnut.wufoo.com/forms/myumor1008hnt6/) and [results](http://visiphilia.org/2016/08/03/CM-hierarchy). 
+- [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+- [R graphics cookbook](http://www.cookbook-r.com/Graphs/)
+
+Presentations and data
+
+- [Intro to ggplot2 presentation](ggplot2_tutorial.html),  ([code](https://github.com/AmeliaMN/SummerDataViz/tree/master/IntroToViz))
+- [American Time Use Survey Data](https://raw.githubusercontent.com/AmeliaMN/SummerDataViz/master/IntroToViz/atus.csv)
+
+#### Tuesday: Interactivity (and d3)
+Resources
+
+-	Interactivity in R includes [shiny](http://shiny.rstudio.com/) , [manipulate](https://support.rstudio.com/hc/en-us/articles/200551906-Interactive-Plotting-with-Manipulate), and [shiny gadgets](http://shiny.rstudio.com/articles/gadgets.html). 
+
+#### Wednesday: Scraping and text 
+	Resources
+
+- [stringr vignette](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html), and linked [regex tutorial](http://www.regular-expressions.info/reference.html)
+
+Cool examples
+		<ul>
+			http://kaylinwalker.com/50-years-of-pop-music/">text analysis of 50 years of pop music, by Kaylin Walker. 
+			http://varianceexplained.org/r/trump-tweets/">Analysis of Trump's tweets by David Robinson. 
+			https://github.com/Coppersmith/vennclouds">vennclouds-- a really cool approach to word clouds! (python)
+			http://www.science.smith.edu/~jcrouser/data/">text as data and https://www.jasondavies.com/wordcloud/">Jason Davies' Word Cloud Generator
+			http://www.nytimes.com/interactive/2011/06/10/education/commencement-speeches-graphic.html?_r=0">Commencement speeches visualization-- not a word cloud!
+			https://flowingdata.com/tag/text/">flowing data on text, including this Washington Post https://www.washingtonpost.com/graphics/politics/2016-sotu/language/">visualization of State of the Union text.
+		</ul>
+	Presentations and data
+		<ul>
+			{{ site.baseurl }}/text_tutorial.html">Text presentation, (https://github.com/AmeliaMN/SummerDataViz/tree/master/Text">code)
+			Scott Chamberlain, Karthik Ram and Garrett Grolemund's https://github.com/AmeliaMN/user2016-tutorial/blob/06e271646dbc3d1c18ef9e31a0f1d92cbb3b3ab4/slides.pdf">useR tutorial on APIs and scraping 
+			https://raw.githubusercontent.com/walkerkq/musiclyrics/master/billboard_lyrics_1964-2015.csv">raw lyrics data, https://github.com/walkerkq/musiclyrics">main repo, and http://kaylinwalker.com/50-years-of-pop-music/">text analysis by Kaylin Walker. 
+		</ul>
+
+
+	<h4>Thursday: Geo data </h4>
+	Resources
+	<ul>
+		https://rstudio.github.io/leaflet/">Leaftlet for R tutorial, more on the http://leafletjs.com/reference.html">leaflet API.
+		https://www.mapbox.com/help/how-web-maps-work/">map tile explanation from Mapbox.
+		https://github.com/hadley/ggplot2/wiki/plotting-polygon-shapefiles">shapefiles in ggplot2
+		http://mapshaper.org/">Shapefile checker
+		http://colorbrewer2.org/">color brewer
+	</ul>
+	Cool examples
+	<ul>
+		http://www.coopercenter.org/demographics/Racial-Dot-Map">Racial dot map-- lots of points!
+		http://feltron.tumblr.com/post/126340096801/geometric-choropleths-1895-vs-1978">geometric choropleths 1895 vs 1978 via http://feltron.tumblr.com/">Nicholas Felton
+		http://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html?_r=0">The best and worst places to grow up: how your area compares, example of chloropleth maps from The New Times.
+		https://www.washingtonpost.com/news/wonk/wp/2015/03/01/this-is-the-best-explanation-of-gerrymandering-you-will-ever-see/">The best explanation of gerrymandering you will ever see, The Washington Post.
+		http://gispopsci.org/maup/">Introduction to the Modifiable Areal Unit Problem.
+		https://github.com/AmeliaMN/MapExplorations">Some disorganized map thoughts by Amelia. Best piece http://www.science.smith.edu/~amcnamara/pointInPoly3.html">a playable spatial aggregation, a first draft of demo below.
+		http://tinlizzie.org/~aran/spatialAggregation.html">Spatial aggregation demo by Amelia and Aran Lunzer
+		http://bl.ocks.org/mbostock/3711652">Transition between d3 projections
+		http://bl.ocks.org/zanarmstrong/raw/caa2da1ea1558cdc3357/">Is Africa bigger than North America?-- interesting approach to map projections by Zan Armstrong
+		
+	</ul>
+	Presentations and data
+	<ul>
+		{{ site.baseurl }}/geo_tutorial.html">Geographic data and maps tutorial, (https://github.com/AmeliaMN/SummerDataViz/tree/master/Geo">code).
+		http://www.ncdc.noaa.gov/stormevents/ftp.jsp">Storm events data from NOAA
+		https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html">State shapefiles
+	</ul>
+	<h4>Friday: Networks </h4>
+	Resources
+	<ul>
+		http://kateto.net/networks-r-igraph">Networks with igraph in R. Includes some nice network layouts! 
+		https://briatte.github.io/ggnet/">ggnet, to do network visualization
+		https://github.com/thomasp85/ggraph">ggraph, to do ggplot2-style network visualization
+		http://blog.revolutionanalytics.com/2015/07/creating-network-graphs-using-javascript-directly-from-r.html">d3 networks from R
+		http://matthewlincoln.net/2014/12/20/adjacency-matrix-plots-with-r-and-ggplot2.html">Adjacency matrices, and https://mdlincoln.shinyapps.io/adjacency_plot/">accompanying shiny app!
+		http://bl.ocks.org/jose187/4733747">A simple d3 network graph
+		https://www.coursera.org/learn/datavisualization/lecture/7N1GE/3-1-3-graph-visualization">lecture on graph visualization
+	</ul>
+	Cool examples
+		<ul>
+		http://www.macalester.edu/~abeverid/thrones.html">Network of Thrones, an analysis of connectivity in Game of Thrones. From my alma mater, Macalester!
+		http://www.orgnet.com/slumlords.html">Identifying slumloads with SNA
+		http://www.science.smith.edu/~amcnamara/skirts_network/index.html">skirts network (http://www.science.smith.edu/~amcnamara/skirts_network/index4.html">old version, based on this http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/">tutorial by Jim Vallandingham)
+		https://digitalhumanities.stanford.edu/neotopology">Neotopology, a digital humanities approach.
+	</ul>
+	Presentations and data
+	<ul>
+		{{ site.baseurl }}/network_tutorial.html">Network data visualization, (https://github.com/AmeliaMN/SummerDataViz/tree/master/Networks">code)
+		http://www.macalester.edu/~abeverid/thrones.html">Network of Thrones, http://www.macalester.edu/~abeverid/data/stormofswords.csv">data
+	</ul>
+
+	</div>
+	<div class="col-lg-4">
+		<!-- <iframe style="height: 100%; border: none" src="https://www.youtube.com/watch?v=s0J6EDvlN30"></iframe> -->
+
+		<iframe height="315" width="560" src="https://www.youtube.com/embed/s0J6EDvlN30" frameborder="0" allowfullscreen></iframe>
+		</div>
+   </div>
+   <div class="row">&nbsp;</div>
+   </div>

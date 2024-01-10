@@ -1,0 +1,215 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\shortans}{\vspace{1in}}
+\newcommand{\mediumans}{\vspace{1.5in}}
+\newcommand{\longans}{\vspace{2in}}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{September 15, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Center, Shape, and Spread
+\end{enumerate}
+
+\paragraph{Warmup: Lurking Variables}
+
+For each of the following pairs of variables, a statistically signficant positive relationship has been observed. Identify a potential lurking variable that might cause the spurious correlation.
+\begin{enumerate}
+  \itemsep0.5in
+  \item The amount of ice cream sold in New England and the number of deaths by drowning
+  \item The salary of U.S. ministers and the price of vodka
+  \item The number of doctors in a region and the number of crimes committed in that region
+  \item The number of storks sighted and the population of Oldenburg, Germany, over a six-year period
+  \item The amount of coffee consumed and the prevalence of lung cancer
+\end{enumerate}
+
+
+\paragraph{IMDB movie data}
+Today, we'll focus on data about movies. I've chosen to use a dataset available on Kaggle.com which includes information scraped from the Internet Movie Database (IMDB). \url{https://www.kaggle.com/deepmatrix/imdb-5000-movie-dataset/discussion}
+
+<<echo=FALSE, message=FALSE>>=
+library(readr)
+@
+
+<<message=FALSE, warning=FALSE>>=
+library(mosaic)
+movies <- read_csv("http://www.science.smith.edu/~amcnamara/sds220/data/movies2.csv")
+movies %>% 
+  glimpse()
+@
+
+As the output suggests, the data has 5,043 observations (movies) and 28 variables. 
+
+% \paragraph{Types of variables}
+% We often break variables into two broad categories, categorical and quantitative. Categorical variables have only a few possible categories. A classic example is gender, which may have the categories ``male'', ``female'', and ``gender non-conforming.'' Quantitative variables (otherwise known as numeric variables) can have a larger range of options, including decimal numbers and integers. For example, consider age or height. 
+% \\
+% \\Which of the following variables would you categorize as quantitative? \hspace{0.1in} \verb#color#, \verb#duration#, \verb#director_facebook_likes#, \verb#facenumber_in_poster#, \verb#language#, \verb#content_rating#, \verb#imdb_score#.
+% \ans
+
+\paragraph{Thought Experiment}
+Consider the following two variables:
+\begin{itemize}
+  \item The \verb#duration# of all the movies in the IMDB dataset. 
+  \item The \verb#facenumber_in_poster# (number of faces detected in the movie poster). 
+\end{itemize}
+
+Think about the distribution of each variable, and discuss the following questions with a neighbor.
+\begin{enumerate}
+  \itemsep0.3in
+  \item Draw the shape you believe each distribution has.  What features does it have? Is it symmetric? Is it normal? It is unimodal? [Make sure you label the axes on your distribution plot.] What is the range of each variable? 
+  \mediumans
+  \item How would you summarize each distribution numerically? Which measures are most appropriate?
+  \item Suppose we added an additional face to each movie poster. How would the distribution of \verb#facenumber_in_poster# change? What would happen to your measures of center and spread? 
+  \ans
+\end{enumerate}
+
+\paragraph{Describing Distributions}
+We are going to hone in on the quantitative variables in this analysis, and start doing some EDA of their distributions. When describing distributions, three concepts are particularly useful: \emph{Center}, \emph{Shape}, and \emph{Spread}. 
+\begin{itemize}
+  \item Graphical techniques for summarizing the \emph{shape} of the distribution of one variable:
+  \begin{itemize}
+%    \item Stem (and leaf) plot [in R, {\tt stem()}]
+    \item Histogram [\cmd{geom\_histogram()}]
+    \item Density plot [\cmd{geom\_density()}]
+    \item Box (and whisker) plot [\cmd{geom\_boxplot()}]
+  \end{itemize}
+  \item Numerical Techniques for summarizing the \emph{center} and \emph{spread} of the distribution of one variable:
+  \begin{itemize}
+    \item Center: mean [{\tt mean()}], median [{\tt median()}]
+    \item Spread: standard deviation [{\tt sd()}], variance [{\tt var()}], range [{\tt range()}], IQR [{\tt IQR()}]
+    \item (Center and spread can be seen together in {\tt favstats()})
+  \end{itemize}
+\end{itemize}
+
+\paragraph{US box-office gross}
+A box plot, histogram, and density plot reveal different features of the distribution of box-office gross. 
+<<message=FALSE, warning=FALSE>>=
+movies <- movies %>%
+  filter(country=="USA")
+favstats(~gross, data = movies)
+@
+
+
+<<eval=FALSE>>=
+ggplot(data=movies, aes(y=gross, x=1)) + geom_boxplot()
+ggplot(data=movies, aes(x=gross)) + geom_histogram()
+ggplot(data=movies, aes(x=gross)) + geom_density()
+@
+<<fig.width=10, fig.height=6, echo=FALSE, warning=FALSE>>=
+gridExtra::grid.arrange(
+  qplot(data = movies, y = gross, geom = "boxplot", x = 1) + coord_flip(),
+  qplot(data = movies, x = gross, geom = "histogram", bins = 100),
+  qplot(data = movies, x = gross, geom = "density", adjust = 0.8)
+)
+@
+
+\begin{enumerate}
+  \item Describe the distribution of box office gross using words. 
+  \ans
+  \item What information can you glean from the histogram or density plot that is not revealed by the numerical table or the box plot?
+  \ans
+  \item What information does the numerical table give you that is not available in the plots?
+  \ans
+  \ans
+\end{enumerate}
+
+% \paragraph{ggplot2}
+% The graphs we have just seen were made using a graphics package for \verb#R# called \verb#ggplot2#. It maps variables in data to ``aesthetics'' (\verb#aes()#). The aesthetics can be used for a variety of geometric objects (like \verb#geom_histogram()#). RStudio has a great cheatsheet for \verb#ggplot2#, \url{https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf}
+% 
+% Thinking back to our question about \verb#duration# and \verb#facenumber_in_poster#, how would we write the code to check if our guesses about the distributions were correct? 
+% \shortans
+
+\paragraph{faceting} One great thing about \verb#ggplot2# is that it allows you to `facet' by another variable. (Essentially, make the same plot several times for different values of a second variable.) For example, maybe we think the distribution of \verb#gross# will be different depending on the \verb#content_rating#
+
+<<warning=FALSE, message=FALSE, fig.width=10, fig.height=6>>=
+movies <- movies %>%
+  filter(content_rating %in% c("PG", "PG-13", "R"))
+ggplot(data=movies, aes(x=gross)) + geom_histogram() + facet_grid(~content_rating)
+@
+
+\paragraph{Relationships}
+With a partner, brainstorm some relationships you think might exist in the data. What distributions of quantitative variables likely look different depending on the value of another categorical variable? 
+
+
+
+% \newpage
+% %'
+% \subsection*{Instructor's Notes}
+% %'
+% \url{http://en.wikipedia.org/wiki/Household_income_in_the_United_States#Household_income}
+% %'
+<<include=FALSE, eval=FALSE>>=
+url <- "http://en.wikipedia.org/wiki/Household_income_in_the_United_States"
+require(rvest)
+require(readr)
+wiki <- html(url) %>%
+  html_nodes("table.wikitable") %>%
+  html_table(fill=TRUE) %>%
+  tail(1)
+IncDist <- wiki[[1]] %>%
+  tail(-1) %>%
+  mutate(numHouseholds = readr::parse_number(`Number (thousands) [47]`)) %>%
+  mutate(income = c(seq(from = 2500, to = 197500, by = 5000), 225000, 500000))
+
+ggplot(data = IncDist, aes(x = income, y = numHouseholds)) +
+  geom_bar(stat = "identity") + 
+  scale_x_continuous(labels = scales::dollar) + 
+  ylab("Number of US households") + xlab("Household Income")
+
+# mean income
+IncDist %>%
+  mutate(contrib = numHouseholds * income) %>%
+  summarise(N = n(), wmean = sum(contrib) / sum(numHouseholds))
+# median
+filter(IncDist, abs(parse_number(Percentile) - 50) < 5)
+@
+
+
+\end{document}

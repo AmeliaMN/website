@@ -1,0 +1,135 @@
+---
+title: "Added variable plots"
+output:
+  html_document:
+    css: lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+require(knitr)
+opts_chunk$set(eval=FALSE)
+```
+
+```{r, message=FALSE}
+require(mosaic)
+require(car)
+```
+
+#### Added variable plots
+
+The Zagat guide contains restaurant ratings and reviews for many major world cities. Since I've been living in Brooklyn, we want to understand variation in the average `Price` of a dinner in Italian restaurants in New York City. Specifically, we want to know how customer ratings (measured on a scale of 0 to 30) of the `Food`, `Decor`, and `Service`, as well as whether the restaurant is located to the east or west of 5th Avenue, affect the average `Price` of a meal. The data contains ratings and prices for 168 Italian restaurants in 2001. 
+
+```{r}
+nyc <- read.csv("http://www.math.smith.edu/~bbaumer/mth247/sheather/nyc.csv")
+dim(nyc)
+```
+
+As usual, one of our first tasks is to examine the relationships between the variables graphically. 
+
+```{r}
+pairs(nyc[,-c(1,2)])
+
+# Better than the standard pairs plot is the generalized pairs plot. 
+#install.packages("gpairs")
+require(gpairs)
+gpairs(nyc[,-c(1,2)])
+```
+
+
+#### Questions
+
+#. Which variables seems to be strongly correlated with `Price`? 
+#. Are there other significant relationships between the variables that seem important? Generate a correlation matrix to quantify relationships between individual pairs of variables. 
+
+```{r}
+cor(nyc[,c("Price", "Food", "Decor", "Service", "East")])
+```
+
+Unraveling the web of correlations between variables is not always easy, particularly when we are dealing with multiple explanatory variables with non-trivial correlations. Our goal for this activity is to use *added variable plots* to understand the contributions of one variable, while holding all other variables constant. 
+
+Consider the result of simply throwing all of our variables in to a multiple regression model: 
+
+```{r}
+mfull <- lm(Price ~ Food + Decor + Service + East, data=nyc)
+summary(mfull)
+```
+
+#### Questions
+
+#. Interpret the coefficients, including their units. Do they make sense? 
+#. How well does our model work? Check the conditions for regression. Are they met? 
+#. Why is the coefficient for `Service` so insignificant when the correlation between `Price` and `Service` was reasonably strong? 
+#. Check for multicollinearity. Is it a problem? 
+
+```{r}
+vif(mfull)
+```
+
+What is critical here is not just understanding the pairwise relationships among the variables, but understanding the relationship between each variable, with the other explanatory variables held constant. We do this with an *added variable plot*. 
+
+Suppose we want to investigate the explanatory variable $Z$. Then we construct an added variable plot by:
+
+1. Build a model for $Y \sim X_1 + \cdots + X_k$ and record the residuals $\epsilon_1$
+2. Build a model for $Z \sim X_1 + \cdots + X_k$ and record the residuals $\epsilon_2$
+3. Build a model for $\epsilon_1 \sim \epsilon_2$, and plot it.
+
+```{r}
+m1 <- lm(Price ~ Food + Decor + East, data=nyc)
+m2 <- lm(Service ~ Food + Decor + East, data=nyc)
+
+# added variable plot
+xyplot(residuals(m1) ~ residuals(m2), type=c("p", "r"), pch=19, alpha=0.5, cex=2, main="Added Variable Plot for Service")
+```
+
+$\epsilon_1$ contains what $X_1,\ldots,X_k$ don't know about $Y$, while $\epsilon_2$ contains what $X_1,\ldots,X_k$ don't know about $Z$. Because the $X_1,\ldots,X_k$ are used in both models, the relationship between $\epsilon_1$ and $\epsilon_2$ tells us something about what $Z$ knows about $Y$, beyond the information that is contained in $X_1,\ldots,X_k$. 
+
+In fact, a model for $\epsilon_1 \sim \epsilon_2$ has several useful properties. First, the residuals of *this* model are equal to the residuals of the full model. 
+
+```{r}
+m3 <- lm(residuals(m1) ~ residuals(m2))
+# residuals are the same
+sum(residuals(m3) - residuals(mfull))
+```
+
+Second, the slope of the regression line in this model is equal to the coefficient of $Z$ in the full regression for $Y$. 
+
+```{r}
+# slope coefficients
+coef(m3)
+coef(mfull)["Service"]
+```
+
+Note that the added variable plot can make it very easy to see issues with regression assumptions (e.g. nonlinearity or heteroskedasticity) with respect to a particular variable in a multiple regression model. These issues might not be obvious from the residuals vs. fitted plot, which do not control for the influence of the other variables. 
+
+#### Exercise
+
+Use the following code to generate added variable plots for the other variables in the full model. What do you see in the plots? 
+
+```{r}
+# function to constuct added variable plots
+plotAddedVar <- function (fm, var.test) {
+  formula <- as.formula(fm)
+  fm1 <- update(fm, formula. = as.formula(paste("~. -", var.test)))
+  fm2 <- update(fm, formula. = as.formula(paste(var.test, "~. -", var.test)))
+  print(xyplot(residuals(fm1) ~ residuals(fm2), type=c("p", "r"),
+                   alpha=0.5, pch=19, cex=2, lwd=3, 
+                   main=paste("Added Variable Plot:", var.test), 
+                   ylab = paste(fm1$call), xlab=paste(fm2$call)
+      )
+  )
+}
+```
+
+```{r, eval=FALSE}
+plotAddedVar(mfull, "Food")
+plotAddedVar(mfull, "Decor")
+plotAddedVar(mfull, "Service")
+plotAddedVar(mfull, "East")
+```
+
+What is going on with the two points far to the right in the added variable plot for `Food`? 
+
+> The material for this activity was adapated from Sheather, *A Modern Approach to Regression with R*. 

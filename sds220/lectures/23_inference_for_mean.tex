@@ -1,0 +1,263 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{April 10, 2017}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Inference for a single numerical mean
+\end{enumerate}
+
+\paragraph{Warmup: Gifted Children}
+
+An investigator is interested in understanding the relationship, if any, between the analytical skills of young gifted children and the following variables: father's IQ, mother's IQ, average number of hours per week the child watched an educational program on TV during the past three months, average number of hours per week the child watched cartoons on TV during the past three months. The analytical skills are evaluated using a standard testing procedure. Data were collected from schools in a large city on a set of 36 children who were identified as gifted children soon after they reached the age of four.
+
+For 25 of the 36 children, the child's mother's IQ was higher than that of the father. Find a 95\% confidence interval for the true proportion of gifted children whose mothers have higher IQs than their fathers. 
+
+
+\vspace{2in}
+
+\paragraph{Inference for a Mean}
+
+We know how to make inferences about the value of a population proportion $p$, for a binary variable. The critical step was to construct an approximation of the sampling distribution of the sample proportion, $\hat{p}$. What if the the variable that we want to make inferences about is \emph{numerical}? In this case we need to approximate the sampling distribution of the sample mean, $\bar{x}$. How can we do this?
+
+\paragraph{Gifted Children's scores}
+
+Use the information presented below to construct a 95\% confidence interval for the mean analytical score among gifted children. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(openintro)}
+\hlkwd{require}\hlstd{(mosaic)}
+\hlkwd{favstats}\hlstd{(}\hlopt{~}\hlstd{score,} \hlkwc{data} \hlstd{= gifted)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in favstats(\textasciitilde{}score, data = gifted): object 'gifted' not found}}\end{kframe}
+\end{knitrout}
+
+\begin{enumerate}
+  \itemsep1.2in
+  \item Compute the standard error of the mean.
+%  \item Compute the $t$-statistic.
+  \item Find the appropriate critical value in the appropriate $t$-distribution. [Use the \cmd{qt} function in \R.]
+  \item Write down the confidence interval.
+  \item Assume that the standard deviation presented above was actually the standard deviation of the scores in the whole population. Compute the confidence interval again, and compare the new interval to the one you found previously (using the $t$-distribution). Are they importantly different? 
+\end{enumerate}
+
+  \vspace{1in}
+
+\paragraph{Inference for Paired Data: Gifted Children's Parents}
+
+Since in this data set, the IQ of both parents is recorded for all children, the IQ data is naturally paired. 
+
+\begin{enumerate}
+  \itemsep1.5in
+  \item Find a 90\% confidence interval for the mean IQ of the mothers. Do the same for the fathers. Do they overlap? 
+  \item Test the hypothesis that the mothers of gifted children have higher IQs, on average, than the fathers. Write out all of the steps. What do you conclude?
+\end{enumerate}
+% 
+% \newpage
+% 
+% \paragraph{Solution to Warmup}
+% 
+% We do the standard inference for a proportion:
+% 
+% <<message=FALSE>>=
+% require(openintro)
+% require(mosaic)
+% p_hat <- tally(~(fatheriq < motheriq), data = gifted, format = "proportion")[1]
+% se <- sqrt(p_hat * (1 - p_hat) / nrow(gifted))
+% p_hat + qnorm(c(0.025, 0.975)) * se
+% @
+% 
+% 
+% 
+% \paragraph{Sampling Distribution of the Mean}
+% 
+% Let $X$ be any random variable, with (population) mean $\mu_X=\Ex[X]$ and standard deviation $\sigma_X=sd(X)$. 
+% 
+% 
+% \begin{itemize}
+%   \item Suppose we take $n$ observations of $X$. Then define a new random variable $\bar{X}$ which gives us the sample mean.
+%   \item The expectation of $\bar{X}$ is:
+%   $$
+%     \Ex[\bar{X}] = \Ex \left[ \frac{1}{n} \sum_{i=1} X_i \right] = \frac{1}{n} \sum_{i=1}^n \Ex[X_i] = \frac{1}{n} \cdot n \cdot \Ex[X] = \mu_X
+%   $$
+%   \item On the other hand, the variance of the sample mean decreases by a factor of $n$:
+%   $$
+%     Var[\bar{X}] = Var \left[ \frac{1}{n} \sum_{i=1}^n X_i \right] = \left( \frac{1}{n} \right)^2 \sum_{i=1}^n Var[X_i] = \frac{1}{n^2} \cdot n \cdot Var[X] = \frac{\sigma_X^2}{n}
+%   $$
+%   \item $SE_{\bar{X}} = \sqrt{Var[\bar{X}]} = \sigma_X / \sqrt{n}$
+%   \item Accordingly the standard deviation of the sample mean decreases by a factor of $\sqrt{n}$.
+%   \item Big Idea: If you want to halve the margin of error associated with your sample mean, you need to quadruple your sample size!
+% ($\sigma_{\bar{x}} = \sigma_X / \sqrt{n}$).
+%   \item Recall the Central Limit Theorem: In many situations, if $n$ is large (at least 30 or 40), then the sample mean is approximately normally distributed \textbf{regardless} of the underlying distribution of $X$. 
+%     \item Thus, if we know the population standard deviation and either the sample size is very large, or the population is normally distributed, the sampling distribution of the mean is approximately normal. Consider
+%     $$
+%       z = \frac{\bar{x} - \mu_X}{\sigma_X / \sqrt{n}} = \frac{\text{sample mean} - \text{population mean}}{SE} \,,
+%     $$
+%     this test statistic follows a standard normal distribution. Thus, we construct confidence intervals for the population mean of the form:
+%   $$
+%     \bar{x} \pm z_{\alpha/2}^* \cdot \frac{\sigma_X}{\sqrt{n}} \, .
+%   $$
+%   \item In reality, we rarely know $\sigma_X$, so we approximate it with $s_X$, the standard deviation of the sample. The test statistic thus becomes
+%     $$
+%       t = \frac{\bar{x} - \mu_X}{s_X / \sqrt{n}} = \frac{\text{sample mean} - \text{population mean}}{SE} \,,
+%     $$
+%   You can prove mathematically that if $X$ is normally distributed, then this test statistic follows a $t$-distribution on $n-1$ degrees of freedom. This leads to confidence intervals of the form
+%   $$
+%     \bar{x} \pm t_{\alpha/2}^* \cdot \frac{s_X}{\sqrt{n}} \, ,
+%   $$
+%   where $t_{\alpha/2}^*$ is a value from the $t$-distribution with $n-1$ degrees of freedom (accessed in \R by \cmd{qt()}).
+%   \item The $t$-distribution is similar to the Standard Normal distribution (unimodal, symmetric), but is indexed by an additional parameter (the degrees of freedom), and has fatter tails. In fact, the $t$-distribution converges to the Standard Normal for an infinite sample size (i.e. $t(\infty) = N(0, 1)$). 
+%   \item This procedure still assumes that $X$ is normally distributed, and forces the confidence intervals to be symmetric. 
+% \end{itemize}
+% 
+% 
+% <<eval=FALSE>>=
+% plotDist("norm", lwd=5)
+% plotDist("t", params = list(df=1), add=TRUE, col="red")
+% plotDist("t", params = list(df=2), add=TRUE, col="red")
+% plotDist("t", params = list(df=4), add=TRUE, col="red")
+% plotDist("t", params = list(df=8), add=TRUE, col="red")
+% plotDist("t", params = list(df=16), add=TRUE, col="red")
+% plotDist("t", params = list(df=32), add=TRUE, col="red")
+% plotDist("t", params = list(df=64), add=TRUE, col="red")
+% plotDist("t", params = list(df=128), add=TRUE, col="red")
+% plotDist("t", params = list(df=1024), add=TRUE, col="red")
+% @
+% 
+% \paragraph{Solution to Gifted Children's scores}
+% 
+% Here we compare the $t$-based interval to the $z$-interval:
+% 
+% <<>>=
+% x_bar <- mean(~score, data = gifted)
+% n <- nrow(gifted)
+% se <- sd(~score, data = gifted) / sqrt(n)
+% x_bar + qnorm(c(0.025, 0.975)) * se
+% x_bar + qt(c(0.025, 0.975), df = (n - 1)) * se
+% @
+% 
+% \paragraph{Solution to Gifted Children's Parents}
+% 
+% We need to make three intervals:
+% 
+% <<>>=
+% # mothers
+% mean_m <- mean(~motheriq, data = gifted)
+% se_m <- sd(~motheriq, data = gifted) / sqrt(n)
+% mean_m + qt(c(0.05, 0.95), df = (n - 1)) * se_m
+% # fathers
+% mean_m <- mean(~fatheriq, data = gifted)
+% se_m <- sd(~fatheriq, data = gifted) / sqrt(n)
+% mean_m + qt(c(0.05, 0.95), df = (n - 1)) * se_m
+% # pairs
+% gifted <- transform(gifted, diff = motheriq - fatheriq)
+% x_bar <- mean(~diff, data = gifted)
+% se <- sd(~diff, data = gifted) / sqrt(n)
+% 2 * pt(x_bar/se, df = (n-1), lower.tail = FALSE)
+% @
+% 
+
+
+\end{document}

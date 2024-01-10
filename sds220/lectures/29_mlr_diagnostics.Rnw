@@ -1,0 +1,226 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url}
+\usepackage{graphicx}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture Notes}}
+\rhead{\textsc{April 19, 2017}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{1in}}
+
+\begin{document}
+%\maketitle
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em 
+  \item Inference for multiple regression
+  \item More regression diagnostics
+  \item Bootstrap for regression
+\end{enumerate}
+
+% \paragraph{Case study: Predictors of depressive symptoms}
+% 
+% In the HELP (Health Evaluation and Linkage to Primary Care) study, investigators were interested in determining predictors of severe depressive symptoms (measured by the Center for Epidemiologic Studies - Depression scale, aka {\tt cesd}) amongst a cohort enrolled at a substance abuse treatment facility. These includes {\tt substance} of abuse (alcohol, cocaine, or heroin), {\tt mcs} (a measure of mental well-being), gender and housing status (housed or homeless). Consider the following multiple regression model.
+% 
+% <<message=FALSE, eval=TRUE, size='scriptsize', warning=FALSE>>=
+% library(mosaic)
+% fm <- lm(cesd ~ substance + mcs + sex + homeless, data = HELPrct)
+% msummary(fm)
+% confint(fm)
+% @
+% 
+% 
+% <<size='footnotesize',fig.height=4,fig.width=10, echo=FALSE>>=
+% plot1 = histogram(~ residuals(fm), xlab="residuals", fit="normal")
+% plot2 = xyplot(residuals(fm) ~ fitted(fm), xlab="fitted values", ylab="residuals",
+%   type=c("p", "r", "smooth"))
+% plot3 = xyplot(residuals(fm) ~ mcs, xlab="Mental Component Score", ylab="residuals", 
+%   type=c("p", "r", "smooth"), data=HELPrct)
+% print(plot1, position=c(0, 0, 1/3, 1), more=TRUE)
+% print(plot2, position=c(1/3, 0, 2/3, 1), more=TRUE)
+% print(plot3, position=c(2/3, 0, 1, 1))
+% @
+% 
+% \begin{enumerate}
+% \itemsep0.9in
+% \item Write out the linear model
+% \item Calculate the predicted CESD for a female homeless cocaine-involved subject with
+% an MCS score of 20.
+% %\item Identify the null and alternative hypotheses for the 8 tests displayed above
+% 
+% \item Interpret the 95\% confidence interval for the {\tt substancecocaine} coefficient
+% 
+% \item Make a conclusion and summarize the results of a test of the {\tt homeless} parameter
+% \item Report and interpret the $R^2$ (coefficient of determination) for this model
+% %\item Which of the residual diagnostic plots are redundant?  
+% \item What do we conclude about the distribution of the residuals?
+% \item What do we conclude about the relationship between the fitted values and the residuals?
+% \item What do we conclude about the relationship between the MCS score and the residuals?
+% \item What other things can we learn from the residual diagnostics?
+% \item Which observations should we flag for further study?
+% \end{enumerate}
+% 
+% 
+% <<size='footnotesize', eval=FALSE>>=
+% help_mod <- broom::augment(fm)
+% help_mod %>%
+%   slice(c(40, 351, 433, 450))
+% @
+% 
+% \newpage
+
+\paragraph{Case Study: Gestation redux}
+
+The Child Health and Development Studies investigate a range of topics. One study, in particular, considered all pregnancies between 1960 and 1967 among women in the Kaiser Foundation Health Plan in the San Francisco East Bay area. The goal is to model the weight of the infants (\texttt{bwt}, in ounces) using variables including length of pregnancy in days (\texttt{gestation}), mother's age in years (\texttt{age}), mother's height in inches (\texttt{height}), whether the child was the first born (\texttt{parity}), mother's pregnancy weight in pounds (\texttt{weight}), and whether the mother was a smoker (\texttt{smoke}). 
+The summary table below shows the results of a regression model for predicting the average birth weight of babies based on all of the variables included in the data set.
+
+<<message=FALSE, warning=FALSE, size='footnotesize'>>=
+library(mosaic)
+mod <- lm(wt ~ gestation + age + ht + wt.1 + parity + smoke, data = Gestation)
+msummary(mod)
+confint(mod)
+@
+
+\begin{enumerate}
+  \itemsep0.7in
+  \item Write the equation of the regression line that includes all of the variables.
+  \item Interpret the slopes of \texttt{gestation} and \texttt{age} in this context.
+  \item Identify the null and alternative hypotheses for the 6 tests displayed above. 
+  \newpage
+  \item Interpret the 95\% confidence interval for the {\tt smoke} coefficient
+  \item The coefficient for \texttt{parity} is different than if you fit a linear model predict weight using only that variable. Why might there be a difference?
+  <<size='footnotesize'>>=
+coef(lm(wt ~ parity, data = Gestation))
+@
+  
+  \item Calculate the residual for the first observation in the data set.
+  <<size='footnotesize'>>=
+head(Gestation, 1)
+# head(fitted(mod), 1)
+# head(residuals(mod), 1)
+@
+  
+  \item The variance of the residuals is 249.28, and the variance of the birth weights of all babies in the data used to build the model is 335.94. Calculate the $R^2$ and the adjusted $R^2$. Note that there are 1236 observations in the data set, but there was missing data in 62 of those observations, so only 1174 observations were used to build the regression model.
+  
+  <<size='footnotesize'>>=
+var(~residuals(mod))
+var(~wt, data = mod$model)
+# rsquared(mod)
+@
+ \newpage
+  \item This data set contains missing values. What happens to these rows? 
+  \item Interpret the $R^2$ (coefficient of determination) for this model
+  \vspace{0.7in}
+\end{enumerate}
+
+
+
+
+
+\paragraph{Regression Diagnostics}
+
+\begin{itemize}
+  \itemsep0em
+  \item \textbf{L}inearity-- scatterplot (only in s.l.r.), residual vs. fitted plot
+  \item \textbf{I}ndependence-- the thinking condition
+  \item \textbf{N}ormality (of residuals)-- QQ plot or histogram of residuals
+  \item \textbf{E}qual Variance (of residuals)-- residual vs. fitted plot
+\end{itemize}  
+\begin{itemize}
+  \item Investigate outliers and influentional points
+  \item Investigate possible multicollinearity
+\end{itemize}
+
+\paragraph{Residual analysis} 
+
+You can roll your own:
+
+<<fig.height=4, fig.width=10, fig.show='hide', message=FALSE, size='footnotesize', warning=FALSE>>=
+babies_mod = broom::augment(mod)
+qplot(y = .resid, x = .fitted, data = babies_mod) + geom_smooth()
+qplot(y = .resid, x = gestation, data = babies_mod) + geom_smooth()
+qplot(y = .resid, x = age, data = babies_mod) + geom_smooth()
+qplot(y = .resid, x = ht, data = babies_mod) + geom_smooth()
+qplot(y = .resid, x = wt.1, data = babies_mod) + geom_smooth()
+qplot(sample = .resid, data = babies_mod, geom = "qq")
+qplot(x = .resid, data = babies_mod, geom = "blank") +
+  geom_histogram(aes(y = ..density..), binwidth = 4) +
+  stat_function(fun = dnorm, args = c(mean = 0, sd = sd(babies_mod$.resid)), col = "tomato")
+@
+
+Or use the built-in diagnostics:
+
+<<fig.height=4, fig.width=10, size='footnotesize'>>=
+plot(mod, which=c(1,2))
+@
+
+What do you think about the conditions for this model? Are they upheld?
+
+\paragraph{Interesting observations} Are there interesting individual observations?
+
+<<fig.height=4, fig.width=10, size='footnotesize', warning=FALSE>>=
+glimpse(slice(Gestation, c(261, 235)))
+@
+
+
+\paragraph{Multicolinearity} Are there strong \emph{pairwise} correlations between any of the explanatory variables?
+
+<<fig.height=8, fig.width=10, size='footnotesize', warning=FALSE, message=FALSE>>=
+library(GGally)
+nbabies <- Gestation %>%
+  select(gestation, age, ht, wt.1) 
+ggpairs(nbabies)
+@
+
+
+\paragraph{Bootstrap for Regression}
+
+Recall that a slope coefficient is an \emph{average} or \emph{expected} change in the response variable as a function of a unit change in that explanatory variable, holding the other explanatory variables constant. Like the sample mean, the estimated coefficient ($\hat{\beta}_1$) is a deterministic calculation based on a single sample of data, but it too has a sampling distribution. Thus, we can use the bootstrap percentile method to construct a confidence interval for it. The default confidence interval is constructed using the $t$-distribution.
+
+<<fig.height=3, fig.width=6, message=FALSE, size='footnotesize'>>=
+require(mosaicData)
+mod <- lm(wt ~ age, data=Gestation)
+coef(mod)
+confint(mod)
+@
+
+The bootstrap percentile method should give us a similar interval:
+
+<<message=FALSE, size='footnotesize'>>=
+bstrap <- do(1000) * coef(lm(wt ~ age, data = resample(Gestation)))
+qdata(~age, p = c(0.025, 0.975), data = bstrap)
+@
+
+% \newpage
+% 
+% \paragraph{HELP solutions}
+% 
+% <<>>=
+% f.fm = makeFun(fm)
+% f.fm(substance = "cocaine", mcs = 20, sex = "female", homeless = "homeless")
+% @
+
+
+\end{document}

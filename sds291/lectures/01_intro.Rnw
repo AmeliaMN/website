@@ -1,0 +1,237 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx,xspace}
+
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{September 8, 2016}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Questionnaire
+  \item Syllabus
+  \item Course objectives
+  \item What is a model? Why do we use models?
+  \item Terms: categorical/quantitative, response/explanatory, parameter/statistic
+  \item Motivating examples
+  \item The four-step process of statistical modeling, C-F-A-U
+\end{enumerate}
+
+
+\paragraph{Questionnaire}
+
+You should all have copies of the questionnaire I handed out. It starts something like this:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+	Full Name & Prefer to be called & Pronouns & Email Address \\
+	\hline 
+	Amelia McNamara & Amelia (or, Professor McNamara) & she/her & amcnamara@smith.edu \\
+	\hline
+\end{tabular}
+\end{center}
+
+Please fill out the green sheet and return it to me by the end of class. This is how I get to know you, and keep track of how many people are interested in the class. 
+
+
+\paragraph{Syllabus}
+
+You should also have a paper copy of the syllabus, or you can look online at \url{http://bit.ly/sds291}. We'll go over some important pieces, but please plan to read through it in detail on your own. 
+
+\paragraph{Course Objectives}
+By the end of this course I want you to be able to:
+  \begin{itemize}
+		\item Construct an appropriate model based on data
+		\item Modify your model to adapt to new data or knowledge
+		\item Understand and verify the assumptions upon which your model is based
+		\item Understand and explain the types of inference justifiable based on your data
+		\item Present your findings to a general audience in both written and oral forms
+    \item Work with messy data, perform exploratory data analysis, and use \verb#R#
+  \end{itemize}
+  
+\paragraph{What is a model?} Why do we use models?
+\vspace{1.5in}
+
+
+\paragraph{Some terms}
+\begin{itemize}
+\item Variable types:
+\begin{itemize}
+\item Categorical (special type: binary)
+\item Quantitative
+\end{itemize}
+\item Model inputs and outputs:
+\begin{itemize}
+\item Explanatory
+\item Response
+\end{itemize}
+\item Language from sampling:
+\begin{itemize}
+\item Parameters
+\item Statistics
+\end{itemize}
+\end{itemize}
+
+\vspace{1in}
+
+\paragraph{Motivating examples}
+
+Even though regression models are relatively simple, they are very widely used. The questions below set up a lot of \emph{binary} distinctions (see what I did there?) but usually in statistics you can argue both ways.  
+
+\begin{itemize}
+\item The lane effect in the Rio Olympics can be modeled using regression. \url {https://www.washingtonpost.com/news/wonk/wp/2016/09/01/these-charts-clearly-show-how-some-olympic-swimmers-may-have-gotten-an-unfair-advantage/}
+
+How many explanatory variables are they using in their model? Are the explanatory variables categorical or quantitative? Is the response categorical or quantitative? Is the model being used for prediction or description?
+
+\vspace{3.2in}
+
+
+\item How to avoid boring sunsets. \url{http://fivethirtyeight.com/features/how-to-avoid-boring-sunsets/}
+
+How many explanatory variables are they using in their model? Are the explanatory variables categorical or quantitative? Is the response categorical or quantitative? Is the model being used for prediction or description?
+
+\vspace{2.5in}
+
+\item Political ad targeting \url{http://www.nytimes.com/interactive/2016/02/09/us/politics/campaign-ad-tracking.html?_r=0}
+
+How many explanatory variables are they using in their model? Are the explanatory variables categorical or quantitative? Is the response categorical or quantitative? Is the model being used for prediction or description?
+
+\vspace{2.5in}
+
+\item Recitivism risk predicted using a model. \url{https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing}
+
+How many explanatory variables are they using in their model? Are the explanatory variables categorical or quantitative? Is the response categorical or quantitative? Is the model being used for prediction or description?
+
+\vspace{2.5in}
+
+
+\end{itemize}
+
+
+% \paragraph{Warmup: Categorical or quantitative?}
+% 
+% Suppose that a statistics professor records the following for each student enrolled in her class:
+% \begin{itemize}
+%   \itemsep0.25in
+%   \item Gender
+%   \item Major
+%   \item Whether they spent the summer on campus or not
+%   \item Score on first exam
+%   \item Number of quizzes taken (a measure of class attendance)
+%   \item Amount of sleep they got the previous night
+%   \item Handedness (left- or right-handed)
+%   \item Political inclination (liberal, moderate, conservative)
+%   \vspace{0.5in}
+% \end{itemize}
+
+% For the following questions, identify the response variable and the explanatory variables(s). Also classify each variable as quantitative or categorical. For the categorical variables, also indicate whether the variable is binary. 
+% 
+% \begin{enumerate}
+%   \itemsep0.75in
+%   \item Do the various majors differ with regard to average sleeping time?
+%   \item Is a student's score on the first exam useful for predicting his or her score on the final exam?
+%   \item Do male and female students differ with regard to the average time they spend on the final exam?
+%   \item Can we tell much about a student's handedness by knowing his or her major, gender, and time spent on the final exam?
+%   \vspace{0.75in}
+% \end{enumerate}
+
+\paragraph{The four-step process}
+\begin{enumerate}
+\itemsep0.75in
+\item \textbf{C}hoose
+\item \textbf{F}it
+\item \textbf{A}ssess
+\item \textbf{U}se
+\end{enumerate}
+
+% \newpage
+% 
+% \section{Instructor's Notes}
+% 
+% \paragraph{Why use models?}
+%   \begin{itemize}
+%   	\item To understand the relationships between variables: Are two variables related? Do they tend to move in the same direction? Are they linearly related? Does knowing something about something mean anything about something else? 
+% 		\item To predict future outcomes: What will happen in the future? 
+% 		\item To quantify differences between groups or treatments: Does this drug work? How much better than a placebo? Does it affect men and women differently?
+% 	\end{itemize}
+% 
+% \paragraph{What's in a model?}
+% 	\begin{itemize}
+% 		\item response variable: the thing you want to understand/model/predict. aka - $y$, dependent variable
+% 		\item explanatory variables: the things you also know about the response variable that you want to use to figure out a pattern/model/relationship. aka - $x$, independent variable, predictor variable, covariates
+% 		\item model: a function that combines explanatory variables mathematically into \emph{estimates} of the response variable
+% 		\item error: what's left over; the variability in the response that your model doesn't capture (error is somewhat of a misnomer -- maybe noise is a better term)
+% 	\end{itemize}
+% 
+% \paragraph{Why Use Linear Models?}
+%   \begin{itemize}
+%   	\item Ubiquity of Data: all around us now, and much of it is poorly understood
+% 		\item Simplicity: linear models are conceptually simple, but surprisingly powerful
+% 		\item Versatility: linear models are surprisingly versatile. Non-linear models can be useful, but complicated non-linear models bring additional challenges
+% 		\item Universality: anyone can build a model, but how many truly understand the information that is conveyed by this model?
+% 	\end{itemize}
+% 
+% \paragraph{Themes for the course}
+%   \begin{itemize}
+% 		\item Data $\neq$ information
+% 		\item Correlation $\nRightarrow$ causation
+% 		\item Just because you have a high $R^2$, that doesn't mean your model is valid
+% 		\item There is no perfect model -- we're looking for a delicate balance of simplicity and effectiveness
+% 		\item Your model is worthless if you can't convince someone else of your findings
+% 	\end{itemize}
+% 
+% 
+% \paragraph{C-F-A-U}
+% 	\begin{itemize}
+% 		\item Choose: An appropriate model based on data \& domain knowledge of the problem
+% 		\item Fit: Use software to compute sample statistics \& model parameters
+% 		\item Assess: Does the model hold water? Are the assumptions met?
+% 		\item Use: Address your question by interpreting the results. Make predictions, assess differences, or explain relationships.
+% 	\end{itemize}
+
+
+
+\end{document}

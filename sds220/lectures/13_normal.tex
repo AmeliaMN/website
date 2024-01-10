@@ -1,0 +1,258 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{March 1, 2017}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Central Limit Theorem
+  \item Normal Distribution
+\end{enumerate}
+
+\paragraph{Warmup: Distribution of Height on OkCupid}
+
+Consider the \href{http://cdn.okcimg.com/blog/lies/MaleHeightDistribution.png}{distribution of reported male height} for users of the online dating site OkCupid. 
+
+\begin{enumerate}
+  \item What observations can you make from this data graphic?
+  \vspace{0.5in}
+\end{enumerate}
+
+\paragraph{Example: MLB Batting Averages}
+
+In 1941, \href{https://www.google.com/search?q=ted+williams}{Ted Williams} of the Boston Red Sox hit .406, famously getting 6 hits in 8 at-bats on the last day of the season. No player in Major League Baseball has hit .400 since. Among the closest attempts was made by \href{http://deadspin.com/this-picture-of-george-brett-inspired-that-lorde-song-1478665015}{George Brett} of the Kansas City Royals in 1980, when Brett hit .390. When viewed in relation to his peers, whose performance was more impressive?
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(Lahman)}
+\hlkwd{require}\hlstd{(mosaic)}
+\hlstd{mlb} \hlkwb{<-} \hlstd{Batting} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{BAvg} \hlstd{= H} \hlopt{/} \hlstd{AB)} \hlopt{%>%}
+  \hlkwd{filter}\hlstd{(yearID} \hlopt{%in%} \hlkwd{c}\hlstd{(}\hlnum{1941}\hlstd{,} \hlnum{1980}\hlstd{)} \hlopt{&} \hlstd{AB} \hlopt{>} \hlnum{400}\hlstd{)}
+\hlstd{mlb} \hlopt{%>%}
+  \hlkwd{filter}\hlstd{(BAvg} \hlopt{>} \hlnum{.36}\hlstd{)} \hlopt{%>%}
+  \hlkwd{select}\hlstd{(playerID, yearID, BAvg)}
+\end{alltt}
+\begin{verbatim}
+##    playerID yearID      BAvg
+## 1 willite01   1941 0.4057018
+## 2 brettge01   1980 0.3897550
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+
+
+\begin{enumerate}
+  \itemsep1in
+  \item Use the information below to calculate a $z$-score for both Williams in 1941 and Brett in 1980. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{mlb} \hlopt{%>%}
+  \hlkwd{group_by}\hlstd{(yearID)} \hlopt{%>%}
+  \hlkwd{summarize}\hlstd{(}\hlkwc{N} \hlstd{=} \hlkwd{n}\hlstd{(),} \hlkwc{mean_BAvg} \hlstd{=} \hlkwd{mean}\hlstd{(BAvg),} \hlkwc{sd_BAvg} \hlstd{=} \hlkwd{sd}\hlstd{(BAvg))}
+\end{alltt}
+\begin{verbatim}
+## # A tibble: 2 × 4
+##   yearID     N mean_BAvg    sd_BAvg
+##    <int> <int>     <dbl>      <dbl>
+## 1   1941    98 0.2806367 0.03279026
+## 2   1980   148 0.2788247 0.02757441
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+  \item Whose performance do you think was more remarkable in the context of his peers? Why? What assumptions are you making? 
+\vspace{0.75in}
+
+\end{enumerate}
+
+
+
+
+
+\paragraph{The Empirical Rule for Normal Distributions}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{../gfx/Standard_deviation_diagram}
+\end{figure}
+
+For any normally distributed variable:
+\begin{itemize}
+  \itemsep0in
+	\item About 68\% of the distribution is contained within 1 standard deviation of the mean.
+	\item About 95\% of the distribution is contained within 2 standard deviations of the mean.
+	\item About 99.7\% of the distribution is contained within 3 standard deviations of the mean.
+	\item About 38\% of the distribution is contained within 0.5 standard deviations of the mean.
+	\begin{itemize}
+		\item In other words, the middle 38\% of the distribution is about 1 standard deviation wide.
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Sample Calculations}
+\begin{enumerate}
+	\item What percentage of the distribution is less than 2 standard deviations above the mean?
+	\begin{itemize}
+		\item By the rule, about 95\% of the population is within two standard deviations of the mean. By symmetry, half
+of those are above the mean, and half below it. Thus, we estimate that about $95/2 = 47.5\%$ is less than 2
+standard deviations above the mean.
+		\item From the picture, we can calculate the area as about $34.1\% + 13.6\% = 47.7\%$
+	\end{itemize}
+	\item Assume that the distribution of heights of adult women is approximately normal with mean 64 inches and standard
+deviation 2.5 inches.
+	\begin{enumerate}
+    \itemsep0.5in
+		\item What percentage of women are taller than 5'9"?
+		
+
+		\item Between what heights do the middle 95\% of women fall?
+
+		
+		
+		\item What percentage of women are shorter than 61.5 inches?
+
+    \item A professor claims that about 51\% of women are between 61.5 and 65.25 inches tall. Is this claim accurate?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+% 
+% \newpage
+% 
+% \subsection*{Instructor's Notes}
+% 
+% \paragraph{Okcupid}
+% 
+% Start class by projecting the distribution of self-reported heights on OKcupid and ask the class to describe what they see.  There are two interesting features: the whole shift of the distribution from the US distribution (is that real or not?) and the fact that men tend to also nudge themselves up to 6 feet.
+% 
+% \paragraph{Lecture}
+% 
+% \begin{itemize}
+%   \item Central Limit Theorem:
+%   \begin{itemize}
+%     \item The distribution of the sample mean (i.e. the sampling distribution of the mean) will be approximately normal for reasonably large $n$ (at least 30)
+%     \item Provides a mathematical approximation to the simulated null distributions with which we have been working. Consider the practical difficulties of simulating null distributions with a computer!
+%   \end{itemize}
+%   \item Normal distribution has two parameters!
+%   $$
+%     N(\mu, \sigma), \qquad \text{ has density function } f(x; \mu, \sigma) = \frac{1}{\sqrt{2 \pi} \sigma} \exp \left( \frac{(x - \mu)^2}{2 \sigma^2} \right)
+%   $$
+%   \item $N(0,1)$: Standard Normal distribution
+%   \item Consider $N(\mu, \sigma)$. What is the distribution of $N(\mu, \sigma) - \mu$? What is the distribution of $N(0, \sigma)/ \sigma$?
+%   \item If $x \sim N(\mu, \sigma)$, then $z = \frac{x - \mu}{\sigma} \sim N(0,1)$.
+% 
+% \end{itemize}
+% 
+% \paragraph{Z-score example}
+% 
+% SAT scores are distributed nearly normally with mean 1500 and sd 300.  ACT scores are distributed nearly normally with mean 21 and sd 5.  A college admissions officer wants to determine which of the two applicants scored better on their standardized test with respect to the other test takers: Pam, who eared an 1800 on her SAT, or Jim, who scored a 24 on his ACT? \\
+% 
+% Pam's score is $\frac{1800-1500}{300} = 1$ sd above the mean.
+% 
+% Jim's score is $\frac{24-21}{5} = 0.6$ sd above the mean.
+
+
+
+
+\end{document}

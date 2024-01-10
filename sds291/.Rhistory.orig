@@ -1,0 +1,595 @@
+<<<<<<< HEAD
+head(Gestation)
+m1 <- lm(wt~age, data=Gestation)
+summary(m1)
+qt(.975,df=1232)
+.106+(1.96*0.08989)
+.106-(1.96*0.08989)
+.106/.08989
+pt(1.179, df=1232)
+1-pt(1.179, df=1232)
+plot(mod)
+?plot
+plot(mod)
+plot(mod)
+plotDist("f",pararms=list(df1=2, df2=450))
+plotDist("f",params=list(df1=2, df2=450))
+plotDist("f",params=list(df1=10, df2=450))
+plotDist("f",params=list(df1=100, df2=450))
+plotDist("f",params=list(df1=200, df2=450))
+data(nc)
+library(mosaic)
+data(nc)
+library(oilabs)
+data(nc)
+dim(nc)
+15+4+4+13+13+7+14
+24-12
+28-11
+60-27
+33+13
+m <- lm(wt~carb, data=mtcars)
+summary(m)
+m$fitted.values
+12+6+6+14+16+15+12
+9+4+4+14+16+13+16
+18+3+6+12+16+11+12
+9+2+6+13+16+11+16
+18+4+5+15+14+12+14
+12+4+6+15+15+9+13
+12+2+4+8+11+12+12
+15+3+6+13+16+7+14
+18+4+6+17+15+11+16
+13.5+4+6+13+15+9+10
+12+4+4+13+13+4+13
+12+2+6+13+16+17+11
+12+3+3+10+13+16+16
+6+1+2+9+12+11+15
+9+4+3+13+12+15+14
+12+2+6+14+12+11+13
+10.5+3+13+16+15+14
+12+4+4+11+16+13+15
+9+4+6+11+14+8+13
+9+3+3+9+14+11+10
+12+3+4+10+13+9+7
+12+4+6+17+16+17+14
+15+2+4+10+14+7+6
+12+3+6+1314+17+15
+12+3+6+13+14+17+15
+12+3+6+16+16+14+14
+15+3+6+13+15+13+16
+18+2+6+13+14+16+13
+9+2+6+12+12+9+14
+12+2+5+13+15+16+13
+15+4+4+12+13+8+10
+15+4+6+14+16+15+15
+12+2+6+10+12+6+13
+4.5+2+6+12+13+13+15
+15+4+6+14+16+10+15
+m <- lm(wt~carb, data=mtcars[1:10,])
+summary(m)
+dim(mtcars)
+?predict
+predict(m, data=mtcars[11:32,])
+predict(m, data=mtcars[11:32,])-mtcars[11:32,]
+mtcars
+str(mtcars)
+head(diamonds)
+library(ggplot2)
+head(diamonds)
+m <- lm(carat~cut+color+clarity, data=diamonds)
+summary(m)
+anova(m)
+library(devtools)
+devtools::install_github("ismayc/rticles")
+library(rticles)
+library(reedtemplates)
+data(mtcars)
+library(mosaic)
+histogram(~wt|carb, data=mtcars)
+m1 <- lm(wt~carb, data=mtcars)
+summary(m1)
+m1 <- lm(wt~carb, data=mtcars[1:10,])
+summary(m1)
+m1$fitted.values
+mtcars[1:10, ]$wt
+m1$residuals
+mtcars[1:10, ]$wt-m1$fitted.values
+predict(m1, mtcars[11:32,])
+mtcars[11:32, ]$wt
+mtcars[11:32, ]$wt-predict(m1, mtcars[11:32,])
+10.5+1+6+13+16+15+16
+12+2+6+15+14+13+16
+12+1+6+10+14+11+15
+install.packages(Stat2Data)
+install.packages("Stat2Data")
+pandoc(knit("index.Rmd"), format="latex")
+library(knitr)
+pandoc(knit("index.Rmd"), format="latex")
+=======
+require(mosaic)
+require(Stat2Data)
+data(FruitFlies)
+head(FruitFlies)
+levels(FruitFlies$Treatment)
+FruitFlies <- mutate(FruitFlies, Treatment = relevel(Treatment, ref="none"))
+levels(FruitFlies$Treatment)
+d1plot <- dotPlot(~Longevity, data=FruitFlies)
+d2plot <- dotPlot(~Longevity | Treatment, data=FruitFlies, layout=c(1,5))
+print(d1plot, position=c(0, 0, 0.5, 1), more=TRUE)
+print(d2plot, position=c(0.5, 0, 1, 1))
+b1plot <- bwplot(~Longevity, data=FruitFlies)
+b2plot <- bwplot(~Longevity | Treatment, data=FruitFlies, layout=c(1,5))
+# arrange the two plots horizontally
+print(b1plot, position=c(0, 0, 0.5, 1), more=TRUE)
+print(b2plot, position=c(0.5, 0, 1, 1))
+gstats <- favstats(Longevity ~ Treatment, data=FruitFlies)
+gstats
+fm.null <- lm(Longevity ~ 1, data=FruitFlies)
+summary(fm.null)
+dplot <- plotPoints(Longevity ~ 1, groups=Treatment, data=FruitFlies, alpha=0.3, pch=19, cex=2)
+splot <- plotPoints(Longevity ~ runif(nrow(FruitFlies)), groups = Treatment, data=FruitFlies, alpha=0.3, pch=19, cex=2, auto.key=TRUE)
+# arrange the two plots horizontally
+print(dplot, position=c(0, 0, 0.5, 1), more=TRUE)
+print(splot, position=c(0.5, 0, 1, 1))
+print(dplot, position=c(0, 0, 0.5, 1), more=TRUE)
+plotModel(fm.null)
+print(splot, position=c(0.5, 0, 1, 1))
+plotFun(fit.null(x) ~ x, add=TRUE)
+fit.null <- makeFun(fm.null)
+plotFun(fit.null(x) ~ x, add=TRUE)
+print(dplot, position=c(0, 0, 0.5, 1))
+plotFun(fit.null(x) ~ x, add=TRUE)
+splot <- plotPoints(Longevity ~ runif(nrow(FruitFlies)), groups = Treatment, data=FruitFlies, alpha=0.3, pch=19, cex=2, auto.key=TRUE)
+print(splot, position=c(0.5, 0, 1, 1))
+print(splot)
+fit.null <- makeFun(fm.null)
+print(splot)
+plotFun(fit.null(x) ~ x, add=TRUE)
+fm.aov <- aov(Longevity ~ Treatment, data=FruitFlies)
+summary(fm.aov)
+model.tables(fm.aov)
+fm.ref <- lm(Longevity ~ Treatment, data=FruitFlies)
+summary(fm.ref)
+anova(fm.ref)
+gstats$mean - mean(FruitFlies$Longevity)
+mean(FruitFlies$Longevity)
+gstats$mean
+fitted <- predict(fm.null)
+print(d2plot)
+ladd(panel.abline(v=57.44, col="red", lwd=3), plot=d2plot)
+coef(fit.null)
+ladd(panel.abline(v=coef(fit.null), col="red", lwd=3), plot=d2plot)
+fm.aov <- aov(Longevity ~ Treatment, data=FruitFlies)
+summary(fm.aov)
+model.tables(fm.aov)
+print(splot)
+palette = trellis.par.get()$superpose.symbol$col
+ladd(panel.abline(h=fit.longevity(Treatment = "none"), col=palette[1], lwd=3))
+ladd(panel.abline(h=fit.longevity(Treatment = "1 pregnant"), col=palette[2], lwd=3))
+ladd(panel.abline(h=fit.aov(Treatment = "none"), col=palette[1], lwd=3))
+palette = trellis.par.get()$superpose.symbol$col
+print(splot)
+palette = trellis.par.get()$superpose.symbol$col
+ladd(panel.abline(h=fit.aov(Treatment = "none"), col=palette[1], lwd=3))
+fit.longevity <- fitted.values(fm.aov)
+print(splot)
+palette = trellis.par.get()$superpose.symbol$col
+ladd(panel.abline(h=fit.longevity(Treatment = "none"), col=palette[1], lwd=3))
+fit.longevity <- makeFun(fm.aov)
+print(splot)
+palette = trellis.par.get()$superpose.symbol$col
+ladd(panel.abline(h=fit.longevity(Treatment = "none"), col=palette[1], lwd=3))
+ladd(panel.abline(h=fit.longevity(Treatment = "1 pregnant"), col=palette[2], lwd=3))
+ladd(panel.abline(h=fit.longevity(Treatment = "1 virgin"), col=palette[3], lwd=3))
+ladd(panel.abline(h=fit.longevity(Treatment = "8 pregnant"), col=palette[4], lwd=3))
+ladd(panel.abline(h=fit.longevity(Treatment = "8 virgin"), col=palette[5], lwd=3))
+par(mfrow=c(2,2))
+plot(fm.aov)
+par(mfrow=c(1,1))
+max(gstats$sd) / min(gstats$sd)
+BP <- read.csv("http://www.math.smith.edu/~bbaumer/mth247/labs/bloodpress.csv")
+mfull <- lm(BP ~ ., data=BP)
+m1 <- lm(BP ~ Weight, data=BP)
+m3 <- lm(BP ~ Weight +  Age, data=BP)
+m2 <- lm(BP ~ Weight +  Age + Dur + Stress, data=BP)
+anova(m1, m3, m2, mfull)
+BP <- read.csv("http://www.math.smith.edu/~bbaumer/mth247/labs/bloodpress.csv")
+mfull <- lm(BP ~ ., data=BP)
+m1 <- lm(BP ~ Weight, data=BP)
+m3 <- lm(BP ~ Weight +  Age, data=BP)
+m2 <- lm(BP ~ Weight +  Age + Dur + Stress, data=BP)
+summary(m3)
+residuals(m1)
+sum(residuals(m1)^2)
+sum(residuals(mfull)^2)
+sum(residuals(m1)^2)
+sum(residuals(m3)^2)
+sum(residuals(m2)^2)
+var(BP$BP)
+sum(mean(~BP, data=BP)-BP$BP)
+sum(fitted.values(mfull) - mean(~BP, data=BP))
+sum(fitted.values(m1) - mean(~BP, data=BP))
+sum((fitted.values(m1) - mean(~BP, data=BP))^2)
+sum((fitted.values(mfull) - mean(~BP, data=BP))^2)
+sum((fitted.values(m1) - mean(~BP, data=BP))^2)
+sum((fitted.values(m3) - mean(~BP, data=BP))^2)
+sum((fitted.values(m2) - mean(~BP, data=BP))^2)
+anova(m1, m3, m2, mfull)
+>>>>>>> 5838cbc5b04f12d52d2ad9a6b1485f8c8c7fa5d0
+getwd()
+setwd("/Users/amcnamara/Documents/sds291/www")
+getwd()
+library(knitr)
+purl(lab_anova.Rmd)
+purl("lab_anova.Rmd")
+require(mosaic)
+<<<<<<< HEAD
+myCars <- vehicles %>%
+filter(year == 2000 & cyl == 4)
+xyplot(hwy ~ displ, data=myCars,
+main="Fuel Economy", alpha=0.5, cex=2, pch=19,
+xlab="Engine Size (cubic centimeters)",
+ylab="Fuel Economy (miles per gallon)")
+m1 <- lm(hwy ~ displ, data=myCars)
+summary(mod)
+summary(m1)
+n <- nrow(myCars)
+SXX <- myCars %>% sum((displ - mean(displ))^2)
+SXX <- myCars %>% summarize(SXX = sum((displ - mean(displ))^2))
+SXX
+regdata <- myCars %>% summarize(n = nrow(myCars))
+SXX <- myCars %>% summarize(SXX = sum((displ - mean(displ))^2))
+SXX
+SXX <- var(~displ, data=myCars) * (n-1)
+SXX
+SXX <- myCars %>% summarize(SXX = sum((displ - mean(displ))^2))
+SXY <- myCars %>% summarize(SXY = sum((displ - mean(displ)) * (hwy - mean(hwy))))
+SXY
+SXY/SXX
+cov(hwy~displ, data=myCars)
+SXY <- myCars %>% summarize(SXY = sum((displ - mean(displ)) * (hwy - mean(hwy))))
+# And, the same thing, using the built-in function for covariance
+SXY <- cov(hwy~displ, data=myCars) * (n-1)
+SXY / SXX
+coef(mod)["displ"]
+coef(m1)["displ"]
+beta1 <- myCars %>% summarize(beta = cor(hwy, displ) * (sd(hwy) / sd(displ)))
+beta1
+beta1 <- myCars %>% summarize(cor(hwy, displ) * (sd(hwy) / sd(displ)))
+beta1
+beta1 <- myCars %>% summarize(beta1 = cor(hwy, displ) * (sd(hwy) / sd(displ)))
+regdata <- myCars %>% mutate(xdif = displ - mean(displ), ydif = hwy - mean(hwy)) %>%
+summarize(SXX = sum(xdif^2), SXY = sum(xdif*ydif), beta1=SXY/SXX)
+regdata
+regdata %>%
+summarize(SXX = sum(xdif^2),
+SXY = sum(xdif*ydif),
+beta1=SXY/SXX)
+regdata <- myCars %>%
+mutate(xdif = displ - mean(displ),
+ydif = hwy - mean(hwy))
+regdata %>%
+summarize(SXX = sum(xdif^2),
+SXY = sum(xdif*ydif),
+beta1=SXY/SXX)
+regdata %>% summarize(beta1=SXX/SXY)
+regdata <- myCars %>%
+mutate(xdif = displ - mean(displ),
+ydif = hwy - mean(hwy))
+regdata <- regdata %>%
+summarize(SXX = sum(xdif^2),
+SXY = sum(xdif*ydif))
+regdata %>% summarize(beta1=SXX/SXY)
+regdata <- myCars %>%
+mutate(xdif = displ - mean(displ),
+ydif = hwy - mean(hwy))
+regdata <- regdata %>%
+summarize(SXX = sum(xdif^2),
+SXY = sum(xdif*ydif))
+regdata %>% summarize(beta1=SXY/SXX)
+myCars %>%
+mutate(xdif = displ - mean(displ),
+ydif = hwy - mean(hwy)) %>%
+summarize(SXX = sum(xdif^2),
+SXY = sum(xdif*ydif),
+beta1=SXY/SXX)
+coef(m1)["displ"]
+myCars %>% summarize(n=nrow(),
+SXX = var(~displ) * (n-1),
+SXY = cov(hwy~displ) * (n-1))
+myCars %>% summarize(n=nrow(),
+SXX = var(displ) * (n-1),
+SXY = cov(hwy,displ) * (n-1))
+myCars %>% summarize(n=nrow())
+?nrow
+myCars %>% summarize(n=n())
+myCars %>% summarize(n=n(),
+SXX = var(displ) * (n-1),
+SXY = cov(hwy,displ) * (n-1))
+myCars %>% summarize(n=n(),
+SXX = var(displ) * (n-1),
+SXY = cov(hwy,displ) * (n-1),
+beta1 = SXY/SXX)
+myCars %>%
+summarize(beta1 = cor(hwy, displ) * (sd(hwy) / sd(displ)))
+regdata
+?summarize
+regdata <- myCars %>%
+summarize(beta1 = cor(hwy, displ) * (sd(hwy) / sd(displ)),
+meanx = mean(displ),
+meany = mean(hwy))
+regdata
+beta0 <- regdata %>% mutate(beta0 = meany - beta1 * meanx)
+beta0
+coef(m1)
+fit.hwy <- makeFun(m1)
+fit.hwy
+predict(m1, mean(~displ, data=myCars))
+predict(m1, newdata=data.frame(displ=mean(~displ, data=myCars)))
+mean(~hwy, data=myCars)
+SST <- myCars %>% summarize(SST = sum((hwy - mean(hwy))^2)))
+SST <- myCars %>% summarize(SST = sum((hwy - mean(hwy))^2))
+SST
+fitted <- fitted(m1)
+SST <- myCars %>% mutate(ydif = (hwy - mean(hwy))
+SST <- myCars %>% mutate(ydif = (hwy - mean(hwy)))
+SST <- myCars %>% mutate(ydif = (hwy - mean(hwy)))
+SST
+SST <- SST %>% mutate(fitted = fitted(m1))
+SST
+assessdata <- assessdata %>%
+summarize(SSE = sum((fitted - hwy)^2),
+SSM = sum((fitted - mean(hwy))^2))
+assessdata <- myCars %>% mutate(ydif = (hwy - mean(hwy)))
+assessdata <- assessdata %>% mutate(fitted = fitted(m1))
+assessdata <- assessdata %>%
+summarize(SSE = sum((fitted - hwy)^2),
+SSM = sum((fitted - mean(hwy))^2))
+assessdata
+assessdata <- myCars %>% mutate(ydif = (hwy - mean(hwy)))
+assessdata <- assessdata %>% mutate(fitted = fitted(m1))
+assessdata <- assessdata %>%
+summarize(SST = sum(ydif^2),
+SSE = sum((fitted - hwy)^2),
+SSM = sum((fitted - mean(hwy))^2))
+assessdata
+?summarize
+assessdata %>% mutate(SSE + SSM)
+assessdata %>% mutate(rsq = 1 - SSE / SST)
+rsquared(mod)
+rsquared(m1)
+p <- length(coef(mod)) - 1
+p <- length(coef(m1)) - 1
+p
+assessdata <- assessdata %>%
+mutate(adjrsq = 1 - (SSE / (n-1-p)) / (SST / (n-1)))
+assessdata
+summary(m1)
+S <- assessdata %>% summarize(S = sqrt(SSE / (n-2)))
+S
+assessdata <- myCars %>% mutate(ydif = (hwy - mean(hwy)))
+assessdata <- assessdata %>% mutate(fitted = fitted(m1))
+assessdata <- assessdata %>%
+summarize(n = n(),
+SST = sum(ydif^2),
+SSE = sum((fitted - hwy)^2),
+SSM = sum((fitted - mean(hwy))^2))
+assessdata
+assessdata <- assessdata %>%
+mutate(rsq = 1 - SSE / SST)
+assessdata
+assessdata <- assessdata %>%
+mutate(adjrsq = 1 - (SSE / (n-1-p)) / (SST / (n-1)))
+assessdata
+assessdata <- assessdata %>%
+summarize(RSE = sqrt(SSE / (n-2)))
+assessdata
+assessdata <- myCars %>% mutate(ydif = (hwy - mean(hwy)))
+assessdata <- assessdata %>% mutate(fitted = fitted(m1))
+assessdata <- assessdata %>%
+summarize(n = n(),
+SST = sum(ydif^2),
+SSE = sum((fitted - hwy)^2),
+SSM = sum((fitted - mean(hwy))^2))
+assessdata <- assessdata %>%
+mutate(rsq = 1 - SSE / SST)
+assessdata <- assessdata %>%
+mutate(adjrsq = 1 - (SSE / (n-1-p)) / (SST / (n-1)))
+assessdata <- assessdata %>%
+mutate(RSE = sqrt(SSE / (n-2)))
+assessdata
+assessdata <- assessdata %>%
+mutate(SE1 = RSE / sqrt(SXX))
+assessdata
+View(assessdata)
+View(regdata)
+regdata <- myCars %>%
+mutate(xdif = displ - mean(displ),
+ydif = hwy - mean(hwy))
+regdata <- regdata %>%
+summarize(SXX = sum(xdif^2),
+SXY = sum(xdif*ydif))
+regdata <- regdata %>%
+mutate(beta1=SXY/SXX)
+regdata
+myCars %>%
+mutate(xdif = displ - mean(displ),
+ydif = hwy - mean(hwy)) %>%
+summarize(SXX = sum(xdif^2),
+SXY = sum(xdif*ydif),
+beta1=SXY/SXX)
+myCars %>%
+summarize(n=n(),
+SXX = var(displ) * (n-1),
+SXY = cov(hwy,displ) * (n-1),
+beta1 = SXY/SXX)
+myCars %>%
+summarize(beta1 = cor(hwy, displ) * (sd(hwy) / sd(displ)))
+testdata <- myCars %>%
+mutate(ydif = (hwy - mean(hwy)),
+fitted = fitted(m1)) %>%
+summarize(n=n(),
+SXX = var(displ) * (n-1),
+SXY = cov(hwy,displ) * (n-1),
+beta1 = SXY/SXX,
+SST = sum(ydif^2),
+SSE = sum((fitted - hwy)^2),
+SSM = sum((fitted - mean(hwy))^2))
+testdata
+testdata <- myCars %>%
+mutate(ydif = (hwy - mean(hwy)),
+fitted = fitted(m1)) %>%
+summarize(n=n(),
+meanX = mean(displ),
+meanY = mean(hwy),
+SXX = var(displ) * (n-1),
+SXY = cov(hwy,displ) * (n-1),
+beta1 = SXY/SXX,
+beta0 = meanY - beta1 * meanX)
+SST = sum(ydif^2),
+SSE = sum((fitted - hwy)^2),
+testdata <- myCars %>%
+mutate(ydif = (hwy - mean(hwy)),
+fitted = fitted(m1)) %>%
+summarize(n=n(),
+meanX = mean(displ),
+meanY = mean(hwy),
+SXX = var(displ) * (n-1),
+SXY = cov(hwy,displ) * (n-1),
+beta1 = SXY/SXX,
+beta0 = meanY - beta1 * meanX,
+SST = sum(ydif^2),
+SSE = sum((fitted - hwy)^2),
+SSM = sum((fitted - mean(hwy))^2))
+testdata
+testdata <- testdata %>%
+mutate(RSE = sqrt(SSE / (n-2)))
+testdata
+testdata <- testdata %>%
+mutate(SE1 = RSE / sqrt(SXX))
+testdata
+testdata %>% glimpse()
+testdata <- testdata %>%
+mutate(t1 = beta1 / SE1)
+testdata
+testdata %>% glimpse()
+testdata %>%
+summarize(p = 2 * pt(abs(t1), df=(n-2), lower.tail = FALSE))
+summary(m1)
+testdata <- testdata %>%
+mutate(SE0 = RSE * sqrt((1/n) + (meanX)^2 / SXX))
+testdata <- testdata %>%
+mutate(t0 = beta0 / SE0)
+testdata %>% glimpse()
+testdata %>%
+summarise(p = 2 * pt(abs(t0), df=(n-2), lower.tail = FALSE))
+anova(m1)
+testdata %>%
+summarise(F = (SSM / p) / (SSE / (n-1 - p)))
+testdata <- testdata %>%
+mutate(F = (SSM / p) / (SSE / (n-1 - p)))
+testdata %>%
+summarize(p = pf(F, df1 = p, df2 = n-1 - p, lower.tail=FALSE))
+anova(m1)
+mean(
+0.15 * 0.9857143 + 0.1 * 0.9607143 + 0.25 * 0.94 + 0.45 * 0.8766667 + 0.05 * 1
+( 94.0 + 94.0 + 87.0 + 9)/3
+( 94.0 + 94.0 + 87.0 + 4)/3
+0.15 * 0.9857143 + 0.1 * 0.9607143 + 0.25 * 0.94 + 0.45 * 0.93 + 0.05 * 1
+0.15 * 0.9857143 + 0.1 * 0.9607143 + 0.25 * 0.94 + 0.45 * 0.94666666 + 0.05 * 1
+require(mosaic)
+require(Stat2Data)
+data(FirstYearGPA)
+xyplot(GPA ~ SATV, data=FirstYearGPA, pch=19, cex=2, alpha=0.5, type=c("p","r"), lwd=5)
+rtest <- do(5000) * cor(GPA ~ shuffle(SATV), data=FirstYearGPA)
+p1 <- densityplot(~cor, data=rtest, xlim=c(-0.4,0.4), xlab="Correlation Coefficient")
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+cor.actual <- cor(GPA ~ SATV, data=FirstYearGPA)
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+pdata(cor.actual, vals = ~cor, data = rtest)
+?pdata
+?pnorm
+pnorm(1.96)
+pnorm(1.96, lower.tail=FALSE)
+pt(1.96, df=1000)
+pt(1.96, df=100)
+pdata(cor.actual, data=rtest)
+pdata(cor.actual, q=~cor, data=rtest)
+pdata(Sepal.Length, 3:6, data=iris)
+pdata(~cor, q=cor.actual, data=rtest)
+pdata(~cor, q=0.1, data=rtest)
+pdata(~cor, q=-0.1, data=rtest)
+data(BaseballTimes)
+head(BaseballTimes)
+cor.actual <- cor(Runs ~ Time, data=BaseballTimes)
+cor.actual
+cor.actual <- cor(Runs ~ Time, data=BaseballTimes)
+rtest <- do(5000) * cor(Runs ~ Time, data=BaseballTimes)
+p1 <- densityplot(~cor, data=rtest, xlim=c(-0.4,0.4), xlab="Correlation Coefficient")
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+p1 <- densityplot(~cor, data=rtest, xlim=c(0.4,1), xlab="Correlation Coefficient")
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+rtest <- do(5000) * cor(Runs ~ shuffle(Time), data=BaseballTimes)
+p1 <- densityplot(~cor, data=rtest, xlim=c(-0.5,0.5), xlab="Correlation Coefficient")
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+p1 <- densityplot(~cor, data=rtest, xlim=c(-0.7,0.7), xlab="Correlation Coefficient")
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+p1 <- densityplot(~cor, data=rtest, xlim=c(-1,1), xlab="Correlation Coefficient")
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+pdata(~cor, q=cor.actual, data = rtest)
+pdata(~cor, q=cor.actual, data = rtest, lower.tail=FALSE)
+rtest <- do(5000) * cor(GPA ~ shuffle(SATV), data=FirstYearGPA)
+p1 <- densityplot(~cor, data=rtest, xlim=c(-0.4,0.4), xlab="Correlation Coefficient")
+ladd(panel.abline(v=cor.actual, col="red", lwd=3), plot=p1)
+cor.actual <- cor(GPA ~ SATV, data=FirstYearGPA)
+pdata(~cor, q=cor.actual, data = rtest)
+pdata(~cor, q=cor.actual, data = rtest, lower.tail=FALSE)
+m1 <- lm(Length~Time, data=HighPeaks)
+data(HighPeaks)
+data(HighPeaks)
+m1 <- lm(Length~Time, data=HighPeaks)
+bslope <- function (formula, data, n) {
+# Original data
+# Now do the bootstrap
+bootstrap <- do(n) * coef(lm(formula, data=resample(data)))
+xyplot(formula, data=data,
+panel = function (x, y, ...) {
+panel.xyplot(x,y, pch=19, cex=2, alpha=0.5)
+fm <- lm(formula, data=data)
+panel.abline(fm, col="red", lwd=5)
+# Add the bootstrap slopes
+for (i in 1:n) {
+panel.abline(t(bootstrap[i,]), -0.5, col="lightgray", lwd=0.3)
+}
+panel.text(75, 80, paste("mean intercept\n", round(mean(~Intercept, data=bootstrap), 6)), cex=0.75)
+panel.text(75, 75, paste("sd intercept\n", round(sd(~Intercept, data=bootstrap), 6)), cex=0.75)
+panel.text(75, 70, paste("mean slope\n", round(mean(~Time, data=bootstrap), 6)), cex=0.75)
+panel.text(75, 65, paste("sd slope\n", round(sd(~Time, data=bootstrap), 6)), cex=0.75)
+}
+)
+}
+bslope(Length ~ Time, data=HighPeaks, 100)
+bslope <- function (formula, data, n) {
+# Original data
+# Now do the bootstrap
+bootstrap <- do(n) * coef(lm(formula, data=resample(data)))
+xyplot(formula, data=data,
+panel = function (x, y, ...) {
+panel.xyplot(x,y, pch=19, cex=2, alpha=0.5)
+fm <- lm(formula, data=data)
+panel.abline(fm, col="red", lwd=5)
+# Add the bootstrap slopes
+for (i in 1:n) {
+panel.abline(t(bootstrap[i,]), -0.5, col="lightgray", lwd=0.3)
+}
+panel.text(15, 10, paste("mean intercept\n", round(mean(~Intercept, data=bootstrap), 6)), cex=0.75)
+panel.text(15, 8, paste("sd intercept\n", round(sd(~Intercept, data=bootstrap), 6)), cex=0.75)
+panel.text(15, 6, paste("mean slope\n", round(mean(~Time, data=bootstrap), 6)), cex=0.75)
+panel.text(15, 4, paste("sd slope\n", round(sd(~Time, data=bootstrap), 6)), cex=0.75)
+}
+)
+}
+bslope(Length ~ Time, data=HighPeaks, 100)
+=======
+>>>>>>> 5838cbc5b04f12d52d2ad9a6b1485f8c8c7fa5d0

@@ -1,0 +1,43 @@
+---
+title: "ggplot2 and aesthetics"
+output: html_document
+---
+
+```{r steup, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+```
+
+If you don't define aesthetics within the overall `ggplot` call, `geom_`s won't know what to do. 
+
+For example, this will give an error, because the `geom_smooth` has no variables to work with:
+```{r, error=TRUE}
+ggplot(data=mtcars) + geom_point(aes(x=cyl, y=mpg)) + geom_smooth(method="lm", se=FALSE)
+```
+
+
+This works, but is verbose, because it repeats the same thing several times. 
+```{r}
+ggplot(data=mtcars) + geom_point(aes(x=cyl, y=mpg)) + geom_smooth(aes(x=cyl, y=mpg), method="lm", se=FALSE)
+```
+
+
+There's a shortcut, though. When you write ggplot2 code, the *aes*thetics in the `ggplot` call get applied everywhere down the chain. 
+This allows you to do more compact things like this: 
+```{r}
+ggplot(data=mtcars, aes(x=cyl, y=mpg)) + geom_point() + geom_smooth(method="lm", se=FALSE)
+```
+
+But, if you want to add coloring, it can make things weird if you stick them into the overall `ggplot` aesthetics.
+
+```{r}
+mtcars <- mtcars %>%
+  mutate(vs=factor(vs)) #factors are R's way of dealing with categorical variables
+
+ggplot(data=mtcars, aes(x=cyl, y=mpg, col=vs)) + geom_point() + geom_smooth(method="lm", se=FALSE)
+```
+
+Whoops, now we have two lines! If we want the color to only happen to one geom, we can specify it just in that one.
+
+```{r}
+ggplot(data=mtcars, aes(x=cyl, y=mpg)) + geom_point(aes(col=vs)) + geom_smooth(method="lm", se=FALSE)
+```

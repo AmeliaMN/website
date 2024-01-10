@@ -1,0 +1,13 @@
+base
+ggplot2
+dplyr
+lattice
+mosaicData
+Matrix
+mosaic
+bindrcpp
+readr
+lubridate
+scales
+RColorBrewer
+plotly

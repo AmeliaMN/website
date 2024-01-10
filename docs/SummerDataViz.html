@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Amelia McNamara - Summer Data Viz</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Amelia McNamara</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="./STAT220labs.html" rel="" target="">
+ <span class="dropdown-text">STAT 220 labs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./pastcourses.html" rel="" target="">
+ <span class="dropdown-text">Past courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SyntaxCheatsheet.pdf" rel="" target="">
+ <span class="dropdown-text">R Syntax Comparison Cheatsheet</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./wikipedia.html" rel="" target="">
+ <span class="dropdown-text">List of student-authored Wikipedia pages</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
+        <li>
+    <a class="dropdown-item" href="./writing.html" rel="" target="">
+ <span class="dropdown-text">Writing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./presentations.html" rel="" target="">
+ <span class="dropdown-text">Presentations</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./press.html" rel="" target="">
+ <span class="menu-text">Press</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:amelia.mcnamara@stthomas.edu" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://vis.social/@amelia" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/ameliamcnamara" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="http://www.linkedin.com/in/AmeliaMcNamara" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/AmeliaMN/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#massmutual-summer-data-viz-seminar-2016" id="toc-massmutual-summer-data-viz-seminar-2016" class="nav-link active" data-scroll-target="#massmutual-summer-data-viz-seminar-2016">MassMutual Summer Data Viz seminar: 2016</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Summer Data Viz</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="massmutual-summer-data-viz-seminar-2016" class="level1">
+<h1>MassMutual Summer Data Viz seminar: 2016</h1>
+<p>August 15-19, 2016 is a week-long internal data viz seminar for MassMutual at the MassMutual Amherst offices, joint with <a href="http://www.science.smith.edu/~jcrouser/">Jordan Crouser</a>. Shortlink to this page: <a href="bit.ly/MMdataviz">bit.ly/MMdataviz</a></p>
+<section id="monday-intro-to-data-viz" class="level4">
+<h4 class="anchored" data-anchor-id="monday-intro-to-data-viz">Monday: Intro to data viz</h4>
+<p>Resources - <a href="https://www.youtube.com/watch?v=s0J6EDvlN30">&gt;Everything we know about how humans interpret graphics</a> by <a href="https://twitter.com/kennelliott">Kennedy Elliott</a>. Accompanying <a href="https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73#.jtkx5wz26">Medium post</a>. - Reproducing Cleveland and McGill. <a href="https://visnut.wufoo.com/forms/myumor1008hnt6/">Survey</a> and <a href="http://visiphilia.org/2016/08/03/CM-hierarchy">results</a>. - <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">ggplot2 cheatsheet</a> - <a href="http://www.cookbook-r.com/Graphs/">R graphics cookbook</a></p>
+<p>Presentations and data</p>
+<ul>
+<li><a href="ggplot2_tutorial.html">Intro to ggplot2 presentation</a>, (<a href="https://github.com/AmeliaMN/SummerDataViz/tree/master/IntroToViz">code</a>)</li>
+<li><a href="https://raw.githubusercontent.com/AmeliaMN/SummerDataViz/master/IntroToViz/atus.csv">American Time Use Survey Data</a></li>
+</ul>
+</section>
+<section id="tuesday-interactivity-and-d3" class="level4">
+<h4 class="anchored" data-anchor-id="tuesday-interactivity-and-d3">Tuesday: Interactivity (and d3)</h4>
+<p>Resources</p>
+<ul>
+<li>Interactivity in R includes <a href="http://shiny.rstudio.com/">shiny</a> , <a href="https://support.rstudio.com/hc/en-us/articles/200551906-Interactive-Plotting-with-Manipulate">manipulate</a>, and <a href="http://shiny.rstudio.com/articles/gadgets.html">shiny gadgets</a>.</li>
+</ul>
+</section>
+<section id="wednesday-scraping-and-text" class="level4">
+<h4 class="anchored" data-anchor-id="wednesday-scraping-and-text">Wednesday: Scraping and text</h4>
+<pre><code>Resources</code></pre>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html">stringr vignette</a>, and linked <a href="http://www.regular-expressions.info/reference.html">regex tutorial</a></li>
+</ul>
+Cool examples
+<ul>
+http://kaylinwalker.com/50-years-of-pop-music/“&gt;text analysis of 50 years of pop music, by Kaylin Walker. http://varianceexplained.org/r/trump-tweets/”&gt;Analysis of Trump’s tweets by David Robinson. https://github.com/Coppersmith/vennclouds”&gt;vennclouds– a really cool approach to word clouds! (python) http://www.science.smith.edu/~jcrouser/data/“&gt;text as data and https://www.jasondavies.com/wordcloud/”&gt;Jason Davies’ Word Cloud Generator http://www.nytimes.com/interactive/2011/06/10/education/commencement-speeches-graphic.html?_r=0”&gt;Commencement speeches visualization– not a word cloud! https://flowingdata.com/tag/text/“&gt;flowing data on text, including this Washington Post https://www.washingtonpost.com/graphics/politics/2016-sotu/language/”&gt;visualization of State of the Union text.
+</ul>
+<pre><code>Presentations and data
+    &lt;ul&gt;
+        {{ site.baseurl }}/text_tutorial.html"&gt;Text presentation, (https://github.com/AmeliaMN/SummerDataViz/tree/master/Text"&gt;code)
+        Scott Chamberlain, Karthik Ram and Garrett Grolemund's https://github.com/AmeliaMN/user2016-tutorial/blob/06e271646dbc3d1c18ef9e31a0f1d92cbb3b3ab4/slides.pdf"&gt;useR tutorial on APIs and scraping 
+        https://raw.githubusercontent.com/walkerkq/musiclyrics/master/billboard_lyrics_1964-2015.csv"&gt;raw lyrics data, https://github.com/walkerkq/musiclyrics"&gt;main repo, and http://kaylinwalker.com/50-years-of-pop-music/"&gt;text analysis by Kaylin Walker. 
+    &lt;/ul&gt;
+
+
+&lt;h4&gt;Thursday: Geo data &lt;/h4&gt;
+Resources
+&lt;ul&gt;
+    https://rstudio.github.io/leaflet/"&gt;Leaftlet for R tutorial, more on the http://leafletjs.com/reference.html"&gt;leaflet API.
+    https://www.mapbox.com/help/how-web-maps-work/"&gt;map tile explanation from Mapbox.
+    https://github.com/hadley/ggplot2/wiki/plotting-polygon-shapefiles"&gt;shapefiles in ggplot2
+    http://mapshaper.org/"&gt;Shapefile checker
+    http://colorbrewer2.org/"&gt;color brewer
+&lt;/ul&gt;
+Cool examples
+&lt;ul&gt;
+    http://www.coopercenter.org/demographics/Racial-Dot-Map"&gt;Racial dot map-- lots of points!
+    http://feltron.tumblr.com/post/126340096801/geometric-choropleths-1895-vs-1978"&gt;geometric choropleths 1895 vs 1978 via http://feltron.tumblr.com/"&gt;Nicholas Felton
+    http://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html?_r=0"&gt;The best and worst places to grow up: how your area compares, example of chloropleth maps from The New Times.
+    https://www.washingtonpost.com/news/wonk/wp/2015/03/01/this-is-the-best-explanation-of-gerrymandering-you-will-ever-see/"&gt;The best explanation of gerrymandering you will ever see, The Washington Post.
+    http://gispopsci.org/maup/"&gt;Introduction to the Modifiable Areal Unit Problem.
+    https://github.com/AmeliaMN/MapExplorations"&gt;Some disorganized map thoughts by Amelia. Best piece http://www.science.smith.edu/~amcnamara/pointInPoly3.html"&gt;a playable spatial aggregation, a first draft of demo below.
+    http://tinlizzie.org/~aran/spatialAggregation.html"&gt;Spatial aggregation demo by Amelia and Aran Lunzer
+    http://bl.ocks.org/mbostock/3711652"&gt;Transition between d3 projections
+    http://bl.ocks.org/zanarmstrong/raw/caa2da1ea1558cdc3357/"&gt;Is Africa bigger than North America?-- interesting approach to map projections by Zan Armstrong
+    
+&lt;/ul&gt;
+Presentations and data
+&lt;ul&gt;
+    {{ site.baseurl }}/geo_tutorial.html"&gt;Geographic data and maps tutorial, (https://github.com/AmeliaMN/SummerDataViz/tree/master/Geo"&gt;code).
+    http://www.ncdc.noaa.gov/stormevents/ftp.jsp"&gt;Storm events data from NOAA
+    https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html"&gt;State shapefiles
+&lt;/ul&gt;
+&lt;h4&gt;Friday: Networks &lt;/h4&gt;
+Resources
+&lt;ul&gt;
+    http://kateto.net/networks-r-igraph"&gt;Networks with igraph in R. Includes some nice network layouts! 
+    https://briatte.github.io/ggnet/"&gt;ggnet, to do network visualization
+    https://github.com/thomasp85/ggraph"&gt;ggraph, to do ggplot2-style network visualization
+    http://blog.revolutionanalytics.com/2015/07/creating-network-graphs-using-javascript-directly-from-r.html"&gt;d3 networks from R
+    http://matthewlincoln.net/2014/12/20/adjacency-matrix-plots-with-r-and-ggplot2.html"&gt;Adjacency matrices, and https://mdlincoln.shinyapps.io/adjacency_plot/"&gt;accompanying shiny app!
+    http://bl.ocks.org/jose187/4733747"&gt;A simple d3 network graph
+    https://www.coursera.org/learn/datavisualization/lecture/7N1GE/3-1-3-graph-visualization"&gt;lecture on graph visualization
+&lt;/ul&gt;
+Cool examples
+    &lt;ul&gt;
+    http://www.macalester.edu/~abeverid/thrones.html"&gt;Network of Thrones, an analysis of connectivity in Game of Thrones. From my alma mater, Macalester!
+    http://www.orgnet.com/slumlords.html"&gt;Identifying slumloads with SNA
+    http://www.science.smith.edu/~amcnamara/skirts_network/index.html"&gt;skirts network (http://www.science.smith.edu/~amcnamara/skirts_network/index4.html"&gt;old version, based on this http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/"&gt;tutorial by Jim Vallandingham)
+    https://digitalhumanities.stanford.edu/neotopology"&gt;Neotopology, a digital humanities approach.
+&lt;/ul&gt;
+Presentations and data
+&lt;ul&gt;
+    {{ site.baseurl }}/network_tutorial.html"&gt;Network data visualization, (https://github.com/AmeliaMN/SummerDataViz/tree/master/Networks"&gt;code)
+    http://www.macalester.edu/~abeverid/thrones.html"&gt;Network of Thrones, http://www.macalester.edu/~abeverid/data/stormofswords.csv"&gt;data
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;div class="col-lg-4"&gt;
+    &lt;!-- &lt;iframe style="height: 100%; border: none" src="https://www.youtube.com/watch?v=s0J6EDvlN30"&gt;&lt;/iframe&gt; --&gt;
+
+    &lt;iframe height="315" width="560" src="https://www.youtube.com/embed/s0J6EDvlN30" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;</code></pre>
+</section></section></main></div>
+<div class="row">
+&nbsp;
+</div>
+
+
+
+
+
+
+ <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+ <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Copyright © 2024 Amelia McNamara. All Rights Reserved.
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

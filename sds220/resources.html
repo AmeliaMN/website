@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Resources</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="include/beanumber.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SDS/MTH 220 - Fall 2017</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="resources.html">Helpful Links</a>
+    </li>
+    <li>
+      <a href="SeelyeExamInstructions.pdf">Seelye Exam Instructions</a>
+    </li>
+    <li>
+      <a href="https://smithcollege-sds.github.io/sds-public/rmarkdown_problems.html">Troubleshooting R Markdown</a>
+    </li>
+    <li>
+      <a href="https://www.causeweb.org/usproc/">Undergraduate Statistics Project Competition</a>
+    </li>
+    <li class="dropdown-header">Handouts</li>
+    <li>
+      <a href="handouts/R-guide.pdf">R quiz study guide</a>
+    </li>
+    <li>
+      <a href="handouts/Syntax-cheatsheet.pdf">Syntax comparison cheatsheet</a>
+    </li>
+    <li>
+      <a href="https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf">Data wrangling cheatsheet</a>
+    </li>
+    <li>
+      <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">RMarkdown cheatsheet</a>
+    </li>
+    <li>
+      <a href="https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf">ggplot2 cheatsheet</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Lectures
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Notes</li>
+    <li>
+      <a href="lectures/01_yawning.pdf">01 - Yawning</a>
+    </li>
+    <li>
+      <a href="lectures/02_data-sampling.pdf">02 - Data &amp; Sampling</a>
+    </li>
+    <li>
+      <a href="lectures/03_experimental-design.pdf">03 - Experimental Design</a>
+    </li>
+    <li>
+      <a href="lectures/04_center-shape-spread.pdf">04 - Center, Shape, and Spread</a>
+    </li>
+    <li>
+      <a href="lectures/05_bivariate.pdf">05 - Bivariate Relationships</a>
+    </li>
+    <li>
+      <a href="lectures/06_linear_regression.pdf">06 - Linear Regression</a>
+    </li>
+    <li>
+      <a href="lectures/07_linear_fit.pdf">07 - Linear Fit</a>
+    </li>
+    <li>
+      <a href="lectures/08_outliers_leverage.pdf">08 - Outliers, Leverage, and Influence</a>
+    </li>
+    <li>
+      <a href="lectures/09_mlr.pdf">09 - Multiple Regression</a>
+    </li>
+    <li>
+      <a href="lectures/09a_Midterm1Review.pdf">09a - Midterm Review</a>
+    </li>
+    <li>
+      <a href="lectures/10_randomization.pdf">10 - Randomization Test</a>
+    </li>
+    <li>
+      <a href="lectures/11_hypothesis-testing.pdf">11 - Hypothesis Testing</a>
+    </li>
+    <li>
+      <a href="lectures/12_simulation.pdf">12 - Simulation</a>
+    </li>
+    <li>
+      <a href="lectures/13_normal.pdf">13 - Normal Distribution</a>
+    </li>
+    <li>
+      <a href="lectures/14_confidence_intervals.pdf">14 - Confidence Intervals</a>
+    </li>
+    <li>
+      <a href="lectures/15_more-on-ci.pdf">15 - More on Confidence Intervals</a>
+    </li>
+    <li>
+      <a href="lectures/16_probability.pdf">16 - Probability</a>
+    </li>
+    <li>
+      <a href="lectures/17_conditional_probability.pdf">17 - Conditional Probability</a>
+    </li>
+    <li>
+      <a href="lectures/18_random_variables.pdf">18 - Random Variables</a>
+    </li>
+    <li>
+      <a href="lectures/18a_Midterm2Review.pdf">18a - Midterm 2 Review</a>
+    </li>
+    <li>
+      <a href="lectures/19_inference_single_proportion.pdf">19 - Inference for a Single Proportion</a>
+    </li>
+    <li>
+      <a href="lectures/20_difference_of_proportions.pdf">20 - Difference of two Proportions</a>
+    </li>
+    <li>
+      <a href="lectures/21_goodness_of_fit.pdf">21 - Goodness of Fit</a>
+    </li>
+    <li>
+      <a href="lectures/22_independence.pdf">22 - Independence</a>
+    </li>
+    <li>
+      <a href="lectures/23_inference_for_mean.pdf">23 - Inference for a Mean</a>
+    </li>
+    <li>
+      <a href="lectures/24_difference_of_two_means.pdf">24 - Difference of Two Means</a>
+    </li>
+    <li>
+      <a href="lectures/25_anova.pdf">25 - ANOVA</a>
+    </li>
+    <li>
+      <a href="lectures/26_bootstrap.pdf">26 - The Bootstrap</a>
+    </li>
+    <li>
+      <a href="lectures/27_inference_for_regression.pdf">25 - Inference for Regression</a>
+    </li>
+    <li>
+      <a href="lectures/29_mlr_diagnostics.pdf">26 - More Regression</a>
+    </li>
+    <li>
+      <a href="lectures/InferenceCheatsheet.pdf">Inference overview</a>
+    </li>
+    <li>
+      <a href="lectures/review-for-exam3.pdf">Which test review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lectures/01_yawning.Rnw">01 - Yawning</a>
+    </li>
+    <li>
+      <a href="lectures/02_data-sampling.Rnw">02 - Data &amp; Sampling</a>
+    </li>
+    <li>
+      <a href="lectures/03_experimental-design.Rnw">03 - Experimental Design</a>
+    </li>
+    <li>
+      <a href="lectures/04_center-shape-spread.Rnw">04 - Center, Shape, and Spread</a>
+    </li>
+    <li>
+      <a href="lectures/05_bivariate.Rnw">05 - Bivariate Relationships</a>
+    </li>
+    <li>
+      <a href="lectures/06_linear_regression.Rnw">06 - Linear Regression</a>
+    </li>
+    <li>
+      <a href="lectures/07_linear_fit.Rnw">07 - Linear Fit</a>
+    </li>
+    <li>
+      <a href="lectures/08_outliers_leverage.Rnw">08 - Outliers, Leverage, and Influence</a>
+    </li>
+    <li>
+      <a href="lectures/09_mlr.Rnw">09 - Multiple Regression</a>
+    </li>
+    <li>
+      <a href="lectures/10_randomization.Rnw">10 - Randomization Test</a>
+    </li>
+    <li>
+      <a href="lectures/11_hypothesis-testing.Rnw">11 - Hypothesis Testing</a>
+    </li>
+    <li>
+      <a href="lectures/12_simulation.Rnw">12 - Simulation</a>
+    </li>
+    <li>
+      <a href="lectures/13_normal.Rnw">13 - Normal Distribution</a>
+    </li>
+    <li>
+      <a href="lectures/14_confidence_intervals.Rnw">14 - Confidence Intervals</a>
+    </li>
+    <li>
+      <a href="lectures/15_more-on-ci.Rnw">15 - More on Confidence Intervals</a>
+    </li>
+    <li>
+      <a href="lectures/16_probability.Rnw">16 - Probability</a>
+    </li>
+    <li>
+      <a href="lectures/17_conditional_probability.Rnw">17 - Conditional Probability</a>
+    </li>
+    <li>
+      <a href="lectures/18_random_variables.Rnw">18 - Random Variables</a>
+    </li>
+    <li>
+      <a href="lectures/18a_Midterm2Review.Rnw">18a - Midterm 2 Review</a>
+    </li>
+    <li>
+      <a href="lectures/19_inference_single_proportion.Rnw">19 - Inference for a Single Proportion</a>
+    </li>
+    <li>
+      <a href="lectures/20_difference_of_proportions.Rnw">20 - Difference of two Proportions</a>
+    </li>
+    <li>
+      <a href="lectures/21_goodness_of_fit.Rnw">21 - Goodness of Fit</a>
+    </li>
+    <li>
+      <a href="lectures/22_independence.Rnw">22 - Independence</a>
+    </li>
+    <li>
+      <a href="lectures/23_inference_for_mean.Rnw">23 - Inference for a Mean</a>
+    </li>
+    <li>
+      <a href="lectures/24_difference_of_two_means.Rnw">24 - Difference of Two Means</a>
+    </li>
+    <li>
+      <a href="lectures/25_anova.Rnw">25 - ANOVA</a>
+    </li>
+    <li>
+      <a href="lectures/26_bootstrap.Rnw">26 - The Bootstrap</a>
+    </li>
+    <li>
+      <a href="lectures/27_inference_for_regression.Rnw">25 - Inference for Regression</a>
+    </li>
+    <li>
+      <a href="lectures/29_mlr_diagnostics.Rnw">26 - More Regression</a>
+    </li>
+    <li>
+      <a href="lectures/InferenceCheatsheet.Rnw">Inference overview</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Labs
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Labs</li>
+    <li>
+      <a href="labs/intro_to_r.html">Introduction to R and RStudio</a>
+    </li>
+    <li>
+      <a href="labs/intro_to_data.html">Introduction to Data</a>
+    </li>
+    <li>
+      <a href="labs/simple_regression.html">Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="labs/confidence_intervals.html">Confidence Intervals</a>
+    </li>
+    <li>
+      <a href="labs/probability.html">Probability</a>
+    </li>
+    <li>
+      <a href="http://45.55.32.181/shiny/CategoricalData/">Inference for Categorical Data</a>
+    </li>
+    <li>
+      <a href="labs/normal_distribution.html">Normal Distribution</a>
+    </li>
+    <li>
+      <a href="labs/inf_for_numerical_data.html">Inference for Numerical Data</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Lab Sources</li>
+    <li>
+      <a href="labs/intro_to_r.Rmd">Introduction to R and RStudio</a>
+    </li>
+    <li>
+      <a href="labs/intro_to_data.Rmd">Introduction to Data</a>
+    </li>
+    <li>
+      <a href="labs/simple_regression.Rmd">Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="labs/confidence_intervals.Rmd">Confidence Intervals</a>
+    </li>
+    <li>
+      <a href="labs/probability.Rmd">Probability</a>
+    </li>
+    <li>
+      <a href="labs/inf_for_categorical_data.Rmd">Inference for Categorical Data</a>
+    </li>
+    <li>
+      <a href="labs/normal_distribution.Rmd">Normal Distribution</a>
+    </li>
+    <li>
+      <a href="labs/inf_for_numerical_data.Rmd">Inference for Numerical Data</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Lab Templates</li>
+    <li>
+      <a href="labs/student_lab0.Rmd">Introduction to R and RStudio</a>
+    </li>
+    <li class="dropdown-header">File -&gt; New File -&gt; R Markdown -&gt; From Template</li>
+    <li>
+      <a href="labs/lab.css">Lab CSS</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Assignments
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Homework</li>
+    <li>
+      <a href="homework.html">All Homework Assignments</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Project</li>
+    <li>
+      <a href="project.html">Instructions</a>
+    </li>
+    <li>
+      <a href="project_schedule.html">Schedule</a>
+    </li>
+    <li>
+      <a href="ProjectProposal.html">Proposal</a>
+    </li>
+    <li>
+      <a href="ProjectDataAppendix.html">Data Appendix</a>
+    </li>
+    <li>
+      <a href="ProjectPresentation.html">Presentation</a>
+    </li>
+    <li>
+      <a href="handouts/gradesheet_s1.pdf">Project peer evaluation</a>
+    </li>
+    <li>
+      <a href="ProjectTechnicalReport.html">Technical Report</a>
+    </li>
+    <li>
+      <a href="SampleDataAppendix.html">Sample Data Appendix</a>
+    </li>
+    <li>
+      <a href="ProjectDynamic.html">Group Dynamic</a>
+    </li>
+    <li>
+      <a href="project_advice.html">Advice</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Resources</h1>
+
+</div>
+
+
+<ul>
+<li><a href="http://moodle.smith.edu">Smith Moodle</a></li>
+<li><a href="http://www.openintro.org/stat/index.php?stat_book=isrs">OpenIntro with Randomization and Simulation</a>
+<ul>
+<li><a href="http://www.openintro.org/download.php?file=isrs1&amp;referrer=/stat/textbook.php">PDF</a> of the textbook</li>
+<li>R packages: <code>openintro</code> and <code>OIdata</code></li>
+<li>Click on “Typos and feedback” to send corrections to the authors</li>
+<li>an online <a href="https://docs.google.com/a/smith.edu/forms/d/1BNFNwpQUEqVG0ESisZlNI4u85IvojvqpmP8fyb1rwZw/viewform">survey</a></li>
+</ul></li>
+<li>RStudio IDE
+<ul>
+<li>Choose one of two options:
+<ol style="list-style-type: decimal">
+<li>Log on to the Smith College <a href="http://rstudio.smith.edu:8787">RStudio Server</a></li>
+<li>Download and install <a href="http://www.rstudio.com/products/rstudio/">RStudio Desktop</a>
+<ul>
+<li>Download and install <a href="http://cran.us.r-project.org/">R</a></li>
+</ul></li>
+</ol></li>
+<li>Learn more about <a href="http://rmarkdown.rstudio.com/">R Markdown</a>
+<ul>
+<li>printable <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">Reference Guide for R Markdown</a></li>
+</ul></li>
+<li>RStudio’s <a href="http://www.rstudio.com/resources/cheatsheets/">cheatsheets</a> for:
+<ul>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">R Markdown</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data Wrangling with <code>dplyr</code></a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf">Data Visualization with <code>ggplot2</code></a></li>
+</ul></li>
+<li>Packages you should install: <code>mosaic</code>, <code>mosaicData</code>, <code>openintro</code>, <code>OIdata</code>, <code>knitr</code>, <code>markdown</code></li>
+<li>Interactive tutorials via <a href="http://swirlstats.com/students.html">swirl</a></li>
+</ul></li>
+<li>Using R with the <code>mosaic</code> package
+<ul>
+<li>the <code>mosaic</code> <a href="http://cran.r-project.org/web/packages/mosaic/index.html">package</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mosaic/vignettes/GraphicsWithMosaic.html">Graphics with mosaic</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mosaic/vignettes/LessVolume-MoreCreativity.html">Less Volume, More Creativity</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf">Minimal R</a> for Intro Stats: one page handout with R commands</li>
+<li><a href="https://cran.r-project.org/web/packages/mosaic/vignettes/mosaic-resources.html">mosaic resources</a></li>
+<li><a href="https://github.com/ProjectMOSAIC/LittleBooks/raw/master/StudentGuide/MOSAIC-StudentGuide.pdf">A Student’s Guide to R</a></li>
+<li><a href="https://cran.r-project.org/web/packages/mosaic/vignettes/Resampling.pdf">Randomization-based inference using the mosaic package</a></li>
+<li><a href="http://data-computing.org/">Data Computing</a> at Macalester</li>
+</ul></li>
+<li>Quantitative Resources on campus
+<ul>
+<li><a href="http://www.smith.edu/qlc/tutoring.html#S2">Statistics TAs</a> are available Sunday through Thursday from 7-9 pm in Burton 301</li>
+<li>visit the <a href="http://www.smith.edu/qlc/">Spinelli Center for Quantitative Learning</a></li>
+<li>list of <a href="http://www.smith.edu/qlc/workshop_single_topics.html">single-topic workshops</a> hosted by the Spinelli Center</li>
+</ul></li>
+</ul>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Created by <a href="http://math.smith.edu/~bbaumer">Ben Baumer</a>, edited by <a href="http://www.science.smith.edu/~amcnamara">Amelia McNamara</a>.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

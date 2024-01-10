@@ -1,0 +1,211 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 291: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\DeclareMathOperator{\Ex}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\text{Var}}
+\DeclareMathOperator{\X}{\mathbf{X}}
+\DeclareMathOperator{\Hatmat}{\mathbf{H}}
+
+\rhead{\textsc{November 10, 2016}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Some thoughts related to the election and statistics
+  \item Wrap up of randomization
+  \item Unusual points
+\end{enumerate}
+  
+  \paragraph{Randomization} With your neighbor, discuss how you could use randomization to determine if the $R^2$ value of a simple linear model was greater than 0. Write out at least three steps that would be required (perhaps these steps would need to be repeated, as well).
+  \vspace{1in}
+
+
+
+\paragraph{Leverage}
+
+Recall that points that have extreme $x$ values can have a disproportionate influence on the slope of the regression line. The \emph{leverage} of the $i^{th}$ observation is defined by
+		$$
+			h_i = \frac{1}{n} + \frac{(x_i - \bar{x})^2}{\sum_i (x_i - \bar{x})^2 }
+		$$
+in simple linear regression. Note that $0 < h_i < 1$, $\sum_i h_i = 2$, and thus the \emph{average} leverage is $2/n$. By convention we consider observations to have high leverage if $h_i > 4/n$. 
+
+The standard errors for confidence and prediction intervals can be rewritten as
+		$$
+			SE_{CI}(x_i) = \hat{\sigma}_\epsilon \sqrt{ h_i} \, \qquad SE_{PI}(x_i) = \hat{\sigma}_\epsilon \sqrt{ 1 + h_i}
+		$$
+
+In multiple regression, the situation is more complicated. 
+%Any why do we use the letter $h$ to denote leverage? 
+% 
+% \paragraph{Aside: Expectation and variance}
+% 
+% We haven't spent much time talking about expectation and variance. But, there are simple rules for how to work with them. \\\vspace{0.25in}
+%   \begin{tabular}{cccccc}
+%     Quantity & Denoted & Formula & $a + bX$ & $X + Y$ & \R \\
+%     \hline
+%     Mean & $\mu_X$, $\mathbb{E}[X]$ & $\sum_{i=1}^n p_i \cdot x_i$ & $a + b \mu_X$ & $\mu_X + \mu_Y$ & {\tt mean()} \\
+%     Variance & $\sigma_X^2$, $Var[X]$ & $\sum_{i=1}^n p_i \cdot (x_i - \mu_X)^2$ & $b^2 \sigma_X^2$ & $\sigma_X^2 + \sigma_Y^2 + 2 \rho_{XY} \sigma_X \sigma_Y$ & {\tt var()} \\
+%   \end{tabular}
+%   \\\vspace{0.25in} Note: Here $p_i$ is the probability that $X = x_i$. $\rho_{XY}$ is the correlation between $X$ and $Y$
+
+
+% \paragraph{Aside: Linear Algebraic Solution to Multiple Regression Problem}
+% 
+% Recall that our general multiple regression model is:
+% $$
+%     	Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \epsilon \\
+% $$
+% However, we collect $n$ observations, and thus we can write this model in terms of our data as:
+%     \begin{align*}
+%   		\begin{bmatrix} y_1 \\ \vdots \\ y_n \end{bmatrix} 
+%   			&= \begin{bmatrix} 1 & x_{11} & x_{12} & \cdots & x_{1p} \\ \vdots & \vdots & \vdots & \vdots & \vdots \\ 1 & x_{n1} & x_{n2} & \cdots & x_{np} \end{bmatrix}
+%   				\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_p \end{bmatrix}
+%   				+ \begin{bmatrix} \epsilon_1 \\ \vdots \\ \epsilon_n \end{bmatrix} \\
+%   		y &= \mathbf{X} \beta + \epsilon \,,
+%   	\end{align*}
+% where $y \in \mathbb{R}^n$, $\X \in \mathbb{R}^{n \times p+1}$, and $\beta \in \mathbb{R}^{p+1}$. Note that since the errors are assumed to have mean 0, when we take the expectation of both sides \emph{with respect to} $\X$, we have that:
+% $$
+%   \Ex[y|\X] = \Ex\left[ \X \beta + \epsilon \right | \X] = \Ex[\X \beta | \X] + \Ex[\epsilon | \X] = \X \Ex[\beta | \X] \Rightarrow \hat{y} = \X \hat{\beta}
+% $$
+% Let $\Hatmat$ be the matrix defined by $\Hatmat = \X (\X^T \X)^{-1} \X^T$, and consider the solution $\hat{\beta} = (\X^T \X)^{-1} \X^T y$. Then it follows that:
+% $$
+%   		\hat{y} = \X \hat{\beta} = \X (\X^T \X)^{-1} \X^T y = \Hatmat y
+% $$
+% The matrix $\Hatmat$ is known as the \emph{hat matrix} and its diagonal entries are those leverage values defined above. In the case of multiple regression it can be shown that $\sum_i h_i = p+1$, so $h_i > 2(p+1)/n$ is considered high leverage. Note that $\Hatmat$ \emph{depends only on} $\X$, and is intimately connected to the size of the residuals. 
+% 
+% 
+
+\paragraph{Standardized \& Studentized Residuals}
+Recall that the residual associated with the $i^{th}$ observation is defined by $e_{i} = y_i - \hat{y}_i$, and that the residual standard error is denoted $\hat{\sigma}_\epsilon$. Here we define two alternative measures:
+	\begin{itemize}
+		\item Standardized residual
+		$$
+			stres_i = \frac{y_i - \hat{y}}{\hat{\sigma}_\epsilon} \cdot \frac{1}{\sqrt{1 - h_i}}
+		$$
+		\item Studentized residual
+		$$
+			stures_i = \frac{y_i - \hat{y}}{\hat{\sigma}_{(i)}} \cdot \frac{1}{\sqrt{1 - h_i}}
+		$$
+		where $\hat{\sigma}_{(i)}$ is the residual standard error of the same regression model with the $i^{th}$ point omitted
+	\end{itemize}
+  
+Both follow a $t$-distribution under the standard assumption that the residuals follow a normal distribution. The latter helps avoid the case where a single point has extremely high leverage, which artificially decreases the residual.
+
+<<message=FALSE, warning=FALSE, fig.show='hide', eval=FALSE>>=
+require(mosaic)
+require(Stat2Data)
+data(PalmBeach)
+m1 <- lm(Buchanan ~ Bush, data=PalmBeach)
+rstandard(m1)
+rstudent(m1)
+@
+
+
+\paragraph{Cook's Distance}
+
+Recall that a point of high leverage is not necessarily influential. However, a point of high leverage \emph{with a large standardized residual} is likely to be influential! Cook's distance captures both ideas:
+		$$
+			D_i = \frac{(stres_i)^2}{k+1} \cdot \frac{h_i}{1-h_i}
+		$$
+    
+We say that observations for which $D_i > 0.5$ are moderately influential, and observations for which $D_i > 1$ are very influential. 
+
+Caveat: Sometimes the most interesting analysis is in terms of the unusual observations!
+
+<<eval=FALSE>>=
+cooks.distance(m1)
+@
+
+\paragraph{Activity}
+
+\begin{enumerate}
+  \item Use \R to identify the six unusual counties given in the book on page 181. 
+  \item Examine the fourth diagnostic plot for the model produced by \cmd{plot()}. Identify the two counties with Cook's distance greater than 1. 
+\end{enumerate}
+% 
+% <<>>=
+% n = nrow(PalmBeach)
+% PalmBeach <- mutate(PalmBeach, leverage = hatvalues(mod), stres = rstandard(mod), stures = rstudent(mod), D = cooks.distance(mod))
+% arrange(filter(PalmBeach, leverage > 4/n), desc(leverage))
+% plot(mod, which=5)
+% filter(PalmBeach, D > 1)
+% @
+% 
+
+
+% \paragraph{Coding Categorical Predictors}
+% 
+% Recall that a binary categorical explanatory variable is coded in \R as an indicator variable. What happens if you have a categorical variable with more than two levels? In general, a $k$-categorical explanatory variable will result in $k-1$ indicator variables:
+% 		$$
+% 			Y = \beta_0 + \beta_1 I_1 + \cdots + \beta_{k-1} I_{k-1} + \epsilon,
+% 		$$
+% 		where the $k^{th}$ category is the \emph{reference} category. This is akin to a $k$ parallel slopes model. 
+%     
+% A categorical variable has a special data type in \R called \cmd{factor}. \cmd{factor}s are not the same as \cmd{character} vectors, and you should be careful not to confuse the two.     
+%     
+% <<eval=FALSE>>=
+% data(ThreeCars)
+% class(ThreeCars$CarType)
+% summary(ThreeCars$CarType)
+% ThreeCars <- ThreeCars %>%
+%   mutate(CarTypeChar = as.character(CarType))
+% class(ThreeCars$CarTypeChar)
+% summary(ThreeCars$CarTypeChar)
+% summary(lm(Price ~ Age + Mileage + CarType, data=ThreeCars))
+% @
+% 
+% By default, \R will automatically convert a factor with $k$ levels into $k-1$ indicator variables when you put that variable in a regression model. Important: every factor has a \emph{reference} level and by default the factors are ordered alphabetically, and the first level becomes the reference level. If you want to change that ordering use \cmd{relevel()}.
+% 
+% <<eval=FALSE>>=
+% ThreeCars <- ThreeCars %>%
+%   mutate(CarType = relevel(CarType, ref="Jaguar"))
+% summary(lm(Price ~ Age + Mileage + CarType, data=ThreeCars))
+% @
+% 
+
+
+
+\end{document}

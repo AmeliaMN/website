@@ -1,0 +1,28 @@
+---
+title: "Inference for Numerical Data"
+author: "Your Name"
+date: "11/25/2015"
+---
+
+```{r, message=FALSE}
+require(oilabs)
+require(mosaic)
+data(nc)
+```
+
+
+##### Question 1
+
+Calculate a 95% confidence interval for the average length of pregnancies ($weeks$) and interpret it in context. 
+
+##### Question 2
+
+Conduct a hypothesis test evaluating whether the average weight gained by younger mothers is different than the average weight gained by mature mothers.
+
+##### Question 3
+
+Now, a non-inference task: Determine the age cutoff for younger and mature mothers. Use a method of your choice, and explain how your method works.
+
+##### Question 4
+
+Pick a pair of numerical and categorical variables and come up with a research question evaluating the relationship between these variables. Formulate the question in a way that it can be answered using a hypothesis test and/or a confidence interval. Please outline the hypotheses, find a p-value or confidence interval, report the statistical results, and also provide an explanation in plain language.

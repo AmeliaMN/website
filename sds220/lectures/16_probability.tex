@@ -1,0 +1,412 @@
+\documentclass[10pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+
+\rhead{\textsc{October 20, 2017}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Randomness
+  \item Probability
+\end{enumerate}
+
+% Here is the question:(e)  There are two competing claims that this study is used to compare: the null hypothesis that the antibiotic has no impact and the alternative hypothesis that it has an impact. Write out these competing claims in easy-to-understand language and in the context of the application. 
+% 
+% Students should write hypothesis base on a two-tail test. 
+% Lots of students wrote "the antibiotic treatment will cause an improvement in symptoms".  This hypothesis is for a one-tail test.
+% 
+% However, since it is a two-tail test, they should instead write "the difference in improvement rates between the antibiotic and placebo treatment groups is not due to chance, and antibiotic is associated with a different rate of improvement".  
+% 
+% Please talk about the difference between two-tail and one-tail test in class.
+
+\paragraph{Randomness}
+
+\begin{itemize}
+\item Key Idea: if a process is random, then individual outcomes can’t be predicted
+\item BUT: the distribution of outcomes, in the long run, is often quite regular and predictable.
+\begin{itemize} 
+\item Equally likely outcomes (e.g., drawing any card, rolling a die)
+\item Unequally likely outcomes (e.g., drawing a face card vs. non-face card, men’s heigths)
+\end{itemize}
+\item The Law of Large Numbers guarantees that the sample proportion (ˆp) will converge towards the population proportion $(p)$ as $n \rightarrow \infty$.
+\end{itemize}
+
+\paragraph{Example: It's Unfair}
+Of 50 students in a class, 15 are SDS majors and 35 are non-SDS majors. Four competitors will represent Smith at DataFest and are (allegedly) chosen by chance. The 4-person team turns out to be 3 SDS majors and 1 non-SDS major. The non-SDS majors cry foul! What is the chance that three or more of the four drawn will be SDS majors (assuming students are
+picked with replacement)?
+\begin{itemize}
+\item Possible outcomes: 0 SDS (none), 1 SDS, 2 SDS, 3 SDS, 4 SDS (all)
+\item Event A: 3 or more SDS majors end up on the team (combination or two outcomes: 3 SDS + 4 SDS)
+\item How would we simulate this random event (Event A) with cards?
+\end{itemize}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(mosaic)}
+\hlstd{major} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlkwd{rep}\hlstd{(}\hlstr{"SDS"}\hlstd{,} \hlnum{15}\hlstd{),} \hlkwd{rep}\hlstd{(}\hlstr{"non-SDS"}\hlstd{,} \hlnum{35}\hlstd{))}
+\hlstd{the_class} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(major)}
+\hlstd{sim} \hlkwb{<-} \hlkwd{do}\hlstd{(}\hlnum{100}\hlstd{)} \hlopt{*} \hlkwd{filter}\hlstd{(}\hlkwd{sample_n}\hlstd{(the_class,} \hlnum{4}\hlstd{,} \hlkwc{replace} \hlstd{=} \hlnum{TRUE}\hlstd{), major} \hlopt{==} \hlstr{"SDS"}\hlstd{)} \hlopt{%>%}
+  \hlkwd{summarise}\hlstd{(}\hlkwc{n} \hlstd{=} \hlkwd{n}\hlstd{())} \hlopt{%>%}
+\hlkwd{mutate}\hlstd{(}\hlkwc{event_yes} \hlstd{=} \hlkwd{ifelse}\hlstd{(n} \hlopt{>} \hlnum{2}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{0}\hlstd{))}
+\hlstd{sim} \hlopt{%>%} \hlkwd{summarise}\hlstd{(}\hlkwd{mean}\hlstd{(event_yes))}
+\end{alltt}
+\begin{verbatim}
+##   mean(event_yes)
+## 1            0.04
+\end{verbatim}
+\begin{alltt}
+\hlstd{true_prob} \hlkwb{<-} \hlkwd{dbinom}\hlstd{(}\hlnum{3}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{.3}\hlstd{)} \hlopt{+} \hlkwd{dbinom}\hlstd{(}\hlnum{4}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{.3}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\paragraph{Probability}
+\begin{itemize}
+  \item Basic probability notation
+  \item Disjoint (Mutually exclusive) events
+  \item Independence of events
+  \begin{enumerate}
+    \item Events that are disjoint are definitely NOT independent
+    \item If events are not disjoint may or may not be independent
+  \end{enumerate}
+  \item Probability rules
+\end{itemize}
+
+
+
+% \paragraph{In-class Activity}
+% 
+% Many things in life that are called ``random," are anything but (e.g. when you had that song stuck in your head last week and then overheard someone at the Campus Center singing it).
+% 
+% \begin{enumerate}
+% 
+%   \item Click on the \href{https://docs.google.com/spreadsheet/ccc?key=0AlS2-t0MMCgvdE1lUGxsLWVpZEZlNnRuZ0g5bkNvVkE&usp=sharing}{Google spreadsheet link} on Moodle under today. 
+%   \item Find an empty cell in the first column, and type in a ``random" string of 100 T's and H's
+%   \item I'll use \cmd{googlesheets} to crowd-source your work into one long random string
+% \end{enumerate}
+% 
+% If I also generate a random string of T's and H's using R's pseudorandom number generator, do you think I will be able to tell which string was generated by human minds and which was generated by the computer? 
+% 
+% Given the length of the string $n$, it turns out the number of runs of length $k$, for any integer $k \geq 1$ is a \emph{random variable} that follows a known distribution.
+
+\paragraph{In-Class Problems}
+
+\begin{enumerate}
+  \itemsep0.5in
+  \item For each pair of events A and B, say whether or not you think they are disjoint, and whether or not you think they are independent.
+    \begin{enumerate}
+      \itemsep0.40in
+      \item A: Washing your hands, B: getting sick
+      \item Consider rolling two dice, A: The sum greater than 2, B: rolling snake eyes
+      \item A: Dealt a face card, B: dealt a red card
+      \item For a randomly selected Smithie, A: She is a democrat, B: She thinks global warming is a myth
+      \item For a randomly selected Smithie, A: She is a democrat, B: She is a republican
+      \item For a randomly selected Smithie, A: She is a democrat, B: She is a cat person
+\end{enumerate}
+
+  \item 
+  %MMC 4.27 (page 246):
+  Are the probabilities legitimate?
+  In each of the following situations, state whether or not the given assignment of probabilities to individual outcomes is legitimate, that is, satisfies the rules of probability. If not, give specific reasons for your answer.
+  \begin{enumerate}
+    \itemsep0.5in
+    \item Choose a college student at random and record gender and enrollment status: $\Pr(\text{female full-time}) = 0.44$, $\Pr(\text{female part-time}) = 0.56$, $\Pr(\text{male full-time}) = 0.46$, $\Pr(\text{male part-time}) = 0.54$.
+    \item Deal a card from a shuffled deck: $\Pr(clubs) = 16/52, \Pr(diamonds) = 12/52, \Pr(hearts) = 12/52, \Pr(spades) = 12/52$. 
+    \item Roll a die and record the count of spots on the up-face: $\Pr(1) = 1/3, \Pr(2) = 0, \Pr(3) = 1/6, \Pr(4) =1/3, \Pr(5) = 1/6, \Pr(6) = 0$. 
+  \end{enumerate}
+  \vspace{-0.5in}
+  \item 
+  %MMC, 4.30 (page 247): 
+  Loaded dice. There are many ways to produce crooked dice. To \emph{load} a die so that 6 comes up too often and 1 (which is opposite 6) comes up too seldom, add a bit of lead to the filling of the spot on the 1 face. Because the spot is solid plastic, this works even with transparent dice. If a die is loaded so that 6 comes up with probability 0.21 and the probabilities of the 2,3,4, and 5 faces are not affected, what is the assignment of probabilities to faces? 
+
+  
+  
+%  \item 4.28 (page 256): Race in the census.
+%  \item 4.30 (page 257): Are the events independent?
+%  \item 4.31 (page 257): Roulette.
+ \vspace{1in}
+ 
+  \item 
+  %MMC 4.37 (page 247)
+  Is this calculation correct? Government data show that 6\% of the American population are at least 75 years of age and that about 51\% are women. Explain why it is wrong to conclude that because $(0.06)(0.51) = 0.0306$ about 3\% of the population are women aged 75 or over. 
+  \item 
+  %MMC 4.38 (page 247): 
+  Colored dice. Here's more evidence that our intuition about chance behavior is not very accurate. A six-sided die has four green and two red faces, all equally probable. Psychologists asked students to say which of these color sequences is most likely to come up at the beginning of a long set of rolls of this die:
+  \begin{center}
+  RGRRR \qquad RGRRRG \qquad GRRRRR
+  \end{center}
+  More than 60\% chose the second sequence. What is the correct probability of each sequence? 
+
+\vspace{1in}
+\end{enumerate}
+
+
+\paragraph{Simulation}
+
+Sally and Joan plan to meet to study in the Thims College campus center.  They are both impatient people who will only wait 10 minutes for the other before leaving.  Rather than pick a specific time to meet, they agree to head over to the campus center sometime between 7:00 and 8:00pm.  Let both arrival times be uniformly distributed over the hour, and assume that they are independent of each other.  What is the probability that they actually meet?  
+
+Rather than figure out a mathematical solution to the problem, we can use \R to simulate the situation and then derive an estimate of the true value. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(mosaic)}
+\hlstd{friends} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}
+  \hlkwc{sally} \hlstd{=} \hlkwd{runif}\hlstd{(}\hlnum{100000}\hlstd{,} \hlkwc{min} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{max} \hlstd{=} \hlnum{60}\hlstd{),}
+  \hlkwc{joan} \hlstd{=} \hlkwd{runif}\hlstd{(}\hlnum{100000}\hlstd{,} \hlkwc{min} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{max} \hlstd{=} \hlnum{60}\hlstd{))} \hlopt{%>%}
+  \hlkwd{mutate}\hlstd{(}\hlkwc{meet} \hlstd{=} \hlkwd{abs}\hlstd{(sally} \hlopt{-} \hlstd{joan)} \hlopt{<=} \hlnum{10}\hlstd{)}
+\hlkwd{tally}\hlstd{(}\hlopt{~} \hlstd{meet,} \hlkwc{data} \hlstd{= friends,} \hlkwc{format} \hlstd{=} \hlstr{"percent"}\hlstd{)}
+\hlkwd{qplot}\hlstd{(}\hlkwc{data} \hlstd{= friends,} \hlkwc{x} \hlstd{= joan,} \hlkwc{y} \hlstd{= sally,} \hlkwc{color} \hlstd{= meet,} \hlkwc{alpha} \hlstd{=} \hlnum{0.1}\hlstd{)} \hlopt{+}
+  \hlkwd{geom_abline}\hlstd{(}\hlkwc{intercept} \hlstd{=} \hlkwd{c}\hlstd{(}\hlopt{-}\hlnum{10}\hlstd{,} \hlnum{10}\hlstd{),} \hlkwc{slope} \hlstd{=} \hlnum{1}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+Extra Credit: Provide a mathematical solution to the above problem. 
+
+
+
+
+%' 
+%' \newpage
+%' 
+%' \subsection*{Instructor's Notes}
+%' 
+%' First, we pull the contents of the Google spreadsheet into \R. Make sure that you have curated the results a bit beforehand.
+%' 
+%' <<message=FALSE>>=
+%' # Import the "random" string directly from Google
+%' require(mosaic)
+%' require(googlesheets)
+%' key <- "0AlS2-t0MMCgvdE1lUGxsLWVpZEZlNnRuZ0g5bkNvVkE"
+%' ds <- gs_key(key) %>%
+%'   gs_read() %>%
+%'   select(String, Length) %>%
+%'   na.omit()
+%' @
+%' 
+%' Next, we want to concatenate all of the T's and H's into one long string.
+%' 
+%' <<>>=
+%' # Convert the random string into runs
+%' rand_val <- with(ds, paste(String, collapse = ""))
+%' rand_vec <- strsplit(rand_val, split = "")[[1]]
+%' head(rand_vec)
+%' @
+%' 
+%' How long is this string?
+%' 
+%' <<>>=
+%' # How many are there?
+%' n <- length(rand_vec)
+%' @
+%' 
+%' Now we need to figure out the length of the runs. The \cmd{rle} function will make this easy for us.
+%' 
+%' <<>>=
+%' # Find the runs
+%' rand_runs <- rle(rand_vec) %>%
+%'   bind_rows()
+%' rand_runs
+%' @
+%' 
+%' Let's examine a histogram of the runs
+%' 
+%' <<fig.height=4, fig.width=10>>=
+%' qplot(x = lengths, data = rand_runs, binwidth = 1)
+%' @
+%' 
+%' Now that we've collected the ``random" string of T's and H's, we'll use \R to create a pseudorandom string of T's and H's on the same length.
+%' 
+%' <<>>=
+%' prand_vec <- resample(c("T", "H"), n)
+%' head(prand_vec)
+%' prand_runs <- rle(prand_vec) %>%
+%'   bind_rows()
+%' # histogram(~lengths, data=prand.runs, width=1)
+%' @
+%' 
+%' Next, we'll use the \cmd{table} function on both the \emph{random} and \emph{pseudorandom} strings to compute the frequencies of runs.
+%' 
+%' <<>>=
+%' rand_df <- data.frame(table(rand_runs$lengths))
+%' prand_df <- data.frame(table(prand_runs$lengths))
+%' @
+%' 
+%' Finally, we'll add a third method for computing streak lengths. The following data frame comes directly from probability theory.
+%' 
+%' <<>>=
+%' # Expected number of runs of length k
+%' max_k <- max(max(as.numeric(levels(rand_df$Var1))), max(as.numeric(levels(prand_df$Var1))))
+%' exp_runs <- data.frame(k = 1:max_k) %>%
+%'   mutate(pr_k = (n-k-1) * 2 * (1/2)^(k+2))
+%' head(exp_runs)
+%' @
+%' 
+%' Finally, let's collect all three frequency vectors into a single data.frame.
+%' 
+%' <<>>=
+%' df <- full_join(x = rand_df, y = prand_df, by = "Var1") %>%
+%'   mutate(k = as.numeric(Var1)) %>%
+%'   full_join(exp_runs, by = "k")
+%' head(df)
+%' @
+%' 
+%' Now, for the final reveal, we need to randomly pick one of the two strings, without knowing which one. We'll use \cmd{sample} to randomly assign the two columns to $a$ and $b$.
+%' 
+%' <<>>=
+%' # Randomly pick one of the two strings
+%' ids <- sample(2:3)
+%' a <- df[, ids[1]]
+%' b <- df[, ids[2]]
+%' @
+%' 
+%' Finally, plot all three frequencies. The one that hews closest to the theoretical frequency is the pseudorandom string. The other one is the ``random" string generated by the students.
+%' 
+%' <<fig.height=4, fig.width=10>>=
+%' # Plot the frequency of runs for both samples
+%' 
+%' obs <- df %>% 
+%'   select(-Var1) %>%
+%'   tidyr::gather(key = src, value = freq, -k)
+%' qplot(data = obs, x = k, y = freq, color = src) + 
+%'   geom_line() + xlim(c(0, 10)) + 
+%'   xlab("Length of Run") + ylab("Frequency of Run") +
+%'   ggtitle(paste("Number of Flips =", n))
+%' @
+%' 
+%' 
+%' \paragraph{Probability}
+%' 
+%' Let $A, B$ be any two events in a sample space $S$.
+%' 
+%' \begin{enumerate}
+%'   \item $0 \leq \Pr(A) \leq 1$: That is, every event occurs with a probability between 0 and 1.
+%'   \item $\Pr(S) = 1$: That is, \emph{something} in the sample space has to happen.
+%'   \item If $A$ and $B$ are disjoint, then they have no outcomes in common, and so
+%'   $$
+%'     \Pr(A \text{ or } B) \equiv \Pr( A \vee B) = \Pr(A) + \Pr(B) \, .
+%'   $$
+%'   Note that this is \emph{not} true if $A$ and $B$ are not disjoint.
+%'   \item This is a special case of the General Addition Rule (or Inclusion-Exclusion Principle):
+%'   $$
+%'     \Pr(A \text{ or } B) \equiv \Pr( A \vee B) = \Pr(A) + \Pr(B) + \Pr(A \wedge B)\, .
+%'   $$
+%'   \item $\Pr(A^c) \equiv \Pr (\bar{A}) = 1 - \Pr(A)$: That is, the probability of $A$ not happening is 1 minus the probability of $A$ happening.
+%'   \item Independence: If $A$ and $B$ are independent, then
+%'   $$
+%'     \Pr(A \text{ and } B) \equiv \Pr(A \wedge B) \equiv \Pr(AB) = \Pr(A) \cdot \Pr(B) \, .
+%'   $$
+%'   Note that independence and disjointness are the \emph{not} the same. In fact, disjointness precludes independence (since you cannot have both!).
+%' \end{enumerate}
+%' 
+%' \paragraph{Examples}
+%' Consider the roll of a fair die.
+%'   \begin{itemize}
+%'     \item The sample space is $S = \{1,2,3,4,5,6\}$.
+%'     \item $E = \{2,4,6\}$, the event that the outcome is even.
+%'     \item $\Pr(E) = 1/2$
+%'     \item $\Pr(prime) = 1/2$
+%'     \item $\Pr(\text{even or prime}) =  1/2 + 1/2 - 1/6 = 5/6$
+%'     \item $\Pr(\text{even and prime}) = 1/6$
+%'   \end{itemize}
+
+
+
+\end{document}

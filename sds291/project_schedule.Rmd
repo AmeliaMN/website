@@ -1,0 +1,40 @@
+---
+title: "Project Schedule"
+---
+
+Except for the group roster, all submissions will be made via Canvas. 
+
+          Checkpoint           Due Date    Credit   File name
+  -------------------------- ------------- -------- ----------------------------------
+         Group roster            10/15        1 pt    STAT 320 Roster
+   Initial project proposal      10/29       10 pts  STAT 320 Group-X Initial Proposal
+    Revised project design       11/19       10 pts  STAT 320 Group-X Revised Proposal
+        Data appendix            11/26       15 pts   STAT 320 Group-X Data Appendix      
+      Oral presentation         12/13        30 pts  STAT 320 Group-X Presentation
+        Project report           12/21      40 pts  STAT 320 Group-X Project Report
+        Group Dynamic            12/21       5 pts   STAT 320 Group-X Dynamic
+
+<!--
+        Draft handout            4/28      10 pts  SDS 291 Group-X Draft Handout
+
+
+
+Date   | Groups
+-------|--------
+Dec 8  | K, I, G, J, L, D
+Dec 10 | C, B, F, M, A, E, H
+Dec 16 | Technical Report, Group Dynamic due
+
+--> 
+
+Group order for presentations
+```{r, eval=FALSE, echo=FALSE}
+set.seed(417)
+groups <- sample(LETTERS[1:10], replace = FALSE)
+groups
+``` 
+
+```{r, eval=FALSE, echo=FALSE}
+groups = c("L", "M", "N", "O", "P", "Q", "R", "S", "T")
+shuffle(groups)
+``` 

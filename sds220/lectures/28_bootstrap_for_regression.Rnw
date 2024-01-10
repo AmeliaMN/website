@@ -1,0 +1,171 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. Baumer}}
+\chead{\textsc{MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{November 30, 2016}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Bootstrap for Regression
+\end{enumerate}
+
+\paragraph{\href{http://www.science.smith.edu/~amcnamara/sds291/labs/lab_residuals.html\#pathological-examples}{Regression Diagnostics}}
+
+\paragraph{Warmup}
+
+\begin{enumerate}
+
+  \item (EOCE 5.17) The Association of Turkish Travel Agencies reports the number of foreign tourists visiting Turkey and tourist spending by year. The scatterplot below shows the relationship between these two variables along with the least squares fit.
+  
+  <<eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=5>>=
+require(mosaic)
+tourism <- read.csv("http://math.smith.edu/~bbaumer/mth241/tourism.csv")
+mod.t <- lm(tourist_spending ~ visitor_count_tho, data=tourism)
+p1 <- xyplot(tourist_spending ~ visitor_count_tho, data=tourism, xlab="Number of Tourists (thousands)", ylab="Tourist Spending (millions of $)", type=c("p", "r"), pch=19)
+p2 <- xyplot(residuals(mod.t) ~ visitor_count_tho, data=tourism, xlab="Number of Tourists (thousands)", type=c("p", "r"), pch=19)
+p3 <- histogram(~residuals(mod.t), fit="normal")
+print(p1, position = c(0, 0.4, 0.5, 1), more=TRUE)
+print(p2, position = c(0, 0, 0.5, 0.4), more=TRUE)
+print(p3, position = c(0.5, 0, 1, 1))
+@
+
+  \begin{enumerate}
+    \itemsep0.7in
+    \item Describe the relationship between number of tourists and spending.
+    \item What are the explanatory and response variables?
+    \item Why might we want to fit a regression line to these data?
+    \item Do the data meet the conditions required for fitting a least squares line? In addition to the scatterplot, use the residual plot and histogram to answer this question.
+    \vspace{0.5in}
+  \end{enumerate}
+
+\end{enumerate}
+
+\paragraph{Bootstrap for Regression}
+
+Recall that a slope coefficient is an \emph{average} or \emph{expected} change in the response variable as a function of a unit change in that explanatory variable, holding the other explanatory variables constant. Like the sample mean, the estimated coefficient ($b_1$) is a deterministic calculation based on a single sample of data, but it too has a sampling distribution. Thus, we can use the bootstrap percentile method to construct a confidence interval for it. The default confidence interval is constructed using the $t$-distribution.
+
+<<fig.height=3, fig.width=6, message=FALSE, size='footnotesize'>>=
+require(mosaicData)
+mod <- lm(wt ~ age, data=Gestation)
+coef(mod)
+confint(mod)
+@
+
+The bootstrap percentile method should give us a similar interval:
+
+<<message=FALSE, size='footnotesize'>>=
+bstrap <- do(1000) * coef(lm(wt ~ age, data = resample(Gestation)))
+qdata(~age, p = c(0.025, 0.975), data = bstrap)
+# qplot(x = age, data = bstrap, geom = "density")
+@
+
+
+\paragraph{Inference for Multiple Linear Regression}
+
+Inference for MLR is in many ways just a direct extension of inference for SLR. Recall the Italian restaurants from NYC. 
+<<, size='footnotesize'>>=
+NYC <- read.csv("http://www.science.smith.edu/~bbaumer/mth241/nyc.csv")
+fm <- lm(Price ~ Food + Service + Decor + East, data = NYC)
+msummary(fm)
+@
+
+\begin{enumerate}
+  \itemsep0.5in
+  \item Interpret the results of the individual $t$-tests for the significance of each coefficient. Which coefficients that are statistically significantly different from 0? 
+
+  
+%  \item Interpret the meaning of the overall 3 degree of freedom $F$-test for this model. What are the null and alternative hypotheses? 
+  \item Drop the variable with the highest $p$-value from the regression model, and refit the model with the remaining two variables. What happens to the $R^2$? What about the adjusted $R^2$?
+  \item What happens to the values of the coefficients? Does their statistical significance change? 
+%  \item Print the ANOVA table for your first model and interpret the individual $F$-tests.
+%  \item Re-fit the model using $Food$, $Decor$, and $Service$, in that order. Re-interpret the individual $F$-tests. What is different?
+  \item Check the conditions for inference. Are they met?
+\end{enumerate}
+
+% 
+% \newpage
+% 
+% \paragraph{Bootstrap for Regression}
+% 
+% The following function will illustate the sampling distribution of the slope coefficient.
+% 
+% <<fig.show='hide'>>=
+% geom_bstrap_slope <- function(obj, mod, n = 100, ...) {
+%   bstrap <- mosaic::do(n) * 
+%     coef(lm(formula = as.formula(terms(mod)), 
+%             data = resample(mod$model)))
+%   return(obj + geom_abline(data = bstrap, 
+%                            aes(intercept = Intercept, slope = age), ...))
+% }
+% 
+% my_plot <- qplot(y = wt, x = age, data = Gestation) + 
+%   geom_smooth(method = "lm", se = 0)
+% 
+% geom_bstrap_slope(my_plot, mod = mod, n = 2, color = "pink")
+% @
+% 
+% 
+% \paragraph{Inference for MLR}
+% 
+% We should check the residuals against each of the explanatory variables.
+% 
+% <<fig.show='hide', warning=FALSE>>=
+% plot(fm)
+% qplot(y = residuals(fm), x = Food, data = NYC) + geom_smooth()
+% qplot(y = residuals(fm), x = Service, data = NYC) + geom_smooth()
+% qplot(y = residuals(fm), x = Decor, data = NYC) + geom_smooth()
+% qplot(y = residuals(fm), x = East, data = NYC) + geom_smooth()
+% qplot(x = residuals(fm), data = NYC, geom = "blank") +
+%   geom_histogram(aes(y = ..density..), binwidth = 4) +
+%   stat_function(fun = dnorm, args = c(mean = 0, sd = sd(residuals(fm))), col = "tomato")
+% @
+
+
+
+\end{document}

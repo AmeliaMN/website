@@ -1,0 +1,176 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{September 29, 2017}}
+
+\begin{document}
+
+\paragraph{Review: Numerical and graphical summaries of one variable}
+
+\begin{itemize}
+
+\item Numerical summaries:
+\begin{itemize}
+
+\item Measures of center
+\item Measures of spread
+\item Counts [why would we use these?]
+\end{itemize}
+\item Graphical summaries
+\begin{itemize}
+
+\item Of one numeric variable
+\item Of one categorical variable
+\item Of one numeric and one categorical
+\item Of two numeric variables
+\item Of two categorical variables
+\end{itemize}
+\item Descriptions of distributions
+\begin{itemize}
+
+\item Center
+\item Shape
+\item Spread
+\end{itemize}
+\end{itemize}
+
+\paragraph{Review: Simple linear regression}
+
+I have some data about my daily activity that comes from both my Fitbit and my Leaf. They both try to quantify how much I've moved in a day by counting my steps, but they give me different information. Lets look at some numeric and graphical summaries of the model of my Fitbit steps by my Leaf activity summaries. 
+
+First, here's what my data looks like:
+
+<<echo=FALSE, message=FALSE, warning=FALSE>>=
+library(lubridate)
+library(mosaic)
+leaf <- c(114,96,109,64,80,81,118,184,42,183,86,96,100,102,72,64,86,161)
+
+fitbit <- c(12672, 10943, 9875, 10492, 9177, 9033, 8980, 15006, 6373, 14715, 10702, 11219, 9923, 8896, 8621, 6158, 11332, 14290)
+calories <- c(2152, 1995, 2075,2274, 1996, 1958,2083,2153,2011,2165,2081,2101,2122,2168,1932,1868,2013,2180)
+fitbitdays <- c("9/7/2015", "9/8/2015",  "9/9/2015", "9/10/2015", "9/11/2015", "9/12/2015", "9/13/2015", "9/14/2015", "9/15/2015",  "9/16/2015", "9/17/2015", "9/18/2015",  "9/19/2015",  "9/20/2015", "9/21/2015", "9/22/2015", "9/23/2015", "9/24/2015")
+weekday <- c(rep(1,5), rep(0,2), rep(1,5), rep(0,2), rep(1,4))
+fitbitdays <- mdy(fitbitdays)
+steps <- data.frame(days=fitbitdays, fb=fitbit,leaf=leaf, weekday=weekday, calories=calories)
+@
+
+<<>>=
+head(steps)
+dim(steps)
+@
+
+Now, I can run a model,
+
+<<>>=
+m1 <- lm(fb~leaf, data=steps)
+coef(m1)
+cor(fb~leaf, data=steps)^2
+@
+
+\begin{itemize}
+  \itemsep0.5in
+  \item Write the equation for the linear model
+  \item Interpret the coefficients, $\beta_0, \beta_1$
+  \item Interpret the $R^2$ value
+  \vspace{0.5in}
+\end{itemize}
+
+\paragraph{More on multiple regression}
+
+Now, lets work on a multiple regression problem.
+
+<<>>=
+m2 <- lm(fb~leaf+weekday, data=steps)
+coef(m2)
+@
+
+\begin{itemize}
+  \itemsep0.5in
+  \item Write the equation of the regression line
+  \item Interpret the coefficeints
+  \item Calculate the $R^2$ value. (To find the $R^2$, you need a little more information. )
+\end{itemize}
+
+<<>>=
+sum(residuals(m2)^2)
+sum((steps$fb - mean(~fb, data=steps))^2)
+@
+
+The equation for multiple  $R^2$ is
+\begin{equation*}
+R^2 = 1- \frac{SSE}{SST}=1-\frac{\text{variability in residuals}}{\text{variability in the outcome}}
+\end{equation*}
+
+And the equation for adjusted $R^2$ is
+\begin{equation*}
+R^2_{\text{adj}}=1-\frac{SSE/(n-k-1)}{SST}=1-\frac{SSE}{SST}\times\frac{n-1}{n-k-1}
+\end{equation*}
+
+\begin{itemize}
+  \itemsep0.5in
+\item Calculate the multiple $R^2$ value
+\item Calculate the adjusted $R^2$ value
+\end{itemize}
+
+
+%' One more multiple regression problem,
+%' 
+%' <<>>=
+%' m3 <- lm(fb~leaf+calories, data=steps)
+%' coef(m3)
+%' var(m3$residuals)
+%' var(steps$fb)
+%' @
+%' 
+%' \begin{itemize}
+%'   \itemsep0.5in
+%'   \item Write the equation of the regression line
+%'   \item Interpret the coefficeints
+%'   \item Calculate the $R^2$ value
+%' \end{itemize}
+
+
+\end{document}

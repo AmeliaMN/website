@@ -1,0 +1,205 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fancyhdr,url,hyperref}
+\usepackage{graphicx,xspace}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,through}
+
+\oddsidemargin 0in  %0.5in
+\topmargin     0in
+\leftmargin    0in
+\rightmargin   0in
+\textheight    9in
+\textwidth     6in %6in
+%\headheight    0in
+%\headsep       0in
+%\footskip      0.5in
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{lemma}{Lemma}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{problem}{Problem}
+\newtheorem{solution}{Solution}
+\newtheorem{conjecture}{Conjecture}
+
+\pagestyle{fancy}
+
+\lhead{\textsc{Prof. McNamara}}
+\chead{\textsc{SDS/MTH 220: Lecture notes}}
+\lfoot{}
+\cfoot{}
+%\cfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\newcommand{\ans}{\vspace{0.25in}}
+\newcommand{\R}{{\sf R}\xspace}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\Ex}{\mathbb{E}}
+
+\rhead{\textsc{November 2017, 2017}}
+
+\begin{document}
+
+\paragraph{Agenda}
+\begin{enumerate}
+  \itemsep0em
+  \item Inference for Regression
+  \item Conditions for Regression
+\end{enumerate}
+
+\paragraph{Regression}
+
+Consider the following data about US states. We fit a simple linear regression line for the poverty rate in each state as a function of the high school graduation rate. 
+
+<<fig.show='hide', message=FALSE, size='footnotesize', warning=FALSE>>=
+require(mosaic)
+poverty <- read.csv("http://math.smith.edu/~bbaumer/mth241/poverty.txt", sep = "\t")
+mod <- lm(Poverty ~ Graduates, data = poverty)
+coef(mod)
+@
+
+\begin{enumerate}
+  \item Write a sentence providing an interpretation of the coefficient for $Graduates$ in the context of the problem. 
+  \vspace{0.5in}
+\end{enumerate}
+
+\paragraph{Inference for Regression}
+
+We can use our understanding of the $t$-distribution to make \emph{inferences} about the true (unknown) value of regression coefficients. In particular, we can test the hypothesis that $\beta_1 = 0$ and find a confidence interval for $\beta_1$. 
+
+<<size='footnotesize'>>=
+summary(mod)
+@
+
+\begin{enumerate}
+  \itemsep0.5in
+  \item Find a 95\% confidence interval and $p$-value for the slope coefficient.
+  \item What do you conclude about the association between poverty rates and high school graduation rates among US states? 
+  \vspace{0.5in}
+\end{enumerate}
+
+
+\paragraph{Example: Gestation}
+
+The \texttt{Gestation} data set contains birth weight, date, and gestational period collected as part of the Child Health and Development Studies in 1961 and 1962. Information about the baby's parents---age, education, height, weight, and whether the mother smoked is also recorded.
+
+\begin{enumerate}
+  \itemsep1in
+  \item Fit a linear regression model for birthweight ($wt$) as a function of the mother's age ($age$).
+  \item Use the {\tt summary} command to find a 95\% confidence interval and $p$-value for the slope coefficient
+  \item What do you conclude about the association between a mother's age and her baby's birthweight?
+  \vspace{0.5in}
+\end{enumerate}
+
+
+\paragraph{Conditions for Regression}
+
+The inferences we made above were predicted upon our assumption that the slope coefficient followed a $t$-distribution. Recall also that when we fit the regression model
+$$
+  Y = \beta_0 + \beta_1 \cdot X + \epsilon \, ,
+$$
+we assumed that $\epsilon \sim N(0, \sigma)$, for some constant $\sigma$. Our inferences will only be valid if the following assumptions are reasonable: 
+
+\begin{itemize}
+  \itemsep0in
+  \item \textbf{L}inearity:
+  \item \textbf{I}ndependence:
+  \item \textbf{N}ormality of Residuals:
+  \item \textbf{E}qual Variance of Residuals:
+\end{itemize}
+\clearpage
+These conditions are usually verified using diagnostic plots. 
+
+<<eval=FALSE, message=FALSE, fig.width=2, fig.height=4>>=
+plot(mod, which=c(1,2))
+@
+
+<<fig.show='hold', echo=FALSE, fig.width=3, fig.height=4, message=FALSE, warning=FALSE>>=
+print(plot(mod, which=1), position = c(0, 0.4, 0.5, 1), more=TRUE)
+print(plot(mod, which=2), position = c(0.5, 0, 1, 1))
+@
+
+\clearpage
+\paragraph{Practice Problems}
+\begin{enumerate}
+  \item Verify the conditions for the US states model above.
+  \item Verify the conditions for the Gestation model above. 
+  \item (EOCE 5.17) The Association of Turkish Travel Agencies reports the number of foreign tourists visiting Turkey and tourist spending by year. The scatterplot below shows the relationship between these two variables along with the least squares fit.
+  
+<<eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=4>>=
+tourism <- read.csv("http://math.smith.edu/~bbaumer/mth241/tourism.csv")
+mod.t <- lm(tourist_spending ~ visitor_count_tho, data=tourism)
+p1 <- xyplot(tourist_spending ~ visitor_count_tho, data=tourism, xlab="Number of Tourists (thousands)", ylab="Tourist Spending (millions of $)", type=c("p", "r"), pch=19)
+p2 <- xyplot(residuals(mod.t) ~ visitor_count_tho, data=tourism, xlab="Number of Tourists (thousands)", type=c("p", "r"), pch=19)
+p3 <- histogram(~residuals(mod.t), fit="normal")
+print(p1, position = c(0, 0.4, 0.5, 1), more=TRUE)
+print(p2, position = c(0, 0, 0.5, 0.4), more=TRUE)
+print(p3, position = c(0.5, 0, 1, 1))
+@
+
+  \begin{enumerate}
+    \itemsep0.5in
+    \item Describe the relationship between number of tourists and spending.
+    \item What are the explanatory and response variables?
+    \item Why might we want to fit a regression line to these data?
+    \item Do the data meet the conditions required for fitting a least squares line? In addition to the scatterplot, use the residual plot and histogram to answer this question.
+  \end{enumerate}
+
+\end{enumerate}
+
+% \newpage
+% 
+% \paragraph{Inference for Regression}
+% 
+% Just as we are able to make inferences about population means, we can make inferences about parameters in a regression model.
+% 
+% \begin{itemize}
+%   \item Note that the confidence intervals we discussed above are of the form:
+% $$
+%   \text{estimate} \pm \text{multiplier} \cdot \text{standard error}
+% $$
+% In the same manner, when we fit a regression model of the form
+% $$
+%   Y = \beta_0 + \beta_1 \cdot X + \epsilon \, ,
+% $$
+% we find $t$-confidence intervals for each coefficient of the form:
+% $$
+%   \hat{\beta_i} \pm \text{multiplier} \cdot \text{standard error}_{\beta_i}
+% $$
+%   \item We are particularly interested in testing the hypothesis that $\beta_1 = 0$. [Why?]
+%   \item The test statistic is: $t_{\beta_1} = \frac{\hat{\beta_1} - 0}{SE_{\beta_1}}$.
+%   \item The degrees of freedom is $(n-1) - \text{\# of predictors}$.
+% \end{itemize}
+% 
+% \paragraph{Warmup}
+% 
+% Poverty and graduation rate
+% 
+% <<>>=
+% summary(mod)
+% confint(mod)
+% @
+% 
+% \paragraph{Solution to Gestation}
+% 
+% birthweight of babies
+% 
+% <<fig.show='hide'>>=
+% require(mosaicData)
+% fm <- lm(wt ~ age, data = Gestation)
+% summary(fm)
+% confint(fm)
+% plot(fm)
+% @
+
+
+\end{document}
