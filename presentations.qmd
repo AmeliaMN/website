@@ -2,11 +2,11 @@
 title: "Presentations"
 ---
 
-
-Here are some links to selected presentations I've given and workshops I've led. For a more complete list, see [my CV](McNamaraCV.pdf). 
-
+Here are some links to selected presentations I've given and workshops I've led. For a more complete list, see [my CV](McNamaraCV.pdf).
 
 ### Presentations
+
+**Data Communication and Visualization at the University of St Thomas** January 2024. [Institute for Mathematical and Statistical Innovation](https://www.imsi.institute/), Chicago IL. [Teaching and Evaluating Data Communication At Scale](https://www.imsi.institute/activities/teaching-and-evaluating-data-communication-at-scale/#schedule) ([slides](presentations/datacomm/))
 
 **Computing in the Statistics Curriculum: Lessons Learned from the Educational Sciences**, with Andrew Zieffler, Matthew Beckman, Chelsey Legacy, Elle Butler Basner, Robert delMas, & V.N. Vimal Rao. [JSM 2021, virtual](https://ww2.amstat.org/meetings/jsm/2021/index.cfm). ([slides](presentations/IntegratingComputation_McNamaraEtAl_slides.pdf), [video](https://youtu.be/ZsYJ81TwGW8))
 
@@ -24,12 +24,9 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 **Data Journalism as a Liberal Art** (keynote), June 2019. [LACOL Data Science in the Liberal Arts](https://lacol.net/ds-liberal-arts/). ([slides](presentations/DataJournalismLA.pdf))
 
-
 **Teaching Data Communication**, May 2019. SDSS ([slides](presentations/TeachingDataCommunication.pdf))
 
-			
-**Wrangling Categorical Data in R Without Losing your Mind**, January 2019. rstudio::conf ([slides](presentations/WranglingCats.pdf), [video](https://rstudio.com/resources/rstudioconf-2019/working-with-categorical-data-in-r-without-losing-your-mind/)) 
-		
+**Wrangling Categorical Data in R Without Losing your Mind**, January 2019. rstudio::conf ([slides](presentations/WranglingCats.pdf), [video](https://rstudio.com/resources/rstudioconf-2019/working-with-categorical-data-in-r-without-losing-your-mind/))
 
 **How Spatial Polygons Shape Our World: Geometry, Data, and Perceptions of Truth**, September 2018. [University of Minnesota Institute for Advanced Study](https://ias.umn.edu/mcnamara) Minneapolis, MN. ([slides](presentations/SpatialAggSeptember2018.pdf), [video](https://www.youtube.com/watch?v=bjFzWElyD3o&list=PLik6fAQnSI91PMsa69RJcdKG4L4BiV5MX))
 

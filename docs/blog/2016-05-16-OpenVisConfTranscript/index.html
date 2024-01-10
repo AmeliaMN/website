@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
 </style>
 
 
@@ -52,7 +57,8 @@ ul.task-list{list-style: none;}
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -66,86 +72,97 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Amelia McNamara</span>
-  </a>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">Home</a>
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="button" data-bs-toggle="dropdown" aria-expanded="false">Teaching</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Teaching</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
         <li>
-    <a class="dropdown-item" href="../../STAT220labs.html">
+    <a class="dropdown-item" href="../../STAT220labs.html" rel="" target="">
  <span class="dropdown-text">STAT 220 labs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../pastcourses.html">
+    <a class="dropdown-item" href="../../pastcourses.html" rel="" target="">
  <span class="dropdown-text">Past courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../SyntaxCheatsheet.pdf">
+    <a class="dropdown-item" href="../../SyntaxCheatsheet.pdf" rel="" target="">
  <span class="dropdown-text">R Syntax Comparison Cheatsheet</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../wikipedia.html">
+    <a class="dropdown-item" href="../../wikipedia.html" rel="" target="">
  <span class="dropdown-text">List of student-authored Wikipedia pages</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">Research</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Research</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="../../writing.html">
+    <a class="dropdown-item" href="../../writing.html" rel="" target="">
  <span class="dropdown-text">Writing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../presentations.html">
+    <a class="dropdown-item" href="../../presentations.html" rel="" target="">
  <span class="dropdown-text">Presentations</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../press.html">Press</a>
+    <a class="nav-link" href="../../press.html" rel="" target="">
+ <span class="menu-text">Press</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html">Blog</a>
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:amelia.mcnamara@stthomas.edu"><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:amelia.mcnamara@stthomas.edu" rel="" target=""><i class="bi bi-envelope" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://vis.social/@amelia"><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://vis.social/@amelia" rel="" target=""><i class="bi bi-mastodon" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/ameliamcnamara"><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/ameliamcnamara" rel="" target=""><i class="bi bi-youtube" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="http://www.linkedin.com/in/AmeliaMcNamara"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="http://www.linkedin.com/in/AmeliaMcNamara" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/AmeliaMN/"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/AmeliaMN/" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -175,7 +192,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Amelia McNamara <a href="https://orcid.org/0000-0003-4916-2433" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p><a href="www.amelia.mn">Amelia McNamara</a> <a href="https://orcid.org/0000-0003-4916-2433" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
   </div>
     
@@ -185,6 +202,7 @@ ul.task-list{list-style: none;}
       <p class="date">May 16, 2016</p>
     </div>
   </div>
+  
     
   </div>
   
@@ -198,7 +216,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="text_viz.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">tf-idf</figcaption><p></p>
+<figcaption class="figure-caption">tf-idf</figcaption>
 </figure>
 </div>
 <section id="talk" class="level4">
@@ -220,7 +238,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="randomness.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">random noise</figcaption><p></p>
+<figcaption class="figure-caption">random noise</figcaption>
 </figure>
 </div>
 <p>but not really even this, because this is random noise that I generated with my computer. It’s pseudo-random, and probably your awesome human brain is finding patterns like <a href="http://deepdreamgenerator.com/">DeepDream</a> already. You can see the bunnies and hearts and clouds in my random data.</p>
@@ -228,7 +246,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="standback.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Stand back, I’m going to try… statistics</figcaption><p></p>
+<figcaption class="figure-caption">Stand back, I’m going to try… statistics</figcaption>
 </figure>
 </div>
 <p>I am a statistics professor. That means whenever I get in front of a group of people, I try to sneakily teach them some statistics.</p>
@@ -237,13 +255,13 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.flickr.com/photos/bareego/6657872621/in/photolist-b9kkzg-325Ep2-eYdznk-9SBTFj-6tWfjj-6oC1yN-8TifHh-6iAU8p-5nWn6B-6MBDMu-BoQci-dUyXLF-9QxFLR-a51iiR-4V4xA1-558iot-g7NJrP-fktCLP-xhLeW-6sN6Mo-8v9u8H-ozavpA-4eTAda-prJXTS-4ZSm8T-9AbyuJ-YTmUb-bzKnV-4dyx2v-2ZicrS-5Tu9ez-6h1U6q-6i17hn-7iuuib-kAkPyY-n4U475-5qduaP-N4Ws3-qjGbCr-osHjb-tEsAP-3UN759-o76HA-7KjG9k-67edp-xdMVP5-6zLxaT-pgWHT-8k3imL-smJAAa/"><img src="bareego.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Big ant</figcaption><p></p>
+<figcaption class="figure-caption">Big ant</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.flickr.com/photos/duncan/3189039332/in/photolist-5RNEhL-rZEoXK-nYZLfC-6nmrKx-pY9yMV-eRhnD5-pSNaGV-6ofFu5-et6vZ7-oD6Ho2-a272Uq-drzFK2-a95asp-nvsEmF-6fVHz9-36MAEJ-9Y51BL-3wGr3i-2KZa9r-6wfRXP-81NL4r-8xKxZp-6nTDi1-9XUUEw-5do5mX-opjwhP-o4kqqh-aaYVKv-83tTzL-c9T3bY-6FyRKs-6sJfKz-eXfmX9-nJttup-4R4gHx-6FyRLq-bMSpZK-5rueY2-6o9yu6-a6ZWN6-bGsWE6-6K9QaB-nJtF1m-69MiSx-bq4sGw-2KZa9M-8gkRfi-nHzf5N-am8cba-4VKSnJ%22%3E%3Cimg%20src=%22%7B%7B%20site.baseurl%20%7D%7D/img/duncan.jpg"><img src="duncan.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Smaller ants</figcaption><p></p>
+<figcaption class="figure-caption">Smaller ants</figcaption>
 </figure>
 </div>
 <p>And you thought maybe I got unlucky– I got five big-looking ants and five little-looking ants, but really they’re both draws from the same population. And overall the groups don’t have any difference in size. But, you observed differences in the group sizes of three-quarters of an inch.</p>
@@ -252,13 +270,13 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="illinoisspringfield.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Blue team</figcaption><p></p>
+<figcaption class="figure-caption">Blue team</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="illinoisspringfield2.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Pink team</figcaption><p></p>
+<figcaption class="figure-caption">Pink team</figcaption>
 </figure>
 </div>
 <p>We mapped their heights, we found the average height, and we learned the average height between the groups was different. Again, we observed a difference of about three quarters of an inch.</p>
@@ -267,35 +285,35 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="CI_mean.gif" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">point estimate, plus or minus the standard error times something that has to do with some distribution</figcaption><p></p>
+<figcaption class="figure-caption">point estimate, plus or minus the standard error times something that has to do with some distribution</figcaption>
 </figure>
 </div>
 <p>And maybe you’re thinking about some pages in your textbook that had standard error calculations, with a bunch of square roots and fractions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="SE_page1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Standard error forumas</figcaption><p></p>
+<figcaption class="figure-caption">Standard error forumas</figcaption>
 </figure>
 </div>
 <p>We’re thinking about a difference of means. So, we think, we can just pick that first formula. But really, it’s worse than that. There’s all these different proofs about if you have different group sizes, and if the variances are different.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="SE_page2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Standard error formulas</figcaption><p></p>
+<figcaption class="figure-caption">Standard error formulas</figcaption>
 </figure>
 </div>
 <p>So then you need to pick that formula out. And then it is worse than <strong>that</strong>, because once you have the standard error calculation, you have to know the degrees of freedom you’re going to look at in your distribution.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="SE_page3.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Standard error formulas</figcaption><p></p>
+<figcaption class="figure-caption">Standard error formulas</figcaption>
 </figure>
 </div>
 <p>And even I– I have a Ph.D.&nbsp;in statistics– I get the heebie-jeebies if you ask me to come up with the right standard error computation. Maybe you’re better at statistics than me, and came up with the right standard error, found the degrees of freedom. Now you’re going to look at some idealized distribution.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://en.wikipedia.org/wiki/Student%27s_t-distribution"><img src="Student_t_pdf.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">T distribution</figcaption><p></p>
+<figcaption class="figure-caption">T distribution</figcaption>
 </figure>
 </div>
 <p>We call this a sampling distribution. It’s not a distribution of data, it’s a distribution of statistics. Statistics are numbers computed from other numbers. In this case we had the average heights of the two tug of war teams and we’re looking at their difference.</p>
@@ -306,7 +324,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="randomization.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Randomization distribution</figcaption><p></p>
+<figcaption class="figure-caption">Randomization distribution</figcaption>
 </figure>
 </div>
 <p>This distribution is centered around zero because it’s a null distribution. And then we can calculate where is 95% of the data? What’s the middle 95%? And then sort of say “if there really was no difference between the heights of these two tug of war teams, what sorts of differences might we observe?”</p>
@@ -315,7 +333,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="randomizationants.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Randomization distribution</figcaption><p></p>
+<figcaption class="figure-caption">Randomization distribution</figcaption>
 </figure>
 </div>
 <p>Randomization distributions are not always symmetric. And they’re not always smooth. They can have these lumps. But, again, we can compute where the middle 95% of the data is. So for the ants it goes from negative 0.5 to 0.5. The observed difference of three-quarters of an inch, that would be pretty weird to see if there was no difference between my two different ant size groups.</p>
@@ -331,7 +349,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="boostrap_dist.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Bootstrap distribution”</figcaption><p></p>
+<figcaption class="figure-caption">Bootstrap distribution”</figcaption>
 </figure>
 </div>
 <p>The bootstrap distributuon might not be symmetric. It is centered around the estimate from the real data. In this case, centered around the 0.75. And then it shows us some possible numbers we could have observed.</p>
@@ -340,7 +358,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="bootstrap_ant.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Bootstrap distribution</figcaption><p></p>
+<figcaption class="figure-caption">Bootstrap distribution</figcaption>
 </figure>
 </div>
 <p>So, we think there is a relationship. One of those groups is bigger than the other.</p>
@@ -348,7 +366,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="openintro.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Open Intro</figcaption><p></p>
+<figcaption class="figure-caption">Open Intro</figcaption>
 </figure>
 </div>
 <p>If you want other resources, Jonathan Stray has a five minute lighting talk from NICAR, <a href="http://bit.ly/OneWeirdStatsTrick">“Solve Every Statistics Problem with One Weird Trick”</a>, and that one weird trick is randomization, so you kind of know about that.</p>
@@ -357,13 +375,13 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="http://www.timhesterberg.net/home/bio"><img src="tim_hesterberg.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Tim Hesterberg</figcaption><p></p>
+<figcaption class="figure-caption">Tim Hesterberg</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="howdoesitrelate.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">What does this have to do with visualization?</figcaption><p></p>
+<figcaption class="figure-caption">What does this have to do with visualization?</figcaption>
 </figure>
 </div>
 <p>So what does this all have to do with visualization? We’re going to try to do the same thing with visualization as we did with numbers. Try to say is this different than nothing? What are other things we could have observed? And this is going to help us try to not make visualizations that don’t show anything.</p>
@@ -371,14 +389,14 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="lingerie.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Lingerie chart?</figcaption><p></p>
+<figcaption class="figure-caption">Lingerie chart?</figcaption>
 </figure>
 </div>
 <p>although I like making fun of those too. And I don’t mean showing nothing in the way Darrell Huff is talking about in the 1950s with How to Lie with Statistics.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Huff.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Darrell Huff</figcaption><p></p>
+<figcaption class="figure-caption">Darrell Huff</figcaption>
 </figure>
 </div>
 <p>Instead, I’m talking about using techniques like randomization. There’s an awesome paper by <a href="http://hadley.nz/">Hadley Wickham</a>, <a href="http://www-stat.wharton.upenn.edu/~buja/">Andreas Buja</a>, <a href="http://dicook.github.io/">Di Cook</a> and <a href="http://hofmann.public.iastate.edu/">Heike Hofmann</a>.</p>
@@ -387,28 +405,28 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="http://hadley.nz/"><img src="hadley.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Hadley Wickham</figcaption><p></p>
+<figcaption class="figure-caption">Hadley Wickham</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:20%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="http://www-stat.wharton.upenn.edu/~buja/"><img src="andreas.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Andreas Buja</figcaption><p></p>
+<figcaption class="figure-caption">Andreas Buja</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:20%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="http://dicook.github.io/"><img src="di.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Di Cook</figcaption><p></p>
+<figcaption class="figure-caption">Di Cook</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:20%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="http://hofmann.public.iastate.edu/"><img src="heike.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Heike Hofmann</figcaption><p></p>
+<figcaption class="figure-caption">Heike Hofmann</figcaption>
 </figure>
 </div>
 </div>
@@ -417,7 +435,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.flickr.com/photos/mike_crane/5188333652/in/photolist-8UtyQu-syKEK-9SHXTx-2azAWL-bCqhR4-7rSB2w-syKgn-bCqiAv-bCqhHt-bCqhWH-9WLjQh-bpvnxY-jHWcxM-bpvniA-Bh14D-bpvnCL-9VekKT-9Vh1Jo-9Vh4TS-765vEj-9Vh9Qd-bmKeHQ-ALLCXL-9Vhc17-9Veatv-oW5cC4-9VebyX-9Vef9H-9VgZFS-9Vh1wy-9VhbtN-9VekZi-9Vh2eJ-9Vh6es-9Vh1jA-9VhaeJ-9Vh8U9-9Vhaqo-9VhbLQ-9Vekxi-9Vec4p-9Vh7RL-9Vh16W-72qhos-9Vh6P5-9VgZeL-9VenuT-9Vea3D-9VeeSa-72mhJi"><img src="mike_crane.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Lineup</figcaption><p></p>
+<figcaption class="figure-caption">Lineup</figcaption>
 </figure>
 </div>
 <p>The idea of the lineup is you put your data, your plot that you think shows something real, in a lineup with a bunch of innocent plots. If you can pick your accused plot out of the lineup of innocent plots, that means that it’s somehow different than nothing.</p>
@@ -425,14 +443,14 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="random6.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Random plot</figcaption><p></p>
+<figcaption class="figure-caption">Random plot</figcaption>
 </figure>
 </div>
 <p>Instead of looking at them all in sequence, I want to look at them all together. Let’s take an example. This is some data about loans. And I’m plotting the balance of a loan against the income. And I’m coloring by whether or not a person defaulted on their loan.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="default.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Loan defaults</figcaption><p></p>
+<figcaption class="figure-caption">Loan defaults</figcaption>
 </figure>
 </div>
 <p>And my human brain sees a pattern. I say, it looks like people who default on loans are the ones that have really high loan balances. It doesn’t matter if they’re rich or poor, it’s just those high loan balances.</p>
@@ -440,7 +458,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="default_perm.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Loan defaults in lineup</figcaption><p></p>
+<figcaption class="figure-caption">Loan defaults in lineup</figcaption>
 </figure>
 </div>
 <p>There’s 20 plots, because we often use a standard p-value cutoff of 0.05, which is the same as one out of 20. If you guessed randomly, you’d get the right one 1 out of 20 times even guessing at random.</p>
@@ -464,7 +482,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="visual_t2.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Visual t-test</figcaption><p></p>
+<figcaption class="figure-caption">Visual t-test</figcaption>
 </figure>
 </div>
 <p>It says decrypt, if you’re good at decrypting quickly, you could see what it is. But the true data is in position 5.</p>
@@ -476,7 +494,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="ts.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Time series</figcaption><p></p>
+<figcaption class="figure-caption">Time series</figcaption>
 </figure>
 </div>
 <p>So again, the real data is in there. Again, look at it and try to see if you can guess which one it is. And now we’re going to try and decrypt. So there’s the string again.</p>
@@ -488,7 +506,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="http://www.vpri.org/html/team_bios/aran_lunzer.htm"><img src="397f9d5.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Aran Lunzer</figcaption><p></p>
+<figcaption class="figure-caption">Aran Lunzer</figcaption>
 </figure>
 </div>
 <p>I guess it’s almost life size in the theater, so maybe that’s fine.</p>
@@ -509,14 +527,14 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="MAUP.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Modifiable Areal Unit Problem</figcaption><p></p>
+<figcaption class="figure-caption">Modifiable Areal Unit Problem</figcaption>
 </figure>
 </div>
 <p>This can happen with <a href="http://bit.ly/exp_gerrymander">gerrymandering</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="gerrymandering.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Gerrymandering</figcaption><p></p>
+<figcaption class="figure-caption">Gerrymandering</figcaption>
 </figure>
 </div>
 <p>It can happen with different county and zip code data, these different levels of polygons. And there are a lot of statistical problems that go along with that.</p>
@@ -524,7 +542,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="spatial_agg.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Spatial aggregation</figcaption><p></p>
+<figcaption class="figure-caption">Spatial aggregation</figcaption>
 </figure>
 </div>
 <p>It takes point data about earthquakes in southern California and aggregates them into polygons. But instead of making fixed polygons, you can scale and rotate and move the polygons to see some other possible values of the visualization you could have gotten. So you start with your default values and maybe you think there are very obvious trends everyone should be aware of. You can tell some great story about why there is a hot spot of earthquakes in this one place.</p>
@@ -532,7 +550,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.flickr.com/photos/sjrohde/4687848929"><img src="sjrohde.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Nothing, AZ</figcaption><p></p>
+<figcaption class="figure-caption">Nothing, AZ</figcaption>
 </figure>
 </div>
 <p>What I want you to take away from this talk is that there are statistical tasks and very analogous visualization tasks. In statistics we want to know if two numbers are different, which is like knowing if one number is different than zero. We could use tools like randomization to answer that question. In the visualization world we can use randomization in a different way to answer the question, is this plot different than nothing?</p>
@@ -569,9 +587,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -583,7 +615,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -611,31 +660,136 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
@@ -649,6 +803,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
 </ul>
     </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 

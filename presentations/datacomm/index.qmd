@@ -1,0 +1,570 @@
+---
+title: "Data Communication and Visualization at the University of St Thomas"
+author: Amelia McNamara @amelia@vis.social @ameliamn@bsky.social
+format:
+  revealjs:
+    scrollable: true
+title-slide-attributes:
+  data-background-image: https://www.stthomas.edu/_media-library/_images/admissions-aid/1920x1080/exterior-engineering-buildings-spring.jpg
+  data-background-size: contain
+  data-background-opacity: "0.4"
+---
+
+## About me
+
+Associate professor of data science at the University of St Thomas, in St Paul, MN. 
+
+Unique educational background: 
+
+- first year of college: art foundation year at the University of Cincinnati
+- then: English major at Macalester College
+- then: added mathematics major
+- graduate school: PhD in statistics, UCLA
+
+## University of St Thomas
+
+
+Private Catholic university in Minnesota. Approximately 10,000 students, 6,000 of them undergraduates. Statistics is required for many majors, so about 1,000 students take our introductory statistics course each year. 
+
+![](https://www.stthomas.edu/_media-library/_images/admissions-aid/1920x1080/exterior-engineering-buildings-spring.jpg)
+
+
+
+## STAT 336: Data Communication and Visualization {.smaller}
+
+> This course will prepare students to effectively communicate the insights from data analysis. The course will cover the three main methods of communicating information about data—visually, orally, and in writing. Students will learn to tailor their communication to their audience and create publication-ready and boardroom-ready presentations of their results.
+
+Required for
+
+-   ~~statistics major~~ data science major
+
+-   data analytics major
+
+The course is capped at 26 students (not "at scale"), and I've taught it six times since spring 2020.
+
+# Teaching and Evaluating Data Communication At Scale
+
+---
+
+Teaching and evaluating. (At least) two elements
+
+- giving feedback
+- giving grades
+
+## Course topics
+
+| Week            | Topic                      | Readings                                                             | Lab                                      | Deliverables                    |
+|---------------|---------------|---------------|---------------|---------------|
+| 1          | Introduction to the course | N/A                                                                  | N/A                                      | Introductions                   |
+| 2    | Intro to viz               | CWD (ch 3), The Functional Art (intro), Visualize This (intro, ch 1) | Introduction to R, ggplot2               | Data Dialogue, Readiness quiz\* |
+| 3   | Color                      | Design Elements (ch 3), Envisioning Information (ch 5)               | More ggplot2                             | First data viz                  |
+| 4    | Handmade viz               | CWD (ch 4), Dear Data (selections), Data Points (ch 3)               | Hand-drawn data viz                      | Dear Data idea                  |
+| 5    | Writing about data         | CWD (ch 1), How to Lie with Stats (ch 10)                            | Spreadsheets, summaries and pivot tables |    |
+| 6   | Journalism     | CWD (ch 2), Numbers in the Newsroom (ch 1-2)                         | Interviewing data                        | One number story first draft, Dear Data final draft           |
+| 7  | Perception and principles  | Cleveland (ch 4), Show me the numbers (ch 5), Data Points (ch 5)     | Introduction to Tableau                  |   One number story peer editing  |
+| 8  | Midterm week | NA | Work time | Quiz 1, One number story final draft |
+| 9 | Simplification             | CWD (ch 5), Show me the numbers (ch 8), Visual Display (ch. 4, 6)    | More ggplot2                             |                        |
+| 10   | Speaking about data        | CWD (ch 11), PowerPoint Does Rocket Science                          | More Tableau                             | Copy the masters first draft    |
+| 11 | More variables             | Envisioning Information (ch 4), Coordinated Highlighting in Context  | Tableau dashboards                       | Copy the masters final draft    |
+| 12  | Uncertainty                | TBD, mostly videos                                                   | dplyr and tidyr                          | Lightning talk first draft      |
+| 13 | Visualizing space and time           | How to Lie with Maps (ch 2), Envisioning Information (ch 6)          |     Maps and timelines                                      | Lighting talk final draft       |
+| 14   | Community partner               |                                                                      |                                          | Quiz 2                          |
+| 15 | Weird stuff                 |                                                                      |                                          |                                 |
+| Finals week     | **Project Presentations**  |                                                         |                                          |                                 |
+
+
+
+
+## Grading breakdown
+
+1.  Mini-projects \[40%\]: There will be five mini-projects throughout the semester. The mini projects include Dear Data, Copy the Masters, One Number Story, and the Community Partner Project. Points for mini-projects will vary depending on the complexity of the project.
+
+2.  Discussion posts, readiness quizzes, and participation \[25%\]: Each week, you will need to write a discussion post and complete a readiness quiz. Readiness quizzes will cover material from the reading, and are designed to be easy to complete if you are prepared for class. Discussion posts allow you to expand on your understanding of topics and integrate them with real-world examples. On alternate weeks, you will initialize discussion posts or respond to a classmate's. Beyond these specific items, full course participation includes attendance in class, engagement with in-class discussions, and substantive participation in peer reviews.
+
+3.  Quizzes \[5%\]: Two short, timed, conceptual quizzes on material from readings and baseline technical skills. These quizzes will be more complex than readiness quizzes, and cover more material.
+
+4.  Labs \[10%\]: Throughout the semester, you will be developing new technical skills using R, Tableau, spreadsheet software, and more. There will be periodic lab assignments graded on a complete/incomplete basis.
+
+5.  Final Project \[20%\]: The final project will see you applying what you have learned to a dataset of your choice. There will be several (graded) milestones along the way to help you prepare, and we will hold a demonstration session during the scheduled "finals" period for class.
+
+## General course structure
+
+::: columns
+::: {.column width="45%"}
+### Monday
+Before class, students do readings. Half the class completes their 'data dialogue.' 
+
+Interactive lecture, covering history, theory, and concepts. 
+:::
+
+::: {.column width="45%"}
+### Wednesday
+Before class, students complete readiness quiz and the other half of the class completes data dialogues. 
+
+Hands-on lab, exercise, or other activity. Work time on mini-project or time for peer editing. 
+:::
+:::
+
+## Mini-projects
+
+-   Basic viz
+-   Dear data (hand drawn visualization)
+-   One number story
+-   Lightning talk
+-   Community partner project
+-   ~~Copy the masters~~
+-   ~~Wikipedia article~~
+
+## Iteration and peer review {.smaller}
+
+Many of the mini-projects follow the same general structure:
+
+-   an initial idea
+-   a first draft
+-   peer review
+-   second draft
+-   (sometimes) a final draft
+
+I think this is one of the more valuable elements of the course, as it helps students see that their first draft often is not perfect.
+
+However, it makes it more challenging to assess. How do I assess the content of the initial idea? The first draft? The peer review? Typically, I end up using credit/no credit grading for those pieces, and only giving a more standard grade for the final draft.
+
+# Mini projects
+
+## Dear data - set up
+
+Begin with inspiration.
+
+In my classes, I talk about visualization as art, as well as art as visualization. (What 'counts'?)
+
+::: columns
+::: {.column width="30%"}
+![](img/paste-959D8564.png)
+
+[Jose Duarte](https://www.flickr.com/photos/joseduarteq/)
+:::
+
+::: {.column width="30%"}
+![](img/paste-93D958B3.png)
+
+[Mona Chalabi](https://www.instagram.com/p/BDbP_-JqvEl/)
+:::
+
+::: {.column width="30%"}
+![](img/paste-F287B428.png)
+
+[Giorgia Lupi](giorgialupi.com/) and [Stefanie Posavec](www.stefanieposavec.com/)
+:::
+:::
+
+## Dear data - lab
+
+::: columns
+::: {.column width="50%"}
+Curate a small dataset. I recommend fewer than 10 rows, but at least two variables.
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+lakesdata <- tibble::tribble(
+                ~Name,       ~Area,  ~Max.depth, ~Watershed.area, ~`Chain.of.lakes?`,
+       "Bde Maka Ska", "421 acres", "89.9 feet",   "2,992 acres",              "Yes",
+       "Lake Harriet", "353 acres",  "82. feet",   "1,139 acres",              "Yes",
+       "Lake Nokomis", "204 acres", "33.1 feet",     "869 acres",               "No",
+         "Cedar Lake", "170 acres", "50.9 feet",   "1,956 acres",              "Yes",
+  "Lake of the Isles", "103 acres", "30.8 feet",     "735 acres",              "Yes"
+  )
+knitr::kable(lakesdata, format = "html", table.attr = "style='width:20%;'")  %>%
+  kable_styling(full_width = F, font_size = 15)
+```
+:::
+
+::: {.column width="50%"}
+Bring craft supplies!
+
+![](img/2018-06-29%2016.02.24.jpg)
+:::
+:::
+
+## Dear data - final submission
+
+Your first visualization assignment is to create a hand-drawn visualization about data from your own life. This assignment is inspired by Giorgia Lupi and Stefanie Posavec's book, Dear Data, so you may want to look to their work for ideas.
+
+In the selection of the text I've posted, they suggest:
+
+-   see the world as a data collector
+-   begin with a question
+-   gather the data
+-   spend time with data
+-   organize and categorize
+-   find the main story
+-   visual inspiration to build your personal vocabulary
+-   sketch and experiment with first ideas
+-   draw the final picture
+-   draw the legend
+
+I don't care what you pick as your question, as long as it interests you. Some ideas from Dear Data include:
+
+-   clocks
+-   thank you
+-   mirrors
+-   complaints
+-   phone addiction
+-   to-do lists
+-   emotions
+-   people
+-   schedules
+-   compliments
+-   drinks
+-   doors
+-   positive thoughts
+-   envy
+-   urban wildlife
+-   negative thoughts
+-   music
+-   laughter
+-   books
+
+I would like you to collect data for a week, so you should start thinking about your question over the weekend, and perhaps start collecting data next week. I'd prefer you to visualize something that is not automatically tracked by your phone, but I won't be too picky.
+
+For this assignment, I am requiring two deliverables:
+
+-   a finished visualization, complete with handwritten legend
+-   an accompanying description of the visualization, including
+    -   the question you decided to answer
+    -   the first few ideas you came up with when brainstorming
+    -   why you chose your final visualization method
+    -   a description of the variables you visualized, and the visual mappings (e.g., "I chose to map the number of steps I took in a day to color, with red meaning very few steps (less than 1,000), orange meaning a middling number (1,001-5,000), yellow meaning I did alright but didn't hit my goal (5,001-9,999) and green meaning I hit my goal or surpassed it (10,000+).")
+
+These deliverables can be handed in to me physically in class or scanned and uploaded to Canvas.
+
+## Dear data - assessment
+
+Already we have the problem of assessment. I tell students that I won't be grading them on their artistic skills, but I want a high-quality product. How can I define that?
+
+My rubric is pretty bare-bones.
+
+-   Data visualization. There is a data visualization. \[3\]
+
+-   Visualization is hand-drawn. Visualization was made by hand, ideally on paper (or other physical media) but okay if done by hand on an electronic tablet. If done electronically, marks should all be done by hand, without things like automatically-perfect circles. \[5\]
+
+-   Legend. Legend exists and explains all encodings. Legend is also hand-drawn. \[1\]
+
+-   Description document exists. \[3\]
+
+-   Question. Description includes question answered. \[1\]
+
+-   Other visualization ideas. Description includes other visualizations brainstormed before the final method was chosen. \[2\]
+
+-   Mappings. Description includes mappings between variables and marks. \[3\]
+
+-   A week's worth of data. It appears that the visualization includes data collected over the period of a week (or more). \[2\]
+
+## Dear data - share out afterward
+
+::: columns
+::: {.column width="50%"}
+![](img/paste-C6852B0A.png)
+:::
+
+::: {.column width="50%"}
+<a href="https://twitter.com/alanapipe/status/1012829092641681409"><img src="img/paste-01A1B5B4.png"/></a>
+:::
+:::
+
+## One number story
+
+::: columns
+::: {.column width="60%"}
+::: {style="font-size: 25pt;"}
+"Keep the number of digits in a paragraph below eight."
+
+"You'd be over your allocation with a sentence like this: The Office of Redundancy's budget rose 48 percent in 2013, from \$700.3 million to \$1.03 billion.
+
+Think about how it could change:
+
+Over the past year, the Office of Redundancy's budget grew by nearly half, to \$1 billion."
+
+-- Sarah Cohen, Numbers in the Newsroom
+:::
+:::
+
+::: {.column width="40%"}
+<a href="https://store.ire.org/products/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition-e-version"><img src="img/paste-628FFB81.png"/></a>
+:::
+:::
+
+## One number story
+
+Focus on one number (but use more numbers to contextualize it!)
+
+That number might be the mean, the median, the maximum, the total...
+
+Use simple data tools--- in my class, we use spreadsheets for this assignment (sort, summarize, pivot tables).
+
+::: {style="font-size: 20pt;"}
+-   "Boston Wins The High School Dropout Race"
+-   "Massachusetts Academy of Math and Science Remains Atop the Podium"
+-   "10 High Schools in Massachusetts had a Perfect Graduation Rate in 2016"
+-   "New Century School Math Achievement Grows Again"
+-   "Math achievement lower for SLP students of color"
+:::
+
+## One number story
+
+This is an assignment with several iterations
+
+-   first draft
+-   peer editing
+-   final draft
+
+## One number story - peer editing
+
+You will end up reading your peer's piece multiple times, in order to check all of the important components. Here are some guiding questions to consider as you work, although you don’t need to respond to all of them, and there may be more things that strike you that deserve commentary.
+
+Introduction: Read just the headline, the lede and the nutgraf. Do they hook you? Do you want to keep reading? Why or why not? 
+
+Flow: is each sentence clearly connected to the one previous and the one following? Do you have a sense throughout the beginning of the article that things are in the “right” order? 
+Context: Do the introductory paragraphs provide a sense that there’s a reason for this piece? Do they give a sense of the larger problem that will be addressed? 
+
+Nutgraf: What is the nutgraf? Locate it in the rough draft: is it clearly stated? Help the author decide if it is two broad, too narrow, or just right. Work on rewording if necessary. 
+
+Sentences: Read the rest of the piece, paying close attention to each sentence and to the flow of one sentence into the next. Are there mistakes in grammar, usage, spelling, or typing? Mark them on the draft. Do the sentences flow nicely, or do some of them feel as if they need reworking? Choose two sentences that you feel may need work, mark them on the rough draft, and make suggestions for possible revisions. 
+
+Paragraphs: Look over the paragraphs. Does each one feel like a unit in and of itself, with an introductory sentence, body sentence(s), and a transition sentence moving you into the next paragraph? Are any of the paragraphs too long? Evidence: Is there adequate evidence in the piece to support the author’s argument? Are there too many numerals, or too many quotes, overloading the author’s voice? Does the author leave out any quote or bit of evidence that seems particularly obvious or helpful to you? Are any quotations cited? 
+
+Analysis: Does the author explain how each number or bit of evidence supports their point? Link: Is there a statement at the end of each sub-argument explaining its relationship to the larger point? Are you ever confused about why a bit of the piece exists or how it’s related to the author’s argument? 
+
+Conclusion: Is it satisfying? Does it tie up loose ends? Does it provide a larger context for thinking about the paper’s subject? Does it answer the ‘so what’ question? Data analysis: Glance through the data operations. Do the numbers and conclusions drawn by the author appear appropriate? Can you spot any obvious mistakes? In particular, pay attention to the “compared to what” problem– is the author comparing apples to apples?
+
+I would like to see you give some substantive thought to these peer reviews, so I’d expect to see around 10 sentences in the comments. As always, use the sandwich model– start with something you liked, or was particularly strong about the piece. Then, comments on how the draft could be improved (remember, we’re going to do a final draft of this piece!). Conclude with another sentence or two about things that worked with the piece.
+
+When I grade the final pieces, I will be looking for the following elements and considerations, so keep these in mind as you edit:
+
+Elements:
+
+- Headline 
+- Byline 
+- Lede 
+- Nutgraf 
+- Exposition 
+
+Considerations:
+
+- Accuracy 
+- Context of data 
+- Spelling and grammar
+- Clarity of writing
+
+## One number story - assessment {.smaller}
+
+Again, I've developed a rubric but it's pretty bare-bones. 
+
+- Headline [2]
+- Byline [1]
+- Lede and nutgraf. [7] great lede and nutgraf [4] so-so lede and nutgraf. [0] no lede/nutgraf
+- Exposition. [7] good exposition [4] exposition unfocused, unorganized [0] no exposition
+- Appropriate length. [2] good length [1] too long/short
+- Data context. [3] great contextualization [0] no contextualization
+- Spelling and grammar. [3] no obvious mistakes [2] occasional small errors [0] many distracting mistakes
+
+## Lightning talk - set up
+
+I provide a number of examples of "data-adjacent" lightning talks. For example, 
+
+- [solve every statistics problem with one weird trick](https://www.youtube.com/watch?v=BhY-un6JURA) by Jonathan Stray at NICAR
+- [making a tidy dress](https://resources.rstudio.com/rstudio-conf-2020/lightning-talk-dr-amelia-mcnamara) by me
+- [making music with 15,000 people during a pandemic](https://vimeo.com/777104370) by AnnMarie Thomas at eyeo
+
+We watch several talks as a group, and discuss strengths and weaknesses of the talks. 
+
+## Lighting talk
+
+A 5-minute talk on something that is "data-adjacent."
+
+-   Describe a particular R package
+-   Talk through an interesting data analysis someone else has done. You might look through your Data Dialogues for ideas, or page through sites with data journalism like The Upshot, FiveThirtyEight and ProPublica.
+-   Find a connection between a hobby and data science. I once saw a lightning talk at NICAR that made a connection between Pokemon and data, there have been talks about woodworking and data, cats and data, etc
+
+You will video-record your talk, and upload it to the internet so that your peers and I can watch it. As you look through the example lightning talks I have linked below, you will see that the people who did the talks were designing their talks to be delivered live, in front of an audience. This means that the video of the talk is perhaps not as professional as it could have been if the presenters were creating the talk to be seen as a video. In order of video professionalism, I would rank the NICAR talks the least professional, then rstudio::conf, then eyeo (most professional, almost as if the talk was designed for video). I would like you to aim for more professional, because you are designing your talk to be viewed as a video.
+
+## Lightning talk - peer editing
+
+I have students submit their first draft of their lightning talk as a discussion post on Canvas, so any other student can watch their talk. Students are assigned three peers to peer review, and they provide their feedback as a comment on the discussion thread. 
+
+I'd like you to put your comments in the same discussion thread as the talk you're commenting on, and aim for a compliment sandwich:
+
+- Start with one thing the talk did well, you found interesting, you liked, etc.
+- Then any room for improvement you can see. I would like you to find at least one thing to be critical about. Does the person need to work on saying "um" less (I know I do!). Are their slides too busy and hard to read? Etc. I know it's hard to give critical feedback, but that's how we improve!
+- Finish off with one more positive thing.
+
+## Lighting talk - assessment
+
+This is a place where I am especially poor at providing feedback. I don't even have a rubric! 
+
+I am strict about timing, and tell the students they have a "time limit of 5 minutes long, give or take a minute (in other words, it can be as short as 4 minutes or as long as 6 minutes)."
+
+When they post their final submission, I ask them to summarize some of the changes they made between the first and final draft. 
+
+
+## Community partner project
+
+Since fall 2022, this course has been a Common Good Community-Engaged course. This means my course is partnered with a community organization, and we work to produce something that is useful for the partner. So far, we have partnered with:
+
+- The Advocates for Human Rights
+- Minnesota Alliance for Volunteer Advancement
+- Minnesota Urban Debate League
+
+## Community partner project
+
+The community partner project has replaced another mini project that I loved, the Copy the Masters project. But, it accomplishes many of the same goals. The students need to produce extremely professional visualizations using R, which requires a lot of finessing of small details. 
+
+For this project, we use the longer timeline of assignments,
+
+-   an initial idea
+-   a first draft
+-   peer review
+-   second draft
+-   a final draft
+
+## Community partner project
+
+The goal of the community partner project varies based on the partner. This past semester, the Minnesota Urban Debate League (MNUDL) wanted help visualizing the academic achievements of students participating in debate, as well as visualizing the rising costs of food. These visualizations might be shared on social media, with board members, or printed and shared with lawmakers during lobbying. 
+
+## Community partner project - second draft crit
+
+After students have done an initial draft, peer editing, and created a second draft, we invite the community partner into the classroom to view the work. As a group, we go through each visualization and talk about strengths and weaknesses. I take notes on individual visualizations, as well as summarize major feedback from the partner. 
+
+Then, students use that feedback to create their third and final draft. These drafts are typically quite strong because of the repeated editing. 
+
+## Crits
+
+> Critique is one of the most valuable components of a formal art and design education. It is also one of the most difficult aspects of the art and design school experience, especially for new students. Critique is a collaborative activity that takes quite a bit of time to learn — both in terms of how to give feedback, and how to accept feedback. While there are no hard-and-fast rules to the critique process, this site is intended as a helpful guide for those just starting out.
+
+From [How to crit](https://howtocrit.com/) by [Mitch Goldstein](http://mitchgoldstein.com/).
+
+## Giving a crit 
+
+> The most important thing about giving someone a crit is that you should always be kind instead of nice. A nice crit is telling someone their work is pretty good just to avoid hurting their feelings. A kind crit is telling someone their work is not where it needs to be so they know it needs to be improved or refined. Be kind and honest, instead of nice and disingenuous. Also make sure that your feedback is not derogatory, insulting, or dismissive of the person in front of you. Remember that giving a good crit has absolutely nothing to do with being mean.
+
+> **The Trouble With Correcting**
+
+> Generally you should try to avoid giving corrective critiques — comments like “I would do it like this” or “you should try it like that.” 
+
+From [How to crit](https://howtocrit.com/) by [Mitch Goldstein](http://mitchgoldstein.com/).
+
+## Community partner project - assessment
+
+Again, we come to the issue of assessment. How can I assess these visualizations? In the final draft, I look for the student addressing all the feedback from the group crit, and mark students down if they left things un-edited. But past that, it's quite challenging to assess. Students typically earn no less than 80% on the assignment. 
+
+## Final project
+
+The final project is worth 20% of overall course grade. Again, there are many stages of the assignment and I find it difficult to assess the early stages. Again, I will mark down in the final draft if the student left work incomplete after feedback. 
+
+## Final project
+
+For your final project, you will do some data analysis and produce a piece of “data communication.” This communication must include some data visualization, and one or the other of writing about data or speaking about data.
+
+You have three deliverables for the project:
+
+1. The data communication. I imagine this will be one of the following:
+    - A written work, such as a piece of data journalism, a blog post, or an executive summary for a company. This will be turned in as either an HTML document (probably easiest to make using Quarto) or a PDF (either rendered from Quarto or created from a Word document).
+    - A presentation, either as a recorded video or as a live presentation. This will likely involve slides, created using PowerPoint, Keynote, Quarto, or other slide-creation software. If you do a live presentation, please turn in your slides an HTML document (easiest to make from Quarto) or a PDF (possible with any software). If you do a recorded video, upload or link to your video! (Slides optional.)
+    - Something else?? I’m really flexible here, so if you have a vision for something different, just run it by me. I guess you could do a TikTok or something?
+2. A “behind the scenes” process document. No matter what you use to create deliverable (1), this will likely will be an Qmd document. This is because I expect data-cleaning to be done in R. Every piece of data cleaning should be present in the document, nothing done in spreadsheet software. For the visualizations and the final communication, it's fine to move out of R (for example, to make your visualizations in Tableau and then your presentation in PowerPoint). If you make visualizations in Tableau, please describe the steps you took at the bottom of that same Quarto document. If you don't anticipate your process document to be in Quarto, please talk to me beforehand.
+3. A meta-description of the project. This will be your space to connect the work you did to what you learned in this class. The meta-description should have citations of readings from class to back up your analysis and visualization decisions. I don't care what citation format you use (APA, MLA, etc) but please be consistent. Ask me if you need help determining how to cite something! I would like to know:
+    - Why you chose the topic you did?
+    - What is your intended audience? (E.g., the CEO of Uber, readers of the Star Tribune, people subscribed to the r/dataisbeautiful subreddit, etc. Your audience should not be “students in STAT 336” or “Dr. McNamara.”)
+    - Where did your data came from? In broad strokes, what did you need to do in order to clean and visualize it?
+    - Why did you make the design decisions you did? (E.g., mappings in the visualization, color scheme choices, rounding decisions, specific language in a written piece, images on a PowerPoint slide, etc.)
+
+Here are some rough guidelines for length:
+
+For the data communication,
+
+- A talk should be at least 5 minutes long (this probably means 5-10 slides)
+- A piece of writing should be at least 1000 words
+
+The process document may be short or long, depending on how much cleaning you needed to do. The meta-document should be at least 500 words, not counting citations.
+
+When I’m grading, I'll be looking for the following things:
+
+1. For the data communication, I’ll be looking mostly to see if your finished product looks finished, and whether it seems appropriate for the audience you describe in your meta-document. I'll also look for:
+    - Titles and axis labels on plots. These should be polished, not the default variable names that ggplot2 or Tableau sticks in when you don’t specify them
+    - Encoding choices. Did you stick with default colors, or make them more appropriate for your audience? Does the visualization you chose make sense for the data?
+    - Consistency across the product. If you have multiple visualizations, do they hang together? (E.g., are the color choices consistent across plots, or do they change seemingly without reason? Are axes consistent for comparison? If there are tables in addition to visualizations, do they appear visually consistent with the plots? In a presentation, are the headings consistent across slides?)
+    - Typos/copyediting. This goes for writing in a written piece or on slides in a presentation, titles on graphs, etc. Remember, RStudio has spellcheck, you just need to click the green checkmark button!
+2. For the process document, I'll be considering whether your analysis decisions made sense.
+    - Are all your observations the same type of thing? Did you exclude cases that should be excluded? Did you include all the cases that should be included?
+    - Did you do appropriate data cleaning? Are there any obvious mistakes in your coding?
+    - Are the analysis decisions well-documented? Remember, I want all the data cleaning to be done in R, although final visualizations can be made in Tableau as long as you explain the process.
+3. For the meta-document, I will mostly be looking to ensure that your visualization and communication decisions were backed up by citations. If you chose not to round numbers, do you have a reason why? If you chose a non-standard color scheme, do you explain it?
+
+# Discussion posts, readiness quizzes, and participation
+
+## Assessing weekly work
+
+25% of students grade is related to being prepared for class and participating. I assign weekly readings, which I try to ensure students have done by assigning readiness quizzes (auto-graded multiple choice or similar) and "data dialogues." I suspect students aren't really doing the reading. 
+
+## Data dialogues
+
+The recurring theme for our discussion posts will be a “Data Dialogue.” A data dialogue combines an element from the readings of the week with a data visualization or other data product you have found in the wild.
+
+Entries can be short, just a few sentences, but should strive to explain briefly what the data product is, how to read it, and how it connects to the reading(s) of the week. Please provide a link if it is relevant.
+
+You are broken into two groups:
+
+    Group 1: last names starting with A-J
+    Group 2: last names starting with K-Z
+
+Each week, one group will write data dialogue entries, and the other group will respond to their colleagues’ posts. Responses should strive to find another connection between the data product and the reading(s).
+
+For this week, Group 2 will start, and Group 1 will respond. 
+
+## Data dialogues - example {.smaller}
+
+Here is an example data dialogue post and response. I have lightly edited this from real student work I received in a prior semester:
+
+::: columns
+::: {.column width="60%"}
+Original post: "I found another life expectancy chloropleth map, this time focusing on Europe. In the reading, Muth refers to a Datawrapper feature that confirms whether your visualization adheres to appropriate levels of accessibility to the colorblind, a useful tool for ensuring inclusivity. I think the color scheme in this chloropleth works well, although I'm not sure if the scheme is accessible to those with color-blindness. I find the placement of additional information (Highest/lowest regions) to be clever in utilizing space with no information recorded. I’m curious how areas are sectioned off as most countries in the visualization are split into smaller regions."
+:::
+
+::: {.column width="30%"}
+[![](img/life-expectancy-at-birth-in-europe-v0-9hav9eacjota1.jpg)](https://www.reddit.com/r/dataisbeautiful/comments/12klz2x/life_expectancy_at_birth_in_europe_oc/)
+:::
+:::
+
+## Data dialogues - example {.smaller}
+
+::: columns
+::: {.column width="60%"}
+Response: "I think this is a really visually pleasing visualization, especially as you note, the additional information and contextualization are in really good places. I think this is an interesting way to look at life expectancy because oftentimes the same data might be compiled and used as one color for the entire country. I found it especially interesting when Muth talked about considering using the smallest units possible. In this map, they have separate regions color coded individually, and it makes it more descriptive too. It also makes me speculate as to the causes of particular regions having lower or higher life expectancy rates. It looks like they never say that the medium gray, I assume, is countries lacking in data compared to the light gray of Africa and the Middle East, which I assumed to be countries they were ignoring for this visualization."
+:::
+
+::: {.column width="30%"}
+[![](img/life-expectancy-at-birth-in-europe-v0-9hav9eacjota1.jpg)](https://www.reddit.com/r/dataisbeautiful/comments/12klz2x/life_expectancy_at_birth_in_europe_oc/)
+:::
+:::
+
+## Data dialogues - assessment
+
+Again, how to assess these? I typically use a 3 point scale, where 3 means good, 2 means they were pretty light on details, and 0 means they didn't submit the assignment. 
+
+## Final grades
+
+At the end of the semester, some students have learned a ton, and that's very gratifying! But when I compute final grades, I often discover a student is going to receive an A or B without seeming to have learned much. 
+
+## Ideas
+
+- Next semester, I'm going to try [Perusall](https://www.perusall.com/) to attempt to have students engage more with the reading. We'll see how that goes.  
+- Standards-based grading? 
+- Crits
+
+## Standards-based grading
+
+What are the standards? Feels like I'm right back in my (poor) rubrics. I'm not very good at avoiding "giving corrective critiques." 
+
+# Discussion?
+
+# Thank you

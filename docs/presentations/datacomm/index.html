@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
+
+  <meta name="author" content="Amelia McNamara @amelia@vis.social @ameliamn@bsky.social">
+  <title>Amelia McNamara - Data Communication and Visualization at the University of St Thomas</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  
+  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="https://www.stthomas.edu/_media-library/_images/admissions-aid/1920x1080/exterior-engineering-buildings-spring.jpg" data-background-opacity="0.4" data-background-size="contain" class="quarto-title-block center">
+  <h1 class="title">Data Communication and Visualization at the University of St Thomas</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Amelia McNamara <span class="citation" data-cites="amelia">@amelia</span><span class="citation" data-cites="vis.social">@vis.social</span> <span class="citation" data-cites="ameliamn">@ameliamn</span><span class="citation" data-cites="bsky.social">@bsky.social</span> 
+</div>
+</div>
+</div>
+
+</section>
+<section id="about-me" class="slide level2">
+<h2>About me</h2>
+<p>Associate professor of data science at the University of St Thomas, in St Paul, MN.</p>
+<p>Unique educational background:</p>
+<ul>
+<li>first year of college: art foundation year at the University of Cincinnati</li>
+<li>then: English major at Macalester College</li>
+<li>then: added mathematics major</li>
+<li>graduate school: PhD in statistics, UCLA</li>
+</ul>
+</section>
+<section id="university-of-st-thomas" class="slide level2">
+<h2>University of St Thomas</h2>
+<p>Private Catholic university in Minnesota. Approximately 10,000 students, 6,000 of them undergraduates. Statistics is required for many majors, so about 1,000 students take our introductory statistics course each year.</p>
+
+<img data-src="https://www.stthomas.edu/_media-library/_images/admissions-aid/1920x1080/exterior-engineering-buildings-spring.jpg" class="r-stretch"></section>
+<section id="stat-336-data-communication-and-visualization" class="slide level2 smaller">
+<h2>STAT 336: Data Communication and Visualization</h2>
+<blockquote>
+<p>This course will prepare students to effectively communicate the insights from data analysis. The course will cover the three main methods of communicating information about data—visually, orally, and in writing. Students will learn to tailor their communication to their audience and create publication-ready and boardroom-ready presentations of their results.</p>
+</blockquote>
+<p>Required for</p>
+<ul>
+<li><p><del>statistics major</del> data science major</p></li>
+<li><p>data analytics major</p></li>
+</ul>
+<p>The course is capped at 26 students (not “at scale”), and I’ve taught it six times since spring 2020.</p>
+</section>
+<section>
+<section id="teaching-and-evaluating-data-communication-at-scale" class="title-slide slide level1 center">
+<h1>Teaching and Evaluating Data Communication At Scale</h1>
+
+</section>
+<section class="slide level2">
+
+<p>Teaching and evaluating. (At least) two elements</p>
+<ul>
+<li>giving feedback</li>
+<li>giving grades</li>
+</ul>
+</section>
+<section id="course-topics" class="slide level2">
+<h2>Course topics</h2>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Topic</th>
+<th>Readings</th>
+<th>Lab</th>
+<th>Deliverables</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Introduction to the course</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Introductions</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Intro to viz</td>
+<td>CWD (ch 3), The Functional Art (intro), Visualize This (intro, ch 1)</td>
+<td>Introduction to R, ggplot2</td>
+<td>Data Dialogue, Readiness quiz*</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Color</td>
+<td>Design Elements (ch 3), Envisioning Information (ch 5)</td>
+<td>More ggplot2</td>
+<td>First data viz</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Handmade viz</td>
+<td>CWD (ch 4), Dear Data (selections), Data Points (ch 3)</td>
+<td>Hand-drawn data viz</td>
+<td>Dear Data idea</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Writing about data</td>
+<td>CWD (ch 1), How to Lie with Stats (ch 10)</td>
+<td>Spreadsheets, summaries and pivot tables</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Journalism</td>
+<td>CWD (ch 2), Numbers in the Newsroom (ch 1-2)</td>
+<td>Interviewing data</td>
+<td>One number story first draft, Dear Data final draft</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Perception and principles</td>
+<td>Cleveland (ch 4), Show me the numbers (ch 5), Data Points (ch 5)</td>
+<td>Introduction to Tableau</td>
+<td>One number story peer editing</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Midterm week</td>
+<td>NA</td>
+<td>Work time</td>
+<td>Quiz 1, One number story final draft</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Simplification</td>
+<td>CWD (ch 5), Show me the numbers (ch 8), Visual Display (ch.&nbsp;4, 6)</td>
+<td>More ggplot2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Speaking about data</td>
+<td>CWD (ch 11), PowerPoint Does Rocket Science</td>
+<td>More Tableau</td>
+<td>Copy the masters first draft</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>More variables</td>
+<td>Envisioning Information (ch 4), Coordinated Highlighting in Context</td>
+<td>Tableau dashboards</td>
+<td>Copy the masters final draft</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Uncertainty</td>
+<td>TBD, mostly videos</td>
+<td>dplyr and tidyr</td>
+<td>Lightning talk first draft</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Visualizing space and time</td>
+<td>How to Lie with Maps (ch 2), Envisioning Information (ch 6)</td>
+<td>Maps and timelines</td>
+<td>Lighting talk final draft</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Community partner</td>
+<td></td>
+<td></td>
+<td>Quiz 2</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Weird stuff</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Finals week</td>
+<td><strong>Project Presentations</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="grading-breakdown" class="slide level2">
+<h2>Grading breakdown</h2>
+<ol type="1">
+<li><p>Mini-projects [40%]: There will be five mini-projects throughout the semester. The mini projects include Dear Data, Copy the Masters, One Number Story, and the Community Partner Project. Points for mini-projects will vary depending on the complexity of the project.</p></li>
+<li><p>Discussion posts, readiness quizzes, and participation [25%]: Each week, you will need to write a discussion post and complete a readiness quiz. Readiness quizzes will cover material from the reading, and are designed to be easy to complete if you are prepared for class. Discussion posts allow you to expand on your understanding of topics and integrate them with real-world examples. On alternate weeks, you will initialize discussion posts or respond to a classmate’s. Beyond these specific items, full course participation includes attendance in class, engagement with in-class discussions, and substantive participation in peer reviews.</p></li>
+<li><p>Quizzes [5%]: Two short, timed, conceptual quizzes on material from readings and baseline technical skills. These quizzes will be more complex than readiness quizzes, and cover more material.</p></li>
+<li><p>Labs [10%]: Throughout the semester, you will be developing new technical skills using R, Tableau, spreadsheet software, and more. There will be periodic lab assignments graded on a complete/incomplete basis.</p></li>
+<li><p>Final Project [20%]: The final project will see you applying what you have learned to a dataset of your choice. There will be several (graded) milestones along the way to help you prepare, and we will hold a demonstration session during the scheduled “finals” period for class.</p></li>
+</ol>
+</section>
+<section id="general-course-structure" class="slide level2">
+<h2>General course structure</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="monday">Monday</h3>
+<p>Before class, students do readings. Half the class completes their ‘data dialogue.’</p>
+<p>Interactive lecture, covering history, theory, and concepts.</p>
+</div><div class="column" style="width:45%;">
+<h3 id="wednesday">Wednesday</h3>
+<p>Before class, students complete readiness quiz and the other half of the class completes data dialogues.</p>
+<p>Hands-on lab, exercise, or other activity. Work time on mini-project or time for peer editing.</p>
+</div>
+</div>
+</section>
+<section id="mini-projects" class="slide level2">
+<h2>Mini-projects</h2>
+<ul>
+<li>Basic viz</li>
+<li>Dear data (hand drawn visualization)</li>
+<li>One number story</li>
+<li>Lightning talk</li>
+<li>Community partner project</li>
+<li><del>Copy the masters</del></li>
+<li><del>Wikipedia article</del></li>
+</ul>
+</section>
+<section id="iteration-and-peer-review" class="slide level2 smaller">
+<h2>Iteration and peer review</h2>
+<p>Many of the mini-projects follow the same general structure:</p>
+<ul>
+<li>an initial idea</li>
+<li>a first draft</li>
+<li>peer review</li>
+<li>second draft</li>
+<li>(sometimes) a final draft</li>
+</ul>
+<p>I think this is one of the more valuable elements of the course, as it helps students see that their first draft often is not perfect.</p>
+<p>However, it makes it more challenging to assess. How do I assess the content of the initial idea? The first draft? The peer review? Typically, I end up using credit/no credit grading for those pieces, and only giving a more standard grade for the final draft.</p>
+</section></section>
+<section>
+<section id="mini-projects-1" class="title-slide slide level1 center">
+<h1>Mini projects</h1>
+
+</section>
+<section id="dear-data---set-up" class="slide level2">
+<h2>Dear data - set up</h2>
+<p>Begin with inspiration.</p>
+<p>In my classes, I talk about visualization as art, as well as art as visualization. (What ‘counts’?)</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="img/paste-959D8564.png"></p>
+<p><a href="https://www.flickr.com/photos/joseduarteq/">Jose Duarte</a></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="img/paste-93D958B3.png"></p>
+<p><a href="https://www.instagram.com/p/BDbP_-JqvEl/">Mona Chalabi</a></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="img/paste-F287B428.png"></p>
+<p><a href="giorgialupi.com/">Giorgia Lupi</a> and <a href="www.stefanieposavec.com/">Stefanie Posavec</a></p>
+</div>
+</div>
+</section>
+<section id="dear-data---lab" class="slide level2">
+<h2>Dear data - lab</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Curate a small dataset. I recommend fewer than 10 rows, but at least two variables.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true" style="width:20%; font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Name</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Area</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Max.depth</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Watershed.area</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Chain.of.lakes?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Bde Maka Ska</td>
+<td style="text-align: left;">421 acres</td>
+<td style="text-align: left;">89.9 feet</td>
+<td style="text-align: left;">2,992 acres</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lake Harriet</td>
+<td style="text-align: left;">353 acres</td>
+<td style="text-align: left;">82. feet</td>
+<td style="text-align: left;">1,139 acres</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lake Nokomis</td>
+<td style="text-align: left;">204 acres</td>
+<td style="text-align: left;">33.1 feet</td>
+<td style="text-align: left;">869 acres</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cedar Lake</td>
+<td style="text-align: left;">170 acres</td>
+<td style="text-align: left;">50.9 feet</td>
+<td style="text-align: left;">1,956 acres</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lake of the Isles</td>
+<td style="text-align: left;">103 acres</td>
+<td style="text-align: left;">30.8 feet</td>
+<td style="text-align: left;">735 acres</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Bring craft supplies!</p>
+<p><img data-src="img/2018-06-29 16.02.24.jpg"></p>
+</div>
+</div>
+</section>
+<section id="dear-data---final-submission" class="slide level2">
+<h2>Dear data - final submission</h2>
+<p>Your first visualization assignment is to create a hand-drawn visualization about data from your own life. This assignment is inspired by Giorgia Lupi and Stefanie Posavec’s book, Dear Data, so you may want to look to their work for ideas.</p>
+<p>In the selection of the text I’ve posted, they suggest:</p>
+<ul>
+<li>see the world as a data collector</li>
+<li>begin with a question</li>
+<li>gather the data</li>
+<li>spend time with data</li>
+<li>organize and categorize</li>
+<li>find the main story</li>
+<li>visual inspiration to build your personal vocabulary</li>
+<li>sketch and experiment with first ideas</li>
+<li>draw the final picture</li>
+<li>draw the legend</li>
+</ul>
+<p>I don’t care what you pick as your question, as long as it interests you. Some ideas from Dear Data include:</p>
+<ul>
+<li>clocks</li>
+<li>thank you</li>
+<li>mirrors</li>
+<li>complaints</li>
+<li>phone addiction</li>
+<li>to-do lists</li>
+<li>emotions</li>
+<li>people</li>
+<li>schedules</li>
+<li>compliments</li>
+<li>drinks</li>
+<li>doors</li>
+<li>positive thoughts</li>
+<li>envy</li>
+<li>urban wildlife</li>
+<li>negative thoughts</li>
+<li>music</li>
+<li>laughter</li>
+<li>books</li>
+</ul>
+<p>I would like you to collect data for a week, so you should start thinking about your question over the weekend, and perhaps start collecting data next week. I’d prefer you to visualize something that is not automatically tracked by your phone, but I won’t be too picky.</p>
+<p>For this assignment, I am requiring two deliverables:</p>
+<ul>
+<li>a finished visualization, complete with handwritten legend</li>
+<li>an accompanying description of the visualization, including
+<ul>
+<li>the question you decided to answer</li>
+<li>the first few ideas you came up with when brainstorming</li>
+<li>why you chose your final visualization method</li>
+<li>a description of the variables you visualized, and the visual mappings (e.g., “I chose to map the number of steps I took in a day to color, with red meaning very few steps (less than 1,000), orange meaning a middling number (1,001-5,000), yellow meaning I did alright but didn’t hit my goal (5,001-9,999) and green meaning I hit my goal or surpassed it (10,000+).”)</li>
+</ul></li>
+</ul>
+<p>These deliverables can be handed in to me physically in class or scanned and uploaded to Canvas.</p>
+</section>
+<section id="dear-data---assessment" class="slide level2">
+<h2>Dear data - assessment</h2>
+<p>Already we have the problem of assessment. I tell students that I won’t be grading them on their artistic skills, but I want a high-quality product. How can I define that?</p>
+<p>My rubric is pretty bare-bones.</p>
+<ul>
+<li><p>Data visualization. There is a data visualization. [3]</p></li>
+<li><p>Visualization is hand-drawn. Visualization was made by hand, ideally on paper (or other physical media) but okay if done by hand on an electronic tablet. If done electronically, marks should all be done by hand, without things like automatically-perfect circles. [5]</p></li>
+<li><p>Legend. Legend exists and explains all encodings. Legend is also hand-drawn. [1]</p></li>
+<li><p>Description document exists. [3]</p></li>
+<li><p>Question. Description includes question answered. [1]</p></li>
+<li><p>Other visualization ideas. Description includes other visualizations brainstormed before the final method was chosen. [2]</p></li>
+<li><p>Mappings. Description includes mappings between variables and marks. [3]</p></li>
+<li><p>A week’s worth of data. It appears that the visualization includes data collected over the period of a week (or more). [2]</p></li>
+</ul>
+</section>
+<section id="dear-data---share-out-afterward" class="slide level2">
+<h2>Dear data - share out afterward</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/paste-C6852B0A.png"></p>
+</div><div class="column" style="width:50%;">
+<p><a href="https://twitter.com/alanapipe/status/1012829092641681409"><img src="img/paste-01A1B5B4.png"></a></p>
+</div>
+</div>
+</section>
+<section id="one-number-story" class="slide level2">
+<h2>One number story</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div style="font-size: 25pt;">
+<p>“Keep the number of digits in a paragraph below eight.”</p>
+<p>“You’d be over your allocation with a sentence like this: The Office of Redundancy’s budget rose 48 percent in 2013, from $700.3 million to $1.03 billion.</p>
+<p>Think about how it could change:</p>
+<p>Over the past year, the Office of Redundancy’s budget grew by nearly half, to $1 billion.”</p>
+<p>– Sarah Cohen, Numbers in the Newsroom</p>
+</div>
+</div><div class="column" style="width:40%;">
+<p><a href="https://store.ire.org/products/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition-e-version"><img src="img/paste-628FFB81.png"></a></p>
+</div>
+</div>
+</section>
+<section id="one-number-story-1" class="slide level2">
+<h2>One number story</h2>
+<p>Focus on one number (but use more numbers to contextualize it!)</p>
+<p>That number might be the mean, the median, the maximum, the total…</p>
+<p>Use simple data tools— in my class, we use spreadsheets for this assignment (sort, summarize, pivot tables).</p>
+<div style="font-size: 20pt;">
+<ul>
+<li>“Boston Wins The High School Dropout Race”</li>
+<li>“Massachusetts Academy of Math and Science Remains Atop the Podium”</li>
+<li>“10 High Schools in Massachusetts had a Perfect Graduation Rate in 2016”</li>
+<li>“New Century School Math Achievement Grows Again”</li>
+<li>“Math achievement lower for SLP students of color”</li>
+</ul>
+</div>
+</section>
+<section id="one-number-story-2" class="slide level2">
+<h2>One number story</h2>
+<p>This is an assignment with several iterations</p>
+<ul>
+<li>first draft</li>
+<li>peer editing</li>
+<li>final draft</li>
+</ul>
+</section>
+<section id="one-number-story---peer-editing" class="slide level2">
+<h2>One number story - peer editing</h2>
+<p>You will end up reading your peer’s piece multiple times, in order to check all of the important components. Here are some guiding questions to consider as you work, although you don’t need to respond to all of them, and there may be more things that strike you that deserve commentary.</p>
+<p>Introduction: Read just the headline, the lede and the nutgraf. Do they hook you? Do you want to keep reading? Why or why not?</p>
+<p>Flow: is each sentence clearly connected to the one previous and the one following? Do you have a sense throughout the beginning of the article that things are in the “right” order? Context: Do the introductory paragraphs provide a sense that there’s a reason for this piece? Do they give a sense of the larger problem that will be addressed?</p>
+<p>Nutgraf: What is the nutgraf? Locate it in the rough draft: is it clearly stated? Help the author decide if it is two broad, too narrow, or just right. Work on rewording if necessary.</p>
+<p>Sentences: Read the rest of the piece, paying close attention to each sentence and to the flow of one sentence into the next. Are there mistakes in grammar, usage, spelling, or typing? Mark them on the draft. Do the sentences flow nicely, or do some of them feel as if they need reworking? Choose two sentences that you feel may need work, mark them on the rough draft, and make suggestions for possible revisions.</p>
+<p>Paragraphs: Look over the paragraphs. Does each one feel like a unit in and of itself, with an introductory sentence, body sentence(s), and a transition sentence moving you into the next paragraph? Are any of the paragraphs too long? Evidence: Is there adequate evidence in the piece to support the author’s argument? Are there too many numerals, or too many quotes, overloading the author’s voice? Does the author leave out any quote or bit of evidence that seems particularly obvious or helpful to you? Are any quotations cited?</p>
+<p>Analysis: Does the author explain how each number or bit of evidence supports their point? Link: Is there a statement at the end of each sub-argument explaining its relationship to the larger point? Are you ever confused about why a bit of the piece exists or how it’s related to the author’s argument?</p>
+<p>Conclusion: Is it satisfying? Does it tie up loose ends? Does it provide a larger context for thinking about the paper’s subject? Does it answer the ‘so what’ question? Data analysis: Glance through the data operations. Do the numbers and conclusions drawn by the author appear appropriate? Can you spot any obvious mistakes? In particular, pay attention to the “compared to what” problem– is the author comparing apples to apples?</p>
+<p>I would like to see you give some substantive thought to these peer reviews, so I’d expect to see around 10 sentences in the comments. As always, use the sandwich model– start with something you liked, or was particularly strong about the piece. Then, comments on how the draft could be improved (remember, we’re going to do a final draft of this piece!). Conclude with another sentence or two about things that worked with the piece.</p>
+<p>When I grade the final pieces, I will be looking for the following elements and considerations, so keep these in mind as you edit:</p>
+<p>Elements:</p>
+<ul>
+<li>Headline</li>
+<li>Byline</li>
+<li>Lede</li>
+<li>Nutgraf</li>
+<li>Exposition</li>
+</ul>
+<p>Considerations:</p>
+<ul>
+<li>Accuracy</li>
+<li>Context of data</li>
+<li>Spelling and grammar</li>
+<li>Clarity of writing</li>
+</ul>
+</section>
+<section id="one-number-story---assessment" class="slide level2 smaller">
+<h2>One number story - assessment</h2>
+<p>Again, I’ve developed a rubric but it’s pretty bare-bones.</p>
+<ul>
+<li>Headline [2]</li>
+<li>Byline [1]</li>
+<li>Lede and nutgraf. [7] great lede and nutgraf [4] so-so lede and nutgraf. [0] no lede/nutgraf</li>
+<li>Exposition. [7] good exposition [4] exposition unfocused, unorganized [0] no exposition</li>
+<li>Appropriate length. [2] good length [1] too long/short</li>
+<li>Data context. [3] great contextualization [0] no contextualization</li>
+<li>Spelling and grammar. [3] no obvious mistakes [2] occasional small errors [0] many distracting mistakes</li>
+</ul>
+</section>
+<section id="lightning-talk---set-up" class="slide level2">
+<h2>Lightning talk - set up</h2>
+<p>I provide a number of examples of “data-adjacent” lightning talks. For example,</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=BhY-un6JURA">solve every statistics problem with one weird trick</a> by Jonathan Stray at NICAR</li>
+<li><a href="https://resources.rstudio.com/rstudio-conf-2020/lightning-talk-dr-amelia-mcnamara">making a tidy dress</a> by me</li>
+<li><a href="https://vimeo.com/777104370">making music with 15,000 people during a pandemic</a> by AnnMarie Thomas at eyeo</li>
+</ul>
+<p>We watch several talks as a group, and discuss strengths and weaknesses of the talks.</p>
+</section>
+<section id="lighting-talk" class="slide level2">
+<h2>Lighting talk</h2>
+<p>A 5-minute talk on something that is “data-adjacent.”</p>
+<ul>
+<li>Describe a particular R package</li>
+<li>Talk through an interesting data analysis someone else has done. You might look through your Data Dialogues for ideas, or page through sites with data journalism like The Upshot, FiveThirtyEight and ProPublica.</li>
+<li>Find a connection between a hobby and data science. I once saw a lightning talk at NICAR that made a connection between Pokemon and data, there have been talks about woodworking and data, cats and data, etc</li>
+</ul>
+<p>You will video-record your talk, and upload it to the internet so that your peers and I can watch it. As you look through the example lightning talks I have linked below, you will see that the people who did the talks were designing their talks to be delivered live, in front of an audience. This means that the video of the talk is perhaps not as professional as it could have been if the presenters were creating the talk to be seen as a video. In order of video professionalism, I would rank the NICAR talks the least professional, then rstudio::conf, then eyeo (most professional, almost as if the talk was designed for video). I would like you to aim for more professional, because you are designing your talk to be viewed as a video.</p>
+</section>
+<section id="lightning-talk---peer-editing" class="slide level2">
+<h2>Lightning talk - peer editing</h2>
+<p>I have students submit their first draft of their lightning talk as a discussion post on Canvas, so any other student can watch their talk. Students are assigned three peers to peer review, and they provide their feedback as a comment on the discussion thread.</p>
+<p>I’d like you to put your comments in the same discussion thread as the talk you’re commenting on, and aim for a compliment sandwich:</p>
+<ul>
+<li>Start with one thing the talk did well, you found interesting, you liked, etc.</li>
+<li>Then any room for improvement you can see. I would like you to find at least one thing to be critical about. Does the person need to work on saying “um” less (I know I do!). Are their slides too busy and hard to read? Etc. I know it’s hard to give critical feedback, but that’s how we improve!</li>
+<li>Finish off with one more positive thing.</li>
+</ul>
+</section>
+<section id="lighting-talk---assessment" class="slide level2">
+<h2>Lighting talk - assessment</h2>
+<p>This is a place where I am especially poor at providing feedback. I don’t even have a rubric!</p>
+<p>I am strict about timing, and tell the students they have a “time limit of 5 minutes long, give or take a minute (in other words, it can be as short as 4 minutes or as long as 6 minutes).”</p>
+<p>When they post their final submission, I ask them to summarize some of the changes they made between the first and final draft.</p>
+</section>
+<section id="community-partner-project" class="slide level2">
+<h2>Community partner project</h2>
+<p>Since fall 2022, this course has been a Common Good Community-Engaged course. This means my course is partnered with a community organization, and we work to produce something that is useful for the partner. So far, we have partnered with:</p>
+<ul>
+<li>The Advocates for Human Rights</li>
+<li>Minnesota Alliance for Volunteer Advancement</li>
+<li>Minnesota Urban Debate League</li>
+</ul>
+</section>
+<section id="community-partner-project-1" class="slide level2">
+<h2>Community partner project</h2>
+<p>The community partner project has replaced another mini project that I loved, the Copy the Masters project. But, it accomplishes many of the same goals. The students need to produce extremely professional visualizations using R, which requires a lot of finessing of small details.</p>
+<p>For this project, we use the longer timeline of assignments,</p>
+<ul>
+<li>an initial idea</li>
+<li>a first draft</li>
+<li>peer review</li>
+<li>second draft</li>
+<li>a final draft</li>
+</ul>
+</section>
+<section id="community-partner-project-2" class="slide level2">
+<h2>Community partner project</h2>
+<p>The goal of the community partner project varies based on the partner. This past semester, the Minnesota Urban Debate League (MNUDL) wanted help visualizing the academic achievements of students participating in debate, as well as visualizing the rising costs of food. These visualizations might be shared on social media, with board members, or printed and shared with lawmakers during lobbying.</p>
+</section>
+<section id="community-partner-project---second-draft-crit" class="slide level2">
+<h2>Community partner project - second draft crit</h2>
+<p>After students have done an initial draft, peer editing, and created a second draft, we invite the community partner into the classroom to view the work. As a group, we go through each visualization and talk about strengths and weaknesses. I take notes on individual visualizations, as well as summarize major feedback from the partner.</p>
+<p>Then, students use that feedback to create their third and final draft. These drafts are typically quite strong because of the repeated editing.</p>
+</section>
+<section id="crits" class="slide level2">
+<h2>Crits</h2>
+<blockquote>
+<p>Critique is one of the most valuable components of a formal art and design education. It is also one of the most difficult aspects of the art and design school experience, especially for new students. Critique is a collaborative activity that takes quite a bit of time to learn — both in terms of how to give feedback, and how to accept feedback. While there are no hard-and-fast rules to the critique process, this site is intended as a helpful guide for those just starting out.</p>
+</blockquote>
+<p>From <a href="https://howtocrit.com/">How to crit</a> by <a href="http://mitchgoldstein.com/">Mitch Goldstein</a>.</p>
+</section>
+<section id="giving-a-crit" class="slide level2">
+<h2>Giving a crit</h2>
+<blockquote>
+<p>The most important thing about giving someone a crit is that you should always be kind instead of nice. A nice crit is telling someone their work is pretty good just to avoid hurting their feelings. A kind crit is telling someone their work is not where it needs to be so they know it needs to be improved or refined. Be kind and honest, instead of nice and disingenuous. Also make sure that your feedback is not derogatory, insulting, or dismissive of the person in front of you. Remember that giving a good crit has absolutely nothing to do with being mean.</p>
+</blockquote>
+<blockquote>
+<p><strong>The Trouble With Correcting</strong></p>
+</blockquote>
+<blockquote>
+<p>Generally you should try to avoid giving corrective critiques — comments like “I would do it like this” or “you should try it like that.”</p>
+</blockquote>
+<p>From <a href="https://howtocrit.com/">How to crit</a> by <a href="http://mitchgoldstein.com/">Mitch Goldstein</a>.</p>
+</section>
+<section id="community-partner-project---assessment" class="slide level2">
+<h2>Community partner project - assessment</h2>
+<p>Again, we come to the issue of assessment. How can I assess these visualizations? In the final draft, I look for the student addressing all the feedback from the group crit, and mark students down if they left things un-edited. But past that, it’s quite challenging to assess. Students typically earn no less than 80% on the assignment.</p>
+</section>
+<section id="final-project" class="slide level2">
+<h2>Final project</h2>
+<p>The final project is worth 20% of overall course grade. Again, there are many stages of the assignment and I find it difficult to assess the early stages. Again, I will mark down in the final draft if the student left work incomplete after feedback.</p>
+</section>
+<section id="final-project-1" class="slide level2">
+<h2>Final project</h2>
+<p>For your final project, you will do some data analysis and produce a piece of “data communication.” This communication must include some data visualization, and one or the other of writing about data or speaking about data.</p>
+<p>You have three deliverables for the project:</p>
+<ol type="1">
+<li>The data communication. I imagine this will be one of the following:
+<ul>
+<li>A written work, such as a piece of data journalism, a blog post, or an executive summary for a company. This will be turned in as either an HTML document (probably easiest to make using Quarto) or a PDF (either rendered from Quarto or created from a Word document).</li>
+<li>A presentation, either as a recorded video or as a live presentation. This will likely involve slides, created using PowerPoint, Keynote, Quarto, or other slide-creation software. If you do a live presentation, please turn in your slides an HTML document (easiest to make from Quarto) or a PDF (possible with any software). If you do a recorded video, upload or link to your video! (Slides optional.)</li>
+<li>Something else?? I’m really flexible here, so if you have a vision for something different, just run it by me. I guess you could do a TikTok or something?</li>
+</ul></li>
+<li>A “behind the scenes” process document. No matter what you use to create deliverable (1), this will likely will be an Qmd document. This is because I expect data-cleaning to be done in R. Every piece of data cleaning should be present in the document, nothing done in spreadsheet software. For the visualizations and the final communication, it’s fine to move out of R (for example, to make your visualizations in Tableau and then your presentation in PowerPoint). If you make visualizations in Tableau, please describe the steps you took at the bottom of that same Quarto document. If you don’t anticipate your process document to be in Quarto, please talk to me beforehand.</li>
+<li>A meta-description of the project. This will be your space to connect the work you did to what you learned in this class. The meta-description should have citations of readings from class to back up your analysis and visualization decisions. I don’t care what citation format you use (APA, MLA, etc) but please be consistent. Ask me if you need help determining how to cite something! I would like to know:
+<ul>
+<li>Why you chose the topic you did?</li>
+<li>What is your intended audience? (E.g., the CEO of Uber, readers of the Star Tribune, people subscribed to the r/dataisbeautiful subreddit, etc. Your audience should not be “students in STAT 336” or “Dr.&nbsp;McNamara.”)</li>
+<li>Where did your data came from? In broad strokes, what did you need to do in order to clean and visualize it?</li>
+<li>Why did you make the design decisions you did? (E.g., mappings in the visualization, color scheme choices, rounding decisions, specific language in a written piece, images on a PowerPoint slide, etc.)</li>
+</ul></li>
+</ol>
+<p>Here are some rough guidelines for length:</p>
+<p>For the data communication,</p>
+<ul>
+<li>A talk should be at least 5 minutes long (this probably means 5-10 slides)</li>
+<li>A piece of writing should be at least 1000 words</li>
+</ul>
+<p>The process document may be short or long, depending on how much cleaning you needed to do. The meta-document should be at least 500 words, not counting citations.</p>
+<p>When I’m grading, I’ll be looking for the following things:</p>
+<ol type="1">
+<li>For the data communication, I’ll be looking mostly to see if your finished product looks finished, and whether it seems appropriate for the audience you describe in your meta-document. I’ll also look for:
+<ul>
+<li>Titles and axis labels on plots. These should be polished, not the default variable names that ggplot2 or Tableau sticks in when you don’t specify them</li>
+<li>Encoding choices. Did you stick with default colors, or make them more appropriate for your audience? Does the visualization you chose make sense for the data?</li>
+<li>Consistency across the product. If you have multiple visualizations, do they hang together? (E.g., are the color choices consistent across plots, or do they change seemingly without reason? Are axes consistent for comparison? If there are tables in addition to visualizations, do they appear visually consistent with the plots? In a presentation, are the headings consistent across slides?)</li>
+<li>Typos/copyediting. This goes for writing in a written piece or on slides in a presentation, titles on graphs, etc. Remember, RStudio has spellcheck, you just need to click the green checkmark button!</li>
+</ul></li>
+<li>For the process document, I’ll be considering whether your analysis decisions made sense.
+<ul>
+<li>Are all your observations the same type of thing? Did you exclude cases that should be excluded? Did you include all the cases that should be included?</li>
+<li>Did you do appropriate data cleaning? Are there any obvious mistakes in your coding?</li>
+<li>Are the analysis decisions well-documented? Remember, I want all the data cleaning to be done in R, although final visualizations can be made in Tableau as long as you explain the process.</li>
+</ul></li>
+<li>For the meta-document, I will mostly be looking to ensure that your visualization and communication decisions were backed up by citations. If you chose not to round numbers, do you have a reason why? If you chose a non-standard color scheme, do you explain it?</li>
+</ol>
+</section></section>
+<section>
+<section id="discussion-posts-readiness-quizzes-and-participation" class="title-slide slide level1 center">
+<h1>Discussion posts, readiness quizzes, and participation</h1>
+
+</section>
+<section id="assessing-weekly-work" class="slide level2">
+<h2>Assessing weekly work</h2>
+<p>25% of students grade is related to being prepared for class and participating. I assign weekly readings, which I try to ensure students have done by assigning readiness quizzes (auto-graded multiple choice or similar) and “data dialogues.” I suspect students aren’t really doing the reading.</p>
+</section>
+<section id="data-dialogues" class="slide level2">
+<h2>Data dialogues</h2>
+<p>The recurring theme for our discussion posts will be a “Data Dialogue.” A data dialogue combines an element from the readings of the week with a data visualization or other data product you have found in the wild.</p>
+<p>Entries can be short, just a few sentences, but should strive to explain briefly what the data product is, how to read it, and how it connects to the reading(s) of the week. Please provide a link if it is relevant.</p>
+<p>You are broken into two groups:</p>
+<pre><code>Group 1: last names starting with A-J
+Group 2: last names starting with K-Z</code></pre>
+<p>Each week, one group will write data dialogue entries, and the other group will respond to their colleagues’ posts. Responses should strive to find another connection between the data product and the reading(s).</p>
+<p>For this week, Group 2 will start, and Group 1 will respond.</p>
+</section>
+<section id="data-dialogues---example" class="slide level2 smaller">
+<h2>Data dialogues - example</h2>
+<p>Here is an example data dialogue post and response. I have lightly edited this from real student work I received in a prior semester:</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Original post: “I found another life expectancy chloropleth map, this time focusing on Europe. In the reading, Muth refers to a Datawrapper feature that confirms whether your visualization adheres to appropriate levels of accessibility to the colorblind, a useful tool for ensuring inclusivity. I think the color scheme in this chloropleth works well, although I’m not sure if the scheme is accessible to those with color-blindness. I find the placement of additional information (Highest/lowest regions) to be clever in utilizing space with no information recorded. I’m curious how areas are sectioned off as most countries in the visualization are split into smaller regions.”</p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.reddit.com/r/dataisbeautiful/comments/12klz2x/life_expectancy_at_birth_in_europe_oc/"><img data-src="img/life-expectancy-at-birth-in-europe-v0-9hav9eacjota1.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-dialogues---example-1" class="slide level2 smaller">
+<h2>Data dialogues - example</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Response: “I think this is a really visually pleasing visualization, especially as you note, the additional information and contextualization are in really good places. I think this is an interesting way to look at life expectancy because oftentimes the same data might be compiled and used as one color for the entire country. I found it especially interesting when Muth talked about considering using the smallest units possible. In this map, they have separate regions color coded individually, and it makes it more descriptive too. It also makes me speculate as to the causes of particular regions having lower or higher life expectancy rates. It looks like they never say that the medium gray, I assume, is countries lacking in data compared to the light gray of Africa and the Middle East, which I assumed to be countries they were ignoring for this visualization.”</p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.reddit.com/r/dataisbeautiful/comments/12klz2x/life_expectancy_at_birth_in_europe_oc/"><img data-src="img/life-expectancy-at-birth-in-europe-v0-9hav9eacjota1.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-dialogues---assessment" class="slide level2">
+<h2>Data dialogues - assessment</h2>
+<p>Again, how to assess these? I typically use a 3 point scale, where 3 means good, 2 means they were pretty light on details, and 0 means they didn’t submit the assignment.</p>
+</section>
+<section id="final-grades" class="slide level2">
+<h2>Final grades</h2>
+<p>At the end of the semester, some students have learned a ton, and that’s very gratifying! But when I compute final grades, I often discover a student is going to receive an A or B without seeming to have learned much.</p>
+</section>
+<section id="ideas" class="slide level2">
+<h2>Ideas</h2>
+<ul>
+<li>Next semester, I’m going to try <a href="https://www.perusall.com/">Perusall</a> to attempt to have students engage more with the reading. We’ll see how that goes.<br>
+</li>
+<li>Standards-based grading?</li>
+<li>Crits</li>
+</ul>
+</section>
+<section id="standards-based-grading" class="slide level2">
+<h2>Standards-based grading</h2>
+<p>What are the standards? Feels like I’m right back in my (poor) rubrics. I’m not very good at avoiding “giving corrective critiques.”</p>
+</section></section>
+<section id="discussion" class="title-slide slide level1 center">
+<h1>Discussion?</h1>
+
+</section>
+
+<section id="thank-you" class="title-slide slide level1 center">
+<h1>Thank you</h1>
+
+<div class="footer footer-default">
+
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
