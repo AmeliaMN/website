@@ -14,7 +14,7 @@ Here are some links to courses I have taught in the past.
 
 ### Smith courses
 
--   SDS/MTH 291: Multiple Regression Spring 2016, Fall 2016
+-   SDS/MTH 291: [Multiple Regression](www.ameliamn.github.io/sds291) Spring 2016, Fall 2016
 -   SDS/MTH 220: [Introduction to Probability and Statistics](www.ameliamn.github.io/SDS220) Fall 2015, Spring 2017, Fall 2017
 -   SDS 136: [Communicating with Data](www.ameliamn.github.io/sds136) Fall 2017
 -   SDS 236: [Data Journalism](www.ameliamn.github.io/sds236) Spring 2018
