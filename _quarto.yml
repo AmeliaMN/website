@@ -24,7 +24,7 @@ website:
           - text: "STAT 336: Data Communication and Visualization"
             href: www.ameliamn.github.io/STAT336
           - pastcourses.qmd
-          - href: SyntaxCheatsheet.pdf
+          - href: Syntax-cheatsheet.pdf
             text: R Syntax Comparison Cheatsheet
           - wikipedia.qmd
       - text: "Research"

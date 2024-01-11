@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Past courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../SyntaxCheatsheet.pdf" rel="" target="">
+    <a class="dropdown-item" href="../../Syntax-cheatsheet.pdf" rel="" target="">
  <span class="dropdown-text">R Syntax Comparison Cheatsheet</span></a>
   </li>  
         <li>
@@ -239,80 +239,55 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Instead, people seem to be taking an approximate age and then just grabbing a name out of the hat. In other words, they are using the <em>Name|Age</em> method. With that in mind, let’s see how likely Amanda really is. I’m focusing just on girls names for this analysis, mostly because Amelia isn’t a common boy’s name (see my data appendix).</p>
 <p>In the eighties, numbers for Amanda and Amelia were as follows:</p>
-
 <table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 18%">
+</colgroup>
 <thead>
 <tr class="header">
-<th align="left">
-name
-</th>
-<th align="right">
-number
-</th>
-<th align="right">
-proportion
-</th>
+<th>name</th>
+<th>number</th>
+<th>proportion</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">
-Amanda
-</td>
-<td align="right">
-369690
-</td>
-<td align="right">
-0.0215329
-</td>
+<td>Amanda</td>
+<td>369690</td>
+<td>0.0215329</td>
 </tr>
 <tr class="even">
-<td align="left">
-Amelia
-</td>
-<td align="right">
-9734
-</td>
-<td align="right">
-0.0005670
-</td>
+<td>Amelia</td>
+<td>9734</td>
+<td>0.0005670</td>
 </tr>
 </tbody>
-
 </table>
 <p>Armed only with the information that I was born between 1985 and 1989, there’s a <strong>2% chance my name is Amanda</strong>. That’s actually pretty incredible! (In contrast, there’s just a 0.05% chance my name is Amelia.) And, we can figure most people remember at least the first letter of a name. So, what if we add the fact that my name starts with an A?</p>
 <p>In the eighties, numbers for Amanda and Amelia (out of all A names) were as follows:</p>
-
 <table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 18%">
+</colgroup>
 <thead>
 <tr class="header">
-<th align="left">
-name
-</th>
-<th align="right">
-proportion
-</th>
+<th>name</th>
+<th>proportion</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">
-Amanda
-</td>
-<td align="right">
-0.1575295
-</td>
+<td>Amanda</td>
+<td>0.1575295</td>
 </tr>
 <tr class="even">
-<td align="left">
-Amelia
-</td>
-<td align="right">
-0.0041478
-</td>
+<td>Amelia</td>
+<td>0.0041478</td>
 </tr>
 </tbody>
-
 </table>
 <p>Now, there’s a <strong>15.7% chance my name is Amanda</strong> (and a 0.4% chance my name is Amelia). The only A name that was more popular than Amanda in the eighties was Ashley, which made up 19.5% of the female names starting with A. Of course, Ashley doesn’t have as similar of a sound to Amelia as Amanda does. I didn’t go this far, but we could also look at the names starting with Am– I think this would serve to solidify Amanda as the much more likely choice.</p>
 <p>So, for those of you that have felt bad about getting my name wrong in the past– the data supports you!</p>
@@ -321,7 +296,12 @@ Amelia
 <h2 class="anchored" data-anchor-id="your-name">Your name</h2>
 <p>Does this trend hold up with the name people are always calling you? Are you a Jacob that always gets called Jason? A Kirstin that gets called Kristen? (I’m guilty of that one.)</p>
 <p>[This is the part of the post that is responsive, so you probably want to head to <a href="https://ameliamn.shinyapps.io/Amanda/">my shiny server</a>.]</p>
-<p><a class="thumb" href="https://ameliamn.shinyapps.io/Amanda/"><img src="{{ site.baseurl }}/img/ShinyScreenShot.png" class="img-responsive" alt="You want to go to my server version"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://ameliamn.shinyapps.io/Amanda/"><img src="ShinyScreenShot.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">You want to go to my server version</figcaption>
+</figure>
+</div>
 </section>
 <section id="data-appendix" class="level2">
 <h2 class="anchored" data-anchor-id="data-appendix">Data appendix</h2>
@@ -335,172 +315,109 @@ Amelia
 <figcaption class="figure-caption">Missing data</figcaption>
 </figure>
 </div>
-
 <table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 11%">
+</colgroup>
 <thead>
 <tr class="header">
-<th align="right">
-Min.
-</th>
-<th align="right">
-1st Qu.
-</th>
-<th align="right">
-Median
-</th>
-<th align="right">
-Mean
-</th>
-<th align="right">
-3rd Qu.
-</th>
-<th align="right">
-Max.
-</th>
+<th>Min.</th>
+<th>1st Qu.</th>
+<th>Median</th>
+<th>Mean</th>
+<th>3rd Qu.</th>
+<th>Max.</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">
-2.462
-</td>
-<td align="right">
-3.535
-</td>
-<td align="right">
-5.592
-</td>
-<td align="right">
-5.406
-</td>
-<td align="right">
-6.793
-</td>
-<td align="right">
-9.374
-</td>
+<td>2.462</td>
+<td>3.535</td>
+<td>5.592</td>
+<td>5.406</td>
+<td>6.793</td>
+<td>9.374</td>
 </tr>
 </tbody>
-
 </table>
 <p>On average, only 5% of people are missing from the data. That feels pretty good to me. The article mentioned above, 538 estimated that only 1% of the data was missing, which I’m not sure how they estimated.</p>
 </section>
 <section id="how-many-baby-boys-are-named-amelia" class="level3">
 <h3 class="anchored" data-anchor-id="how-many-baby-boys-are-named-amelia">How many baby boys are named Amelia?</h3>
 <p>Answer– not many. In 2004, the year with the most male Amelias, 14 baby boys were named Amelia. Or, someone checked the wrong box on a birth certificate.</p>
-
 <table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 6%">
+</colgroup>
 <thead>
 <tr class="header">
-<th align="right">
-year
-</th>
-<th align="left">
-sex
-</th>
-<th align="left">
-name
-</th>
-<th align="right">
-n
-</th>
+<th>year</th>
+<th>sex</th>
+<th>name</th>
+<th>n</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">
-2004
-</td>
-<td align="left">
-M
-</td>
-<td align="left">
-Amelia
-</td>
-<td align="right">
-14
-</td>
+<td>2004</td>
+<td>M</td>
+<td>Amelia</td>
+<td>14</td>
 </tr>
 </tbody>
-
 </table>
 </section>
 <section id="creativity-in-naming" class="level3">
 <h3 class="anchored" data-anchor-id="creativity-in-naming">Creativity in naming</h3>
 <p>Of course, there’s a lot deeper I could dig on this analysis. Just by scrolling through the data I noticed there are many other ways to spell Amanda, which didn’t get taken into account. (Maybe the creative spellings of Amelia balance it out.)</p>
-
 <table class="table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 18%">
+</colgroup>
 <thead>
 <tr class="header">
-<th align="left">
-name
-</th>
-<th align="right">
-number
-</th>
-<th align="right">
-proportion
-</th>
+<th>name</th>
+<th>number</th>
+<th>proportion</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">
-Aamanda
-</td>
-<td align="right">
-10
-</td>
-<td align="right">
-0.0000006
-</td>
+<td>Aamanda</td>
+<td>10</td>
+<td>0.0000006</td>
 </tr>
 <tr class="even">
-<td align="left">
-Amamda
-</td>
-<td align="right">
-178
-</td>
-<td align="right">
-0.0000104
-</td>
+<td>Amamda</td>
+<td>178</td>
+<td>0.0000104</td>
 </tr>
 <tr class="odd">
-<td align="left">
-Amanda
-</td>
-<td align="right">
-369690
-</td>
-<td align="right">
-0.0215329
-</td>
+<td>Amanda</td>
+<td>369690</td>
+<td>0.0215329</td>
 </tr>
 <tr class="even">
-<td align="left">
-Amandah
-</td>
-<td align="right">
-16
-</td>
-<td align="right">
-0.0000009
-</td>
+<td>Amandah</td>
+<td>16</td>
+<td>0.0000009</td>
 </tr>
 <tr class="odd">
-<td align="left">
-Amannda
-</td>
-<td align="right">
-23
-</td>
-<td align="right">
-0.0000013
-</td>
+<td>Amannda</td>
+<td>23</td>
+<td>0.0000013</td>
 </tr>
 </tbody>
-
 </table>
 </section>
 <section id="a-is-for-eighties" class="level3">
