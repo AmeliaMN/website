@@ -1,0 +1,549 @@
+---
+title: "What 'Counts' as Statistical Communication?"
+author: Amelia McNamara [@AmeliaMN](www.twitter.com/AmeliaMN)
+institute: University of St Thomas
+footer: "[www.bit.ly/JSM_22](www.bit.ly/JSM_22)"
+format: 
+  revealjs:
+    css: style.css
+---
+
+# We can all agree communication is important
+
+##  {#data-science-undergrads}
+
+> "Key concepts required to develop data acumen include mathematical foundations, computational foundations, statistical foundations, data management and curation, data description and visualization, data modeling and assessment, workflow and reproducibility, communication, domain-specific considerations, and ethical problem solving."
+
+::: aside
+[Data Science for Undergraduates: Opportunities and Options](sites.nationalacademies.org/cstb/currentprojects/cstb_175246) National Academies, 2018
+:::
+
+##  {#key-competencies}
+
+"Key Competencies for an undergraduate Data Science Major
+
+-   Computational and Statistical Thinking
+-   Mathematical Foundations
+-   Model Building and Assessment
+-   Algorithms and Software Foundation
+-   Data Curation
+-   Knowledge Transference -- **Communication** and Responsibility"
+
+::: aside
+[Curriculum Guidelines for Undergraduate Programs in Data Science](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-060116-053930) Park City Math Institute (PCMI)
+:::
+
+##  {#recommendations}
+
+"Recommendation 2.1: Academic institutions should embrace data science as a vital new field that requires specifically tailored instruction delivered through majors and minors in data science as well as the development of a cadre of faculty equipped to teach in this new field."
+
+"As instructors rework individual classes based on outcomes and evaluation, it is likely that they will replace borrowed content from existing courses with original materials that fit together more naturally and better match personal educational styles or the culture of that institution or department."
+
+::: aside
+[Data Science for Undergraduates: Opportunities and Options](sites.nationalacademies.org/cstb/currentprojects/cstb_175246) National Academies, 2018
+:::
+
+## (Some) types of communication
+
+-   Visualizing data
+-   Writing data
+-   Speaking data
+
+## Exemplar programs
+
+-   [U. of Michigan](https://cse.engin.umich.edu/academics/undergraduate/data-science-eng/) viz {{< fa check >}} writing {{< fa check >}} speaking {{< fa check >}} (take three)
+-   [Smith College](https://www.smith.edu/academics/statistics) viz {{< fa check >}} writing {{< fa check >}} speaking {{< fa xmark >}} (take one)
+-   [Virginia Tech](https://data.science.vt.edu/programs/cmda.html) viz {{< fa check >}} writing {{< fa xmark >}} speaking {{< fa xmark >}}
+-   [U. of California, San Diego](https://datascience.ucsd.edu/academics/undergraduate/major-requirements/) viz {{< fa check >}} writing {{< fa xmark >}} speaking {{< fa xmark >}}
+
+::: aside
+(example programs from National Academies report)
+:::
+
+## Data Communication and Visualization
+
+At the University of St Thomas, I teach a class which includes all three elements.
+
+-   Visualizing data (main focus)
+-   Writing about data
+-   Speaking about data
+
+## Textbook
+
+::: columns
+::: {.column width="70%"}
+Communicating with Data: The Art of Writing for Data Science. Deborah Nolan and Sara Stoudt.
+:::
+
+::: {.column width="30%"}
+![](img/stoudt.jpg)
+:::
+:::
+
+## Key elements of data communication
+
+### Audience
+
+Who is your communication for?
+
+### Content
+
+What is your communication about?
+
+### Both of these elements make this hard!
+
+# Audience
+
+Are we primarily interested in an audience of other statisticians, or an audience of laypeople?
+
+# Content
+
+Where does the content come from, and are you a disciplinary expert?
+
+# Some example assignments
+
+## Visualizing data-- handmade data viz
+
+Begin with inspiration.
+
+In my classes, I talk about visualization as art, as well as art as visualization. (What 'counts'?)
+
+::: columns
+::: {.column width="30%"}
+![](images/paste-959D8564.png)
+
+[Jose Duarte](https://www.flickr.com/photos/joseduarteq/)
+:::
+
+::: {.column width="30%"}
+![](images/paste-93D958B3.png)
+
+[Mona Chalabi](https://www.instagram.com/p/BDbP_-JqvEl/)
+:::
+
+::: {.column width="30%"}
+![](images/paste-F287B428.png)
+
+[Giorgia Lupi](giorgialupi.com/) and [Stefanie Posavec](www.stefanieposavec.com/)
+:::
+:::
+
+## Visualizing data-- handmade data viz
+
+::: columns
+::: {.column width="50%"}
+Curate a small dataset. I recommend fewer than 10 rows, but at least two variables.
+
+```{r}
+library(tidyverse)
+library(kableExtra)
+lakesdata <- tibble::tribble(
+                ~Name,       ~Area,  ~Max.depth, ~Watershed.area, ~`Chain.of.lakes?`,
+       "Bde Maka Ska", "421 acres", "89.9 feet",   "2,992 acres",              "Yes",
+       "Lake Harriet", "353 acres",  "82. feet",   "1,139 acres",              "Yes",
+       "Lake Nokomis", "204 acres", "33.1 feet",     "869 acres",               "No",
+         "Cedar Lake", "170 acres", "50.9 feet",   "1,956 acres",              "Yes",
+  "Lake of the Isles", "103 acres", "30.8 feet",     "735 acres",              "Yes"
+  )
+knitr::kable(lakesdata, format = "html", table.attr = "style='width:20%;'")  %>%
+  kable_styling(full_width = F, font_size = 15)
+```
+:::
+
+::: {.column width="50%"}
+Bring craft supplies!
+
+![](img/2018-06-29%2016.02.24.jpg)
+:::
+:::
+
+## Visualizing data-- handmade data viz
+
+Share out afterward
+
+::: columns
+::: {.column width="50%"}
+![](images/paste-C6852B0A.png)
+:::
+
+::: {.column width="50%"}
+<a href="https://twitter.com/alanapipe/status/1012829092641681409"><img src="images/paste-01A1B5B4.png"/></a>
+:::
+:::
+
+## Visualizing data-- social media
+
+::: columns
+::: {.column width="40%"}
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CUaJ2lDsQSv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+
+::: {style="padding:16px;"}
+<a href="https://www.instagram.com/p/CUaJ2lDsQSv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+
+::: {style=" display: flex; flex-direction: row; align-items: center;"}
+::: {style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"}
+:::
+
+::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"}
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"}
+:::
+
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"}
+:::
+:::
+:::
+
+::: {style="padding: 19% 0;"}
+:::
+
+::: {style="display:block; height:50px; margin:0 auto 12px; width:50px;"}
+<svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g>
+
+</svg>
+:::
+
+::: {style="padding-top: 8px;"}
+::: {style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"}
+View this post on Instagram
+:::
+:::
+
+::: {style="padding: 12.5% 0;"}
+:::
+
+::: {style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"}
+<div>
+
+::: {style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"}
+:::
+
+::: {style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"}
+:::
+
+::: {style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"}
+:::
+
+</div>
+
+::: {style="margin-left: 8px;"}
+::: {style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"}
+:::
+
+::: {style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"}
+:::
+:::
+
+::: {style="margin-left: auto;"}
+::: {style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"}
+:::
+
+::: {style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"}
+:::
+
+::: {style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"}
+:::
+:::
+:::
+
+::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"}
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"}
+:::
+
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"}
+:::
+:::
+
+</a>
+
+<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+
+<a href="https://www.instagram.com/p/CUaJ2lDsQSv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Twin Cities Habitat (@tchabitat)</a>
+
+</p>
+:::
+
+</blockquote>
+
+```{=html}
+<script async src="//www.instagram.com/embed.js"></script>
+```
+:::
+
+::: {.column width="20%"}
+:::
+
+::: {.column width="40%"}
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BgWipHFhv3f/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+
+::: {style="padding:16px;"}
+<a href="https://www.instagram.com/p/BgWipHFhv3f/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+
+::: {style=" display: flex; flex-direction: row; align-items: center;"}
+::: {style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"}
+:::
+
+::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"}
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"}
+:::
+
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"}
+:::
+:::
+:::
+
+::: {style="padding: 19% 0;"}
+:::
+
+::: {style="display:block; height:50px; margin:0 auto 12px; width:50px;"}
+<svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g>
+
+</svg>
+:::
+
+::: {style="padding-top: 8px;"}
+::: {style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"}
+View this post on Instagram
+:::
+:::
+
+::: {style="padding: 12.5% 0;"}
+:::
+
+::: {style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"}
+<div>
+
+::: {style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"}
+:::
+
+::: {style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"}
+:::
+
+::: {style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"}
+:::
+
+</div>
+
+::: {style="margin-left: 8px;"}
+::: {style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"}
+:::
+
+::: {style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"}
+:::
+:::
+
+::: {style="margin-left: auto;"}
+::: {style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"}
+:::
+
+::: {style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"}
+:::
+
+::: {style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"}
+:::
+:::
+:::
+
+::: {style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"}
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"}
+:::
+
+::: {style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"}
+:::
+:::
+
+</a>
+
+<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+
+<a href="https://www.instagram.com/p/BgWipHFhv3f/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by People Incorporated (@peopleincorp)</a>
+
+</p>
+:::
+
+</blockquote>
+
+```{=html}
+<script async src="//www.instagram.com/embed.js"></script>
+```
+:::
+:::
+
+## Writing about data
+
+[Is Code the Best Way to Represent a Data Analysis?](https://simplystatistics.org/posts/2022-07-29-is-code-the-best-way-to-represent-a-data-analysis/). Roger Peng, Simply Statistics, 2022.
+
+"Looks okay to me": A study of best practice in data analysis code review. Amal Abdel-Ghani, Kelly Bodwin, Amelia McNamara, Allison Theobold, and Ian Flores Siaca. ICOTS11, 2022.
+
+## Writing about data-- one number story
+
+::: columns
+::: {.column width="60%"}
+::: {style="font-size: 25pt;"}
+"Keep the number of digits in a paragraph below eight."
+
+"You'd be over your allocation with a sentence like this: The Office of Redundancy's budget rose 48 percent in 2013, from \$700.3 million to \$1.03 billion.
+
+Think about how it could change:
+
+Over the past year, the Office of Redundancy's budget grew by nearly half, to \$1 billion."
+
+-- Sarah Cohen, Numbers in the Newsroom
+:::
+:::
+
+::: {.column width="40%"}
+<a href="https://store.ire.org/products/numbers-in-the-newsroom-using-math-and-statistics-in-news-second-edition-e-version"><img src="images/paste-628FFB81.png"/></a>
+:::
+:::
+
+## Writing about data-- one number story
+
+Focus on one number (but use more numbers to contextualize it!)
+
+That number might be the mean, the median, the maximum, the total...
+
+Use simple data tools--- in my class, we use spreadsheets for this assignment (sort, summarize, pivot tables).
+
+::: {style="font-size: 20pt;"}
+-   "Boston Wins The High School Dropout Race"
+-   "Massachusetts Academy of Math and Science Remains Atop the Podium"
+-   "10 High Schools in Massachusetts had a Perfect Graduation Rate in 2016"
+-   "New Century School Math Achievement Grows Again"
+-   "Math achievement lower for SLP students of color"
+:::
+
+## Writing about data-- Wikipedia articles
+
+Four times now, I have had students [author Wikipedia articles](https://www.amelia.mn/wikipedia.html) about people who did not previously have them.
+
+::: {.columns style="font-size: 20pt;"}
+::: {.column width="40%"}
+-   Carmen Batanero
+-   Karl Broman
+-   Jenny Bryan
+-   Andreas Buja
+-   Catherine D'Ignazio
+-   Nick Horton
+-   Jessica Hullman
+-   Jeff Leek
+:::
+
+::: {.column width="\"40%"}
+-   Thomas Lumley
+-   Giorgia Lupi
+-   Regina Nuzzo
+-   Tawana Petty
+-   Stefanie Posavec
+-   Julia Silge
+-   Julia Stewart Lowndes
+-   Antony Unwin
+:::
+:::
+
+::: aside
+I spoke about this at JSM 2020. Not doing the assignment again this fall.
+:::
+
+## Writing about data-- executive summaries
+
+::: columns
+::: {.column width="40%"}
+![](img/Minnesota-Snapshot-2019.jpg){width="80%"}
+
+::: {style="font-size: 20pt;"}
+[GLSEN Minnesota Snapshot](https://www.glsen.org/sites/default/files/2021-01/Minnesota-Snapshot-2019.pdf)
+:::
+:::
+
+::: {.column width="20%"}
+:::
+
+::: {.column width="40%"}
+![](img/world_bank.png){width="90%"}
+
+::: {style="font-size: 20pt;"}
+[World Bank Global Findex](https://www.worldbank.org/en/publication/globalfindex/interactive-executive-summary-visualization#sec1)
+:::
+:::
+:::
+
+## Speaking about data-- lightning talk
+
+A 5-minute talk on something that is "data-adjacent."
+
+-   Describe a particular R package
+-   Talk through an interesting data analysis someone else has done. You might look through your Data Diaries for ideas, or page through sites with data journalism like The Upshot, FiveThirtyEight and ProPublica.
+-   Tell us about the person you wrote your Wikipedia article about
+-   Find a connection between a hobby and data science
+
+## Speaking about data-- social media
+
+::: columns
+::: {.column width="40%"}
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@chelseaparlettpelleriti/video/6887582336976833798" data-video-id="6887582336976833798" style="max-width: 605px;min-width: 325px;">
+
+<section><a target="_blank" title="@chelseaparlettpelleriti" href="https://www.tiktok.com/@chelseaparlettpelleriti">@chelseaparlettpelleriti</a> and I just let them💅🏼 <a title="statstiktok" target="_blank" href="https://www.tiktok.com/tag/statstiktok">#statsTikTok</a> <a target="_blank" title="♬ stop getting more likes than me - dee ❦" href="https://www.tiktok.com/music/stop-getting-more-likes-than-me-6866842905349327622">♬ stop getting more likes than me - dee ❦</a></section>
+
+</blockquote>
+
+```{=html}
+<script async src="https://www.tiktok.com/embed.js"></script>
+```
+:::
+
+::: {.column width="20%"}
+:::
+
+::: {.column width="40%"}
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@the.data.guy/video/7097395877064625451" data-video-id="7097395877064625451" style="max-width: 605px;min-width: 325px;">
+
+<section>
+
+<a target="_blank" title="@the.data.guy" href="https://www.tiktok.com/@the.data.guy">@the.data.guy</a>
+
+<p>Draft from live build the other day. Posted the full 45 min build to YT. Cool but not meaningful yet.</p>
+
+<a target="_blank" title="♬ Elevator Music - Bohoman" href="https://www.tiktok.com/music/Elevator-Music-6781515050600368129">♬ Elevator Music - Bohoman</a>
+
+</section>
+
+</blockquote>
+
+```{=html}
+<script async src="https://www.tiktok.com/embed.js"></script>
+```
+:::
+:::
+
+Does this 'count'?
+
+# Commonalities
+
+-   Think about audience
+-   Begin with inspiration
+-   Start small and simple
+-   Iterate and give feedback
+
+# Thank you
+
+[\@AmeliaMN](www.twitter.com/AmeliaMN)
+
+[www.amelia.mn](www.amelia.mn)
+
+## 
+
+## Tell us about the dress
+
+-   I designed [the fabric](https://github.com/ameliamn/hexfabric)
+-   Uploaded to [Spoonflower](https://www.spoonflower.com/profiles/ameliamn)
+-   [Sewed the dress](https://www.amelia.mn/blog/misc/2019/08/17/Tidy-Dress.html)
+
+I do sell some items through third-party websites:
+
+-   Housewares on [Spoonflower](https://www.spoonflower.com/en/products/8922748-r-hex-fabric-small-hexes-by-ameliamn), including wallpaper, cocktail napkins, tea towels, duvet cover, and throw pillows.
+-   T-shirts, mugs, and more on [RedBubble](https://www.redbubble.com/people/ameliamn/works/40622264-r-hex-fabric-small-hexes)
+-   Socks, mousepads, masks ans more on [Zazzle](https://www.zazzle.com/store/ameliamn/products)

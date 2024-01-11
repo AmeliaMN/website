@@ -9,28 +9,28 @@ Here are some links to courses I have taught in the past.
 -   STAT 220: Statistics I. Fall 2018, Spring 2019, Fall 2019, Spring 2020, Spring 2021
 -   STAT 220: [Statistics I R labs](STAT220labs). Spring 2020, Fall 2020
 -   STAT 320: Applied Regression Analysis. Fall 2018, Fall 2019, Fall 2020, Fall 2021.
--   STAT 360: [Advanced Statistical Software](www.ameliamn.github.io/STAT360). Spring 2019
--   STAT 336: [Data Communication and Visualization](www.ameliamn.github.io/STAT336). Spring 2020, Spring 2021, Fall 2021.
+-   STAT 360: [Advanced Statistical Software](https://ameliamn.github.io/STAT360). Spring 2019
+-   STAT 336: [Data Communication and Visualization](https://ameliamn.github.io/STAT336). Spring 2020, Spring 2021, Fall 2021.
 
 ### Smith courses
 
--   SDS/MTH 291: [Multiple Regression](www.ameliamn.github.io/sds291) Spring 2016, Fall 2016
--   SDS/MTH 220: [Introduction to Probability and Statistics](www.ameliamn.github.io/SDS220) Fall 2015, Spring 2017, Fall 2017
--   SDS 136: [Communicating with Data](www.ameliamn.github.io/sds136) Fall 2017
--   SDS 236: [Data Journalism](www.ameliamn.github.io/sds236) Spring 2018
+-   SDS/MTH 291: [Multiple Regression](https://ameliamn.github.io/sds291) Spring 2016, Fall 2016
+-   SDS/MTH 220: [Introduction to Probability and Statistics](https://ameliamn.github.io/SDS220) Fall 2015, Spring 2017, Fall 2017
+-   SDS 136: [Communicating with Data](https://ameliamn.github.io/sds136) Fall 2017
+-   SDS 236: [Data Journalism](https://ameliamn.github.io/sds236) Spring 2018
 
 ### MassMutual short courses
 
--   [MassMutual Data Visualization seminar](http://www.amelia.mn/SummerDataViz.html) Summer 2016
+-   [MassMutual Data Visualization seminar](SummerDataViz.html) Summer 2016
 -   [MassMutual Data Visualization seminar](https://jcrouser.github.io/datavis/) Summer 2017
 
 ### UCLA courses
 
--   STAT 98t: [Data Visualization](http://www.amelia.mn/98t.html) Spring 2015
+-   STAT 98t: [Data Visualization](98t.html) Spring 2015
 -   STAT 101a: Introduction to Data Analysis and Regression Fall 2013
 -   STAT 102b: Introduction to Computation and Optimization Winter 2014
 -   STAT 101c: Introduction to Regression and Data Mining Spring 2014
 
 ### Mobilize
 
--   [Professional development](http://www.amelia.mn/Mobilize.html), 2011-2015
+-   [Professional development](Mobilize.html), 2011-2015

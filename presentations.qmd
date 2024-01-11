@@ -10,7 +10,7 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 **Data Science as a Superpower** (keynote), February 2023. Harford Community College, Bel Air, MD. [STEM Day](https://www.harford.edu/about/get-to-know-harford/news/2023/01-january/stem-day.php) ([slides](presentations/DataScienceAsASuperPower2023.pdf))
 
-**What 'counts' as statistical communication?** August 2022. [JSM 2022](https://ww2.amstat.org/meetings/jsm/2022/index.cfm), Washington DC. ([slides](presentations/Communication2022.html))
+**What 'counts' as statistical communication?** August 2022. [JSM 2022](https://ww2.amstat.org/meetings/jsm/2022/index.cfm), Washington DC. ([slides](presentations/Communication2022))
 
 **Implications of R syntax in intro stats** July 2022. [rstudio::conf](https://rstudioconf2022.sched.com/), Washington, DC ([slides](presentations/McNamara_syntax_in_intro.pdf))
 
