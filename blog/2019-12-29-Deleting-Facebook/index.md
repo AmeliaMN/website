@@ -90,7 +90,7 @@ Imagine 2500 photos! I bought myself a photo album with those plastic sleeves, a
 
 As I've gone, I've tried to label the backs of photos with names and dates. However, this has proven to be pretty difficult! If I got to go back and do this again, I'd print and organize the photos before I deleted my Facebook account, because it became difficult to remember some names. If I'd still had my profile, I could have looked at who was tagged in a photo, or used my "external brain" to make connections with people who weren't tagged ("she's friends with Katie, let's go look at Katie and my mutual friends"). As it was, I ended up messaging people on other platforms to see if they could help me. Actually a pretty fun social activity, but it added to the challenge.
 
-<a class="thumb" href=""><img src="{{ site.baseurl }}/img/album.jpg" alt="Photo album with 500 photos" class="img-responsive"/></a>
+![Photo album with 500 photos](album.jpg)
 
 The exercise of printing and organizing 500 photos made me want to do a larger art project and physicalize all my Facebook data-- print all 2500 photos, and make all my Facebook comments and Messenger messages into a book, a la [Nicholas Felton](http://feltron.com/). Do you remember when he cataloged all communication for a year, and would print a book of all his communications with a particular person?
 

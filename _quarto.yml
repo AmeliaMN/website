@@ -13,7 +13,7 @@ project:
 website:
   title: "Amelia McNamara"
   site-url: https://www.amelia.mn
-  description: "Personal website of Associate Professor of data science Amelia McNamara"
+  description: "Amelia McNamara, Associate Professor of data science in the Department of Computer & Information Sciences at the University of St Thomas"
   navbar:
     left:
       - href: index.qmd
@@ -21,6 +21,8 @@ website:
       - text: "Teaching"
         menu:
           - STAT220labs.qmd
+          - text: "STAT 336: Data Communication and Visualization"
+            href: www.ameliamn.github.io/STAT336
           - pastcourses.qmd
           - href: SyntaxCheatsheet.pdf
             text: R Syntax Comparison Cheatsheet
