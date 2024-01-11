@@ -2,7 +2,7 @@
 title:  "Guidelines I follow when giving talks" 
 date: "2020-04-16"
 categories: [misc]
-img: "YouTubeTalks.png"
+image: "YouTubeTalks.png"
 ---
 
 As with everything in life, there are no hard-and-fast rules for giving talks. But, I have a number of conventions I have developed over the years that I think make for clear(er) presentations. If you look at [talks I have given](https://www.youtube.com/playlist?list=PLik6fAQnSI91PMsa69RJcdKG4L4BiV5MX) you will see many of these things in practice. I started writing up some of these conventions for my Data Communication course, but realized there might be broader interest, so I'm making it a blog post.

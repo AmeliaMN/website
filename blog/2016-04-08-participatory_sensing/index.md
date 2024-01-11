@@ -2,7 +2,7 @@
 title:  "What's wrong with being data-collecting pigeons?" 
 date: "2016-04-08"
 categories: [data]
-img: "plume.jpg"
+image: "plume.jpg"
 ---
 
 As you might know from [my blog](http://www.science.smith.edu/~amcnamara/blog/visualization/2015/01/14/FitbitColors.html) or [twitter](https://twitter.com/minebocek/status/484751171374948353), I've been a Fitbit person since December 2013. I'm also very interested in participatory sensing and citizen science, and I've been thinking about the ways that data can be used for good, both on the personal and societal level.

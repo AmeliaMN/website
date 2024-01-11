@@ -2,7 +2,7 @@
 title:  "What are the chances my name is Amanda?" 
 date: "2017-01-13"
 categories: [misc]
-img: "amelias-1.png"
+image: "amelias-1.png"
 ---
 
 I get called Amanda a lot. This tends to drive me crazy, because I think my real name is much more interesting. But, I realized recently that given the prior probabilities, it's actually a very reasonable thing to call me.
@@ -21,25 +21,19 @@ Instead, people seem to be taking an approximate age and then just grabbing a na
 
 In the eighties, numbers for Amanda and Amelia were as follows:
 
-+--------+--------+------------+
 | name   | number | proportion |
-+========+========+============+
+|--------|--------|------------|
 | Amanda | 369690 | 0.0215329  |
-+--------+--------+------------+
 | Amelia | 9734   | 0.0005670  |
-+--------+--------+------------+
 
 Armed only with the information that I was born between 1985 and 1989, there's a **2% chance my name is Amanda**. That's actually pretty incredible! (In contrast, there's just a 0.05% chance my name is Amelia.) And, we can figure most people remember at least the first letter of a name. So, what if we add the fact that my name starts with an A?
 
 In the eighties, numbers for Amanda and Amelia (out of all A names) were as follows:
 
-+--------+------------+
 | name   | proportion |
-+========+============+
+|--------|------------|
 | Amanda | 0.1575295  |
-+--------+------------+
 | Amelia | 0.0041478  |
-+--------+------------+
 
 Now, there's a **15.7% chance my name is Amanda** (and a 0.4% chance my name is Amelia). The only A name that was more popular than Amanda in the eighties was Ashley, which made up 19.5% of the female names starting with A. Of course, Ashley doesn't have as similar of a sound to Amelia as Amanda does. I didn't go this far, but we could also look at the names starting with Am-- I think this would serve to solidify Amanda as the much more likely choice.
 
@@ -65,11 +59,9 @@ One thing I was worried about was how well the data really represented the popul
 
 ![Missing data](missingdata-1.png)
 
-+-------+---------+--------+-------+---------+-------+
 | Min.  | 1st Qu. | Median | Mean  | 3rd Qu. | Max.  |
-+=======+=========+========+=======+=========+=======+
+|-------|---------|--------|-------|---------|-------|
 | 2.462 | 3.535   | 5.592  | 5.406 | 6.793   | 9.374 |
-+-------+---------+--------+-------+---------+-------+
 
 On average, only 5% of people are missing from the data. That feels pretty good to me. The article mentioned above, 538 estimated that only 1% of the data was missing, which I'm not sure how they estimated.
 
@@ -77,29 +69,21 @@ On average, only 5% of people are missing from the data. That feels pretty good 
 
 Answer-- not many. In 2004, the year with the most male Amelias, 14 baby boys were named Amelia. Or, someone checked the wrong box on a birth certificate.
 
-+------+-----+--------+----+
-| year | sex | name   | n  |
-+======+=====+========+====+
-| 2004 | M   | Amelia | 14 |
-+------+-----+--------+----+
+| year | sex | name   | n   |
+|------|-----|--------|-----|
+| 2004 | M   | Amelia | 14  |
 
 ### Creativity in naming
 
 Of course, there's a lot deeper I could dig on this analysis. Just by scrolling through the data I noticed there are many other ways to spell Amanda, which didn't get taken into account. (Maybe the creative spellings of Amelia balance it out.)
 
-+---------+--------+------------+
 | name    | number | proportion |
-+=========+========+============+
+|---------|--------|------------|
 | Aamanda | 10     | 0.0000006  |
-+---------+--------+------------+
 | Amamda  | 178    | 0.0000104  |
-+---------+--------+------------+
 | Amanda  | 369690 | 0.0215329  |
-+---------+--------+------------+
 | Amandah | 16     | 0.0000009  |
-+---------+--------+------------+
 | Amannda | 23     | 0.0000013  |
-+---------+--------+------------+
 
 ### A is for eighties
 

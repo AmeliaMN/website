@@ -2,7 +2,7 @@
 title: "OpenVisConf talk transcript" 
 date: "2016-05-16"
 categories: [conferences]
-img: "text_viz.png"
+image: "text_viz.png"
 ---
 
 During [OpenVisConf](https://openvisconf.com), I hurriedly [posted](http://www.science.smith.edu/~amcnamara/blog/conferences/2016/04/25/OpenVisConf.html) some links from my talk so people could follow up with resources I had mentioned. I kept meaning to write up a fuller blog post, but of course life comes along (in the interim, Smith has finished finals, I've graded a ton of projects, gone out of the state twice, and attended commencement).

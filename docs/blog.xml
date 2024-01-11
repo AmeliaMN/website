@@ -72,6 +72,7 @@
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2020-04-16-presentations/index.html</guid>
   <pubDate>Thu, 16 Apr 2020 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2020-04-16-presentations/YouTubeTalks.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
   <title>Deleting Facebook</title>
@@ -218,6 +219,7 @@
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/index.html</guid>
   <pubDate>Sun, 29 Dec 2019 06:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/photo_stack.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Key Attributes of a Modern Statistical Computing Tool</title>
@@ -288,6 +290,7 @@
   <category>papers</category>
   <guid>https://www.amelia.mn/blog/2019-11-26-Key-Attributes/index.html</guid>
   <pubDate>Tue, 26 Nov 2019 06:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2019-11-26-Key-Attributes/KeyAttributes.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>A tidy dress</title>
@@ -313,9 +316,9 @@
 <p>Initially, I tried using R to generate random 0s and 1s to tell me which to make full opacity. This ended up looking terrible (true randomness doesn’t look random to humans!), so I ended up hand-choosing the opaque hexes. My goal was to emulate the way hexes often look on laptop lids (here’s <a href="https://devlids.com/lids/ameliamn">my laptop</a> on <a href="https://devlids.com/">devlids</a>).</p>
 <blockquote class="twitter-tweet blockquote">
 <p lang="en" dir="ltr">
-Laptop stickers spotted in the wild at the Southern MN Stat Chat! <a href="https://t.co/3RipGl3tI7">https://t.co/3RipGl3tI7</a> <a href="https://t.co/KJVYGr6Vi7">pic.twitter.com/KJVYGr6Vi7</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/1121915555177480192?ref_src=twsrc%5Etfw">April 26, 2019</a>
+</p><p>Laptop stickers spotted in the wild at the Southern MN Stat Chat! <a href="https://t.co/3RipGl3tI7">https://t.co/3RipGl3tI7</a> <a href="https://t.co/KJVYGr6Vi7">pic.twitter.com/KJVYGr6Vi7</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/1121915555177480192?ref_src=twsrc%5Etfw">April 26, 2019</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Once I had the Illustrator file, I exported to JPG. I’ve written about <a href="https://www.amelia.mn/blog/conferences/2014/12/12/FabricPosters.html">making fabric posters on Spoonflower</a>, so I knew about their upload process. You need to upload a TIF, JPG, PNG, or GIF. Can’t say why I chose JPG on this particular occasion. The important thing is to make sure your DPI (dots per inch) is high enough to look good. Spoonflower recommends 150 DPI, but I think I used 300 DPI. More on this later. The Illustrator file and exported JPG are both on my <a href="https://github.com/ameliamn/hexfabric">hexfabric GitHub page</a>. If you want to adjust the design, include different hexes, etc., feel free to use and modify those files!</p>
@@ -357,9 +360,9 @@ Laptop stickers spotted in the wild at the Southern MN Stat Chat! <a href="https
 <p>Of course, people on twitter immediately wanted their own version. If you’ve read this far into my post, I hope you can understand why I’m not getting into the custom-dressmaking business! I am definitely an amateur when it comes to sewing. As I said on Twitter,</p>
 <blockquote class="twitter-tweet blockquote">
 <p lang="en" dir="ltr">
-If you want to edit the design, I’ve put the files on GitHub, <a href="https://t.co/47FC2uMMCn">https://t.co/47FC2uMMCn</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/1162359528178036737?ref_src=twsrc%5Etfw">August 16, 2019</a>
+</p><p>If you want to edit the design, I’ve put the files on GitHub, <a href="https://t.co/47FC2uMMCn">https://t.co/47FC2uMMCn</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/1162359528178036737?ref_src=twsrc%5Etfw">August 16, 2019</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Of course, not everyone has the skills to sew their own projects! So, I started looking into some of the online retailers suggested by folks on Twitter. I haven’t seen any of these products yet, so I can’t really vouch for their quality, but if you want to make the leap here are a couple places you can buy things:</p>
@@ -380,6 +383,7 @@ If you want to edit the design, I’ve put the files on GitHub, <a href="https:/
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/index.html</guid>
   <pubDate>Sat, 17 Aug 2019 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/HexDress.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Wikipedia in the classroom: Gender, argh</title>
@@ -448,6 +452,7 @@ If you want to edit the design, I’ve put the files on GitHub, <a href="https:/
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/index.html</guid>
   <pubDate>Tue, 20 Mar 2018 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/Jenny_wikipedia.png" medium="image" type="image/png" height="117" width="144"/>
 </item>
 <item>
   <title>Dagstuhl reflections</title>
@@ -474,9 +479,9 @@ If you want to edit the design, I’ve put the files on GitHub, <a href="https:/
 <p>One of the first presentations of the workshop was by Brad Myers, who <a href="http://materials.dagstuhl.de/files/18/18061/18061.BradA.Myers1.Slides1.pdf">spoke about</a> types of studies. However, what stuck out the most to me was his modified version of programming language goals.</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-Brad Myers started his <a href="https://twitter.com/hashtag/dagstuhl?src=hash&amp;ref_src=twsrc%5Etfw">#dagstuhl</a> talk by comparing programming language design goals:<br><br>(traditional)<br>1. Correctness<br>2. Performance (of code)<br>3. Expressiveness<br>4. Speed of compiling <br><br>(usability)<br>5. Understandability <br>6. Ease of reading<br>7. Modifiability<br>8. Learnability
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/960502906821767168?ref_src=twsrc%5Etfw">February 5, 2018</a>
+</p><p>Brad Myers started his <a href="https://twitter.com/hashtag/dagstuhl?src=hash&amp;ref_src=twsrc%5Etfw">#dagstuhl</a> talk by comparing programming language design goals:<br><br>(traditional)<br>1. Correctness<br>2. Performance (of code)<br>3. Expressiveness<br>4. Speed of compiling <br><br>(usability)<br>5. Understandability <br>6. Ease of reading<br>7. Modifiability<br>8. Learnability</p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/960502906821767168?ref_src=twsrc%5Etfw">February 5, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>These goals reminded me of my <a href="https://arxiv.org/abs/1610.00985">key attributes for a modern statistical programming tool</a> paper.</p>
@@ -484,20 +489,20 @@ Brad Myers started his <a href="https://twitter.com/hashtag/dagstuhl?src=hash&am
 <section id="neil-brown---data-on-student-errors" class="level3">
 <h3 class="anchored" data-anchor-id="neil-brown---data-on-student-errors">Neil Brown - data on student errors</h3>
 <p>Neil Brown, who worked on Greenfoot and BlueJ (IDEs for novices learning Java) was there. He and I talked about a principle I have absorbed from Greenfoot, that novices should never be presented with a blank screen, but instead some scaffolding.</p>
-Brown has data on many students’ Java code from Blackbox, a way to capture data from students using BlueJ.
+<p>Brown has data on many students’ Java code from Blackbox, a way to capture data from students using BlueJ.</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-Next up, Neil Brown of <a href="https://twitter.com/KingsCollegeLon?ref_src=twsrc%5Etfw"><span class="citation" data-cites="KingsCollegeLon">@KingsCollegeLon</span></a> on analyzing programming data. BlueJay is an IDE for Java beginners, Blackbox can capture data about it. They have data on 300 million compilations, which is <br>~3TB (compressed) of source code.
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961530821596401664?ref_src=twsrc%5Etfw">February 8, 2018</a>
+</p><p>Next up, Neil Brown of <a href="https://twitter.com/KingsCollegeLon?ref_src=twsrc%5Etfw"><span class="citation" data-cites="KingsCollegeLon">@KingsCollegeLon</span></a> on analyzing programming data. BlueJay is an IDE for Java beginners, Blackbox can capture data about it. They have data on 300 million compilations, which is <br>~3TB (compressed) of source code.</p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961530821596401664?ref_src=twsrc%5Etfw">February 8, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Teachers think they are good at predicting errors, but they actually are not.</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-Teachers are pretty certain they can predict what errors students will make. But, is that actually true?
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961533231077175296?ref_src=twsrc%5Etfw">February 8, 2018</a>
+</p><p>Teachers are pretty certain they can predict what errors students will make. But, is that actually true?</p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961533231077175296?ref_src=twsrc%5Etfw">February 8, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>This and many other great insights are in <a href="http://materials.dagstuhl.de/files/18/18061/18061.NeilC.C.Brown1.Slides.pdf">Brown’s slides</a>.</p>
@@ -507,9 +512,9 @@ Teachers are pretty certain they can predict what errors students will make. But
 <p>Speaking of errors, Brett Becker <a href="http://materials.dagstuhl.de/files/18/18061/18061.BrettA.Becker2.Slides.pdf">talked about</a> improving compiler errors.</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-Becker: Error messages are accusatory and negative. Do we need to say “terminated” and “illegal”? “I’m going to get killed, and I’m going to jail.”
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961546402986897410?ref_src=twsrc%5Etfw">February 8, 2018</a>
+</p><p>Becker: Error messages are accusatory and negative. Do we need to say “terminated” and “illegal”? “I’m going to get killed, and I’m going to jail.”</p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961546402986897410?ref_src=twsrc%5Etfw">February 8, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
@@ -519,34 +524,34 @@ Becker: Error messages are accusatory and negative. Do we need to say “termina
 <p>Felienne asked “What is programming anyway?”</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-What is programming anyway? <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> talking about 🧠head vs.&nbsp;❤️. <a href="https://t.co/9qCfMq80KW">pic.twitter.com/9qCfMq80KW</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961151780657729537?ref_src=twsrc%5Etfw">February 7, 2018</a>
+</p><p>What is programming anyway? <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> talking about 🧠head vs.&nbsp;❤️. <a href="https://t.co/9qCfMq80KW">pic.twitter.com/9qCfMq80KW</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961151780657729537?ref_src=twsrc%5Etfw">February 7, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>She pointed out that while “every programmer ever” says that “Everyone should learn programming,” the community can be quite restrictive about what it considers to be “real programming.” Funnily enough, while everyone seemed to understand what she was saying, I also got pushback about <a href="www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">my talk</a>.</p>
 <p>Often, we put users in one category and programmers in the other. But, there are many people who are “swimming in the water” of programming, and don’t even know they’re doing it. People who work deeply with spreadsheets are programmers, but they wouldn’t describe themselves that way. Again, this had reverberations with the <a href="www.science.smith.edu/~amcnamara/blog/conferences/2018/02/11/Scientists-Programming.html">scientists programming</a> stuff I talked about.</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-After spreadsheets, <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> started working on “code smells” in <a href="https://twitter.com/scratch?ref_src=twsrc%5Etfw"><span class="citation" data-cites="scratch">@scratch</span></a>. <a href="https://t.co/Ci9hGnesSh">pic.twitter.com/Ci9hGnesSh</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961153216971931648?ref_src=twsrc%5Etfw">February 7, 2018</a>
+</p><p>After spreadsheets, <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> started working on “code smells” in <a href="https://twitter.com/scratch?ref_src=twsrc%5Etfw"><span class="citation" data-cites="scratch">@scratch</span></a>. <a href="https://t.co/Ci9hGnesSh">pic.twitter.com/Ci9hGnesSh</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961153216971931648?ref_src=twsrc%5Etfw">February 7, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Felienne asked us two questions:</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-Two dimensions: what is programming for? What is programming like? <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> making a case for creativity and self-expression. <a href="https://t.co/GzzSRg5Rc0">pic.twitter.com/GzzSRg5Rc0</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961156021279444992?ref_src=twsrc%5Etfw">February 7, 2018</a>
+</p><p>Two dimensions: what is programming for? What is programming like? <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> making a case for creativity and self-expression. <a href="https://t.co/GzzSRg5Rc0">pic.twitter.com/GzzSRg5Rc0</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961156021279444992?ref_src=twsrc%5Etfw">February 7, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>One answer to “what is programming like?” is writing.</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-One metaphor <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> likes is programming as writing. There are many things that “count” as writing. Can be for yourself, can be for others, can be creative. <a href="https://t.co/eMlZhaJQ2D">pic.twitter.com/eMlZhaJQ2D</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961159455948886016?ref_src=twsrc%5Etfw">February 7, 2018</a>
+</p><p>One metaphor <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Felienne">@Felienne</span></a> likes is programming as writing. There are many things that “count” as writing. Can be for yourself, can be for others, can be creative. <a href="https://t.co/eMlZhaJQ2D">pic.twitter.com/eMlZhaJQ2D</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961159455948886016?ref_src=twsrc%5Etfw">February 7, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>I’ve used it a lot, so I think programming as writing is a pretty robust metaphor.</p>
@@ -557,25 +562,25 @@ One metaphor <a href="https://twitter.com/Felienne?ref_src=twsrc%5Etfw"><span cl
 <p>Franke’s talk was also great, and teased out the subtle differences between learnability and teachability of a language.</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-We’ve been expanding our definition of language properties at <a href="https://twitter.com/hashtag/dagstuhl?src=hash&amp;ref_src=twsrc%5Etfw">#dagstuhl</a>. <a href="https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw"><span class="citation" data-cites="bakerfranke">@bakerfranke</span></a> adding “teachability,” although he says this might not be a problem for language designers but a problem of pedagogy. <a href="https://t.co/b1HlrgUJyH">pic.twitter.com/b1HlrgUJyH</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961185848539713538?ref_src=twsrc%5Etfw">February 7, 2018</a>
+</p><p>We’ve been expanding our definition of language properties at <a href="https://twitter.com/hashtag/dagstuhl?src=hash&amp;ref_src=twsrc%5Etfw">#dagstuhl</a>. <a href="https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw"><span class="citation" data-cites="bakerfranke">@bakerfranke</span></a> adding “teachability,” although he says this might not be a problem for language designers but a problem of pedagogy. <a href="https://t.co/b1HlrgUJyH">pic.twitter.com/b1HlrgUJyH</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961185848539713538?ref_src=twsrc%5Etfw">February 7, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>He echoed my feeling that consistency in teaching is so important (the reason why I teach only one R syntax in my intro classes)</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-For learners, consistency is good. Flexibility may not be helpful. <a href="https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw"><span class="citation" data-cites="bakerfranke">@bakerfranke</span></a> <a href="https://t.co/g8NokrqC15">pic.twitter.com/g8NokrqC15</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961187475308863490?ref_src=twsrc%5Etfw">February 7, 2018</a>
+</p><p>For learners, consistency is good. Flexibility may not be helpful. <a href="https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw"><span class="citation" data-cites="bakerfranke">@bakerfranke</span></a> <a href="https://t.co/g8NokrqC15">pic.twitter.com/g8NokrqC15</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961187475308863490?ref_src=twsrc%5Etfw">February 7, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>He also has an idea about scaffolding in language design,</p>
 <blockquote class="twitter-tweet blockquote" data-lang="en">
 <p lang="en" dir="ltr">
-Mitch Resnik wanted <a href="https://twitter.com/scratch?ref_src=twsrc%5Etfw"><span class="citation" data-cites="scratch">@scratch</span></a> to have a low floor, high ceiling, wise walls. <a href="https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw"><span class="citation" data-cites="bakerfranke">@bakerfranke</span></a> wants a low floor, high ceiling, narrow walls to start, and wider walls as you get closer to the ceiling.
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961192913714675713?ref_src=twsrc%5Etfw">February 7, 2018</a>
+</p><p>Mitch Resnik wanted <a href="https://twitter.com/scratch?ref_src=twsrc%5Etfw"><span class="citation" data-cites="scratch">@scratch</span></a> to have a low floor, high ceiling, wise walls. <a href="https://twitter.com/bakerfranke?ref_src=twsrc%5Etfw"><span class="citation" data-cites="bakerfranke">@bakerfranke</span></a> wants a low floor, high ceiling, narrow walls to start, and wider walls as you get closer to the ceiling.</p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/961192913714675713?ref_src=twsrc%5Etfw">February 7, 2018</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>This was just a selection of the talks that related most directly to my interests. If you want to see the rest of them, they are posted on the <a href="http://materials.dagstuhl.de/index.php?semnr=18061">seminar materials page</a>, and for more context on the people who attended (not all of whom presented), you can read <a href="http://materials.dagstuhl.de/files/18/18061/18061.SWM.Slides.pdf">everyone’s introductory slide</a>, and check out the <a href="https://twitter.com/AmeliaMN/lists/evidenceaboutprogrammers">twitter list</a> I made of all the participants who are on twitter.</p>
@@ -586,9 +591,9 @@ Mitch Resnik wanted <a href="https://twitter.com/scratch?ref_src=twsrc%5Etfw"><s
 <p>I know I’m not the only one who feels this way. Several other folks have already written up their thoughts on the seminar, including <a href="https://medium.com/bits-and-behavior/designing-learnable-teachable-and-productive-programming-languages-dagstuhl-trip-report-81e41bde84bd">Andy Ko</a>, <a href="https://cszero.wordpress.com/2018/02/11/dagstuhl-seminar-18061-evidence-about-programmers-for-programming-language-design/">Brett Becker</a>, and of course <a href="http://www.felienne.com/archives/tag/dagstuhl">Felienne’s liveblogging</a>. Johannes Hofmeister captured his ideas on video,</p>
 <blockquote class="twitter-tweet blockquote" data-partner="tweetdeck">
 <p lang="en" dir="ltr">
-Me, trying to capture all my ideas from the Dagstuhl seminar. Not a time lapse, actual speed of thoughts :D <a href="https://t.co/kDolr7e8gb">pic.twitter.com/kDolr7e8gb</a>
-</p>
-— Johannes Hofmeister (<span class="citation" data-cites="pro_cessor">@pro_cessor</span>) <a href="https://twitter.com/pro_cessor/status/962765672110592000?ref_src=twsrc%5Etfw">February 11, 2018</a>
+</p><p>Me, trying to capture all my ideas from the Dagstuhl seminar. Not a time lapse, actual speed of thoughts :D <a href="https://t.co/kDolr7e8gb">pic.twitter.com/kDolr7e8gb</a></p>
+<p></p>
+<p>— Johannes Hofmeister (<span class="citation" data-cites="pro_cessor">@pro_cessor</span>) <a href="https://twitter.com/pro_cessor/status/962765672110592000?ref_src=twsrc%5Etfw">February 11, 2018</a></p>
 </blockquote>
 <p>I can’t wait to see where things go from here.</p>
 
@@ -635,6 +640,7 @@ Me, trying to capture all my ideas from the Dagstuhl seminar. Not a time lapse, 
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2018-02-11-More-guys/index.html</guid>
   <pubDate>Sun, 11 Feb 2018 16:53:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2018-02-11-More-guys/faces-hair.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Scientists Programming</title>
@@ -727,6 +733,7 @@ boys_2015</code></pre>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/index.html</guid>
   <pubDate>Sun, 11 Feb 2018 15:43:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/ScientistsProgramming.png" medium="image" type="image/png" height="106" width="144"/>
 </item>
 <item>
   <title>R syntax comparison</title>
@@ -782,6 +789,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/index.html</guid>
   <pubDate>Sun, 11 Feb 2018 14:43:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/SyntaxComparisonCheatsheet.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>On microaggressions</title>
@@ -872,11 +880,6 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <p>Instead, people seem to be taking an approximate age and then just grabbing a name out of the hat. In other words, they are using the <em>Name|Age</em> method. With that in mind, let’s see how likely Amanda really is. I’m focusing just on girls names for this analysis, mostly because Amelia isn’t a common boy’s name (see my data appendix).</p>
 <p>In the eighties, numbers for Amanda and Amelia were as follows:</p>
 <table class="table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 18%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>name</th>
@@ -900,10 +903,6 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <p>Armed only with the information that I was born between 1985 and 1989, there’s a <strong>2% chance my name is Amanda</strong>. That’s actually pretty incredible! (In contrast, there’s just a 0.05% chance my name is Amelia.) And, we can figure most people remember at least the first letter of a name. So, what if we add the fact that my name starts with an A?</p>
 <p>In the eighties, numbers for Amanda and Amelia (out of all A names) were as follows:</p>
 <table class="table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 18%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>name</th>
@@ -948,14 +947,6 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 </figure>
 </div>
 <table class="table">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 12%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 11%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Min.</th>
@@ -983,12 +974,6 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <h3 class="anchored" data-anchor-id="how-many-baby-boys-are-named-amelia">How many baby boys are named Amelia?</h3>
 <p>Answer– not many. In 2004, the year with the most male Amelias, 14 baby boys were named Amelia. Or, someone checked the wrong box on a birth certificate.</p>
 <table class="table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 12%">
-<col style="width: 6%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>year</th>
@@ -1011,11 +996,6 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <h3 class="anchored" data-anchor-id="creativity-in-naming">Creativity in naming</h3>
 <p>Of course, there’s a lot deeper I could dig on this analysis. Just by scrolling through the data I noticed there are many other ways to spell Amanda, which didn’t get taken into account. (Maybe the creative spellings of Amelia balance it out.)</p>
 <table class="table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 12%">
-<col style="width: 18%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>name</th>
@@ -1076,6 +1056,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2017-01-13-Amanda/index.html</guid>
   <pubDate>Fri, 13 Jan 2017 06:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2017-01-13-Amanda/amelias-1.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>Census data: A rant</title>
@@ -1140,6 +1121,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2016-11-16-CensusRant/index.html</guid>
   <pubDate>Wed, 16 Nov 2016 06:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2016-11-16-CensusRant/FactFinder.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 <item>
   <title>Statistics graduate school advice</title>
@@ -1221,6 +1203,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2016-10-19-GradSchool/index.html</guid>
   <pubDate>Wed, 19 Oct 2016 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2016-10-19-GradSchool/PhDcomic.gif" medium="image" type="image/gif"/>
 </item>
 <item>
   <title>Worth adding to your inbox</title>
@@ -1243,6 +1226,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2016-06-23-Listservs/index.html</guid>
   <pubDate>Thu, 23 Jun 2016 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2016-06-23-Listservs/InboxZero.png" medium="image" type="image/png" height="63" width="144"/>
 </item>
 <item>
   <title>OpenVisConf talk transcript</title>
@@ -1606,6 +1590,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/index.html</guid>
   <pubDate>Mon, 16 May 2016 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/text_viz.png" medium="image" type="image/png" height="71" width="144"/>
 </item>
 <item>
   <title>Do you know Nothing when you see it?</title>
@@ -1654,6 +1639,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2016-04-25-OpenVisConf/index.html</guid>
   <pubDate>Mon, 25 Apr 2016 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2016-04-25-OpenVisConf/titleslide.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>What’s wrong with being data-collecting pigeons?</title>
@@ -1727,6 +1713,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
   <category>data</category>
   <guid>https://www.amelia.mn/blog/2016-04-08-participatory_sensing/index.html</guid>
   <pubDate>Fri, 08 Apr 2016 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2016-04-08-participatory_sensing/plume.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Contextual notes</title>
@@ -1748,17 +1735,17 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <p>I’ve now discovered that while Medium has retained in-context comments they have changed the default for these notes to be private. This really reduces the usefulness of the feature, and I was baffled when I went back to look for it. Finally, I saw a tweet from <a href="https://twitter.com/memotv">Memo Akten</a> confirming that they used to have such a feature, but recently removed it.</p>
 <blockquote class="twitter-tweet blockquote" data-partner="tweetdeck">
 <p lang="en" dir="ltr">
-I guess y'all didn't notice <a href="https://twitter.com/Medium"><span class="citation" data-cites="medium">@medium</span></a> made side-notes private? Little notes to clarify, provide insight now not visible to public. how lovely.
-</p>
-— Memo Akten (<span class="citation" data-cites="memotv">@memotv</span>) <a href="https://twitter.com/memotv/status/662253919708520448">November 5, 2015</a>
+</p><p>I guess y’all didn’t notice <a href="https://twitter.com/Medium"><span class="citation" data-cites="medium">@medium</span></a> made side-notes private? Little notes to clarify, provide insight now not visible to public. how lovely.</p>
+<p></p>
+<p>— Memo Akten (<span class="citation" data-cites="memotv">@memotv</span>) <a href="https://twitter.com/memotv/status/662253919708520448">November 5, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>For more about the original functionality, see this 2013 <a href="https://medium.com/@ev/why-medium-notes-are-different-and-how-to-use-them-well-5972c72b18f2">post on Medium</a>. In it, the author (and CEO of Medium?!) writes that the notes can be used “as footnotes.” However, with the defaults changed, that’s not true until the original author goes back and changes the settings one by one.</p>
 <blockquote class="twitter-tweet blockquote" data-partner="tweetdeck">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/xululululuuum"><span class="citation" data-cites="xululululuuum">@xululululuuum</span></a> <a href="https://twitter.com/Medium"><span class="citation" data-cites="Medium">@Medium</span></a> no! I have to delete all my current 'side notes' and recreate them as 'comments'! No automatic way of doing it. <a href="https://twitter.com/hashtag/bad?src=hash">#bad</a>
-</p>
-— Memo Akten (<span class="citation" data-cites="memotv">@memotv</span>) <a href="https://twitter.com/memotv/status/662265035289436160">November 5, 2015</a>
+</p><p><a href="https://twitter.com/xululululuuum"><span class="citation" data-cites="xululululuuum">@xululululuuum</span></a> <a href="https://twitter.com/Medium"><span class="citation" data-cites="Medium">@Medium</span></a> no! I have to delete all my current ‘side notes’ and recreate them as ‘comments’! No automatic way of doing it. <a href="https://twitter.com/hashtag/bad?src=hash">#bad</a></p>
+<p></p>
+<p>— Memo Akten (<span class="citation" data-cites="memotv">@memotv</span>) <a href="https://twitter.com/memotv/status/662265035289436160">November 5, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Memo and I aren’t the only ones noticing this. Once I found the original blog post, I noticed that most of the comments were actually from the past month and <a href="https://medium.com/@owenblacker/marginal-notes-on-medium-268b3f727e6d#.4v2lc1xsm">bemoaning the feature change</a>. I was happy to see some references to other places where this is done well, including <a href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a> which implements Tufte-style sidenotes in an HTML environment.</p>
@@ -1780,6 +1767,7 @@ I guess y'all didn't notice <a href="https://twitter.com/Medium"><span class="ci
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2015-11-19-context_notes/index.html</guid>
   <pubDate>Thu, 19 Nov 2015 06:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2015-11-19-context_notes/DFWatlantic.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>20th New England Isolated Statisticians Meeting (NEISM)</title>
@@ -1795,28 +1783,28 @@ I guess y'all didn't notice <a href="https://twitter.com/Medium"><span class="ci
 <p>A couple discussions got a bit heated.</p>
 <section id="tables" class="level3">
 <h3 class="anchored" data-anchor-id="tables"><strong>Tables</strong></h3>
-At the meeting, we spent some time debating the importance of tables (e.g.&nbsp;the standard normal table) in teaching.
+<p>At the meeting, we spent some time debating the importance of tables (e.g.&nbsp;the standard normal table) in teaching.</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-What about tables? There's a range of responses- 3 days on tables, only technology, or something in between. I'm in between. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655399941356015616">October 17, 2015</a>
+</p><p>What about tables? There’s a range of responses- 3 days on tables, only technology, or something in between. I’m in between. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655399941356015616">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>Interestingly, some folks in the room were insistent that tables not be used, while <a href="https://twitter.com/rudeboybert"><span class="citation" data-cites="rudeboybert">@rudeboybert</span></a> and I were both on the side of showing the tables in conjunction with technology.</p>
+<p>Interestingly, some folks in the room were insistent that tables not be used, while <a href="https://twitter.com/rudeboybert">@rudeboybert</a> and I were both on the side of showing the tables in conjunction with technology.</p>
 <p>(If you are looking for a good way to integrate technology when teaching about normal distributions, the mosaic package functions xpnorm and xqnorm are fantastic. That’s where the preview image on the blog came from.)</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-The question of whether or not to abandon normal tables in intro stats led to vigorous debate <a href="https://twitter.com/hashtag/NEISM20?src=hash">#NEISM20</a>
-</p>
-— Albert Y. Kim (<span class="citation" data-cites="rudeboybert">@rudeboybert</span>) <a href="https://twitter.com/rudeboybert/status/655408933218164736">October 17, 2015</a>
+</p><p>The question of whether or not to abandon normal tables in intro stats led to vigorous debate <a href="https://twitter.com/hashtag/NEISM20?src=hash">#NEISM20</a></p>
+<p></p>
+<p>— Albert Y. Kim (<span class="citation" data-cites="rudeboybert">@rudeboybert</span>) <a href="https://twitter.com/rudeboybert/status/655408933218164736">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/StatsbyLopez"><span class="citation" data-cites="StatsbyLopez">@StatsbyLopez</span></a> <a href="https://twitter.com/rudeboybert"><span class="citation" data-cites="rudeboybert">@rudeboybert</span></a> Not taking a hard line. De-emphasize tables but don't ban them.
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655411316799225856">October 17, 2015</a>
+</p><p><a href="https://twitter.com/StatsbyLopez"><span class="citation" data-cites="StatsbyLopez">@StatsbyLopez</span></a> <a href="https://twitter.com/rudeboybert"><span class="citation" data-cites="rudeboybert">@rudeboybert</span></a> Not taking a hard line. De-emphasize tables but don’t ban them.</p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655411316799225856">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
@@ -1825,43 +1813,43 @@ The question of whether or not to abandon normal tables in intro stats led to vi
 <p>We spent some time collating conferences we liked,</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-We love the 'COTS. USCOTS, ECOTS, ICOTS. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655464971355164672">October 17, 2015</a>
+</p><p>We love the ’COTS. USCOTS, ECOTS, ICOTS. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655464971355164672">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>and journals,</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-Popular journals include <a href="https://twitter.com/signmagazine"><span class="citation" data-cites="signmagazine">@signmagazine</span></a>, <a href="https://twitter.com/JStatEd"><span class="citation" data-cites="JStatEd">@JStatEd</span></a>, Chance, TISE. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655469407037169666">October 17, 2015</a>
+</p><p>Popular journals include <a href="https://twitter.com/signmagazine"><span class="citation" data-cites="signmagazine">@signmagazine</span></a>, <a href="https://twitter.com/JStatEd"><span class="citation" data-cites="JStatEd">@JStatEd</span></a>, Chance, TISE. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655469407037169666">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
 <section id="communication" class="level3">
 <h3 class="anchored" data-anchor-id="communication"><strong>Communication</strong></h3>
-We also discussed the importance of communication in statistics and “data science.” I mentioned the SDS program at Smith, and folks on twitter jumped in to tout the benefits of communication.
+<p>We also discussed the importance of communication in statistics and “data science.” I mentioned the SDS program at Smith, and folks on twitter jumped in to tout the benefits of communication.</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> <a href="https://twitter.com/smithcollege"><span class="citation" data-cites="smithcollege">@smithcollege</span></a> I was in a program called Integrated Science and Technology that required frequent teamwork and presentations.
-</p>
-— Data Science Renee (<span class="citation" data-cites="BecomingDataSci">@BecomingDataSci</span>) <a href="https://twitter.com/BecomingDataSci/status/655416278388224000">October 17, 2015</a>
+</p><p><a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> <a href="https://twitter.com/smithcollege"><span class="citation" data-cites="smithcollege">@smithcollege</span></a> I was in a program called Integrated Science and Technology that required frequent teamwork and presentations.</p>
+<p></p>
+<p>— Data Science Renee (<span class="citation" data-cites="BecomingDataSci">@BecomingDataSci</span>) <a href="https://twitter.com/BecomingDataSci/status/655416278388224000">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> I think this is so important. Students SBAT communicate results clearly to anyone, inc those without statistical knowledge.
-</p>
-— Amy Hogan (<span class="citation" data-cites="alittlestats">@alittlestats</span>) <a href="https://twitter.com/alittlestats/status/655415627474145281">October 17, 2015</a>
+</p><p><a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> I think this is so important. Students SBAT communicate results clearly to anyone, inc those without statistical knowledge.</p>
+<p></p>
+<p>— Amy Hogan (<span class="citation" data-cites="alittlestats">@alittlestats</span>) <a href="https://twitter.com/alittlestats/status/655415627474145281">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>While most of the isolated statisticians teach at small colleges, we also thought about the challenges of incorporating communication in large classes, and the <a href="http://simplystatistics.org/2013/03/26/an-instructors-thoughts-on-peer-review-for-data-analysis-in-coursera/">peer-reviewed assignments in the JHU data science specializationn</a> were mentioned.</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-What to do about communication when you have hundreds of students? Maybe peer-review is the answer. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655411931549954048">October 17, 2015</a>
+</p><p>What to do about communication when you have hundreds of students? Maybe peer-review is the answer. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655411931549954048">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
@@ -1870,66 +1858,66 @@ What to do about communication when you have hundreds of students? Maybe peer-re
 <p>Another discussion that got heated, particularly on twitter, was the question of group work. We had come around to the idea that group projects were probably the best way to include communication in classes. It lets students do real analysis and present the results. Grading a few team projects is more manageable for the instructor than reading many individual papers. But, we acknowledged that there is no optimal way to select groups. One participant asked,</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-HOW do you make groups work in classes? Assigning alphabetically doesn't work, nor by seating, nor students choosing. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655422919175241729">October 17, 2015</a>
+</p><p>HOW do you make groups work in classes? Assigning alphabetically doesn’t work, nor by seating, nor students choosing. <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655422919175241729">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>There were many suggestions, including</p>
 <blockquote class="twitter-tweet blockquote" data-conversation="none" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> I ended up doing most the work no matter who I got in group. Maybe assign based on % of work done on previous. High %ers together?
-</p>
-— BlinkPop (<span class="citation" data-cites="emilyeifler">@emilyeifler</span>) <a href="https://twitter.com/emilyeifler/status/655424481775607809">October 17, 2015</a>
+</p><p><a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> I ended up doing most the work no matter who I got in group. Maybe assign based on % of work done on previous. High %ers together?</p>
+<p></p>
+<p>— BlinkPop (<span class="citation" data-cites="emilyeifler">@emilyeifler</span>) <a href="https://twitter.com/emilyeifler/status/655424481775607809">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet blockquote" data-conversation="none" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> i randomize from the class list, re-do weekly. really like the results from doing so. everyone encouraged to get to know everyone
-</p>
-— Dianne Cook (<span class="citation" data-cites="visnut">@visnut</span>) <a href="https://twitter.com/visnut/status/656053091490394112">October 19, 2015</a>
+</p><p><a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> i randomize from the class list, re-do weekly. really like the results from doing so. everyone encouraged to get to know everyone</p>
+<p></p>
+<p>— Dianne Cook (<span class="citation" data-cites="visnut">@visnut</span>) <a href="https://twitter.com/visnut/status/656053091490394112">October 19, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>and</p>
 <blockquote class="twitter-tweet blockquote" data-conversation="none" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> idea: students choose partner, then pairs randomly grouped? Benefit of comfortable w someone on team plus forced to work w new ppl
-</p>
-— Data Science Renee (<span class="citation" data-cites="BecomingDataSci">@BecomingDataSci</span>) <a href="https://twitter.com/BecomingDataSci/status/655457852044242944">October 17, 2015</a>
+</p><p><a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> idea: students choose partner, then pairs randomly grouped? Benefit of comfortable w someone on team plus forced to work w new ppl</p>
+<p></p>
+<p>— Data Science Renee (<span class="citation" data-cites="BecomingDataSci">@BecomingDataSci</span>) <a href="https://twitter.com/BecomingDataSci/status/655457852044242944">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p><a href="https://twitter.com/hadleywickham">Hadley Wickham</a> immediately piped up with a link to a paper called <a href="http://www4.ncsu.edu/unity/lockers/users/f/felder/public/Papers/CLStrategies(JCCCT).pdf">Effective Strategies for Cooperative Learning</a>, which includes many of the strategies we discussed both in person and electronically. The executive summary of the paper is that you have to assign groups, you might want to think about outnumbered minorities, particularly at the beginning of a class, and you should take into account peoples’ schedules.</p>
 <p>The paper also discusses the importance of peer ratings to assess participation, and there was a suggestion in the meeting to do this rating as part of the final.</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-When evaluating groups, ask them to rate group participation (inc. themselves) &amp; answer simple Qs about their analysis on the final <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a>
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655425776188334080">October 17, 2015</a>
+</p><p>When evaluating groups, ask them to rate group participation (inc. themselves) &amp; answer simple Qs about their analysis on the final <a href="https://twitter.com/hashtag/neism20?src=hash">#neism20</a></p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655425776188334080">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>By doing this, you are able to weed out people who really did not participate. If they can’t list their explanatory and response variables without referring to notes or teammates, they didn’t participate fully in the project.</p>
-<p>However, there was some pushback on twitter about whether forcing students to work in groups is the right answer. As the paper says, “As we tell our students, we’re sorry if they’re unhappy about having to work in teams but the truth is that our job is not to make them happy— it is to prepare them to be professionals.” <a href="https://twitter.com/KCombinator"><span class="citation" data-cites="KCombinator">@KCombinator</span></a> disagreed,</p>
+<p>However, there was some pushback on twitter about whether forcing students to work in groups is the right answer. As the paper says, “As we tell our students, we’re sorry if they’re unhappy about having to work in teams but the truth is that our job is not to make them happy— it is to prepare them to be professionals.” <a href="https://twitter.com/KCombinator">@KCombinator</a> disagreed,</p>
 <blockquote class="twitter-tweet blockquote" data-conversation="none" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> why is your assumption that group work is crucial? Why not just let loners work alone if they wish? I do it for life.
-</p>
-— Lambda Kansas City (<span class="citation" data-cites="KCombinator">@KCombinator</span>) <a href="https://twitter.com/KCombinator/status/655425972452225024">October 17, 2015</a>
+</p><p><a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> why is your assumption that group work is crucial? Why not just let loners work alone if they wish? I do it for life.</p>
+<p></p>
+<p>— Lambda Kansas City (<span class="citation" data-cites="KCombinator">@KCombinator</span>) <a href="https://twitter.com/KCombinator/status/655425972452225024">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>They recommended a few resources by [Paul Graham](http://www.paulgraham.com/,</p>
 <blockquote class="twitter-tweet blockquote" data-conversation="none" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> read <a href="https://twitter.com/paulg"><span class="citation" data-cites="paulg">@paulg</span></a>. Particularly <a href="http://t.co/gwS2CvZT2O">http://t.co/gwS2CvZT2O</a> <a href="http://t.co/1faV6YPcl8">http://t.co/1faV6YPcl8</a> <a href="http://t.co/WY88ZX1HS5">http://t.co/WY88ZX1HS5</a> <a href="http://t.co/yBzlwgwCys">http://t.co/yBzlwgwCys</a>
-</p>
-— Lambda Kansas City (<span class="citation" data-cites="KCombinator">@KCombinator</span>) <a href="https://twitter.com/KCombinator/status/655446265199656960">October 17, 2015</a>
+</p><p><a href="https://twitter.com/AmeliaMN"><span class="citation" data-cites="AmeliaMN">@AmeliaMN</span></a> read <a href="https://twitter.com/paulg"><span class="citation" data-cites="paulg">@paulg</span></a>. Particularly <a href="http://t.co/gwS2CvZT2O">http://t.co/gwS2CvZT2O</a> <a href="http://t.co/1faV6YPcl8">http://t.co/1faV6YPcl8</a> <a href="http://t.co/WY88ZX1HS5">http://t.co/WY88ZX1HS5</a> <a href="http://t.co/yBzlwgwCys">http://t.co/yBzlwgwCys</a></p>
+<p></p>
+<p>— Lambda Kansas City (<span class="citation" data-cites="KCombinator">@KCombinator</span>) <a href="https://twitter.com/KCombinator/status/655446265199656960">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>My question was,</p>
 <blockquote class="twitter-tweet blockquote" lang="en">
 <p lang="en" dir="ltr">
-<a href="https://twitter.com/KCombinator"><span class="citation" data-cites="KCombinator">@KCombinator</span></a> this is getting pretty philosophical! Are there enough jobs for everyone who would prefer not to work with others to have them?
-</p>
-— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655445642668605440">October 17, 2015</a>
+</p><p><a href="https://twitter.com/KCombinator"><span class="citation" data-cites="KCombinator">@KCombinator</span></a> this is getting pretty philosophical! Are there enough jobs for everyone who would prefer not to work with others to have them?</p>
+<p></p>
+<p>— Amelia McNamara (<span class="citation" data-cites="AmeliaMN">@AmeliaMN</span>) <a href="https://twitter.com/AmeliaMN/status/655445642668605440">October 17, 2015</a></p>
 </blockquote>
 <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>What do you think? Tell me in the comments.</p>
@@ -1941,6 +1929,7 @@ When evaluating groups, ask them to rate group participation (inc. themselves) &
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2015-11-01-NEISM/index.html</guid>
   <pubDate>Sun, 01 Nov 2015 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2015-11-01-NEISM/xqnorm.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Fitbit colors</title>
@@ -1989,6 +1978,7 @@ When evaluating groups, ask them to rate group participation (inc. themselves) &
   <category>visualization</category>
   <guid>https://www.amelia.mn/blog/2015-01-14-FitbitColors/index.html</guid>
   <pubDate>Wed, 14 Jan 2015 06:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit1.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

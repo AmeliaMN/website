@@ -2,7 +2,7 @@
 title:  "Deleting Facebook" 
 date: "2019-12-29"
 categories: [misc]
-img: "photo_stack.jpg"
+image: "photo_stack.jpg"
 ---
 
 I recently took the plunge and deleted my Facebook account. This was a big decision for me, and I know other people are thinking about doing the same. So, I want to detail why I decided to delete my account, how I prepared to do it while also saving my data, and the way I've felt since I took the plunge.
