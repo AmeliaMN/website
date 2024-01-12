@@ -5,6 +5,9 @@ project:
     - "*.qmd"
     - "*.md"
     - "*.rmd"
+    - "!SpeakingR/"
+  resources:
+    - "SpeakingR/"
 
 website:
   title: "Amelia McNamara"
