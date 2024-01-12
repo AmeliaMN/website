@@ -51,7 +51,7 @@ Teaching and evaluating. (At least) two elements
 ## Course topics
 
 | Week        | Topic                      | Readings                                                             | Lab                                      | Deliverables                                        |
-|---------------|---------------|---------------|---------------|---------------|
+|-------------|----------------------------|----------------------------------------------------------------------|------------------------------------------|-----------------------------------------------------|
 | 1           | Introduction to the course | N/A                                                                  | N/A                                      | Introductions                                       |
 | 2           | Intro to viz               | CWD (ch 3), The Functional Art (intro), Visualize This (intro, ch 1) | Introduction to R, ggplot2               | Data Dialogue, Readiness quiz\*                     |
 | 3           | Color                      | Design Elements (ch 3), Envisioning Information (ch 5)               | More ggplot2                             | First data viz                                      |

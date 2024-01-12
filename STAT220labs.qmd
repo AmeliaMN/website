@@ -17,19 +17,19 @@ When I teach in person, I guide students through th pre-lab material live, stopp
 
 ## formula syntax
 
-I provide students with a cheatsheet entitled \[All the R you need for intro stat\](), which gives them an overview of the most important code for the semester.
+I provide students with a cheatsheet entitled [All the R you need for intro stat](https://github.com/AmeliaMN/STAT220-labs/blob/main/all_the_R_you_need_formula.Rmd), which gives them an overview of the most important code for the semester.
 
-Describing data. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/01-STAT_220_DescribingDataPreLab_tidy.Rmd), [YouTube video]()
+Describing data. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/01-STAT_220_DescribingDataPreLab_formula.Rmd), [YouTube video]()
 
-Categorical variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/02-STAT_220_CategoricalVariablesPreLab_tidy.Rmd), YouTube [video 1](), [video 2]()
+Categorical variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/02-STAT_220_CategoricalVariablesPreLab_formula.Rmd), YouTube [video 1](), [video 2]()
 
-Quantitative variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/03-STAT_220_QuantitativeVariablesPreLab_tidy.Rmd), YouTube [video 1](), [video 2]()
+Quantitative variables. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/03-STAT_220_QuantitativeVariablesPreLab_formula.Rmd), YouTube [video 1](), [video 2]()
 
-Correlation and regression. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/04-STAT_220_RegressionPreLab_tidy.Rmd), [YouTube video]()
+Correlation and regression. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/04-STAT_220_RegressionPreLab_formula.Rmd), [YouTube video]()
 
-Bootstrap intervals. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/05-STAT_220_BootstrapPreLab-tidy.Rmd), YouTube [video 1](), [video 2]()
+Bootstrap intervals. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/05-STAT_220_BootstrapPreLab-formula.Rmd), YouTube [video 1](), [video 2]()
 
-Randomization tests. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/06-STAT_220_RandomizationPreLab-tidy.Rmd), [YouTube video]()
+Randomization tests. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/06-STAT_220_RandomizationPreLab-formula.Rmd), [YouTube video]()
 
 Inference for a single proportion. [RMarkdown](https://github.com/AmeliaMN/STAT220-labs/blob/main/formula/07-STAT_220_InferenceSingleProportionPreLab-formula.Rmd), [YouTube video]()
 

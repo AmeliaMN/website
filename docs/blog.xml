@@ -9,13 +9,14 @@
 <link>https://www.amelia.mn/blog.html</link>
 <atom:link href="https://www.amelia.mn/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Amelia McNamara, Associate Professor of data science in the Department of Computer &amp; Information Sciences at the University of St Thomas</description>
-<generator>quarto-1.3.450</generator>
+<generator>quarto-1.4.542</generator>
 <lastBuildDate>Thu, 16 Apr 2020 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Guidelines I follow when giving talks</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2020-04-16-presentations/index.html</link>
+  <link>https://www.amelia.mn/blog/2020-04-16-presentations/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -23,7 +24,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2020-04-16-presentations/YouTubeTalks.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Videos of talks I’ve given on YouTube</figcaption>
+<figcaption>Videos of talks I’ve given on YouTube</figcaption>
 </figure>
 </div>
 <section id="intro-slide" class="level2">
@@ -70,15 +71,16 @@
 
  ]]></description>
   <category>misc</category>
-  <guid>https://www.amelia.mn/blog/2020-04-16-presentations/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2020-04-16-presentations/</guid>
   <pubDate>Thu, 16 Apr 2020 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2020-04-16-presentations/YouTubeTalks.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
   <title>Deleting Facebook</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/index.html</link>
+  <link>https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -117,7 +119,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/facebook_friends_rank.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Distribution of friend ranks</figcaption>
+<figcaption>Distribution of friend ranks</figcaption>
 </figure>
 </div>
 <p>So interesting! It looks linear, and the numbers in each category seem to follow <a href="https://en.wikipedia.org/wiki/Dunbar%27s_number">Dunbar’s number</a>. I have 18 people I characterized as 1s (my support clique and sympathy group), 86 who are 2s (my active network), and 202 who are 3s (my personal network).</p>
@@ -125,7 +127,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/facebook_friends_how.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Distribution of how I know people</figcaption>
+<figcaption>Distribution of how I know people</figcaption>
 </figure>
 </div>
 <p>I was homeschooled as a child, so that covers the elementary and middle school years. Cincinnati was my first year of college, Macalester was where I transferred and finished my BA, UCLA was my PhD. I like the big categories of “friend of a friend” and “family of a friend.” I used <code>forcats::fct_lump</code> to lump together small categories, because there were a lot of little categories that I’m less comfortable sharing with the wider internet! But again, cool insight.</p>
@@ -146,7 +148,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/photo_stack.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Stack of 500 photos</figcaption>
+<figcaption>Stack of 500 photos</figcaption>
 </figure>
 </div>
 <p>Imagine 2500 photos! I bought myself a photo album with those plastic sleeves, and have been working on getting the photos in there. I’ve got a few more to go, mostly because Shutterfly sent my prints in random order. I uploaded them chronologically, but that is not how the order arrives. Luckily, they do automatically print metadata on the back of their photos, so some of my prints came with Facebook captions, some came with dates, and some came with file names on the back. I haven’t spent enough time examining the pattern to be able to determine how those different pieces of metadata were chosen. But, they were all helpful when trying to remember when a photo was from.</p>
@@ -154,15 +156,15 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/album.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Photo album with 500 photos</figcaption>
+<figcaption>Photo album with 500 photos</figcaption>
 </figure>
 </div>
 <p>The exercise of printing and organizing 500 photos made me want to do a larger art project and physicalize all my Facebook data– print all 2500 photos, and make all my Facebook comments and Messenger messages into a book, a la <a href="http://feltron.com/">Nicholas Felton</a>. Do you remember when he cataloged all communication for a year, and would print a book of all his communications with a particular person?</p>
 <p>I think this is the one of communications with his girlfriend:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://feltron.tumblr.com/post/95211354121/to-visualize-a-year-of-communication-required"><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/felton_book.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Nicholas Felton’s book of communications</figcaption>
+<p><a href="https://feltron.tumblr.com/post/95211354121/to-visualize-a-year-of-communication-required"><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/felton_book.png" class="img-fluid figure-img" alt="Nicholas Felton’s book of communications"></a></p>
+<figcaption>Nicholas Felton’s book of communications</figcaption>
 </figure>
 </div>
 <p>I was awed by the physicality of that data, but I’m sure my Facebook data would be even larger when printed.</p>
@@ -172,35 +174,35 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/DeactivateDelete.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Do you want to deactivate or delete your account?</figcaption>
+<figcaption>Do you want to deactivate or delete your account?</figcaption>
 </figure>
 </div>
 <p>Then, you’re given a warning, with the option to keep Messenger and to download your information. I had already decided to delete Messenger and downloaded my information twice (once as html and once as json). But, this step might slow you down again.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/DeleteWarning.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Permanently delete account</figcaption>
+<figcaption>Permanently delete account</figcaption>
 </figure>
 </div>
 <p>You have to enter your password to confirm your identity.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/EnterPassword.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Enter password</figcaption>
+<figcaption>Enter password</figcaption>
 </figure>
 </div>
 <p>One final warning,</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/ConfirmAgain.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Confirm again</figcaption>
+<figcaption>Confirm again</figcaption>
 </figure>
 </div>
 <p>and you’re deleted! (Well, not really, because they give you 30 days to change your mind, and if you log in during that time you have to restart the whole process!)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/DeletionEmail.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Deletion email</figcaption>
+<figcaption>Deletion email</figcaption>
 </figure>
 </div>
 <p>I was somewhat surprised that this was the last email I got from Facebook. I was expecting a flurry of “are you sure??” emails as the date of permanent deletion approached. But perhaps they have studied user behavior and realized that if you get this far you aren’t going to change your mind.</p>
@@ -217,15 +219,16 @@
 
  ]]></description>
   <category>misc</category>
-  <guid>https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/</guid>
   <pubDate>Sun, 29 Dec 2019 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/photo_stack.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Key Attributes of a Modern Statistical Computing Tool</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2019-11-26-Key-Attributes/index.html</link>
+  <link>https://www.amelia.mn/blog/2019-11-26-Key-Attributes/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -235,7 +238,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-11-26-Key-Attributes/KeyAttributes.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The print version of this paper!</figcaption>
+<figcaption>The print version of this paper!</figcaption>
 </figure>
 </div>
 <p>Some of the story of how this paper came to be is written into <a href="https://escholarship.org/uc/item/1mm9303x">my dissertation</a>, but I thought I would summarize it briefly here.</p>
@@ -288,15 +291,16 @@
 
  ]]></description>
   <category>papers</category>
-  <guid>https://www.amelia.mn/blog/2019-11-26-Key-Attributes/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2019-11-26-Key-Attributes/</guid>
   <pubDate>Tue, 26 Nov 2019 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2019-11-26-Key-Attributes/KeyAttributes.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>A tidy dress</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/index.html</link>
+  <link>https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -304,7 +308,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/HexDress.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The hex dress</figcaption>
+<figcaption>The hex dress</figcaption>
 </figure>
 </div>
 <p>I’ve been thinking about this dress for at least a year, if not longer. But I finally had a summer where I wasn’t moving, and I decided to make it happen.</p>
@@ -326,7 +330,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/large_hex_fabric.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Too-big hexes</figcaption>
+<figcaption>Too-big hexes</figcaption>
 </figure>
 </div>
 <p>In another shocking bout of preparation, I decided to make a test dress out of a plain fabric before jumping in with the custom fabric. I chose not to use a pattern, but instead pattern off existing garments. I learned how to pattern from existing garments at a sewing makerspace in Northampton, MA while I lived there. Sadly, <a href="https://www.beehivesewing.com/">the makerspace</a> is now defunct, but the owner does have a neat <a href="https://www.etsy.com/shop/BeehiveSewingStudios">etsy shop</a>! (Fun fact– I got a too-big conference tshirt from <a href="http://www.openvisconf.com/2017/">OpenVisConf</a> a few years ago, and I used the material from that shirt to re-make a shirt that fit as my class project, patterning off a Shiny tshirt.) If you’re a loyal reader of this blog, you may remember that I get <a href="https://www.amelia.mn/blog/misc/2014/06/12/Sweater_Variation.html">too attached to particular items of clothing</a>, so patterning off existing garments lets me give old things new life. I modified my tshirt pattern from the makerspace class for the bodice, and patterned the skirt off an Old Navy dress I loved but had worn out.</p>
@@ -336,7 +340,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/small_hex_fabric.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Smaller hex fabric</figcaption>
+<figcaption>Smaller hex fabric</figcaption>
 </figure>
 </div>
 <p>Of course, you want to wash and dry fabric before you work with it, to avoid issues with shrinkage. I washed and dried my fabric and was on to the second-hardest part of the project: cutting out the pieces for the final dress. I wanted everything to be straight, upright, and ideally match up along seams. So hard! The other tricky thing was the neckband, which I knew would look busy if I cut it out of the patterned fabric. I thought of trying to buy some plain white jersey for the neckband, but the store I looked at didn’t have anything that matched the fabric weight. But, when my Spoonflower order arrived, I realized there was a little white edge outside the print area that I could use! Very fortuitous.</p>
@@ -346,14 +350,14 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/sewing.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Sewing the hems of my dress</figcaption>
+<figcaption>Sewing the hems of my dress</figcaption>
 </figure>
 </div>
 <p>Once the dress was finished, I put it on and she did an awesome photoshoot of me in front of all the photogenic walls in my neighborhood!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/HexDress2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The hex dress in front of a different wall</figcaption>
+<figcaption>The hex dress in front of a different wall</figcaption>
 </figure>
 </div>
 <p>The dress made its debut at the <a href="https://rnorthconference.github.io/">2019 noRth conference</a>, where it was a definite hit. I’m excited to see how much it sticks out in group photos!</p>
@@ -381,15 +385,16 @@
 
  ]]></description>
   <category>misc</category>
-  <guid>https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/</guid>
   <pubDate>Sat, 17 Aug 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/HexDress.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Wikipedia in the classroom: Gender, argh</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/index.html</link>
+  <link>https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -450,15 +455,16 @@
 
  ]]></description>
   <category>teaching</category>
-  <guid>https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/</guid>
   <pubDate>Tue, 20 Mar 2018 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/Jenny_wikipedia.png" medium="image" type="image/png" height="117" width="144"/>
 </item>
 <item>
   <title>Dagstuhl reflections</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/index.html</link>
+  <link>https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -466,7 +472,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/Dagstuhl.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Schloss Dagstuhl</figcaption>
+<figcaption>Schloss Dagstuhl</figcaption>
 </figure>
 </div>
 <p><a href="http://www.dagstuhl.de/">Schloss Dagstuhl</a> is a historic castle that hosts workshops on topics related to computer science. The idea is to bring a small group of people (ours was about 35) together for a week to discuss a specific topic, with the goal of advancing the discipline.</p>
@@ -602,15 +608,16 @@
 
  ]]></description>
   <category>conferences</category>
-  <guid>https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/</guid>
   <pubDate>Sun, 11 Feb 2018 17:43:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/Dagstuhl.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>More guys</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2018-02-11-More-guys/index.html</link>
+  <link>https://www.amelia.mn/blog/2018-02-11-More-guys/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -628,8 +635,8 @@
 <p>I don’t want to hear about gender, I want to hear about the work. If you are going to reference a specific person, of course it is okay to indicate their gender and use their pronouns. But, if you’re going to speak about a group of two or more people in the third person, please try to remove the word “guys” from your vocabulary. We’re all people.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://prestosketching.com/blog/2018/01/27/easy-ways-to-show-more-diversity-in-your-sketches/"><img src="https://www.amelia.mn/blog/2018-02-11-More-guys/faces-hair.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Many diverse face sketches</figcaption>
+<p><a href="http://prestosketching.com/blog/2018/01/27/easy-ways-to-show-more-diversity-in-your-sketches/"><img src="https://www.amelia.mn/blog/2018-02-11-More-guys/faces-hair.jpg" class="img-fluid figure-img" alt="Many diverse face sketches"></a></p>
+<figcaption>Many diverse face sketches</figcaption>
 </figure>
 </div>
 <p>[Image via <a href="http://prestosketching.com/blog/2018/01/27/easy-ways-to-show-more-diversity-in-your-sketches/">prestosketching</a>]</p>
@@ -638,23 +645,24 @@
 
  ]]></description>
   <category>conferences</category>
-  <guid>https://www.amelia.mn/blog/2018-02-11-More-guys/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2018-02-11-More-guys/</guid>
   <pubDate>Sun, 11 Feb 2018 16:53:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-More-guys/faces-hair.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Scientists Programming</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/index.html</link>
+  <link>https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/</link>
   <description><![CDATA[ 
+
 
 
 
 <p>At the Dagstuhl seminar, <a href="http://web.cs.unlv.edu/stefika/">Andreas Stefik</a> asked me to speak about “Scientists Programming.” I’m not sure whether he did this on purpose, but by assigning people their talk titles, he drew us a little outside our comfort zone and got us to think more deeply. “Scientists Programming” wasn’t a talk that I had in my pocket, and wasn’t what I would have proposed, but it was fun to pull together. It made me realize that scientists programming is actually one of my primary interests, although I’ve never written that anywhere before. Felienne wrote up a <a href="http://www.felienne.com/archives/5900">nice summary</a> of my talk, but I wanted to write down some thoughts of my own.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flickr.com/photos/clement127/15236140202/in/photolist-pdncEs-rabMJr-qSKYvp-qPeSji-rmJJdW-btryhH-qK7VJj-cm1Hb-qdaYpW-fWAdZ-9WhgHt-oLa2TT-2vuJD-2vuKd-mk1ib-qAU7wq-r3voVM-8CAcWc-9oggZ-7w3hnt-56tdL-oLa3fV-2vuPq-2vuJ5-oLqNAT-otW1FH-hGxPy-9Gbfpi-kyh6Q-wL7Y9q-anxVft-otW5n1-bWGa2P-qmxh8-otWG7V-nCpBGK-oLa2C2-pqcggk-61RzgT-dgrA8g-gbGJp-nBBqqg-anxVyP-6KVaRB-anAxnS-anxJWP-oJoZ4d-rcEdVP-aySHmX-anxJdr"><img src="https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/ScientistsProgramming.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Female lego scientist</figcaption>
+<p><a href="https://www.flickr.com/photos/clement127/15236140202/in/photolist-pdncEs-rabMJr-qSKYvp-qPeSji-rmJJdW-btryhH-qK7VJj-cm1Hb-qdaYpW-fWAdZ-9WhgHt-oLa2TT-2vuJD-2vuKd-mk1ib-qAU7wq-r3voVM-8CAcWc-9oggZ-7w3hnt-56tdL-oLa3fV-2vuPq-2vuJ5-oLqNAT-otW1FH-hGxPy-9Gbfpi-kyh6Q-wL7Y9q-anxVft-otW5n1-bWGa2P-qmxh8-otWG7V-nCpBGK-oLa2C2-pqcggk-61RzgT-dgrA8g-gbGJp-nBBqqg-anxVyP-6KVaRB-anAxnS-anxJWP-oJoZ4d-rcEdVP-aySHmX-anxJdr"><img src="https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/ScientistsProgramming.png" class="img-fluid figure-img" alt="Female lego scientist"></a></p>
+<figcaption>Female lego scientist</figcaption>
 </figure>
 </div>
 <p>In the talk, I broke scientists’ programming tasks three categories:</p>
@@ -731,15 +739,16 @@ boys_2015</code></pre>
 
  ]]></description>
   <category>conferences</category>
-  <guid>https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/</guid>
   <pubDate>Sun, 11 Feb 2018 15:43:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/ScientistsProgramming.png" medium="image" type="image/png" height="106" width="144"/>
 </item>
 <item>
   <title>R syntax comparison</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/index.html</link>
+  <link>https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -747,8 +756,8 @@ boys_2015</code></pre>
 <p>When I posted the cheatsheet online, I got some critical feedback, which I would like to address in the form of a FAQ.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/rstudio/cheatsheets/raw/master/syntax.pdf"><img src="https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/SyntaxComparisonCheatsheet.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">R syntax comparison cheatsheet</figcaption>
+<p><a href="https://github.com/rstudio/cheatsheets/raw/master/syntax.pdf"><img src="https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/SyntaxComparisonCheatsheet.jpg" class="img-fluid figure-img" alt="R syntax comparison cheatsheet"></a></p>
+<figcaption>R syntax comparison cheatsheet</figcaption>
 </figure>
 </div>
 <p><strong>Q: Why didn’t you include data.table syntax?</strong></p>
@@ -787,15 +796,16 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 
  ]]></description>
   <category>teaching</category>
-  <guid>https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/</guid>
   <pubDate>Sun, 11 Feb 2018 14:43:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/SyntaxComparisonCheatsheet.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>On microaggressions</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2017-12-19-On-Microaggressions/index.html</link>
+  <link>https://www.amelia.mn/blog/2017-12-19-On-Microaggressions/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -854,15 +864,16 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 
  ]]></description>
   <category>conferences</category>
-  <guid>https://www.amelia.mn/blog/2017-12-19-On-Microaggressions/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2017-12-19-On-Microaggressions/</guid>
   <pubDate>Tue, 19 Dec 2017 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2017-12-19-On-Microaggressions/grr.png" medium="image" type="image/png" height="68" width="144"/>
 </item>
 <item>
   <title>What are the chances my name is Amanda?</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2017-01-13-Amanda/index.html</link>
+  <link>https://www.amelia.mn/blog/2017-01-13-Amanda/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -874,7 +885,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2017-01-13-Amanda/amelias-1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Amelias</figcaption>
+<figcaption>Amelias</figcaption>
 </figure>
 </div>
 <p>Instead, people seem to be taking an approximate age and then just grabbing a name out of the hat. In other words, they are using the <em>Name|Age</em> method. With that in mind, let’s see how likely Amanda really is. I’m focusing just on girls names for this analysis, mostly because Amelia isn’t a common boy’s name (see my data appendix).</p>
@@ -929,8 +940,8 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <p>[This is the part of the post that is responsive, so you probably want to head to <a href="https://ameliamn.shinyapps.io/Amanda/">my shiny server</a>.]</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://ameliamn.shinyapps.io/Amanda/"><img src="https://www.amelia.mn/blog/2017-01-13-Amanda/ShinyScreenShot.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">You want to go to my server version</figcaption>
+<p><a href="https://ameliamn.shinyapps.io/Amanda/"><img src="https://www.amelia.mn/blog/2017-01-13-Amanda/ShinyScreenShot.png" class="img-fluid figure-img" alt="You want to go to my server version"></a></p>
+<figcaption>You want to go to my server version</figcaption>
 </figure>
 </div>
 </section>
@@ -943,7 +954,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2017-01-13-Amanda/missingdata-1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Missing data</figcaption>
+<figcaption>Missing data</figcaption>
 </figure>
 </div>
 <table class="table">
@@ -1038,13 +1049,13 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2017-01-13-Amanda/nameletters-1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Letters over time</figcaption>
+<figcaption>Letters over time</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2017-01-13-Amanda/nameletters-2.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">A over time</figcaption>
+<figcaption>A over time</figcaption>
 </figure>
 </div>
 
@@ -1054,15 +1065,16 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 
  ]]></description>
   <category>misc</category>
-  <guid>https://www.amelia.mn/blog/2017-01-13-Amanda/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2017-01-13-Amanda/</guid>
   <pubDate>Fri, 13 Jan 2017 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2017-01-13-Amanda/amelias-1.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>Census data: A rant</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2016-11-16-CensusRant/index.html</link>
+  <link>https://www.amelia.mn/blog/2016-11-16-CensusRant/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1071,8 +1083,8 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <p>First, some motivation. A group of students in my class has found some interesting data at the state level, which they think may be related to demographic characteristics of states, like population, poverty level, education, racial makeup, etc. This is where my amnesia kicks in. “It should be really easy to find data like that!” I say. “Let’s go to the <a href="http://factfinder.census.gov/">American FactFinder website</a> and I’ll show you how it works.” We bumble around on the site for a while, clicking on “Data Main” (a page of screenshots and news) “Data tools and apps” (actually has the link to what we want, but buried among other unrelated things), etc. Finally I manage to find FactFinder main page. We select our geography (states) and dismiss the box that is trying to get us to add yet another geography. We search for “poverty” and voila! …the ugliest dataset you have ever seen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&amp;prodType=table"><img src="https://www.amelia.mn/blog/2016-11-16-CensusRant/FactFinder.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">An ugly table</figcaption>
+<p><a href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&amp;prodType=table"><img src="https://www.amelia.mn/blog/2016-11-16-CensusRant/FactFinder.png" class="img-fluid figure-img" alt="An ugly table"></a></p>
+<figcaption>An ugly table</figcaption>
 </figure>
 </div>
 <p>I always encourage students to work with data programmatically, but even I have to admit that it would be easier to delete columns and add better names in a spreadsheet. The column names are in multiple <em>rows</em> for crying out loud! Plus, what you would like to be observations (states) are actually variables. I am now imagining the <code>gather</code>/<code>spread</code> in my future. I want students to understand data cleaning and wrangling, but I don’t want their first experience to be hellish. Even my heart is sinking, thinking about doing this all myself.</p>
@@ -1085,14 +1097,14 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-11-16-CensusRant/RaceSearch.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Results of searching for `race’</figcaption>
+<figcaption>Results of searching for `race’</figcaption>
 </figure>
 </div>
 <p>And even if I locate a variable I am interested in, the descriptions are pretty hard to parse.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-11-16-CensusRant/VariableDescription.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Variable description</figcaption>
+<figcaption>Variable description</figcaption>
 </figure>
 </div>
 <p>The result of this is that it would be all too easy to think you were getting one thing and actually request another. Plus, when you generate your list of variable strings like <code>B02001_009E</code>, you also need to maintain a corresponding list of human-readable names like <code>TwoOrMoreCount</code>. If I were writing a peer-reviewed research paper, I would be grateful for the huge amount of detailed breakdowns and the API access, but for a semester-long student project in a class focused on modeling, it’s too much.</p>
@@ -1107,7 +1119,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-11-16-CensusRant/SocialExplorer.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Social Explorer</figcaption>
+<figcaption>Social Explorer</figcaption>
 </figure>
 </div>
 <p>It allows you to select your geography, then you can search by keyword or scroll through a manageable list of variable names and add them to a custom table. You can preview the data (it looks like states will be the variables, but never fear, this changes in the download), then choose the format you want to export it in. Other than a slight loss of reproducibility, the only drawback in my mind is that the variable names are still unintelligible, so you have to also download a data dictionary, but it <em>makes you a custom dictionary</em> based on the variables you chose so you don’t have to wade through the entire thing!</p>
@@ -1119,15 +1131,16 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 
  ]]></description>
   <category>teaching</category>
-  <guid>https://www.amelia.mn/blog/2016-11-16-CensusRant/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2016-11-16-CensusRant/</guid>
   <pubDate>Wed, 16 Nov 2016 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-11-16-CensusRant/FactFinder.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 <item>
   <title>Statistics graduate school advice</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2016-10-19-GradSchool/index.html</link>
+  <link>https://www.amelia.mn/blog/2016-10-19-GradSchool/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1201,15 +1214,16 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 
  ]]></description>
   <category>teaching</category>
-  <guid>https://www.amelia.mn/blog/2016-10-19-GradSchool/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2016-10-19-GradSchool/</guid>
   <pubDate>Wed, 19 Oct 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-10-19-GradSchool/PhDcomic.gif" medium="image" type="image/gif"/>
 </item>
 <item>
   <title>Worth adding to your inbox</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2016-06-23-Listservs/index.html</link>
+  <link>https://www.amelia.mn/blog/2016-06-23-Listservs/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1224,15 +1238,16 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 
  ]]></description>
   <category>misc</category>
-  <guid>https://www.amelia.mn/blog/2016-06-23-Listservs/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2016-06-23-Listservs/</guid>
   <pubDate>Thu, 23 Jun 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-06-23-Listservs/InboxZero.png" medium="image" type="image/png" height="63" width="144"/>
 </item>
 <item>
   <title>OpenVisConf talk transcript</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/index.html</link>
+  <link>https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1243,7 +1258,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/text_viz.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">tf-idf</figcaption>
+<figcaption>tf-idf</figcaption>
 </figure>
 </div>
 <section id="talk" class="level4">
@@ -1256,16 +1271,12 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <section id="transcript" class="level4">
 <h4 class="anchored" data-anchor-id="transcript">Transcript:</h4>
 <p>The title of my talk is “Do you know Nothing when you see it?”.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.flickr.com/photos/hungry_i/66962027/in/photolist-6VctH-zr4aM-e9mH1t-6XLhY9-qo4Bms-8gyi5q-zr357-4jeF2Y-r8nhEr-3BzwrF-hWLU1-zhqjfS-6akRDL-8oHoz1-Env5V-dLro6N-6Ba6Qx-hcQm7X-45WiW8-45Wj1K-nWoLpt-8Qp68q-6a6dd5-aqc1Ri-dZmw2h-79ykph-rxzvJj-uu5px-JCCFC-9tWqkt-6EGjEv-6Juo8s-eCaru-6VMiSX-dSGL3M-6bsbPs-8cueSK-4waMSd-7zWdYW-5WrAQr-MtpXy-6gH759-MtpXJ-a7uXuC-4THFy2-69GvS-GyDeK-EntY3-a1bJ4u-8HgEn"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/titleslide.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="https://www.flickr.com/photos/hungry_i/66962027/in/photolist-6VctH-zr4aM-e9mH1t-6XLhY9-qo4Bms-8gyi5q-zr357-4jeF2Y-r8nhEr-3BzwrF-hWLU1-zhqjfS-6akRDL-8oHoz1-Env5V-dLro6N-6Ba6Qx-hcQm7X-45WiW8-45Wj1K-nWoLpt-8Qp68q-6a6dd5-aqc1Ri-dZmw2h-79ykph-rxzvJj-uu5px-JCCFC-9tWqkt-6EGjEv-6Juo8s-eCaru-6VMiSX-dSGL3M-6bsbPs-8cueSK-4waMSd-7zWdYW-5WrAQr-MtpXy-6gH759-MtpXJ-a7uXuC-4THFy2-69GvS-GyDeK-EntY3-a1bJ4u-8HgEn"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/titleslide.jpg" class="img-fluid"></a></p>
 <p>When I say nothing, I don’t mean nothing like television static, because that’s actually not nothing, that’s something. It’s the image, it just got garbled when it was going through the air. I mean something more like this,</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/randomness.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">random noise</figcaption>
+<figcaption>random noise</figcaption>
 </figure>
 </div>
 <p>but not really even this, because this is random noise that I generated with my computer. It’s pseudo-random, and probably your awesome human brain is finding patterns like <a href="http://deepdreamgenerator.com/">DeepDream</a> already. You can see the bunnies and hearts and clouds in my random data.</p>
@@ -1273,7 +1284,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/standback.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Stand back, I’m going to try… statistics</figcaption>
+<figcaption>Stand back, I’m going to try… statistics</figcaption>
 </figure>
 </div>
 <p>I am a statistics professor. That means whenever I get in front of a group of people, I try to sneakily teach them some statistics.</p>
@@ -1281,14 +1292,14 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <p>In order to answer those questions, we need context about the variation. The first example that came to mind when I was preparing this talk was ants. I don’t know why. Imagine you had some ants, and you had some big-looking ants and little-looking ants.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flickr.com/photos/bareego/6657872621/in/photolist-b9kkzg-325Ep2-eYdznk-9SBTFj-6tWfjj-6oC1yN-8TifHh-6iAU8p-5nWn6B-6MBDMu-BoQci-dUyXLF-9QxFLR-a51iiR-4V4xA1-558iot-g7NJrP-fktCLP-xhLeW-6sN6Mo-8v9u8H-ozavpA-4eTAda-prJXTS-4ZSm8T-9AbyuJ-YTmUb-bzKnV-4dyx2v-2ZicrS-5Tu9ez-6h1U6q-6i17hn-7iuuib-kAkPyY-n4U475-5qduaP-N4Ws3-qjGbCr-osHjb-tEsAP-3UN759-o76HA-7KjG9k-67edp-xdMVP5-6zLxaT-pgWHT-8k3imL-smJAAa/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/bareego.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Big ant</figcaption>
+<p><a href="https://www.flickr.com/photos/bareego/6657872621/in/photolist-b9kkzg-325Ep2-eYdznk-9SBTFj-6tWfjj-6oC1yN-8TifHh-6iAU8p-5nWn6B-6MBDMu-BoQci-dUyXLF-9QxFLR-a51iiR-4V4xA1-558iot-g7NJrP-fktCLP-xhLeW-6sN6Mo-8v9u8H-ozavpA-4eTAda-prJXTS-4ZSm8T-9AbyuJ-YTmUb-bzKnV-4dyx2v-2ZicrS-5Tu9ez-6h1U6q-6i17hn-7iuuib-kAkPyY-n4U475-5qduaP-N4Ws3-qjGbCr-osHjb-tEsAP-3UN759-o76HA-7KjG9k-67edp-xdMVP5-6zLxaT-pgWHT-8k3imL-smJAAa/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/bareego.jpg" class="img-fluid figure-img" alt="Big ant"></a></p>
+<figcaption>Big ant</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flickr.com/photos/duncan/3189039332/in/photolist-5RNEhL-rZEoXK-nYZLfC-6nmrKx-pY9yMV-eRhnD5-pSNaGV-6ofFu5-et6vZ7-oD6Ho2-a272Uq-drzFK2-a95asp-nvsEmF-6fVHz9-36MAEJ-9Y51BL-3wGr3i-2KZa9r-6wfRXP-81NL4r-8xKxZp-6nTDi1-9XUUEw-5do5mX-opjwhP-o4kqqh-aaYVKv-83tTzL-c9T3bY-6FyRKs-6sJfKz-eXfmX9-nJttup-4R4gHx-6FyRLq-bMSpZK-5rueY2-6o9yu6-a6ZWN6-bGsWE6-6K9QaB-nJtF1m-69MiSx-bq4sGw-2KZa9M-8gkRfi-nHzf5N-am8cba-4VKSnJ%22%3E%3Cimg%20src=%22%7B%7B%20site.baseurl%20%7D%7D/img/duncan.jpg"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/duncan.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Smaller ants</figcaption>
+<p><a href="https://www.flickr.com/photos/duncan/3189039332/in/photolist-5RNEhL-rZEoXK-nYZLfC-6nmrKx-pY9yMV-eRhnD5-pSNaGV-6ofFu5-et6vZ7-oD6Ho2-a272Uq-drzFK2-a95asp-nvsEmF-6fVHz9-36MAEJ-9Y51BL-3wGr3i-2KZa9r-6wfRXP-81NL4r-8xKxZp-6nTDi1-9XUUEw-5do5mX-opjwhP-o4kqqh-aaYVKv-83tTzL-c9T3bY-6FyRKs-6sJfKz-eXfmX9-nJttup-4R4gHx-6FyRLq-bMSpZK-5rueY2-6o9yu6-a6ZWN6-bGsWE6-6K9QaB-nJtF1m-69MiSx-bq4sGw-2KZa9M-8gkRfi-nHzf5N-am8cba-4VKSnJ%22%3E%3Cimg%20src=%22%7B%7B%20site.baseurl%20%7D%7D/img/duncan.jpg"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/duncan.jpg" class="img-fluid figure-img" alt="Smaller ants"></a></p>
+<figcaption>Smaller ants</figcaption>
 </figure>
 </div>
 <p>And you thought maybe I got unlucky– I got five big-looking ants and five little-looking ants, but really they’re both draws from the same population. And overall the groups don’t have any difference in size. But, you observed differences in the group sizes of three-quarters of an inch.</p>
@@ -1297,13 +1308,13 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/illinoisspringfield.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Blue team</figcaption>
+<figcaption>Blue team</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/illinoisspringfield2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Pink team</figcaption>
+<figcaption>Pink team</figcaption>
 </figure>
 </div>
 <p>We mapped their heights, we found the average height, and we learned the average height between the groups was different. Again, we observed a difference of about three quarters of an inch.</p>
@@ -1312,35 +1323,35 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/CI_mean.gif" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">point estimate, plus or minus the standard error times something that has to do with some distribution</figcaption>
+<figcaption>point estimate, plus or minus the standard error times something that has to do with some distribution</figcaption>
 </figure>
 </div>
 <p>And maybe you’re thinking about some pages in your textbook that had standard error calculations, with a bunch of square roots and fractions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/SE_page1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Standard error forumas</figcaption>
+<figcaption>Standard error forumas</figcaption>
 </figure>
 </div>
 <p>We’re thinking about a difference of means. So, we think, we can just pick that first formula. But really, it’s worse than that. There’s all these different proofs about if you have different group sizes, and if the variances are different.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/SE_page2.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Standard error formulas</figcaption>
+<figcaption>Standard error formulas</figcaption>
 </figure>
 </div>
 <p>So then you need to pick that formula out. And then it is worse than <strong>that</strong>, because once you have the standard error calculation, you have to know the degrees of freedom you’re going to look at in your distribution.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/SE_page3.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Standard error formulas</figcaption>
+<figcaption>Standard error formulas</figcaption>
 </figure>
 </div>
 <p>And even I– I have a Ph.D.&nbsp;in statistics– I get the heebie-jeebies if you ask me to come up with the right standard error computation. Maybe you’re better at statistics than me, and came up with the right standard error, found the degrees of freedom. Now you’re going to look at some idealized distribution.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://en.wikipedia.org/wiki/Student%27s_t-distribution"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/Student_t_pdf.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">T distribution</figcaption>
+<p><a href="https://en.wikipedia.org/wiki/Student%27s_t-distribution"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/Student_t_pdf.jpg" class="img-fluid figure-img" alt="T distribution"></a></p>
+<figcaption>T distribution</figcaption>
 </figure>
 </div>
 <p>We call this a sampling distribution. It’s not a distribution of data, it’s a distribution of statistics. Statistics are numbers computed from other numbers. In this case we had the average heights of the two tug of war teams and we’re looking at their difference.</p>
@@ -1351,7 +1362,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/randomization.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Randomization distribution</figcaption>
+<figcaption>Randomization distribution</figcaption>
 </figure>
 </div>
 <p>This distribution is centered around zero because it’s a null distribution. And then we can calculate where is 95% of the data? What’s the middle 95%? And then sort of say “if there really was no difference between the heights of these two tug of war teams, what sorts of differences might we observe?”</p>
@@ -1360,7 +1371,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/randomizationants.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Randomization distribution</figcaption>
+<figcaption>Randomization distribution</figcaption>
 </figure>
 </div>
 <p>Randomization distributions are not always symmetric. And they’re not always smooth. They can have these lumps. But, again, we can compute where the middle 95% of the data is. So for the ants it goes from negative 0.5 to 0.5. The observed difference of three-quarters of an inch, that would be pretty weird to see if there was no difference between my two different ant size groups.</p>
@@ -1376,7 +1387,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/boostrap_dist.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bootstrap distribution”</figcaption>
+<figcaption>Bootstrap distribution”</figcaption>
 </figure>
 </div>
 <p>The bootstrap distributuon might not be symmetric. It is centered around the estimate from the real data. In this case, centered around the 0.75. And then it shows us some possible numbers we could have observed.</p>
@@ -1385,7 +1396,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/bootstrap_ant.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bootstrap distribution</figcaption>
+<figcaption>Bootstrap distribution</figcaption>
 </figure>
 </div>
 <p>So, we think there is a relationship. One of those groups is bigger than the other.</p>
@@ -1393,7 +1404,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/openintro.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Open Intro</figcaption>
+<figcaption>Open Intro</figcaption>
 </figure>
 </div>
 <p>If you want other resources, Jonathan Stray has a five minute lighting talk from NICAR, <a href="http://bit.ly/OneWeirdStatsTrick">“Solve Every Statistics Problem with One Weird Trick”</a>, and that one weird trick is randomization, so you kind of know about that.</p>
@@ -1401,14 +1412,14 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <p>And Tim Hesterberg, has a paper, <a href="http://bit.ly/KnowAboutBootstrap">“What Teachers should know about the Bootstrap”</a>. I think it really should be called what everyone should know about the bootstrap.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://www.timhesterberg.net/home/bio"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/tim_hesterberg.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Tim Hesterberg</figcaption>
+<p><a href="http://www.timhesterberg.net/home/bio"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/tim_hesterberg.jpg" class="img-fluid figure-img" alt="Tim Hesterberg"></a></p>
+<figcaption>Tim Hesterberg</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/howdoesitrelate.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">What does this have to do with visualization?</figcaption>
+<figcaption>What does this have to do with visualization?</figcaption>
 </figure>
 </div>
 <p>So what does this all have to do with visualization? We’re going to try to do the same thing with visualization as we did with numbers. Try to say is this different than nothing? What are other things we could have observed? And this is going to help us try to not make visualizations that don’t show anything.</p>
@@ -1416,14 +1427,14 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/lingerie.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Lingerie chart?</figcaption>
+<figcaption>Lingerie chart?</figcaption>
 </figure>
 </div>
 <p>although I like making fun of those too. And I don’t mean showing nothing in the way Darrell Huff is talking about in the 1950s with How to Lie with Statistics.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/Huff.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Darrell Huff</figcaption>
+<figcaption>Darrell Huff</figcaption>
 </figure>
 </div>
 <p>Instead, I’m talking about using techniques like randomization. There’s an awesome paper by <a href="http://hadley.nz/">Hadley Wickham</a>, <a href="http://www-stat.wharton.upenn.edu/~buja/">Andreas Buja</a>, <a href="http://dicook.github.io/">Di Cook</a> and <a href="http://hofmann.public.iastate.edu/">Heike Hofmann</a>.</p>
@@ -1431,29 +1442,29 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="column" style="width:20%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://hadley.nz/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/hadley.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Hadley Wickham</figcaption>
+<p><a href="http://hadley.nz/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/hadley.jpg" class="img-fluid figure-img" alt="Hadley Wickham"></a></p>
+<figcaption>Hadley Wickham</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:20%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://www-stat.wharton.upenn.edu/~buja/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/andreas.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Andreas Buja</figcaption>
+<p><a href="http://www-stat.wharton.upenn.edu/~buja/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/andreas.jpg" class="img-fluid figure-img" alt="Andreas Buja"></a></p>
+<figcaption>Andreas Buja</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:20%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://dicook.github.io/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/di.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Di Cook</figcaption>
+<p><a href="http://dicook.github.io/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/di.jpg" class="img-fluid figure-img" alt="Di Cook"></a></p>
+<figcaption>Di Cook</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:20%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://hofmann.public.iastate.edu/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/heike.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Heike Hofmann</figcaption>
+<p><a href="http://hofmann.public.iastate.edu/"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/heike.jpg" class="img-fluid figure-img" alt="Heike Hofmann"></a></p>
+<figcaption>Heike Hofmann</figcaption>
 </figure>
 </div>
 </div>
@@ -1461,8 +1472,8 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <p>It’s called <a href="http://bit.ly/graphical_inference">Graphical Inference for InfoVis</a>. I think it’s really worth checking out. One of the techniques they suggest in the paper is called the lineup.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flickr.com/photos/mike_crane/5188333652/in/photolist-8UtyQu-syKEK-9SHXTx-2azAWL-bCqhR4-7rSB2w-syKgn-bCqiAv-bCqhHt-bCqhWH-9WLjQh-bpvnxY-jHWcxM-bpvniA-Bh14D-bpvnCL-9VekKT-9Vh1Jo-9Vh4TS-765vEj-9Vh9Qd-bmKeHQ-ALLCXL-9Vhc17-9Veatv-oW5cC4-9VebyX-9Vef9H-9VgZFS-9Vh1wy-9VhbtN-9VekZi-9Vh2eJ-9Vh6es-9Vh1jA-9VhaeJ-9Vh8U9-9Vhaqo-9VhbLQ-9Vekxi-9Vec4p-9Vh7RL-9Vh16W-72qhos-9Vh6P5-9VgZeL-9VenuT-9Vea3D-9VeeSa-72mhJi"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/mike_crane.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Lineup</figcaption>
+<p><a href="https://www.flickr.com/photos/mike_crane/5188333652/in/photolist-8UtyQu-syKEK-9SHXTx-2azAWL-bCqhR4-7rSB2w-syKgn-bCqiAv-bCqhHt-bCqhWH-9WLjQh-bpvnxY-jHWcxM-bpvniA-Bh14D-bpvnCL-9VekKT-9Vh1Jo-9Vh4TS-765vEj-9Vh9Qd-bmKeHQ-ALLCXL-9Vhc17-9Veatv-oW5cC4-9VebyX-9Vef9H-9VgZFS-9Vh1wy-9VhbtN-9VekZi-9Vh2eJ-9Vh6es-9Vh1jA-9VhaeJ-9Vh8U9-9Vhaqo-9VhbLQ-9Vekxi-9Vec4p-9Vh7RL-9Vh16W-72qhos-9Vh6P5-9VgZeL-9VenuT-9Vea3D-9VeeSa-72mhJi"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/mike_crane.jpg" class="img-fluid figure-img" alt="Lineup"></a></p>
+<figcaption>Lineup</figcaption>
 </figure>
 </div>
 <p>The idea of the lineup is you put your data, your plot that you think shows something real, in a lineup with a bunch of innocent plots. If you can pick your accused plot out of the lineup of innocent plots, that means that it’s somehow different than nothing.</p>
@@ -1470,14 +1481,14 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/random6.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Random plot</figcaption>
+<figcaption>Random plot</figcaption>
 </figure>
 </div>
 <p>Instead of looking at them all in sequence, I want to look at them all together. Let’s take an example. This is some data about loans. And I’m plotting the balance of a loan against the income. And I’m coloring by whether or not a person defaulted on their loan.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/default.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Loan defaults</figcaption>
+<figcaption>Loan defaults</figcaption>
 </figure>
 </div>
 <p>And my human brain sees a pattern. I say, it looks like people who default on loans are the ones that have really high loan balances. It doesn’t matter if they’re rich or poor, it’s just those high loan balances.</p>
@@ -1485,7 +1496,7 @@ bootstrap &lt;- do(1000) * diff(mean(~height|team, data=resample(tugowar, groups
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/default_perm.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Loan defaults in lineup</figcaption>
+<figcaption>Loan defaults in lineup</figcaption>
 </figure>
 </div>
 <p>There’s 20 plots, because we often use a standard p-value cutoff of 0.05, which is the same as one out of 20. If you guessed randomly, you’d get the right one 1 out of 20 times even guessing at random.</p>
@@ -1509,7 +1520,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/visual_t2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Visual t-test</figcaption>
+<figcaption>Visual t-test</figcaption>
 </figure>
 </div>
 <p>It says decrypt, if you’re good at decrypting quickly, you could see what it is. But the true data is in position 5.</p>
@@ -1521,7 +1532,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/ts.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Time series</figcaption>
+<figcaption>Time series</figcaption>
 </figure>
 </div>
 <p>So again, the real data is in there. Again, look at it and try to see if you can guess which one it is. And now we’re going to try and decrypt. So there’s the string again.</p>
@@ -1532,8 +1543,8 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <p>And then I’m going to talk about that in terms of plots. So some of this comes from joint work with a colleague of mine, <a href="http://www.vpri.org/html/team_bios/aran_lunzer.htm">Aran Lunzer</a>, we worked together at the Communications Design Group. This is the highest quality image of Aran I could find.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="http://www.vpri.org/html/team_bios/aran_lunzer.htm"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/397f9d5.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Aran Lunzer</figcaption>
+<p><a href="http://www.vpri.org/html/team_bios/aran_lunzer.htm"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/397f9d5.jpg" class="img-fluid figure-img" alt="Aran Lunzer"></a></p>
+<figcaption>Aran Lunzer</figcaption>
 </figure>
 </div>
 <p>I guess it’s almost life size in the theater, so maybe that’s fine.</p>
@@ -1554,14 +1565,14 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/MAUP.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Modifiable Areal Unit Problem</figcaption>
+<figcaption>Modifiable Areal Unit Problem</figcaption>
 </figure>
 </div>
 <p>This can happen with <a href="http://bit.ly/exp_gerrymander">gerrymandering</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/gerrymandering.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Gerrymandering</figcaption>
+<figcaption>Gerrymandering</figcaption>
 </figure>
 </div>
 <p>It can happen with different county and zip code data, these different levels of polygons. And there are a lot of statistical problems that go along with that.</p>
@@ -1569,15 +1580,15 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/spatial_agg.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Spatial aggregation</figcaption>
+<figcaption>Spatial aggregation</figcaption>
 </figure>
 </div>
 <p>It takes point data about earthquakes in southern California and aggregates them into polygons. But instead of making fixed polygons, you can scale and rotate and move the polygons to see some other possible values of the visualization you could have gotten. So you start with your default values and maybe you think there are very obvious trends everyone should be aware of. You can tell some great story about why there is a hot spot of earthquakes in this one place.</p>
 <p>But then when you start manipulating the polygons, you can see there are many other possible patterns you could have created.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flickr.com/photos/sjrohde/4687848929"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/sjrohde.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Nothing, AZ</figcaption>
+<p><a href="https://www.flickr.com/photos/sjrohde/4687848929"><img src="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/sjrohde.jpg" class="img-fluid figure-img" alt="Nothing, AZ"></a></p>
+<figcaption>Nothing, AZ</figcaption>
 </figure>
 </div>
 <p>What I want you to take away from this talk is that there are statistical tasks and very analogous visualization tasks. In statistics we want to know if two numbers are different, which is like knowing if one number is different than zero. We could use tools like randomization to answer that question. In the visualization world we can use randomization in a different way to answer the question, is this plot different than nothing?</p>
@@ -1588,15 +1599,16 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 
  ]]></description>
   <category>conferences</category>
-  <guid>https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/</guid>
   <pubDate>Mon, 16 May 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/text_viz.png" medium="image" type="image/png" height="71" width="144"/>
 </item>
 <item>
   <title>Do you know Nothing when you see it?</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2016-04-25-OpenVisConf/index.html</link>
+  <link>https://www.amelia.mn/blog/2016-04-25-OpenVisConf/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1637,15 +1649,16 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 
  ]]></description>
   <category>conferences</category>
-  <guid>https://www.amelia.mn/blog/2016-04-25-OpenVisConf/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2016-04-25-OpenVisConf/</guid>
   <pubDate>Mon, 25 Apr 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-04-25-OpenVisConf/titleslide.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>What’s wrong with being data-collecting pigeons?</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2016-04-08-participatory_sensing/index.html</link>
+  <link>https://www.amelia.mn/blog/2016-04-08-participatory_sensing/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1656,7 +1669,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-04-08-participatory_sensing/steps.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">My step habits</figcaption>
+<figcaption>My step habits</figcaption>
 </figure>
 </div>
 <p>As you can see, I get an average of 10,000 steps a day, with quite a bit of variance. I hadn’t realized this until recently, but it seems like since I moved from LA to Northampton (August 2015) I’ve been getting progressively fewer steps. I’m trying to turn that around, but it hasn’t quite been captured by the loess line yet! I’ve certainly used the Fitbit data to make micro changes on the day scale, but this is my first time using longer-term data to try to make behavior changes.</p>
@@ -1672,7 +1685,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-04-08-participatory_sensing/plume.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Pigeon Air Patrol</figcaption>
+<figcaption>Pigeon Air Patrol</figcaption>
 </figure>
 </div>
 <p>Then, I heard about the idea of personalized pollution sensors on the <a href="https://www.patreon.com/NSSDeviations">Not So Standard Deviations Podcast</a>. Roger and Hilary were discussing how the <a href="http://www.pigeonairpatrol.com/">Pigeon Air Patrol</a> project strapped mini air pollution sensors to trained pigeons and then let them loose in London.</p>
@@ -1692,7 +1705,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2016-04-08-participatory_sensing/audubon.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Christmas Bird Count</figcaption>
+<figcaption>Christmas Bird Count</figcaption>
 </figure>
 </div>
 <p>The Audubon Society probably deserves the award for longest-running citizen science project, for their <a href="https://www.audubon.org/conservation/science/christmas-bird-count">Christmas Bird Count</a>, which has been ongoing since 1900.</p>
@@ -1711,15 +1724,16 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 
  ]]></description>
   <category>data</category>
-  <guid>https://www.amelia.mn/blog/2016-04-08-participatory_sensing/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2016-04-08-participatory_sensing/</guid>
   <pubDate>Fri, 08 Apr 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-04-08-participatory_sensing/plume.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Contextual notes</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2015-11-19-context_notes/index.html</link>
+  <link>https://www.amelia.mn/blog/2015-11-19-context_notes/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1756,7 +1770,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2015-11-19-context_notes/DFWatlantic.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">DFW atlantic</figcaption>
+<figcaption>DFW atlantic</figcaption>
 </figure>
 </div>
 <p>So my question is, if it feels so satisfying to be able to dig deeper into information if we need it, or gloss over the parts we don’t, why isn’t this type of feature more common? And what other features could be included in electronic media to give us more of the same sort of experience?</p>
@@ -1765,15 +1779,16 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 
  ]]></description>
   <category>misc</category>
-  <guid>https://www.amelia.mn/blog/2015-11-19-context_notes/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2015-11-19-context_notes/</guid>
   <pubDate>Thu, 19 Nov 2015 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2015-11-19-context_notes/DFWatlantic.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>20th New England Isolated Statisticians Meeting (NEISM)</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2015-11-01-NEISM/index.html</link>
+  <link>https://www.amelia.mn/blog/2015-11-01-NEISM/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1927,15 +1942,16 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 
  ]]></description>
   <category>conferences</category>
-  <guid>https://www.amelia.mn/blog/2015-11-01-NEISM/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2015-11-01-NEISM/</guid>
   <pubDate>Sun, 01 Nov 2015 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2015-11-01-NEISM/xqnorm.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Fitbit colors</title>
   <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2015-01-14-FitbitColors/index.html</link>
+  <link>https://www.amelia.mn/blog/2015-01-14-FitbitColors/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1945,27 +1961,27 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">At the beginning of the day</figcaption>
+<figcaption>At the beginning of the day</figcaption>
 </figure>
 </div>
 <p>Then, as you continue, the colors move from aqua, to yellow, to orange/red.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">A little later</figcaption>
+<figcaption>A little later</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit3.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Getting close to the step goal</figcaption>
+<figcaption>Getting close to the step goal</figcaption>
 </figure>
 </div>
 <p>Finally, when you hit your step goal the color switches to green,</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit4.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Goal reached</figcaption>
+<figcaption>Goal reached</figcaption>
 </figure>
 </div>
 <p>This color progression drives me a little crazy. It’s not in rainbow order, and it seems like it should move from red to orange, to yellow, to green/blue. In other words, the colors should indicate something about your health level.</p>
@@ -1976,7 +1992,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
 
  ]]></description>
   <category>visualization</category>
-  <guid>https://www.amelia.mn/blog/2015-01-14-FitbitColors/index.html</guid>
+  <guid>https://www.amelia.mn/blog/2015-01-14-FitbitColors/</guid>
   <pubDate>Wed, 14 Jan 2015 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit1.jpg" medium="image" type="image/jpeg"/>
 </item>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.542">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -95,16 +102,43 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="blog.xml"></head>
+<link rel="alternate" type="application/rss+xml" title="Amelia McNamara" href="blog.xml" data-external="1"></head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Amelia McNamara</span>
     </a>
@@ -116,90 +150,90 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Teaching</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
         <li>
-    <a class="dropdown-item" href="./STAT220labs.html" rel="" target="">
+    <a class="dropdown-item" href="./STAT220labs.html">
  <span class="dropdown-text">STAT 220 labs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://ameliamn.github.io/STAT336" rel="" target="">
+    <a class="dropdown-item" href="https://ameliamn.github.io/STAT336">
  <span class="dropdown-text">STAT 336: Data Communication and Visualization</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pastcourses.html" rel="" target="">
+    <a class="dropdown-item" href="./pastcourses.html">
  <span class="dropdown-text">Past courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Syntax-cheatsheet.pdf" rel="" target="">
+    <a class="dropdown-item" href="./Syntax-cheatsheet.pdf">
  <span class="dropdown-text">R Syntax Comparison Cheatsheet</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./wikipedia.html" rel="" target="">
+    <a class="dropdown-item" href="./wikipedia.html">
  <span class="dropdown-text">List of student-authored Wikipedia pages</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Research</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="./writing.html" rel="" target="">
+    <a class="dropdown-item" href="./writing.html">
  <span class="dropdown-text">Writing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./presentations.html" rel="" target="">
+    <a class="dropdown-item" href="./presentations.html">
  <span class="dropdown-text">Presentations</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./press.html" rel="" target="">
- <span class="menu-text">Press</span></a>
+    <a class="nav-link" href="./press.html"> 
+<span class="menu-text">Press</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:amelia.mcnamara@stthomas.edu" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:amelia.mcnamara@stthomas.edu"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://vis.social/@amelia" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://vis.social/@amelia"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/ameliamcnamara" rel="" target=""><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/ameliamcnamara"> <i class="bi bi-youtube" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="http://www.linkedin.com/in/AmeliaMcNamara" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="http://www.linkedin.com/in/AmeliaMcNamara"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/AmeliaMN/" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/AmeliaMN/"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -228,7 +262,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 
 
@@ -236,32 +272,30 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="misc" data-listing-date-sort="1587013200000" data-listing-file-modified-sort="1705009806516" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="0" data-categories="misc" data-listing-date-sort="1587013200000" data-listing-file-modified-sort="1705009806516" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1502">
 <div class="thumbnail">
-<p><a href="./blog/2020-04-16-presentations/index.html"> <img src="./blog/2020-04-16-presentations/YouTubeTalks.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2020-04-16-presentations/index.html" class="no-external"></a></p><a href="./blog/2020-04-16-presentations/index.html" class="no-external">
+<p><img src="./blog/2020-04-16-presentations/YouTubeTalks.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2020-04-16-presentations/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2020-04-16-presentations/index.html">
 <h3 class="no-anchor listing-title">
-Guidelines I follow when giving talks
+<a href="./blog/2020-04-16-presentations/index.html" class="no-external">Guidelines I follow when giving talks</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2020-04-16-presentations/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2020-04-16-presentations/index.html">
 <div class="listing-description">
-As with everything in life, there are no hard-and-fast rules for giving talks. But, I have a number of conventions I have developed over the years that I think make for clear(er) presentations. If you look at talks I have given you will see many of these things in practice. I started writing up some of these conventions for my Data Communication course…
+<a href="./blog/2020-04-16-presentations/index.html" class="no-external">As with everything in life, there are no hard-and-fast rules for giving talks. But, I have a number of conventions I have developed over the years that I think make for clear(er) presentations. If you look at talks I have given you will see many of these things in practice. I started writing up…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2020-04-16-presentations/index.html">
+<a href="./blog/2020-04-16-presentations/index.html" class="no-external">
 <div class="listing-date">
 Apr 16, 2020
 </div>
@@ -271,32 +305,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="misc" data-listing-date-sort="1577599200000" data-listing-file-modified-sort="1705009952965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17">
+<div class="quarto-post image-right" data-index="1" data-categories="misc" data-listing-date-sort="1577599200000" data-listing-file-modified-sort="1705009952965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3344">
 <div class="thumbnail">
-<p><a href="./blog/2019-12-29-Deleting-Facebook/index.html"> <img src="./blog/2019-12-29-Deleting-Facebook/photo_stack.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2019-12-29-Deleting-Facebook/index.html" class="no-external"></a></p><a href="./blog/2019-12-29-Deleting-Facebook/index.html" class="no-external">
+<p><img src="./blog/2019-12-29-Deleting-Facebook/photo_stack.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2019-12-29-Deleting-Facebook/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2019-12-29-Deleting-Facebook/index.html">
 <h3 class="no-anchor listing-title">
-Deleting Facebook
+<a href="./blog/2019-12-29-Deleting-Facebook/index.html" class="no-external">Deleting Facebook</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2019-12-29-Deleting-Facebook/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2019-12-29-Deleting-Facebook/index.html">
 <div class="listing-description">
-I…
+<a href="./blog/2019-12-29-Deleting-Facebook/index.html" class="no-external">I recently took the plunge and deleted my Facebook account. This was a big decision for me, and I know other people are thinking about doing the same. So, I want to detail why I decided to delete my account, how I prepared to do it while also saving my data, and the way I’ve felt since I took the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2019-12-29-Deleting-Facebook/index.html">
+<a href="./blog/2019-12-29-Deleting-Facebook/index.html" class="no-external">
 <div class="listing-date">
 Dec 29, 2019
 </div>
@@ -306,32 +338,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="papers" data-listing-date-sort="1574748000000" data-listing-file-modified-sort="1705009791371" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="2" data-categories="papers" data-listing-date-sort="1574748000000" data-listing-file-modified-sort="1705009791371" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1417">
 <div class="thumbnail">
-<p><a href="./blog/2019-11-26-Key-Attributes/index.html"> <img src="./blog/2019-11-26-Key-Attributes/KeyAttributes.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2019-11-26-Key-Attributes/index.html" class="no-external"></a></p><a href="./blog/2019-11-26-Key-Attributes/index.html" class="no-external">
+<p><img src="./blog/2019-11-26-Key-Attributes/KeyAttributes.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2019-11-26-Key-Attributes/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2019-11-26-Key-Attributes/index.html">
 <h3 class="no-anchor listing-title">
-Key Attributes of a Modern Statistical Computing Tool
+<a href="./blog/2019-11-26-Key-Attributes/index.html" class="no-external">Key Attributes of a Modern Statistical Computing Tool</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2019-11-26-Key-Attributes/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('papers'); return false;">
 papers
 </div>
 </div>
-<a href="./blog/2019-11-26-Key-Attributes/index.html">
 <div class="listing-description">
-A few weeks ago, I tweeted that the first paper to come out of my dissertation was published. I got my PhD in 2015, and it’s now 2019. That means I’ve been thinking about this work for more than four years (in fact, it’s probably closer to seven!).
+<a href="./blog/2019-11-26-Key-Attributes/index.html" class="no-external">A few weeks ago, I tweeted that the first paper to come out of my dissertation was published. I got my PhD in 2015, and it’s now 2019. That means I’ve been thinking about this work for more than four years (in fact, it’s probably closer to seven!).</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2019-11-26-Key-Attributes/index.html">
+<a href="./blog/2019-11-26-Key-Attributes/index.html" class="no-external">
 <div class="listing-date">
 Nov 26, 2019
 </div>
@@ -341,32 +371,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="misc" data-listing-date-sort="1566018000000" data-listing-file-modified-sort="1705009783266" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="3" data-categories="misc" data-listing-date-sort="1566018000000" data-listing-file-modified-sort="1705009783266" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2048">
 <div class="thumbnail">
-<p><a href="./blog/2019-08-17-Tidy-Dress/index.html"> <img src="./blog/2019-08-17-Tidy-Dress/HexDress.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2019-08-17-Tidy-Dress/index.html" class="no-external"></a></p><a href="./blog/2019-08-17-Tidy-Dress/index.html" class="no-external">
+<p><img src="./blog/2019-08-17-Tidy-Dress/HexDress.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2019-08-17-Tidy-Dress/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2019-08-17-Tidy-Dress/index.html">
 <h3 class="no-anchor listing-title">
-A tidy dress
+<a href="./blog/2019-08-17-Tidy-Dress/index.html" class="no-external">A tidy dress</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2019-08-17-Tidy-Dress/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2019-08-17-Tidy-Dress/index.html">
 <div class="listing-description">
-That’s right ya’ll, I made myself a R hex logo dress!
+<a href="./blog/2019-08-17-Tidy-Dress/index.html" class="no-external">That’s right ya’ll, I made myself a R hex logo dress!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2019-08-17-Tidy-Dress/index.html">
+<a href="./blog/2019-08-17-Tidy-Dress/index.html" class="no-external">
 <div class="listing-date">
 Aug 17, 2019
 </div>
@@ -376,32 +404,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="teaching" data-listing-date-sort="1521522000000" data-listing-file-modified-sort="1705009775740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="4" data-categories="teaching" data-listing-date-sort="1521522000000" data-listing-file-modified-sort="1705009775740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="854">
 <div class="thumbnail">
-<p><a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html"> <img src="./blog/2018-03-20-Wikipedia-in-the-classroom/Jenny_wikipedia.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html" class="no-external"></a></p><a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html" class="no-external">
+<p><img src="./blog/2018-03-20-Wikipedia-in-the-classroom/Jenny_wikipedia.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html">
 <h3 class="no-anchor listing-title">
-Wikipedia in the classroom: Gender, argh
+<a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html" class="no-external">Wikipedia in the classroom: Gender, argh</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
-<a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html">
 <div class="listing-description">
-The data journalism course I’m teaching this semester is a new offering for me. I may write up more of…
+<a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html" class="no-external">The data journalism course I’m teaching this semester is a new offering for me. I may write up more of my reflections later, but for now I wanted to get some thoughts down about the experience of using Wikipedia as a pedagogical tool. At this point, I feel like it was too real-world of an…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html">
+<a href="./blog/2018-03-20-Wikipedia-in-the-classroom/index.html" class="no-external">
 <div class="listing-date">
 Mar 20, 2018
 </div>
@@ -411,32 +437,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="conferences" data-listing-date-sort="1518370980000" data-listing-file-modified-sort="1705009737112" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="5" data-categories="conferences" data-listing-date-sort="1518370980000" data-listing-file-modified-sort="1705009737112" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1451">
 <div class="thumbnail">
-<p><a href="./blog/2018-02-11-Dagstuhl-reflections/index.html"> <img src="./blog/2018-02-11-Dagstuhl-reflections/Dagstuhl.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2018-02-11-Dagstuhl-reflections/index.html" class="no-external"></a></p><a href="./blog/2018-02-11-Dagstuhl-reflections/index.html" class="no-external">
+<p><img src="./blog/2018-02-11-Dagstuhl-reflections/Dagstuhl.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2018-02-11-Dagstuhl-reflections/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2018-02-11-Dagstuhl-reflections/index.html">
 <h3 class="no-anchor listing-title">
-Dagstuhl reflections
+<a href="./blog/2018-02-11-Dagstuhl-reflections/index.html" class="no-external">Dagstuhl reflections</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2018-02-11-Dagstuhl-reflections/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2018-02-11-Dagstuhl-reflections/index.html">
 <div class="listing-description">
-Over the last 10 days, I had the pleasure of attending rstudio::conf and the Dagstuhl seminar on Evidence about Programmers for Programming Language Design. At rstudio::conf, I taught a two-day workshop on Intro to R &amp; RStudio, and at the Dagstuhl I mostly thought about exposing…
+<a href="./blog/2018-02-11-Dagstuhl-reflections/index.html" class="no-external">Over the last 10 days, I had the pleasure of attending rstudio::conf and the Dagstuhl seminar on Evidence about Programmers for Programming Language Design. At rstudio::conf, I taught a two-day workshop on Intro to R &amp; RStudio, and at the Dagstuhl I mostly thought about exposing novices to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2018-02-11-Dagstuhl-reflections/index.html">
+<a href="./blog/2018-02-11-Dagstuhl-reflections/index.html" class="no-external">
 <div class="listing-date">
 Feb 11, 2018
 </div>
@@ -446,32 +470,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="conferences" data-listing-date-sort="1518367980000" data-listing-file-modified-sort="1705009746169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="6" data-categories="conferences" data-listing-date-sort="1518367980000" data-listing-file-modified-sort="1705009746169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="738">
 <div class="thumbnail">
-<p><a href="./blog/2018-02-11-More-guys/index.html"> <img src="./blog/2018-02-11-More-guys/faces-hair.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2018-02-11-More-guys/index.html" class="no-external"></a></p><a href="./blog/2018-02-11-More-guys/index.html" class="no-external">
+<p><img src="./blog/2018-02-11-More-guys/faces-hair.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2018-02-11-More-guys/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2018-02-11-More-guys/index.html">
 <h3 class="no-anchor listing-title">
-More guys
+<a href="./blog/2018-02-11-More-guys/index.html" class="no-external">More guys</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2018-02-11-More-guys/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2018-02-11-More-guys/index.html">
 <div class="listing-description">
-One incidental piece of the…
+<a href="./blog/2018-02-11-More-guys/index.html" class="no-external">One incidental piece of the Dagstuhl is I thought more about the use of the term “guys.” While we were going around and doing our initial 3-minute introductions, I heard a lot of uses of “guys” that rubbed me the wrong way, so when I introduced myself I asked people to think about their gendered…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2018-02-11-More-guys/index.html">
+<a href="./blog/2018-02-11-More-guys/index.html" class="no-external">
 <div class="listing-date">
 Feb 11, 2018
 </div>
@@ -481,32 +503,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="conferences" data-listing-date-sort="1518363780000" data-listing-file-modified-sort="1705009754345" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="7" data-categories="conferences" data-listing-date-sort="1518363780000" data-listing-file-modified-sort="1705009754345" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1890">
 <div class="thumbnail">
-<p><a href="./blog/2018-02-11-Scientists-Programming/index.html"> <img src="./blog/2018-02-11-Scientists-Programming/ScientistsProgramming.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2018-02-11-Scientists-Programming/index.html" class="no-external"></a></p><a href="./blog/2018-02-11-Scientists-Programming/index.html" class="no-external">
+<p><img src="./blog/2018-02-11-Scientists-Programming/ScientistsProgramming.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2018-02-11-Scientists-Programming/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2018-02-11-Scientists-Programming/index.html">
 <h3 class="no-anchor listing-title">
-Scientists Programming
+<a href="./blog/2018-02-11-Scientists-Programming/index.html" class="no-external">Scientists Programming</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2018-02-11-Scientists-Programming/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2018-02-11-Scientists-Programming/index.html">
 <div class="listing-description">
-At the Dagstuhl seminar, Andreas Stefik asked me to speak about “Scientists Programming.” I’m not sure whether he did this on purpose, but by assigning people their talk titles, he drew us a little outside our comfort zone and got us to think more deeply. “Scientists Programming” wasn’t…
+<a href="./blog/2018-02-11-Scientists-Programming/index.html" class="no-external">At the Dagstuhl seminar, Andreas Stefik asked me to speak about “Scientists Programming.” I’m not sure whether he did this on purpose, but by assigning people their talk titles, he drew us a little outside our comfort zone and got us to think more deeply. “Scientists Programming” wasn’t a talk…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2018-02-11-Scientists-Programming/index.html">
+<a href="./blog/2018-02-11-Scientists-Programming/index.html" class="no-external">
 <div class="listing-date">
 Feb 11, 2018
 </div>
@@ -516,32 +536,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="teaching" data-listing-date-sort="1518360180000" data-listing-file-modified-sort="1705009768393" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="8" data-categories="teaching" data-listing-date-sort="1518360180000" data-listing-file-modified-sort="1705009768393" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="712">
 <div class="thumbnail">
-<p><a href="./blog/2018-02-11-Syntax-comparison/index.html"> <img src="./blog/2018-02-11-Syntax-comparison/SyntaxComparisonCheatsheet.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2018-02-11-Syntax-comparison/index.html" class="no-external"></a></p><a href="./blog/2018-02-11-Syntax-comparison/index.html" class="no-external">
+<p><img src="./blog/2018-02-11-Syntax-comparison/SyntaxComparisonCheatsheet.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2018-02-11-Syntax-comparison/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2018-02-11-Syntax-comparison/index.html">
 <h3 class="no-anchor listing-title">
-R syntax comparison
+<a href="./blog/2018-02-11-Syntax-comparison/index.html" class="no-external">R syntax comparison</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2018-02-11-Syntax-comparison/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
-<a href="./blog/2018-02-11-Syntax-comparison/index.html">
 <div class="listing-description">
-For my rstudio::conf working, Intro to R &amp; RStudio, I finally finished my cheatsheet on R syntaxes. I’ve been working on this for at least a year (😱 ), so I’m glad to see it out in the wild.
+<a href="./blog/2018-02-11-Syntax-comparison/index.html" class="no-external">For my rstudio::conf working, Intro to R &amp; RStudio, I finally finished my cheatsheet on R syntaxes. I’ve been working on this for at least a year (😱 ), so I’m glad to see it out in the wild.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2018-02-11-Syntax-comparison/index.html">
+<a href="./blog/2018-02-11-Syntax-comparison/index.html" class="no-external">
 <div class="listing-date">
 Feb 11, 2018
 </div>
@@ -551,32 +569,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="conferences" data-listing-date-sort="1513663200000" data-listing-file-modified-sort="1704854964826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="9" data-categories="conferences" data-listing-date-sort="1513663200000" data-listing-file-modified-sort="1704854964826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1106">
 <div class="thumbnail">
-<p><a href="./blog/2017-12-19-On-Microaggressions/index.html"> <img src="./blog/2017-12-19-On-Microaggressions/grr.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2017-12-19-On-Microaggressions/index.html" class="no-external"></a></p><a href="./blog/2017-12-19-On-Microaggressions/index.html" class="no-external">
+<p><img src="./blog/2017-12-19-On-Microaggressions/grr.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2017-12-19-On-Microaggressions/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2017-12-19-On-Microaggressions/index.html">
 <h3 class="no-anchor listing-title">
-On microaggressions
+<a href="./blog/2017-12-19-On-Microaggressions/index.html" class="no-external">On microaggressions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2017-12-19-On-Microaggressions/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2017-12-19-On-Microaggressions/index.html">
 <div class="listing-description">
-I was glad to see Karl Broman’s blog post on a troubling conference talk. In the post, Karl describes how the speaker repeatedly used the word “guys” to describe people involved in statistics, and how he and Hadley Wickham reached out to him in an effort to get him to change his ways.
+<a href="./blog/2017-12-19-On-Microaggressions/index.html" class="no-external">I was glad to see Karl Broman’s blog post on a troubling conference talk. In the post, Karl describes how the speaker repeatedly used the word “guys” to describe people involved in statistics, and how he and Hadley Wickham reached out to him in an effort to get him to change his ways.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2017-12-19-On-Microaggressions/index.html">
+<a href="./blog/2017-12-19-On-Microaggressions/index.html" class="no-external">
 <div class="listing-date">
 Dec 19, 2017
 </div>
@@ -586,32 +602,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="misc" data-listing-date-sort="1484287200000" data-listing-file-modified-sort="1705009719967" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="10" data-categories="misc" data-listing-date-sort="1484287200000" data-listing-file-modified-sort="1705009719967" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1029">
 <div class="thumbnail">
-<p><a href="./blog/2017-01-13-Amanda/index.html"> <img src="./blog/2017-01-13-Amanda/amelias-1.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2017-01-13-Amanda/index.html" class="no-external"></a></p><a href="./blog/2017-01-13-Amanda/index.html" class="no-external">
+<p><img src="./blog/2017-01-13-Amanda/amelias-1.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2017-01-13-Amanda/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2017-01-13-Amanda/index.html">
 <h3 class="no-anchor listing-title">
-What are the chances my name is Amanda?
+<a href="./blog/2017-01-13-Amanda/index.html" class="no-external">What are the chances my name is Amanda?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2017-01-13-Amanda/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2017-01-13-Amanda/index.html">
 <div class="listing-description">
-I get called Amanda a lot. This tends to drive me crazy, because I think my real name is much more interesting. But, I realized recently that given the prior probabilities, it’s actually a very reasonable thing to call me.
+<a href="./blog/2017-01-13-Amanda/index.html" class="no-external">I get called Amanda a lot. This tends to drive me crazy, because I think my real name is much more interesting. But, I realized recently that given the prior probabilities, it’s actually a very reasonable thing to call me.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2017-01-13-Amanda/index.html">
+<a href="./blog/2017-01-13-Amanda/index.html" class="no-external">
 <div class="listing-date">
 Jan 13, 2017
 </div>
@@ -621,32 +635,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="teaching" data-listing-date-sort="1479276000000" data-listing-file-modified-sort="1705009711910" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="11" data-categories="teaching" data-listing-date-sort="1479276000000" data-listing-file-modified-sort="1705009711910" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="952">
 <div class="thumbnail">
-<p><a href="./blog/2016-11-16-CensusRant/index.html"> <img src="./blog/2016-11-16-CensusRant/FactFinder.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2016-11-16-CensusRant/index.html" class="no-external"></a></p><a href="./blog/2016-11-16-CensusRant/index.html" class="no-external">
+<p><img src="./blog/2016-11-16-CensusRant/FactFinder.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2016-11-16-CensusRant/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2016-11-16-CensusRant/index.html">
 <h3 class="no-anchor listing-title">
-Census data: A rant
+<a href="./blog/2016-11-16-CensusRant/index.html" class="no-external">Census data: A rant</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2016-11-16-CensusRant/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
-<a href="./blog/2016-11-16-CensusRant/index.html">
 <div class="listing-description">
-As usual toward the end of the semester, my students begin working in earnest on their final projects. And as usual, this results in my selective amnesia about census.gov being ruptured yet again. Looking for a way out, I turned to twitter and got some good recommendations. In…
+<a href="./blog/2016-11-16-CensusRant/index.html" class="no-external">As usual toward the end of the semester, my students begin working in earnest on their final projects. And as usual, this results in my selective amnesia about census.gov being ruptured yet again. Looking for a way out, I turned to twitter and got some good recommendations. In case it’s useful to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2016-11-16-CensusRant/index.html">
+<a href="./blog/2016-11-16-CensusRant/index.html" class="no-external">
 <div class="listing-date">
 Nov 16, 2016
 </div>
@@ -656,32 +668,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="teaching" data-listing-date-sort="1476853200000" data-listing-file-modified-sort="1705009701092" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="12" data-categories="teaching" data-listing-date-sort="1476853200000" data-listing-file-modified-sort="1705009701092" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="845">
 <div class="thumbnail">
-<p><a href="./blog/2016-10-19-GradSchool/index.html"> <img src="./blog/2016-10-19-GradSchool/PhDcomic.gif" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2016-10-19-GradSchool/index.html" class="no-external"></a></p><a href="./blog/2016-10-19-GradSchool/index.html" class="no-external">
+<p><img src="./blog/2016-10-19-GradSchool/PhDcomic.gif" class="thumbnail-image"></p>
+</a><p><a href="./blog/2016-10-19-GradSchool/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2016-10-19-GradSchool/index.html">
 <h3 class="no-anchor listing-title">
-Statistics graduate school advice
+<a href="./blog/2016-10-19-GradSchool/index.html" class="no-external">Statistics graduate school advice</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2016-10-19-GradSchool/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
-<a href="./blog/2016-10-19-GradSchool/index.html">
 <div class="listing-description">
-It’s that time of year again, the time where I find myself meeting with students thinking about graduate school in statistics. Since I often end up sending people the same things, I figured I’d pull them together into a blog post. You probably already know about the grad cafe, the professor is in…
+<a href="./blog/2016-10-19-GradSchool/index.html" class="no-external">It’s that time of year again, the time where I find myself meeting with students thinking about graduate school in statistics. Since I often end up sending people the same things, I figured I’d pull them together into a blog post. You probably already know about the grad cafe, the professor is in…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2016-10-19-GradSchool/index.html">
+<a href="./blog/2016-10-19-GradSchool/index.html" class="no-external">
 <div class="listing-date">
 Oct 19, 2016
 </div>
@@ -691,32 +701,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="misc" data-listing-date-sort="1466658000000" data-listing-file-modified-sort="1705009694439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="misc" data-listing-date-sort="1466658000000" data-listing-file-modified-sort="1705009694439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="90">
 <div class="thumbnail">
-<p><a href="./blog/2016-06-23-Listservs/index.html"> <img src="./blog/2016-06-23-Listservs/InboxZero.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2016-06-23-Listservs/index.html" class="no-external"></a></p><a href="./blog/2016-06-23-Listservs/index.html" class="no-external">
+<p><img src="./blog/2016-06-23-Listservs/InboxZero.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2016-06-23-Listservs/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2016-06-23-Listservs/index.html">
 <h3 class="no-anchor listing-title">
-Worth adding to your inbox
+<a href="./blog/2016-06-23-Listservs/index.html" class="no-external">Worth adding to your inbox</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2016-06-23-Listservs/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2016-06-23-Listservs/index.html">
 <div class="listing-description">
-For the most part, I get my data news from the web (blogs like flowingdata, simply statistics, stats chat) and twitter (check out the people I follow). However, there are a few email mailing lists I’ve joined that are worth the addional lines in my inbox. Here they are:
+<a href="./blog/2016-06-23-Listservs/index.html" class="no-external">For the most part, I get my data news from the web (blogs like flowingdata, simply statistics, stats chat) and twitter (check out the people I follow). However, there are a few email mailing lists I’ve joined that are worth the addional lines in my inbox. Here they are:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2016-06-23-Listservs/index.html">
+<a href="./blog/2016-06-23-Listservs/index.html" class="no-external">
 <div class="listing-date">
 Jun 23, 2016
 </div>
@@ -726,32 +734,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="conferences" data-listing-date-sort="1463374800000" data-listing-file-modified-sort="1705009684776" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19">
+<div class="quarto-post image-right" data-index="14" data-categories="conferences" data-listing-date-sort="1463374800000" data-listing-file-modified-sort="1705009684776" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="19" data-listing-word-count-sort="3683">
 <div class="thumbnail">
-<p><a href="./blog/2016-05-16-OpenVisConfTranscript/index.html"> <img src="./blog/2016-05-16-OpenVisConfTranscript/text_viz.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2016-05-16-OpenVisConfTranscript/index.html" class="no-external"></a></p><a href="./blog/2016-05-16-OpenVisConfTranscript/index.html" class="no-external">
+<p><img src="./blog/2016-05-16-OpenVisConfTranscript/text_viz.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2016-05-16-OpenVisConfTranscript/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2016-05-16-OpenVisConfTranscript/index.html">
 <h3 class="no-anchor listing-title">
-OpenVisConf talk transcript
+<a href="./blog/2016-05-16-OpenVisConfTranscript/index.html" class="no-external">OpenVisConf talk transcript</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2016-05-16-OpenVisConfTranscript/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2016-05-16-OpenVisConfTranscript/index.html">
 <div class="listing-description">
-During OpenVisConf, I hurriedly posted some links from my talk so…
+<a href="./blog/2016-05-16-OpenVisConfTranscript/index.html" class="no-external">During OpenVisConf, I hurriedly posted some links from my talk so people could follow up with resources I had mentioned. I kept meaning to write up a fuller blog post, but of course life comes along (in the interim, Smith has finished finals, I’ve graded a ton of projects, gone out of the state…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2016-05-16-OpenVisConfTranscript/index.html">
+<a href="./blog/2016-05-16-OpenVisConfTranscript/index.html" class="no-external">
 <div class="listing-date">
 May 16, 2016
 </div>
@@ -761,32 +767,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="conferences" data-listing-date-sort="1461560400000" data-listing-file-modified-sort="1705009670589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="15" data-categories="conferences" data-listing-date-sort="1461560400000" data-listing-file-modified-sort="1705009670589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="251">
 <div class="thumbnail">
-<p><a href="./blog/2016-04-25-OpenVisConf/index.html"> <img src="./blog/2016-04-25-OpenVisConf/titleslide.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2016-04-25-OpenVisConf/index.html" class="no-external"></a></p><a href="./blog/2016-04-25-OpenVisConf/index.html" class="no-external">
+<p><img src="./blog/2016-04-25-OpenVisConf/titleslide.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2016-04-25-OpenVisConf/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2016-04-25-OpenVisConf/index.html">
 <h3 class="no-anchor listing-title">
-Do you know Nothing when you see it?
+<a href="./blog/2016-04-25-OpenVisConf/index.html" class="no-external">Do you know Nothing when you see it?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2016-04-25-OpenVisConf/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2016-04-25-OpenVisConf/index.html">
 <div class="listing-description">
-I’m currently at OpenVisConf and in awe of my fellow presenters. I did my presentation, “Do you know Nothing when you see it?” before lunch and have been slowly unwinding since then. A couple people asked for links to my slides and resources, so here they are!
+<a href="./blog/2016-04-25-OpenVisConf/index.html" class="no-external">I’m currently at OpenVisConf and in awe of my fellow presenters. I did my presentation, “Do you know Nothing when you see it?” before lunch and have been slowly unwinding since then. A couple people asked for links to my slides and resources, so here they are!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2016-04-25-OpenVisConf/index.html">
+<a href="./blog/2016-04-25-OpenVisConf/index.html" class="no-external">
 <div class="listing-date">
 Apr 25, 2016
 </div>
@@ -796,32 +800,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="data" data-listing-date-sort="1460091600000" data-listing-file-modified-sort="1705009662668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="16" data-categories="data" data-listing-date-sort="1460091600000" data-listing-file-modified-sort="1705009662668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1069">
 <div class="thumbnail">
-<p><a href="./blog/2016-04-08-participatory_sensing/index.html"> <img src="./blog/2016-04-08-participatory_sensing/plume.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2016-04-08-participatory_sensing/index.html" class="no-external"></a></p><a href="./blog/2016-04-08-participatory_sensing/index.html" class="no-external">
+<p><img src="./blog/2016-04-08-participatory_sensing/plume.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2016-04-08-participatory_sensing/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2016-04-08-participatory_sensing/index.html">
 <h3 class="no-anchor listing-title">
-What’s wrong with being data-collecting pigeons?
+<a href="./blog/2016-04-08-participatory_sensing/index.html" class="no-external">What’s wrong with being data-collecting pigeons?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2016-04-08-participatory_sensing/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
 data
 </div>
 </div>
-<a href="./blog/2016-04-08-participatory_sensing/index.html">
 <div class="listing-description">
-As you might know from my blog or twitter, I’ve been a Fitbit person since December 2013. I’m also very interested in participatory sensing and citizen science, and I’ve been thinking about the ways that data can be used for good, both on the personal and societal level.
+<a href="./blog/2016-04-08-participatory_sensing/index.html" class="no-external">As you might know from my blog or twitter, I’ve been a Fitbit person since December 2013. I’m also very interested in participatory sensing and citizen science, and I’ve been thinking about the ways that data can be used for good, both on the personal and societal level.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2016-04-08-participatory_sensing/index.html">
+<a href="./blog/2016-04-08-participatory_sensing/index.html" class="no-external">
 <div class="listing-date">
 Apr 8, 2016
 </div>
@@ -831,32 +833,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="misc" data-listing-date-sort="1447912800000" data-listing-file-modified-sort="1705009650788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="17" data-categories="misc" data-listing-date-sort="1447912800000" data-listing-file-modified-sort="1705009650788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="915">
 <div class="thumbnail">
-<p><a href="./blog/2015-11-19-context_notes/index.html"> <img src="./blog/2015-11-19-context_notes/DFWatlantic.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2015-11-19-context_notes/index.html" class="no-external"></a></p><a href="./blog/2015-11-19-context_notes/index.html" class="no-external">
+<p><img src="./blog/2015-11-19-context_notes/DFWatlantic.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2015-11-19-context_notes/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2015-11-19-context_notes/index.html">
 <h3 class="no-anchor listing-title">
-Contextual notes
+<a href="./blog/2015-11-19-context_notes/index.html" class="no-external">Contextual notes</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2015-11-19-context_notes/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2015-11-19-context_notes/index.html">
 <div class="listing-description">
-Because I tend to select books by how thick they are (super-fast-reader problems) and I am a…
+<a href="./blog/2015-11-19-context_notes/index.html" class="no-external">Because I tend to select books by how thick they are (super-fast-reader problems) and I am a glutton for punishment, I have been slowly working my way through two of David Foster Wallace’s books concurrently. I am reading a paper copy of Infinite Jest, but the Kindle edition of The Pale King.…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2015-11-19-context_notes/index.html">
+<a href="./blog/2015-11-19-context_notes/index.html" class="no-external">
 <div class="listing-date">
 Nov 19, 2015
 </div>
@@ -866,32 +866,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="conferences" data-listing-date-sort="1446354000000" data-listing-file-modified-sort="1705009644168" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="18" data-categories="conferences" data-listing-date-sort="1446354000000" data-listing-file-modified-sort="1705009644168" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1168">
 <div class="thumbnail">
-<p><a href="./blog/2015-11-01-NEISM/index.html"> <img src="./blog/2015-11-01-NEISM/xqnorm.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2015-11-01-NEISM/index.html" class="no-external"></a></p><a href="./blog/2015-11-01-NEISM/index.html" class="no-external">
+<p><img src="./blog/2015-11-01-NEISM/xqnorm.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2015-11-01-NEISM/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2015-11-01-NEISM/index.html">
 <h3 class="no-anchor listing-title">
-20th New England Isolated Statisticians Meeting (NEISM)
+<a href="./blog/2015-11-01-NEISM/index.html" class="no-external">20th New England Isolated Statisticians Meeting (NEISM)</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2015-11-01-NEISM/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2015-11-01-NEISM/index.html">
 <div class="listing-description">
-Now that I am at Smith, I am technically an “isolated” statistician. It’s a funny term, because I don’t feel isolated. I have great colleagues in the Statistical and Data Sciences program (Ben Baumer, Jordan Crouser and Katherine Halverson), although I am the only person with a PhD in statistics. However, there is a great mailing list for isostats and a few local meetings, so I am happy to accept the designation if it means I get to participate…
+<a href="./blog/2015-11-01-NEISM/index.html" class="no-external">Now that I am at Smith, I am technically an “isolated” statistician. It’s a funny term, because I don’t feel isolated. I have great colleagues in the Statistical and Data Sciences program (Ben Baumer, Jordan Crouser and Katherine Halverson), although I am the only person with a PhD in statistics.…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2015-11-01-NEISM/index.html">
+<a href="./blog/2015-11-01-NEISM/index.html" class="no-external">
 <div class="listing-date">
 Nov 1, 2015
 </div>
@@ -901,32 +899,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="visualization" data-listing-date-sort="1421215200000" data-listing-file-modified-sort="1705009590349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="19" data-categories="visualization" data-listing-date-sort="1421215200000" data-listing-file-modified-sort="1705009590349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="299">
 <div class="thumbnail">
-<p><a href="./blog/2015-01-14-FitbitColors/index.html"> <img src="./blog/2015-01-14-FitbitColors/Fitbit1.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2015-01-14-FitbitColors/index.html" class="no-external"></a></p><a href="./blog/2015-01-14-FitbitColors/index.html" class="no-external">
+<p><img src="./blog/2015-01-14-FitbitColors/Fitbit1.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2015-01-14-FitbitColors/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2015-01-14-FitbitColors/index.html">
 <h3 class="no-anchor listing-title">
-Fitbit colors
+<a href="./blog/2015-01-14-FitbitColors/index.html" class="no-external">Fitbit colors</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2015-01-14-FitbitColors/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('visualization'); return false;">
 visualization
 </div>
 </div>
-<a href="./blog/2015-01-14-FitbitColors/index.html">
 <div class="listing-description">
-I have been a devoted Fitbit user for over a year now, and I think that as a device it…
+<a href="./blog/2015-01-14-FitbitColors/index.html" class="no-external">I have been a devoted Fitbit user for over a year now, and I think that as a device it is the sort of thing that a statistician would natually enjoy. It produces rich data about my day-to-day life, can be used to identify notable dates in my year, and does a great job of making me more physically…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2015-01-14-FitbitColors/index.html">
+<a href="./blog/2015-01-14-FitbitColors/index.html" class="no-external">
 <div class="listing-date">
 Jan 14, 2015
 </div>
@@ -936,32 +932,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="conferences" data-listing-date-sort="1418364000000" data-listing-file-modified-sort="1705008766103" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="20" data-categories="conferences" data-listing-date-sort="1418364000000" data-listing-file-modified-sort="1705008766103" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="373">
 <div class="thumbnail">
-<p><a href="./blog/2014-12-12-FabricPosters/index.html"> <img src="./blog/2014-12-12-FabricPosters/IEEEVisPoster.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-12-12-FabricPosters/index.html" class="no-external"></a></p><a href="./blog/2014-12-12-FabricPosters/index.html" class="no-external">
+<p><img src="./blog/2014-12-12-FabricPosters/IEEEVisPoster.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-12-12-FabricPosters/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-12-12-FabricPosters/index.html">
 <h3 class="no-anchor listing-title">
-Fabric posters
+<a href="./blog/2014-12-12-FabricPosters/index.html" class="no-external">Fabric posters</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-12-12-FabricPosters/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2014-12-12-FabricPosters/index.html">
 <div class="listing-description">
-Don’t you hate having to take…
+<a href="./blog/2014-12-12-FabricPosters/index.html" class="no-external">Don’t you hate having to take a poster to conferences? The tube is bulky, it’s easy to forget in the airport (or on the plane!), sometimes you get charged extra for your “additional carry-on” and often the poster doesn’t look great once it arrives. Plus, it’s expensive to print a poster, and you…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-12-12-FabricPosters/index.html">
+<a href="./blog/2014-12-12-FabricPosters/index.html" class="no-external">
 <div class="listing-date">
 Dec 12, 2014
 </div>
@@ -971,32 +965,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="conferences" data-listing-date-sort="1414386000000" data-listing-file-modified-sort="1705009572458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="21" data-categories="conferences" data-listing-date-sort="1414386000000" data-listing-file-modified-sort="1705009572458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1285">
 <div class="thumbnail">
-<p><a href="./blog/2014-10-27-New-tools-for-data/index.html"> <img src="./blog/2014-10-27-New-tools-for-data/2014-10-27 10.10.06.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-10-27-New-tools-for-data/index.html" class="no-external"></a></p><a href="./blog/2014-10-27-New-tools-for-data/index.html" class="no-external">
+<p><img src="./blog/2014-10-27-New-tools-for-data/2014-10-27 10.10.06.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-10-27-New-tools-for-data/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-10-27-New-tools-for-data/index.html">
 <h3 class="no-anchor listing-title">
-New tools for data analysis and journalism
+<a href="./blog/2014-10-27-New-tools-for-data/index.html" class="no-external">New tools for data analysis and journalism</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-10-27-New-tools-for-data/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2014-10-27-New-tools-for-data/index.html">
 <div class="listing-description">
-While the Computation + Journalism Symposium continues to be filled with fascinating inlets to journalistic projects and innovative computational approaches (like using drones to map garbage dumps) the component that always catches my attention is the demoing of new tools for data analysis.
+<a href="./blog/2014-10-27-New-tools-for-data/index.html" class="no-external">While the Computation + Journalism Symposium continues to be filled with fascinating inlets to journalistic projects and innovative computational approaches (like using drones to map garbage dumps) the component that always catches my attention is the demoing of new tools for data analysis.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-10-27-New-tools-for-data/index.html">
+<a href="./blog/2014-10-27-New-tools-for-data/index.html" class="no-external">
 <div class="listing-date">
 Oct 27, 2014
 </div>
@@ -1006,32 +998,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="tools" data-listing-date-sort="1412139600000" data-listing-file-modified-sort="1705008411829" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="22" data-categories="tools" data-listing-date-sort="1412139600000" data-listing-file-modified-sort="1705008411829" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="592">
 <div class="thumbnail">
-<p><a href="./blog/2014-10-01-KidPix/index.html"> <img src="./blog/2014-10-01-KidPix/CraigHickman.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-10-01-KidPix/index.html" class="no-external"></a></p><a href="./blog/2014-10-01-KidPix/index.html" class="no-external">
+<p><img src="./blog/2014-10-01-KidPix/CraigHickman.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-10-01-KidPix/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-10-01-KidPix/index.html">
 <h3 class="no-anchor listing-title">
-Kid Pix
+<a href="./blog/2014-10-01-KidPix/index.html" class="no-external">Kid Pix</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-10-01-KidPix/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('tools'); return false;">
 tools
 </div>
 </div>
-<a href="./blog/2014-10-01-KidPix/index.html">
 <div class="listing-description">
-The talk was a great mix of nostalgia and…
+<a href="./blog/2014-10-01-KidPix/index.html" class="no-external">The talk was a great mix of nostalgia and inspiration for me. I loved hearing about the principles that guided Hickman as he worked, like the idea of contextual menus, so kids never had to look in the menu bar. I was also brought back to my childhood, creating artwork, menus for pretend…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-10-01-KidPix/index.html">
+<a href="./blog/2014-10-01-KidPix/index.html" class="no-external">
 <div class="listing-date">
 Oct 1, 2014
 </div>
@@ -1041,32 +1031,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="teaching" data-listing-date-sort="1407992400000" data-listing-file-modified-sort="1705009552863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="23" data-categories="teaching" data-listing-date-sort="1407992400000" data-listing-file-modified-sort="1705009552863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
 <div class="thumbnail">
-<p><a href="./blog/2014-08-14-DataScienceLA/index.html"> <img src="./blog/2014-08-14-DataScienceLA/datascienceLA.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-08-14-DataScienceLA/index.html" class="no-external"></a></p><a href="./blog/2014-08-14-DataScienceLA/index.html" class="no-external">
+<p><img src="./blog/2014-08-14-DataScienceLA/datascienceLA.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-08-14-DataScienceLA/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-08-14-DataScienceLA/index.html">
 <h3 class="no-anchor listing-title">
-Data Science LA
+<a href="./blog/2014-08-14-DataScienceLA/index.html" class="no-external">Data Science LA</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-08-14-DataScienceLA/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
-<a href="./blog/2014-08-14-DataScienceLA/index.html">
 <div class="listing-description">
-I’m now involved in the recently-launched datascience.la blog. While you’ll probably be drawn to the site for the useR! conference session videos, interviews with data scientists, and meetup announcements, there’s going to be much more!
+<a href="./blog/2014-08-14-DataScienceLA/index.html" class="no-external">I’m now involved in the recently-launched datascience.la blog. While you’ll probably be drawn to the site for the useR! conference session videos, interviews with data scientists, and meetup announcements, there’s going to be much more!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-08-14-DataScienceLA/index.html">
+<a href="./blog/2014-08-14-DataScienceLA/index.html" class="no-external">
 <div class="listing-date">
 Aug 14, 2014
 </div>
@@ -1076,32 +1064,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="teaching" data-listing-date-sort="1407301200000" data-listing-file-modified-sort="1705008338773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="24" data-categories="teaching" data-listing-date-sort="1407301200000" data-listing-file-modified-sort="1705008338773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1247">
 <div class="thumbnail">
-<p><a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html"> <img src="./blog/2014-08-06-ICOTS-Panel-Transcript/2014-07-17 15.44.54-1.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html" class="no-external"></a></p><a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html" class="no-external">
+<p><img src="./blog/2014-08-06-ICOTS-Panel-Transcript/2014-07-17 15.44.54-1.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html">
 <h3 class="no-anchor listing-title">
-ICOTS discussion on technology in statistics education
+<a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html" class="no-external">ICOTS discussion on technology in statistics education</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
-<a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html">
 <div class="listing-description">
-One of the most interesting sessions I attended at ICOTS was the panel session, Future trends for technology in statistics education. The panel was chaired by Chris Wild of Auckland, and featured
+<a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html" class="no-external">One of the most interesting sessions I attended at ICOTS was the panel session, Future trends for technology in statistics education. The panel was chaired by Chris Wild of Auckland, and featured</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html">
+<a href="./blog/2014-08-06-ICOTS-Panel-Transcript/index.html" class="no-external">
 <div class="listing-date">
 Aug 6, 2014
 </div>
@@ -1111,32 +1097,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="teaching" data-listing-date-sort="1406869200000" data-listing-file-modified-sort="1705009521006" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="25" data-categories="teaching" data-listing-date-sort="1406869200000" data-listing-file-modified-sort="1705009521006" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="512">
 <div class="thumbnail">
-<p><a href="./blog/2014-08-01-Yes-And/index.html"> <img data-src="./blog/2014-08-01-Yes-And/YesAnd.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-08-01-Yes-And/index.html" class="no-external"></a></p><a href="./blog/2014-08-01-Yes-And/index.html" class="no-external">
+<p><img data-src="./blog/2014-08-01-Yes-And/YesAnd.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-08-01-Yes-And/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-08-01-Yes-And/index.html">
 <h3 class="no-anchor listing-title">
-Yes, and…
+<a href="./blog/2014-08-01-Yes-And/index.html" class="no-external">Yes, and…</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-08-01-Yes-And/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
-<a href="./blog/2014-08-01-Yes-And/index.html">
 <div class="listing-description">
-One of my primary teaching techniques is the improv-inspired “yes and…” move. People who have been…
+<a href="./blog/2014-08-01-Yes-And/index.html" class="no-external">One of my primary teaching techniques is the improv-inspired “yes and…” move. People who have been trained in improvisational comedy know that the first rule is always to build on what your fellow performers say. If someone says, “now we’re sitting in a cafe, having coffee” you should never…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-08-01-Yes-And/index.html">
+<a href="./blog/2014-08-01-Yes-And/index.html" class="no-external">
 <div class="listing-date">
 Aug 1, 2014
 </div>
@@ -1146,32 +1130,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="conferences" data-listing-date-sort="1406005200000" data-listing-file-modified-sort="1705009511775" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="26" data-categories="conferences" data-listing-date-sort="1406005200000" data-listing-file-modified-sort="1705009511775" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2157">
 <div class="thumbnail">
-<p><a href="./blog/2014-07-22-Coded/index.html"> <img data-src="./blog/2014-07-22-Coded/2014-06-10 09.23.14.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-07-22-Coded/index.html" class="no-external"></a></p><a href="./blog/2014-07-22-Coded/index.html" class="no-external">
+<p><img data-src="./blog/2014-07-22-Coded/2014-06-10 09.23.14.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-07-22-Coded/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-07-22-Coded/index.html">
 <h3 class="no-anchor listing-title">
-Code + Ed
+<a href="./blog/2014-07-22-Coded/index.html" class="no-external">Code + Ed</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-07-22-Coded/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2014-07-22-Coded/index.html">
 <div class="listing-description">
-Last month, I had the opportunity to attend the eyeo festival as a student volunteer. For me, one of the most useful parts of the festival was the Code+ed Summit, which took place on the day before the official conference opening.
+<a href="./blog/2014-07-22-Coded/index.html" class="no-external">Last month, I had the opportunity to attend the eyeo festival as a student volunteer. For me, one of the most useful parts of the festival was the Code+ed Summit, which took place on the day before the official conference opening.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-07-22-Coded/index.html">
+<a href="./blog/2014-07-22-Coded/index.html" class="no-external">
 <div class="listing-date">
 Jul 22, 2014
 </div>
@@ -1181,32 +1163,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="misc" data-listing-date-sort="1402549200000" data-listing-file-modified-sort="1705009379786" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="27" data-categories="misc" data-listing-date-sort="1402549200000" data-listing-file-modified-sort="1705009379786" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
 <div class="thumbnail">
-<p><a href="./blog/2014-06-12-Sweater_Variation/index.html"> <img data-src="./blog/2014-06-12-Sweater_Variation/BlackAndWhiteCardigan.JPG" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-06-12-Sweater_Variation/index.html" class="no-external"></a></p><a href="./blog/2014-06-12-Sweater_Variation/index.html" class="no-external">
+<p><img data-src="./blog/2014-06-12-Sweater_Variation/BlackAndWhiteCardigan.JPG" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-06-12-Sweater_Variation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-06-12-Sweater_Variation/index.html">
 <h3 class="no-anchor listing-title">
-Sweater variation; or grey != black and white
+<a href="./blog/2014-06-12-Sweater_Variation/index.html" class="no-external">Sweater variation; or grey != black and white</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-06-12-Sweater_Variation/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2014-06-12-Sweater_Variation/index.html">
 <div class="listing-description">
-I have a sweater that I’ve loved to death (if you’ve encountered me anytime in the last 5 years, you’ve probably seen it) and after many frustrating attempts to replace it with something similar, I…
+<a href="./blog/2014-06-12-Sweater_Variation/index.html" class="no-external">I have a sweater that I’ve loved to death (if you’ve encountered me anytime in the last 5 years, you’ve probably seen it) and after many frustrating attempts to replace it with something similar, I took to eBay to try to find an exact replacement. This is something I’ve had success with in the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-06-12-Sweater_Variation/index.html">
+<a href="./blog/2014-06-12-Sweater_Variation/index.html" class="no-external">
 <div class="listing-date">
 Jun 12, 2014
 </div>
@@ -1216,32 +1196,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="papers" data-listing-date-sort="1400216400000" data-listing-file-modified-sort="1705009369633" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="28" data-categories="papers" data-listing-date-sort="1400216400000" data-listing-file-modified-sort="1705009369633" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="259">
 <div class="thumbnail">
-<p><a href="./blog/2014-05-16-That_Paper/index.html"> <img data-src="./blog/2014-05-16-That_Paper/overviewperm.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-05-16-That_Paper/index.html" class="no-external"></a></p><a href="./blog/2014-05-16-That_Paper/index.html" class="no-external">
+<p><img data-src="./blog/2014-05-16-That_Paper/overviewperm.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-05-16-That_Paper/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-05-16-That_Paper/index.html">
 <h3 class="no-anchor listing-title">
-That paper I was telling you to read
+<a href="./blog/2014-05-16-That_Paper/index.html" class="no-external">That paper I was telling you to read</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-05-16-That_Paper/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('papers'); return false;">
 papers
 </div>
 </div>
-<a href="./blog/2014-05-16-That_Paper/index.html">
 <div class="listing-description">
-I was joking at lunch with some colleagues that I should have a few…
+<a href="./blog/2014-05-16-That_Paper/index.html" class="no-external">I was joking at lunch with some colleagues that I should have a few of my favorite papers linked on the main page of my website, so when I reference them for the n^th time, I can just say “look at my website” instead of promising to email them. While I don’t think it’s reasonable to put this on my…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-05-16-That_Paper/index.html">
+<a href="./blog/2014-05-16-That_Paper/index.html" class="no-external">
 <div class="listing-date">
 May 16, 2014
 </div>
@@ -1251,32 +1229,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="misc" data-listing-date-sort="1399266000000" data-listing-file-modified-sort="1705009362855" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="29" data-categories="misc" data-listing-date-sort="1399266000000" data-listing-file-modified-sort="1705009362855" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="634">
 <div class="thumbnail">
-<p><a href="./blog/2014-05-05-Repping-Hadley/index.html"> <img data-src="./blog/2014-05-05-Repping-Hadley/DataFest2014.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2014-05-05-Repping-Hadley/index.html" class="no-external"></a></p><a href="./blog/2014-05-05-Repping-Hadley/index.html" class="no-external">
+<p><img data-src="./blog/2014-05-05-Repping-Hadley/DataFest2014.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/2014-05-05-Repping-Hadley/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-05-05-Repping-Hadley/index.html">
 <h3 class="no-anchor listing-title">
-Repping Hadley at DataFest
+<a href="./blog/2014-05-05-Repping-Hadley/index.html" class="no-external">Repping Hadley at DataFest</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-05-05-Repping-Hadley/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2014-05-05-Repping-Hadley/index.html">
 <div class="listing-description">
-This weekend, we had our fourth annual DataFest event at UCLA. DataFest is a weekend-long data hackathon, where we give students an interesting dataset, plenty of snacks, and a space to work, and they try to come up with insights. This was the…
+<a href="./blog/2014-05-05-Repping-Hadley/index.html" class="no-external">This weekend, we had our fourth annual DataFest event at UCLA. DataFest is a weekend-long data hackathon, where we give students an interesting dataset, plenty of snacks, and a space to work, and they try to come up with insights. This was the third year I attended, and it seems to just get bigger…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-05-05-Repping-Hadley/index.html">
+<a href="./blog/2014-05-05-Repping-Hadley/index.html" class="no-external">
 <div class="listing-date">
 May 5, 2014
 </div>
@@ -1286,32 +1262,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="conferences" data-listing-date-sort="1397624400000" data-listing-file-modified-sort="1704838240548" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="30" data-categories="conferences" data-listing-date-sort="1397624400000" data-listing-file-modified-sort="1704838240548" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1009">
 <div class="thumbnail">
-<p><a href="./blog/2014-04-16-NICARthoughtsPt3/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2014-04-16-NICARthoughtsPt3/index.html" class="no-external"></a></p><a href="./blog/2014-04-16-NICARthoughtsPt3/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2014-04-16-NICARthoughtsPt3/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-04-16-NICARthoughtsPt3/index.html">
 <h3 class="no-anchor listing-title">
-Thoughts from NICAR 2014: process and content
+<a href="./blog/2014-04-16-NICARthoughtsPt3/index.html" class="no-external">Thoughts from NICAR 2014: process and content</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-04-16-NICARthoughtsPt3/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2014-04-16-NICARthoughtsPt3/index.html">
 <div class="listing-description">
-One of the things I was most interested…
+<a href="./blog/2014-04-16-NICARthoughtsPt3/index.html" class="no-external">One of the things I was most interested in learning about at NICAR was the processes and tools that journalists use when they’re doing data analysis. And the conference did not disappoint. I feel like I came away with a bunch of insight about how things are typically done, and a couple great…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-04-16-NICARthoughtsPt3/index.html">
+<a href="./blog/2014-04-16-NICARthoughtsPt3/index.html" class="no-external">
 <div class="listing-date">
 Apr 16, 2014
 </div>
@@ -1321,32 +1295,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="31" data-categories="conferences" data-listing-date-sort="1396933200000" data-listing-file-modified-sort="1704838230294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="31" data-categories="conferences" data-listing-date-sort="1396933200000" data-listing-file-modified-sort="1704838230294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="877">
 <div class="thumbnail">
-<p><a href="./blog/2014-04-08-NICARthoughtsPt2/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2014-04-08-NICARthoughtsPt2/index.html" class="no-external"></a></p><a href="./blog/2014-04-08-NICARthoughtsPt2/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2014-04-08-NICARthoughtsPt2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-04-08-NICARthoughtsPt2/index.html">
 <h3 class="no-anchor listing-title">
-Thoughts from NICAR 2014: data, where does it come from?
+<a href="./blog/2014-04-08-NICARthoughtsPt2/index.html" class="no-external">Thoughts from NICAR 2014: data, where does it come from?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-04-08-NICARthoughtsPt2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2014-04-08-NICARthoughtsPt2/index.html">
 <div class="listing-description">
-One of the strands I followed most closely at NICAR was the way people get and use data. Here are some of the things that surprised me or intersect with the stuff I’m thinking about for my dissertation.
+<a href="./blog/2014-04-08-NICARthoughtsPt2/index.html" class="no-external">One of the strands I followed most closely at NICAR was the way people get and use data. Here are some of the things that surprised me or intersect with the stuff I’m thinking about for my dissertation.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-04-08-NICARthoughtsPt2/index.html">
+<a href="./blog/2014-04-08-NICARthoughtsPt2/index.html" class="no-external">
 <div class="listing-date">
 Apr 8, 2014
 </div>
@@ -1356,32 +1328,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="32" data-categories="misc" data-listing-date-sort="1393912800000" data-listing-file-modified-sort="1704833175006" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="32" data-categories="misc" data-listing-date-sort="1393912800000" data-listing-file-modified-sort="1704833175006" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
 <div class="thumbnail">
-<p><a href="./blog/2014-03-04-Migration/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2014-03-04-Migration/index.html" class="no-external"></a></p><a href="./blog/2014-03-04-Migration/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2014-03-04-Migration/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-03-04-Migration/index.html">
 <h3 class="no-anchor listing-title">
-Migrated posts
+<a href="./blog/2014-03-04-Migration/index.html" class="no-external">Migrated posts</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-03-04-Migration/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2014-03-04-Migration/index.html">
 <div class="listing-description">
-I decided to hand-migrate the posts from my now-depreciated blogger blog, so while this blog is new, some of the posts are old. Hopefully that makes sense!
+<a href="./blog/2014-03-04-Migration/index.html" class="no-external">I decided to hand-migrate the posts from my now-depreciated blogger blog, so while this blog is new, some of the posts are old. Hopefully that makes sense!</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-03-04-Migration/index.html">
+<a href="./blog/2014-03-04-Migration/index.html" class="no-external">
 <div class="listing-date">
 Mar 4, 2014
 </div>
@@ -1391,32 +1361,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="33" data-categories="conferences" data-listing-date-sort="1393912800000" data-listing-file-modified-sort="1704838155529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="33" data-categories="conferences" data-listing-date-sort="1393912800000" data-listing-file-modified-sort="1704838155529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
 <div class="thumbnail">
-<p><a href="./blog/2014-03-04-NICARthoughtsPt1/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2014-03-04-NICARthoughtsPt1/index.html" class="no-external"></a></p><a href="./blog/2014-03-04-NICARthoughtsPt1/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2014-03-04-NICARthoughtsPt1/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2014-03-04-NICARthoughtsPt1/index.html">
 <h3 class="no-anchor listing-title">
-Thoughts from NICAR 2014: taking action
+<a href="./blog/2014-03-04-NICARthoughtsPt1/index.html" class="no-external">Thoughts from NICAR 2014: taking action</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2014-03-04-NICARthoughtsPt1/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('conferences'); return false;">
 conferences
 </div>
 </div>
-<a href="./blog/2014-03-04-NICARthoughtsPt1/index.html">
 <div class="listing-description">
-This past weekend, I attended the IRE NICAR conference in Baltimore, MD.
+<a href="./blog/2014-03-04-NICARthoughtsPt1/index.html" class="no-external">This past weekend, I attended the IRE NICAR conference in Baltimore, MD.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2014-03-04-NICARthoughtsPt1/index.html">
+<a href="./blog/2014-03-04-NICARthoughtsPt1/index.html" class="no-external">
 <div class="listing-date">
 Mar 4, 2014
 </div>
@@ -1426,32 +1394,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="34" data-categories="tools" data-listing-date-sort="1376110800000" data-listing-file-modified-sort="1704838107677" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="34" data-categories="tools" data-listing-date-sort="1376110800000" data-listing-file-modified-sort="1704838107677" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="502">
 <div class="thumbnail">
-<p><a href="./blog/2013-08-10-Productivity/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2013-08-10-Productivity/index.html" class="no-external"></a></p><a href="./blog/2013-08-10-Productivity/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2013-08-10-Productivity/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2013-08-10-Productivity/index.html">
 <h3 class="no-anchor listing-title">
-Productivity
+<a href="./blog/2013-08-10-Productivity/index.html" class="no-external">Productivity</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2013-08-10-Productivity/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('tools'); return false;">
 tools
 </div>
 </div>
-<a href="./blog/2013-08-10-Productivity/index.html">
 <div class="listing-description">
-Like most…
+<a href="./blog/2013-08-10-Productivity/index.html" class="no-external">Like most people, I don’t feel like there are enough hours in a day to do everything I want to. And, I’ve been getting caught up in the small stuff because it’s so much easier to renew that library book than start writing my dissertation. Here are a few things that have been helping me become more…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2013-08-10-Productivity/index.html">
+<a href="./blog/2013-08-10-Productivity/index.html" class="no-external">
 <div class="listing-date">
 Aug 10, 2013
 </div>
@@ -1461,32 +1427,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="35" data-categories="misc" data-listing-date-sort="1329026400000" data-listing-file-modified-sort="1704833124081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="35" data-categories="misc" data-listing-date-sort="1329026400000" data-listing-file-modified-sort="1704833124081" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="51">
 <div class="thumbnail">
-<p><a href="./blog/2012-02-12-Whats_the-shashistic/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2012-02-12-Whats_the-shashistic/index.html" class="no-external"></a></p><a href="./blog/2012-02-12-Whats_the-shashistic/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2012-02-12-Whats_the-shashistic/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2012-02-12-Whats_the-shashistic/index.html">
 <h3 class="no-anchor listing-title">
-What’s the shashtistic on me?
+<a href="./blog/2012-02-12-Whats_the-shashistic/index.html" class="no-external">What’s the shashtistic on me?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2012-02-12-Whats_the-shashistic/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2012-02-12-Whats_the-shashistic/index.html">
 <div class="listing-description">
-One…
+<a href="./blog/2012-02-12-Whats_the-shashistic/index.html" class="no-external">One of the major perks of becoming a statistician is hearing people (mainly drunk) who mispronounce the name of my field, earnestly repeating it over and over again in the hopes that I will tell them about “shashtistics,” or recite “the shashtistic” on them (generally, probability 1 that they are…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2012-02-12-Whats_the-shashistic/index.html">
+<a href="./blog/2012-02-12-Whats_the-shashistic/index.html" class="no-external">
 <div class="listing-date">
 Feb 12, 2012
 </div>
@@ -1496,32 +1460,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="36" data-categories="misc" data-listing-date-sort="1328680800000" data-listing-file-modified-sort="1704838082856" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="36" data-categories="misc" data-listing-date-sort="1328680800000" data-listing-file-modified-sort="1704838082856" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
 <div class="thumbnail">
-<p><a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html" class="no-external"></a></p><a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html">
 <h3 class="no-anchor listing-title">
-The Postal Service is into data visualization
+<a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html" class="no-external">The Postal Service is into data visualization</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html">
 <div class="listing-description">
-I was just listening to “Nothing Better” by The Postal Service on Pandora and was amused to hear for the first time the lyric,
+<a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html" class="no-external">I was just listening to “Nothing Better” by The Postal Service on Pandora and was amused to hear for the first time the lyric,</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html">
+<a href="./blog/2012-02-08-The-Postal-Service-is-into/index.html" class="no-external">
 <div class="listing-date">
 Feb 8, 2012
 </div>
@@ -1531,32 +1493,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="37" data-categories="misc" data-listing-date-sort="1327903200000" data-listing-file-modified-sort="1704838067180" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="37" data-categories="misc" data-listing-date-sort="1327903200000" data-listing-file-modified-sort="1704838067180" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
 <div class="thumbnail">
-<p><a href="./blog/2012-01-30-Bad-words/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2012-01-30-Bad-words/index.html" class="no-external"></a></p><a href="./blog/2012-01-30-Bad-words/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2012-01-30-Bad-words/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2012-01-30-Bad-words/index.html">
 <h3 class="no-anchor listing-title">
-Bad words
+<a href="./blog/2012-01-30-Bad-words/index.html" class="no-external">Bad words</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2012-01-30-Bad-words/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2012-01-30-Bad-words/index.html">
 <div class="listing-description">
-As a budding statistician, I struggle with the issue of terminology. Since I’m no longer just a member of the public, I’m expected to have a clearer understanding and use of technically specific words, but I’m just as biased by the popular uses of them! A few words/phrases I’m working on:
+<a href="./blog/2012-01-30-Bad-words/index.html" class="no-external">As a budding statistician, I struggle with the issue of terminology. Since I’m no longer just a member of the public, I’m expected to have a clearer understanding and use of technically specific words, but I’m just as biased by the popular uses of them! A few words/phrases I’m working on:</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2012-01-30-Bad-words/index.html">
+<a href="./blog/2012-01-30-Bad-words/index.html" class="no-external">
 <div class="listing-date">
 Jan 30, 2012
 </div>
@@ -1566,32 +1526,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="38" data-categories="misc" data-listing-date-sort="1285563600000" data-listing-file-modified-sort="1705009537057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="38" data-categories="misc" data-listing-date-sort="1285563600000" data-listing-file-modified-sort="1705009537057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
 <div class="thumbnail">
-<p><a href="./blog/2010-09-27-Stochastic_as-shit/index.html"> <img data-src="./blog/2010-09-27-Stochastic_as-shit/adjectives.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2010-09-27-Stochastic_as-shit/index.html" class="no-external"></a></p><a href="./blog/2010-09-27-Stochastic_as-shit/index.html" class="no-external">
+<p><img data-src="./blog/2010-09-27-Stochastic_as-shit/adjectives.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/2010-09-27-Stochastic_as-shit/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2010-09-27-Stochastic_as-shit/index.html">
 <h3 class="no-anchor listing-title">
-Stochastic as shit
+<a href="./blog/2010-09-27-Stochastic_as-shit/index.html" class="no-external">Stochastic as shit</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2010-09-27-Stochastic_as-shit/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2010-09-27-Stochastic_as-shit/index.html">
 <div class="listing-description">
-I’m really into this comic, and am going to try to use the phrase “stochastic as shit” in a serious academic context at some point in my graduate school career. It’s good to have goals, right?
+<a href="./blog/2010-09-27-Stochastic_as-shit/index.html" class="no-external">I’m really into this comic, and am going to try to use the phrase “stochastic as shit” in a serious academic context at some point in my graduate school career. It’s good to have goals, right?</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2010-09-27-Stochastic_as-shit/index.html">
+<a href="./blog/2010-09-27-Stochastic_as-shit/index.html" class="no-external">
 <div class="listing-date">
 Sep 27, 2010
 </div>
@@ -1601,32 +1559,30 @@ Amelia McNamara
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="39" data-categories="misc" data-listing-date-sort="1283749200000" data-listing-file-modified-sort="1704837948396" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="39" data-categories="misc" data-listing-date-sort="1283749200000" data-listing-file-modified-sort="1704837948396" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
 <div class="thumbnail">
-<p><a href="./blog/2010-09-26-A-Counting_Problem/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./blog/2010-09-26-A-Counting_Problem/index.html" class="no-external"></a></p><a href="./blog/2010-09-26-A-Counting_Problem/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./blog/2010-09-26-A-Counting_Problem/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2010-09-26-A-Counting_Problem/index.html">
 <h3 class="no-anchor listing-title">
-A counting problem
+<a href="./blog/2010-09-26-A-Counting_Problem/index.html" class="no-external">A counting problem</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/2010-09-26-A-Counting_Problem/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('misc'); return false;">
 misc
 </div>
 </div>
-<a href="./blog/2010-09-26-A-Counting_Problem/index.html">
 <div class="listing-description">
-I was going to title this post something like “day 3” or “day 23” but it’s hard to say where I should start counting. Whatever the number, it’s clear that I’m a fresh graduate student, and barely know what I’m in for.
+<a href="./blog/2010-09-26-A-Counting_Problem/index.html" class="no-external">I was going to title this post something like “day 3” or “day 23” but it’s hard to say where I should start counting. Whatever the number, it’s clear that I’m a fresh graduate student, and barely know what I’m in for.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2010-09-26-A-Counting_Problem/index.html">
+<a href="./blog/2010-09-26-A-Counting_Problem/index.html" class="no-external">
 <div class="listing-date">
 Sep 6, 2010
 </div>
@@ -1723,10 +1679,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1736,8 +1691,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1750,6 +1714,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1793,6 +1871,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1818,6 +1897,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1895,6 +2000,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

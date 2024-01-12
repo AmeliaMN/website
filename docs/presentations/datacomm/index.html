@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.542">
 
   <meta name="author" content="Amelia McNamara @amelia@vis.social @ameliamn@bsky.social">
   <title>Amelia McNamara - Data Communication and Visualization at the University of St Thomas</title>
@@ -156,7 +156,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -320,7 +321,6 @@
       margin-right: 0; 
     }
   </style>
-  
   <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
@@ -516,7 +516,7 @@ Amelia McNamara <span class="citation" data-cites="amelia">@amelia</span><span c
 </tbody>
 </table>
 </section>
-<section id="grading-breakdown" class="slide level2">
+<section id="grading-breakdown" class="slide level2 scrollable">
 <h2>Grading breakdown</h2>
 <ol type="1">
 <li><p>Mini-projects [40%]: There will be five mini-projects throughout the semester. The mini projects include Dear Data, Copy the Masters, One Number Story, and the Community Partner Project. Points for mini-projects will vary depending on the complexity of the project.</p></li>
@@ -904,7 +904,7 @@ Amelia McNamara <span class="citation" data-cites="amelia">@amelia</span><span c
 <h2>Final project</h2>
 <p>The final project is worth 20% of overall course grade. Again, there are many stages of the assignment and I find it difficult to assess the early stages. Again, I will mark down in the final draft if the student left work incomplete after feedback.</p>
 </section>
-<section id="final-project-1" class="slide level2">
+<section id="final-project-1" class="slide level2 scrollable">
 <h2>Final project</h2>
 <p>For your final project, you will do some data analysis and produce a piece of “data communication.” This communication must include some data visualization, and one or the other of writing about data or speaking about data.</p>
 <p>You have three deliverables for the project:</p>
@@ -975,11 +975,7 @@ Group 2: last names starting with K-Z</code></pre>
 <div class="column" style="width:60%;">
 <p>Original post: “I found another life expectancy chloropleth map, this time focusing on Europe. In the reading, Muth refers to a Datawrapper feature that confirms whether your visualization adheres to appropriate levels of accessibility to the colorblind, a useful tool for ensuring inclusivity. I think the color scheme in this chloropleth works well, although I’m not sure if the scheme is accessible to those with color-blindness. I find the placement of additional information (Highest/lowest regions) to be clever in utilizing space with no information recorded. I’m curious how areas are sectioned off as most countries in the visualization are split into smaller regions.”</p>
 </div><div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><a href="https://www.reddit.com/r/dataisbeautiful/comments/12klz2x/life_expectancy_at_birth_in_europe_oc/"><img data-src="img/life-expectancy-at-birth-in-europe-v0-9hav9eacjota1.jpg"></a></p>
-</figure>
-</div>
 </div>
 </div>
 </section>
@@ -989,11 +985,7 @@ Group 2: last names starting with K-Z</code></pre>
 <div class="column" style="width:60%;">
 <p>Response: “I think this is a really visually pleasing visualization, especially as you note, the additional information and contextualization are in really good places. I think this is an interesting way to look at life expectancy because oftentimes the same data might be compiled and used as one color for the entire country. I found it especially interesting when Muth talked about considering using the smallest units possible. In this map, they have separate regions color coded individually, and it makes it more descriptive too. It also makes me speculate as to the causes of particular regions having lower or higher life expectancy rates. It looks like they never say that the medium gray, I assume, is countries lacking in data compared to the light gray of Africa and the Middle East, which I assumed to be countries they were ignoring for this visualization.”</p>
 </div><div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><a href="https://www.reddit.com/r/dataisbeautiful/comments/12klz2x/life_expectancy_at_birth_in_europe_oc/"><img data-src="img/life-expectancy-at-birth-in-europe-v0-9hav9eacjota1.jpg"></a></p>
-</figure>
-</div>
 </div>
 </div>
 </section>
@@ -1026,8 +1018,10 @@ Group 2: last names starting with K-Z</code></pre>
 <section id="thank-you" class="title-slide slide level1 center">
 <h1>Thank you</h1>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -1056,7 +1050,6 @@ Group 2: last names starting with K-Z</code></pre>
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1355,10 +1348,9 @@ Group 2: last names starting with K-Z</code></pre>
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1368,8 +1360,17 @@ Group 2: last names starting with K-Z</code></pre>
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
