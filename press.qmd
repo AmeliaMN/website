@@ -1,20 +1,28 @@
 ---
 title: "Press"
+editor: source
 ---
 
-
-- I was one of the women profiled by AmstatNews for their ["Celebrating Women in Statistics"](https://magazine.amstat.org/statisticians-in-history/wis/) feature. 
-- [The essay](http://tinlizzie.org/histograms/) Aran Lunzer and I wrote about histograms was mentioned in [The Data Science Roundup](http://roundup.fishtownanalytics.com/issues/new-deep-learning-architectures-gpu-databases-histograms-more-dsr-99-70182)
-- Nathan Yau of [FlowingData](http://flowingdata.com/) [posted about](https://flowingdata.com/2017/07/24/an-interactive-to-explain-histograms-for-normal-people/) the histogram essay. 
-- Emily Kund of the [Tableau Wannabe Podcast](https://soundcloud.com/tableau-wannabe-podcast) [covered my OpenVisConf talk](https://soundcloud.com/tableau-wannabe-podcast/emily-at-openviz-day-1), How Spatial Polygons Shape Our World.
-- I am occasionally mentioned in the Smith College "People News." For example, my participation in the [Youth, Learning, and Data Science Summit](https://www.smith.edu/news/people-news-29/), the [Women in Statistics and Data Science Conference](https://www.smith.edu/news/people-news-46/) (San Diego) and the [Women in Data Science Conference](https://www.smith.edu/news/people-news-48/) (Boston) have received writeups. 
-- Roger Peng had me on [Not So Standard Deviations](https://nssdeviations.com/episode-27-special-guest-amelia-mcnamara) as a guest for a special podcast episode. <!-- 2016 -->
-- The American Statistical Associated interviewed me for [Who inspires you?](http://magazine.amstat.org/blog/2016/09/01/inspire/), in AmstatNews. <!-- 2016 -->
-- David Robinson mentioned me several times in his post [useR and JSM 2016 conferences: a story in tweets](http://varianceexplained.org/r/user-jsm-conferences/). <!-- 2016 -->
-- Robert Kosara wrote about my talk in his [OpenVisConf summary blog](https://eagereyes.org/blog/2016/openvis-2016-talk-videos-and-pointers). <!-- 2016 -->
-- Siena Duplan mentioned me in her post on [10 takeways from 22 data visualization practitioners at #OpenVisConf](https://medium.freecodecamp.com/10-takeaways-from-22-data-visualization-practitioners-at-openvisconf-a4a3a5b96fcd#.ingq8f8fh). <!-- 2016 -->
-- I was quoted in the KCET article on [Introduction to Data Science: An Authentic Approach to 21st Century Learning](https://www.kcet.org/departures-columns/introduction-to-data-science-an-authentic-approach-to-21st-century-learning). <!-- 2015 -->
-- My work was mentioned in this blog post about [Lively R](http://citizen-statistician.org/2014/06/28/lively-r/) by Rob Gould. <!-- 2014 -->
-- I appear briefly in this [promotional video](https://vimeo.com/93301043) about the rOpenSci Hackathon. <!-- 2014 -->
-- Macalester College recorded video interviews with me several times, about [Pursuing a PhD in the sciences](https://www.youtube.com/watch?v=wyGNlrwwWT4) and how to [Prepare for the unpredictable](https://www.youtube.com/watch?v=Ekg1nCpJDaI). <!-- 2011 -->
-- Macalester College published a profile of [me and my undergraduate research](http://www.macalester.edu/whatshappening/stories/2010march/solarcells.html) in Macalester Today. <!-- 2010 -->
+- I was quoted in [a Scientific American piece about how coin flips are not truly 50/50](https://www.scientificamerican.com/article/scientists-destroy-illusion-that-coin-toss-flips-are-50-50/)
+- When I received tenure and promotion to Associate Professor, I [was listed in a St Thomas Newsroom piece](https://news.stthomas.edu/faculty-promotions-and-tenure-announced-4/) about faculty promotions. 
+- My keynote at Harford Community College's STEM day was [covered by the Bel Air Patch](https://patch.com/maryland/belair/stem-day-2023-will-be-feb-11-harford-community-college)
+- The [Professor Podcast in the Library with a Microphone](https://libguides.stthomas.edu/profpodcast) [had me as a guest](https://libguides.stthomas.edu/profpodcast/transcripts/amelia-mcnamara-understanding-statistics). 
+- I was quoted in a St Thomas [Newsroom piece](https://news.stthomas.edu/women-in-software-and-data-science-overcoming-the-red-queen-effect/) on diversity in data science. 
+- The St Thomas Newsroom [covered](https://news.stthomas.edu/are-new-technologies-keeping-us-stuck-in-old-biases/) my Teach-in Tuesday presentation on Algorithmic Accountability. 
+- The University of St Thomas wrote [a press release](https://news.stthomas.edu/american-statistical-association-recognizes-st-thomas-professor/) about me winning the [2021 Waller Education Award](https://www.amstat.org/your-career/awards/waller-awards) from the American Statistical Association. 
+- I directed a rescue effort for a professor who had a heart attack on campus, which was [covered by TommieMedia](https://www.tommiemedia.com/heroes-walk-among-us-tommies-rush-to-help-stricken-philosophy-professor/)
+-   I was one of the women profiled by AmstatNews for their ["Celebrating Women in Statistics"](https://magazine.amstat.org/statisticians-in-history/wis/) feature.
+-   [The essay](http://tinlizzie.org/histograms/) Aran Lunzer and I wrote about histograms was mentioned in [The Data Science Roundup](http://roundup.fishtownanalytics.com/issues/new-deep-learning-architectures-gpu-databases-histograms-more-dsr-99-70182)
+-   Nathan Yau of [FlowingData](http://flowingdata.com/) [posted about](https://flowingdata.com/2017/07/24/an-interactive-to-explain-histograms-for-normal-people/) the histogram essay.
+-   Emily Kund of the [Tableau Wannabe Podcast](https://soundcloud.com/tableau-wannabe-podcast) [covered my OpenVisConf talk](https://soundcloud.com/tableau-wannabe-podcast/emily-at-openviz-day-1), How Spatial Polygons Shape Our World.
+-   I am occasionally mentioned in the Smith College "People News." For example, my participation in the [Youth, Learning, and Data Science Summit](https://www.smith.edu/news/people-news-29/), the [Women in Statistics and Data Science Conference](https://www.smith.edu/news/people-news-46/) (San Diego) and the [Women in Data Science Conference](https://www.smith.edu/news/people-news-48/) (Boston) have received writeups.
+-   Roger Peng had me on [Not So Standard Deviations](https://nssdeviations.com/episode-27-special-guest-amelia-mcnamara) as a guest for a special podcast episode. <!-- 2016 -->
+-   The American Statistical Associated interviewed me for [Who inspires you?](http://magazine.amstat.org/blog/2016/09/01/inspire/), in AmstatNews. <!-- 2016 -->
+-   David Robinson mentioned me several times in his post [useR and JSM 2016 conferences: a story in tweets](http://varianceexplained.org/r/user-jsm-conferences/). <!-- 2016 -->
+-   Robert Kosara wrote about my talk in his [OpenVisConf summary blog](https://eagereyes.org/blog/2016/openvis-2016-talk-videos-and-pointers). <!-- 2016 -->
+-   Siena Duplan mentioned me in her post on [10 takeways from 22 data visualization practitioners at #OpenVisConf](https://medium.freecodecamp.com/10-takeaways-from-22-data-visualization-practitioners-at-openvisconf-a4a3a5b96fcd#.ingq8f8fh). <!-- 2016 -->
+-   I was quoted in the KCET article on [Introduction to Data Science: An Authentic Approach to 21st Century Learning](https://www.kcet.org/departures-columns/introduction-to-data-science-an-authentic-approach-to-21st-century-learning). <!-- 2015 -->
+-   My work was mentioned in this blog post about [Lively R](http://citizen-statistician.org/2014/06/28/lively-r/) by Rob Gould. <!-- 2014 -->
+-   I appear briefly in this [promotional video](https://vimeo.com/93301043) about the rOpenSci Hackathon. <!-- 2014 -->
+-   Macalester College recorded video interviews with me several times, about [Pursuing a PhD in the sciences](https://www.youtube.com/watch?v=wyGNlrwwWT4) and how to [Prepare for the unpredictable](https://www.youtube.com/watch?v=Ekg1nCpJDaI). <!-- 2011 -->
+-   Macalester College published a profile of [me and my undergraduate research](http://www.macalester.edu/whatshappening/stories/2010march/solarcells.html) in Macalester Today. <!-- 2010 -->

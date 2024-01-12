@@ -1,6 +1,6 @@
 ---
 title: "STAT 220 labs"
-editor: visual
+editor: source
 ---
 
 ::: lead
