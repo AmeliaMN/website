@@ -5,10 +5,6 @@ project:
     - "*.qmd"
     - "*.md"
     - "*.rmd"
-    - "!sds136/"
-    - "!sds220/"
-    - "!sds236/"
-    - "!sds291"
 
 website:
   title: "Amelia McNamara"
