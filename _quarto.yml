@@ -6,8 +6,14 @@ project:
     - "*.md"
     - "*.rmd"
     - "!SpeakingR/"
+    - "!presentations/noRth2020/"
+    - "!presentations/syntax/"
   resources:
     - "SpeakingR/"
+    - "presentations/noRth2020/"
+    - "presentations/syntax/"
+    - "presentations/user2022_files"
+    - "presentations/BestPractices_files"
 
 website:
   title: "Amelia McNamara"

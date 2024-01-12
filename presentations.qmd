@@ -4,11 +4,18 @@ title: "Presentations"
 
 Here are some links to selected presentations I've given and workshops I've led. For a more complete list, see [my CV](McNamaraCV.pdf).
 
-### Presentations
+## Presentations
+
+## 2024
 
 **Data Communication and Visualization at the University of St Thomas** January 2024. [Institute for Mathematical and Statistical Innovation](https://www.imsi.institute/), Chicago IL. [Teaching and Evaluating Data Communication At Scale](https://www.imsi.institute/activities/teaching-and-evaluating-data-communication-at-scale/#schedule) ([slides](presentations/datacomm/))
 
+## 2023
+
 **Data Science as a Superpower** (keynote), February 2023. Harford Community College, Bel Air, MD. [STEM Day](https://www.harford.edu/about/get-to-know-harford/news/2023/01-january/stem-day.php) ([slides](presentations/DataScienceAsASuperPower2023.pdf))
+
+## 2022
+
 
 **What 'counts' as statistical communication?** August 2022. [JSM 2022](https://ww2.amstat.org/meetings/jsm/2022/index.cfm), Washington DC. ([slides](presentations/Communication2022))
 
@@ -16,15 +23,29 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 **Teaching modeling in introductory statistics: A comparison of formula and tidyverse syntaxes** June 2022. [useR!](https://user2022.r-project.org/), virtual. ([slides](presentations/user2022.html))
 
+**Data Science as a Super Power** February 2022. University of Richmond biology seminar series. ([slides](presentations/DataScienceAsASuperPowerFeb2022.pdf))
+
+## 2021
+
+**Best practices for using and teaching R** September 2021. University of St Thomas internal seminar. ([slides](presentations/BestPractices.html))
+
 **Computing in the Statistics Curriculum: Lessons Learned from the Educational Sciences**, with Andrew Zieffler, Matthew Beckman, Chelsey Legacy, Elle Butler Basner, Robert delMas, & V.N. Vimal Rao. [JSM 2021, virtual](https://ww2.amstat.org/meetings/jsm/2021/index.cfm). ([slides](presentations/IntegratingComputation_McNamaraEtAl_slides.pdf), [video](https://youtu.be/ZsYJ81TwGW8))
+
+**Consistency is key: A case study in R Syntaxes**, March 2021. [Teaching Integrity in Empirical Research (TIER) Spring Symposium](https://www.projecttier.org/events/2021-spring-symposium-instruction-in-reproducible-research/) ([slides](presentations/syntax/), [video](https://www.youtube.com/watch?v=aq5SrjXZDy4&source_ve_path=MzY4NDIsMjg2NjY))
+
+## 2020
 
 **Spatial Gerrymandering: Can it be Avoided?**, September 2020. [Thinking Spatially: Mapping Politics and Polarization, virtual](https://ias.umn.edu/thinking-spatially/2020). ([slides](presentations/SpatialLightning.pdf))
 
 **How (not) to bring Wikipedia into the classroom**, August 2020. [JSM 2020, virtual](https://amstat-jsm.conferencecontent.net). ([slides](presentations/WikipediaJSM.pdf))
 
+**Scraping, iterating, purring**, July 2020. noRth conference. ([slides](presentations/noRth2020/), [video](https://www.youtube.com/watch?v=bEtVPtsgAR0&list=PL7aOYMht_9VVUFWU5c7HSI3cEg8jG4o_g&index=1&t=1s))
+
 **Speaking R** (keynote), July 2020. [useR! 2020, virtual](https://user2020.r-project.org/). ([slides](SpeakingR/index.html), [video](https://www.youtube.com/watch?v=ckW9sSdIVAc&t=676s)).
 
 **Making a Tidy Dress**, January 2020. [rstudio::conf, San Francisco, CA](https://rstudio.com/conference/). ([slides](presentations/MakingATidyDress.pdf), [video](https://rstudio.com/resources/rstudioconf-2020/making-a-tidy-dress/))
+
+## 2019
 
 **Why the Tidyverse?** (keynote), August 2019. [noRth conference](https://rnorthconference.github.io/), Minneapolis, MN, ([slides](presentations/WhyTheTidyverse.pdf))
 
@@ -36,11 +57,17 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 **Wrangling Categorical Data in R Without Losing your Mind**, January 2019. rstudio::conf ([slides](presentations/WranglingCats.pdf), [video](https://rstudio.com/resources/rstudioconf-2019/working-with-categorical-data-in-r-without-losing-your-mind/))
 
+## 2018
+
+**The Power of Algorithms for Good and Evil**, November 2018. [World Usability Day](https://www.worldusabilityday.org/2018/11/university-of-minnesota-2018/), University of Minnesota. ([slides](presentations/PowerOfAlgorithms.pdf))
+
 **How Spatial Polygons Shape Our World: Geometry, Data, and Perceptions of Truth**, September 2018. [University of Minnesota Institute for Advanced Study](https://ias.umn.edu/mcnamara) Minneapolis, MN. ([slides](presentations/SpatialAggSeptember2018.pdf), [video](https://www.youtube.com/watch?v=bjFzWElyD3o&list=PLik6fAQnSI91PMsa69RJcdKG4L4BiV5MX))
 
 **How Software Affects Humans' Conceptions of Data: A Case Study in R Syntaxes**, August 2018. [JSM 2018](https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/ActivityDetails.cfm?SessionID=215317), Vancouver BC. ([slides](presentations/RSyntaxes.pdf))
 
 **Imagining the future of statistical education software**, July 2018. [ICOTS 10](http://icots.info/10/?session=1B), Kyoto, Japan. ([slides](presentations/ImaginingTheFuture.pdf))
+
+**Teaching students reproducibility**, May 2018. [Electronic Conference on Teaching Statistics (eCOTS)](https://www.causeweb.org/cause/ecots/ecots18) ([slides](presentations/TeachingReproducibility.pdf), [video](https://www.causeweb.org/cause/ecots/ecots18/breakouts/10))
 
 **Making spatial aggregation more transparent**, April 2018. [2018 CGA Conference: Illuminating Space and Time in Data Science](http://gis.harvard.edu/events/conferences/2018-cga-conference-illuminating-space-and-time-data-science), Harvard University, Cambridge, MA. ([slides](presentations/MakingSpatialAggMoreTransparent.pdf))
 
@@ -48,11 +75,15 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 **Scientists Programming**, February 2018. [Evidence about Programmers for Programming Language Design](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18061). Dagstuhl Seminar, Wadern, Germany. ([slides](https://materials.dagstuhl.de/files/18/18061/18061.AmeliaA.McNamara1.Slides2.pdf), [writeup](presentations/ScientistsProgramming.pdf))
 
+## 2017
+
 **Algorithmic Accountability**, November 2017. Smith College [Otelia Cromwell Day](https://www.smith.edu/about-smith/college-events/otelia-cromwell-day/schedule), Northampton, MA. ([slides](presentations/AlgorithmicAccountability.pdf), [video](https://www.youtube.com/watch?v=qRT3334Szis))
 
 **Interfacing with Data** (plenary), September 2017, [Data Literacy Conference](http://dataliteracyconference.net/2017/), Aix-en-Provence, France. ([slides](presentations/InterfacingWithData.pdf))
 
 **How Spatial Polygons Shape Our World**, April 2017, [OpenVisConf](https://openvisconf.com/), Boston, MA. ( [video](https://www.youtube.com/watch?v=wn5larsRHro), [slides and links](https://github.com/AmeliaMN/SpatialPolygons))
+
+## 2016
 
 **Integrated R labs for high school students**, [useR](http://user2016.org/) 2016, Stanford University, Stanford, CA. ([video](https://channel9.msdn.com/events/useR-international-R-User-conference/useR2016/Integrated-R-labs-for-high-school-students), [slides and resources](https://github.com/AmeliaMN/user2016))
 
@@ -60,13 +91,15 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 **Do you know Nothing when you see it?** [OpenVisConf](https://openvisconf.com/) April 2016, Boston MA. ([video](https://www.youtube.com/watch?v=hps9r7JZQP8) [links](https://www.amelia.mn/blog/conferences/2016/04/25/OpenVisConf.html), [transcript](https://www.amelia.mn/blog/conferences/2016/05/16/OpenVisConfTranscript.html))
 
+## 2014 
+
 **Eyeo Highlights**. Datavis LA Meetup. August 2014, Los Angeles CA. ([video](https://www.youtube.com/watch?v=J838Uoc1Wac) and [slides](https://docs.google.com/presentation/d/1kC9lumdotbHmW3r177d4_nIdqPVYjeYDV85O4v_3UNo/pub?start=false&loop=false&delayms=3000))
 
 **Teaching Data Science to Teenagers** (with M. Hansen). International Conference on Teaching Statistics. July 2014, Flagstaff, AZ. ([slides](presentations/TeachingDStoTeens.pdf))
 
 **Teaching R to High School Students** (with J. Molyneux). useR! The R User Conference. July 2014, Los Angeles, CA. ([slides](presentations/TeachingRtoHS.html))
 
-### Workshops
+## Workshops
 
 **Exploring the Tidyverse in R**, with Aaron Kessler. [NICAR](https://www.ire.org/events-and-training/conferences/nicar-2020) March 2020, New Orleans, LA. ([materials](https://github.com/AmeliaMN/data-science-in-tidyverse-nicar-2020))
 

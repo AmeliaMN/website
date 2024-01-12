@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Scraping, iterating, purring</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Amelia McNamara, PhD" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/my-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+class: title-slide, left, top
+background-image: url(img/pattern-1477380.png)
+background-size: 180%
+background-repeat: repeat
+background-position: 18% 55%
+
+
+
+
+# Scraping, iterating, purring
+
+### Amelia McNamara, PhD
+### Assistant Professor of Computer &amp; &lt;br&gt;Information Sciences
+### University of St Thomas&lt;br&gt;St Paul, MN
+
+[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)  
+[<i class="fab  fa-github "></i> AmeliaMN](https://www.github.com/AmeliaMN)  
+[<i class="fas  fa-desktop "></i> amelia.mn](https://www.amelia.mn)
+
+
+
+???
+
+Hi, I'm Amelia McNamara. I'm an assistant professor at the University of St Thomas in Minnesota. I tweet at AmeliaMN, which is a double entendre because my last name is McNamara and I live in Minnesota. I just tweeted a link to these slides if you want to follow along. 
+
+Image by &lt;a href="https://pixabay.com/users/siberian_beard-207105/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1477380"&gt;siberian_beard&lt;/a&gt; from &lt;a href="https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1477380"&gt;Pixabay&lt;/a&gt;
+
+---
+class: middle
+iteration noun
+
+it·​er·​a·​tion | \ ˌi-tə-ˈrā-shən \
+
+**Definition of iteration**
+&lt;ol&gt;
+&lt;li&gt; : VERSION, INCARNATION
+&lt;br&gt; // the latest iteration of the operating system&lt;/li&gt;
+&lt;li&gt; : the action or a process of iterating or repeating: such as &lt;/li&gt;
+&lt;ol type="a"&gt;
+&lt;li&gt; : a procedure in which repetition of a sequence of operations yields results successively closer to a &lt;br&gt; desired result&lt;/li&gt;
+&lt;li&gt; : the repetition of a sequence of computer instructions a specified number of times or until a &lt;br&gt; condition is met &lt;br&gt;
+— compare RECURSION &lt;/li&gt;
+&lt;/ol&gt;
+&lt;li&gt; : one execution of a sequence of operations or instructions in an iteration &lt;/li&gt;
+&lt;/ol&gt;
+
+.footnote[[Definiton of iteration](https://www.merriam-webster.com/dictionary/iteration) from Merriam-Webster]
+???
+
+I'm going to be talking about iteration at two different levels. 
+
+
+---
+class: middle
+iteration noun
+
+it·​er·​a·​tion | \ ˌi-tə-ˈrā-shən \
+
+**Definition of iteration**
+&lt;ol&gt;
+&lt;li&gt; : VERSION, INCARNATION
+&lt;br&gt; // the latest iteration of the operating system&lt;/li&gt;
+&lt;li&gt; : the action or a process of iterating or repeating: such as &lt;/li&gt;
+&lt;ol type="a"&gt;
+&lt;li&gt; : a procedure in which repetition of a sequence of operations yields results successively closer to a &lt;br&gt; desired result&lt;/li&gt;
+&lt;li&gt; : &lt;b&gt;the repetition of a sequence of computer instructions a specified number of times or until a &lt;br&gt; condition is met&lt;/b&gt; &lt;br&gt;
+— compare RECURSION &lt;/li&gt;
+&lt;/ol&gt;
+&lt;li&gt; : one execution of a sequence of operations or instructions in an iteration &lt;/li&gt;
+&lt;/ol&gt;
+
+.footnote[[Definiton of iteration](https://www.merriam-webster.com/dictionary/iteration) from Merriam-Webster]
+???
+
+We'll talk about the idea of repetition in computer instructions,
+
+---
+class: middle
+iteration noun
+
+it·​er·​a·​tion | \ ˌi-tə-ˈrā-shən \
+
+**Definition of iteration**
+&lt;ol&gt;
+&lt;li&gt; : VERSION, INCARNATION
+&lt;br&gt; // the latest iteration of the operating system&lt;/li&gt;
+&lt;li&gt; : the action or a process of iterating or repeating: such as &lt;/li&gt;
+&lt;ol type="a"&gt;
+&lt;li&gt; : &lt;b&gt;a procedure in which repetition of a sequence of operations yields results successively closer to a &lt;br&gt; desired result&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt; : the repetition of a sequence of computer instructions a specified number of times or until a &lt;br&gt; condition is met &lt;br&gt;
+— compare RECURSION &lt;/li&gt;
+&lt;/ol&gt;
+&lt;li&gt; : one execution of a sequence of operations or instructions in an iteration &lt;/li&gt;
+&lt;/ol&gt;
+
+.footnote[[Definiton of iteration](https://www.merriam-webster.com/dictionary/iteration) from Merriam-Webster]
+???
+
+But also a sequence of operations that yields results successively closer to the desired result. 
+
+---
+.pull-left[
+
+```r
+# remotes::install_github("allisonhorst/palmerpenguins")
+library(palmerpenguins)
+```
+
+Let's say I wanted to know the bill lengths of all the `palmerpenguins` in inches. There are many approaches I could take.
+
+If I was coming from a programming language other than R, my first impulse might be to use a **for loop**, which turns out to be very **inefficient** in R. 
+]
+.pull-right[
+![Drawing of three species of penguins to accompany the penguins data by Allison Horst](img/lter_penguins.png)
+[Penguin data](https://github.com/allisonhorst/palmerpenguins) and [penguin art](https://github.com/allisonhorst/palmerpenguins/tree/master/man/figures) by [Allison Horst](https://twitter.com/allison_horst)
+]
+
+
+
+```r
+penguins$bill_length_in &lt;- NA
+for (i in 1:dim(penguins)[1]) {
+  penguins$bill_length_in[i] &lt;- penguins$bill_length_mm[i] / 25.4
+  }
+```
+
+Instead, I should take a **vectorized approach**. I don't actually need to iterate over every element. 
+
+```r
+penguins$bill_length_in &lt;- penguins$bill_length_mm / 25.4
+```
+
+
+
+
+
+???
+
+As you may already know, traditional control structures like for-loops can be very inefficient in R. Vectorized operations avoid the copy-on-modify issue, and are overall less work for you as the programmer! 
+
+---
+class: middle
+
+&gt; You should consider writing a function whenever you’ve copied and pasted a block of code more than twice. 
+
+&gt; R for Data Science 
+
+.footnote[Garrett Grolemund and Hadley Wickham, [R for Data Science](https://r4ds.had.co.nz/)]
+
+---
+# The apply() family of functions
+
+
+```r
+mean(penguins$body_mass_g[penguins$species == "Adelie"], na.rm = TRUE)
+mean(penguins$body_mass_g[penguins$species == "Chinstrap"], na.rm = TRUE)
+mean(penguins$body_mass_g[penguins$species == "Gentoo"], na.rm = TRUE)
+```
+
+```
+## [1] 3700.662
+## [1] 3733.088
+## [1] 5076.016
+```
+
+
+```r
+tapply(penguins$body_mass_g, penguins$species, mean, na.rm = TRUE)
+```
+
+```
+##    Adelie Chinstrap    Gentoo 
+##  3700.662  3733.088  5076.016
+```
+
+.footnote[Example comes from my [syntax comparison cheatsheet](https://rstudio.com/resources/cheatsheets/#contributed-cheatsheets) and recent [useR! keynote](https://www.youtube.com/watch?v=ckW9sSdIVAc&amp;t=676s).]
+
+
+???
+I grabbed this example from my recent useR! talk. We can avoid copying and pasting by using an apply() function, but I can never remember the syntax. 
+
+
+---
+# tidyverse solution
+
+
+```r
+library(dplyr)
+penguins %&gt;%
+  group_by(species) %&gt;%
+  summarize(mean = mean(body_mass_g, na.rm = TRUE))
+```
+
+```
+## # A tibble: 3 x 2
+##   species    mean
+##   &lt;fct&gt;     &lt;dbl&gt;
+## 1 Adelie    3701.
+## 2 Chinstrap 3733.
+## 3 Gentoo    5076.
+```
+
+???
+
+This solution is much easier for me, cognitively. But less efficient in compute time. 
+
+---
+class: center, middle
+
+# More complex situations 
+
+???
+
+These have been some pretty basic examples. Repetitive code takes many forms! 
+
+---
+class: middle, big-bullet
+
+# Scraping
+
+- GitHub
+- Facebook
+
+???
+
+I'd like to talk to you about two scraping projects I've done recently. 
+
+---
+# Counting commits 
+
+The first project relates to a promise I made my students in Spring 2019. GitHub had sent me some swag to distribute to students, including two t-shirt redemption codes. 
+
+&gt; I'll give a t-shirt to the student with the most commits over the semester in each section.
+
+&gt; ~ Me (without thinking about how hard that might be)
+
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/), a post by me on the [Teach Data Science blog](https://teachdatascience.com).
+]
+
+---
+class: big-bullet
+## One approach (that I didn't use)
+
+- For each student, use the GitHub API to determine all repositories they committed to
+- For each repository, use the API to determine the number of commits in that repository
+- Total all commits for each student by adding up commits from each repository they committed to
+
+## Issues
+
+- Seemed like a lot of levels of iteration to deal with
+- If a student committed to an active repo, their count would be artificially inflated
+- Students worked in groups on repos
+
+## So... what did I do?
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post.
+]
+
+---
+
+![](img/GitHubProfileAllContribs.png)
+
+???
+Scraping! 
+
+Initially, I was just going to grab that number where it says "411 contributions in the last year." 
+
+---
+
+![](img/GitHubSource1.png)
+
+???
+
+If you want to look at the HTML code of a web page, you can View Source. Here's where that 411 comes from
+
+---
+# Getting set up to scrape
+
+I'm using other blog authors from the [Teach Data Science blog](https://teachdatascience.com) because of FERPA issues with sharing student info. 
+
+```r
+roster &lt;- tibble(url = c("https://github.com/AmeliaMN",
+                         "https://github.com/hglanz",
+                         "https://github.com/hardin47",
+                        "https://github.com/nicholasjhorton"))
+```
+
+.left-column[
+&lt;div class="figure"&gt;
+&lt;img src="img/rvest.png" alt="rvest hex sticker" width="80%" /&gt;
+&lt;p class="caption"&gt;rvest hex sticker&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.right-column[
+
+```r
+library(rvest)
+
+session &lt;- html_session("https://github.com")
+```
+]
+
+
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post. [rvest package](https://rvest.tidyverse.org/). rvest [webinar materials by Garrett Grolemund](https://github.com/rstudio/webinars/tree/master/32-Web-Scraping). 
+]
+
+???
+I'm picking on the folks who run the Teach Data Science blog. 
+
+The session isn't actually necessary now, but it will be later.
+
+---
+# Scraping the 411
+
+.left-column[
+&lt;div class="figure"&gt;
+&lt;img src="img/rvest.png" alt="rvest hex sticker" width="80%" /&gt;
+&lt;p class="caption"&gt;rvest hex sticker&lt;/p&gt;
+&lt;/div&gt;
+]
+.right-column[
+
+```r
+commits &lt;- function(url, session) {
+  session %&gt;%
+    jump_to(url) %&gt;%
+    read_html() %&gt;%
+    html_nodes("h2.f4.text-normal.mb-2") %&gt;%
+    html_text() %&gt;%
+    purrr::pluck(2) %&gt;%
+    readr::parse_number()
+}
+```
+]
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post. [rvest package](https://rvest.tidyverse.org/). rvest [webinar materials by Garrett Grolemund](https://github.com/rstudio/webinars/tree/master/32-Web-Scraping). 
+]
+
+???
+
+Take a session, then jump to a url, then read the HTML, then select the HTML nodes that match that selector (selector gadget!), then extract the text, then take the second element and parse the number. 
+
+This is a function that finds that number. 
+
+---
+# Aside-- selectorgadget
+
+```r
+commits &lt;- function(url, session) {
+  session %&gt;%
+    jump_to(url) %&gt;%
+    read_html() %&gt;%
+*   html_nodes("h2.f4.text-normal.mb-2") %&gt;%
+    html_text() %&gt;%
+    purrr::pluck(2) %&gt;%
+    readr::parse_number()
+}
+```
+
+It's really hard to figure out those selectors. One helpful tool is [selectorgadget](https://cran.r-project.org/web/packages/rvest/vignettes/selectorgadget.html), "a JavaScript bookmarklet that allows you to interactively figure out what css selector you need to extract desired components from a page."
+
+
+---
+# Iterating over URLs
+
+
+```r
+library(purrr)
+roster %&gt;% 
+* mutate(commits = map_dbl(url, commits, session = session)) %&gt;%
+  arrange(desc(commits))
+```
+
+.pull-left[
+
+```
+## # A tibble: 4 x 2
+##   url                                commits
+##   &lt;chr&gt;                                &lt;dbl&gt;
+## 1 https://github.com/nicholasjhorton    1937
+## 2 https://github.com/AmeliaMN            418
+## 3 https://github.com/hardin47            387
+## 4 https://github.com/hglanz               88
+```
+]
+
+.pull-right[
+`map_dbl()` is one of the map functions from the `purrr` package. It returns a vector of type double, so it needs to be inside a `mutate()` command. 
+
+&lt;img src="img/purrr.png" width="30%" /&gt;
+&lt;img src="img/cwickham-small.jpg" width="30%" /&gt;
+
+[Charlotte Wickham](https://www.cwick.co.nz/)
+]
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post. [purrr package](https://purrr.tidyverse.org/). purrr [package tutorial](https://github.com/cwickham/purrr-tutorial) by Charlotte Wickham.
+]
+
+???
+
+Charlotte Wickham helped me by refactoring this code. 
+
+---
+class: big-bullet
+# Problems
+
+1. I didn't say I was giving the t-shirt to the person with the most commits in the last year, I said in the time period of the semester
+2. Many of my students' commits were on private GitHub repos (visible to me, because of how they were set up in GitHub classroom)
+
+# Let's solve problem 1
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post.
+]
+
+---
+## An aside-- you can make your private contributions show up in the graph
+![](img/GitHubPreferences.png)
+
+???
+This is just an aside, but I believe the default is to have private contributions not counted on your profile. I've changed this preference myself, because I want more of those green boxes! 
+
+My students hadn't done this, so I needed to be logged in to see their "true" commit counts.
+
+---
+
+![](img/GitHubProfileGreenBlocks.png)
+???
+
+Instead, I decided to grab those green blocks, which actually have data attached to them! 
+
+---
+
+![](img/GitHubSource2.png)
+
+???
+Check it out! They have the dates and number of commits. 
+
+
+
+---
+# Here we go again
+
+
+```r
+commits_by_date &lt;- function(url, session){
+  session %&gt;%
+    jump_to(url) %&gt;%
+    read_html() %&gt;%
+    html_nodes("rect.day") %&gt;%
+    html_attrs() %&gt;%
+*   map_dfr(as.list) %&gt;%
+    select(count = `data-count`, date = `data-date`) %&gt;% 
+    mutate(
+      date = parse_date(date),
+      count = parse_number(count),
+      )
+}
+```
+
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post.
+]
+
+???
+
+This gets the data from the green boxes. Again, refactored by Charlotte. 
+
+
+---
+# Iterating over URLs
+
+
+```r
+library(tidyr)
+library(readr)
+roster %&gt;%
+* mutate(by_date = map(url, commits_by_date, session = session)) %&gt;%
+* unnest(cols = c(by_date)) %&gt;%
+  filter(date &gt; as.Date("2020-02-04"), date &lt; as.Date("2020-05-24")) %&gt;% #changed the dates to 2020
+  group_by(url) %&gt;%
+  summarise(total = sum(count)) %&gt;%
+  arrange(desc(total))
+```
+
+```
+## # A tibble: 4 x 2
+##   url                                total
+##   &lt;chr&gt;                              &lt;dbl&gt;
+## 1 https://github.com/nicholasjhorton   509
+## 2 https://github.com/AmeliaMN           88
+## 3 https://github.com/hardin47           51
+## 4 https://github.com/hglanz             18
+```
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post
+]
+
+---
+# One more wrinkle-- authenticating 
+
+
+```r
+session &lt;- html_session("https://github.com/login")
+
+login &lt;- session %&gt;%
+  html_node("form") %&gt;%
+  html_form() %&gt;%
+  set_values(login = "YourGitHubUsername", password = "SuperSecureP@ssw0rd")
+
+
+github &lt;- session %&gt;%
+  submit_form(login, submit = "commit") %&gt;%
+  read_html()
+```
+
+.footnote[[Counting commits and peer code review](https://teachdatascience.com/countingcommits/) blog post. rvest [webinar materials by Garrett Grolemund on navigation and authentication](https://github.com/rstudio/webinars/blob/master/32-Web-Scraping/navigation-and-authentication.md). 
+]
+
+???
+
+Like in the blog post, I'm not going to run this here, because I'm not giving you my GitHub password! 
+
+---
+# Iterating 😱
+
+
+```r
+count &lt;- c()
+*for (i in 1:dim(roster)[1]){
+  tmp &lt;- session %&gt;%
+    jump_to(roster$url[i]) %&gt;%
+    read_html() %&gt;%
+    html_nodes("rect.day") %&gt;%
+    html_attrs() %&gt;%
+*   map(`[`, c("data-count", "data-date")) %&gt;%
+    tibble() %&gt;%
+    unnest()  %&gt;%
+    mutate(what = rep(c("count", "date"), times=370)) %&gt;%
+    mutate(which = rep(1:370, each = 2)) %&gt;% 
+    rename(values=".") %&gt;%
+*   spread(key = "what", value = "values") %&gt;%
+    filter(date &gt; "2019-02-04") %&gt;% 
+    mutate(count = parse_number(count)) %&gt;%
+    summarise(total = sum(count))
+* count[i] &lt;- pull(tmp)
+* print(".")
+}
+```
+
+???
+
+Earlier, I was showing you the code that Charlotte helped me refactor. This was what I actually used when I needed to figure out who won the t-shirt. This code is uuuugly. And slow. 
+
+Perfect code doesn't flow out of my (or any programmer's) fingers. If you don't succeed, try try again. 
+
+---
+# Refactoring
+
+Refactoring is the process of turning working but ugly or inefficient code into better, faster, cleaner code. You can do it yourself or you can have a peer do it. 
+
+&gt; So what do I do when I face code I don’t get? I change it, that’s all, until I get it. But here’s the entry point to this muse: change it how!?? I don’t understand it. I can’t just jump in anywhere and start changing shit.
+
+&gt; The trick is to narrow your focus until you find a line or two that on the one hand, you can understand, but on the other hand, takes you a reading or two to get. In other words, tho graspable, it’s not readily so. Then you fix it. Then you try again.
+
+&gt; As I continue to work this way, find a tiny thing, fix it, find a tiny thing, fix it, two things occur, one straightforward and one remarkable.
+
+&gt; The straightforward thing that occurs is that I gradually gain some modest understanding as I work. 
+
+&gt; And the remarkable thing? The search for "easiest nearest owwie" starts returning different results. 
+
+.footnote[GeePaw Hill, [Refactoring Pro-Tip: Easiest Nearest Owwie First](https://www.geepawhill.org/2019/03/03/refactoring-pro-tip-easiest-nearest-owwie-first/), via [Jenny Bryan](https://twitter.com/JennyBryan/status/1256216807960018944). [EIKIFJB](https://github.com/MonkmanMH/EIKIFJB)
+]
+
+---
+class: big-bullet
+# Facebook
+
+In October 2019, I finally deleted my Facebook account. I had been a user since I got a college email address in 2006, and had looked at it multiple times a day, every day, in the intervening years. 
+
+But, Facebook has been a bad actor when it comes to using data and protecting peoples' rights. Some of these issues are listed in [my blog post](https://www.amelia.mn/blog/misc/2019/12/29/Deleting-Facebook.html), although Facebook has just continued to do bad things:
+
+- [Facebook’s own civil rights auditors say its policy decisions are a ‘tremendous setback’](https://www.washingtonpost.com/technology/2020/07/08/facebook-civil-rights-audit/)
+- [Facebook Engages in Online Segregation and Redlining Through Discriminatory Advertising System, Lawyers’ Committee Argues](https://lawyerscommittee.org/lawyers-committee-confronts-facebooks-attempts-to-dismiss-digital-redlining-lawsuit-against-its-housing-advertisements/)
+- [Facebook cannot separate itself from the hate it spreads ](https://onezero.medium.com/facebook-cannot-separate-itself-from-the-hate-it-spreads-967ec9b8793c)
+
+.footnote[December 2019 [Blog post about deleting Facebook](https://www.amelia.mn/blog/misc/2019/12/29/Deleting-Facebook.html). The bullet-points on Facebook here are all from the last **week** (July 2020). For more on Facebook and other tech ethics, follow [@hypervisible](https://twitter.com/hypervisible).]
+
+
+---
+class: center, middle
+background-image: url(img/bookheap.jpg)
+background-size: cover
+
+&lt;h1 style="font-color:white;"&gt;I'm a bit of a data hoarder&lt;/h1&gt;
+
+???
+&lt;span&gt;Photo by &lt;a href="https://unsplash.com/@elifrancis?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Eli Francis&lt;/a&gt; on &lt;a href="https://unsplash.com/s/photos/hoard?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;&lt;/span&gt;
+---
+# Getting data from Facebook
+
+Facebook actually makes it pretty easy to get a lot of your data. You can choose `.json` or `.html` formats. I ended up grabbing both, but I think the `.html` is probably easiest for most folks (it's what your dad would understand). 
+
+.pull-left[
+- photos and videos
+- friends
+- messages
+- security and login information
+- other activity
+- profile information
+- posts
+- ads
+- about you
+- following and followers
+]
+.pull-right[
+- groups
+- events
+- comments
+- search history
+- likes and reactions
+- location
+- pages
+- your places
+- files
+]
+
+.footnote[[Blog post about deleting Facebook](https://www.amelia.mn/blog/misc/2019/12/29/Deleting-Facebook.html), plus my [associated GitHub repo](https://github.com/AmeliaMN/deleting_facebook).
+]
+
+???
+
+In the nine months since I deleted my account, I have definitely reached into this data a fair amount. It has helped me verify dates of things that happened, remember jokes between my friends and I, etc. 
+
+---
+class: big-bullet
+# Data Facebook does not give you
+
+There were two notable things I wanted from my data that don't come from the data download:
+
+- tagged photos
+- friends' birthdays
+
+There are python scripts out there to help you get each of those things. I was able to make the script for grabbing birthdays work, but none of the python scripts for tagged photos. 
+
+So, I wrote my own scraper in R. 
+
+.footnote[[Blog post about deleting Facebook](https://www.amelia.mn/blog/misc/2019/12/29/Deleting-Facebook.html), plus my [associated GitHub repo](https://github.com/AmeliaMN/deleting_facebook).
+]
+
+---
+# Getting set up to scrape
+
+
+```r
+library(RSelenium)
+rD &lt;- rsDriver(port = 4445L, browser = "firefox", version = "3.141.59")
+remDr &lt;- rD$client
+```
+
+
+```r
+remDr$navigate("https://www.facebook.com/")
+
+YourLogIN &lt;- "amelia.a.mcnamara@gmail.com"
+YourPassword &lt;- "" # this is where your password goes
+
+remDr$findElement("id", "email")$sendKeysToElement(list(YourLogIN))
+remDr$findElement("id", "pass")$sendKeysToElement(list(YourPassword))
+remDr$findElement("id", "loginbutton")$clickElement()
+```
+
+
+
+
+.footnote[[Code for scraping tagged photos in R](https://github.com/AmeliaMN/deleting_facebook/blob/master/FacebookPhotosOfYou.md). [RSelenium package](https://github.com/ropensci/RSelenium), rOpenSci [blogpost/tutorial](https://ropensci.org/tutorials/rselenium_tutorial/). [RSelenium basics vignette](https://cran.r-project.org/web/packages/RSelenium/vignettes/basics.html).]
+
+---
+# Getting set up to scrape
+
+Lazy hard-coding
+
+```r
+# remDr$navigate("https://www.facebook.com/amelia.mcnamara/photos_of")
+remDr$navigate("https://www.facebook.com/pg/rladiesglobal/photos/")
+```
+
+
+```r
+webElem &lt;- remDr$findElement(using = "class", "uiMediaThumb")
+webElem$clickElement()
+```
+
+.footnote[[Code for scraping tagged photos in R](https://github.com/AmeliaMN/deleting_facebook/blob/master/FacebookPhotosOfYou.md). [RSelenium package](https://github.com/ropensci/RSelenium), rOpenSci [blogpost/tutorial](https://ropensci.org/tutorials/rselenium_tutorial/). [RSelenium basics vignette](https://cran.r-project.org/web/packages/RSelenium/vignettes/basics.html).]
+
+---
+# "Scraping"
+
+
+```r
+srcs &lt;- character(5000)
+
+## first two
+for (i in 1:2) {
+  img1 &lt;- remDr$findElement(using = "class", "spotlight")
+  srcs[i] &lt;- img1$getElementAttribute("src")[[1]]
+  nextButton &lt;- remDr$findElement(using = "class", "next")
+  nextButton$clickElement()
+}
+
+for (i in 3:5000) {
+  img1 &lt;- remDr$findElement(using = "class", "spotlight")
+  srcs[i] &lt;- img1$getElementAttribute("src")[[1]]
+  if (srcs[i] == srcs[1]) {
+    stop(paste("done, with", i-1, "photos"))
+  }
+  nextButton &lt;- remDr$findElement(using = "class", "next")
+  nextButton$clickElement()
+}
+```
+
+.footnote[[Code for scraping tagged photos in R](https://github.com/AmeliaMN/deleting_facebook/blob/master/FacebookPhotosOfYou.md). [RSelenium package](https://github.com/ropensci/RSelenium), rOpenSci [blogpost/tutorial](https://ropensci.org/tutorials/rselenium_tutorial/). [RSelenium basics vignette](https://cran.r-project.org/web/packages/RSelenium/vignettes/basics.html).]
+
+---
+class: middle, center
+&lt;iframe width="800" height="500"  src="https://www.youtube.com/embed/CN989KER4pA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.footnote[[Video walkthrough](https://www.youtube.com/watch?v=CN989KER4pA) of RSelenium code]
+
+---
+The final steps include **data cleaning**
+
+```r
+srcs_df &lt;- tibble(url = srcs)
+srcs_df &lt;- srcs_df %&gt;%
+  distinct(url)
+srcs_df &lt;- srcs_df %&gt;%
+  mutate(filename = paste0("img/FB_download", row_number(), ".jpg"))
+
+write_csv(srcs_df, "fb_images.csv")
+```
+
+**Closing down RSelenium**. (This code should work, but never completely does for me. I always have to go into Activity Monitor on my Mac and kill the java process.)
+
+
+```r
+remDr$close()
+```
+
+**Actually... downloading the photos** 
+
+
+```r
+library(curl)
+srcs_df &lt;- read_csv("fb_images.csv")
+for (i in 1:3) {
+  curl_download(srcs_df$url[i], srcs_df$filename[i])
+}
+```
+
+???
+
+I'm pretty sure this could have been vectorized or made into a map statement. 
+
+
+
+---
+# Iterating
+
+This code is extremely hacky, and full of `for` loops! I thought I would refactor it before this talk, but I did not. Maybe that's an exercise for you? (Keeping in mind what [GeePaw Hill says](https://www.geepawhill.org/2019/03/03/refactoring-pro-tip-easiest-nearest-owwie-first/))
+
+If you want to see my previous failed attempts, check out the (now-removed) file [UselessScraps.md](https://github.com/AmeliaMN/deleting_facebook/blob/27914dc33d9ecacc4f68c24fbdddcdd16dd70b23/UselessScraps.md) on my GitHub repo. I tried `rvest`, more complicated `RSelenium` things, and `splashr`, to no avail. 
+
+.footnote[I love [scraps](https://twitter.com/AmeliaMN/status/1262479209722593280)]
+
+---
+.pull-left[
+iteration noun
+
+it·​er·​a·​tion | \ ˌi-tə-ˈrā-shən \
+
+**Definition of iteration**
+&lt;ol&gt;
+&lt;li&gt; : VERSION, INCARNATION
+&lt;br&gt; // the latest iteration of the operating system&lt;/li&gt;
+&lt;li&gt; : the action or a process of iterating or repeating: such as &lt;/li&gt;
+&lt;ol type="a"&gt;
+&lt;li&gt; : a procedure in which repetition of a sequence of operations yields results successively closer to a desired result&lt;/li&gt;
+&lt;li&gt; : the repetition of a sequence of computer instructions a specified number of times or until a condition is met &lt;br&gt;
+— compare RECURSION &lt;/li&gt;
+&lt;/ol&gt;
+&lt;li&gt; : one execution of a sequence of operations or instructions in an iteration &lt;/li&gt;
+&lt;/ol&gt;
+]
+.pull-right[
+&lt;img src="img/rvest.png" width="30%" /&gt;
+&lt;img src="img/purrr.png" width="30%" /&gt;
+
+&lt;img src="img/cycle-2019530_1280.png" width="50%" /&gt;
+]
+
+.footnote[[Definiton of iteration](https://www.merriam-webster.com/dictionary/iteration) from Merriam-Webster. [rvest package](https://rvest.tidyverse.org/). [purrr package](https://purrr.tidyverse.org/). Cycle image by &lt;a href="https://pixabay.com/users/kmicican-2305081/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=2019530"&gt;kmicican&lt;/a&gt; from &lt;a href="https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=2019530"&gt;Pixabay&lt;/a&gt;]
+
+
+
+
+---
+class: title-slide, left, top
+background-image: url(img/pattern-1477380.png)
+background-size: 180%
+background-repeat: repeat
+background-position: 18% 55%
+# Thank you
+
+
+
+### Amelia McNamara, PhD
+### Assistant Professor of Computer &amp; &lt;br&gt;Information Sciences
+### University of St Thomas&lt;br&gt;St Paul, MN
+
+[<i class="fab  fa-twitter "></i> @AmeliaMN](https://twitter.com/AmeliaMN)  
+[<i class="fab  fa-github "></i> AmeliaMN](www.github.com/AmeliaMN) 
+[<i class="fas  fa-desktop "></i> amelia.mn](https://www.amelia.mn)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"output": null
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
