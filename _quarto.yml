@@ -14,6 +14,7 @@ project:
     - "presentations/syntax/"
     - "presentations/user2022_files"
     - "presentations/BestPractices_files"
+    - "mytwitterarchive/"
 
 website:
   title: "Amelia McNamara"
