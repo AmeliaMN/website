@@ -19,7 +19,7 @@ project:
 website:
   title: "Amelia McNamara"
   site-url: https://www.amelia.mn
-  description: "Amelia McNamara, Associate Professor of data science in the Department of Computer & Information Sciences at the University of St Thomas"
+  description: "Amelia McNamara, Associate Professor of data science in the Department of Computer and Data Sciences at the University of St Thomas"
   navbar:
     left:
       - href: index.qmd
@@ -45,6 +45,8 @@ website:
         href: mailto:amelia.mcnamara@stthomas.edu
       - icon: mastodon
         href: https://vis.social/@amelia
+      - text: "{{< iconify simple-icons bluesky >}}"
+        href: https://bsky.app/profile/ameliamn.bsky.social
       - icon: youtube
         href: https://www.youtube.com/ameliamcnamara
       - icon: linkedin
