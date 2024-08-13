@@ -19,7 +19,9 @@ As part of her wedding dance lesson package, Cindy also offers consultation on s
 
 Jason and I have similar music taste-- after we started dating we discovered there were many times we had been at the same concerts before we met, and we're both big fans of [The Current](https://www.thecurrent.org/). (Fun fact: I had a mention of The Current in the first draft of my dissertation acknowledgements, but I cut it to save space. I still regret it!) The Current is a local public radio station that plays a huge variety of music, from oldies to local music to country to pop and on and on. From their website: "The Current brings listeners the best authentic new music alongside the music that inspired it, from local to legendary, indie to influential, new to nostalgic."
 
-For several weeks, both Jason and I worked on making lists of songs we might want for our first dance. My process was to think of songs I liked, and listen to The Current and write down anything that caught my ear. I think Jason's was similar. But, many of them weren't at the right tempo or time signature, or if they were, we'd realize the song was actually about something pretty dark. (We weren't looking to dance to a song about a breakup or drug overdose.) There are lists of swing-tempo songs online, but none of them really spoke to us.
+Just *how* much do we love The Current? Well, we hired our wedding DJ through [Transmission Music](https://transmission-music.com/) (founded by The Current DJ [Jake Rudh](https://www.thecurrent.org/profile/jake-rudh)). Our DJ, [Shane Kramer](https://www.thecurrent.org/profile/shane-kramer), is now actually spinning tunes on The Current himself! Our cocktail hour and dance party music definitely had that Current vibe, and we're grateful to Shane for making that happen. 
+
+For several weeks, both Jason and I worked on making lists of songs we might want for our first dance. My process was to think of songs I liked, and listen to The Current and write down anything that caught my ear. I think Jason's was similar. But, many of them weren't at the right tempo, or if they were, we'd realize the song was actually about something pretty dark. (We weren't looking to dance to a song about a breakup or drug overdose.) There are lists of swing-tempo songs online, but none of them really spoke to us.
 
 So, I took to the data! I'm not sure how I stumbled on this dataset, maybe [Data is Plural](https://www.data-is-plural.com/), but I found out that a University of Minnesota librarian named Shane Nackerud had collected data on all the songs played on The Current from approximately 2005 to 2020. Local newspaper City Pages [did an article on the project at the time](https://web.archive.org/web/20200804080731/http://www.citypages.com/music/what-songs-artists-has-the-current-played-most-since-2009-this-u-of-m-librarian-crunched-the-numbers/504392941) (though the City Pages is now defunct, so that's an Internet Archive link). And the data is still available [on Google Drive](https://drive.google.com/drive/folders/1OW7fosYNE6H41E0t7hhZSrxDTcMHtFta)!
 
@@ -182,7 +184,7 @@ swing_overall |>
   kable()
 ```
 
-When we eventually went through songs with Cindy she often disagreed with the tempo listed on Spotify, so that wasn't a perfect metric but it did narrow things down. (Cindy uses an [online tool](https://all8.com/tools/bpm.htm) to make it easier to count the tempo.) I'm also not sure how I came up with 155 to 185 beats per minute (BPM). If you look online, you will see ranges that start a little lower, but perhaps we realized the Spotify API was off in a particular direction? 
+When we eventually went through songs with Cindy she often disagreed with the tempo listed on Spotify, so that wasn't a perfect metric but it did narrow things down. (Cindy uses an [online tool](https://all8.com/tools/bpm.htm) to make it easier to count the tempo.) I'm also not sure how I came up with 155 to 185 beats per minute (BPM). If you look online, you will see ranges that start a little lower, but perhaps we realized the Spotify API was off in a particular direction?
 
 Now came the manual part-- even though these songs are in the right tempo, we need to decide if we like them and if the lyrics would be okay for a first dance. Looking through the list of the top songs from 2009-2018, we didn't see anything we were that excited about. I think part of the problem was the big year range kind of diluted songs that were briefly popular but not over that entire time period. So, I decided to limit the search just to songs played on the radio in 2019 (the year Jason and I met).
 
@@ -217,7 +219,7 @@ top893_2019 <- top893_2019 |>
   anti_join(top893_bpm, by = join_by(title == title, Artist == Artist))
 ```
 
-The rest follows on as before. 
+The rest follows on as before.
 
 ```{r}
 top893_2019 <- top893_2019 |>
@@ -245,7 +247,7 @@ top893_2019 <- top893_2019 |>
 top893_2019 <- read_csv("top893_2019_tempo.csv")
 ```
 
-This time, I also tried grabbing the 'features' Spotify makes available, like energy, danceability, key, etc. 
+This time, I also tried grabbing the 'features' Spotify makes available, like energy, danceability, key, etc.
 
 ```{r}
 top893_2019 <- top893_2019 |>
@@ -257,7 +259,7 @@ test <- top893_2019 |>
 # write_csv(test, "more2019_allinfo.csv")
 ```
 
-And again, we can narrow our search to just the songs in the right tempo, 
+And again, we can narrow our search to just the songs in the right tempo,
 
 ```{r}
 #| eval: true
@@ -285,9 +287,9 @@ At this point, I don't remember how we got from 80 songs down to our short list,
 -   99 (Barns Courtney)
 -   Let the Good Times Roll (JD McPherson)
 
-I think we ran this whole list by Cindy, and she helped us narrow it down further. We really liked Love is the Law, but it was just a touch too fast for us to dance to comfortably. So we ended up with... [Let the Good Times Roll](https://www.youtube.com/watch?v=-QGE2xjhEY0)! Interestingly, I think they're lindy-hopping in the music video. 
+I think we ran this whole list by Cindy, and she helped us narrow it down further. We really liked Love is the Law, but it was just a touch too fast for us to dance to comfortably. So we ended up with... [Let the Good Times Roll](https://www.youtube.com/watch?v=-QGE2xjhEY0)! Interestingly, I think they're lindy-hopping in the music video.
 
-Once we had the song, we practiced and practiced and practiced with it. We didn't do set choreography, so Jason was truly leading on the day, putting together the moves we had learned in whatever order felt good. It's a pretty repetitive song, so it's a little hard to keep track of where you are in it, and we wanted to end with a dip. Happy to say, we nailed it! 
+Once we had the song, we practiced and practiced and practiced with it. We didn't do set choreography, so Jason was truly leading on the day, putting together the moves we had learned in whatever order felt good. It's a pretty repetitive song, so it's a little hard to keep track of where you are in it, and we wanted to end with a dip. Happy to say, we nailed it!
 
 Let the Good Times Roll never came up in the lists of swing dance songs, or first dance songs, or swing dance first dance songs that I saw online. While our process of finding a song absolutely had a human in the loop, being able to narrow to songs we would probably like (from our favorite radio station) and then further hone in on songs in the right tempo (using Spotify) allowed us to target our search.
 
