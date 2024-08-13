@@ -1,0 +1,889 @@
+artist,title,Artist,n,"str_replace_all(artist, ""[[:punct:]]"", "" "")",URI,spotifyID,tempo
+Communist%2520Daughter,Not%2520The%2520Kid,Communist Daughter,541,Communist Daughter,https://api.spotify.com/v1/audio-features/0n97PkKoTpnp5L343TMAgB,0n97PkKoTpnp5L343TMAgB,84.768
+Edward%2520Sharpe%2520And%2520The%2520Magnetic%2520Zeros,Home,Edward Sharpe And The Magnetic Zeros,533,Edward Sharpe And The Magnetic Zeros,https://api.spotify.com/v1/audio-features/7KWGfnsUU4Ri46TIvjpAPx,7KWGfnsUU4Ri46TIvjpAPx,111.615
+The%2520National,Bloodbuzz%2520Ohio,The National,532,The National,https://api.spotify.com/v1/audio-features/3lnF83kG6ePhTSWRoW62dO,3lnF83kG6ePhTSWRoW62dO,157.066
+The%2520Lumineers,Ho%2520Hey,The Lumineers,526,The Lumineers,https://api.spotify.com/v1/audio-features/0W4Kpfp1w2xkY3PrV714B7,0W4Kpfp1w2xkY3PrV714B7,79.936
+Foster%2520The%2520People,Pumped%2520Up%2520Kicks,Foster The People,501,Foster The People,https://api.spotify.com/v1/audio-features/7w87IxuO7BDcJ3YUqCyMTT,7w87IxuO7BDcJ3YUqCyMTT,127.975
+Of%2520Monsters%2520And%2520Men,Little%2520Talks,Of Monsters And Men,492,Of Monsters And Men,https://api.spotify.com/v1/audio-features/2ihCaVdNZmnHZWt0fvAM7B,2ihCaVdNZmnHZWt0fvAM7B,102.961
+The%2520Heavy,How%2520You%2520Like%2520Me%2520Now%2520,The Heavy,489,The Heavy,https://api.spotify.com/v1/audio-features/7D180Q77XAEP7atBLmMTgK,7D180Q77XAEP7atBLmMTgK,110.059
+Animal%2520Collective,My%2520Girls,Animal Collective,488,Animal Collective,https://api.spotify.com/v1/audio-features/2gE0khQ948RYQOeTgCUL2a,2gE0khQ948RYQOeTgCUL2a,119.973
+LCD%2520Soundsystem,Dance%2520Yrself%2520Clean,LCD Soundsystem,484,LCD Soundsystem,https://api.spotify.com/v1/audio-features/2cmRpmO04TLaKPzmAzySYZ,2cmRpmO04TLaKPzmAzySYZ,98.004
+Alabama%2520Shakes,Hold%2520On,Alabama Shakes,471,Alabama Shakes,https://api.spotify.com/v1/audio-features/436bx0eHJS5DPgIyfsDU31,436bx0eHJS5DPgIyfsDU31,88.311
+BOY,Little%2520Numbers,BOY,471,BOY,https://api.spotify.com/v1/audio-features/32UKzfkSMoFSHfcd20l4PW,32UKzfkSMoFSHfcd20l4PW,191.807
+M83,Midnight%2520City,M83,469,M83,https://api.spotify.com/v1/audio-features/1eyzqe2QqGZUmfcPZtrIyt,1eyzqe2QqGZUmfcPZtrIyt,105.009
+Metric,Youth%2520Without%2520Youth,Metric,463,Metric,https://api.spotify.com/v1/audio-features/69kMwl7dsqCdHqqRlD7FrM,69kMwl7dsqCdHqqRlD7FrM,128.578
+Dessa,Dixon%2520s%2520Girl,Dessa,462,Dessa,https://api.spotify.com/v1/audio-features/5za2K5XXuEaFWps6pYdo2y,5za2K5XXuEaFWps6pYdo2y,95.983
+Trampled%2520By%2520Turtles,Alone,Trampled By Turtles,458,Trampled By Turtles,https://api.spotify.com/v1/audio-features/5H06kjjKa1Oz8BZcGeplel,5H06kjjKa1Oz8BZcGeplel,141.09
+The%2520XX,Basic%2520Space,The XX,456,The XX,https://api.spotify.com/v1/audio-features/5jPLxdGG7KKX9rM3xrm6Dd,5jPLxdGG7KKX9rM3xrm6Dd,115.873
+Trampled%2520By%2520Turtles,Wait%2520So%2520Long,Trampled By Turtles,455,Trampled By Turtles,https://api.spotify.com/v1/audio-features/1I7JVzjG70FM9NrgSY5von,1I7JVzjG70FM9NrgSY5von,189.53
+Frank%2520Ocean,Lost,Frank Ocean,454,Frank Ocean,https://api.spotify.com/v1/audio-features/3GZD6HmiNUhxXYf8Gch723,3GZD6HmiNUhxXYf8Gch723,123.061
+Joy%2520Division,Transmission,Joy Division,453,Joy Division,https://api.spotify.com/v1/audio-features/5fbQCQt91LsVgXusFS0CCD,5fbQCQt91LsVgXusFS0CCD,84.696
+Django%2520Django,Default,Django Django,451,Django Django,https://api.spotify.com/v1/audio-features/7yygpnlQyzmy0zXiMTpoZv,7yygpnlQyzmy0zXiMTpoZv,125.983
+Brother%2520Ali,Fresh%2520Air,Brother Ali,450,Brother Ali,https://api.spotify.com/v1/audio-features/54mQwOGiGFElqMSCKBVX49,54mQwOGiGFElqMSCKBVX49,107.809
+Fleet%2520Foxes,Helplessness%2520Blues,Fleet Foxes,450,Fleet Foxes,https://api.spotify.com/v1/audio-features/02VdHwnGhy5fTW2CTZkYsb,02VdHwnGhy5fTW2CTZkYsb,125.217
+Phantogram,Mouthful%2520Of%2520Diamonds,Phantogram,450,Phantogram,https://api.spotify.com/v1/audio-features/3MULiLJ8IdHzKs554eyzM0,3MULiLJ8IdHzKs554eyzM0,99.974
+Edward%2520Sharpe%2520And%2520The%2520Magnetic%2520Zeros,40%2520Day%2520Dream,Edward Sharpe And The Magnetic Zeros,448,Edward Sharpe And The Magnetic Zeros,https://api.spotify.com/v1/audio-features/7KWGfnsUU4Ri46TIvjpAPx,7KWGfnsUU4Ri46TIvjpAPx,111.615
+Benjamin%2520Booker,Violent%2520Shiver,Benjamin Booker,443,Benjamin Booker,https://api.spotify.com/v1/audio-features/1kJP08Hra8FQBz5dG80k3m,1kJP08Hra8FQBz5dG80k3m,165.096
+Broken%2520Bells,The%2520High%2520Road,Broken Bells,443,Broken Bells,https://api.spotify.com/v1/audio-features/5cwN1htZyoWqZCc33f3RfE,5cwN1htZyoWqZCc33f3RfE,79.955
+J.%2520Roddy%2520Walston%2520And%2520The%2520Business,Heavy%2520Bells,J. Roddy Walston And The Business,440,J  Roddy Walston And The Business,https://api.spotify.com/v1/audio-features/1lrm1hnqVtpXUosBa842No,1lrm1hnqVtpXUosBa842No,151.24
+Free%2520Energy,Dream%2520City,Free Energy,439,Free Energy,https://api.spotify.com/v1/audio-features/7z3z4ednmFP3OMBcQhO7Ld,7z3z4ednmFP3OMBcQhO7Ld,130.476
+Leon%2520Bridges,Coming%2520Home,Leon Bridges,436,Leon Bridges,https://api.spotify.com/v1/audio-features/7pUradWqXv9rMT07bSSY9X,7pUradWqXv9rMT07bSSY9X,113.997
+Beach%2520House,Myth,Beach House,435,Beach House,https://api.spotify.com/v1/audio-features/2NfxtzCIrpCmJX5Z2KMdD5,2NfxtzCIrpCmJX5Z2KMdD5,141.965
+Tame%2520Impala,Elephant,Tame Impala,435,Tame Impala,https://api.spotify.com/v1/audio-features/6qZjm61s6u8Ead9sWxCDro,6qZjm61s6u8Ead9sWxCDro,123.075
+The%2520Big%2520Pink,Dominos,The Big Pink,433,The Big Pink,https://api.spotify.com/v1/audio-features/7m97yKVzPpXV9Z4ezEziOD,7m97yKVzPpXV9Z4ezEziOD,138.083
+Grizzly%2520Bear,Two%2520Weeks,Grizzly Bear,432,Grizzly Bear,https://api.spotify.com/v1/audio-features/04uR2cdkgiaLIzebPcs25m,04uR2cdkgiaLIzebPcs25m,159.685
+The%2520XX,Crystalised,The XX,431,The XX,https://api.spotify.com/v1/audio-features/2BH3j05ZXWr5PR30sW079d,2BH3j05ZXWr5PR30sW079d,100.015
+Muse,Madness,Muse,430,Muse,https://api.spotify.com/v1/audio-features/0c4IEciLCDdXEhhKxj4ThA,0c4IEciLCDdXEhhKxj4ThA,180.301
+Dawes,When%2520My%2520Time%2520Comes,Dawes,428,Dawes,https://api.spotify.com/v1/audio-features/2bit43ZeiBbbiHUtyWuthM,2bit43ZeiBbbiHUtyWuthM,113.975
+Hot%2520Chip,Night%2520And%2520Day,Hot Chip,428,Hot Chip,https://api.spotify.com/v1/audio-features/4V9Ue6TRdHECudrdPWqyss,4V9Ue6TRdHECudrdPWqyss,134.972
+Metric,Breathing%2520Underwater,Metric,426,Metric,https://api.spotify.com/v1/audio-features/1KZjU7csKHOLRiRPBWZIJS,1KZjU7csKHOLRiRPBWZIJS,141.13
+Modest%2520Mouse,Lampshades%2520On%2520Fire,Modest Mouse,426,Modest Mouse,https://api.spotify.com/v1/audio-features/5EsM3rVaMDRsOXJq7oe3tY,5EsM3rVaMDRsOXJq7oe3tY,176.156
+The%2520Black%2520Keys,Lonely%2520Boy,The Black Keys,425,The Black Keys,https://api.spotify.com/v1/audio-features/5G1sTBGbZT5o4PNRc75RKI,5G1sTBGbZT5o4PNRc75RKI,166.3
+BORNS,10%2520000%2520Emerald%2520Pools,BORNS,420,BORNS,https://api.spotify.com/v1/audio-features/2pA4ip3VIEVcIa3qE02oAX,2pA4ip3VIEVcIa3qE02oAX,139.951
+Passion%2520Pit,Take%2520A%2520Walk,Passion Pit,420,Passion Pit,https://api.spotify.com/v1/audio-features/53SwD7cE56VxnhlEoAH7Qg,53SwD7cE56VxnhlEoAH7Qg,134.907
+The%2520Black%2520Keys,Tighten%2520Up,The Black Keys,420,The Black Keys,https://api.spotify.com/v1/audio-features/2MVwrvjmcdt4MsYYLCYMt8,2MVwrvjmcdt4MsYYLCYMt8,108.965
+Cloud%2520Cult,Running%2520With%2520The%2520Wolves,Cloud Cult,419,Cloud Cult,https://api.spotify.com/v1/audio-features/3KhF2YiNpJvGpfiCW45R6D,3KhF2YiNpJvGpfiCW45R6D,95.826
+Broken%2520Social%2520Scene,Forced%2520To%2520Love,Broken Social Scene,417,Broken Social Scene,https://api.spotify.com/v1/audio-features/4euXJuErBCqH2LEApfxI6i,4euXJuErBCqH2LEApfxI6i,123.015
+Alt-J,Fitzpleasure,Alt-J,416,Alt J,https://api.spotify.com/v1/audio-features/7DdXf9x75iEVCHWfoRwRuR,7DdXf9x75iEVCHWfoRwRuR,143.935
+Dirty%2520Projectors,Stillness%2520Is%2520The%2520Move,Dirty Projectors,416,Dirty Projectors,https://api.spotify.com/v1/audio-features/4RFnGwv86SKEFebmA4V6gH,4RFnGwv86SKEFebmA4V6gH,71.357
+The%2520Shins,Simple%2520Song,The Shins,416,The Shins,https://api.spotify.com/v1/audio-features/0NslHuacjxQYfUTOW3HCIV,0NslHuacjxQYfUTOW3HCIV,129.984
+Vampire%2520Weekend,Diane%2520Young,Vampire Weekend,415,Vampire Weekend,https://api.spotify.com/v1/audio-features/10f0hrbCBiQk9STrFG3EU7,10f0hrbCBiQk9STrFG3EU7,87.076
+Belle%2520And%2520Sebastian,The%2520Party%2520Line,Belle And Sebastian,412,Belle And Sebastian,https://api.spotify.com/v1/audio-features/2PV8oZJo3K3bXENO7FRRtp,2PV8oZJo3K3bXENO7FRRtp,142.385
+Father%2520John%2520Misty,Hollywood%2520Forever%2520Cemetery%2520Sings,Father John Misty,412,Father John Misty,https://api.spotify.com/v1/audio-features/3WWVDPjihd1VITBLF10nha,3WWVDPjihd1VITBLF10nha,90.056
+Har%2520Mar%2520Superstar,Lady%2520%2520You%2520Shot%2520Me,Har Mar Superstar,412,Har Mar Superstar,https://api.spotify.com/v1/audio-features/20j7l6tFtc5lynXpbOQg1O,20j7l6tFtc5lynXpbOQg1O,70.027
+Jeremy%2520Messersmith,Violet%2520,Jeremy Messersmith,412,Jeremy Messersmith,https://api.spotify.com/v1/audio-features/3bwymFXaLawekXh24ZOL9s,3bwymFXaLawekXh24ZOL9s,111.534
+Lucius,Turn%2520It%2520Around,Lucius,411,Lucius,https://api.spotify.com/v1/audio-features/3rBjagU6UnTMXVjxKN3UfU,3rBjagU6UnTMXVjxKN3UfU,109.962
+Camera%2520Obscura,French%2520Navy,Camera Obscura,410,Camera Obscura,https://api.spotify.com/v1/audio-features/0jEDSgowFfE5VG3OSgiNXO,0jEDSgowFfE5VG3OSgiNXO,121.216
+Gotye,Somebody%2520That%2520I%2520Used%2520To%2520Know%2520feat%2520%2520Kimbra,Gotye,410,Gotye,https://api.spotify.com/v1/audio-features/4wCmqSrbyCgxEXROQE6vtV,4wCmqSrbyCgxEXROQE6vtV,129.062
+Grizzly%2520Bear,Sleeping%2520Ute,Grizzly Bear,410,Grizzly Bear,https://api.spotify.com/v1/audio-features/2PoqnzWrZku3y90o50wVNi,2PoqnzWrZku3y90o50wVNi,104.67
+Spoon,The%2520Mystery%2520Zone,Spoon,410,Spoon,https://api.spotify.com/v1/audio-features/7rpyAPX7jfnUX6QQfjCzw7,7rpyAPX7jfnUX6QQfjCzw7,119.142
+St.%2520Vincent,Surgeon,St. Vincent,410,St  Vincent,https://api.spotify.com/v1/audio-features/7HwB14f2cAVqbvIZNQS4oK,7HwB14f2cAVqbvIZNQS4oK,139.913
+Fitz%2520And%2520The%2520Tantrums,MoneyGrabber,Fitz And The Tantrums,409,Fitz And The Tantrums,https://api.spotify.com/v1/audio-features/2AYEOC02WLhUiOoaig2SEH,2AYEOC02WLhUiOoaig2SEH,169.965
+Mumford%2520And%2520Sons,Little%2520Lion%2520Man,Mumford And Sons,407,Mumford And Sons,https://api.spotify.com/v1/audio-features/4B4vB3oB8csotplfoQcAd6,4B4vB3oB8csotplfoQcAd6,138.81
+Yeasayer,Ambling%2520Alp,Yeasayer,407,Yeasayer,https://api.spotify.com/v1/audio-features/4gmivt1Q8UbnQZMVHLH43v,4gmivt1Q8UbnQZMVHLH43v,108.038
+Bon%2520Iver,Towers,Bon Iver,406,Bon Iver,https://api.spotify.com/v1/audio-features/1f4GHhUI00iKZocYPpz1HE,1f4GHhUI00iKZocYPpz1HE,78.833
+Spoon,Written%2520In%2520Reverse,Spoon,406,Spoon,https://api.spotify.com/v1/audio-features/4bKlPsX6zoiehshKpAGhp5,4bKlPsX6zoiehshKpAGhp5,102.069
+Adele,Rolling%2520In%2520The%2520Deep,Adele,405,Adele,https://api.spotify.com/v1/audio-features/1c8gk2PeTE04A1pIDH9YMk,1c8gk2PeTE04A1pIDH9YMk,104.948
+Iron%2520And%2520Wine,Tree%2520By%2520The%2520River,Iron And Wine,405,Iron And Wine,https://api.spotify.com/v1/audio-features/6HbxpoChDH9ThadFOSAnma,6HbxpoChDH9ThadFOSAnma,115.771
+San%2520Cisco,Awkward,San Cisco,405,San Cisco,https://api.spotify.com/v1/audio-features/6Zkl0z6XpRKOASu1KkvS0l,6Zkl0z6XpRKOASu1KkvS0l,161.92
+Lana%2520Del%2520Rey,Video%2520Games,Lana Del Rey,403,Lana Del Rey,https://api.spotify.com/v1/audio-features/1NZs6n6hl8UuMaX0UC0YTz,1NZs6n6hl8UuMaX0UC0YTz,107.747
+Local%2520Natives,Airplanes,Local Natives,403,Local Natives,https://api.spotify.com/v1/audio-features/6lV2MSQmRIkycDScNtrBXO,6lV2MSQmRIkycDScNtrBXO,93.033
+Phoenix,1901,Phoenix,402,Phoenix,https://api.spotify.com/v1/audio-features/4a41JZNoat590VLuBWfPBj,4a41JZNoat590VLuBWfPBj,85.986
+Alvvays,Archie%2520%2520Marry%2520Me,Alvvays,400,Alvvays,https://api.spotify.com/v1/audio-features/0KVWVuutF9Dn8li4HdyAeU,0KVWVuutF9Dn8li4HdyAeU,117.351
+The%2520Head%2520And%2520The%2520Heart,Lost%2520In%2520My%2520Mind,The Head And The Heart,400,The Head And The Heart,https://api.spotify.com/v1/audio-features/3n263SWk3jGYfGMxHIRukn,3n263SWk3jGYfGMxHIRukn,95.333
+Wolf%2520Alice,Moaning%2520Lisa%2520Smile,Wolf Alice,400,Wolf Alice,https://api.spotify.com/v1/audio-features/7gChGUkqWkinDS7uYoMLIM,7gChGUkqWkinDS7uYoMLIM,98.12
+Dirty%2520Projectors,Cannibal%2520Resource,Dirty Projectors,398,Dirty Projectors,https://api.spotify.com/v1/audio-features/1pbRrSj6CBZGcG5i2BSv5L,1pbRrSj6CBZGcG5i2BSv5L,77.181
+Mumford%2520And%2520Sons,The%2520Cave,Mumford And Sons,398,Mumford And Sons,https://api.spotify.com/v1/audio-features/3vUn7FE3ZaQgJmkhIrIirF,3vUn7FE3ZaQgJmkhIrIirF,141.979
+Car%2520Seat%2520Headrest,Fill%2520In%2520The%2520Blank,Car Seat Headrest,397,Car Seat Headrest,https://api.spotify.com/v1/audio-features/1Pbs2eCcX9p2onaAvMYvhk,1Pbs2eCcX9p2onaAvMYvhk,143.903
+Florence%2520And%2520The%2520Machine,Dog%2520Days%2520Are%2520Over,Florence And The Machine,397,Florence And The Machine,https://api.spotify.com/v1/audio-features/1YLJVmuzeM2YSUkCCaTNUB,1YLJVmuzeM2YSUkCCaTNUB,149.954
+Free%2520Energy,Free%2520Energy,Free Energy,396,Free Energy,https://api.spotify.com/v1/audio-features/7mb6bXx6FpyZxd37Ldz37q,7mb6bXx6FpyZxd37Ldz37q,92.278
+Grizzly%2520Bear,While%2520You%2520Wait%2520For%2520The%2520Others,Grizzly Bear,396,Grizzly Bear,https://api.spotify.com/v1/audio-features/4lyhYM26W4DdIArcfVTUBh,4lyhYM26W4DdIArcfVTUBh,80.502
+Sharon%2520Jones%2520And%2520The%2520Dap-Kings,I%2520Learned%2520The%2520Hard%2520Way,Sharon Jones And The Dap-Kings,396,Sharon Jones And The Dap Kings,https://api.spotify.com/v1/audio-features/03PkUC7cfsjFERRSPxK0Eh,03PkUC7cfsjFERRSPxK0Eh,109.196
+Glass%2520Animals,Gooey,Glass Animals,395,Glass Animals,https://api.spotify.com/v1/audio-features/1gk3FhAV07q9Jg77UxnVjX,1gk3FhAV07q9Jg77UxnVjX,183.114
+Gorillaz,On%2520Melancholy%2520Hill,Gorillaz,395,Gorillaz,https://api.spotify.com/v1/audio-features/0q6LuUqGLUiCPP1cbdwFs3,0q6LuUqGLUiCPP1cbdwFs3,120.423
+LCD%2520Soundsystem,I%2520Can%2520Change,LCD Soundsystem,395,LCD Soundsystem,https://api.spotify.com/v1/audio-features/2073QOEC8rBtSyTsRyaWiP,2073QOEC8rBtSyTsRyaWiP,116.981
+Temples,Shelter%2520Song,Temples,395,Temples,https://api.spotify.com/v1/audio-features/2nDkHJPY0vpydGiiDABaS6,2nDkHJPY0vpydGiiDABaS6,126.061
+The%2520Joy%2520Formidable,Whirring,The Joy Formidable,395,The Joy Formidable,https://api.spotify.com/v1/audio-features/7vqC1Vkr5f9a7CylkjUkPW,7vqC1Vkr5f9a7CylkjUkPW,83.184
+Metric,Synthetica,Metric,394,Metric,https://api.spotify.com/v1/audio-features/4SJTFnmmfxotIdw2psMeDp,4SJTFnmmfxotIdw2psMeDp,NA
+Mayer%2520Hawthorne,No%2520Strings,Mayer Hawthorne,393,Mayer Hawthorne,https://api.spotify.com/v1/audio-features/0p1BcEcYVO3uk4KDf3gzkY,0p1BcEcYVO3uk4KDf3gzkY,169.784
+Janelle%2520Monae,Tightrope%2520feat%2520%2520Big%2520Boi,Janelle Monae,392,Janelle Monae,https://api.spotify.com/v1/audio-features/1ljzHUgt2SU2ADkhfa9eBC,1ljzHUgt2SU2ADkhfa9eBC,167.978
+Arctic%2520Monkeys,Why%2520d%2520You%2520Only%2520Call%2520Me%2520When%2520You%2520re%2520High%2520,Arctic Monkeys,390,Arctic Monkeys,https://api.spotify.com/v1/audio-features/1VUcb7Ik5bYw0SzXBH9rLr,1VUcb7Ik5bYw0SzXBH9rLr,91.691
+Alt-J,Left%2520Hand%2520Free,Alt-J,389,Alt J,https://api.spotify.com/v1/audio-features/4iEOVEULZRvmzYSZY2ViKN,4iEOVEULZRvmzYSZY2ViKN,101.99
+Lucius,Born%2520Again%2520Teen,Lucius,389,Lucius,https://api.spotify.com/v1/audio-features/7H69o9hRNK5Uj6Vu5Jkexv,7H69o9hRNK5Uj6Vu5Jkexv,149.987
+Mayer%2520Hawthorne,The%2520Walk,Mayer Hawthorne,389,Mayer Hawthorne,https://api.spotify.com/v1/audio-features/7tBZa65xUKMMan9tIMPqbi,7tBZa65xUKMMan9tIMPqbi,110.02
+The%2520Avett%2520Brothers,Live%2520And%2520Die,The Avett Brothers,389,The Avett Brothers,https://api.spotify.com/v1/audio-features/19n9s9SfnLtwPEODqk8KCT,19n9s9SfnLtwPEODqk8KCT,118.015
+Dessa,The%2520Chaconne,Dessa,388,Dessa,https://api.spotify.com/v1/audio-features/4Md2ZN0NWnakC5YGhhvn7r,4Md2ZN0NWnakC5YGhhvn7r,121.999
+Edward%2520Sharpe%2520And%2520The%2520Magnetic%2520Zeros,Man%2520On%2520Fire,Edward Sharpe And The Magnetic Zeros,388,Edward Sharpe And The Magnetic Zeros,https://api.spotify.com/v1/audio-features/7KWGfnsUU4Ri46TIvjpAPx,7KWGfnsUU4Ri46TIvjpAPx,111.615
+Tame%2520Impala,Feels%2520Like%2520We%2520Only%2520Go%2520Backwards,Tame Impala,388,Tame Impala,https://api.spotify.com/v1/audio-features/0LtOwyZoSNZKJWHqjzADpW,0LtOwyZoSNZKJWHqjzADpW,149.508
+The%2520National,Don%2520t%2520Swallow%2520The%2520Cap,The National,385,The National,https://api.spotify.com/v1/audio-features/7mUbWcWPImNVcLcNewe2Dy,7mUbWcWPImNVcLcNewe2Dy,116.026
+Vampire%2520Weekend,Cousins,Vampire Weekend,385,Vampire Weekend,https://api.spotify.com/v1/audio-features/528bxUV84T4T8HHBFSpcaV,528bxUV84T4T8HHBFSpcaV,148.648
+CHVRCHES,Recover,CHVRCHES,384,CHVRCHES,https://api.spotify.com/v1/audio-features/6EwcfJwogWBbVC1ceLiTlj,6EwcfJwogWBbVC1ceLiTlj,170.059
+Kendrick%2520Lamar,i,Kendrick Lamar,384,Kendrick Lamar,https://api.spotify.com/v1/audio-features/1EaKU4dMbesXXd3BrLCtYG,1EaKU4dMbesXXd3BrLCtYG,189.891
+Polica,Lime%2520Habit,Polica,383,Polica,https://api.spotify.com/v1/audio-features/6AqlZeTJGRHuRKUAbc9kqP,6AqlZeTJGRHuRKUAbc9kqP,128.009
+Alabama%2520Shakes,I%2520Ain%2520t%2520The%2520Same,Alabama Shakes,382,Alabama Shakes,https://api.spotify.com/v1/audio-features/436bx0eHJS5DPgIyfsDU31,436bx0eHJS5DPgIyfsDU31,88.311
+Arcade%2520Fire,Reflektor,Arcade Fire,382,Arcade Fire,https://api.spotify.com/v1/audio-features/5e5XSjfqBk4mgRnQR1vu8Z,5e5XSjfqBk4mgRnQR1vu8Z,142.515
+Arctic%2520Monkeys,Do%2520I%2520Wanna%2520Know%2520,Arctic Monkeys,382,Arctic Monkeys,https://api.spotify.com/v1/audio-features/2VXM97guXNYyiDgPkoQdZa,2VXM97guXNYyiDgPkoQdZa,141.979
+Bad%2520Bad%2520Hats,Midway,Bad Bad Hats,381,Bad Bad Hats,https://api.spotify.com/v1/audio-features/5GDjtfw6yBjAuTGQrrQ6XD,5GDjtfw6yBjAuTGQrrQ6XD,117.954
+Bully,Trying,Bully,381,Bully,https://api.spotify.com/v1/audio-features/2wquTDZEJ9EirmTbAb9jyv,2wquTDZEJ9EirmTbAb9jyv,169.949
+Raphael%2520Saadiq,Stone%2520Rolling,Raphael Saadiq,380,Raphael Saadiq,https://api.spotify.com/v1/audio-features/34vq540jPfrXKt2aogxib9,34vq540jPfrXKt2aogxib9,99.987
+Angel%2520Olsen,Shut%2520Up%2520Kiss%2520Me,Angel Olsen,379,Angel Olsen,https://api.spotify.com/v1/audio-features/5oMAgpoBkDMkFIxPwYvuD9,5oMAgpoBkDMkFIxPwYvuD9,130.013
+BORNS,Electric%2520Love,BORNS,378,BORNS,https://api.spotify.com/v1/audio-features/2GiJYvgVaD2HtM8GqD9EgQ,2GiJYvgVaD2HtM8GqD9EgQ,120.041
+Houndmouth,Sedona,Houndmouth,378,Houndmouth,https://api.spotify.com/v1/audio-features/6msnCs10Y3i4Z7Mh5YlmYl,6msnCs10Y3i4Z7Mh5YlmYl,141.897
+Vampire%2520Weekend,Horchata,Vampire Weekend,378,Vampire Weekend,https://api.spotify.com/v1/audio-features/6ZM6yMLsYx0nkBksOsfvqb,6ZM6yMLsYx0nkBksOsfvqb,120.014
+Atlas%2520Genius,Trojans,Atlas Genius,376,Atlas Genius,https://api.spotify.com/v1/audio-features/4AyoAGuhE8gydBPrczuhbl,4AyoAGuhE8gydBPrczuhbl,NA
+Frank%2520Ocean,Thinkin%2520Bout%2520You,Frank Ocean,376,Frank Ocean,https://api.spotify.com/v1/audio-features/7DfFc7a6Rwfi3YQMRbDMau,7DfFc7a6Rwfi3YQMRbDMau,NA
+Jeremy%2520Messersmith,Tourniquet,Jeremy Messersmith,376,Jeremy Messersmith,https://api.spotify.com/v1/audio-features/2xDO6IqHG5k7NpCPgUTEhr,2xDO6IqHG5k7NpCPgUTEhr,NA
+Low,Try%2520To%2520Sleep,Low,376,Low,https://api.spotify.com/v1/audio-features/4g2WiijzSKzH8PApKDbadN,4g2WiijzSKzH8PApKDbadN,NA
+Wolf%2520Alice,Giant%2520Peach,Wolf Alice,376,Wolf Alice,https://api.spotify.com/v1/audio-features/6ubSpevM3YExR5DJqCtoUY,6ubSpevM3YExR5DJqCtoUY,NA
+Jack%2520White,Love%2520Interruption,Jack White,375,Jack White,https://api.spotify.com/v1/audio-features/3s3ciLHOXE1xVqGkdxwHPs,3s3ciLHOXE1xVqGkdxwHPs,NA
+Feist,How%2520Come%2520You%2520Never%2520Go%2520There,Feist,374,Feist,https://api.spotify.com/v1/audio-features/2CzWeyC9zlDpIOZPUUKrBW,2CzWeyC9zlDpIOZPUUKrBW,NA
+Feist,The%2520Bad%2520In%2520Each%2520Other,Feist,374,Feist,https://api.spotify.com/v1/audio-features/61etm6bMP3BnD3SiwreMZu,61etm6bMP3BnD3SiwreMZu,NA
+J.%2520Roddy%2520Walston%2520And%2520The%2520Business,Take%2520It%2520As%2520It%2520Comes,J. Roddy Walston And The Business,374,J  Roddy Walston And The Business,https://api.spotify.com/v1/audio-features/6f3Slt0GbA2bPZlz0aIFXN,6f3Slt0GbA2bPZlz0aIFXN,NA
+LCD%2520Soundsystem,Call%2520The%2520Police,LCD Soundsystem,374,LCD Soundsystem,https://api.spotify.com/v1/audio-features/3c7W5q8eqI3hFzFZMSCw18,3c7W5q8eqI3hFzFZMSCw18,NA
+Lissie,In%2520Sleep,Lissie,374,Lissie,https://api.spotify.com/v1/audio-features/7lcUx8bgiwGEn0BHNo3O31,7lcUx8bgiwGEn0BHNo3O31,NA
+Mumford%2520And%2520Sons,White%2520Blank%2520Page,Mumford And Sons,374,Mumford And Sons,https://api.spotify.com/v1/audio-features/6oxnUh5HybZDk6VNGzvw2j,6oxnUh5HybZDk6VNGzvw2j,NA
+Alt-J,Tessellate,Alt-J,373,Alt J,https://api.spotify.com/v1/audio-features/1o22EcqsCANhwYdaNOSdwS,1o22EcqsCANhwYdaNOSdwS,NA
+James%2520Blake,Retrograde,James Blake,373,James Blake,https://api.spotify.com/v1/audio-features/2IqjKEBiz0CdLKdkXhxw84,2IqjKEBiz0CdLKdkXhxw84,NA
+Cat%2520Power,Ruin,Cat Power,372,Cat Power,https://api.spotify.com/v1/audio-features/1n0iHqATRnMzoxsIGmzIoR,1n0iHqATRnMzoxsIGmzIoR,NA
+Fitz%2520And%2520The%2520Tantrums,Don%2520t%2520Gotta%2520Work%2520It%2520Out,Fitz And The Tantrums,372,Fitz And The Tantrums,https://api.spotify.com/v1/audio-features/2AYEOC02WLhUiOoaig2SEH,2AYEOC02WLhUiOoaig2SEH,NA
+Lykke%2520Li,I%2520Follow%2520Rivers,Lykke Li,372,Lykke Li,https://api.spotify.com/v1/audio-features/4Jv7lweGIUOFQ7Oq2AtAh9,4Jv7lweGIUOFQ7Oq2AtAh9,NA
+Passion%2520Pit,The%2520Reeling,Passion Pit,372,Passion Pit,https://api.spotify.com/v1/audio-features/5noQJkpVfHt2D4df2GXieV,5noQJkpVfHt2D4df2GXieV,NA
+Hippo%2520Campus,Boyish,Hippo Campus,371,Hippo Campus,https://api.spotify.com/v1/audio-features/4nAmlRetwMEZr2TsXuHcpD,4nAmlRetwMEZr2TsXuHcpD,NA
+Margaret%2520Glaspy,Emotions%2520And%2520Math,Margaret Glaspy,371,Margaret Glaspy,https://api.spotify.com/v1/audio-features/1uVD7mxRrnwnLqh6uBOuSt,1uVD7mxRrnwnLqh6uBOuSt,NA
+Divine%2520Fits,Would%2520That%2520Not%2520Be%2520Nice,Divine Fits,370,Divine Fits,https://api.spotify.com/v1/audio-features/3URBrUM7Kb8bnaxqAO0s1A,3URBrUM7Kb8bnaxqAO0s1A,117.52
+Howler,Back%2520Of%2520Your%2520Neck,Howler,370,Howler,https://api.spotify.com/v1/audio-features/6KvF7iueP2GDA6AuQlt24w,6KvF7iueP2GDA6AuQlt24w,150.082
+Eels,Prizefighter,Eels,369,Eels,https://api.spotify.com/v1/audio-features/7hjyiwffPoZ7jzM0ZIAjnC,7hjyiwffPoZ7jzM0ZIAjnC,129.91
+Alabama%2520Shakes,Don%2520t%2520Wanna%2520Fight,Alabama Shakes,368,Alabama Shakes,https://api.spotify.com/v1/audio-features/436bx0eHJS5DPgIyfsDU31,436bx0eHJS5DPgIyfsDU31,88.311
+Phoenix,Lisztomania,Phoenix,368,Phoenix,https://api.spotify.com/v1/audio-features/6ryPiYPDkITAhc0zEiGkyk,6ryPiYPDkITAhc0zEiGkyk,110.02
+Sharon%2520Van%2520Etten,Serpents,Sharon Van Etten,368,Sharon Van Etten,https://api.spotify.com/v1/audio-features/2v05RhwIQx3zbN8O72Ff69,2v05RhwIQx3zbN8O72Ff69,122.522
+Jenny%2520Lewis,Just%2520One%2520Of%2520The%2520Guys,Jenny Lewis,367,Jenny Lewis,https://api.spotify.com/v1/audio-features/5YdrHBh16li6d7U5mdTwUb,5YdrHBh16li6d7U5mdTwUb,135.883
+Peter%2520Wolf%2520Crier,Crutch%2520And%2520Cane,Peter Wolf Crier,367,Peter Wolf Crier,https://api.spotify.com/v1/audio-features/2e7a09zhu7YI3cHRg5dbJv,2e7a09zhu7YI3cHRg5dbJv,78.252
+Catfish%2520And%2520The%2520Bottlemen,Kathleen,Catfish And The Bottlemen,365,Catfish And The Bottlemen,https://api.spotify.com/v1/audio-features/1MHYAqWWdDRePmnqORynrq,1MHYAqWWdDRePmnqORynrq,137.93
+Doomtree,Little%2520Mercy,Doomtree,365,Doomtree,https://api.spotify.com/v1/audio-features/4vCLjpV1DyNvnLXElxlNkO,4vCLjpV1DyNvnLXElxlNkO,143.944
+The%2520Lemon%2520Twigs,These%2520Words,The Lemon Twigs,365,The Lemon Twigs,https://api.spotify.com/v1/audio-features/2spcFt2UoCNsEuxVa6lC30,2spcFt2UoCNsEuxVa6lC30,179.99
+The%2520National,Terrible%2520Love,The National,365,The National,https://api.spotify.com/v1/audio-features/6pUAg3OgdO2kQ4lub9Tb5m,6pUAg3OgdO2kQ4lub9Tb5m,79.884
+Chastity%2520Brown,Wake%2520Up,Chastity Brown,364,Chastity Brown,https://api.spotify.com/v1/audio-features/7EMGv3hF9J8j8mx5kxNOFt,7EMGv3hF9J8j8mx5kxNOFt,162.002
+Phantogram,You%2520Don%2520t%2520Get%2520Me%2520High%2520Anymore,Phantogram,364,Phantogram,https://api.spotify.com/v1/audio-features/6BjNq8vu4Yc3dt7BA7xkQj,6BjNq8vu4Yc3dt7BA7xkQj,124.074
+Belle%2520And%2520Sebastian,Write%2520About%2520Love,Belle And Sebastian,363,Belle And Sebastian,https://api.spotify.com/v1/audio-features/2PV8oZJo3K3bXENO7FRRtp,2PV8oZJo3K3bXENO7FRRtp,142.385
+Dawes,Time%2520Spent%2520In%2520Los%2520Angeles,Dawes,363,Dawes,https://api.spotify.com/v1/audio-features/51Pb9mDnaerOCIgUBK521w,51Pb9mDnaerOCIgUBK521w,100.461
+TV%2520On%2520The%2520Radio,Happy%2520Idiot,TV On The Radio,363,TV On The Radio,https://api.spotify.com/v1/audio-features/63mnZ0zF5fBwJzYg2pDo9e,63mnZ0zF5fBwJzYg2pDo9e,139.996
+Courtney%2520Barnett,Avant%2520Gardener,Courtney Barnett,362,Courtney Barnett,https://api.spotify.com/v1/audio-features/3LueS3mbuB1yaJNN0Ale6U,3LueS3mbuB1yaJNN0Ale6U,115.277
+Jeremy%2520Messersmith,A%2520Girl%2520%2520A%2520Boy%2520%2520And%2520A%2520Graveyard,Jeremy Messersmith,362,Jeremy Messersmith,https://api.spotify.com/v1/audio-features/2xDO6IqHG5k7NpCPgUTEhr,2xDO6IqHG5k7NpCPgUTEhr,89.283
+Phantogram,Fall%2520In%2520Love,Phantogram,362,Phantogram,https://api.spotify.com/v1/audio-features/5imUTBF35uIoABlV9g9da2,5imUTBF35uIoABlV9g9da2,188.049
+St.%2520Vincent,Digital%2520Witness,St. Vincent,362,St  Vincent,https://api.spotify.com/v1/audio-features/5L16tlSHNt93RiiRiCc8ya,5L16tlSHNt93RiiRiCc8ya,104.975
+Beck,Dreams,Beck,361,Beck,https://api.spotify.com/v1/audio-features/14zhqtMI5xHrfCFCLhFcsn,14zhqtMI5xHrfCFCLhFcsn,113.999
+Bon%2520Iver,Holocene,Bon Iver,361,Bon Iver,https://api.spotify.com/v1/audio-features/1H2Dq1kyLUWl0QW8CLzDZb,1H2Dq1kyLUWl0QW8CLzDZb,127.964
+Hot%2520Chip,Huarache%2520Lights,Hot Chip,361,Hot Chip,https://api.spotify.com/v1/audio-features/24OUTJgZif1CA1nemnDgXn,24OUTJgZif1CA1nemnDgXn,113.507
+Jake%2520Bugg,What%2520Doesn%2520t%2520Kill%2520You,Jake Bugg,361,Jake Bugg,https://api.spotify.com/v1/audio-features/79DO6dBi8936P6EShLB209,79DO6dBi8936P6EShLB209,116.051
+Mayer%2520Hawthorne,Just%2520Ain%2520t%2520Gonna%2520Work%2520Out,Mayer Hawthorne,361,Mayer Hawthorne,https://api.spotify.com/v1/audio-features/3eFx554nKpVNe4otynSsK0,3eFx554nKpVNe4otynSsK0,83.948
+The%2520Black%2520Keys,Gold%2520On%2520The%2520Ceiling,The Black Keys,361,The Black Keys,https://api.spotify.com/v1/audio-features/5lN1EH25gdiqT1SFALMAq1,5lN1EH25gdiqT1SFALMAq1,130.121
+Jungle,The%2520Heat,Jungle,360,Jungle,https://api.spotify.com/v1/audio-features/6CAXRGPbYPeZY9G0hX3PsH,6CAXRGPbYPeZY9G0hX3PsH,110.025
+Mac%2520DeMarco,Salad%2520Days,Mac DeMarco,359,Mac DeMarco,https://api.spotify.com/v1/audio-features/7EAMXbLcL0qXmciM5SwMh2,7EAMXbLcL0qXmciM5SwMh2,150.076
+My%2520Morning%2520Jacket,Holdin%2520%2520On%2520To%2520Black%2520Metal,My Morning Jacket,359,My Morning Jacket,https://api.spotify.com/v1/audio-features/6S5VkcX3Gmqw8EJY6yFy64,6S5VkcX3Gmqw8EJY6yFy64,108.952
+Royal%2520Blood,Figure%2520It%2520Out,Royal Blood,359,Royal Blood,https://api.spotify.com/v1/audio-features/6V0A3jkb9ntudO0kmcJ1xd,6V0A3jkb9ntudO0kmcJ1xd,108.016
+Cults,Go%2520Outside,Cults,358,Cults,https://api.spotify.com/v1/audio-features/0V8jGgK39sLsj2yAHHPigU,0V8jGgK39sLsj2yAHHPigU,77.473
+Fleet%2520Foxes,Montezuma,Fleet Foxes,358,Fleet Foxes,https://api.spotify.com/v1/audio-features/33OVLi2BHxEpZp2jVf86HN,33OVLi2BHxEpZp2jVf86HN,99.755
+Muse,Uprising,Muse,357,Muse,https://api.spotify.com/v1/audio-features/4VqPOruhp5EdPBeR92t6lQ,4VqPOruhp5EdPBeR92t6lQ,128.019
+Phosphorescent,Song%2520For%2520Zula,Phosphorescent,357,Phosphorescent,https://api.spotify.com/v1/audio-features/1SmzAbt4g7a1FfAIwovtwq,1SmzAbt4g7a1FfAIwovtwq,103.021
+Trampled%2520By%2520Turtles,Midnight%2520On%2520The%2520Interstate,Trampled By Turtles,357,Trampled By Turtles,https://api.spotify.com/v1/audio-features/4SI6ia4b6L5J1n6k42WeHC,4SI6ia4b6L5J1n6k42WeHC,160.732
+Wilco,I%2520Might,Wilco,357,Wilco,https://api.spotify.com/v1/audio-features/5ZSD1YPoTzDo9NzpuZrUjQ,5ZSD1YPoTzDo9NzpuZrUjQ,117.191
+First%2520Aid%2520Kit,My%2520Silver%2520Lining,First Aid Kit,356,First Aid Kit,https://api.spotify.com/v1/audio-features/0i5QVxsK3IvEDbUjTA64Li,0i5QVxsK3IvEDbUjTA64Li,144.218
+Lizzo,Good%2520As%2520Hell,Lizzo,356,Lizzo,https://api.spotify.com/v1/audio-features/6nBQFAIVFmAx2oZ8p6lUg6,6nBQFAIVFmAx2oZ8p6lUg6,107.019
+Savages,Husbands,Savages,356,Savages,https://api.spotify.com/v1/audio-features/5yoJk1yR5QmwE8Zj2qatpK,5yoJk1yR5QmwE8Zj2qatpK,176.858
+The%2520Black%2520Keys,Fever,The Black Keys,356,The Black Keys,https://api.spotify.com/v1/audio-features/5lN1EH25gdiqT1SFALMAq1,5lN1EH25gdiqT1SFALMAq1,130.121
+The%2520Decemberists,Make%2520You%2520Better,The Decemberists,356,The Decemberists,https://api.spotify.com/v1/audio-features/3GDIZO71jiE1FEcHEJh3RH,3GDIZO71jiE1FEcHEJh3RH,78.315
+The%2520Head%2520And%2520The%2520Heart,Shake,The Head And The Heart,356,The Head And The Heart,https://api.spotify.com/v1/audio-features/7CtViMh5EgoE8krmPPuOhi,7CtViMh5EgoE8krmPPuOhi,111.082
+Cage%2520The%2520Elephant,Shake%2520Me%2520Down,Cage The Elephant,355,Cage The Elephant,https://api.spotify.com/v1/audio-features/1Hb1IJ9bBCa6wo3fRtexnJ,1Hb1IJ9bBCa6wo3fRtexnJ,105.111
+Florence%2520And%2520The%2520Machine,Shake%2520It%2520Out,Florence And The Machine,355,Florence And The Machine,https://api.spotify.com/v1/audio-features/31ABtQJdfloNaGz7ZhXaN5,31ABtQJdfloNaGz7ZhXaN5,105.989
+Florence%2520And%2520The%2520Machine,What%2520The%2520Water%2520Gave%2520Me,Florence And The Machine,355,Florence And The Machine,https://api.spotify.com/v1/audio-features/31ABtQJdfloNaGz7ZhXaN5,31ABtQJdfloNaGz7ZhXaN5,105.989
+Silversun%2520Pickups,Substitution,Silversun Pickups,355,Silversun Pickups,https://api.spotify.com/v1/audio-features/1aDLUzCyYpRXgrjwUWzV2X,1aDLUzCyYpRXgrjwUWzV2X,127.397
+Polica,Wandering%2520Star,Polica,354,Polica,https://api.spotify.com/v1/audio-features/3LQlwkkqXm8BQVV0Bdrxoj,3LQlwkkqXm8BQVV0Bdrxoj,95.026
+Alt-J,Every%2520Other%2520Freckle,Alt-J,353,Alt J,https://api.spotify.com/v1/audio-features/6BVBkKpZK09NmifUMZqj1z,6BVBkKpZK09NmifUMZqj1z,143.915
+Catfish%2520And%2520The%2520Bottlemen,Soundcheck,Catfish And The Bottlemen,353,Catfish And The Bottlemen,https://api.spotify.com/v1/audio-features/1MHYAqWWdDRePmnqORynrq,1MHYAqWWdDRePmnqORynrq,137.93
+Metric,Gimme%2520Sympathy,Metric,353,Metric,https://api.spotify.com/v1/audio-features/5ptaFgbEZmXi2ONGq2LwOK,5ptaFgbEZmXi2ONGq2LwOK,126.01
+Sleater-Kinney,Bury%2520Our%2520Friends,Sleater-Kinney,353,Sleater Kinney,https://api.spotify.com/v1/audio-features/2MycpboRozeeoFNqWGrnak,2MycpboRozeeoFNqWGrnak,120
+St.%2520Vincent,Cruel,St. Vincent,353,St  Vincent,https://api.spotify.com/v1/audio-features/6FPw780c3azvSQXDuV5Z52,6FPw780c3azvSQXDuV5Z52,115.041
+Cloud%2520Cult,1X1X1,Cloud Cult,352,Cloud Cult,https://api.spotify.com/v1/audio-features/0Mmtro18AX4ONE1I3mgNEh,0Mmtro18AX4ONE1I3mgNEh,95.979
+Ray%2520LaMontagne,Supernova,Ray LaMontagne,352,Ray LaMontagne,https://api.spotify.com/v1/audio-features/5grmNnhOTNSbcq3R1heVT1,5grmNnhOTNSbcq3R1heVT1,133.851
+Alabama%2520Shakes,Future%2520People,Alabama Shakes,351,Alabama Shakes,https://api.spotify.com/v1/audio-features/7uuoh2lEaGcbNpbKCvzawf,7uuoh2lEaGcbNpbKCvzawf,154.021
+The%2520Gaslight%2520Anthem,American%2520Slang,The Gaslight Anthem,351,The Gaslight Anthem,https://api.spotify.com/v1/audio-features/4bbecACyQCPJbg0zasipAb,4bbecACyQCPJbg0zasipAb,131.948
+Daft%2520Punk,Get%2520Lucky,Daft Punk,350,Daft Punk,https://api.spotify.com/v1/audio-features/2Foc5Q5nqNiosCNqttzHof,2Foc5Q5nqNiosCNqttzHof,116.047
+HAIM,The%2520Wire,HAIM,350,HAIM,https://api.spotify.com/v1/audio-features/5T8OICEqdqbx8Uz7L5abkH,5T8OICEqdqbx8Uz7L5abkH,105.014
+JD%2520McPherson,Let%2520The%2520Good%2520Times%2520Roll,JD McPherson,350,JD McPherson,https://api.spotify.com/v1/audio-features/7hVhRCDV100Jq26NGR7adw,7hVhRCDV100Jq26NGR7adw,107.643
+Lorde,Royals,Lorde,350,Lorde,https://api.spotify.com/v1/audio-features/2dLLR6qlu5UJ5gk0dKz0h3,2dLLR6qlu5UJ5gk0dKz0h3,84.878
+Tame%2520Impala,Let%2520It%2520Happen,Tame Impala,350,Tame Impala,https://api.spotify.com/v1/audio-features/2X485T9Z5Ly0xyaghN73ed,2X485T9Z5Ly0xyaghN73ed,125.012
+Margaret%2520Glaspy,You%2520And%2520I,Margaret Glaspy,349,Margaret Glaspy,https://api.spotify.com/v1/audio-features/2CE0MF8zOilJcogEI8wFB6,2CE0MF8zOilJcogEI8wFB6,91.084
+Deerhunter,Snakeskin,Deerhunter,348,Deerhunter,https://api.spotify.com/v1/audio-features/3R1Kk05yple93b3EqqFQle,3R1Kk05yple93b3EqqFQle,94.016
+Michael%2520Kiwanuka,One%2520More%2520Night,Michael Kiwanuka,348,Michael Kiwanuka,https://api.spotify.com/v1/audio-features/0f2zcrhhHT59aIGQvRlTZ1,0f2zcrhhHT59aIGQvRlTZ1,107.806
+The%2520National,Graceless,The National,348,The National,https://api.spotify.com/v1/audio-features/52m3svaHBHJIySJGaUL4IB,52m3svaHBHJIySJGaUL4IB,171.977
+Wolf%2520Alice,Don%2520t%2520Delete%2520The%2520Kisses,Wolf Alice,348,Wolf Alice,https://api.spotify.com/v1/audio-features/3K94Fd5ZQkPCW8wV6oyk22,3K94Fd5ZQkPCW8wV6oyk22,122.032
+Mumford%2520And%2520Sons,I%2520Will%2520Wait,Mumford And Sons,347,Mumford And Sons,https://api.spotify.com/v1/audio-features/1fXiYSWmkKJfRKMegCkI11,1fXiYSWmkKJfRKMegCkI11,131.109
+Yeasayer,O%2520N%2520E%2520,Yeasayer,347,Yeasayer,https://api.spotify.com/v1/audio-features/20IFx1mqMdM6DrkQnOuiew,20IFx1mqMdM6DrkQnOuiew,120.085
+Band%2520Of%2520Horses,Casual%2520Party,Band Of Horses,346,Band Of Horses,https://api.spotify.com/v1/audio-features/7sMcFdVYcwucGVtoV7r9lZ,7sMcFdVYcwucGVtoV7r9lZ,130.063
+Nathaniel%2520Rateliff%2520And%2520The%2520Night%2520Sweats,Howling%2520At%2520Nothing,Nathaniel Rateliff And The Night Sweats,346,Nathaniel Rateliff And The Night Sweats,https://api.spotify.com/v1/audio-features/2YhAqgvjzU2Rw44rAqzGl6,2YhAqgvjzU2Rw44rAqzGl6,99.843
+Sonny%2520Knight%2520And%2520The%2520Lakers,Hey%2520Girl,Sonny Knight And The Lakers,346,Sonny Knight And The Lakers,https://api.spotify.com/v1/audio-features/7tCZOAxyB7a41TGe2liLHu,7tCZOAxyB7a41TGe2liLHu,74.633
+Grizzly%2520Bear,Yet%2520Again,Grizzly Bear,345,Grizzly Bear,https://api.spotify.com/v1/audio-features/7BAfo8WKIrAm3hJDj16Xd6,7BAfo8WKIrAm3hJDj16Xd6,161.42
+Spoon,Hot%2520Thoughts,Spoon,345,Spoon,https://api.spotify.com/v1/audio-features/48yvsxGXnJBxy8nXgGbs4S,48yvsxGXnJBxy8nXgGbs4S,109.011
+Adele,Rumor%2520Has%2520It,Adele,344,Adele,https://api.spotify.com/v1/audio-features/2A73XBDBQgmdXO8VsXPWIs,2A73XBDBQgmdXO8VsXPWIs,120.052
+Dr.%2520Dog,That%2520Old%2520Black%2520Hole,Dr. Dog,344,Dr  Dog,https://api.spotify.com/v1/audio-features/6OekoYTXR04L76vKdzrqjw,6OekoYTXR04L76vKdzrqjw,101.468
+Tame%2520Impala,%2520Cause%2520I%2520m%2520A%2520Man,Tame Impala,344,Tame Impala,https://api.spotify.com/v1/audio-features/5hM5arv9KDbCHS0k9uqwjr,5hM5arv9KDbCHS0k9uqwjr,97.96
+The%2520Neighbourhood,Sweater%2520Weather,The Neighbourhood,343,The Neighbourhood,https://api.spotify.com/v1/audio-features/2QjOHCTQ1Jl3zawyYOpxh6,2QjOHCTQ1Jl3zawyYOpxh6,124.053
+Michael%2520Kiwanuka,Home%2520Again,Michael Kiwanuka,342,Michael Kiwanuka,https://api.spotify.com/v1/audio-features/46EuzanXhKwIc7755wLAvS,46EuzanXhKwIc7755wLAvS,85.328
+Spoon,Do%2520You,Spoon,342,Spoon,https://api.spotify.com/v1/audio-features/7qCZgvV98j6RjUULW1s1it,7qCZgvV98j6RjUULW1s1it,176.016
+The%2520Lumineers,Stubborn%2520Love,The Lumineers,342,The Lumineers,https://api.spotify.com/v1/audio-features/3ekNuTF3UpOvIZCfiejpnC,3ekNuTF3UpOvIZCfiejpnC,115.01
+The%2520Preatures,Is%2520This%2520How%2520You%2520Feel%2520,The Preatures,342,The Preatures,https://api.spotify.com/v1/audio-features/7x8dCjCr0x6x2lXKujYD34,7x8dCjCr0x6x2lXKujYD34,172.984
+tUne-yArDs,Water%2520Fountain,tUne-yArDs,342,tUne yArDs,https://api.spotify.com/v1/audio-features/7a5WVvAqdpvoZ0DZmw9LgW,7a5WVvAqdpvoZ0DZmw9LgW,110.48
+Florence%2520And%2520The%2520Machine,What%2520Kind%2520Of%2520Man,Florence And The Machine,341,Florence And The Machine,https://api.spotify.com/v1/audio-features/1w9ta1CvXlJPRXh6Py2Mto,1w9ta1CvXlJPRXh6Py2Mto,114.776
+Iron%2520And%2520Wine,Walking%2520Far%2520From%2520Home,Iron And Wine,341,Iron And Wine,https://api.spotify.com/v1/audio-features/0ncZMrH4tUif4XbTgOddlp,0ncZMrH4tUif4XbTgOddlp,77.471
+Lissie,Shameless,Lissie,341,Lissie,https://api.spotify.com/v1/audio-features/2MJlhN2OockKCadeGS4AEP,2MJlhN2OockKCadeGS4AEP,130.015
+Moby,Pale%2520Horses,Moby,341,Moby,https://api.spotify.com/v1/audio-features/5fJAYWoFgXm26HLNViFiUh,5fJAYWoFgXm26HLNViFiUh,94.733
+Ray%2520LaMontagne%2520And%2520The%2520Pariah%2520Dogs,Beg%2520Steal%2520Or%2520Borrow,Ray LaMontagne And The Pariah Dogs,341,Ray LaMontagne And The Pariah Dogs,https://api.spotify.com/v1/audio-features/7fMYBrlKl9mkcMTUGT4j6l,7fMYBrlKl9mkcMTUGT4j6l,148.097
+Tame%2520Impala,Eventually,Tame Impala,341,Tame Impala,https://api.spotify.com/v1/audio-features/5M4yti0QxgqJieUYaEXcpw,5M4yti0QxgqJieUYaEXcpw,77.935
+Beck,Wow,Beck,340,Beck,https://api.spotify.com/v1/audio-features/22srfeuYCun4LMSrLxvLZw,22srfeuYCun4LMSrLxvLZw,97.984
+Father%2520John%2520Misty,Chateau%2520Lobby%2520%25204%2520%2520In%2520C%2520For%2520Two%2520Virgins%2520,Father John Misty,340,Father John Misty,https://api.spotify.com/v1/audio-features/7LBRziEsYx5Le77YpCUItu,7LBRziEsYx5Le77YpCUItu,140.005
+Lorde,Green%2520Light,Lorde,340,Lorde,https://api.spotify.com/v1/audio-features/3G6hD9B2ZHOsgf4WfNu7X1,3G6hD9B2ZHOsgf4WfNu7X1,99.961
+Broken%2520Bells,The%2520Ghost%2520Inside,Broken Bells,339,Broken Bells,https://api.spotify.com/v1/audio-features/32fmQsWSAaDas2MJRyMSGG,32fmQsWSAaDas2MJRyMSGG,103.983
+Eels,Fresh%2520Blood,Eels,339,Eels,https://api.spotify.com/v1/audio-features/2fKdsBazcOLLIzDiZUQCih,2fKdsBazcOLLIzDiZUQCih,169.213
+Haley%2520Bonar,Last%2520War,Haley Bonar,339,Haley Bonar,https://api.spotify.com/v1/audio-features/2Ob8RRHBoW9H09yvjmUYtW,2Ob8RRHBoW9H09yvjmUYtW,89.022
+IAMDYNAMITE,Stereo,IAMDYNAMITE,339,IAMDYNAMITE,https://api.spotify.com/v1/audio-features/7rZbX55VbQpRHDOjZt36aZ,7rZbX55VbQpRHDOjZt36aZ,85.181
+Spoon,Do%2520I%2520Have%2520To%2520Talk%2520You%2520Into%2520It,Spoon,339,Spoon,https://api.spotify.com/v1/audio-features/7qCZgvV98j6RjUULW1s1it,7qCZgvV98j6RjUULW1s1it,176.016
+The%2520Avett%2520Brothers,I%2520And%2520Love%2520And%2520You,The Avett Brothers,339,The Avett Brothers,https://api.spotify.com/v1/audio-features/7CEV9VwA8XO9wwxTXgYKvY,7CEV9VwA8XO9wwxTXgYKvY,139.593
+Arctic%2520Monkeys,Don%2520t%2520Sit%2520Down%2520%2520Cause%2520I%2520ve%2520Moved%2520Your%2520Chair,Arctic Monkeys,338,Arctic Monkeys,https://api.spotify.com/v1/audio-features/4mwiRPRAUSSFD6lJ86m98B,4mwiRPRAUSSFD6lJ86m98B,84.695
+Arctic%2520Monkeys,R%2520U%2520Mine%2520,Arctic Monkeys,338,Arctic Monkeys,https://api.spotify.com/v1/audio-features/7nzsY8vlnKdvGOEE0rjAXZ,7nzsY8vlnKdvGOEE0rjAXZ,179.949
+Gary%2520Clark%2520Jr.,Ain%2520t%2520Messin%2520%2520Round,Gary Clark Jr.,338,Gary Clark Jr,https://api.spotify.com/v1/audio-features/61VeLzYgLf75bluXdXWbaV,61VeLzYgLf75bluXdXWbaV,140.468
+The%2520XX,Chained,The XX,338,The XX,https://api.spotify.com/v1/audio-features/5VfEuwErhx6X4eaPbyBfyu,5VfEuwErhx6X4eaPbyBfyu,100.363
+Cage%2520The%2520Elephant,Ain%2520t%2520No%2520Rest%2520For%2520The%2520Wicked,Cage The Elephant,337,Cage The Elephant,https://api.spotify.com/v1/audio-features/3Pzh926pXggbMe2ZpXyMV7,3Pzh926pXggbMe2ZpXyMV7,156.036
+Leon%2520Bridges,Smooth%2520Sailin%2520,Leon Bridges,337,Leon Bridges,https://api.spotify.com/v1/audio-features/3jpeI1goQHPIwwCMxrLrwx,3jpeI1goQHPIwwCMxrLrwx,67.055
+Lucius,Something%2520About%2520You,Lucius,337,Lucius,https://api.spotify.com/v1/audio-features/6RiiSy9GzSwiyDEJDiMuKe,6RiiSy9GzSwiyDEJDiMuKe,133.417
+Regina%2520Spektor,All%2520The%2520Rowboats,Regina Spektor,337,Regina Spektor,https://api.spotify.com/v1/audio-features/5rSlEtSKiOYivDFChX3FRW,5rSlEtSKiOYivDFChX3FRW,166
+Houndmouth,Say%2520It,Houndmouth,336,Houndmouth,https://api.spotify.com/v1/audio-features/2MQhTbX792AT6YyzwLz9dt,2MQhTbX792AT6YyzwLz9dt,135.188
+Lizzo%2520And%2520Caroline%2520Smith,Let%2520%2520Em%2520Say,Lizzo And Caroline Smith,336,Lizzo And Caroline Smith,https://api.spotify.com/v1/audio-features/6nBQFAIVFmAx2oZ8p6lUg6,6nBQFAIVFmAx2oZ8p6lUg6,107.019
+Portugal%2520The%2520Man,Feel%2520It%2520Still,Portugal The Man,336,Portugal The Man,https://api.spotify.com/v1/audio-features/6QgjcU0zLnzq5OrUoSZ3OK,6QgjcU0zLnzq5OrUoSZ3OK,79.028
+Electric%2520Guest,This%2520Head%2520I%2520Hold,Electric Guest,335,Electric Guest,https://api.spotify.com/v1/audio-features/2dA8HyqpMOXYQBMbeHUQnl,2dA8HyqpMOXYQBMbeHUQnl,162.017
+Nikki%2520Lane,Right%2520Time,Nikki Lane,335,Nikki Lane,https://api.spotify.com/v1/audio-features/2IUwZ8LaYyx102qKk3KQdI,2IUwZ8LaYyx102qKk3KQdI,125.685
+The%2520New%2520Pornographers,Dancehall%2520Domine,The New Pornographers,335,The New Pornographers,https://api.spotify.com/v1/audio-features/6LGTXFy9KNQeBjUHT9fPFh,6LGTXFy9KNQeBjUHT9fPFh,NA
+The%2520Strypes,Blue%2520Collar%2520Jane,The Strypes,335,The Strypes,https://api.spotify.com/v1/audio-features/60F6ntlU0uSzgChmyQyVJP,60F6ntlU0uSzgChmyQyVJP,NA
+Arcade%2520Fire,Ready%2520To%2520Start,Arcade Fire,334,Arcade Fire,https://api.spotify.com/v1/audio-features/1Xi84slp6FryDSCbzq4UCD,1Xi84slp6FryDSCbzq4UCD,NA
+Frank%2520Turner,The%2520Next%2520Storm,Frank Turner,334,Frank Turner,https://api.spotify.com/v1/audio-features/5pajrflzRSu55mgXcEKLUG,5pajrflzRSu55mgXcEKLUG,NA
+Jack%2520White,I%2520m%2520Shakin%2520,Jack White,334,Jack White,https://api.spotify.com/v1/audio-features/07AjyDeE85pDr4Dj8BzgWB,07AjyDeE85pDr4Dj8BzgWB,NA
+The%2520Lumineers,Ophelia,The Lumineers,334,The Lumineers,https://api.spotify.com/v1/audio-features/3d8y0t70g7hw2FOWl9Z4Fm,3d8y0t70g7hw2FOWl9Z4Fm,NA
+Beach%2520House,Space%2520Song,Beach House,333,Beach House,https://api.spotify.com/v1/audio-features/7H0ya83CMmgFcOhw0UB6ow,7H0ya83CMmgFcOhw0UB6ow,147.067
+Milky%2520Chance,Stolen%2520Dance,Milky Chance,333,Milky Chance,https://api.spotify.com/v1/audio-features/0ZfByLXCeKchuj7zi1CJ0S,0ZfByLXCeKchuj7zi1CJ0S,NA
+Phantogram,Black%2520Out%2520Days,Phantogram,333,Phantogram,https://api.spotify.com/v1/audio-features/2IWtloZYQDcP8Ashwx8QEF,2IWtloZYQDcP8Ashwx8QEF,NA
+Polica,TIFF,Polica,333,Polica,https://api.spotify.com/v1/audio-features/6AqlZeTJGRHuRKUAbc9kqP,6AqlZeTJGRHuRKUAbc9kqP,NA
+Sleater-Kinney,A%2520New%2520Wave,Sleater-Kinney,333,Sleater Kinney,https://api.spotify.com/v1/audio-features/7kF1iPJTj3VFJX9XokQ80F,7kF1iPJTj3VFJX9XokQ80F,NA
+CHVRCHES,The%2520Mother%2520We%2520Share,CHVRCHES,332,CHVRCHES,https://api.spotify.com/v1/audio-features/2FV7Exjr70J652JcGucCtE,2FV7Exjr70J652JcGucCtE,NA
+Dr.%2520John,Revolution,Dr. John,332,Dr  John,https://api.spotify.com/v1/audio-features/0I2ELF6uHlL4ABu9aFiou7,0I2ELF6uHlL4ABu9aFiou7,NA
+Glass%2520Animals,Black%2520Mambo,Glass Animals,332,Glass Animals,https://api.spotify.com/v1/audio-features/5RZ0Y8ae2DuIBPRNjVGkch,5RZ0Y8ae2DuIBPRNjVGkch,121.994
+Mumford%2520And%2520Sons,Winter%2520Winds,Mumford And Sons,332,Mumford And Sons,https://api.spotify.com/v1/audio-features/4B4vB3oB8csotplfoQcAd6,4B4vB3oB8csotplfoQcAd6,NA
+Phantogram,Don%2520t%2520Move,Phantogram,332,Phantogram,https://api.spotify.com/v1/audio-features/5LAlZfEzoY9hcLSCmN8PuZ,5LAlZfEzoY9hcLSCmN8PuZ,NA
+Temples,Certainty,Temples,332,Temples,https://api.spotify.com/v1/audio-features/50tEFeDpqGBDarBcA8RTPz,50tEFeDpqGBDarBcA8RTPz,92.507
+The%2520Black%2520Keys,Gotta%2520Get%2520Away,The Black Keys,332,The Black Keys,https://api.spotify.com/v1/audio-features/0zo4T5c5VV42554ySEc5J6,0zo4T5c5VV42554ySEc5J6,NA
+Dessa,Warsaw,Dessa,331,Dessa,https://api.spotify.com/v1/audio-features/09D359J8meGFVXIII0mveC,09D359J8meGFVXIII0mveC,NA
+Jeremy%2520Messersmith,Ghost,Jeremy Messersmith,331,Jeremy Messersmith,https://api.spotify.com/v1/audio-features/3bwymFXaLawekXh24ZOL9s,3bwymFXaLawekXh24ZOL9s,NA
+The%2520War%2520On%2520Drugs,Holding%2520On,The War On Drugs,331,The War On Drugs,https://api.spotify.com/v1/audio-features/5YToBG3qALkdce8bCiY1UB,5YToBG3qALkdce8bCiY1UB,119.967
+Cage%2520The%2520Elephant,Mess%2520Around,Cage The Elephant,330,Cage The Elephant,https://api.spotify.com/v1/audio-features/5n0CTysih20NYdT2S0Wpe8,5n0CTysih20NYdT2S0Wpe8,NA
+Father%2520John%2520Misty,Nancy%2520From%2520Now%2520On,Father John Misty,330,Father John Misty,https://api.spotify.com/v1/audio-features/77RNVzAVwqWiZrZuWqMV2i,77RNVzAVwqWiZrZuWqMV2i,NA
+Polica,Chain%2520My%2520Name,Polica,330,Polica,https://api.spotify.com/v1/audio-features/4DcLWBwNxJzgqxC1k52w1D,4DcLWBwNxJzgqxC1k52w1D,NA
+The%2520Staves,Teeth%2520White,The Staves,330,The Staves,https://api.spotify.com/v1/audio-features/40GLLul7Qap0Q1gVv5OaeW,40GLLul7Qap0Q1gVv5OaeW,NA
+Father%2520John%2520Misty,The%2520Ideal%2520Husband,Father John Misty,329,Father John Misty,https://api.spotify.com/v1/audio-features/3O30ywyRk6EKT68sBvVqOP,3O30ywyRk6EKT68sBvVqOP,NA
+First%2520Aid%2520Kit,Waitress%2520Song,First Aid Kit,329,First Aid Kit,https://api.spotify.com/v1/audio-features/2D4BSm5Z8Hq5zYbSgJwEOh,2D4BSm5Z8Hq5zYbSgJwEOh,81.05
+Fitz%2520And%2520The%2520Tantrums,Out%2520Of%2520My%2520League,Fitz And The Tantrums,329,Fitz And The Tantrums,https://api.spotify.com/v1/audio-features/2AYEOC02WLhUiOoaig2SEH,2AYEOC02WLhUiOoaig2SEH,NA
+Gary%2520Clark%2520Jr.,The%2520Healing,Gary Clark Jr.,329,Gary Clark Jr,https://api.spotify.com/v1/audio-features/7ps563YUuN1flAFngUcvJg,7ps563YUuN1flAFngUcvJg,NA
+Jason%2520Isbell,24%2520Frames,Jason Isbell,329,Jason Isbell,https://api.spotify.com/v1/audio-features/5qW6ZYct54PhKliCntyxRX,5qW6ZYct54PhKliCntyxRX,NA
+St.%2520Paul%2520And%2520The%2520Broken%2520Bones,Call%2520Me,St. Paul And The Broken Bones,329,St  Paul And The Broken Bones,https://api.spotify.com/v1/audio-features/5Z0MrFDEIDB075We9w9276,5Z0MrFDEIDB075We9w9276,110.289
+Walk%2520The%2520Moon,Anna%2520Sun,Walk The Moon,329,Walk The Moon,https://api.spotify.com/v1/audio-features/3e0yTP5trHBBVvV32jwXqF,3e0yTP5trHBBVvV32jwXqF,140.034
+Chicano%2520Batman,Friendship%2520%2520Is%2520A%2520Small%2520Boat%2520In%2520A%2520Storm%2520,Chicano Batman,328,Chicano Batman,https://api.spotify.com/v1/audio-features/4OSHaqeLldc5zqncKQep8M,4OSHaqeLldc5zqncKQep8M,107.772
+Macklemore%2520And%2520Ryan%2520Lewis,Same%2520Love%2520feat%2520%2520Mary%2520Lambert,Macklemore And Ryan Lewis,328,Macklemore And Ryan Lewis,https://api.spotify.com/v1/audio-features/01uqI4H13Gsd8Lyl1EYd8H,01uqI4H13Gsd8Lyl1EYd8H,NA
+The%2520Big%2520Pink,Velvet,The Big Pink,328,The Big Pink,https://api.spotify.com/v1/audio-features/42AsgO0005lineLVc1aSOL,42AsgO0005lineLVc1aSOL,NA
+The%2520Wombats,Techno%2520Fan,The Wombats,328,The Wombats,https://api.spotify.com/v1/audio-features/2Aw6dlyFVe0noQH9ppjhvX,2Aw6dlyFVe0noQH9ppjhvX,NA
+tUnE-yArDs,Gangsta,tUnE-yArDs,328,tUnE yArDs,https://api.spotify.com/v1/audio-features/11CSXNpWprcuhOu4SPinBS,11CSXNpWprcuhOu4SPinBS,NA
+Best%2520Coast,Boyfriend,Best Coast,327,Best Coast,https://api.spotify.com/v1/audio-features/3taIcgVjePRzkdz0ZmJbOi,3taIcgVjePRzkdz0ZmJbOi,NA
+Delta%2520Spirit,California,Delta Spirit,327,Delta Spirit,https://api.spotify.com/v1/audio-features/7xOuK34nWUV6KBTXBI5gW7,7xOuK34nWUV6KBTXBI5gW7,124.678
+Florence%2520And%2520The%2520Machine,Drumming%2520Song,Florence And The Machine,327,Florence And The Machine,https://api.spotify.com/v1/audio-features/7yD1uhq8xqCSdHLSkQ6sYL,7yD1uhq8xqCSdHLSkQ6sYL,NA
+Gorillaz,Stylo,Gorillaz,327,Gorillaz,https://api.spotify.com/v1/audio-features/5CHpwiiISYdU7r3RBe2Sol,5CHpwiiISYdU7r3RBe2Sol,NA
+Iron%2520And%2520Wine,Lovers%2520%2520Revolution,Iron And Wine,327,Iron And Wine,https://api.spotify.com/v1/audio-features/3q0NwIecnNK8DIE6m77PvI,3q0NwIecnNK8DIE6m77PvI,140.191
+Superorganism,Something%2520For%2520Your%2520M%2520I%2520N%2520D%2520,Superorganism,327,Superorganism,https://api.spotify.com/v1/audio-features/4rCKRVJZKVysScn2piDuOT,4rCKRVJZKVysScn2piDuOT,NA
+Hozier,Jackie%2520And%2520Wilson,Hozier,326,Hozier,https://api.spotify.com/v1/audio-features/4JpazKcfOhbwqZrsYhzHee,4JpazKcfOhbwqZrsYhzHee,NA
+Iron%2520And%2520Wine,Love%2520Vigilantes,Iron And Wine,326,Iron And Wine,https://api.spotify.com/v1/audio-features/5HZzpDN7X3Z5s8iUwe0CQu,5HZzpDN7X3Z5s8iUwe0CQu,NA
+Vampire%2520Weekend,Unbelievers,Vampire Weekend,326,Vampire Weekend,https://api.spotify.com/v1/audio-features/51DZ0wUocQ8sQfjnibXVcD,51DZ0wUocQ8sQfjnibXVcD,154.909
+Alabama%2520Shakes,Hang%2520Loose,Alabama Shakes,325,Alabama Shakes,https://api.spotify.com/v1/audio-features/6vu33bAEUG3U0d0CGxQJGl,6vu33bAEUG3U0d0CGxQJGl,NA
+Charles%2520Bradley,Ain%2520t%2520It%2520A%2520Sin,Charles Bradley,325,Charles Bradley,https://api.spotify.com/v1/audio-features/1o1ccUQ66Cbb77itc7wicp,1o1ccUQ66Cbb77itc7wicp,NA
+Florence%2520And%2520The%2520Machine,Ship%2520To%2520Wreck,Florence And The Machine,325,Florence And The Machine,https://api.spotify.com/v1/audio-features/7H7SHw3YWXhb4zYqyoPNa1,7H7SHw3YWXhb4zYqyoPNa1,NA
+Girls,Lust%2520For%2520Life,Girls,325,Girls,https://api.spotify.com/v1/audio-features/6hQ924W9N9GKzWlPw8vbMc,6hQ924W9N9GKzWlPw8vbMc,NA
+Hozier,Take%2520Me%2520To%2520Church,Hozier,325,Hozier,https://api.spotify.com/v1/audio-features/6d0wEqM0jJTNv1asKflGGi,6d0wEqM0jJTNv1asKflGGi,NA
+Jenny%2520And%2520Johnny,Big%2520Wave,Jenny And Johnny,325,Jenny And Johnny,https://api.spotify.com/v1/audio-features/6iX1f3r7oUJnMbGgQ2gx1j,6iX1f3r7oUJnMbGgQ2gx1j,NA
+Volcano%2520Choir,Byegone,Volcano Choir,325,Volcano Choir,https://api.spotify.com/v1/audio-features/4JYEPhNyjbD03XuHb8oz57,4JYEPhNyjbD03XuHb8oz57,NA
+Courtney%2520Barnett,Pedestrian%2520at%2520Best,Courtney Barnett,324,Courtney Barnett,https://api.spotify.com/v1/audio-features/2mqCHJWSlTPzJ6tAMlKhzr,2mqCHJWSlTPzJ6tAMlKhzr,NA
+Sonic%2520Youth,Antenna,Sonic Youth,324,Sonic Youth,https://api.spotify.com/v1/audio-features/7yHKJKvbi5xfHj0QTWUdDT,7yHKJKvbi5xfHj0QTWUdDT,NA
+The%2520Black%2520Keys,Howlin%2520%2520For%2520You,The Black Keys,324,The Black Keys,https://api.spotify.com/v1/audio-features/0grFc6klR3hxoHLcgCYsF4,0grFc6klR3hxoHLcgCYsF4,NA
+The%2520Shelters,Rebel%2520Heart,The Shelters,324,The Shelters,https://api.spotify.com/v1/audio-features/3Pc4BTWoH6x0PmeGfQzn5a,3Pc4BTWoH6x0PmeGfQzn5a,NA
+Broken%2520Bells,Holding%2520On%2520For%2520Life,Broken Bells,323,Broken Bells,https://api.spotify.com/v1/audio-features/757PJjXAgywxrYkdhMkEV9,757PJjXAgywxrYkdhMkEV9,NA
+Death%2520Cab%2520For%2520Cutie,Black%2520Sun,Death Cab For Cutie,323,Death Cab For Cutie,https://api.spotify.com/v1/audio-features/59FC22eN2Syt9bbv2d6393,59FC22eN2Syt9bbv2d6393,87.703
+Broken%2520Bells,After%2520The%2520Disco,Broken Bells,322,Broken Bells,https://api.spotify.com/v1/audio-features/1MmDfBzGsWKXb0rQfTyvOy,1MmDfBzGsWKXb0rQfTyvOy,NA
+Grandaddy,Way%2520We%2520Won%2520t,Grandaddy,322,Grandaddy,https://api.spotify.com/v1/audio-features/4SDqLkd3YzNaY7amuewMBj,4SDqLkd3YzNaY7amuewMBj,NA
+Aimee%2520Mann,Charmer,Aimee Mann,321,Aimee Mann,https://api.spotify.com/v1/audio-features/3CTsquv3UBK677BkVnIEkk,3CTsquv3UBK677BkVnIEkk,NA
+Janelle%2520Monae,Cold%2520War,Janelle Monae,321,Janelle Monae,https://api.spotify.com/v1/audio-features/5iDrSIUAbuajDctFTGRRiR,5iDrSIUAbuajDctFTGRRiR,NA
+Ted%2520Leo%2520And%2520The%2520Pharmacists,Even%2520Heroes%2520Have%2520To%2520Die,Ted Leo And The Pharmacists,321,Ted Leo And The Pharmacists,https://api.spotify.com/v1/audio-features/5fOjFkFA0k5MTOo1LmnVTO,5fOjFkFA0k5MTOo1LmnVTO,NA
+Dawes,That%2520Western%2520Skyline,Dawes,320,Dawes,https://api.spotify.com/v1/audio-features/7BK1LA81KfPFy66LAwXoKj,7BK1LA81KfPFy66LAwXoKj,114.211
+Gossip,Love%2520Long%2520Distance,Gossip,320,Gossip,https://api.spotify.com/v1/audio-features/7qa2hVECKNhZwZbQbm0LBT,7qa2hVECKNhZwZbQbm0LBT,NA
+Alt-J,Hunger%2520Of%2520The%2520Pine,Alt-J,319,Alt J,https://api.spotify.com/v1/audio-features/57gf8TTzlk1BE5R4C7gfz6,57gf8TTzlk1BE5R4C7gfz6,NA
+Arcade%2520Fire,The%2520Suburbs,Arcade Fire,319,Arcade Fire,https://api.spotify.com/v1/audio-features/5iItYl3Q6wCnKVfpK1uNVf,5iItYl3Q6wCnKVfpK1uNVf,NA
+Conor%2520Oberst,Hundreds%2520Of%2520Ways,Conor Oberst,319,Conor Oberst,https://api.spotify.com/v1/audio-features/3ScpH2KJqBfRlTHhdNeBqn,3ScpH2KJqBfRlTHhdNeBqn,NA
+Edward%2520Sharpe%2520And%2520The%2520Magnetic%2520Zeros,Carries%2520On,Edward Sharpe And The Magnetic Zeros,319,Edward Sharpe And The Magnetic Zeros,https://api.spotify.com/v1/audio-features/256u1AsKhmj5EJVREPNBZi,256u1AsKhmj5EJVREPNBZi,NA
+Foals,Mountain%2520At%2520My%2520Gates,Foals,319,Foals,https://api.spotify.com/v1/audio-features/3f7OyfSoDbQC0LRDQiytPp,3f7OyfSoDbQC0LRDQiytPp,NA
+Frank%2520Turner,Recovery,Frank Turner,319,Frank Turner,https://api.spotify.com/v1/audio-features/7edGUOJ1JzA9pmCYP4uchP,7edGUOJ1JzA9pmCYP4uchP,NA
+Jake%2520Bugg,Two%2520Fingers,Jake Bugg,319,Jake Bugg,https://api.spotify.com/v1/audio-features/1Bph2KY0MA2JUiX5uADWjZ,1Bph2KY0MA2JUiX5uADWjZ,NA
+Jenny%2520Lewis,She%2520s%2520Not%2520Me,Jenny Lewis,319,Jenny Lewis,https://api.spotify.com/v1/audio-features/4CaM2lWgvmWLIBDOkJCD7p,4CaM2lWgvmWLIBDOkJCD7p,NA
+Mumford%2520And%2520Sons,The%2520Wolf,Mumford And Sons,319,Mumford And Sons,https://api.spotify.com/v1/audio-features/4B4vB3oB8csotplfoQcAd6,4B4vB3oB8csotplfoQcAd6,NA
+Hippo%2520Campus,Little%2520Grace,Hippo Campus,318,Hippo Campus,https://api.spotify.com/v1/audio-features/2zZRbwPqr0NDwOIYc3jE7T,2zZRbwPqr0NDwOIYc3jE7T,NA
+Iron%2520And%2520Wine,Me%2520And%2520Lazarus,Iron And Wine,318,Iron And Wine,https://api.spotify.com/v1/audio-features/7gULBl76taq9gcbsH8Uhul,7gULBl76taq9gcbsH8Uhul,NA
+Robert%2520Plant,Rainbow,Robert Plant,318,Robert Plant,https://api.spotify.com/v1/audio-features/1SJ4ycWow4yz6z4oFz8NAG,1SJ4ycWow4yz6z4oFz8NAG,NA
+The%2520Chemical%2520Brothers,Go%2520feat%2520%2520Q%2520Tip,The Chemical Brothers,318,The Chemical Brothers,https://api.spotify.com/v1/audio-features/2Xhd1kYKj2aee7JR3nIlRe,2Xhd1kYKj2aee7JR3nIlRe,NA
+The%2520Jayhawks,Quiet%2520Corners%2520And%2520Empty%2520Spaces,The Jayhawks,318,The Jayhawks,https://api.spotify.com/v1/audio-features/5cDfI3KOa64zbuUgD6a4hG,5cDfI3KOa64zbuUgD6a4hG,NA
+Death%2520Cab%2520For%2520Cutie,The%2520Ghosts%2520Of%2520Beverly%2520Drive,Death Cab For Cutie,317,Death Cab For Cutie,https://api.spotify.com/v1/audio-features/6wNCdMW82LwJgFrnGqLhpJ,6wNCdMW82LwJgFrnGqLhpJ,NA
+Father%2520John%2520Misty,I%2520m%2520Writing%2520A%2520Novel,Father John Misty,317,Father John Misty,https://api.spotify.com/v1/audio-features/77RNVzAVwqWiZrZuWqMV2i,77RNVzAVwqWiZrZuWqMV2i,NA
+Jack%2520Penate,Pull%2520My%2520Heart%2520Away,Jack Penate,317,Jack Penate,https://api.spotify.com/v1/audio-features/60YjOtzIHmcxLGyqDK2y3x,60YjOtzIHmcxLGyqDK2y3x,NA
+Trampled%2520By%2520Turtles,Victory,Trampled By Turtles,317,Trampled By Turtles,https://api.spotify.com/v1/audio-features/6duaBXVPTb1f8D0xnqUwWk,6duaBXVPTb1f8D0xnqUwWk,NA
+Coldplay,Every%2520Teardrop%2520Is%2520A%2520Waterfall,Coldplay,316,Coldplay,https://api.spotify.com/v1/audio-features/2U8g9wVcUu9wsg6i7sFSv8,2U8g9wVcUu9wsg6i7sFSv8,NA
+Hippo%2520Campus,South,Hippo Campus,316,Hippo Campus,https://api.spotify.com/v1/audio-features/64TjzuxG5PJ7payjphrOC0,64TjzuxG5PJ7payjphrOC0,NA
+Phoenix,Trying%2520To%2520Be%2520Cool,Phoenix,316,Phoenix,https://api.spotify.com/v1/audio-features/0UpuOCp6EU4BZabgmBqr1o,0UpuOCp6EU4BZabgmBqr1o,NA
+The%2520Flaming%2520Lips,Silver%2520Trembling%2520Hands,The Flaming Lips,316,The Flaming Lips,https://api.spotify.com/v1/audio-features/5VAqZWeUa9RpsXXh7TGDpx,5VAqZWeUa9RpsXXh7TGDpx,NA
+Chet%2520Faker,1998,Chet Faker,315,Chet Faker,https://api.spotify.com/v1/audio-features/1Ll09EiN5ffeFl1xNZB2Uk,1Ll09EiN5ffeFl1xNZB2Uk,NA
+Kurt%2520Vile,Pretty%2520Pimpin,Kurt Vile,315,Kurt Vile,https://api.spotify.com/v1/audio-features/5FxKZ4IajYIRDjAWAboiB4,5FxKZ4IajYIRDjAWAboiB4,NA
+Phoenix,Entertainment,Phoenix,315,Phoenix,https://api.spotify.com/v1/audio-features/1fyVtrPPWQ6vWnchDoJc7o,1fyVtrPPWQ6vWnchDoJc7o,NA
+Santigold,Disparate%2520Youth,Santigold,315,Santigold,https://api.spotify.com/v1/audio-features/4dmCLAZbWYT0qtcG7GVMdb,4dmCLAZbWYT0qtcG7GVMdb,NA
+Alabama%2520Shakes,Gimme%2520All%2520Your%2520Love,Alabama Shakes,314,Alabama Shakes,https://api.spotify.com/v1/audio-features/0npvf0i2Ywk5bJSVIs3GNm,0npvf0i2Ywk5bJSVIs3GNm,101.741
+Arcade%2520Fire,Modern%2520Man,Arcade Fire,314,Arcade Fire,https://api.spotify.com/v1/audio-features/5VWRCDKukSgYRAhXMriSCu,5VWRCDKukSgYRAhXMriSCu,NA
+Belle%2520And%2520Sebastian,Allie,Belle And Sebastian,314,Belle And Sebastian,https://api.spotify.com/v1/audio-features/2PV8oZJo3K3bXENO7FRRtp,2PV8oZJo3K3bXENO7FRRtp,NA
+MGMT,Congratulations,MGMT,314,MGMT,https://api.spotify.com/v1/audio-features/6kblAEj0T0312fv5QWsXzo,6kblAEj0T0312fv5QWsXzo,NA
+Ryan%2520Adams,Gimme%2520Something%2520Good,Ryan Adams,313,Ryan Adams,https://api.spotify.com/v1/audio-features/08aCW0RGOaR53En8g7e3HJ,08aCW0RGOaR53En8g7e3HJ,NA
+The%2520Joy%2520Formidable,This%2520Ladder%2520Is%2520Ours,The Joy Formidable,313,The Joy Formidable,https://api.spotify.com/v1/audio-features/7xx7mUGAPcMd6gGqHzoec9,7xx7mUGAPcMd6gGqHzoec9,NA
+Florence%2520And%2520The%2520Machine,St%2520%2520Jude,Florence And The Machine,312,Florence And The Machine,https://api.spotify.com/v1/audio-features/7H7SHw3YWXhb4zYqyoPNa1,7H7SHw3YWXhb4zYqyoPNa1,NA
+P.O.S.,Where%2520We%2520Land%2520feat%2520%2520Justin%2520Vernon,P.O.S.,312,P O S,https://api.spotify.com/v1/audio-features/7l987hjMH9FBNXBE93Hrs7,7l987hjMH9FBNXBE93Hrs7,NA
+Phoenix,Armistice,Phoenix,312,Phoenix,https://api.spotify.com/v1/audio-features/1PKG43MUDvPgXpUODaU6mW,1PKG43MUDvPgXpUODaU6mW,NA
+Punch%2520Brothers,I%2520Blew%2520It%2520Off,Punch Brothers,312,Punch Brothers,https://api.spotify.com/v1/audio-features/06emEO5Meg6iHxA0Yre15n,06emEO5Meg6iHxA0Yre15n,NA
+Purity%2520Ring,Lofticries,Purity Ring,312,Purity Ring,https://api.spotify.com/v1/audio-features/0Uc1kywLKWHjqRbuY6OJvK,0Uc1kywLKWHjqRbuY6OJvK,NA
+Sharon%2520Van%2520Etten,Save%2520Yourself,Sharon Van Etten,312,Sharon Van Etten,https://api.spotify.com/v1/audio-features/7lPYfKnWRykCKTFngnkLxU,7lPYfKnWRykCKTFngnkLxU,NA
+The%2520Black%2520Keys,The%2520Only%2520One,The Black Keys,312,The Black Keys,https://api.spotify.com/v1/audio-features/6BDAbTtQxTjeoZQ7NSibA4,6BDAbTtQxTjeoZQ7NSibA4,105.211
+Vampire%2520Weekend,Step,Vampire Weekend,312,Vampire Weekend,https://api.spotify.com/v1/audio-features/607EA1HsuzrqqaPuxyNqpD,607EA1HsuzrqqaPuxyNqpD,NA
+Grizzly%2520Bear,Mourning%2520Sound,Grizzly Bear,311,Grizzly Bear,https://api.spotify.com/v1/audio-features/0szSOfZVM3G5mWI1ogQjr7,0szSOfZVM3G5mWI1ogQjr7,NA
+Neko%2520Case,Man,Neko Case,311,Neko Case,https://api.spotify.com/v1/audio-features/4PxzGOH79jcmmldKgoI9sB,4PxzGOH79jcmmldKgoI9sB,NA
+Bully,Feel%2520The%2520Same,Bully,310,Bully,https://api.spotify.com/v1/audio-features/2wquTDZEJ9EirmTbAb9jyv,2wquTDZEJ9EirmTbAb9jyv,NA
+Jake%2520Bugg,Lightning%2520Bolt,Jake Bugg,310,Jake Bugg,https://api.spotify.com/v1/audio-features/79DO6dBi8936P6EShLB209,79DO6dBi8936P6EShLB209,NA
+Wilco,You%2520Never%2520Know,Wilco,310,Wilco,https://api.spotify.com/v1/audio-features/5JuYLzlxsSewBjO4v9a04U,5JuYLzlxsSewBjO4v9a04U,109.389
+Dr.%2520Dog,Shadow%2520People,Dr. Dog,309,Dr  Dog,https://api.spotify.com/v1/audio-features/209g8XrYu3ov4Wt4bRk2Yw,209g8XrYu3ov4Wt4bRk2Yw,176.612
+Marian%2520Hill,One%2520Time,Marian Hill,309,Marian Hill,https://api.spotify.com/v1/audio-features/5eCkuGPZNl4mISFNPgr3Dd,5eCkuGPZNl4mISFNPgr3Dd,113.301
+Modest%2520Mouse,The%2520Ground%2520Walks%2520%2520with%2520Time%2520In%2520A%2520Box,Modest Mouse,309,Modest Mouse,https://api.spotify.com/v1/audio-features/5o5R70FLhegu7hpsTHAybE,5o5R70FLhegu7hpsTHAybE,128.009
+Mondo%2520Cozmo,Shine,Mondo Cozmo,309,Mondo Cozmo,https://api.spotify.com/v1/audio-features/6qgiSeYw2abTYHrk98mn5h,6qgiSeYw2abTYHrk98mn5h,152.956
+Sharon%2520Jones%2520And%2520The%2520Dap-Kings,Little%2520Boys%2520With%2520Shiny%2520Toys,Sharon Jones And The Dap-Kings,309,Sharon Jones And The Dap Kings,https://api.spotify.com/v1/audio-features/4wbEBmAhxOchkSdfltzavr,4wbEBmAhxOchkSdfltzavr,129.972
+The%2520Avett%2520Brothers,Ain%2520t%2520No%2520Man,The Avett Brothers,309,The Avett Brothers,https://api.spotify.com/v1/audio-features/7huo2wvrCgRucUsjdSDLQV,7huo2wvrCgRucUsjdSDLQV,127.91
+Arcade%2520Fire,Half%2520Light%2520II%2520%2520No%2520Celebration%2520,Arcade Fire,308,Arcade Fire,https://api.spotify.com/v1/audio-features/5e5XSjfqBk4mgRnQR1vu8Z,5e5XSjfqBk4mgRnQR1vu8Z,142.515
+Catfish%2520And%2520The%2520Bottlemen,Cocoon,Catfish And The Bottlemen,308,Catfish And The Bottlemen,https://api.spotify.com/v1/audio-features/1MHYAqWWdDRePmnqORynrq,1MHYAqWWdDRePmnqORynrq,137.93
+HAIM,Don%2520t%2520Save%2520Me,HAIM,308,HAIM,https://api.spotify.com/v1/audio-features/6Je5Vjd8VXVpQYcOiav5KU,6Je5Vjd8VXVpQYcOiav5KU,139.963
+Laura%2520Marling,Where%2520Can%2520I%2520Go,Laura Marling,308,Laura Marling,https://api.spotify.com/v1/audio-features/0eBWCKd03aFxbKpoPfKNvS,0eBWCKd03aFxbKpoPfKNvS,95.321
+Retribution%2520Gospel%2520Choir,Hide%2520It%2520Away,Retribution Gospel Choir,308,Retribution Gospel Choir,https://api.spotify.com/v1/audio-features/3i8439fwR4T5WscOL4SjDr,3i8439fwR4T5WscOL4SjDr,179.78
+Alessia%2520Cara,Here,Alessia Cara,307,Alessia Cara,https://api.spotify.com/v1/audio-features/5zUQZjVB6bfewBXWqsP9PY,5zUQZjVB6bfewBXWqsP9PY,120.462
+Hamilton%2520Leithauser,Alexandra,Hamilton Leithauser,307,Hamilton Leithauser,https://api.spotify.com/v1/audio-features/6p7jXaTJdpzGWnOJoK2jYr,6p7jXaTJdpzGWnOJoK2jYr,88.543
+Kaleo,Way%2520Down%2520We%2520Go,Kaleo,307,Kaleo,https://api.spotify.com/v1/audio-features/0y1QJc3SJVPKJ1OvFmFqe6,0y1QJc3SJVPKJ1OvFmFqe6,163.255
+Tash%2520Sultana,Jungle,Tash Sultana,307,Tash Sultana,https://api.spotify.com/v1/audio-features/3SkKLZFgKIY0DKX5Vro5jV,3SkKLZFgKIY0DKX5Vro5jV,146.059
+The%2520Avett%2520Brothers,Kick%2520Drum%2520Heart,The Avett Brothers,307,The Avett Brothers,https://api.spotify.com/v1/audio-features/0KKist1jJYO17nOqtO1sb2,0KKist1jJYO17nOqtO1sb2,141.961
+The%2520Walkmen,Heaven,The Walkmen,307,The Walkmen,https://api.spotify.com/v1/audio-features/3US6iSyLP2uS07gjjU2ZkG,3US6iSyLP2uS07gjjU2ZkG,157.998
+Warpaint,New%2520Song,Warpaint,307,Warpaint,https://api.spotify.com/v1/audio-features/3j1fOrxmfuym91Cf9v397b,3j1fOrxmfuym91Cf9v397b,128.921
+Alt-J,Breezeblocks,Alt-J,306,Alt J,https://api.spotify.com/v1/audio-features/3n69hLUdIsSa1WlRmjMZlW,3n69hLUdIsSa1WlRmjMZlW,150.093
+Beach%2520House,Sparks,Beach House,306,Beach House,https://api.spotify.com/v1/audio-features/1aBJNc2thaKyh5THWzIqHX,1aBJNc2thaKyh5THWzIqHX,114.981
+Chastity%2520Brown,Colorado,Chastity Brown,306,Chastity Brown,https://api.spotify.com/v1/audio-features/3OHdhLUobIIKskQHLJAaqe,3OHdhLUobIIKskQHLJAaqe,133.566
+Field%2520Report,Home%2520%2520Leave%2520The%2520Lights%2520On%2520,Field Report,306,Field Report,https://api.spotify.com/v1/audio-features/6lOWoTqVnAWXchddtTH31W,6lOWoTqVnAWXchddtTH31W,68.976
+Glass%2520Animals,Youth,Glass Animals,306,Glass Animals,https://api.spotify.com/v1/audio-features/1LPGwuFgIzbJoShfDdw7MY,1LPGwuFgIzbJoShfDdw7MY,96.017
+Of%2520Monsters%2520And%2520Men,Empire,Of Monsters And Men,306,Of Monsters And Men,https://api.spotify.com/v1/audio-features/4M9lfUgDeLHu1fL2ZxZSlu,4M9lfUgDeLHu1fL2ZxZSlu,118.96
+Adele,Someone%2520Like%2520You,Adele,305,Adele,https://api.spotify.com/v1/audio-features/1zwMYTA5nlNjZxYrvBB2pV,1zwMYTA5nlNjZxYrvBB2pV,135.187
+Delta%2520Spirit,From%2520Now%2520On,Delta Spirit,305,Delta Spirit,https://api.spotify.com/v1/audio-features/0QluGNVWnSnUrc688kQwEN,0QluGNVWnSnUrc688kQwEN,68.066
+Franz%2520Ferdinand,Right%2520Action,Franz Ferdinand,305,Franz Ferdinand,https://api.spotify.com/v1/audio-features/20I8RduZC2PWMWTDCZuuAN,20I8RduZC2PWMWTDCZuuAN,104.561
+Megafaun,The%2520Fade,Megafaun,305,Megafaun,https://api.spotify.com/v1/audio-features/0tleOXd3lvqEKEWz2kC0mR,0tleOXd3lvqEKEWz2kC0mR,112.042
+Ray%2520LaMontagne,Hey%2520%2520No%2520Pressure,Ray LaMontagne,305,Ray LaMontagne,https://api.spotify.com/v1/audio-features/1U1GtaJeYwGsPgqV9Me5bb,1U1GtaJeYwGsPgqV9Me5bb,170.134
+Spoon,Inside%2520Out,Spoon,305,Spoon,https://api.spotify.com/v1/audio-features/7qCZgvV98j6RjUULW1s1it,7qCZgvV98j6RjUULW1s1it,176.016
+Hippo%2520Campus,Suicide%2520Saturday,Hippo Campus,304,Hippo Campus,https://api.spotify.com/v1/audio-features/0scQIzgcOhnmfqfOTpRUFH,0scQIzgcOhnmfqfOTpRUFH,155.895
+Of%2520Monsters%2520And%2520Men,Crystals,Of Monsters And Men,304,Of Monsters And Men,https://api.spotify.com/v1/audio-features/5wU6jk9kxYzFGUpeE6T2Q5,5wU6jk9kxYzFGUpeE6T2Q5,132.195
+Sylvan%2520Esso,Radio,Sylvan Esso,304,Sylvan Esso,https://api.spotify.com/v1/audio-features/30GGIrrJdSNtecPiFcVP5O,30GGIrrJdSNtecPiFcVP5O,100.01
+CHVRCHES,Leave%2520A%2520Trace,CHVRCHES,303,CHVRCHES,https://api.spotify.com/v1/audio-features/5HTBPhN9b2GMp5YXAGV6lT,5HTBPhN9b2GMp5YXAGV6lT,99.876
+D'Angelo%2520And%2520The%2520Vanguard,Sugah%2520Daddy,D'Angelo And The Vanguard,303,D Angelo And The Vanguard,https://api.spotify.com/v1/audio-features/7AjfklMN4WpQYz5FkT4E66,7AjfklMN4WpQYz5FkT4E66,84.898
+St.%2520Vincent,Prince%2520Johnny,St. Vincent,303,St  Vincent,https://api.spotify.com/v1/audio-features/2QSUyofqpGDCo026OPiTBQ,2QSUyofqpGDCo026OPiTBQ,118.955
+Future%2520Islands,Seasons%2520%2520Waiting%2520On%2520You%2520,Future Islands,302,Future Islands,https://api.spotify.com/v1/audio-features/522YBf6WqBwJVAe7oHLymu,522YBf6WqBwJVAe7oHLymu,140.022
+Band%2520Of%2520Skulls,Death%2520By%2520Diamonds%2520And%2520Pearls,Band Of Skulls,301,Band Of Skulls,https://api.spotify.com/v1/audio-features/5VEuEfbpql6v00JoON8CK9,5VEuEfbpql6v00JoON8CK9,134.881
+Hippo%2520Campus,Souls,Hippo Campus,301,Hippo Campus,https://api.spotify.com/v1/audio-features/64TjzuxG5PJ7payjphrOC0,64TjzuxG5PJ7payjphrOC0,130.114
+JD%2520McPherson,Lucky%2520Penny,JD McPherson,301,JD McPherson,https://api.spotify.com/v1/audio-features/2ZncWeiscCUcJI60YEDrfU,2ZncWeiscCUcJI60YEDrfU,127.979
+Jack%2520Garratt,Worry,Jack Garratt,301,Jack Garratt,https://api.spotify.com/v1/audio-features/5mLcaGVV89H58FWJ677E6K,5mLcaGVV89H58FWJ677E6K,90.196
+She%2520And%2520Him,In%2520The%2520Sun,She And Him,301,She And Him,https://api.spotify.com/v1/audio-features/1ZHYoYfWMYnGAzlwOi2XP4,1ZHYoYfWMYnGAzlwOi2XP4,108.531
+The%2520Gaslight%2520Anthem,45,The Gaslight Anthem,301,The Gaslight Anthem,https://api.spotify.com/v1/audio-features/25Sd73fleKUVPNqITPZkn1,25Sd73fleKUVPNqITPZkn1,178.068
+Vampire%2520Weekend,Holiday,Vampire Weekend,301,Vampire Weekend,https://api.spotify.com/v1/audio-features/4wtxSmTTeg6CiuhwIVKv0b,4wtxSmTTeg6CiuhwIVKv0b,155.827
+CHVRCHES,Clearest%2520Blue,CHVRCHES,300,CHVRCHES,https://api.spotify.com/v1/audio-features/2ZcgMcdnkbezAGvpdvaGGq,2ZcgMcdnkbezAGvpdvaGGq,116.011
+Har%2520Mar%2520Superstar,Prisoner,Har Mar Superstar,300,Har Mar Superstar,https://api.spotify.com/v1/audio-features/0B9ocbxpcwlzoML0xBeXF1,0B9ocbxpcwlzoML0xBeXF1,105.965
+CHVRCHES,Never%2520Ending%2520Circles,CHVRCHES,299,CHVRCHES,https://api.spotify.com/v1/audio-features/2ZOSOses8rghy9wkPPDRQM,2ZOSOses8rghy9wkPPDRQM,89.994
+Father%2520John%2520Misty,Total%2520Entertainment%2520Forever,Father John Misty,299,Father John Misty,https://api.spotify.com/v1/audio-features/3O30ywyRk6EKT68sBvVqOP,3O30ywyRk6EKT68sBvVqOP,93.979
+Field%2520Report,I%2520Am%2520Not%2520Waiting%2520Anymore,Field Report,299,Field Report,https://api.spotify.com/v1/audio-features/2EiNXjkmYroSrruOMfv9qw,2EiNXjkmYroSrruOMfv9qw,129.856
+Jain,Come,Jain,299,Jain,https://api.spotify.com/v1/audio-features/6rsaPVWaUt8rgKURm2dzp3,6rsaPVWaUt8rgKURm2dzp3,79.657
+Mayer%2520Hawthorne,Her%2520Favorite%2520Song,Mayer Hawthorne,299,Mayer Hawthorne,https://api.spotify.com/v1/audio-features/3eFx554nKpVNe4otynSsK0,3eFx554nKpVNe4otynSsK0,83.948
+Dan%2520Auerbach,Shine%2520On%2520Me,Dan Auerbach,298,Dan Auerbach,https://api.spotify.com/v1/audio-features/3SFWCLORNGjFCwBfv3ysgy,3SFWCLORNGjFCwBfv3ysgy,152.816
+Howler,I%2520Told%2520You%2520Once,Howler,298,Howler,https://api.spotify.com/v1/audio-features/00Q8eQqMWUvo0YQUnlCCuL,00Q8eQqMWUvo0YQUnlCCuL,120.069
+St.%2520Vincent,Teenage%2520Talk,St. Vincent,298,St  Vincent,https://api.spotify.com/v1/audio-features/25FTMokYEbEWHEdss5JLZS,25FTMokYEbEWHEdss5JLZS,94.661
+Stars,The%2520Theory%2520Of%2520Relativity,Stars,298,Stars,https://api.spotify.com/v1/audio-features/29dzHsq1KsSVMIqxu3TDnW,29dzHsq1KsSVMIqxu3TDnW,108.019
+Sufjan%2520Stevens,I%2520Walked,Sufjan Stevens,298,Sufjan Stevens,https://api.spotify.com/v1/audio-features/1yupbrI7ROhigIHpQBevPh,1yupbrI7ROhigIHpQBevPh,124.97
+Alabama%2520Shakes,I%2520Found%2520You,Alabama Shakes,297,Alabama Shakes,https://api.spotify.com/v1/audio-features/436bx0eHJS5DPgIyfsDU31,436bx0eHJS5DPgIyfsDU31,88.311
+Dawes,Things%2520Happen,Dawes,297,Dawes,https://api.spotify.com/v1/audio-features/2bit43ZeiBbbiHUtyWuthM,2bit43ZeiBbbiHUtyWuthM,113.975
+Ezra%2520Furman,Restless%2520Year,Ezra Furman,297,Ezra Furman,https://api.spotify.com/v1/audio-features/3aOqxUnZ6LI5dxQ3iqAQ6C,3aOqxUnZ6LI5dxQ3iqAQ6C,94.525
+Givers,Saw%2520You%2520First,Givers,297,Givers,https://api.spotify.com/v1/audio-features/7A3uhvZBmoLzCCFQT14lGU,7A3uhvZBmoLzCCFQT14lGU,111.186
+Little%2520Dragon,Ritual%2520Union,Little Dragon,297,Little Dragon,https://api.spotify.com/v1/audio-features/5uTjNzGKCQ50synrf9dWmT,5uTjNzGKCQ50synrf9dWmT,144.035
+M83,Reunion,M83,297,M83,https://api.spotify.com/v1/audio-features/0aGA1zFV0ER1xLiJmHxb2s,0aGA1zFV0ER1xLiJmHxb2s,0
+Ron%2520Gallo,Young%2520Lady%2520%2520You%2520re%2520Scaring%2520Me,Ron Gallo,297,Ron Gallo,https://api.spotify.com/v1/audio-features/6PtIXICwmoxCgLjw2zApDs,6PtIXICwmoxCgLjw2zApDs,109.675
+Brandi%2520Carlile,Dreams,Brandi Carlile,296,Brandi Carlile,https://api.spotify.com/v1/audio-features/0EKBV6GybPtALXUgWqWrym,0EKBV6GybPtALXUgWqWrym,93.621
+Dawes,If%2520I%2520Wanted%2520Someone,Dawes,296,Dawes,https://api.spotify.com/v1/audio-features/2bit43ZeiBbbiHUtyWuthM,2bit43ZeiBbbiHUtyWuthM,113.975
+My%2520Morning%2520Jacket,Wonderful%2520%2520The%2520Way%2520I%2520Feel%2520,My Morning Jacket,296,My Morning Jacket,https://api.spotify.com/v1/audio-features/0FCcdnQ00vnd3PVebbDMx2,0FCcdnQ00vnd3PVebbDMx2,106.55
+Spoon,Rent%2520I%2520Pay,Spoon,296,Spoon,https://api.spotify.com/v1/audio-features/0KoqGhlIE6z7Wyil2MN0xh,0KoqGhlIE6z7Wyil2MN0xh,96.405
+Jagwar%2520Ma,Come%2520Save%2520Me,Jagwar Ma,295,Jagwar Ma,https://api.spotify.com/v1/audio-features/5WEL5aVnT1ssmKF5phZIg0,5WEL5aVnT1ssmKF5phZIg0,127.971
+Local%2520Natives,Breakers,Local Natives,295,Local Natives,https://api.spotify.com/v1/audio-features/2NW8BcU7ZtnJODt9VXQtgR,2NW8BcU7ZtnJODt9VXQtgR,106.568
+Lucius,Tempest,Lucius,295,Lucius,https://api.spotify.com/v1/audio-features/0VgTSrfmpE3mExZ6B7Fmyz,0VgTSrfmpE3mExZ6B7Fmyz,114.875
+Nathaniel%2520Rateliff%2520And%2520The%2520Night%2520Sweats,Look%2520It%2520Here,Nathaniel Rateliff And The Night Sweats,295,Nathaniel Rateliff And The Night Sweats,https://api.spotify.com/v1/audio-features/1VPUpUwtbpoRVXt0txVU0w,1VPUpUwtbpoRVXt0txVU0w,109.948
+Thundercat,Them%2520Changes,Thundercat,295,Thundercat,https://api.spotify.com/v1/audio-features/7CH99b2i1TXS5P8UUyWtnM,7CH99b2i1TXS5P8UUyWtnM,81.657
+Andrew%2520Bird,Capsized,Andrew Bird,294,Andrew Bird,https://api.spotify.com/v1/audio-features/2dAzuxEnwjHmYN1K5bAZDC,2dAzuxEnwjHmYN1K5bAZDC,82.505
+Car%2520Seat%2520Headrest,Drunk%2520Drivers,Car Seat Headrest,294,Car Seat Headrest,https://api.spotify.com/v1/audio-features/75hwtYcghca6YKW4i6C6fP,75hwtYcghca6YKW4i6C6fP,117.101
+Courtney%2520Barnett,Nobody%2520Really%2520Cares%2520If%2520You%2520Don%2520t%2520Go%2520To%2520The%2520Party,Courtney Barnett,294,Courtney Barnett,https://api.spotify.com/v1/audio-features/4IcqE1YunbbLhF6iDWXDiH,4IcqE1YunbbLhF6iDWXDiH,136.688
+Glass%2520Animals,Hazey,Glass Animals,294,Glass Animals,https://api.spotify.com/v1/audio-features/3hNKgQkCSn8eGTfyfiGWN3,3hNKgQkCSn8eGTfyfiGWN3,97.878
+Mark%2520Ronson,Daffodils%2520feat%2520%2520Kevin%2520Parker,Mark Ronson,294,Mark Ronson,https://api.spotify.com/v1/audio-features/1v0ufp7FLTFcykUGOmFZKa,1v0ufp7FLTFcykUGOmFZKa,108.945
+Pearl%2520Jam,The%2520Fixer,Pearl Jam,294,Pearl Jam,https://api.spotify.com/v1/audio-features/62nQ8UZVqR2RMvkJHkcO2o,62nQ8UZVqR2RMvkJHkcO2o,108.808
+Tame%2520Impala,Solitude%2520Is%2520Bliss,Tame Impala,294,Tame Impala,https://api.spotify.com/v1/audio-features/1CHMI7ukV63zojE0koJbsO,1CHMI7ukV63zojE0koJbsO,103.968
+The%2520Cactus%2520Blossoms,Stoplight%2520Kisses,The Cactus Blossoms,294,The Cactus Blossoms,https://api.spotify.com/v1/audio-features/5a0nDWlooW1BKOtc3beONv,5a0nDWlooW1BKOtc3beONv,150.536
+A%2520Tribe%2520Called%2520Quest,We%2520The%2520People%2520%2520%2520%2520,A Tribe Called Quest,293,A Tribe Called Quest,https://api.spotify.com/v1/audio-features/7GbTZpglTUcL9uUQa9cjbH,7GbTZpglTUcL9uUQa9cjbH,154.958
+Alex%2520Lahey,Every%2520Day%2520s%2520The%2520Weekend,Alex Lahey,293,Alex Lahey,https://api.spotify.com/v1/audio-features/19IEoiE1qTV8zzIiQghkX1,19IEoiE1qTV8zzIiQghkX1,182.113
+Arcade%2520Fire,Normal%2520Person,Arcade Fire,293,Arcade Fire,https://api.spotify.com/v1/audio-features/1Xi84slp6FryDSCbzq4UCD,1Xi84slp6FryDSCbzq4UCD,71.884
+Brandi%2520Carlile,That%2520Wasn%2520t%2520Me,Brandi Carlile,293,Brandi Carlile,https://api.spotify.com/v1/audio-features/0EKBV6GybPtALXUgWqWrym,0EKBV6GybPtALXUgWqWrym,93.621
+Fleet%2520Foxes,Third%2520Of%2520May,Fleet Foxes,293,Fleet Foxes,https://api.spotify.com/v1/audio-features/0GegHVxeozw3rdjte45Bfx,0GegHVxeozw3rdjte45Bfx,124.932
+Foals,Inhaler,Foals,293,Foals,https://api.spotify.com/v1/audio-features/1eNtDdE5rBiQoVQVLnFlrb,1eNtDdE5rBiQoVQVLnFlrb,112.63
+J.%2520Roddy%2520Walston%2520And%2520The%2520Business,Marigold,J. Roddy Walston And The Business,293,J  Roddy Walston And The Business,https://api.spotify.com/v1/audio-features/3QzAOrNlsabgbMwlZt7TAY,3QzAOrNlsabgbMwlZt7TAY,97.008
+Kendrick%2520Lamar,King%2520Kunta,Kendrick Lamar,293,Kendrick Lamar,https://api.spotify.com/v1/audio-features/0N3W5peJUQtI4eyR6GJT5O,0N3W5peJUQtI4eyR6GJT5O,107.059
+Queens%2520Of%2520The%2520Stone%2520Age,My%2520God%2520Is%2520The%2520Sun,Queens Of The Stone Age,293,Queens Of The Stone Age,https://api.spotify.com/v1/audio-features/1kJzk6H4zQOIwjq6PMeWid,1kJzk6H4zQOIwjq6PMeWid,120.336
+The%2520XX,VCR,The XX,293,The XX,https://api.spotify.com/v1/audio-features/2LJ1AKlgk4nHhR951pn0xS,2LJ1AKlgk4nHhR951pn0xS,118.045
+Jack%2520White,Sixteen%2520Saltines,Jack White,292,Jack White,https://api.spotify.com/v1/audio-features/3XBPCbTU9rSGuyuK7Xbj4B,3XBPCbTU9rSGuyuK7Xbj4B,131.532
+Kings%2520Of%2520Leon,Use%2520Somebody,Kings Of Leon,292,Kings Of Leon,https://api.spotify.com/v1/audio-features/0ntQJM78wzOLVeCUAW7Y45,0ntQJM78wzOLVeCUAW7Y45,153.398
+Leon%2520Bridges,Better%2520Man,Leon Bridges,292,Leon Bridges,https://api.spotify.com/v1/audio-features/7tOYSMYowhxJ0uK3WMoL5n,7tOYSMYowhxJ0uK3WMoL5n,188.276
+Sam%2520Smith,Stay%2520With%2520Me,Sam Smith,292,Sam Smith,https://api.spotify.com/v1/audio-features/5Nm9ERjJZ5oyfXZTECKmRt,5Nm9ERjJZ5oyfXZTECKmRt,84.094
+Lizzo,Worship,Lizzo,291,Lizzo,https://api.spotify.com/v1/audio-features/6TURPlJoVlJBtTwFZo0RUr,6TURPlJoVlJBtTwFZo0RUr,81.02
+Wolf%2520Alice,Bros,Wolf Alice,291,Wolf Alice,https://api.spotify.com/v1/audio-features/55bio2ZtgCnUWsbANOEETT,55bio2ZtgCnUWsbANOEETT,121.768
+Father%2520John%2520Misty,Bored%2520In%2520The%2520USA,Father John Misty,290,Father John Misty,https://api.spotify.com/v1/audio-features/4qG7hWhljsqqENL5PaLA2z,4qG7hWhljsqqENL5PaLA2z,132.427
+Nathaniel%2520Rateliff%2520And%2520The%2520Night%2520Sweats,I%2520Need%2520Never%2520Get%2520Old,Nathaniel Rateliff And The Night Sweats,290,Nathaniel Rateliff And The Night Sweats,https://api.spotify.com/v1/audio-features/6YfEvtwpQwGAWZBWzNmoIw,6YfEvtwpQwGAWZBWzNmoIw,135.093
+Phantogram,Howling%2520At%2520The%2520Moon,Phantogram,290,Phantogram,https://api.spotify.com/v1/audio-features/3cvr7I6DJxIq3GL4UAU8p4,3cvr7I6DJxIq3GL4UAU8p4,173.968
+Sylvan%2520Esso,Die%2520Young,Sylvan Esso,290,Sylvan Esso,https://api.spotify.com/v1/audio-features/1BRwuvjhkgezmv1gcI6lT6,1BRwuvjhkgezmv1gcI6lT6,101.974
+The%2520Magnetic%2520Fields,Andrew%2520In%2520Drag,The Magnetic Fields,290,The Magnetic Fields,https://api.spotify.com/v1/audio-features/5ehMCdeOhsgsx25M6wAEzu,5ehMCdeOhsgsx25M6wAEzu,119.973
+The%2520New%2520Pornographers,Your%2520Hands%2520%2520Together%2520,The New Pornographers,290,The New Pornographers,https://api.spotify.com/v1/audio-features/1iOJQhxKSJ7dg3Dk03yPnl,1iOJQhxKSJ7dg3Dk03yPnl,141.04
+The%2520Strokes,Under%2520Cover%2520Of%2520Darkness,The Strokes,290,The Strokes,https://api.spotify.com/v1/audio-features/6u0x5ad9ewHvs3z6u9Oe3c,6u0x5ad9ewHvs3z6u9Oe3c,199.866
+Alice%2520Merton,No%2520Roots,Alice Merton,289,Alice Merton,https://api.spotify.com/v1/audio-features/4CdfFYzaAJ0y0beKzmgJSn,4CdfFYzaAJ0y0beKzmgJSn,115.958
+Cold%2520War%2520Kids,Miracle%2520Mile,Cold War Kids,289,Cold War Kids,https://api.spotify.com/v1/audio-features/4RvmQ5qbP5PxgJD0BN4EZK,4RvmQ5qbP5PxgJD0BN4EZK,142.849
+Dawes,From%2520A%2520Window%2520Seat,Dawes,289,Dawes,https://api.spotify.com/v1/audio-features/0UVXrz4r0aM93PIMESW1dm,0UVXrz4r0aM93PIMESW1dm,73.099
+Knox%2520Hamilton,Work%2520It%2520Out,Knox Hamilton,289,Knox Hamilton,https://api.spotify.com/v1/audio-features/4cxvludVmQxryrnx1m9FqL,4cxvludVmQxryrnx1m9FqL,180.466
+Rufus%2520Wainwright,Out%2520Of%2520The%2520Game,Rufus Wainwright,289,Rufus Wainwright,https://api.spotify.com/v1/audio-features/2hkjEqloiE8FdudIDgUbwJ,2hkjEqloiE8FdudIDgUbwJ,69.381
+The%2520Black%2520Keys,Little%2520Black%2520Submarines,The Black Keys,289,The Black Keys,https://api.spotify.com/v1/audio-features/1PXsUXSM3LF2XNSkmIldPb,1PXsUXSM3LF2XNSkmIldPb,95.163
+The%2520Heavy,What%2520Makes%2520A%2520Good%2520Man%2520,The Heavy,289,The Heavy,https://api.spotify.com/v1/audio-features/3nGWzFBJ5tMzHWAgs16fK6,3nGWzFBJ5tMzHWAgs16fK6,186.15
+Bear%2520Hands,2AM,Bear Hands,288,Bear Hands,https://api.spotify.com/v1/audio-features/5zaaJzDbwAr2z4uN1kcmKC,5zaaJzDbwAr2z4uN1kcmKC,184.033
+Beck,Up%2520All%2520Night,Beck,288,Beck,https://api.spotify.com/v1/audio-features/6ecAkpOqGXQOkISSy5WWfi,6ecAkpOqGXQOkISSy5WWfi,165.997
+Jack%2520White,Lazaretto,Jack White,288,Jack White,https://api.spotify.com/v1/audio-features/3T76zPJz3tWL27FrjJe2ot,3T76zPJz3tWL27FrjJe2ot,118.214
+Laura%2520Marling,False%2520Hope,Laura Marling,288,Laura Marling,https://api.spotify.com/v1/audio-features/3LHg768dEKqJKht2uPTlVR,3LHg768dEKqJKht2uPTlVR,NA
+Noel%2520Gallagher's%2520High%2520Flying%2520Birds,In%2520The%2520Heat%2520Of%2520The%2520Moment,Noel Gallagher's High Flying Birds,288,Noel Gallagher s High Flying Birds,https://api.spotify.com/v1/audio-features/5W5MRU12dpuOnd5WmWzian,5W5MRU12dpuOnd5WmWzian,NA
+Portugal%2520The%2520Man,Live%2520In%2520The%2520Moment,Portugal The Man,288,Portugal The Man,https://api.spotify.com/v1/audio-features/60eOMEt3WNVX1m1jmApmnX,60eOMEt3WNVX1m1jmApmnX,128.017
+The%2520Avett%2520Brothers,Another%2520Is%2520Waiting,The Avett Brothers,288,The Avett Brothers,https://api.spotify.com/v1/audio-features/34O7wd0tOqZQSNeeTCZryH,34O7wd0tOqZQSNeeTCZryH,NA
+The%2520National,The%2520System%2520Only%2520Dreams%2520In%2520Total%2520Darkness,The National,288,The National,https://api.spotify.com/v1/audio-features/612R6rJlv9N3wpljUpT8Ja,612R6rJlv9N3wpljUpT8Ja,NA
+Arcade%2520Fire,Afterlife,Arcade Fire,287,Arcade Fire,https://api.spotify.com/v1/audio-features/7rL602DQps4QmrrjbinLzP,7rL602DQps4QmrrjbinLzP,NA
+Atmosphere,Finer%2520Things%2520feat%2520%2520Dem%2520Atlas,Atmosphere,287,Atmosphere,https://api.spotify.com/v1/audio-features/0qrOEuhMXqAyMMyfOCZ2yC,0qrOEuhMXqAyMMyfOCZ2yC,124.674
+HAIM,Forever,HAIM,287,HAIM,https://api.spotify.com/v1/audio-features/5pSRBmJhkfZm1eilG3VW3L,5pSRBmJhkfZm1eilG3VW3L,NA
+Metric,Help%2520%2520I%2520m%2520Alive,Metric,287,Metric,https://api.spotify.com/v1/audio-features/0cahtHEywK64NSWqm2SDTi,0cahtHEywK64NSWqm2SDTi,NA
+City%2520And%2520Colour,Lover%2520Come%2520Back,City And Colour,286,City And Colour,https://api.spotify.com/v1/audio-features/7G9yE2L2bXxqaQKVL2rKAr,7G9yE2L2bXxqaQKVL2rKAr,NA
+Dinosaur%2520Jr.,Tiny,Dinosaur Jr.,286,Dinosaur Jr,https://api.spotify.com/v1/audio-features/6B1rvaRgpIAqjyIOZK9TNC,6B1rvaRgpIAqjyIOZK9TNC,115.819
+Jason%2520Isbell,The%2520Life%2520You%2520Chose,Jason Isbell,286,Jason Isbell,https://api.spotify.com/v1/audio-features/27VAi9SsvAQhS7LeQSi349,27VAi9SsvAQhS7LeQSi349,NA
+Yeasayer,Henrietta,Yeasayer,286,Yeasayer,https://api.spotify.com/v1/audio-features/4gmivt1Q8UbnQZMVHLH43v,4gmivt1Q8UbnQZMVHLH43v,108.038
+Atoms%2520For%2520Peace,Default,Atoms For Peace,285,Atoms For Peace,https://api.spotify.com/v1/audio-features/1b85pN99A6Mn3UU81SYUg0,1b85pN99A6Mn3UU81SYUg0,NA
+Beach%2520House,Norway,Beach House,285,Beach House,https://api.spotify.com/v1/audio-features/2WR4vnUdenSmOQHF2jyBTa,2WR4vnUdenSmOQHF2jyBTa,NA
+Cage%2520The%2520Elephant,Trouble,Cage The Elephant,285,Cage The Elephant,https://api.spotify.com/v1/audio-features/5n0CTysih20NYdT2S0Wpe8,5n0CTysih20NYdT2S0Wpe8,NA
+Childish%2520Gambino,Redbone,Childish Gambino,285,Childish Gambino,https://api.spotify.com/v1/audio-features/0WtDGnWL2KrMCk0mI1Gpwz,0WtDGnWL2KrMCk0mI1Gpwz,160.111
+Sturgill%2520Simpson,Brace%2520For%2520Impact%2520%2520Live%2520A%2520Little%2520,Sturgill Simpson,285,Sturgill Simpson,https://api.spotify.com/v1/audio-features/2su9lOnI21rEmHdBcWjM2B,2su9lOnI21rEmHdBcWjM2B,97.305
+The%25201975,Love%2520Me,The 1975,285,The 1975,https://api.spotify.com/v1/audio-features/6ny9c4QDp91BpBX12HbyPC,6ny9c4QDp91BpBX12HbyPC,NA
+The%2520Avett%2520Brothers,Laundry%2520Room,The Avett Brothers,285,The Avett Brothers,https://api.spotify.com/v1/audio-features/6AVpKLavPBqssEUf4yTGKg,6AVpKLavPBqssEUf4yTGKg,NA
+The%2520Decemberists,The%2520Hazards%2520Of%2520Love%25201%2520%2520The%2520Pr%2520%2520%2520%2520Wrestle%2520The%2520Thistles%2520Undone%2520,The Decemberists,285,The Decemberists,https://api.spotify.com/v1/audio-features/5ID0RkPntsnrSc53KWQbr8,5ID0RkPntsnrSc53KWQbr8,NA
+Beach%2520House,Zebra,Beach House,284,Beach House,https://api.spotify.com/v1/audio-features/1DlU5kLNq8BemgG3kJg8IG,1DlU5kLNq8BemgG3kJg8IG,NA
+Beirut,No%2520No%2520No,Beirut,284,Beirut,https://api.spotify.com/v1/audio-features/1xRzpBiy7nmgP0oVmnseNF,1xRzpBiy7nmgP0oVmnseNF,NA
+Catfish%2520And%2520The%2520Bottlemen,7,Catfish And The Bottlemen,284,Catfish And The Bottlemen,https://api.spotify.com/v1/audio-features/1MHYAqWWdDRePmnqORynrq,1MHYAqWWdDRePmnqORynrq,NA
+Daft%2520Punk,Lose%2520Yourself%2520To%2520Dance%2520feat%2520%2520Pharrell%2520Williams,Daft Punk,284,Daft Punk,https://api.spotify.com/v1/audio-features/5Z01UMMf7V1o0MzF86s6WJ,5Z01UMMf7V1o0MzF86s6WJ,NA
+Foxygen,Follow%2520The%2520Leader,Foxygen,284,Foxygen,https://api.spotify.com/v1/audio-features/6RgrpOgbTI3M2qvA8XIvTb,6RgrpOgbTI3M2qvA8XIvTb,NA
+Modest%2520Mouse,Satellite%2520Skin,Modest Mouse,284,Modest Mouse,https://api.spotify.com/v1/audio-features/7CHRoWqLaTTwtSwsYHNJgX,7CHRoWqLaTTwtSwsYHNJgX,NA
+Polica,Lay%2520Your%2520Cards%2520Out,Polica,284,Polica,https://api.spotify.com/v1/audio-features/5kbeIdLuFXtRHtoTqSDnE3,5kbeIdLuFXtRHtoTqSDnE3,NA
+Regina%2520Spektor,Bleeding%2520Heart,Regina Spektor,284,Regina Spektor,https://api.spotify.com/v1/audio-features/2n0U2OG5d6TuW5mKx7YrC0,2n0U2OG5d6TuW5mKx7YrC0,NA
+Ty%2520Segall,Manipulator,Ty Segall,284,Ty Segall,https://api.spotify.com/v1/audio-features/57SGVmGpFIvGKHWgxUo6rm,57SGVmGpFIvGKHWgxUo6rm,NA
+Vampire%2520Weekend,Giving%2520Up%2520The%2520Gun,Vampire Weekend,284,Vampire Weekend,https://api.spotify.com/v1/audio-features/3AydAydLzyyZutA0375XIz,3AydAydLzyyZutA0375XIz,NA
+Brandi%2520Carlile,The%2520Joke,Brandi Carlile,283,Brandi Carlile,https://api.spotify.com/v1/audio-features/0EKBV6GybPtALXUgWqWrym,0EKBV6GybPtALXUgWqWrym,NA
+Kings%2520Of%2520Leon,Radioactive,Kings Of Leon,283,Kings Of Leon,https://api.spotify.com/v1/audio-features/0ntQJM78wzOLVeCUAW7Y45,0ntQJM78wzOLVeCUAW7Y45,NA
+New%2520Order,Restless,New Order,283,New Order,https://api.spotify.com/v1/audio-features/5xYTsbx3aGOGv3mvIxny97,5xYTsbx3aGOGv3mvIxny97,NA
+Twin%2520Shadow,Five%2520Seconds,Twin Shadow,283,Twin Shadow,https://api.spotify.com/v1/audio-features/6PGToxtt6KrZztJe6j66in,6PGToxtt6KrZztJe6j66in,NA
+Kungs,This%2520Girl,Kungs,282,Kungs,https://api.spotify.com/v1/audio-features/1A8j067qyiNwQnZT0bzUpZ,1A8j067qyiNwQnZT0bzUpZ,NA
+Lana%2520Del%2520Rey,Love,Lana Del Rey,282,Lana Del Rey,https://api.spotify.com/v1/audio-features/2Kerz9H9IejzeIpjhDJoYG,2Kerz9H9IejzeIpjhDJoYG,NA
+Laura%2520Marling,Soothing,Laura Marling,282,Laura Marling,https://api.spotify.com/v1/audio-features/5qgyfyptP3pLeWs9maKPkg,5qgyfyptP3pLeWs9maKPkg,NA
+Radiohead,Lotus%2520Flower,Radiohead,282,Radiohead,https://api.spotify.com/v1/audio-features/2QeutlLcJf2V1cMUUsDFT1,2QeutlLcJf2V1cMUUsDFT1,127.99
+The%2520National,Humiliation,The National,282,The National,https://api.spotify.com/v1/audio-features/7mUbWcWPImNVcLcNewe2Dy,7mUbWcWPImNVcLcNewe2Dy,NA
+Benjamin%2520Booker,Wicked%2520Waters,Benjamin Booker,281,Benjamin Booker,https://api.spotify.com/v1/audio-features/1sbHFifuv1c7j7uJO2KrjA,1sbHFifuv1c7j7uJO2KrjA,NA
+Cold%2520War%2520Kids,First,Cold War Kids,281,Cold War Kids,https://api.spotify.com/v1/audio-features/3omXshBamrREltcf24gYDC,3omXshBamrREltcf24gYDC,NA
+Mac%2520DeMarco,The%2520Way%2520You%2520d%2520Love%2520Her,Mac DeMarco,281,Mac DeMarco,https://api.spotify.com/v1/audio-features/7H7NyZ3G075GqPx2evsfeb,7H7NyZ3G075GqPx2evsfeb,NA
+Night%2520Moves,Horses,Night Moves,281,Night Moves,https://api.spotify.com/v1/audio-features/3Jtn0oLAGr0KFA5J8CaT4C,3Jtn0oLAGr0KFA5J8CaT4C,NA
+The%2520Roots,Make%2520My,The Roots,281,The Roots,https://api.spotify.com/v1/audio-features/6HxweNytuEQdmGeVtZPZz3,6HxweNytuEQdmGeVtZPZz3,111.121
+The%2520Soft%2520Pack,Answer%2520To%2520Yourself,The Soft Pack,281,The Soft Pack,https://api.spotify.com/v1/audio-features/7uGKKakgMQNoNupY0JDWcK,7uGKKakgMQNoNupY0JDWcK,NA
+Big%2520Boi,Shutterbugg,Big Boi,280,Big Boi,https://api.spotify.com/v1/audio-features/6llAqB4o2GS2Sx0rKvDIK0,6llAqB4o2GS2Sx0rKvDIK0,NA
+Dr.%2520Dog,Lonesome,Dr. Dog,280,Dr  Dog,https://api.spotify.com/v1/audio-features/4J9GV7tAOv2Al5Ttrc4tPD,4J9GV7tAOv2Al5Ttrc4tPD,NA
+Har%2520Mar%2520Superstar,Youth%2520Without%2520Love,Har Mar Superstar,280,Har Mar Superstar,https://api.spotify.com/v1/audio-features/4dWltT1kwOojQQyZJMs5tw,4dWltT1kwOojQQyZJMs5tw,148.962
+Japandroids,Near%2520To%2520The%2520Wild%2520Heart%2520Of%2520Life,Japandroids,280,Japandroids,https://api.spotify.com/v1/audio-features/4aQSJS43Lwfc6egUwKbXhb,4aQSJS43Lwfc6egUwKbXhb,181.958
+Passion%2520Pit,Constant%2520Conversations,Passion Pit,280,Passion Pit,https://api.spotify.com/v1/audio-features/4Sfa7hdVkqlM8UW5LsSY3F,4Sfa7hdVkqlM8UW5LsSY3F,NA
+The%2520Hold%2520Steady,Hurricane%2520J,The Hold Steady,280,The Hold Steady,https://api.spotify.com/v1/audio-features/1UOetxsHH54HcvovvtPkmX,1UOetxsHH54HcvovvtPkmX,NA
+Interpol,All%2520The%2520Rage%2520%2520Back%2520Home%2520,Interpol,279,Interpol,https://api.spotify.com/v1/audio-features/1fBnzFTxI1wqtU0ZR1pxrf,1fBnzFTxI1wqtU0ZR1pxrf,125.116
+Real%2520Estate,It%2520s%2520Real,Real Estate,279,Real Estate,https://api.spotify.com/v1/audio-features/6q9NCdijVIwIzPwTfKn3zC,6q9NCdijVIwIzPwTfKn3zC,NA
+St.%2520Vincent,Actor%2520Out%2520Of%2520Work,St. Vincent,279,St  Vincent,https://api.spotify.com/v1/audio-features/1w8krEiwe6FsADhCDzsazP,1w8krEiwe6FsADhCDzsazP,NA
+Atmosphere,Just%2520For%2520Show,Atmosphere,278,Atmosphere,https://api.spotify.com/v1/audio-features/6f2CmmgE9LM9MpyF5qJVu9,6f2CmmgE9LM9MpyF5qJVu9,NA
+Bully,Milkman,Bully,278,Bully,https://api.spotify.com/v1/audio-features/3CkFSnpFSzHH72EPUW9nAe,3CkFSnpFSzHH72EPUW9nAe,NA
+Cage%2520The%2520Elephant,Come%2520A%2520Little%2520Closer,Cage The Elephant,278,Cage The Elephant,https://api.spotify.com/v1/audio-features/7BY2juS1phGDJV4Qspg5zE,7BY2juS1phGDJV4Qspg5zE,NA
+Coldplay,Paradise,Coldplay,278,Coldplay,https://api.spotify.com/v1/audio-features/6nek1Nin9q48AVZcWs9e9D,6nek1Nin9q48AVZcWs9e9D,NA
+Drive-By%2520Truckers,Surrender%2520Under%2520Protest,Drive-By Truckers,278,Drive By Truckers,https://api.spotify.com/v1/audio-features/0cg3fUhXnhKSxBIfaprbIR,0cg3fUhXnhKSxBIfaprbIR,NA
+Kings%2520Go%2520Forth,One%2520Day,Kings Go Forth,278,Kings Go Forth,https://api.spotify.com/v1/audio-features/5WtdLOSLk1tuAifMaqQjX7,5WtdLOSLk1tuAifMaqQjX7,NA
+Portugal%2520The%2520Man,Purple%2520Yellow%2520Red%2520And%2520Blue,Portugal The Man,278,Portugal The Man,https://api.spotify.com/v1/audio-features/4WMuY659P2MKnoW40oGXe8,4WMuY659P2MKnoW40oGXe8,NA
+Kurt%2520Vile,I%2520m%2520An%2520Outlaw,Kurt Vile,277,Kurt Vile,https://api.spotify.com/v1/audio-features/45Xvb251X5qepFfk8vwW68,45Xvb251X5qepFfk8vwW68,NA
+Punch%2520Brothers,Movement%2520And%2520Location,Punch Brothers,277,Punch Brothers,https://api.spotify.com/v1/audio-features/06emEO5Meg6iHxA0Yre15n,06emEO5Meg6iHxA0Yre15n,NA
+Queens%2520Of%2520The%2520Stone%2520Age,The%2520Way%2520You%2520Used%2520To%2520Do,Queens Of The Stone Age,277,Queens Of The Stone Age,https://api.spotify.com/v1/audio-features/6NvRxjfYkkT2SpirAlmsjH,6NvRxjfYkkT2SpirAlmsjH,NA
+Sharon%2520Van%2520Etten,One%2520Day,Sharon Van Etten,277,Sharon Van Etten,https://api.spotify.com/v1/audio-features/5jZoYp0P8ML7AxkS3tQz3j,5jZoYp0P8ML7AxkS3tQz3j,NA
+The%2520Breeders,Wait%2520In%2520The%2520Car,The Breeders,277,The Breeders,https://api.spotify.com/v1/audio-features/1KdwPeY1WRWQGHCmRJTveb,1KdwPeY1WRWQGHCmRJTveb,NA
+Ben%2520Folds,Phone%2520In%2520A%2520Pool,Ben Folds,276,Ben Folds,https://api.spotify.com/v1/audio-features/4jKq1e80xAYixkIwt6YyV1,4jKq1e80xAYixkIwt6YyV1,NA
+Brandi%2520Carlile,The%2520Things%2520I%2520Regret,Brandi Carlile,276,Brandi Carlile,https://api.spotify.com/v1/audio-features/0EKBV6GybPtALXUgWqWrym,0EKBV6GybPtALXUgWqWrym,93.621
+Cage%2520The%2520Elephant,Spiderhead,Cage The Elephant,276,Cage The Elephant,https://api.spotify.com/v1/audio-features/4iexEVpLzRSsE7jBH5ntc2,4iexEVpLzRSsE7jBH5ntc2,91.037
+Queens%2520Of%2520The%2520Stone%2520Age,I%2520Sat%2520By%2520The%2520Ocean,Queens Of The Stone Age,276,Queens Of The Stone Age,https://api.spotify.com/v1/audio-features/6NvRxjfYkkT2SpirAlmsjH,6NvRxjfYkkT2SpirAlmsjH,170.889
+Tame%2520Impala,Apocalypse%2520Dreams,Tame Impala,276,Tame Impala,https://api.spotify.com/v1/audio-features/6mn0sw5UCR6DHZtuB82ft7,6mn0sw5UCR6DHZtuB82ft7,127.8
+The%2520Dead%2520Weather,I%2520Cut%2520Like%2520A%2520Buffalo,The Dead Weather,276,The Dead Weather,https://api.spotify.com/v1/audio-features/0QyBdoz2JktWEo111DBEx9,0QyBdoz2JktWEo111DBEx9,NA
+The%2520New%2520Pornographers,Brill%2520Bruisers,The New Pornographers,276,The New Pornographers,https://api.spotify.com/v1/audio-features/4YWPIITaOug4snnvYeVq2b,4YWPIITaOug4snnvYeVq2b,NA
+Brandi%2520Carlile,The%2520Eye,Brandi Carlile,275,Brandi Carlile,https://api.spotify.com/v1/audio-features/0EKBV6GybPtALXUgWqWrym,0EKBV6GybPtALXUgWqWrym,NA
+Bright%2520Eyes,Shell%2520Games,Bright Eyes,275,Bright Eyes,https://api.spotify.com/v1/audio-features/5jtjmR2wIW5tJTSgc1uQzG,5jtjmR2wIW5tJTSgc1uQzG,133.165
+Disclosure,Magnets%2520feat%2520%2520Lorde,Disclosure,275,Disclosure,https://api.spotify.com/v1/audio-features/7nRmfGNhHKEEu5o8yFXLXt,7nRmfGNhHKEEu5o8yFXLXt,92.005
+Empire%2520Of%2520The%2520Sun,Walking%2520On%2520A%2520Dream,Empire Of The Sun,275,Empire Of The Sun,https://api.spotify.com/v1/audio-features/5r5cp9IpziiIsR6b93vcnQ,5r5cp9IpziiIsR6b93vcnQ,126.975
+Foals,My%2520Number,Foals,275,Foals,https://api.spotify.com/v1/audio-features/04caEZhAsQKnWqKsMwk9ud,04caEZhAsQKnWqKsMwk9ud,128.072
+Jack%2520White,Freedom%2520At%252021,Jack White,275,Jack White,https://api.spotify.com/v1/audio-features/3s3ciLHOXE1xVqGkdxwHPs,3s3ciLHOXE1xVqGkdxwHPs,93.856
+Ryan%2520Adams,Do%2520You%2520Still%2520Love%2520Me,Ryan Adams,275,Ryan Adams,https://api.spotify.com/v1/audio-features/0iHR4R5G3eMY595B4IvXfA,0iHR4R5G3eMY595B4IvXfA,90.441
+Tame%2520Impala,The%2520Less%2520I%2520Know%2520The%2520Better,Tame Impala,275,Tame Impala,https://api.spotify.com/v1/audio-features/1cCbsojaA6GIT7Y3zuMJ1q,1cCbsojaA6GIT7Y3zuMJ1q,167.608
+Brandi%2520Carlile,Wherever%2520Is%2520Your%2520Heart,Brandi Carlile,274,Brandi Carlile,https://api.spotify.com/v1/audio-features/1kiWXhS6AMJOtU4DPUh0mq,1kiWXhS6AMJOtU4DPUh0mq,91.648
+Har%2520Mar%2520Superstar,Restless%2520Leg,Har Mar Superstar,274,Har Mar Superstar,https://api.spotify.com/v1/audio-features/1tRipF8otglG45CiFZ8giv,1tRipF8otglG45CiFZ8giv,123.982
+JD%2520McPherson,Fire%2520Bug,JD McPherson,274,JD McPherson,https://api.spotify.com/v1/audio-features/7r5V7GyOhmcHWAv5D9YYPn,7r5V7GyOhmcHWAv5D9YYPn,147.301
+The%2520Jayhawks,She%2520Walks%2520In%2520So%2520Many%2520Ways,The Jayhawks,274,The Jayhawks,https://api.spotify.com/v1/audio-features/0QPnl3itK95mqi015sFox8,0QPnl3itK95mqi015sFox8,118.988
+The%2520Lumineers,Cleopatra,The Lumineers,274,The Lumineers,https://api.spotify.com/v1/audio-features/5ONbCAFFnAJ0YGClEeddcU,5ONbCAFFnAJ0YGClEeddcU,138.361
+The%2520Swell%2520Season,Low%2520Rising,The Swell Season,274,The Swell Season,https://api.spotify.com/v1/audio-features/3VPp3qrfCioIbPmp7c7Con,3VPp3qrfCioIbPmp7c7Con,147.705
+Andrew%2520Bird,Eyeoneye,Andrew Bird,273,Andrew Bird,https://api.spotify.com/v1/audio-features/0ZpzceyqvyR80ybnz1Y0QE,0ZpzceyqvyR80ybnz1Y0QE,96.747
+Dead%2520Man%2520Winter,Destroyer,Dead Man Winter,273,Dead Man Winter,https://api.spotify.com/v1/audio-features/5NyTn307OHKvlWjbNrAHaB,5NyTn307OHKvlWjbNrAHaB,121.801
+Dr.%2520Dog,Distant%2520Light,Dr. Dog,273,Dr  Dog,https://api.spotify.com/v1/audio-features/7dKKGLfPUPPp4YsAke8iWE,7dKKGLfPUPPp4YsAke8iWE,82.926
+Edward%2520Sharpe%2520And%2520The%2520Magnetic%2520Zeros,Better%2520Days,Edward Sharpe And The Magnetic Zeros,273,Edward Sharpe And The Magnetic Zeros,https://api.spotify.com/v1/audio-features/7KWGfnsUU4Ri46TIvjpAPx,7KWGfnsUU4Ri46TIvjpAPx,111.615
+Florence%2520And%2520The%2520Machine,No%2520Light%2520%2520No%2520Light,Florence And The Machine,273,Florence And The Machine,https://api.spotify.com/v1/audio-features/5nkYDYUSb1bvLJ4nP8CnQ1,5nkYDYUSb1bvLJ4nP8CnQ1,131.914
+Jeff%2520The%2520Brotherhood,Sixpack,Jeff The Brotherhood,273,Jeff The Brotherhood,https://api.spotify.com/v1/audio-features/40GIPJH3s4PGj89wKFAVom,40GIPJH3s4PGj89wKFAVom,122.518
+The%2520Avett%2520Brothers,January%2520Wedding,The Avett Brothers,273,The Avett Brothers,https://api.spotify.com/v1/audio-features/5SPizt6Ifk7nCYaZib1Grb,5SPizt6Ifk7nCYaZib1Grb,101.019
+Bob%2520Mould,Voices%2520In%2520My%2520Head,Bob Mould,272,Bob Mould,https://api.spotify.com/v1/audio-features/0SnvI0twJ1Mnh0rJlBRrf0,0SnvI0twJ1Mnh0rJlBRrf0,90.029
+Cake,Sick%2520Of%2520You,Cake,272,Cake,https://api.spotify.com/v1/audio-features/5IXdkgrT4lb9sKIb8tbOQ3,5IXdkgrT4lb9sKIb8tbOQ3,92.554
+Haley%2520Bonar,Raggedy%2520Man,Haley Bonar,272,Haley Bonar,https://api.spotify.com/v1/audio-features/5iX39cX01DGPLmdWcvX5lP,5iX39cX01DGPLmdWcvX5lP,144.885
+Jain,Makeba,Jain,272,Jain,https://api.spotify.com/v1/audio-features/7w7xsrmJnKa4H6gM8tsVNf,7w7xsrmJnKa4H6gM8tsVNf,115.94
+Sigur%2520Ros,Isjaki,Sigur Ros,272,Sigur Ros,https://api.spotify.com/v1/audio-features/2hkjEqloiE8FdudIDgUbwJ,2hkjEqloiE8FdudIDgUbwJ,69.381
+Trampled%2520By%2520Turtles,Are%2520You%2520Behind%2520The%2520Shining%2520Star,Trampled By Turtles,272,Trampled By Turtles,https://api.spotify.com/v1/audio-features/7z6pDIQFv510mRKfyEjHR1,7z6pDIQFv510mRKfyEjHR1,137.016
+Black%2520Box%2520Revelation,High%2520On%2520A%2520Wire,Black Box Revelation,271,Black Box Revelation,https://api.spotify.com/v1/audio-features/1WeNLbQCDJ1JnF5LjReC8t,1WeNLbQCDJ1JnF5LjReC8t,161.121
+Fleet%2520Foxes,Grown%2520Ocean,Fleet Foxes,271,Fleet Foxes,https://api.spotify.com/v1/audio-features/5T4GDSTBjPHLyhZ8cobgu6,5T4GDSTBjPHLyhZ8cobgu6,157.9
+Michael%2520Franti%2520And%2520Spearhead,Sound%2520Of%2520Sunshine,Michael Franti And Spearhead,271,Michael Franti And Spearhead,https://api.spotify.com/v1/audio-features/6iBWazas8QsDtBnjlXkrXk,6iBWazas8QsDtBnjlXkrXk,97.007
+The%2520Avett%2520Brothers,Morning%2520Song,The Avett Brothers,271,The Avett Brothers,https://api.spotify.com/v1/audio-features/1oqnATF6AFH93dCBrDqBTP,1oqnATF6AFH93dCBrDqBTP,134.853
+The%2520Black%2520Keys,Sinister%2520Kid,The Black Keys,271,The Black Keys,https://api.spotify.com/v1/audio-features/2og8eXwy0yUKxNoUoskWDT,2og8eXwy0yUKxNoUoskWDT,139.661
+The%2520Decemberists,Rox%2520In%2520The%2520Box,The Decemberists,271,The Decemberists,https://api.spotify.com/v1/audio-features/1OSTJFMNAxzJ3fx7D7p6f7,1OSTJFMNAxzJ3fx7D7p6f7,94.333
+Zeus,Are%2520You%2520Gonna%2520Waste%2520My%2520Time%2520,Zeus,271,Zeus,https://api.spotify.com/v1/audio-features/2lPE6W6ONJKmBE6hLjpIYo,2lPE6W6ONJKmBE6hLjpIYo,177.024
+Antibalas,Dirty%2520Money,Antibalas,270,Antibalas,https://api.spotify.com/v1/audio-features/4kIcaK5ukJ1XwewfuO25XP,4kIcaK5ukJ1XwewfuO25XP,112.785
+Eels,New%2520Alphabet,Eels,270,Eels,https://api.spotify.com/v1/audio-features/2aCza0YC7Wy0imbRYOIWwW,2aCza0YC7Wy0imbRYOIWwW,100.006
+Gil%2520Scott-Heron,Me%2520And%2520The%2520Devil,Gil Scott-Heron,270,Gil Scott Heron,https://api.spotify.com/v1/audio-features/2qROUDWN1RCJoyiVSr6ifm,2qROUDWN1RCJoyiVSr6ifm,94.986
+Of%2520Monsters%2520And%2520Men,Mountain%2520Sound,Of Monsters And Men,270,Of Monsters And Men,https://api.spotify.com/v1/audio-features/60ZGteAEtPCnGE6zevgUcd,60ZGteAEtPCnGE6zevgUcd,102.021
+Ryan%2520Adams,Lucky%2520Now,Ryan Adams,270,Ryan Adams,https://api.spotify.com/v1/audio-features/1xLiOXTkAetjRqmPQwELn4,1xLiOXTkAetjRqmPQwELn4,120.301
+Wilco,You%2520And%2520I,Wilco,270,Wilco,https://api.spotify.com/v1/audio-features/2fdMAIsNH4wY7RRda8aCfL,2fdMAIsNH4wY7RRda8aCfL,122.189
+Asgeir,King%2520And%2520Cross,Asgeir,269,Asgeir,https://api.spotify.com/v1/audio-features/63USNUX5HaTygvykNFo0RB,63USNUX5HaTygvykNFo0RB,99.984
+Hippo%2520Campus,Way%2520It%2520Goes,Hippo Campus,269,Hippo Campus,https://api.spotify.com/v1/audio-features/6CES1554HcWMIVroJfmmBm,6CES1554HcWMIVroJfmmBm,120.014
+Jack%2520White,Alone%2520In%2520My%2520Home,Jack White,269,Jack White,https://api.spotify.com/v1/audio-features/6WuKJi5EXFn7RuS5dvLfZB,6WuKJi5EXFn7RuS5dvLfZB,96.024
+Kings%2520Of%2520Leon,Temple,Kings Of Leon,269,Kings Of Leon,https://api.spotify.com/v1/audio-features/30SjdIdTMhBSe33nFnBFkC,30SjdIdTMhBSe33nFnBFkC,149.838
+My%2520Morning%2520Jacket,Outta%2520My%2520System,My Morning Jacket,269,My Morning Jacket,https://api.spotify.com/v1/audio-features/6cDHsAUfF1fLTxzTDE82Kx,6cDHsAUfF1fLTxzTDE82Kx,131.216
+Wilco,The%2520Joke%2520Explained,Wilco,269,Wilco,https://api.spotify.com/v1/audio-features/5JuYLzlxsSewBjO4v9a04U,5JuYLzlxsSewBjO4v9a04U,109.389
+Bob%2520Mould,The%2520Descent,Bob Mould,268,Bob Mould,https://api.spotify.com/v1/audio-features/3W91DwrCBdWHkyZP9HlrNT,3W91DwrCBdWHkyZP9HlrNT,163.88
+Future%2520Islands,RAN,Future Islands,268,Future Islands,https://api.spotify.com/v1/audio-features/522YBf6WqBwJVAe7oHLymu,522YBf6WqBwJVAe7oHLymu,140.022
+Rag'n'Bone%2520Man,Human,Rag'n'Bone Man,268,Rag n Bone Man,https://api.spotify.com/v1/audio-features/58zsLZPvfflaiIbNWoA22O,58zsLZPvfflaiIbNWoA22O,75.087
+Stephen%2520Malkmus%2520And%2520The%2520Jicks,Tigers,Stephen Malkmus And The Jicks,268,Stephen Malkmus And The Jicks,https://api.spotify.com/v1/audio-features/61XRteBzCqRdpzyowQ5s9W,61XRteBzCqRdpzyowQ5s9W,125.427
+Tapes%2520'n%2520Tapes,Freak%2520Out,Tapes 'n Tapes,268,Tapes  n Tapes,https://api.spotify.com/v1/audio-features/41PKFas4ZU5x6b2KnNi1vX,41PKFas4ZU5x6b2KnNi1vX,84.948
+The%2520Rural%2520Alberta%2520Advantage,On%2520The%2520Rocks,The Rural Alberta Advantage,268,The Rural Alberta Advantage,https://api.spotify.com/v1/audio-features/4nVfmii8T3OKMm8zRBPCiO,4nVfmii8T3OKMm8zRBPCiO,168.067
+Wilco,If%2520I%2520Ever%2520Was%2520A%2520Child,Wilco,268,Wilco,https://api.spotify.com/v1/audio-features/1LYoxeji7NdE2tOcD30ReM,1LYoxeji7NdE2tOcD30ReM,133.572
+Bombino,Akhar%2520Zaman%2520%2520This%2520Moment%2520,Bombino,267,Bombino,https://api.spotify.com/v1/audio-features/6hbRRarmu3pPcOdTeuBifB,6hbRRarmu3pPcOdTeuBifB,187.604
+Deap%2520Vally,Smile%2520More,Deap Vally,267,Deap Vally,https://api.spotify.com/v1/audio-features/5taAVSawbm5XDO0yVzGtWk,5taAVSawbm5XDO0yVzGtWk,149.939
+Gorillaz,Rhinestone%2520Eyes,Gorillaz,267,Gorillaz,https://api.spotify.com/v1/audio-features/7yMiX7n9SBvadzox8T5jzT,7yMiX7n9SBvadzox8T5jzT,167.953
+Iggy%2520Pop,Gardenia,Iggy Pop,267,Iggy Pop,https://api.spotify.com/v1/audio-features/15BQ7vEDv2LJuh8TxWIhtd,15BQ7vEDv2LJuh8TxWIhtd,134.88
+Junip,Line%2520Of%2520Fire,Junip,267,Junip,https://api.spotify.com/v1/audio-features/3YlFtz805JwhDGy0fLasBO,3YlFtz805JwhDGy0fLasBO,167.405
+Alabama%2520Shakes,Sound%2520And%2520Color,Alabama Shakes,266,Alabama Shakes,https://api.spotify.com/v1/audio-features/436bx0eHJS5DPgIyfsDU31,436bx0eHJS5DPgIyfsDU31,88.311
+Arcade%2520Fire,Everything%2520Now,Arcade Fire,266,Arcade Fire,https://api.spotify.com/v1/audio-features/5e5XSjfqBk4mgRnQR1vu8Z,5e5XSjfqBk4mgRnQR1vu8Z,142.515
+Arctic%2520Monkeys,Crying%2520Lightning,Arctic Monkeys,266,Arctic Monkeys,https://api.spotify.com/v1/audio-features/5giCoaf8Yuk9DsJtdijEGX,5giCoaf8Yuk9DsJtdijEGX,133.026
+Beck,Waking%2520Light,Beck,266,Beck,https://api.spotify.com/v1/audio-features/7jLvQbNLLkDGRfB7xZdGok,7jLvQbNLLkDGRfB7xZdGok,125.327
+Frankie%2520Lee,Where%2520Do%2520We%2520Belong,Frankie Lee,266,Frankie Lee,https://api.spotify.com/v1/audio-features/1Lw3f4kieVLzwPPItlO4bS,1Lw3f4kieVLzwPPItlO4bS,173.781
+MGMT,Kids,MGMT,266,MGMT,https://api.spotify.com/v1/audio-features/1jJci4qxiYcOHhQR247rEU,1jJci4qxiYcOHhQR247rEU,122.961
+Ryan%2520Adams,Stay%2520With%2520Me,Ryan Adams,266,Ryan Adams,https://api.spotify.com/v1/audio-features/58Zr6jYL2DAeKhvq40Rzcb,58Zr6jYL2DAeKhvq40Rzcb,105.001
+Temples,Mesmerise,Temples,266,Temples,https://api.spotify.com/v1/audio-features/1dlJlcaJScaTqcCLoVIHEi,1dlJlcaJScaTqcCLoVIHEi,136.005
+Animal%2520Collective,Summertime%2520Clothes,Animal Collective,265,Animal Collective,https://api.spotify.com/v1/audio-features/20XdEFyaUR9C7aDIdq2OAd,20XdEFyaUR9C7aDIdq2OAd,95.116
+Cage%2520The%2520Elephant,Too%2520Late%2520To%2520Say%2520Goodbye,Cage The Elephant,265,Cage The Elephant,https://api.spotify.com/v1/audio-features/5OpwZViQUOos3cSrEo5qXv,5OpwZViQUOos3cSrEo5qXv,174.27
+George%2520Ezra,Budapest,George Ezra,265,George Ezra,https://api.spotify.com/v1/audio-features/2ixsaeFioXJmMgkkbd4uj1,2ixsaeFioXJmMgkkbd4uj1,127.812
+John%2520Grant,GMF%2520%2520Greatest%2520Living%2520Creature%2520,John Grant,265,John Grant,https://api.spotify.com/v1/audio-features/4XluehCQCnhhYD4cAd9Wfu,4XluehCQCnhhYD4cAd9Wfu,141.891
+Lorde,Team,Lorde,265,Lorde,https://api.spotify.com/v1/audio-features/3G6hD9B2ZHOsgf4WfNu7X1,3G6hD9B2ZHOsgf4WfNu7X1,99.961
+Radiohead,Burn%2520The%2520Witch,Radiohead,265,Radiohead,https://api.spotify.com/v1/audio-features/0tHOTQBn2M4CD2dcyHivth,0tHOTQBn2M4CD2dcyHivth,104.042
+The%2520Besnard%2520Lakes,Albatross,The Besnard Lakes,265,The Besnard Lakes,https://api.spotify.com/v1/audio-features/2jfFt7qaIabHuNUUU9GVsf,2jfFt7qaIabHuNUUU9GVsf,111.954
+Band%2520Of%2520Horses,In%2520A%2520Drawer,Band Of Horses,264,Band Of Horses,https://api.spotify.com/v1/audio-features/5lRzWDEe7UuedU2QPsFg0K,5lRzWDEe7UuedU2QPsFg0K,122.465
+Conor%2520Oberst,Artifact%2520%25201,Conor Oberst,264,Conor Oberst,https://api.spotify.com/v1/audio-features/2GsM1KmT8h7WnKEVlQDyzL,2GsM1KmT8h7WnKEVlQDyzL,81.272
+Devendra%2520Banhart,Never%2520Seen%2520Such%2520Good%2520Things,Devendra Banhart,264,Devendra Banhart,https://api.spotify.com/v1/audio-features/5zLnA9bO6QXc4AAvCriJfO,5zLnA9bO6QXc4AAvCriJfO,92.107
+Donnie%2520Trumpet%2520And%2520The%2520Social%2520Experiment,Sunday%2520Candy,Donnie Trumpet And The Social Experiment,264,Donnie Trumpet And The Social Experiment,https://api.spotify.com/v1/audio-features/7zpnpMyWvmuWziWVSyaenl,7zpnpMyWvmuWziWVSyaenl,82.088
+Spoon,They%2520Want%2520My%2520Soul,Spoon,264,Spoon,https://api.spotify.com/v1/audio-features/7qCZgvV98j6RjUULW1s1it,7qCZgvV98j6RjUULW1s1it,176.016
+Beck,Heart%2520Is%2520A%2520Drum,Beck,263,Beck,https://api.spotify.com/v1/audio-features/5PntSbMHC1ud6Vvl8x56qd,5PntSbMHC1ud6Vvl8x56qd,85.387
+Kings%2520Of%2520Convenience,Boat%2520Behind,Kings Of Convenience,263,Kings Of Convenience,https://api.spotify.com/v1/audio-features/3O090PYVo1do7s3PMCoVoz,3O090PYVo1do7s3PMCoVoz,160.748
+P.O.S.,Optimist%2520%2520We%2520Are%2520Not%2520For%2520Them%2520,P.O.S.,263,P O S,https://api.spotify.com/v1/audio-features/5DooySfCD1xCJ49gQm9rx7,5DooySfCD1xCJ49gQm9rx7,90.911
+Silversun%2520Pickups,There%2520s%2520No%2520Secrets%2520This%2520Year,Silversun Pickups,263,Silversun Pickups,https://api.spotify.com/v1/audio-features/7AbFT4A4QfazZN7VIPLB4h,7AbFT4A4QfazZN7VIPLB4h,118.632
+Dr.%2520Dog,Bring%2520My%2520Baby%2520Back,Dr. Dog,262,Dr  Dog,https://api.spotify.com/v1/audio-features/70WY0OFaz7293OjqeUPJnL,70WY0OFaz7293OjqeUPJnL,73.588
+Garbage,Empty,Garbage,262,Garbage,https://api.spotify.com/v1/audio-features/3osBuOGzBR4wCFd5oHm0Un,3osBuOGzBR4wCFd5oHm0Un,131.828
+Julian%2520Casablancas,11th%2520Dimension,Julian Casablancas,262,Julian Casablancas,https://api.spotify.com/v1/audio-features/6zSyBMeSS9HXF6tZtusWHK,6zSyBMeSS9HXF6tZtusWHK,133.907
+OK%2520Go,WTF,OK Go,262,OK Go,https://api.spotify.com/v1/audio-features/4Y43nu7MxbFOBJnZNfuruc,4Y43nu7MxbFOBJnZNfuruc,158.165
+Radiohead,True%2520Love%2520Waits,Radiohead,262,Radiohead,https://api.spotify.com/v1/audio-features/62SvkbQm1wMS6KZtbtls1V,62SvkbQm1wMS6KZtbtls1V,164.299
+Silversun%2520Pickups,Bloody%2520Mary%2520%2520Nerve%2520Endings%2520,Silversun Pickups,262,Silversun Pickups,https://api.spotify.com/v1/audio-features/0tjQaDeClDwfnr0q5B0BUN,0tjQaDeClDwfnr0q5B0BUN,104.957
+Cold%2520War%2520Kids,All%2520This%2520Could%2520Be%2520Yours,Cold War Kids,261,Cold War Kids,https://api.spotify.com/v1/audio-features/4MuYqqmUdc2i21E0hCLFvg,4MuYqqmUdc2i21E0hCLFvg,115.961
+Courtney%2520Barnett,Dead%2520Fox,Courtney Barnett,261,Courtney Barnett,https://api.spotify.com/v1/audio-features/2LZLR8t4zDictvQKuxFIlP,2LZLR8t4zDictvQKuxFIlP,128.556
+Courtney%2520Barnett,Depreston,Courtney Barnett,261,Courtney Barnett,https://api.spotify.com/v1/audio-features/66ZvVp8pidoXh77gAllugd,66ZvVp8pidoXh77gAllugd,126.407
+David%2520Byrne%2520And%2520St.%2520Vincent,Who,David Byrne And St. Vincent,261,David Byrne And St  Vincent,https://api.spotify.com/v1/audio-features/7wXJyWtRktzx7shORVNX5B,7wXJyWtRktzx7shORVNX5B,109.976
+Elvis%2520Costello%2520And%2520The%2520Roots,Walk%2520Us%2520Uptown,Elvis Costello And The Roots,261,Elvis Costello And The Roots,https://api.spotify.com/v1/audio-features/5zA8vzDGqPl2AzZkEYQGKh,5zA8vzDGqPl2AzZkEYQGKh,128.993
+Franz%2520Ferdinand,Always%2520Ascending,Franz Ferdinand,261,Franz Ferdinand,https://api.spotify.com/v1/audio-features/20I8RduZC2PWMWTDCZuuAN,20I8RduZC2PWMWTDCZuuAN,104.561
+Johnny%2520Marr,The%2520Messenger,Johnny Marr,261,Johnny Marr,https://api.spotify.com/v1/audio-features/2KyvUVyeABfkRvYMoRxGJW,2KyvUVyeABfkRvYMoRxGJW,117.036
+Mason%2520Jennings,Lonely%2520Street,Mason Jennings,261,Mason Jennings,https://api.spotify.com/v1/audio-features/0dbZ2iUuKvsm3FupBw6M9N,0dbZ2iUuKvsm3FupBw6M9N,150.002
+case/lang/veirs,Best%2520Kept%2520Secret,case/lang/veirs,261,case lang veirs,https://api.spotify.com/v1/audio-features/4CfrCww6BLkcNcoQglJU0T,4CfrCww6BLkcNcoQglJU0T,131.343
+BORNS,American%2520Money,BORNS,260,BORNS,https://api.spotify.com/v1/audio-features/5L27h9sZjEtNfuveLggaCY,5L27h9sZjEtNfuveLggaCY,75.075
+Bodega,How%2520Did%2520This%2520Happen,Bodega,260,Bodega,https://api.spotify.com/v1/audio-features/1HyRR46fguZsZCJV5BtgsL,1HyRR46fguZsZCJV5BtgsL,97.001
+Courtney%2520Barnett,Nameless%2520%2520Faceless,Courtney Barnett,260,Courtney Barnett,https://api.spotify.com/v1/audio-features/0d29ZVNUaxWOtUFzElL3B9,0d29ZVNUaxWOtUFzElL3B9,121.948
+Dawes,A%2520Little%2520Bit%2520Of%2520Everything,Dawes,260,Dawes,https://api.spotify.com/v1/audio-features/0UVXrz4r0aM93PIMESW1dm,0UVXrz4r0aM93PIMESW1dm,73.099
+Janelle%2520Monae,Givin%2520Em%2520What%2520They%2520Love%2520feat%2520%2520Prince,Janelle Monae,260,Janelle Monae,https://api.spotify.com/v1/audio-features/2QSUyofqpGDCo026OPiTBQ,2QSUyofqpGDCo026OPiTBQ,118.955
+Kurt%2520Vile,Never%2520Run%2520Away,Kurt Vile,260,Kurt Vile,https://api.spotify.com/v1/audio-features/7q3qS13rdkJIgx3OClBnNK,7q3qS13rdkJIgx3OClBnNK,107.723
+Modest%2520Mouse,Autumn%2520Beds,Modest Mouse,260,Modest Mouse,https://api.spotify.com/v1/audio-features/2lwwrWVKdf3LR9lbbhnr6R,2lwwrWVKdf3LR9lbbhnr6R,100.975
+St.%2520Paul%2520And%2520The%2520Broken%2520Bones,Half%2520The%2520City,St. Paul And The Broken Bones,260,St  Paul And The Broken Bones,https://api.spotify.com/v1/audio-features/1NwyJs8dFvkV5cvvehav7s,1NwyJs8dFvkV5cvvehav7s,178.522
+Gorillaz,Andromeda%2520feat%2520%2520D%2520R%2520A%2520M%2520,Gorillaz,259,Gorillaz,https://api.spotify.com/v1/audio-features/2C0KFbb4v9CNWR5c9jWcKC,2C0KFbb4v9CNWR5c9jWcKC,130.084
+My%2520Morning%2520Jacket,Compound%2520Fracture,My Morning Jacket,259,My Morning Jacket,https://api.spotify.com/v1/audio-features/2cbt59PL0tmgCsYNbM4PYk,2cbt59PL0tmgCsYNbM4PYk,100.992
+SZA,Drew%2520Barrymore,SZA,259,SZA,https://api.spotify.com/v1/audio-features/5L7sgpCZgrcqpgh1xM7r6V,5L7sgpCZgrcqpgh1xM7r6V,NA
+Sharon%2520Van%2520Etten,Taking%2520Chances,Sharon Van Etten,259,Sharon Van Etten,https://api.spotify.com/v1/audio-features/4V6OQMf2e6cNnwUiV1zTgE,4V6OQMf2e6cNnwUiV1zTgE,NA
+The%2520Decemberists,Severed,The Decemberists,259,The Decemberists,https://api.spotify.com/v1/audio-features/38psZM2gA6UWA7rqqgOjGL,38psZM2gA6UWA7rqqgOjGL,NA
+The%2520Head%2520And%2520The%2520Heart,Rhythm%2520And%2520Blues,The Head And The Heart,259,The Head And The Heart,https://api.spotify.com/v1/audio-features/5bAJhDTVCWVScr5Ev4LnB2,5bAJhDTVCWVScr5Ev4LnB2,NA
+Vance%2520Joy,Riptide,Vance Joy,259,Vance Joy,https://api.spotify.com/v1/audio-features/3JvrhDOgAt6p7K8mDyZwRd,3JvrhDOgAt6p7K8mDyZwRd,NA
+White%2520Denim,I%2520Start%2520To%2520Run,White Denim,259,White Denim,https://api.spotify.com/v1/audio-features/16rA17SnfOP6fGSrq2rAQC,16rA17SnfOP6fGSrq2rAQC,NA
+Alt-J,Dissolve%2520Me,Alt-J,258,Alt J,https://api.spotify.com/v1/audio-features/2Dv7PTwSoB17f3VFDIKw8m,2Dv7PTwSoB17f3VFDIKw8m,NA
+Deerhunter,Revival,Deerhunter,258,Deerhunter,https://api.spotify.com/v1/audio-features/1k7lK8tjU5BPsXez7WEpg0,1k7lK8tjU5BPsXez7WEpg0,NA
+Delta%2520Spirit,Bushwick%2520Blues,Delta Spirit,258,Delta Spirit,https://api.spotify.com/v1/audio-features/3sSonVXqDeoEFj2lM7mpYT,3sSonVXqDeoEFj2lM7mpYT,NA
+The%2520Struts,Could%2520Have%2520Been%2520Me,The Struts,258,The Struts,https://api.spotify.com/v1/audio-features/3IyCL4Em1GOpNGDf451Hg1,3IyCL4Em1GOpNGDf451Hg1,NA
+White%2520Rabbits,Percussion%2520Gun,White Rabbits,258,White Rabbits,https://api.spotify.com/v1/audio-features/4vpeKl0vMGdAXpZiQB2Dtd,4vpeKl0vMGdAXpZiQB2Dtd,NA
+Arcade%2520Fire,City%2520With%2520No%2520Children,Arcade Fire,257,Arcade Fire,https://api.spotify.com/v1/audio-features/1Xi84slp6FryDSCbzq4UCD,1Xi84slp6FryDSCbzq4UCD,NA
+Depeche%2520Mode,Where%2520s%2520The%2520Revolution,Depeche Mode,257,Depeche Mode,https://api.spotify.com/v1/audio-features/4wGSg2Qqpt2sGCWuAZj6EN,4wGSg2Qqpt2sGCWuAZj6EN,NA
+Frank%2520Ocean,Pink%2520And%2520White,Frank Ocean,257,Frank Ocean,https://api.spotify.com/v1/audio-features/2ZWlPOoWh0626oTaHrnl2a,2ZWlPOoWh0626oTaHrnl2a,NA
+JD%2520McPherson,Head%2520Over%2520Heels,JD McPherson,257,JD McPherson,https://api.spotify.com/v1/audio-features/4ly1QBXEwYoDmje9rmEgC4,4ly1QBXEwYoDmje9rmEgC4,NA
+Nathaniel%2520Rateliff%2520And%2520The%2520Night%2520Sweats,S%2520O%2520B%2520,Nathaniel Rateliff And The Night Sweats,257,Nathaniel Rateliff And The Night Sweats,https://api.spotify.com/v1/audio-features/1VPUpUwtbpoRVXt0txVU0w,1VPUpUwtbpoRVXt0txVU0w,NA
+Sharon%2520Jones%2520And%2520The%2520Dap-Kings,Matter%2520Of%2520Time,Sharon Jones And The Dap-Kings,257,Sharon Jones And The Dap Kings,https://api.spotify.com/v1/audio-features/2fjT0BUWKoHFg17GGPndPD,2fjT0BUWKoHFg17GGPndPD,NA
+The%2520Flaming%2520Lips,The%2520Castle,The Flaming Lips,257,The Flaming Lips,https://api.spotify.com/v1/audio-features/2DFRFqWNahKtFD112H2iEZ,2DFRFqWNahKtFD112H2iEZ,NA
+Black%2520Joe%2520Lewis%2520And%2520The%2520Honeybears,Sugarfoot,Black Joe Lewis And The Honeybears,256,Black Joe Lewis And The Honeybears,https://api.spotify.com/v1/audio-features/0KD5P1kWT1qXx5SNKcHf7w,0KD5P1kWT1qXx5SNKcHf7w,NA
+Fitz%2520And%2520The%2520Tantrums,Hand%2520Clap,Fitz And The Tantrums,256,Fitz And The Tantrums,https://api.spotify.com/v1/audio-features/4qRaZYiaOsSvWC7VgcxrI0,4qRaZYiaOsSvWC7VgcxrI0,NA
+J.%2520Roddy%2520Walston%2520And%2520The%2520Business,The%2520Wanting,J. Roddy Walston And The Business,256,J  Roddy Walston And The Business,https://api.spotify.com/v1/audio-features/3hQxK5THW4Hb4YOVLQNYkG,3hQxK5THW4Hb4YOVLQNYkG,NA
+Thao%2520with%2520The%2520Get%2520Down%2520Stay%2520Down,When%2520We%2520Swam,Thao with The Get Down Stay Down,256,Thao with The Get Down Stay Down,https://api.spotify.com/v1/audio-features/5q4L6JyoEY3VN5pOSbgjS8,5q4L6JyoEY3VN5pOSbgjS8,NA
+Beach%2520House,Other%2520People,Beach House,255,Beach House,https://api.spotify.com/v1/audio-features/7H0ya83CMmgFcOhw0UB6ow,7H0ya83CMmgFcOhw0UB6ow,NA
+Brendan%2520Benson,A%2520Whole%2520Lot%2520Better,Brendan Benson,255,Brendan Benson,https://api.spotify.com/v1/audio-features/4c5OXvgTs4j6YQU6j798RS,4c5OXvgTs4j6YQU6j798RS,NA
+CHVRCHES,Get%2520Out,CHVRCHES,255,CHVRCHES,https://api.spotify.com/v1/audio-features/2tljkQHsxAunR4yZKKBUF5,2tljkQHsxAunR4yZKKBUF5,NA
+Foo%2520Fighters,Walk,Foo Fighters,255,Foo Fighters,https://api.spotify.com/v1/audio-features/76Je5Wklky23mVoxiRszcN,76Je5Wklky23mVoxiRszcN,NA
+Glass%2520Animals,Pork%2520Soda,Glass Animals,255,Glass Animals,https://api.spotify.com/v1/audio-features/4vcoNCrTtunmJ9q8srpVly,4vcoNCrTtunmJ9q8srpVly,NA
+Muse,Panic%2520Station,Muse,255,Muse,https://api.spotify.com/v1/audio-features/6AHgA7QTtbrXzm9Ftiq9Rg,6AHgA7QTtbrXzm9Ftiq9Rg,NA
+Noel%2520Gallagher,The%2520Death%2520Of%2520You%2520And%2520Me,Noel Gallagher,255,Noel Gallagher,https://api.spotify.com/v1/audio-features/5SF89YLcHVCvsrzoIDsqc0,5SF89YLcHVCvsrzoIDsqc0,NA
+Regina%2520Spektor,Older%2520And%2520Taller,Regina Spektor,255,Regina Spektor,https://api.spotify.com/v1/audio-features/2n0U2OG5d6TuW5mKx7YrC0,2n0U2OG5d6TuW5mKx7YrC0,NA
+Superchunk,What%2520A%2520Time%2520To%2520Be%2520Alive,Superchunk,255,Superchunk,https://api.spotify.com/v1/audio-features/0bdNktKwMzf6d4V5BNK1KN,0bdNktKwMzf6d4V5BNK1KN,NA
+The%2520Pines,All%2520The%2520While,The Pines,255,The Pines,https://api.spotify.com/v1/audio-features/5PtUOPlg9luI1XB0j7GQrq,5PtUOPlg9luI1XB0j7GQrq,NA
+The%2520XX,I%2520Dare%2520You,The XX,255,The XX,https://api.spotify.com/v1/audio-features/5VfEuwErhx6X4eaPbyBfyu,5VfEuwErhx6X4eaPbyBfyu,NA
+Cold%2520War%2520Kids,Audience,Cold War Kids,254,Cold War Kids,https://api.spotify.com/v1/audio-features/3omXshBamrREltcf24gYDC,3omXshBamrREltcf24gYDC,NA
+Cults,Abducted,Cults,254,Cults,https://api.spotify.com/v1/audio-features/3Z0qLOS0cqWKPHXkbTXmNF,3Z0qLOS0cqWKPHXkbTXmNF,NA
+Edward%2520Sharpe%2520And%2520The%2520Magnetic%2520Zeros,No%2520Love%2520Like%2520Yours,Edward Sharpe And The Magnetic Zeros,254,Edward Sharpe And The Magnetic Zeros,https://api.spotify.com/v1/audio-features/7KWGfnsUU4Ri46TIvjpAPx,7KWGfnsUU4Ri46TIvjpAPx,NA
+Haley%2520Bonar,Kismet%2520Kill,Haley Bonar,254,Haley Bonar,https://api.spotify.com/v1/audio-features/5iX39cX01DGPLmdWcvX5lP,5iX39cX01DGPLmdWcvX5lP,NA
+Hippo%2520Campus,Violet,Hippo Campus,254,Hippo Campus,https://api.spotify.com/v1/audio-features/6NbLlTH71bOgfTtFVY9HRm,6NbLlTH71bOgfTtFVY9HRm,NA
+Calexico,Splitter,Calexico,253,Calexico,https://api.spotify.com/v1/audio-features/75Wj56Mdl96M0rMIPlJXDl,75Wj56Mdl96M0rMIPlJXDl,NA
+Snow%2520Patrol,Called%2520Out%2520In%2520The%2520Dark,Snow Patrol,253,Snow Patrol,https://api.spotify.com/v1/audio-features/5EDLYLzDy7O7WQdBYM5udQ,5EDLYLzDy7O7WQdBYM5udQ,NA
+Heartless%2520Bastards,Parted%2520Ways,Heartless Bastards,252,Heartless Bastards,https://api.spotify.com/v1/audio-features/17ZnveSDBpG9QtL7zLJNPy,17ZnveSDBpG9QtL7zLJNPy,82.016
+John%2520Mark%2520Nelson,Reminisce,John Mark Nelson,252,John Mark Nelson,https://api.spotify.com/v1/audio-features/7ztKcw6ZwY3MiHPSqJkRid,7ztKcw6ZwY3MiHPSqJkRid,NA
+"Now,%2520Now",Thread,"Now, Now",252,Now  Now,https://api.spotify.com/v1/audio-features/6q9NCdijVIwIzPwTfKn3zC,6q9NCdijVIwIzPwTfKn3zC,NA
+The%2520Smashing%2520Pumpkins,The%2520Celestials,The Smashing Pumpkins,252,The Smashing Pumpkins,https://api.spotify.com/v1/audio-features/5QLHGv0DfpeXLNFo7SFEy1,5QLHGv0DfpeXLNFo7SFEy1,NA
+Atmosphere,She%2520s%2520Enough,Atmosphere,251,Atmosphere,https://api.spotify.com/v1/audio-features/6f2CmmgE9LM9MpyF5qJVu9,6f2CmmgE9LM9MpyF5qJVu9,NA
+Reigning%2520Sound,North%2520Cackalacky%2520Girl,Reigning Sound,251,Reigning Sound,https://api.spotify.com/v1/audio-features/6ezIwnaFXYJwoe4izQh4EC,6ezIwnaFXYJwoe4izQh4EC,NA
+Them%2520Crooked%2520Vultures,New%2520Fang,Them Crooked Vultures,251,Them Crooked Vultures,https://api.spotify.com/v1/audio-features/796trrqG9cqybcRBfIyjUv,796trrqG9cqybcRBfIyjUv,NA
+Toro%2520Y%2520Moi,Empty%2520Nesters,Toro Y Moi,251,Toro Y Moi,https://api.spotify.com/v1/audio-features/12zKUrFGCg4t6tjdVgoQXm,12zKUrFGCg4t6tjdVgoQXm,NA
+Wilco,Random%2520Name%2520Generator,Wilco,251,Wilco,https://api.spotify.com/v1/audio-features/5JuYLzlxsSewBjO4v9a04U,5JuYLzlxsSewBjO4v9a04U,NA
+Arcade%2520Fire,Creature%2520Comfort,Arcade Fire,250,Arcade Fire,https://api.spotify.com/v1/audio-features/1Xi84slp6FryDSCbzq4UCD,1Xi84slp6FryDSCbzq4UCD,NA
+Cake,Long%2520Time,Cake,250,Cake,https://api.spotify.com/v1/audio-features/3ZOwmSmQKX4vTK4N6e2GsW,3ZOwmSmQKX4vTK4N6e2GsW,144.966
+Charlie%2520Parr,Over%2520The%2520Red%2520Cedar,Charlie Parr,250,Charlie Parr,https://api.spotify.com/v1/audio-features/5xFh8P6jYPwLj2kCfxbmbJ,5xFh8P6jYPwLj2kCfxbmbJ,NA
+Dawes,All%2520Your%2520Favorite%2520Bands,Dawes,250,Dawes,https://api.spotify.com/v1/audio-features/0HOvoZ4m0aJp6vY4fVrI51,0HOvoZ4m0aJp6vY4fVrI51,NA
+Fitz%2520And%2520The%2520Tantrums,6am,Fitz And The Tantrums,250,Fitz And The Tantrums,https://api.spotify.com/v1/audio-features/2AYEOC02WLhUiOoaig2SEH,2AYEOC02WLhUiOoaig2SEH,NA
+Frightened%2520Rabbit,Swim%2520Until%2520You%2520Can%2520t%2520See%2520Land,Frightened Rabbit,250,Frightened Rabbit,https://api.spotify.com/v1/audio-features/01TvwZMbABHX5ZafvBZqVx,01TvwZMbABHX5ZafvBZqVx,NA
+Lissie,Don%2520t%2520You%2520Give%2520Up%2520On%2520Me,Lissie,250,Lissie,https://api.spotify.com/v1/audio-features/2K7j4xrQENCi5r3Hii4cVe,2K7j4xrQENCi5r3Hii4cVe,NA
+Paolo%2520Nutini,Let%2520Me%2520Down%2520Easy,Paolo Nutini,250,Paolo Nutini,https://api.spotify.com/v1/audio-features/124fPPpfilKedE6GGqVMyv,124fPPpfilKedE6GGqVMyv,NA
+Pearl%2520Jam,Just%2520Breathe,Pearl Jam,250,Pearl Jam,https://api.spotify.com/v1/audio-features/6i81qFkru6Kj1IEsB7KNp2,6i81qFkru6Kj1IEsB7KNp2,NA
+The%2520Suburbs,Turn%2520The%2520Radio%2520On,The Suburbs,250,The Suburbs,https://api.spotify.com/v1/audio-features/5iItYl3Q6wCnKVfpK1uNVf,5iItYl3Q6wCnKVfpK1uNVf,NA
+Barns%2520Courtney,Fire,Barns Courtney,249,Barns Courtney,https://api.spotify.com/v1/audio-features/5w6B0sAH7XauCvMOAtplQj,5w6B0sAH7XauCvMOAtplQj,NA
+Billie%2520Joe%2520And%2520Norah,Long%2520Time%2520Gone,Billie Joe And Norah,249,Billie Joe And Norah,https://api.spotify.com/v1/audio-features/0478mQXa11keCCdpWKEKgU,0478mQXa11keCCdpWKEKgU,NA
+Feist,Pleasure,Feist,249,Feist,https://api.spotify.com/v1/audio-features/1sDCAgY8s43iyP9wajKWhT,1sDCAgY8s43iyP9wajKWhT,NA
+Lucius,The%2520Punisher,Lucius,249,Lucius,https://api.spotify.com/v1/audio-features/29HbMTL672MugzhklYvStz,29HbMTL672MugzhklYvStz,NA
+M.I.A.,XXXO,M.I.A.,249,M I A,https://api.spotify.com/v1/audio-features/7pdF27mSDuPWhppnHAmWHa,7pdF27mSDuPWhppnHAmWHa,NA
+Manchester%2520Orchestra,The%2520Gold,Manchester Orchestra,249,Manchester Orchestra,https://api.spotify.com/v1/audio-features/3EytfC22ikoXM921cJbejn,3EytfC22ikoXM921cJbejn,180.111
+Nathaniel%2520Rateliff%2520And%2520The%2520Night%2520Sweats,A%2520Little%2520Honey,Nathaniel Rateliff And The Night Sweats,249,Nathaniel Rateliff And The Night Sweats,https://api.spotify.com/v1/audio-features/1VPUpUwtbpoRVXt0txVU0w,1VPUpUwtbpoRVXt0txVU0w,NA
+Prince,Clouds,Prince,249,Prince,https://api.spotify.com/v1/audio-features/72tw1RsVqQ40i1jcp4bXdj,72tw1RsVqQ40i1jcp4bXdj,90.357
+Sufjan%2520Stevens,Should%2520Have%2520Known%2520Better,Sufjan Stevens,249,Sufjan Stevens,https://api.spotify.com/v1/audio-features/73uJybGAhwGRD9MZYrOmTY,73uJybGAhwGRD9MZYrOmTY,NA
+Superchunk,Digging%2520For%2520Something,Superchunk,249,Superchunk,https://api.spotify.com/v1/audio-features/0bdNktKwMzf6d4V5BNK1KN,0bdNktKwMzf6d4V5BNK1KN,74.519
+The%2520Avett%2520Brothers,Head%2520Full%2520Of%2520Doubt%2520Road%2520Full%2520Of%2520Promise,The Avett Brothers,249,The Avett Brothers,https://api.spotify.com/v1/audio-features/36lV4io8Gc69fDinNaazAg,36lV4io8Gc69fDinNaazAg,153.616
+Weezer,King%2520Of%2520The%2520World,Weezer,249,Weezer,https://api.spotify.com/v1/audio-features/2MLHyLy5z5l5YRp7momlgw,2MLHyLy5z5l5YRp7momlgw,NA
+Bishop%2520Briggs,River,Bishop Briggs,248,Bishop Briggs,https://api.spotify.com/v1/audio-features/3mRLHiSHYtC8Hk7bzZdUs1,3mRLHiSHYtC8Hk7bzZdUs1,NA
+M83,Go%2520,M83,248,M83,https://api.spotify.com/v1/audio-features/1slDsIJxew9AOOA3v0xFzn,1slDsIJxew9AOOA3v0xFzn,135.438
+Band%2520Of%2520Horses,Knock%2520Knock,Band Of Horses,247,Band Of Horses,https://api.spotify.com/v1/audio-features/6aHoPULNO7pSL2ZfUY0bU8,6aHoPULNO7pSL2ZfUY0bU8,125.935
+Daft%2520Punk,Doin%2520%2520It%2520Right%2520feat%2520%2520Panda%2520Bear,Daft Punk,247,Daft Punk,https://api.spotify.com/v1/audio-features/36c4JohayB9qd64eidQMBi,36c4JohayB9qd64eidQMBi,NA
+Dawes,Most%2520People,Dawes,247,Dawes,https://api.spotify.com/v1/audio-features/2bit43ZeiBbbiHUtyWuthM,2bit43ZeiBbbiHUtyWuthM,NA
+Dr.%2520Dog,Broken%2520Heart,Dr. Dog,247,Dr  Dog,https://api.spotify.com/v1/audio-features/3ZtiIp8iTVohALZR4Uq8Jt,3ZtiIp8iTVohALZR4Uq8Jt,NA
+Feist,Any%2520Party,Feist,247,Feist,https://api.spotify.com/v1/audio-features/2CzWeyC9zlDpIOZPUUKrBW,2CzWeyC9zlDpIOZPUUKrBW,NA
+Har%2520Mar%2520Superstar,Tall%2520Boy,Har Mar Superstar,247,Har Mar Superstar,https://api.spotify.com/v1/audio-features/20j7l6tFtc5lynXpbOQg1O,20j7l6tFtc5lynXpbOQg1O,NA
+Roma%2520di%2520Luna,Before%2520I%2520Die,Roma di Luna,247,Roma di Luna,https://api.spotify.com/v1/audio-features/0J6sIxiH8kg1gIhIX1nihQ,0J6sIxiH8kg1gIhIX1nihQ,119.985
+The%2520Strumbellas,Spirits,The Strumbellas,247,The Strumbellas,https://api.spotify.com/v1/audio-features/1VyiUi0mRnSKgtHa5dBoUd,1VyiUi0mRnSKgtHa5dBoUd,80.529
+Black%2520Joe%2520Lewis%2520And%2520The%2520Honeybears,PTP,Black Joe Lewis And The Honeybears,246,Black Joe Lewis And The Honeybears,https://api.spotify.com/v1/audio-features/0gY2iq0xJPRoIB1PScKSw4,0gY2iq0xJPRoIB1PScKSw4,205.57
+Brother%2520Ali,Only%2520Life%2520I%2520Know,Brother Ali,246,Brother Ali,https://api.spotify.com/v1/audio-features/5MbXzXGbqobR8xPVPs8OXA,5MbXzXGbqobR8xPVPs8OXA,76.963
+Florence%2520And%2520The%2520Machine,You%2520ve%2520Got%2520The%2520Love,Florence And The Machine,246,Florence And The Machine,https://api.spotify.com/v1/audio-features/7H7SHw3YWXhb4zYqyoPNa1,7H7SHw3YWXhb4zYqyoPNa1,174.806
+Kendrick%2520Lamar,These%2520Walls,Kendrick Lamar,246,Kendrick Lamar,https://api.spotify.com/v1/audio-features/7uWVT3UkCAZyANvv0bdyQn,7uWVT3UkCAZyANvv0bdyQn,108.005
+Of%2520Monsters%2520And%2520Men,Dirty%2520Paws,Of Monsters And Men,246,Of Monsters And Men,https://api.spotify.com/v1/audio-features/5g7rJvWYVrloJZwKiShqlS,5g7rJvWYVrloJZwKiShqlS,111.709
+Preservation%2520Hall%2520Jazz%2520Band,Santiago,Preservation Hall Jazz Band,246,Preservation Hall Jazz Band,https://api.spotify.com/v1/audio-features/52Y0BRC2ut635CirrbYq9s,52Y0BRC2ut635CirrbYq9s,128.187
+Ryan%2520Adams%2520And%2520The%2520Cardinals,Kisses%2520Start%2520Wars,Ryan Adams And The Cardinals,246,Ryan Adams And The Cardinals,https://api.spotify.com/v1/audio-features/0aLk2Za7r0eGlLOepW2hzL,0aLk2Za7r0eGlLOepW2hzL,92.582
+Superorganism,Everybody%2520Wants%2520To%2520Be%2520Famous,Superorganism,246,Superorganism,https://api.spotify.com/v1/audio-features/4BVFVaa1fDo20Ud1q5Gd2N,4BVFVaa1fDo20Ud1q5Gd2N,86.993
+Built%2520To%2520Spill,Hindsight,Built To Spill,245,Built To Spill,https://api.spotify.com/v1/audio-features/0EKuLau92C3DfZ2UMYnbvk,0EKuLau92C3DfZ2UMYnbvk,102.21
+Danger%2520Mouse%2520And%2520Daniele%2520Luppi,Two%2520Against%2520One%2520feat%2520%2520Jack%2520White,Danger Mouse And Daniele Luppi,245,Danger Mouse And Daniele Luppi,https://api.spotify.com/v1/audio-features/2VHfyWLlvCvbkIqtS5tqt3,2VHfyWLlvCvbkIqtS5tqt3,123.005
+Elle%2520King,Under%2520The%2520Influence,Elle King,245,Elle King,https://api.spotify.com/v1/audio-features/5IgjP7X4th6nMNDh4akUHb,5IgjP7X4th6nMNDh4akUHb,116.992
+Foo%2520Fighters,Rope,Foo Fighters,245,Foo Fighters,https://api.spotify.com/v1/audio-features/7v0mtl6oInUtHOmTk2b0gC,7v0mtl6oInUtHOmTk2b0gC,138.19
+Givers,Up%2520Up%2520Up,Givers,245,Givers,https://api.spotify.com/v1/audio-features/7A3uhvZBmoLzCCFQT14lGU,7A3uhvZBmoLzCCFQT14lGU,111.186
+Jane's%2520Addiction,Irresistible%2520Force,Jane's Addiction,245,Jane s Addiction,https://api.spotify.com/v1/audio-features/0D7r6CIGNRvs0IvsDOunZr,0D7r6CIGNRvs0IvsDOunZr,170.501
+Jonsi,Boy%2520Lilikoi,Jonsi,245,Jonsi,https://api.spotify.com/v1/audio-features/27NvD7UlbVnSSnkT9VYAjh,27NvD7UlbVnSSnkT9VYAjh,144.903
+Joseph,SOS%2520%2520Overboard%2520,Joseph,245,Joseph,https://api.spotify.com/v1/audio-features/4OeXeFN1dxx3LTrjcKGSV9,4OeXeFN1dxx3LTrjcKGSV9,114.968
+Ratatat,Neckbrace,Ratatat,245,Ratatat,https://api.spotify.com/v1/audio-features/6iDU7XRi0cxXvUYk3s8OOk,6iDU7XRi0cxXvUYk3s8OOk,120.347
+Solid%2520Gold,Get%2520Over%2520It,Solid Gold,245,Solid Gold,https://api.spotify.com/v1/audio-features/0CdWAFsKkBMT8N5z0WIE8y,0CdWAFsKkBMT8N5z0WIE8y,168.596
+Adele,River%2520Lea,Adele,244,Adele,https://api.spotify.com/v1/audio-features/3hwu7jZD2TjvWCeHzNlgSE,3hwu7jZD2TjvWCeHzNlgSE,82.378
+Dr.%2520Dog,Stranger,Dr. Dog,244,Dr  Dog,https://api.spotify.com/v1/audio-features/10RtSGZV9YgUICMOKdynY0,10RtSGZV9YgUICMOKdynY0,153.937
+Haley%2520Bonar,Kill%2520The%2520Fun,Haley Bonar,244,Haley Bonar,https://api.spotify.com/v1/audio-features/28kOpVf1aCgL0LSFfuKV4w,28kOpVf1aCgL0LSFfuKV4w,115.422
+NONONO,Pumpin%2520Blood,NONONO,244,NONONO,https://api.spotify.com/v1/audio-features/7ti4qMC7xYQeh1uRzj5XuM,7ti4qMC7xYQeh1uRzj5XuM,118.998
+Sonny%2520Knight%2520And%2520The%2520Lakers,Juicy%2520Lucy,Sonny Knight And The Lakers,244,Sonny Knight And The Lakers,https://api.spotify.com/v1/audio-features/5LX7bnBuC13RsSUDtyLQyY,5LX7bnBuC13RsSUDtyLQyY,119.59
+Washed%2520Out,Amor%2520Fati,Washed Out,244,Washed Out,https://api.spotify.com/v1/audio-features/2zCm8GoOtiDbUoKbjHEGg1,2zCm8GoOtiDbUoKbjHEGg1,100.957
+Nine%2520Inch%2520Nails,Came%2520Back%2520Haunted,Nine Inch Nails,243,Nine Inch Nails,https://api.spotify.com/v1/audio-features/0jem8KSDqhiOoIWIqrJZbI,0jem8KSDqhiOoIWIqrJZbI,130.025
+Spoon,Got%2520Nuffin,Spoon,243,Spoon,https://api.spotify.com/v1/audio-features/0n2tnCMIlM8Z58NPdXzlQe,0n2tnCMIlM8Z58NPdXzlQe,143.911
+Death%2520From%2520Above%25201979,Trainwreck%25201979,Death From Above 1979,242,Death From Above 1979,https://api.spotify.com/v1/audio-features/6uhtKcSdQMFpnX8Gj3QBxF,6uhtKcSdQMFpnX8Gj3QBxF,138.022
+Foster%2520The%2520People,Helena%2520Beat,Foster The People,242,Foster The People,https://api.spotify.com/v1/audio-features/0Tx8txKvoiVcY3ujUGblGx,0Tx8txKvoiVcY3ujUGblGx,127.008
+Iron%2520And%2520Wine,Call%2520It%2520Dreaming,Iron And Wine,242,Iron And Wine,https://api.spotify.com/v1/audio-features/1MxHIIzcTeFnaNsDGY3pfj,1MxHIIzcTeFnaNsDGY3pfj,79.989
+Janelle%2520Monae,Make%2520Me%2520Feel,Janelle Monae,242,Janelle Monae,https://api.spotify.com/v1/audio-features/5OhG7shUD0xgQMirbRAipe,5OhG7shUD0xgQMirbRAipe,118.958
+Strange%2520Names,Potential%2520Wife,Strange Names,242,Strange Names,https://api.spotify.com/v1/audio-features/2bPWLtJe3v33z1j40sWB8a,2bPWLtJe3v33z1j40sWB8a,70.453
+The%2520Chemical%2520Brothers,Wide%2520Open%2520feat%2520%2520Beck,The Chemical Brothers,242,The Chemical Brothers,https://api.spotify.com/v1/audio-features/7kXmJwrZGIhDaLT9sNo3ut,7kXmJwrZGIhDaLT9sNo3ut,127.001
+The%2520XX,Say%2520Something%2520Loving,The XX,242,The XX,https://api.spotify.com/v1/audio-features/2C5YDhSJqLFCHrymIBzNSg,2C5YDhSJqLFCHrymIBzNSg,130.081
+The%2520Shins,Name%2520For%2520You,The Shins,241,The Shins,https://api.spotify.com/v1/audio-features/5RcjIb8nes7PboYuKWAvnw,5RcjIb8nes7PboYuKWAvnw,118.023
+Bahamas,Caught%2520Me%2520Thinking,Bahamas,240,Bahamas,https://api.spotify.com/v1/audio-features/3labT48xWDOOR5dWUUPCkk,3labT48xWDOOR5dWUUPCkk,118.429
+Black%2520Joe%2520Lewis%2520And%2520The%2520Honeybears,Booty%2520City,Black Joe Lewis And The Honeybears,240,Black Joe Lewis And The Honeybears,https://api.spotify.com/v1/audio-features/0gY2iq0xJPRoIB1PScKSw4,0gY2iq0xJPRoIB1PScKSw4,205.57
+Coldplay,Adventure%2520Of%2520A%2520Lifetime,Coldplay,240,Coldplay,https://api.spotify.com/v1/audio-features/69uxyAqqPIsUyTO8txoP2M,69uxyAqqPIsUyTO8txoP2M,111.995
+Holy%2520White%2520Hounds,Switchblade,Holy White Hounds,240,Holy White Hounds,https://api.spotify.com/v1/audio-features/3YdbOLP4xAfRqXxNPRKQro,3YdbOLP4xAfRqXxNPRKQro,124.857
+MGMT,Electric%2520Feel,MGMT,240,MGMT,https://api.spotify.com/v1/audio-features/2eGHyarZyRvUgFI4d3G8GN,2eGHyarZyRvUgFI4d3G8GN,107.273
+Nada%2520Surf,Waiting%2520For%2520Something,Nada Surf,240,Nada Surf,https://api.spotify.com/v1/audio-features/4AU7z13HYmPMetlWbq1mys,4AU7z13HYmPMetlWbq1mys,105.987
+Pretty%2520Lights,Around%2520The%2520Block%2520feat%2520%2520Talib%2520Kweli,Pretty Lights,240,Pretty Lights,https://api.spotify.com/v1/audio-features/45jVX2Y4o10n6AB4LW2H6t,45jVX2Y4o10n6AB4LW2H6t,85.452
+Silversun%2520Pickups,Panic%2520Switch,Silversun Pickups,240,Silversun Pickups,https://api.spotify.com/v1/audio-features/597i9UhHbW8hHgBUp8Tm54,597i9UhHbW8hHgBUp8Tm54,198.556
+Tweedy,Summer%2520Noon,Tweedy,240,Tweedy,https://api.spotify.com/v1/audio-features/7wY92RilZka5FCdSvoyOtC,7wY92RilZka5FCdSvoyOtC,103.496
+Yuck,Get%2520Away,Yuck,240,Yuck,https://api.spotify.com/v1/audio-features/0D5CXSUx8GOCHSY8KWgi9h,0D5CXSUx8GOCHSY8KWgi9h,156.151
+Brandi%2520Carlile,Hold%2520Out%2520Your%2520Hand,Brandi Carlile,239,Brandi Carlile,https://api.spotify.com/v1/audio-features/0EKBV6GybPtALXUgWqWrym,0EKBV6GybPtALXUgWqWrym,93.621
+Chance%2520The%2520Rapper,Angels,Chance The Rapper,239,Chance The Rapper,https://api.spotify.com/v1/audio-features/5TmgLf3eXrAAfNIk5bURJL,5TmgLf3eXrAAfNIk5bURJL,78.01
+Free%2520Energy,Bang%2520Pop,Free Energy,239,Free Energy,https://api.spotify.com/v1/audio-features/7mb6bXx6FpyZxd37Ldz37q,7mb6bXx6FpyZxd37Ldz37q,92.278
+Gang%2520Of%2520Youths,The%2520Heart%2520Is%2520A%2520Muscle,Gang Of Youths,239,Gang Of Youths,https://api.spotify.com/v1/audio-features/2jtoc6Pwym5dWlbaGx8fzR,2jtoc6Pwym5dWlbaGx8fzR,106.543
+Hockey,Song%2520Away,Hockey,239,Hockey,https://api.spotify.com/v1/audio-features/2g8q4vNuoVpLJGK17kVcoR,2g8q4vNuoVpLJGK17kVcoR,97.771
+Natalie%2520Prass,Bird%2520Of%2520Prey,Natalie Prass,239,Natalie Prass,https://api.spotify.com/v1/audio-features/7Ah7rHGII9itR3nXuKo1ay,7Ah7rHGII9itR3nXuKo1ay,170.554
+Phosphorescent,Ride%2520On%2520Right%2520On,Phosphorescent,239,Phosphorescent,https://api.spotify.com/v1/audio-features/7Ep6MLL8ATx0fFczswsvR5,7Ep6MLL8ATx0fFczswsvR5,95.069
+Smith%2520Westerns,Weekend,Smith Westerns,239,Smith Westerns,https://api.spotify.com/v1/audio-features/7DQDpDeLVS3L9kgb6ejU3z,7DQDpDeLVS3L9kgb6ejU3z,153.916
+Stephen%2520Malkmus%2520And%2520The%2520Jicks,Lariat,Stephen Malkmus And The Jicks,239,Stephen Malkmus And The Jicks,https://api.spotify.com/v1/audio-features/68WH3359JUGT2YNuy6G7qd,68WH3359JUGT2YNuy6G7qd,170.445
+The%2520Rural%2520Alberta%2520Advantage,Drain%2520The%2520Blood,The Rural Alberta Advantage,239,The Rural Alberta Advantage,https://api.spotify.com/v1/audio-features/1dOou4rIA2egQz68NLZZ4p,1dOou4rIA2egQz68NLZZ4p,147.05
+Fanfarlo,Harold%2520T%2520%2520Wilkins,Fanfarlo,238,Fanfarlo,https://api.spotify.com/v1/audio-features/3fBbB1mW3ULuhmQXijyuaR,3fBbB1mW3ULuhmQXijyuaR,133.035
+JD+McPherson,North+Side+Gal,JD McPherson,476,NA,https://api.spotify.com/v1/audio-features/5WLS5Fz6pW8AUwio6BGJJ2,5WLS5Fz6pW8AUwio6BGJJ2,85.02
+The+Decemberists,Down+By+The+Water,The Decemberists,471,NA,https://api.spotify.com/v1/audio-features/7IxWqdG1zG0gaAFYq2q0Iy,7IxWqdG1zG0gaAFYq2q0Iy,123.493
+Matt+And+Kim,Cameras,Matt And Kim,458,NA,https://api.spotify.com/v1/audio-features/57i3M29DWoo7RDk0Tf0LZG,57i3M29DWoo7RDk0Tf0LZG,103.303
+Band+Of+Horses,Laredo,Band Of Horses,454,NA,https://api.spotify.com/v1/audio-features/61beXNR1qPPxjyM8x3pdRk,61beXNR1qPPxjyM8x3pdRk,123.356
+The+Temper+Trap,Sweet+Disposition,The Temper Trap,433,NA,https://api.spotify.com/v1/audio-features/5RoIXwyTCdyUjpMMkk4uPd,5RoIXwyTCdyUjpMMkk4uPd,129.139
+Phantogram,When+I+m+Small,Phantogram,420,NA,https://api.spotify.com/v1/audio-features/1eRZ7SYPW54ghVSVOljr5l,1eRZ7SYPW54ghVSVOljr5l,91.999
+Joseph,White+Flag,Joseph,406,NA,https://api.spotify.com/v1/audio-features/3adnLFXKO5rC1lhUNSeg3N,3adnLFXKO5rC1lhUNSeg3N,170.111
+The+War+On+Drugs,Under+The+Pressure,The War On Drugs,400,NA,https://api.spotify.com/v1/audio-features/5j58jhAFzAy0keSuQYsQBn,5j58jhAFzAy0keSuQYsQBn,134.385
+OK+Go,This+Too+Shall+Pass,OK Go,398,NA,https://api.spotify.com/v1/audio-features/3l9eeEd5NABrvYRzXIVqwK,3l9eeEd5NABrvYRzXIVqwK,160.032
+First+Aid+Kit,Emmylou,First Aid Kit,395,NA,https://api.spotify.com/v1/audio-features/2bU3gg0M8GGBs7ItBKsJX9,2bU3gg0M8GGBs7ItBKsJX9,88.269
+Yeah+Yeah+Yeahs,Sacrilege,Yeah Yeah Yeahs,393,NA,https://api.spotify.com/v1/audio-features/0hDQV9X1Da5JrwhK8gu86p,0hDQV9X1Da5JrwhK8gu86p,119.783
+Matt+And+Kim,Let+s+Go,Matt And Kim,390,NA,https://api.spotify.com/v1/audio-features/2PlP2rRrgSz8lC7MpH3e4e,2PlP2rRrgSz8lC7MpH3e4e,112.014
+Bon+Iver,Calgary,Bon Iver,387,NA,https://api.spotify.com/v1/audio-features/5Eabf2aN4DqRLvFl4QceQE,5Eabf2aN4DqRLvFl4QceQE,120.081
+The+Arcs,Outta+My+Mind,The Arcs,381,NA,https://api.spotify.com/v1/audio-features/4cgDk0IjwdG8w1ArIaqdpq,4cgDk0IjwdG8w1ArIaqdpq,131.042
+The+Rural+Alberta+Advantage,Don+t+Haunt+This+Place,The Rural Alberta Advantage,378,NA,https://api.spotify.com/v1/audio-features/4nVfmii8T3OKMm8zRBPCiO,4nVfmii8T3OKMm8zRBPCiO,168.067
+Chastity+Brown,After+You,Chastity Brown,373,NA,https://api.spotify.com/v1/audio-features/1LlLkHJ0t8osHqRklweuUG,1LlLkHJ0t8osHqRklweuUG,110.021
+TV+On+The+Radio,Will+Do,TV On The Radio,373,NA,https://api.spotify.com/v1/audio-features/5iHK8VI9XkJJdXQHCBXeM4,5iHK8VI9XkJJdXQHCBXeM4,79.979
+Low,No+Comprende,Low,366,NA,https://api.spotify.com/v1/audio-features/05EeK9UdzNsygnt13Yclhk,05EeK9UdzNsygnt13Yclhk,97.935
+Cloud+Cult,You+ll+Be+Bright,Cloud Cult,364,NA,https://api.spotify.com/v1/audio-features/0fag2kW1MMhNOPauLrBkMG,0fag2kW1MMhNOPauLrBkMG,120.14
+Lana+Del+Rey,West+Coast,Lana Del Rey,364,NA,https://api.spotify.com/v1/audio-features/5Y6nVaayzitvsD5F7nr3DV,5Y6nVaayzitvsD5F7nr3DV,123.167
+The+Arcs,Stay+In+My+Corner,The Arcs,364,NA,https://api.spotify.com/v1/audio-features/3zobfMEipF81bJfPVp1h09,3zobfMEipF81bJfPVp1h09,143.451
+Sylvan+Esso,Coffee,Sylvan Esso,363,NA,https://api.spotify.com/v1/audio-features/1BRwuvjhkgezmv1gcI6lT6,1BRwuvjhkgezmv1gcI6lT6,101.974
+The+XX,On+Hold,The XX,363,NA,https://api.spotify.com/v1/audio-features/5w3CRkbTWXfbYepIdFpGUN,5w3CRkbTWXfbYepIdFpGUN,125.053
+Big+Data,Dangerous,Big Data,361,NA,https://api.spotify.com/v1/audio-features/2PeKCn8NSGQXAHONaCh3wB,2PeKCn8NSGQXAHONaCh3wB,102.96
+Family+Of+The+Year,Hero,Family Of The Year,359,NA,https://api.spotify.com/v1/audio-features/1B10XgaxSXRLAFq967oMpF,1B10XgaxSXRLAFq967oMpF,174.705
+Mason+Jennings,The+Field,Mason Jennings,359,NA,https://api.spotify.com/v1/audio-features/1jKCnK12Xbux90qwgtPkJA,1jKCnK12Xbux90qwgtPkJA,120.778
+Lissie,When+I+m+Alone,Lissie,356,NA,https://api.spotify.com/v1/audio-features/5Ja2u1FPlVxrxeMWEa2dcn,5Ja2u1FPlVxrxeMWEa2dcn,140.107
+Caroline+Smith,Magazine,Caroline Smith,353,NA,https://api.spotify.com/v1/audio-features/3gbBbghO2EPcfBpeymDFeT,3gbBbghO2EPcfBpeymDFeT,101
+Elle+King,Ex+s+And+Oh+s,Elle King,352,NA,https://api.spotify.com/v1/audio-features/70eDxAyAraNTiD6lx2ZEnH,70eDxAyAraNTiD6lx2ZEnH,139.988
+The+War+On+Drugs,Red+Eyes,The War On Drugs,352,NA,https://api.spotify.com/v1/audio-features/0rUIff1QHd5zlOBtlHVqd9,0rUIff1QHd5zlOBtlHVqd9,161.845
+EL+VY,Return+To+The+Moon,EL VY,351,NA,https://api.spotify.com/v1/audio-features/1tFlVn4Eui4VsPTa5jlzIx,1tFlVn4Eui4VsPTa5jlzIx,124.973
+Michael+Kiwanuka,Tell+Me+A+Tale,Michael Kiwanuka,351,NA,https://api.spotify.com/v1/audio-features/3ZRvYw3UuvHemty0UHKRSI,3ZRvYw3UuvHemty0UHKRSI,65.195
+Valerie+June,You+Can+t+Be+Told,Valerie June,347,NA,https://api.spotify.com/v1/audio-features/4afYc6b90xaA04w6Cm8Xa2,4afYc6b90xaA04w6Cm8Xa2,127.534
+Death+Cab+For+Cutie,You+Are+A+Tourist,Death Cab For Cutie,345,NA,https://api.spotify.com/v1/audio-features/2bD1AW4yqiCurGCva6r88a,2bD1AW4yqiCurGCva6r88a,95.16
+St++Vincent,Birth+In+Reverse,St. Vincent,345,NA,https://api.spotify.com/v1/audio-features/3v47tb6hvbeb3dVOgYZUfP,3v47tb6hvbeb3dVOgYZUfP,161.991
+The+Shins,40+Mark+Strasse,The Shins,338,NA,https://api.spotify.com/v1/audio-features/47TQjzeG4KI0XWWb0wkbri,47TQjzeG4KI0XWWb0wkbri,169.902
+The+Arcs,Put+A+Flower+In+Your+Pocket,The Arcs,336,NA,https://api.spotify.com/v1/audio-features/7BaDRi8gmRnOducT6KaOfc,7BaDRi8gmRnOducT6KaOfc,126.402
+Courtney+Barnett,Three+Packs+A+Day,Courtney Barnett,334,NA,https://api.spotify.com/v1/audio-features/3LueS3mbuB1yaJNN0Ale6U,3LueS3mbuB1yaJNN0Ale6U,115.277
+Nick+Cave+And+The+Bad+Seeds,We+No+Who+U+R,Nick Cave And The Bad Seeds,331,NA,https://api.spotify.com/v1/audio-features/2EVILZHRlbS1HBum5CMif8,2EVILZHRlbS1HBum5CMif8,75.096
+St++Vincent,New+York,St. Vincent,331,NA,https://api.spotify.com/v1/audio-features/5IXTT9RvcVupmzLTFqIInj,5IXTT9RvcVupmzLTFqIInj,137.866
+My+Morning+Jacket,Big+Decisions,My Morning Jacket,330,NA,https://api.spotify.com/v1/audio-features/6xAa0kGkTLU22ZyoHOCHgi,6xAa0kGkTLU22ZyoHOCHgi,116.342
+The+Tallest+Man+On+Earth,1904,The Tallest Man On Earth,329,NA,https://api.spotify.com/v1/audio-features/5u9NUat59IiQFVEzZ4r3Np,5u9NUat59IiQFVEzZ4r3Np,107
+The+Head+And+The+Heart,All+We+Ever+Knew,The Head And The Heart,328,NA,https://api.spotify.com/v1/audio-features/72zmwnbXjx9fMUjw3mbDSs,72zmwnbXjx9fMUjw3mbDSs,102.03
+Low,Plastic+Cup,Low,327,NA,https://api.spotify.com/v1/audio-features/6HiBjDRQapX1hsMRT7smAJ,6HiBjDRQapX1hsMRT7smAJ,172.19
+Jason+Isbell+And+The+400+Unit,If+We+Were+Vampires,Jason Isbell And The 400 Unit,326,NA,https://api.spotify.com/v1/audio-features/250RLekaiL1q9qZer975Eg,250RLekaiL1q9qZer975Eg,96.609
+M++Ward,Primitive+Girl,M. Ward,326,NA,https://api.spotify.com/v1/audio-features/4kPz1VqHpOQqSRD8J2MaLf,4kPz1VqHpOQqSRD8J2MaLf,123.24
+Best+Coast,The+Only+Place,Best Coast,319,NA,https://api.spotify.com/v1/audio-features/0NCcbiW3kiasTzgg3CiBrf,0NCcbiW3kiasTzgg3CiBrf,105.469
+Jade+Bird,Lottery,Jade Bird,313,NA,https://api.spotify.com/v1/audio-features/2P7SSaE99q5MNjVm0Lz7bS,2P7SSaE99q5MNjVm0Lz7bS,105.063
+Declan+McKenna,Brazil,Declan McKenna,312,NA,https://api.spotify.com/v1/audio-features/4sNG6zQBmtq7M8aeeKJRMQ,4sNG6zQBmtq7M8aeeKJRMQ,121.079
+Kathleen+Edwards,Change+The+Sheets,Kathleen Edwards,311,NA,https://api.spotify.com/v1/audio-features/1Ty25HMeqQY4jC2V7finre,1Ty25HMeqQY4jC2V7finre,129.875
+Saint+Motel,My+Type,Saint Motel,308,NA,https://api.spotify.com/v1/audio-features/2Iq6HhIquO7JKr0KfTNLzU,2Iq6HhIquO7JKr0KfTNLzU,118.001
+Hot+Chip,Take+It+In,Hot Chip,305,NA,https://api.spotify.com/v1/audio-features/5gys5nzVQIYhgHIfiOJYva,5gys5nzVQIYhgHIfiOJYva,77.81
+Camera+Obscura,Do+It+Again,Camera Obscura,300,NA,https://api.spotify.com/v1/audio-features/5gAwpwuchaCGnJLlBMGBzp,5gAwpwuchaCGnJLlBMGBzp,160.054
+Beck,Blue+Moon,Beck,299,NA,https://api.spotify.com/v1/audio-features/4gNErDjikE9QUQvkkqoB1S,4gNErDjikE9QUQvkkqoB1S,119.936
+Big+Grams,Lights+On,Big Grams,299,NA,https://api.spotify.com/v1/audio-features/61BKqXDq8TOrUv1SFAJ7Ca,61BKqXDq8TOrUv1SFAJ7Ca,80.528
+Low,What+Part+Of+Me,Low,297,NA,https://api.spotify.com/v1/audio-features/074RB4dBpZ4ySuQRyG8SMk,074RB4dBpZ4ySuQRyG8SMk,129.979
+Cloud+Cult,No+Hell,Cloud Cult,296,NA,https://api.spotify.com/v1/audio-features/2w5QBV9JROA8Zlf7qUwRt8,2w5QBV9JROA8Zlf7qUwRt8,129.932
+Dan+Croll,From+Nowhere,Dan Croll,296,NA,https://api.spotify.com/v1/audio-features/5c9YHjSjEZxaCxsF1Gy5Jt,5c9YHjSjEZxaCxsF1Gy5Jt,87.91
+Glass+Animals,Life+Itself,Glass Animals,296,NA,https://api.spotify.com/v1/audio-features/32zkKx35Et6A515oZKxDkD,32zkKx35Et6A515oZKxDkD,111.988
+Thao+And+The+Get+Down+Stay+Down,Holy+Roller,Thao And The Get Down Stay Down,295,NA,https://api.spotify.com/v1/audio-features/3q7kMFce0TnDafVUzq8IpE,3q7kMFce0TnDafVUzq8IpE,161.172
+First+Aid+Kit,It+s+A+Shame,First Aid Kit,294,NA,https://api.spotify.com/v1/audio-features/3tetL39HqDX1sPDjfpGUkn,3tetL39HqDX1sPDjfpGUkn,105.935
+First+Aid+Kit,Stay+Gold,First Aid Kit,293,NA,https://api.spotify.com/v1/audio-features/1mqRT3LFIm4EEgfehauyOS,1mqRT3LFIm4EEgfehauyOS,95.979
+Max+Frost,White+Lies,Max Frost,292,NA,https://api.spotify.com/v1/audio-features/6dg4jncA9hbthBGFVo2djw,6dg4jncA9hbthBGFVo2djw,162.898
+M++Ward,Confession,M. Ward,290,NA,https://api.spotify.com/v1/audio-features/1syOZmUZgtA1Vr32kvWNVo,1syOZmUZgtA1Vr32kvWNVo,120.138
+Bat+For+Lashes,Daniel,Bat For Lashes,288,NA,https://api.spotify.com/v1/audio-features/5VvsZvy1mwx4teyvI7O9rs,5VvsZvy1mwx4teyvI7O9rs,135.053
+The+Orwells,They+Put+A+Body+In+The+Bayou,The Orwells,286,NA,https://api.spotify.com/v1/audio-features/3vYadaQuFDsiUiW0u4Dt8A,3vYadaQuFDsiUiW0u4Dt8A,176.975
+Bad+Bad+Hats,Shame,Bad Bad Hats,285,NA,https://api.spotify.com/v1/audio-features/4rIRYYplwlYNXwX8qqaWdY,4rIRYYplwlYNXwX8qqaWdY,138.525
+Jonsi,Go+Do,Jonsi,285,NA,https://api.spotify.com/v1/audio-features/0VzBKgimNRMauaqzT2rEnS,0VzBKgimNRMauaqzT2rEnS,90.016
+The+Hold+Steady,Spinners,The Hold Steady,283,NA,https://api.spotify.com/v1/audio-features/5ifUJBc9qAdv90oByXAXm2,5ifUJBc9qAdv90oByXAXm2,156.999
+Best+Coast,This+Lonely+Morning,Best Coast,282,NA,https://api.spotify.com/v1/audio-features/5SpfKx5cH4SGQqXSIKwY3M,5SpfKx5cH4SGQqXSIKwY3M,135.01
+The+Rural+Alberta+Advantage,Stamp,The Rural Alberta Advantage,282,NA,https://api.spotify.com/v1/audio-features/1oBDHr0Un3KnSNzMvQAK2w,1oBDHr0Un3KnSNzMvQAK2w,159.904
+Courtney+Barnett,History+Eraser,Courtney Barnett,281,NA,https://api.spotify.com/v1/audio-features/1KM7h4kz6oTrjSZX9AUXbL,1KM7h4kz6oTrjSZX9AUXbL,120.856
+Spoon,Can+I+Sit+Next+To+You,Spoon,280,NA,https://api.spotify.com/v1/audio-features/2wl3O5h3OIFGnFuXoGyrS1,2wl3O5h3OIFGnFuXoGyrS1,102.995
+Yeah+Yeah+Yeahs,Heads+Will+Roll,Yeah Yeah Yeahs,280,NA,https://api.spotify.com/v1/audio-features/4WiIscpBgQFm5qIyjoH7M4,4WiIscpBgQFm5qIyjoH7M4,132.009
+OK+Go,The+Writing+s+On+The+Wall,OK Go,279,NA,https://api.spotify.com/v1/audio-features/2KWB1SkJ8v0ljkzwHzLvco,2KWB1SkJ8v0ljkzwHzLvco,103.026
+Courtney+Barnett,Pickles+From+The+Jar,Courtney Barnett,277,NA,https://api.spotify.com/v1/audio-features/3LueS3mbuB1yaJNN0Ale6U,3LueS3mbuB1yaJNN0Ale6U,115.277
+Saint+Motel,Move,Saint Motel,276,NA,https://api.spotify.com/v1/audio-features/4vuJuTLFomqItDrn482nzV,4vuJuTLFomqItDrn482nzV,101.031
+Beth+Ditto,Fire,Beth Ditto,272,NA,https://api.spotify.com/v1/audio-features/2OGsL8bopQHwAAVx81ULC8,2OGsL8bopQHwAAVx81ULC8,88.95
+Olympia,Smoke+Signals,Olympia,271,NA,https://api.spotify.com/v1/audio-features/07c66SO9kYqa5GSmvLsQZy,07c66SO9kYqa5GSmvLsQZy,104.708
+The+New+Pornographers,High+Ticket+Attractions,The New Pornographers,268,NA,https://api.spotify.com/v1/audio-features/7qsBXdwpIw2helu5VJ4KIX,7qsBXdwpIw2helu5VJ4KIX,132.032
+The+Tallest+Man+On+Earth,Sagres,The Tallest Man On Earth,268,NA,https://api.spotify.com/v1/audio-features/5u9NUat59IiQFVEzZ4r3Np,5u9NUat59IiQFVEzZ4r3Np,107
+Cat+Power,3+6+9,Cat Power,267,NA,https://api.spotify.com/v1/audio-features/33kKcOJoyNduHwXhEnga8X,33kKcOJoyNduHwXhEnga8X,78.54
+Best+Coast,Why+I+Cry,Best Coast,265,NA,https://api.spotify.com/v1/audio-features/7nnml04zOpoWdZOiHcPIkC,7nnml04zOpoWdZOiHcPIkC,156.094
+Dessa,Good+Grief,Dessa,265,NA,https://api.spotify.com/v1/audio-features/1oxOiOjsi7plNOZEhoPLPj,1oxOiOjsi7plNOZEhoPLPj,120.041
+FKA+Twigs,Two+Weeks,FKA Twigs,263,NA,https://api.spotify.com/v1/audio-features/7E66uxFz2NtHWAyiGXotha,7E66uxFz2NtHWAyiGXotha,109.748
+The+War+On+Drugs,Pain,The War On Drugs,262,NA,https://api.spotify.com/v1/audio-features/59P1nrdEImkAKa1nyW9X2e,59P1nrdEImkAKa1nyW9X2e,115.975
+Soul+Asylum,Gravity,Soul Asylum,257,NA,https://api.spotify.com/v1/audio-features/3TW48DvQ7ChwY1Yy1tkMaP,3TW48DvQ7ChwY1Yy1tkMaP,117.341
+Ty+Segall,Every+1+s+A+Winner,Ty Segall,257,NA,https://api.spotify.com/v1/audio-features/1bShWI36VQ686EHVo3uxS3,1bShWI36VQ686EHVo3uxS3,98.651
+Lucy+Dacus,I+Don+t+Wanna+Be+Funny+Anymore,Lucy Dacus,256,NA,https://api.spotify.com/v1/audio-features/7fmqJC1yi3tyys0l72F9Ya,7fmqJC1yi3tyys0l72F9Ya,134.887
+The+Record+Company,Off+The+Ground,The Record Company,255,NA,https://api.spotify.com/v1/audio-features/3xRzUblYGZhVs52fMjii7R,3xRzUblYGZhVs52fMjii7R,92.15
+Bon+Iver,8++circle+,Bon Iver,252,NA,https://api.spotify.com/v1/audio-features/16WkFbQRW2BhvMUwuIaIsx,16WkFbQRW2BhvMUwuIaIsx,125.127
+Atlas+Genius,If+So,Atlas Genius,251,NA,https://api.spotify.com/v1/audio-features/5yUXyXZSG80niT5hkh7ucf,5yUXyXZSG80niT5hkh7ucf,125.022
+Camera+Obscura,Honey+In+The+Sun,Camera Obscura,251,NA,https://api.spotify.com/v1/audio-features/06EzKxIt7WUokYpkitiIK2,06EzKxIt7WUokYpkitiIK2,123.962
+The+Staves,Black+And+White,The Staves,251,NA,https://api.spotify.com/v1/audio-features/1fCeXjoRExPP2qwSBh2aST,1fCeXjoRExPP2qwSBh2aST,147.946
+Yeah+Yeah+Yeahs,Zero,Yeah Yeah Yeahs,251,NA,https://api.spotify.com/v1/audio-features/0hDQV9X1Da5JrwhK8gu86p,0hDQV9X1Da5JrwhK8gu86p,119.783
+Margaret+Glaspy,No+Matter+Who,Margaret Glaspy,249,NA,https://api.spotify.com/v1/audio-features/1fNCVkxO80oJeb9qNz7Gkm,1fNCVkxO80oJeb9qNz7Gkm,87.987
+Bob+Mould,I+Don+t+Know+You+Anymore,Bob Mould,248,NA,https://api.spotify.com/v1/audio-features/5f7RSJcTSdgIDtf38Kc2DH,5f7RSJcTSdgIDtf38Kc2DH,141.974
+Cloud+Cult,Through+The+Ages,Cloud Cult,248,NA,https://api.spotify.com/v1/audio-features/5AOYxUNSjVVn4wdeA6MMSM,5AOYxUNSjVVn4wdeA6MMSM,100.007
+Nada+Surf,When+I+Was+Young,Nada Surf,245,NA,https://api.spotify.com/v1/audio-features/6Fimnom61Xhg63gQ0qdNqm,6Fimnom61Xhg63gQ0qdNqm,148.586
+The+Drums,Money,The Drums,245,NA,https://api.spotify.com/v1/audio-features/3VIJBrMpvimHEw5wtPh2wB,3VIJBrMpvimHEw5wtPh2wB,102.473
+The+War+On+Drugs,Eyes+To+The+Wind,The War On Drugs,244,NA,https://api.spotify.com/v1/audio-features/2lVbMHEx1O8h7rvaNtI0pR,2lVbMHEx1O8h7rvaNtI0pR,117.484
+Actual+Wolf,Victims+And+Things,Actual Wolf,243,NA,https://api.spotify.com/v1/audio-features/70fe354BpVKEvMY0de78YO,70fe354BpVKEvMY0de78YO,117.999
+Marian+Hill,Down,Marian Hill,240,NA,https://api.spotify.com/v1/audio-features/0ZQfn5nh2TnVE6Q0AT8eXr,0ZQfn5nh2TnVE6Q0AT8eXr,113.402
+Metric,Collect+Call,Metric,239,NA,https://api.spotify.com/v1/audio-features/6q9NCdijVIwIzPwTfKn3zC,6q9NCdijVIwIzPwTfKn3zC,118.072
+Neko+Case,People+Got+A+Lotta+Nerve,Neko Case,239,NA,https://api.spotify.com/v1/audio-features/1Uc3rz3PTam7NhygEj2pFz,1Uc3rz3PTam7NhygEj2pFz,137.386

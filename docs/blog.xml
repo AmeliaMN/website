@@ -10,7 +10,1209 @@
 <atom:link href="https://www.amelia.mn/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Amelia McNamara, Associate Professor of data science in the Department of Computer and Data Sciences at the University of St Thomas</description>
 <generator>quarto-1.4.542</generator>
-<lastBuildDate>Thu, 16 Apr 2020 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 12 Aug 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>First dance song discovery</title>
+  <dc:creator>Amelia McNamara</dc:creator>
+  <link>https://www.amelia.mn/blog/2024-08-12-First-dance-song-discovery/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>One year ago today, my husband and I got married! I figured our first anniversary was as good a time as any to share this silly project I used data and R for in the lead-up to our wedding.</p>
+<p>As we were planning our wedding, I asked my husband if he wanted to do a first dance. I was expecting him to say ‘no’– he’s an introvert who doesn’t love the spotlight, and he has never really danced. To my surprise he said we definitely should do one, under one condition: that we take dance lessons in advance. Be still my heart! I grew up dancing (ballet, modern, hip hop, ballroom, etc) and love it so much. Doing dance lessons with my husband was a dream come true. Because I had more experience with dance, he let me pick the style we would learn and I wanted to do swing.</p>
+<p>We worked with Cindy from <a href="https://www.tcswing.com/">TC Swing</a>, who was wonderful. During our first lesson, she showed us both Lindy Hop and East Coast Swing. She asked my husband which style felt more natural, and what our goals were for our dance. We settled on East Coast Swing because the basic step was easier to learn and we felt like we could learn more cool moves and feel more comfortable on the day.</p>
+<p>As part of her wedding dance lesson package, Cindy also offers consultation on song choice and will do minor edits to get a track that works best for you! She had some suggested songs, but we wanted something that felt more like our musical style.</p>
+<p>Jason and I have similar music taste– after we started dating we discovered there were many times we had been at the same concerts before we met, and we’re both big fans of <a href="https://www.thecurrent.org/">The Current</a>. (Fun fact: I had a mention of The Current in the first draft of my dissertation acknowledgements, but I cut it to save space. I still regret it!) The Current is a local public radio station that plays a huge variety of music, from oldies to local music to country to pop and on and on. From their website: “The Current brings listeners the best authentic new music alongside the music that inspired it, from local to legendary, indie to influential, new to nostalgic.”</p>
+<p>For several weeks, both Jason and I worked on making lists of songs we might want for our first dance. My process was to think of songs I liked, and listen to The Current and write down anything that caught my ear. I think Jason’s was similar. But, many of them weren’t at the right tempo or time signature, or if they were, we’d realize the song was actually about something pretty dark. (We weren’t looking to dance to a song about a breakup or drug overdose.) There are lists of swing-tempo songs online, but none of them really spoke to us.</p>
+<p>So, I took to the data! I’m not sure how I stumbled on this dataset, maybe <a href="https://www.data-is-plural.com/">Data is Plural</a>, but I found out that a University of Minnesota librarian named Shane Nackerud had collected data on all the songs played on The Current from approximately 2005 to 2020. Local newspaper City Pages <a href="https://web.archive.org/web/20200804080731/http://www.citypages.com/music/what-songs-artists-has-the-current-played-most-since-2009-this-u-of-m-librarian-crunched-the-numbers/504392941">did an article on the project at the time</a> (though the City Pages is now defunct, so that’s an Internet Archive link). And the data is still available <a href="https://drive.google.com/drive/folders/1OW7fosYNE6H41E0t7hhZSrxDTcMHtFta">on Google Drive</a>!</p>
+<p>I played around with the data a bit, starting by looking at the mega-dataset Shane had put together of everything 2009-2018,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(httr)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(stringr)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(purrr)</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(readxl)</span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(knitr)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">TheCurrent <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"TheCurrent2009-2018.csv"</span>)</span>
+<span id="cb2-2">TheCurrent <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> TheCurrent <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">date =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ymd</span>(date))</span>
+<span id="cb2-4"></span>
+<span id="cb2-5">songcounts <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> TheCurrent <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">count</span>(Song, Artist)</span>
+<span id="cb2-7"></span>
+<span id="cb2-8">top893 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> songcounts <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">desc</span>(n)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">slice</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">893</span>)</span></code></pre></div>
+</div>
+<p>In the Twin Cities, The Current broadcasts on 89.3 FM, so they often do “top 893” promotions, like the <a href="https://www.thecurrent.org/893albums">top 893 albums</a>, <a href="https://www.thecurrent.org/feature/2023/05/04/the-currents-893-essential-songs-of-the-90s">893 essential songs of the 90s</a> and <a href="https://www.thecurrent.org/song-countdown/893-essential-bands-8">893 essential bands</a>. All of these promos are based on popular votes from the community, not actually the most-played songs or bands. This is a cool way to do things (kind of the opposite of top 40!) but I thought I’d take a look at the data as well.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">top893 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">slice</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 43%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Song</th>
+<th style="text-align: left;">Artist</th>
+<th style="text-align: right;">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Communist Daughter - Not The Kid</td>
+<td style="text-align: left;">Communist Daughter</td>
+<td style="text-align: right;">541</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Edward Sharpe And The Magnetic Zeros - Home</td>
+<td style="text-align: left;">Edward Sharpe And The Magnetic Zeros</td>
+<td style="text-align: right;">533</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The National - Bloodbuzz Ohio</td>
+<td style="text-align: left;">The National</td>
+<td style="text-align: right;">532</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Lumineers - Ho Hey</td>
+<td style="text-align: left;">The Lumineers</td>
+<td style="text-align: right;">526</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Foster The People - Pumped Up Kicks</td>
+<td style="text-align: left;">Foster The People</td>
+<td style="text-align: right;">501</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Of Monsters And Men - Little Talks</td>
+<td style="text-align: left;">Of Monsters And Men</td>
+<td style="text-align: right;">492</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Heavy - How You Like Me Now?</td>
+<td style="text-align: left;">The Heavy</td>
+<td style="text-align: right;">489</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Animal Collective - My Girls</td>
+<td style="text-align: left;">Animal Collective</td>
+<td style="text-align: right;">488</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LCD Soundsystem - Dance Yrself Clean</td>
+<td style="text-align: left;">LCD Soundsystem</td>
+<td style="text-align: right;">484</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">JD McPherson - North Side Gal</td>
+<td style="text-align: left;">JD McPherson</td>
+<td style="text-align: right;">476</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Maybe this top 10 list will give you a flavor of the station. This top 893 song list by airplay was all songs that were very familiar to me and my husband, because we are daily listeners to the radio station. But, the list wasn’t that helpful for picking a first dance, because those songs are at all sorts of un-useful tempos for swing dancing.</p>
+<p>Enter, the Spotify API! I found a <a href="https://medium.com/swlh/accessing-spotifys-api-using-r-1a8eef0507c">tutorial on using the Spotify API with R</a>, and got an API key following their instructions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">spotifyKey <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SUPERSECRETKEY"</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># replace with your key if you're following along</span></span>
+<span id="cb4-2">spotifySecret <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SUPERSECRETSECRET"</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ditto</span></span>
+<span id="cb4-3"></span>
+<span id="cb4-4">response <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">POST</span>(</span>
+<span id="cb4-5">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://accounts.spotify.com/api/token"</span>,</span>
+<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">accept_json</span>(),</span>
+<span id="cb4-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">authenticate</span>(spotifyKey, spotifySecret),</span>
+<span id="cb4-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">body =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">grant_type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"client_credentials"</span>),</span>
+<span id="cb4-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">encode =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"form"</span>,</span>
+<span id="cb4-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">verbose</span>()</span>
+<span id="cb4-11">)</span>
+<span id="cb4-12">mytoken <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">content</span>(response)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>access_token</span>
+<span id="cb4-13">HeaderValue <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Authorization: Bearer "</span>, mytoken)</span></code></pre></div>
+</div>
+<p>Once I was authorized, I wrangled my data to create the proper Spotify URI for each song.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">top893 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">separate_wider_delim</span>(</span>
+<span id="cb5-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col =</span> Song, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"artist"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"title"</span>),</span>
+<span id="cb5-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">delim =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" - "</span></span>
+<span id="cb5-5">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb5-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(title, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[[:punct:]]"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>),</span>
+<span id="cb5-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">artist =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(artist, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[[:punct:]]"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>)</span>
+<span id="cb5-9">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb5-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(title, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"+"</span>),</span>
+<span id="cb5-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">artist =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(artist, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"+"</span>)</span>
+<span id="cb5-13">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">URI =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.spotify.com/v1/search?q=%2520track%3A"</span>, </span>
+<span id="cb5-15">                      title, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%2520artist%3A"</span>, artist, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%2520&amp;type=track"</span>))</span>
+<span id="cb5-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># URI = paste0("https://api.spotify.com/v1/search?q=", "%2520track%3A", "not%2520the%2520kid", "%2520", "artist%3A", "communist%2520daughter", "%2520&amp;type=track")</span></span></code></pre></div>
+</div>
+<p>(Note my commented out work where I tried it with the top song from my original list.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">getSpotifyIDs <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(URI) {</span>
+<span id="cb6-2">  res <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">GET</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">url =</span> URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_headers</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Authorization =</span> HeaderValue))</span>
+<span id="cb6-3">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (res<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>status_code <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">200</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">content</span>(res)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>tracks<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>total <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>) {</span>
+<span id="cb6-4">    <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span></span>
+<span id="cb6-5">  } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb6-6">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">content</span>(res)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>tracks<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>items[[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>id</span>
+<span id="cb6-7">  }</span>
+<span id="cb6-8">}</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">top893 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb7-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">spotifyID =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">possibly</span>(getSpotifyIDs, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">otherwise =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fail"</span>)))</span>
+<span id="cb7-3"></span>
+<span id="cb7-4">top893 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb7-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unnest</span>(spotifyID)</span>
+<span id="cb7-6"></span>
+<span id="cb7-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># write_csv(top893, "top893spotify.csv") # save your work!</span></span></code></pre></div>
+</div>
+<p>You only get to hit the API so many times in a 24-hour period, so it’s good to save your work. I saved the data out to a new csv so I would have the Spotify IDs for each song.</p>
+<p>Then it was time to get the audio features! Again, we need to do a bit of data wrangling to get the URIs correct.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">top893 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top893spotify.csv"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb8-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(spotifyID)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb8-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">URI =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.spotify.com/v1/audio-features/"</span>, spotifyID))</span></code></pre></div>
+</div>
+<p>And a couple more helper functions. (Note– it’s possible I found these functions somewhere on the web. I looked through my search history and on GitHub to see if I could find a source and couldn’t find one. But the me-of-18-months-ago didn’t do a great job of documenting where her code came from. If this is yours or you know the source, let me know and I will edit to add credit!)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">getBPM <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(URI) {</span>
+<span id="cb9-2">  res <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">GET</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">url =</span> URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_headers</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Authorization =</span> HeaderValue))</span>
+<span id="cb9-3">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (res<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>status_code <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">200</span>) {</span>
+<span id="cb9-4">    <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span></span>
+<span id="cb9-5">  } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb9-6">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">content</span>(res)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>tempo</span>
+<span id="cb9-7">  }</span>
+<span id="cb9-8">}</span>
+<span id="cb9-9"></span>
+<span id="cb9-10">getFeatures <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(URI) {</span>
+<span id="cb9-11">  res <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">GET</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">url =</span> URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_headers</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Authorization =</span> HeaderValue))</span>
+<span id="cb9-12">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (res<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>status_code <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">200</span>) {</span>
+<span id="cb9-13">    <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span></span>
+<span id="cb9-14">  } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb9-15">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">content</span>(res)</span>
+<span id="cb9-16">  }</span>
+<span id="cb9-17">}</span></code></pre></div>
+</div>
+<p>Then it was possible to do things like get the BPM or the musical features!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">top893 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb10-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">tempo =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">possibly</span>(getBPM, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">otherwise =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fail"</span>)))</span>
+<span id="cb10-3"></span>
+<span id="cb10-4">top893 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb10-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unnest</span>(tempo)</span>
+<span id="cb10-6"></span>
+<span id="cb10-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># write_csv(top893, "top893_withBPM.csv") # save your work!</span></span></code></pre></div>
+</div>
+<p>With that information, we can narrow to songs good for swing:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">top893_bpm <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top893_withBPM.csv"</span>)</span>
+<span id="cb11-2"></span>
+<span id="cb11-3">swing_overall <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_bpm <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb11-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(tempo <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">155</span>, tempo <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">185</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb11-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(Artist, title, n, tempo)</span>
+<span id="cb11-6"></span>
+<span id="cb11-7">swing_overall <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb11-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">desc</span>(n)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb11-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">slice</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb11-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Artist</th>
+<th style="text-align: left;">title</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">The National</td>
+<td style="text-align: left;">Bloodbuzz%2520Ohio</td>
+<td style="text-align: right;">532</td>
+<td style="text-align: right;">157.066</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Benjamin Booker</td>
+<td style="text-align: left;">Violent%2520Shiver</td>
+<td style="text-align: right;">443</td>
+<td style="text-align: right;">165.096</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grizzly Bear</td>
+<td style="text-align: left;">Two%2520Weeks</td>
+<td style="text-align: right;">432</td>
+<td style="text-align: right;">159.685</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Muse</td>
+<td style="text-align: left;">Madness</td>
+<td style="text-align: right;">430</td>
+<td style="text-align: right;">180.301</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Modest Mouse</td>
+<td style="text-align: left;">Lampshades%2520On%2520Fire</td>
+<td style="text-align: right;">426</td>
+<td style="text-align: right;">176.156</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Black Keys</td>
+<td style="text-align: left;">Lonely%2520Boy</td>
+<td style="text-align: right;">425</td>
+<td style="text-align: right;">166.300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fitz And The Tantrums</td>
+<td style="text-align: left;">MoneyGrabber</td>
+<td style="text-align: right;">409</td>
+<td style="text-align: right;">169.965</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Joseph</td>
+<td style="text-align: left;">White+Flag</td>
+<td style="text-align: right;">406</td>
+<td style="text-align: right;">170.111</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">San Cisco</td>
+<td style="text-align: left;">Awkward</td>
+<td style="text-align: right;">405</td>
+<td style="text-align: right;">161.920</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OK Go</td>
+<td style="text-align: left;">This+Too+Shall+Pass</td>
+<td style="text-align: right;">398</td>
+<td style="text-align: right;">160.032</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>When we eventually went through songs with Cindy she often disagreed with the tempo listed on Spotify, so that wasn’t a perfect metric but it did narrow things down. (Cindy uses an <a href="https://all8.com/tools/bpm.htm">online tool</a> to make it easier to count the tempo.) I’m also not sure how I came up with 155 to 185 beats per minute (BPM). If you look online, you will see ranges that start a little lower, but perhaps we realized the Spotify API was off in a particular direction?</p>
+<p>Now came the manual part– even though these songs are in the right tempo, we need to decide if we like them and if the lyrics would be okay for a first dance. Looking through the list of the top songs from 2009-2018, we didn’t see anything we were that excited about. I think part of the problem was the big year range kind of diluted songs that were briefly popular but not over that entire time period. So, I decided to limit the search just to songs played on the radio in 2019 (the year Jason and I met).</p>
+<p>That meant re-running the analysis with just the 2019 data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">TheCurrent2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_excel</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The Current - 2019.xlsx"</span>)</span>
+<span id="cb12-2">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> TheCurrent2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb12-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">count</span>(Song, Artist) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb12-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">desc</span>(n)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb12-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">slice</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">893</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb12-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">separate_wider_delim</span>(</span>
+<span id="cb12-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col =</span> Song, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"artist"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"title"</span>),</span>
+<span id="cb12-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">delim =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" - "</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">too_few =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"align_start"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">too_many =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"merge"</span></span>
+<span id="cb12-9">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb12-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb12-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(title, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[[:punct:]]"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>),</span>
+<span id="cb12-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">artist =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(artist, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"[[:punct:]]"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>)</span>
+<span id="cb12-13">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb12-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb12-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(title, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"+"</span>),</span>
+<span id="cb12-16">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">artist =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_replace_all</span>(artist, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"+"</span>)</span>
+<span id="cb12-17">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb12-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">URI =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.spotify.com/v1/search?q=%2520track%3A"</span>, </span>
+<span id="cb12-19">                      title, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%2520artist%3A"</span>, artist, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%2520&amp;type=track"</span>))</span></code></pre></div>
+</div>
+<p>Of course, we’d already looked at some of the songs, so we don’t want to waste API calls on those.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb13-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">anti_join</span>(top893_bpm, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_by</span>(title <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> title, Artist <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> Artist))</span></code></pre></div>
+</div>
+<p>The rest follows on as before.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb14-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">spotifyID =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">possibly</span>(getSpotifyIDs, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">otherwise =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fail"</span>)))</span>
+<span id="cb14-3"></span>
+<span id="cb14-4">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb14-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unnest</span>(spotifyID)</span>
+<span id="cb14-6"></span>
+<span id="cb14-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># write_csv(top893_2019, "more2019_IDs.csv")</span></span>
+<span id="cb14-8"></span>
+<span id="cb14-9">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"more2019_IDs.csv"</span>)</span>
+<span id="cb14-10"></span>
+<span id="cb14-11">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb14-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(spotifyID)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb14-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">URI =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://api.spotify.com/v1/audio-features/"</span>, spotifyID))</span>
+<span id="cb14-14"></span>
+<span id="cb14-15"></span>
+<span id="cb14-16">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb14-17">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">tempo =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">possibly</span>(getBPM, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">otherwise =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fail"</span>)))</span>
+<span id="cb14-18"></span>
+<span id="cb14-19">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb14-20">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unnest</span>(tempo)</span>
+<span id="cb14-21"></span>
+<span id="cb14-22"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># write_csv(top893_2019, "top893_2019_tempo.csv")</span></span>
+<span id="cb14-23">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top893_2019_tempo.csv"</span>)</span></code></pre></div>
+</div>
+<p>This time, I also tried grabbing the ‘features’ Spotify makes available, like energy, danceability, key, etc.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb15-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">info =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map</span>(URI, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">possibly</span>(getFeatures, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">otherwise =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fail"</span>)))</span>
+<span id="cb15-3"></span>
+<span id="cb15-4">test <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb15-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unnest_wider</span>(info, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names_sep =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-"</span>)</span>
+<span id="cb15-6"></span>
+<span id="cb15-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># write_csv(test, "more2019_allinfo.csv")</span></span></code></pre></div>
+</div>
+<p>And again, we can narrow our search to just the songs in the right tempo,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1">top893_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top893_2019_allinfo.csv"</span>)</span>
+<span id="cb16-2"></span>
+<span id="cb16-3">swing_2019 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> top893_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb16-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(tempo <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">155</span>, tempo <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">185</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb16-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(Artist, title, n, tempo, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">info-danceability</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">info-time_signature</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>)</span>
+<span id="cb16-6"></span>
+<span id="cb16-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(swing_2019)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 81</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1">swing_2019 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb18-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">desc</span>(n)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb18-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">slice</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb18-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 34%">
+<col style="width: 3%">
+<col style="width: 7%">
+<col style="width: 16%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Artist</th>
+<th style="text-align: left;">title</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">tempo</th>
+<th style="text-align: right;">info-danceability</th>
+<th style="text-align: right;">info-time_signature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">The Black Keys</td>
+<td style="text-align: left;">Lo+Hi</td>
+<td style="text-align: right;">286</td>
+<td style="text-align: right;">166.300</td>
+<td style="text-align: right;">0.356</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Vampire Weekend</td>
+<td style="text-align: left;">This+Life</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">170.234</td>
+<td style="text-align: right;">0.620</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Anderson Paak</td>
+<td style="text-align: left;">Make+It+Better+feat++Smokey+Robinson</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">178.555</td>
+<td style="text-align: right;">0.676</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lizzo</td>
+<td style="text-align: left;">Cuz+I+Love+You</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">162.159</td>
+<td style="text-align: right;">0.566</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fontaines D.C.</td>
+<td style="text-align: left;">Boys+In+The+Better+Land</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">176.977</td>
+<td style="text-align: right;">0.392</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The National</td>
+<td style="text-align: left;">Rylan</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">156.008</td>
+<td style="text-align: right;">0.368</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tank And The Bangas</td>
+<td style="text-align: left;">Ants</td>
+<td style="text-align: right;">189</td>
+<td style="text-align: right;">170.910</td>
+<td style="text-align: right;">0.446</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Soccer Mommy</td>
+<td style="text-align: left;">lucy</td>
+<td style="text-align: right;">188</td>
+<td style="text-align: right;">169.064</td>
+<td style="text-align: right;">0.482</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sharon Van Etten</td>
+<td style="text-align: left;">Jupiter+4</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">177.742</td>
+<td style="text-align: right;">0.324</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GRiZ</td>
+<td style="text-align: left;">Can+t+Get+Enough</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">168.076</td>
+<td style="text-align: right;">0.584</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>At this point, I don’t remember how we got from 80 songs down to our short list, but it was a process of looking at the artist and song title, looking up lyrics online, and listening to snippets of the song on <a href="https://tidal.com/">Tidal</a> (that’s right, I used the Spotify API but I’m not a Spotify person!). It’s worth noting that the Spotify features like danceability weren’t that useful, perhaps because the songs were lesser-known so there was a lot of missing data. We eventually got it down to the following,</p>
+<ul>
+<li>Wake Up (Chastity Brown)</li>
+<li>Love is the Law (The Suburbs)</li>
+<li>New Song (Warpaint)</li>
+<li>Colors (Black Pumas)</li>
+<li>Good for You (Dessa)</li>
+<li>99 (Barns Courtney)</li>
+<li>Let the Good Times Roll (JD McPherson)</li>
+</ul>
+<p>I think we ran this whole list by Cindy, and she helped us narrow it down further. We really liked Love is the Law, but it was just a touch too fast for us to dance to comfortably. So we ended up with… <a href="https://www.youtube.com/watch?v=-QGE2xjhEY0">Let the Good Times Roll</a>! Interestingly, I think they’re lindy-hopping in the music video.</p>
+<p>Once we had the song, we practiced and practiced and practiced with it. We didn’t do set choreography, so Jason was truly leading on the day, putting together the moves we had learned in whatever order felt good. It’s a pretty repetitive song, so it’s a little hard to keep track of where you are in it, and we wanted to end with a dip. Happy to say, we nailed it!</p>
+<p>Let the Good Times Roll never came up in the lists of swing dance songs, or first dance songs, or swing dance first dance songs that I saw online. While our process of finding a song absolutely had a human in the loop, being able to narrow to songs we would probably like (from our favorite radio station) and then further hone in on songs in the right tempo (using Spotify) allowed us to target our search.</p>
+<p>I had a blast dancing with my husband at our wedding, and I think he blew the minds of his friends and family with his dance skills.</p>
+<p><img src="https://www.amelia.mn/blog/2024-08-12-First-dance-song-discovery/first-dance.jpg" class="img-fluid"></p>
+<p>Photo by <a href="https://www.snapshotwanderlust.com/">Snapshot Wanderlust</a>.</p>
+
+
+
+ ]]></description>
+  <category>misc</category>
+  <guid>https://www.amelia.mn/blog/2024-08-12-First-dance-song-discovery/</guid>
+  <pubDate>Mon, 12 Aug 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://www.amelia.mn/blog/2024-08-12-First-dance-song-discovery/first-dance.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Guidelines I follow when giving talks</title>
   <dc:creator>Amelia McNamara</dc:creator>
@@ -72,7 +1274,7 @@
  ]]></description>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2020-04-16-presentations/</guid>
-  <pubDate>Thu, 16 Apr 2020 07:00:00 GMT</pubDate>
+  <pubDate>Thu, 16 Apr 2020 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2020-04-16-presentations/YouTubeTalks.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
@@ -220,7 +1422,7 @@
  ]]></description>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/</guid>
-  <pubDate>Sun, 29 Dec 2019 08:00:00 GMT</pubDate>
+  <pubDate>Sun, 29 Dec 2019 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2019-12-29-Deleting-Facebook/photo_stack.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -292,7 +1494,7 @@
  ]]></description>
   <category>papers</category>
   <guid>https://www.amelia.mn/blog/2019-11-26-Key-Attributes/</guid>
-  <pubDate>Tue, 26 Nov 2019 08:00:00 GMT</pubDate>
+  <pubDate>Tue, 26 Nov 2019 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2019-11-26-Key-Attributes/KeyAttributes.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -386,7 +1588,7 @@
  ]]></description>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/</guid>
-  <pubDate>Sat, 17 Aug 2019 07:00:00 GMT</pubDate>
+  <pubDate>Sat, 17 Aug 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2019-08-17-Tidy-Dress/HexDress.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -456,7 +1658,7 @@
  ]]></description>
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/</guid>
-  <pubDate>Tue, 20 Mar 2018 07:00:00 GMT</pubDate>
+  <pubDate>Tue, 20 Mar 2018 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-03-20-Wikipedia-in-the-classroom/Jenny_wikipedia.png" medium="image" type="image/png" height="117" width="144"/>
 </item>
 <item>
@@ -609,7 +1811,7 @@
  ]]></description>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/</guid>
-  <pubDate>Sun, 11 Feb 2018 19:43:00 GMT</pubDate>
+  <pubDate>Sun, 11 Feb 2018 17:43:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-Dagstuhl-reflections/Dagstuhl.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -646,7 +1848,7 @@
  ]]></description>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2018-02-11-More-guys/</guid>
-  <pubDate>Sun, 11 Feb 2018 18:53:00 GMT</pubDate>
+  <pubDate>Sun, 11 Feb 2018 16:53:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-More-guys/faces-hair.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -740,7 +1942,7 @@ boys_2015</code></pre>
  ]]></description>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/</guid>
-  <pubDate>Sun, 11 Feb 2018 17:43:00 GMT</pubDate>
+  <pubDate>Sun, 11 Feb 2018 15:43:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-Scientists-Programming/ScientistsProgramming.png" medium="image" type="image/png" height="106" width="144"/>
 </item>
 <item>
@@ -797,7 +1999,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
  ]]></description>
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/</guid>
-  <pubDate>Sun, 11 Feb 2018 16:43:00 GMT</pubDate>
+  <pubDate>Sun, 11 Feb 2018 14:43:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2018-02-11-Syntax-comparison/SyntaxComparisonCheatsheet.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -865,7 +2067,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
  ]]></description>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2017-12-19-On-Microaggressions/</guid>
-  <pubDate>Tue, 19 Dec 2017 08:00:00 GMT</pubDate>
+  <pubDate>Tue, 19 Dec 2017 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2017-12-19-On-Microaggressions/grr.png" medium="image" type="image/png" height="68" width="144"/>
 </item>
 <item>
@@ -1066,7 +2268,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
  ]]></description>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2017-01-13-Amanda/</guid>
-  <pubDate>Fri, 13 Jan 2017 08:00:00 GMT</pubDate>
+  <pubDate>Fri, 13 Jan 2017 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2017-01-13-Amanda/amelias-1.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
@@ -1132,7 +2334,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
  ]]></description>
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2016-11-16-CensusRant/</guid>
-  <pubDate>Wed, 16 Nov 2016 08:00:00 GMT</pubDate>
+  <pubDate>Wed, 16 Nov 2016 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-11-16-CensusRant/FactFinder.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 <item>
@@ -1215,7 +2417,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
  ]]></description>
   <category>teaching</category>
   <guid>https://www.amelia.mn/blog/2016-10-19-GradSchool/</guid>
-  <pubDate>Wed, 19 Oct 2016 07:00:00 GMT</pubDate>
+  <pubDate>Wed, 19 Oct 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-10-19-GradSchool/PhDcomic.gif" medium="image" type="image/gif"/>
 </item>
 <item>
@@ -1239,7 +2441,7 @@ mean(mtcars$mpg[mtcars$cyl==8])</code></pre>
  ]]></description>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2016-06-23-Listservs/</guid>
-  <pubDate>Thu, 23 Jun 2016 07:00:00 GMT</pubDate>
+  <pubDate>Thu, 23 Jun 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-06-23-Listservs/InboxZero.png" medium="image" type="image/png" height="63" width="144"/>
 </item>
 <item>
@@ -1600,7 +2802,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
  ]]></description>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/</guid>
-  <pubDate>Mon, 16 May 2016 07:00:00 GMT</pubDate>
+  <pubDate>Mon, 16 May 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-05-16-OpenVisConfTranscript/text_viz.png" medium="image" type="image/png" height="71" width="144"/>
 </item>
 <item>
@@ -1650,7 +2852,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
  ]]></description>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2016-04-25-OpenVisConf/</guid>
-  <pubDate>Mon, 25 Apr 2016 07:00:00 GMT</pubDate>
+  <pubDate>Mon, 25 Apr 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-04-25-OpenVisConf/titleslide.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -1725,7 +2927,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
  ]]></description>
   <category>data</category>
   <guid>https://www.amelia.mn/blog/2016-04-08-participatory_sensing/</guid>
-  <pubDate>Fri, 08 Apr 2016 07:00:00 GMT</pubDate>
+  <pubDate>Fri, 08 Apr 2016 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2016-04-08-participatory_sensing/plume.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -1780,7 +2982,7 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
  ]]></description>
   <category>misc</category>
   <guid>https://www.amelia.mn/blog/2015-11-19-context_notes/</guid>
-  <pubDate>Thu, 19 Nov 2015 08:00:00 GMT</pubDate>
+  <pubDate>Thu, 19 Nov 2015 06:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2015-11-19-context_notes/DFWatlantic.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -1943,58 +3145,8 @@ decrypt("OlCE bQTQ Aw GWPATAWw d")</code></pre>
  ]]></description>
   <category>conferences</category>
   <guid>https://www.amelia.mn/blog/2015-11-01-NEISM/</guid>
-  <pubDate>Sun, 01 Nov 2015 07:00:00 GMT</pubDate>
+  <pubDate>Sun, 01 Nov 2015 05:00:00 GMT</pubDate>
   <media:content url="https://www.amelia.mn/blog/2015-11-01-NEISM/xqnorm.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Fitbit colors</title>
-  <dc:creator>Amelia McNamara</dc:creator>
-  <link>https://www.amelia.mn/blog/2015-01-14-FitbitColors/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>I have been a devoted Fitbit user for over a year now, and I think that as a device it is the sort of thing that a statistician would natually enjoy. It produces rich data about my day-to-day life, can be used to identify notable dates in my year, and does a great job of making me more physically active “on the margin.” But, the Fitbit app designers have made very strange color choices.</p>
-<p>I’d appreciate any insight you have about why they might have chosen these colors. Here’s the daily trajectory:</p>
-<p>When you get up and start moving, the graphs show your steps in an aqua blue that is very similar to the Fitbit dashboard color.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit1.jpg" class="img-fluid figure-img"></p>
-<figcaption>At the beginning of the day</figcaption>
-</figure>
-</div>
-<p>Then, as you continue, the colors move from aqua, to yellow, to orange/red.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit2.jpg" class="img-fluid figure-img"></p>
-<figcaption>A little later</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit3.jpg" class="img-fluid figure-img"></p>
-<figcaption>Getting close to the step goal</figcaption>
-</figure>
-</div>
-<p>Finally, when you hit your step goal the color switches to green,</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit4.jpg" class="img-fluid figure-img"></p>
-<figcaption>Goal reached</figcaption>
-</figure>
-</div>
-<p>This color progression drives me a little crazy. It’s not in rainbow order, and it seems like it should move from red to orange, to yellow, to green/blue. In other words, the colors should indicate something about your health level.</p>
-<p>Another choice I can imagine for the colors would be to code the progression I mentioned above to the progress you’ve made over the day. The Fitbit knows how long your typical day is, and it knows when you woke up. Maybe it could show green if you were making good progress to your goal for the day (given the time of day it was), yellow if you weren’t, and red if you were really behind. Then, once you hit the goal it could switch to a different color (e.g.&nbsp;purple) to indicate you’d hit it.</p>
-<p>Any ideas about the color trajectory they’ve chosen? Do other fitness trackers use similar colors?</p>
-
-
-
- ]]></description>
-  <category>visualization</category>
-  <guid>https://www.amelia.mn/blog/2015-01-14-FitbitColors/</guid>
-  <pubDate>Wed, 14 Jan 2015 08:00:00 GMT</pubDate>
-  <media:content url="https://www.amelia.mn/blog/2015-01-14-FitbitColors/Fitbit1.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
