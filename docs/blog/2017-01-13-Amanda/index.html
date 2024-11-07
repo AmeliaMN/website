@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.542">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -105,8 +105,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">STAT 220 labs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://ameliamn.github.io/STAT336">
- <span class="dropdown-text">STAT 336: Data Communication and Visualization</span></a>
+    <a class="dropdown-item" href="https://ameliamn.github.io/DASC240">
+ <span class="dropdown-text">DASC 240: Applied Regression Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ameliamn.github.io/DASC336">
+ <span class="dropdown-text">DASC 336: Data Communication and Visualization</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../pastcourses.html">
@@ -253,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Instead, people seem to be taking an approximate age and then just grabbing a name out of the hat. In other words, they are using the <em>Name|Age</em> method. With that in mind, let’s see how likely Amanda really is. I’m focusing just on girls names for this analysis, mostly because Amelia isn’t a common boy’s name (see my data appendix).</p>
 <p>In the eighties, numbers for Amanda and Amelia were as follows:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>name</th>
@@ -276,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Armed only with the information that I was born between 1985 and 1989, there’s a <strong>2% chance my name is Amanda</strong>. That’s actually pretty incredible! (In contrast, there’s just a 0.05% chance my name is Amelia.) And, we can figure most people remember at least the first letter of a name. So, what if we add the fact that my name starts with an A?</p>
 <p>In the eighties, numbers for Amanda and Amelia (out of all A names) were as follows:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>name</th>
@@ -320,7 +324,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Missing data</figcaption>
 </figure>
 </div>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Min.</th>
@@ -347,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-many-baby-boys-are-named-amelia" class="level3">
 <h3 class="anchored" data-anchor-id="how-many-baby-boys-are-named-amelia">How many baby boys are named Amelia?</h3>
 <p>Answer– not many. In 2004, the year with the most male Amelias, 14 baby boys were named Amelia. Or, someone checked the wrong box on a birth certificate.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>year</th>
@@ -369,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="creativity-in-naming" class="level3">
 <h3 class="anchored" data-anchor-id="creativity-in-naming">Creativity in naming</h3>
 <p>Of course, there’s a lot deeper I could dig on this analysis. Just by scrolling through the data I noticed there are many other ways to spell Amanda, which didn’t get taken into account. (Maybe the creative spellings of Amelia balance it out.)</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>name</th>
@@ -506,6 +510,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.amelia\.mn");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -540,7 +562,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -588,7 +614,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

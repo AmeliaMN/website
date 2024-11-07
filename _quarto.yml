@@ -27,8 +27,10 @@ website:
       - text: "Teaching"
         menu:
           - STAT220labs.qmd
-          - text: "STAT 336: Data Communication and Visualization"
-            href: https://ameliamn.github.io/STAT336
+          - text: "DASC 240: Applied Regression Analysis"
+            href: https://ameliamn.github.io/DASC240
+          - text: "DASC 336: Data Communication and Visualization"
+            href: https://ameliamn.github.io/DASC336
           - pastcourses.qmd
           - href: Syntax-cheatsheet.pdf
             text: R Syntax Comparison Cheatsheet
