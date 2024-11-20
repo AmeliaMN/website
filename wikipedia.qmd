@@ -3,7 +3,7 @@ title: "List of student-authored Wikipedia pages"
 toc: false
 ---
 
-Here are some links to Wikipedia pages my students have authored in the past. I wrote about some frustrations with Wikipedia on [my blog](blog/teaching/2018/03/20/Wikipedia-in-the-classroom.html) a few years ago, but I realized it would be better to have a centralized place to update about the pages that have made it! I've done the assignment four times now, once as a "rogue professor" and three times using the [Wikipedia Education](https://dashboard.wikiedu.org/) dashboard. I highly highly recommend using the dashboard. For more advice, see this [presentation](presentations/WikipediaJSM.pdf) I gave at JSM 2020.
+Here are some links to Wikipedia pages my students have authored in the past. I wrote about some frustrations with Wikipedia on [my blog](blog/2018-03-20-Wikipedia-in-the-classroom/) a few years ago, but I realized it would be better to have a centralized place to update about the pages that have made it! I've done the assignment four times now, once as a "rogue professor" and three times using the [Wikipedia Education](https://dashboard.wikiedu.org/) dashboard. I highly highly recommend using the dashboard. For more advice, see this [presentation](presentations/WikipediaJSM.pdf) I gave at JSM 2020.
 
 ### Data Communication and Visualization (Fall 2021)
 
