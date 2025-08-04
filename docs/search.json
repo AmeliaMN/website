@@ -347,7 +347,7 @@
     "href": "presentations/Communication2022/index.html#writing-about-data-wikipedia-articles",
     "title": "What ‘Counts’ as Statistical Communication?",
     "section": "Writing about data– Wikipedia articles",
-    "text": "Writing about data– Wikipedia articles\nFour times now, I have had students author Wikipedia articles about people who did not previously have them.\n\n\n\nCarmen Batanero\nKarl Broman\nJenny Bryan\nAndreas Buja\nCatherine D’Ignazio\nNick Horton\nJessica Hullman\nJeff Leek\n\n\n\nThomas Lumley\nGiorgia Lupi\nRegina Nuzzo\nTawana Petty\nStefanie Posavec\nJulia Silge\nJulia Stewart Lowndes\nAntony Unwin\n\n\n\n\n\nI spoke about this at JSM 2020. Not doing the assignment again this fall."
+    "text": "Writing about data– Wikipedia articles\nFour times now, I have had students author Wikipedia articles about people who did not previously have them.\n\n\n\nCarmen Batanero\nKarl Broman\nJenny Bryan\nAndreas Buja\nCatherine D’Ignazio\nNick Horton\nJessica Hullman\nJeff Leek\n\n\n\nThomas Lumley\nGiorgia Lupi\nRegina Nuzzo\nTawana Petty\nStefanie Posavec\nJulia Silge\nJulia Stewart Lowndes\nAntony Unwin\n\n\n\n\nI spoke about this at JSM 2020. Not doing the assignment again this fall."
   },
   {
     "objectID": "presentations/Communication2022/index.html#writing-about-data-executive-summaries",
@@ -368,14 +368,14 @@
     "href": "presentations/Communication2022/index.html#speaking-about-data-social-media",
     "title": "What ‘Counts’ as Statistical Communication?",
     "section": "Speaking about data– social media",
-    "text": "Speaking about data– social media\n\n\n\n\n@chelseaparlettpelleriti and I just let them💅🏼 #statsTikTok ♬ stop getting more likes than me - dee ❦\n\n\n\n\n\n\n\n\n@the.data.guy\n\nDraft from live build the other day. Posted the full 45 min build to YT. Cool but not meaningful yet.\n\n♬ Elevator Music - Bohoman\n\n\n\n\n\nDoes this ‘count’?"
+    "text": "Speaking about data– social media\n\n\n\n\n@chelseaparlettpelleriti and I just let them💅🏼 #statsTikTok ♬ stop getting more likes than me - dee ❦\n\n\n\n\n\n\n\n\n@the.data.guy\n\nDraft from live build the other day. Posted the full 45 min build to YT. Cool but not meaningful yet.\n\n♬ Elevator Music - Bohoman\n\n\n\n\nDoes this ‘count’?"
   },
   {
     "objectID": "presentations/Communication2022/index.html#tell-us-about-the-dress",
     "href": "presentations/Communication2022/index.html#tell-us-about-the-dress",
     "title": "What ‘Counts’ as Statistical Communication?",
     "section": "Tell us about the dress",
-    "text": "Tell us about the dress\n\nI designed the fabric\nUploaded to Spoonflower\nSewed the dress\n\nI do sell some items through third-party websites:\n\nHousewares on Spoonflower, including wallpaper, cocktail napkins, tea towels, duvet cover, and throw pillows.\nT-shirts, mugs, and more on RedBubble\nSocks, mousepads, masks ans more on Zazzle\n\n\n\n\nwww.bit.ly/JSM_22"
+    "text": "Tell us about the dress\n\nI designed the fabric\nUploaded to Spoonflower\nSewed the dress\n\nI do sell some items through third-party websites:\n\nHousewares on Spoonflower, including wallpaper, cocktail napkins, tea towels, duvet cover, and throw pillows.\nT-shirts, mugs, and more on RedBubble\nSocks, mousepads, masks ans more on Zazzle"
   },
   {
     "objectID": "pastcourses.html",
@@ -465,68 +465,75 @@
     "objectID": "presentations.html#section",
     "href": "presentations.html#section",
     "title": "Presentations",
-    "section": "2024",
-    "text": "2024\nData Communication and Visualization at the University of St Thomas January 2024. Institute for Mathematical and Statistical Innovation, Chicago IL. Teaching and Evaluating Data Communication At Scale (slides)"
+    "section": "2025",
+    "text": "2025\nAre Graphical User Interfaces the answer to AI? August 2025. Joint Statistical Meetings (slides)"
   },
   {
     "objectID": "presentations.html#section-1",
     "href": "presentations.html#section-1",
     "title": "Presentations",
-    "section": "2023",
-    "text": "2023\nData Science as a Superpower (keynote), February 2023. Harford Community College, Bel Air, MD. STEM Day (slides)"
+    "section": "2024",
+    "text": "2024\nData Communication and Visualization at the University of St Thomas January 2024. Institute for Mathematical and Statistical Innovation, Chicago IL. Teaching and Evaluating Data Communication At Scale (slides)"
   },
   {
     "objectID": "presentations.html#section-2",
     "href": "presentations.html#section-2",
     "title": "Presentations",
-    "section": "2022",
-    "text": "2022\nWhat ‘counts’ as statistical communication? August 2022. JSM 2022, Washington DC. (slides)\nImplications of R syntax in intro stats July 2022. rstudio::conf, Washington, DC (slides)\nTeaching modeling in introductory statistics: A comparison of formula and tidyverse syntaxes June 2022. useR!, virtual. (slides)\nData Science as a Super Power February 2022. University of Richmond biology seminar series. (slides)"
+    "section": "2023",
+    "text": "2023\nData Science as a Superpower (keynote), February 2023. Harford Community College, Bel Air, MD. STEM Day (slides)"
   },
   {
     "objectID": "presentations.html#section-3",
     "href": "presentations.html#section-3",
     "title": "Presentations",
-    "section": "2021",
-    "text": "2021\nBest practices for using and teaching R September 2021. University of St Thomas internal seminar. (slides)\nComputing in the Statistics Curriculum: Lessons Learned from the Educational Sciences, with Andrew Zieffler, Matthew Beckman, Chelsey Legacy, Elle Butler Basner, Robert delMas, & V.N. Vimal Rao. JSM 2021, virtual. (slides, video)\nConsistency is key: A case study in R Syntaxes, March 2021. Teaching Integrity in Empirical Research (TIER) Spring Symposium (slides, video)"
+    "section": "2022",
+    "text": "2022\nWhat ‘counts’ as statistical communication? August 2022. JSM 2022, Washington DC. (slides)\nImplications of R syntax in intro stats July 2022. rstudio::conf, Washington, DC (slides)\nTeaching modeling in introductory statistics: A comparison of formula and tidyverse syntaxes June 2022. useR!, virtual. (slides)\nData Science as a Super Power February 2022. University of Richmond biology seminar series. (slides)"
   },
   {
     "objectID": "presentations.html#section-4",
     "href": "presentations.html#section-4",
     "title": "Presentations",
-    "section": "2020",
-    "text": "2020\nSpatial Gerrymandering: Can it be Avoided?, September 2020. Thinking Spatially: Mapping Politics and Polarization, virtual. (slides)\nHow (not) to bring Wikipedia into the classroom, August 2020. JSM 2020, virtual. (slides)\nScraping, iterating, purring, July 2020. noRth conference. (slides, video)\nSpeaking R (keynote), July 2020. useR! 2020, virtual. (slides, video).\nMaking a Tidy Dress, January 2020. rstudio::conf, San Francisco, CA. (slides, video)"
+    "section": "2021",
+    "text": "2021\nBest practices for using and teaching R September 2021. University of St Thomas internal seminar. (slides)\nComputing in the Statistics Curriculum: Lessons Learned from the Educational Sciences, with Andrew Zieffler, Matthew Beckman, Chelsey Legacy, Elle Butler Basner, Robert delMas, & V.N. Vimal Rao. JSM 2021, virtual. (slides, video)\nConsistency is key: A case study in R Syntaxes, March 2021. Teaching Integrity in Empirical Research (TIER) Spring Symposium (slides, video)"
   },
   {
     "objectID": "presentations.html#section-5",
     "href": "presentations.html#section-5",
     "title": "Presentations",
-    "section": "2019",
-    "text": "2019\nWhy the Tidyverse? (keynote), August 2019. noRth conference, Minneapolis, MN, (slides)\nData Science as a Superpower (plenary), July 2019. QUBES Evolution of Data in the Classroom: From Data to Data Science, Williamsburg, VA. (slides)\nData Journalism as a Liberal Art (keynote), June 2019. LACOL Data Science in the Liberal Arts. (slides)\nTeaching Data Communication, May 2019. SDSS (slides)\nWrangling Categorical Data in R Without Losing your Mind, January 2019. rstudio::conf (slides, video)"
+    "section": "2020",
+    "text": "2020\nSpatial Gerrymandering: Can it be Avoided?, September 2020. Thinking Spatially: Mapping Politics and Polarization, virtual. (slides)\nHow (not) to bring Wikipedia into the classroom, August 2020. JSM 2020, virtual. (slides)\nScraping, iterating, purring, July 2020. noRth conference. (slides, video)\nSpeaking R (keynote), July 2020. useR! 2020, virtual. (slides, video).\nMaking a Tidy Dress, January 2020. rstudio::conf, San Francisco, CA. (slides, video)"
   },
   {
     "objectID": "presentations.html#section-6",
     "href": "presentations.html#section-6",
     "title": "Presentations",
-    "section": "2018",
-    "text": "2018\nThe Power of Algorithms for Good and Evil, November 2018. World Usability Day, University of Minnesota. (slides)\nHow Spatial Polygons Shape Our World: Geometry, Data, and Perceptions of Truth, September 2018. University of Minnesota Institute for Advanced Study Minneapolis, MN. (slides, video)\nHow Software Affects Humans’ Conceptions of Data: A Case Study in R Syntaxes, August 2018. JSM 2018, Vancouver BC. (slides)\nImagining the future of statistical education software, July 2018. ICOTS 10, Kyoto, Japan. (slides)\nTeaching students reproducibility, May 2018. Electronic Conference on Teaching Statistics (eCOTS) (slides, video)\nMaking spatial aggregation more transparent, April 2018. 2018 CGA Conference: Illuminating Space and Time in Data Science, Harvard University, Cambridge, MA. (slides)\nData Science as a Superpower, April 2018. Introduction to Data Science Big Data Day, Los Angeles, CA. (slides)\nScientists Programming, February 2018. Evidence about Programmers for Programming Language Design. Dagstuhl Seminar, Wadern, Germany. (slides, writeup)"
+    "section": "2019",
+    "text": "2019\nWhy the Tidyverse? (keynote), August 2019. noRth conference, Minneapolis, MN, (slides)\nData Science as a Superpower (plenary), July 2019. QUBES Evolution of Data in the Classroom: From Data to Data Science, Williamsburg, VA. (slides)\nData Journalism as a Liberal Art (keynote), June 2019. LACOL Data Science in the Liberal Arts. (slides)\nTeaching Data Communication, May 2019. SDSS (slides)\nWrangling Categorical Data in R Without Losing your Mind, January 2019. rstudio::conf (slides, video)"
   },
   {
     "objectID": "presentations.html#section-7",
     "href": "presentations.html#section-7",
     "title": "Presentations",
-    "section": "2017",
-    "text": "2017\nAlgorithmic Accountability, November 2017. Smith College Otelia Cromwell Day, Northampton, MA. (slides, video)\nInterfacing with Data (plenary), September 2017, Data Literacy Conference, Aix-en-Provence, France. (slides)\nHow Spatial Polygons Shape Our World, April 2017, OpenVisConf, Boston, MA. ( video, slides and links)"
+    "section": "2018",
+    "text": "2018\nThe Power of Algorithms for Good and Evil, November 2018. World Usability Day, University of Minnesota. (slides)\nHow Spatial Polygons Shape Our World: Geometry, Data, and Perceptions of Truth, September 2018. University of Minnesota Institute for Advanced Study Minneapolis, MN. (slides, video)\nHow Software Affects Humans’ Conceptions of Data: A Case Study in R Syntaxes, August 2018. JSM 2018, Vancouver BC. (slides)\nImagining the future of statistical education software, July 2018. ICOTS 10, Kyoto, Japan. (slides)\nTeaching students reproducibility, May 2018. Electronic Conference on Teaching Statistics (eCOTS) (slides, video)\nMaking spatial aggregation more transparent, April 2018. 2018 CGA Conference: Illuminating Space and Time in Data Science, Harvard University, Cambridge, MA. (slides)\nData Science as a Superpower, April 2018. Introduction to Data Science Big Data Day, Los Angeles, CA. (slides)\nScientists Programming, February 2018. Evidence about Programmers for Programming Language Design. Dagstuhl Seminar, Wadern, Germany. (slides, writeup)"
   },
   {
     "objectID": "presentations.html#section-8",
     "href": "presentations.html#section-8",
     "title": "Presentations",
-    "section": "2016",
-    "text": "2016\nIntegrated R labs for high school students, useR 2016, Stanford University, Stanford, CA. (video, slides and resources)\nThe gap between tools for learning and for doing statistics. May 2016, Electronic Conference on Teaching Statistics (eCOTS). (video and slides)\nDo you know Nothing when you see it? OpenVisConf April 2016, Boston MA. (video links, transcript)"
+    "section": "2017",
+    "text": "2017\nAlgorithmic Accountability, November 2017. Smith College Otelia Cromwell Day, Northampton, MA. (slides, video)\nInterfacing with Data (plenary), September 2017, Data Literacy Conference, Aix-en-Provence, France. (slides)\nHow Spatial Polygons Shape Our World, April 2017, OpenVisConf, Boston, MA. ( video, slides and links)"
   },
   {
     "objectID": "presentations.html#section-9",
     "href": "presentations.html#section-9",
+    "title": "Presentations",
+    "section": "2016",
+    "text": "2016\nIntegrated R labs for high school students, useR 2016, Stanford University, Stanford, CA. (video, slides and resources)\nThe gap between tools for learning and for doing statistics. May 2016, Electronic Conference on Teaching Statistics (eCOTS). (video and slides)\nDo you know Nothing when you see it? OpenVisConf April 2016, Boston MA. (video links, transcript)"
+  },
+  {
+    "objectID": "presentations.html#section-10",
+    "href": "presentations.html#section-10",
     "title": "Presentations",
     "section": "2014",
     "text": "2014\nEyeo Highlights. Datavis LA Meetup. August 2014, Los Angeles CA. (video and slides)\nTeaching Data Science to Teenagers (with M. Hansen). International Conference on Teaching Statistics. July 2014, Flagstaff, AZ. (slides)\nTeaching R to High School Students (with J. Molyneux). useR! The R User Conference. July 2014, Los Angeles, CA. (slides)"

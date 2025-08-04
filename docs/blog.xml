@@ -9,7 +9,7 @@
 <link>https://www.amelia.mn/blog.html</link>
 <atom:link href="https://www.amelia.mn/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Amelia McNamara, Associate Professor of data science in the Department of Computer and Data Sciences at the University of St Thomas</description>
-<generator>quarto-1.4.555</generator>
+<generator>quarto-99.9.9</generator>
 <lastBuildDate>Mon, 12 Aug 2024 05:00:00 GMT</lastBuildDate>
 <item>
   <title>First dance song discovery</title>
@@ -355,6 +355,7 @@ font-style: inherit;"># URI = paste0("https://api.spotify.com/v1/search?q=", "%2
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(URI) {</span>
 <span id="cb6-2">  res <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -369,6 +370,7 @@ background-color: null;
 font-style: inherit;">Authorization =</span> HeaderValue))</span>
 <span id="cb6-3">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (res<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>status_code <span class="sc" style="color: #5E5E5E;
@@ -393,6 +395,7 @@ background-color: null;
 font-style: inherit;">NA</span></span>
 <span id="cb6-5">  } <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> {</span>
 <span id="cb6-6">    <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -478,6 +481,7 @@ font-style: inherit;">"https://api.spotify.com/v1/audio-features/"</span>, spoti
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(URI) {</span>
 <span id="cb9-2">  res <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -492,6 +496,7 @@ background-color: null;
 font-style: inherit;">Authorization =</span> HeaderValue))</span>
 <span id="cb9-3">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (res<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>status_code <span class="sc" style="color: #5E5E5E;
@@ -504,6 +509,7 @@ background-color: null;
 font-style: inherit;">NA</span></span>
 <span id="cb9-5">  } <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> {</span>
 <span id="cb9-6">    <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -517,6 +523,7 @@ font-style: inherit;">$</span>tempo</span>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(URI) {</span>
 <span id="cb9-11">  res <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -531,6 +538,7 @@ background-color: null;
 font-style: inherit;">Authorization =</span> HeaderValue))</span>
 <span id="cb9-12">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (res<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>status_code <span class="sc" style="color: #5E5E5E;
@@ -543,6 +551,7 @@ background-color: null;
 font-style: inherit;">NA</span></span>
 <span id="cb9-14">  } <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> {</span>
 <span id="cb9-15">    <span class="fu" style="color: #4758AB;
 background-color: null;

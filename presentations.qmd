@@ -6,6 +6,10 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 ## Presentations
 
+## 2025
+
+**Are Graphical User Interfaces the answer to AI?** August 2025. [Joint Statistical Meetings](https://ww2.amstat.org/meetings/jsm/2025/index.cfm) ([slides](presentations/GUIs_vs_AI.pdf))
+
 ## 2024
 
 **Data Communication and Visualization at the University of St Thomas** January 2024. [Institute for Mathematical and Statistical Innovation](https://www.imsi.institute/), Chicago IL. [Teaching and Evaluating Data Communication At Scale](https://www.imsi.institute/activities/teaching-and-evaluating-data-communication-at-scale/#schedule) ([slides](presentations/datacomm/))
@@ -15,7 +19,6 @@ Here are some links to selected presentations I've given and workshops I've led.
 **Data Science as a Superpower** (keynote), February 2023. Harford Community College, Bel Air, MD. [STEM Day](https://www.harford.edu/about/get-to-know-harford/news/2023/01-january/stem-day.php) ([slides](presentations/DataScienceAsASuperPower2023.pdf))
 
 ## 2022
-
 
 **What 'counts' as statistical communication?** August 2022. [JSM 2022](https://ww2.amstat.org/meetings/jsm/2022/index.cfm), Washington DC. ([slides](presentations/Communication2022))
 
@@ -91,7 +94,7 @@ Here are some links to selected presentations I've given and workshops I've led.
 
 **Do you know Nothing when you see it?** [OpenVisConf](https://openvisconf.com/) April 2016, Boston MA. ([video](https://www.youtube.com/watch?v=hps9r7JZQP8) [links](https://www.amelia.mn/blog/conferences/2016/04/25/OpenVisConf.html), [transcript](https://www.amelia.mn/blog/conferences/2016/05/16/OpenVisConfTranscript.html))
 
-## 2014 
+## 2014
 
 **Eyeo Highlights**. Datavis LA Meetup. August 2014, Los Angeles CA. ([video](https://www.youtube.com/watch?v=J838Uoc1Wac) and [slides](https://docs.google.com/presentation/d/1kC9lumdotbHmW3r177d4_nIdqPVYjeYDV85O4v_3UNo/pub?start=false&loop=false&delayms=3000))
 
