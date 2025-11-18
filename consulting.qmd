@@ -1,0 +1,28 @@
+---
+title: "Professional development and consulting"
+---
+
+I love data science, and I enjoy spreading my enthusiasm to other people! Beyond teaching undergraduate statistics and data science courses at Smith and the University of St. Thomas, I have extensive experience leading trainings in a variety of settings. I have taught faculty, professionals, teachers, graduate students, and many other audiences. 
+
+I am [Carpentries](https://carpentries.org/) certified for Software Carpentry, Library Carpentry, and Data Carpentry, as well as an [RStudio Certified Trainer](https://education.rstudio.com/trainers). 
+
+My specialty is introductory trainings, helping people who have never programmed before learn to use the language R to do data science. However, I have also taught low- and no-code approaches, as well as highly technical trainings for experts. See below for a few examples of my experience.  
+
+Please be in touch if you are interested in learning more about my offerings. 
+
+## Professors
+
+I was involved in the [StatPrep](https://www.statprep.org/) program for five years, and the OpenMath training the year after the grant ended. The goal of the program was to help community college professors teach more modern statistics courses, focused on computing with data. I also contributed to the [notes volume](https://maa.org/resource/notes-volume-99-using-data-centric-methods-to-teach-introductory-statistics/) about the project. 
+
+In 2024, I taught a week-long professional development for faculty at Tulane University. This was a no code/low code approach to data science, to help faculty see how data could be integrated into courses across the curriculum. I had participants from the social sciences, humanities, and sciences. All the materials are [available for free online](https://ameliamn.github.io/TulaneDataLiteracy/), and are Creative Commons licensed. 
+
+## Professionals
+
+Three times, I have taught, co-taught, or assisted with R trainings at the NICAR conference for data journalists. In 2020, I taught [Exploring the tidyverse](https://github.com/ameliamn/data-science-in-tidyverse-nicar-2020), with [Aaron Kessler](https://aaronkessler.rbind.io/).
+
+For many years, I regularly taught an introductory workshop at rstudio::conf/posit::conf. For example, in 2019 I taught [Data science in the tidyverse](https://github.com/AmeliaMN/data-science-in-tidyverse), with [Hadley Wickham](https://hadley.nz/).
+
+## High school teachers
+
+For three years, I was a graduate student researcher on the Mobilize project, which developed a year-long data science curriculum for high school students called [Introduction to Data Science](https://www.introdatascience.org/). When I last checked, the IDS curriculum has been used in 74 school districts and has had more than 42,000 students take it. I led hundreds of hours of professional development for in-service teachers to help them prepare to teach the curriculum. 
+

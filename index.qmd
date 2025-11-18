@@ -1,26 +1,30 @@
 ---
 title: "Amelia McNamara"
-image: img/Portrait3.jpg
+image: img/Portrait5.jpg
 type: home
 toc: false
 ---
 
-::: columns
+:::::: columns
 ::: {.column width="37%"}
-![Photo courtesy [Mark Brown](http://www.twintownmedia.com/about)](img/Portrait3.jpg)
+![Photo courtesy [Carmella Hanlon](https://carmellabellaphotography98.pixieset.com/)](img/Portrait5.jpg)
 :::
 
 ::: {.column width="6%"}
 :::
 
 ::: {.column width="\"57%"}
-## Associate Professor, University of St Thomas [Department of Computer and Information Sciences](https://www.stthomas.edu/cisc/)
+## Associate Professor, University of St Thomas [Department of Computer and Data Sciences](https://cas.stthomas.edu/departments/areas-of-study/computer-data-sciences/index.html)
 
 My work is focused on learning what makes it easier to do and to understand statistics, and my research interests include statistics education, statistical computing, data visualization, and spatial statistics.
+
+I love teaching, and running [professional development](consulting.html) is one of my passions. 
 :::
-:::
+::::::
 
 Recent notable work of mine includes
+
+- **Teaching modeling in introductory statistics: A comparison of formula and tidyverse syntaxes**, a paper about a head-to-head comparison of the formula and tidyverse syntaxes I ran in my intro statistics labs. It was published in the [Journal of Statistics and Data Science Education 32(4)](https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394545), 374–394. In the paper, I make some recommendations for others teaching R, including auditing your code to see how many functions you are teaching, using formula syntax for students who will likely only take one stats course, and using tidyverse for students likely to continue in data science. 
 
 -   **Speaking R**, a keynote presentation at the 2020 [useR! 2020](https://user2020.r-project.org) conference. In this talk, I advocate for speaking code aloud, particularly as a pedagogical strategy. I offer some suggestions about how to vocalize R code. You can watch the talk [on YouTube](https://www.youtube.com/watch?v=ckW9sSdIVAc&t=676s) and follow along with the [slides](SpeakingR/index.html).
 
@@ -38,13 +42,11 @@ I have research projects in progress about the impact of R syntax on learning an
 
 ### Teaching
 
-At the University of St Thomas, I regularly teach STAT 220: Introduction to statistics, STAT 320: Applied Regression Analysis, and [STAT 336: Data Communication and Visualization](https://ameliamn.github.io/STAT336) If you are interested in seeing materials from these courses (syllabi, assignments, etc) please email me. I keep meaning to post them online here but there's never enough time! (Update: 336 is up!)
-
-At Smith College, I taught [Multiple Regression](https://ameliamn.github.io/sds291) (Spring 2016, Fall 2016), [Introduction to Probability and Statistics](https://ameliamn.github.io/SDS220) (Fall 2015, Spring 2017, Fall 2017), [Communicating with Data](https://ameliamn.github.io/sds136) (Fall 2017), and [Data Journalism](https://ameliamn.github.io/sds236) (Spring 2018).
+At the University of St Thomas, I regularly teach DASC 120: Introduction to computational statistics, [DASC 240: Applied Regression Analysis](https://ameliamn.github.io/DASC240), and [DASC 336: Data Communication and Visualization](https://ameliamn.github.io/STAT336). Prior to St Thomas, I taught at Smith College. More information on those courses is available on my [past courses](pastcourses.html) page. 
 
 At both Smith and St Thomas, I have had students author Wikipedia pages as part of my course. I've written about some of the frustration with this assignment on [my blog](blog/2018-03-20-Wikipedia-in-the-classroom/), and also have [a list](wikipedia.html) of all the successful pages my students have written.
 
-For three years, I was a graduate student researcher on the Mobilize project, which developed a year-long data science curriculum for high school students called [Introduction to Data Science](https://www.introdatascience.org/). When I last checked, the IDS curriculum has been used in 15 school districts and has had almost 10,000 students take it. The curriculum includes participatory sensing and computational analysis in R and RStudio. My work with Mobilize has been a source of inspiration for my ongoing research into computational tools for novices.
+For three years, I was a graduate student researcher on the Mobilize project, which developed a year-long data science curriculum for high school students called [Introduction to Data Science](https://www.introdatascience.org/). When I last checked, the IDS curriculum has been used in 74 school districts and has had more than 42,000 students take it. The curriculum includes participatory sensing and computational analysis in R and RStudio. My work with Mobilize has been a source of inspiration for my ongoing research into computational tools for novices.
 
 ### Curriculum vitae
 

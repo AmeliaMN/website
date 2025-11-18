@@ -35,6 +35,8 @@ website:
           - href: Syntax-cheatsheet.pdf
             text: R Syntax Comparison Cheatsheet
           - wikipedia.qmd
+      - text: "Consulting"
+        href: consulting.qmd
       - text: "Research"
         menu:
           - writing.qmd
@@ -48,7 +50,7 @@ website:
       - icon: mastodon
         href: https://vis.social/@amelia
       - text: "{{< iconify simple-icons bluesky >}}"
-        href: https://bsky.app/profile/ameliamn.bsky.social
+        href: https://bsky.app/profile/amelia.mn
       - icon: youtube
         href: https://www.youtube.com/ameliamcnamara
       - icon: linkedin
