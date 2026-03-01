@@ -35,12 +35,13 @@ website:
           - href: Syntax-cheatsheet.pdf
             text: R Syntax Comparison Cheatsheet
           - wikipedia.qmd
-      - text: "Consulting"
-        href: consulting.qmd
+
       - text: "Research"
         menu:
           - writing.qmd
           - presentations.qmd
+      - text: "Consulting"
+        href: consulting.qmd
       - press.qmd
       - text: Blog
         href: blog.qmd
@@ -59,7 +60,7 @@ website:
         href: https://github.com/AmeliaMN/
   page-footer: 
     left:
-      - text: "Copyright © 2024 Amelia McNamara. All Rights Reserved."
+      - text: "Copyright © 2026 Amelia McNamara. All Rights Reserved."
       
 
 format:

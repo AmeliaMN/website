@@ -18,13 +18,13 @@ toc: false
 
 My work is focused on learning what makes it easier to do and to understand statistics, and my research interests include statistics education, statistical computing, data visualization, and spatial statistics.
 
-I love teaching, and running [professional development](consulting.html) is one of my passions. 
+I love teaching, and running [professional development](consulting.html) is one of my passions.
 :::
 ::::::
 
 Recent notable work of mine includes
 
-- **Teaching modeling in introductory statistics: A comparison of formula and tidyverse syntaxes**, a paper about a head-to-head comparison of the formula and tidyverse syntaxes I ran in my intro statistics labs. It was published in the [Journal of Statistics and Data Science Education 32(4)](https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394545), 374–394. In the paper, I make some recommendations for others teaching R, including auditing your code to see how many functions you are teaching, using formula syntax for students who will likely only take one stats course, and using tidyverse for students likely to continue in data science. 
+-   **Teaching modeling in introductory statistics: A comparison of formula and tidyverse syntaxes**, a paper about a head-to-head comparison of the formula and tidyverse syntaxes I ran in my intro statistics labs. It was published in the [Journal of Statistics and Data Science Education 32(4)](https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394545), 374–394. In the paper, I make some recommendations for others teaching R, including auditing your code to see how many functions you are teaching, using formula syntax for students who will likely only take one stats course, and using tidyverse for students likely to continue in data science.
 
 -   **Speaking R**, a keynote presentation at the 2020 [useR! 2020](https://user2020.r-project.org) conference. In this talk, I advocate for speaking code aloud, particularly as a pedagogical strategy. I offer some suggestions about how to vocalize R code. You can watch the talk [on YouTube](https://www.youtube.com/watch?v=ckW9sSdIVAc&t=676s) and follow along with the [slides](SpeakingR/index.html).
 
@@ -42,7 +42,7 @@ I have research projects in progress about the impact of R syntax on learning an
 
 ### Teaching
 
-At the University of St Thomas, I regularly teach DASC 120: Introduction to computational statistics, [DASC 240: Applied Regression Analysis](https://ameliamn.github.io/DASC240), and [DASC 336: Data Communication and Visualization](https://ameliamn.github.io/STAT336). Prior to St Thomas, I taught at Smith College. More information on those courses is available on my [past courses](pastcourses.html) page. 
+At the University of St Thomas, I regularly teach DASC 120: Introduction to computational statistics, [DASC 240: Applied Regression Analysis](https://ameliamn.github.io/DASC240), and [DASC 336: Data Communication and Visualization](https://ameliamn.github.io/STAT336). Prior to St Thomas, I taught at Smith College. More information on those courses is available on my [past courses](pastcourses.html) page.
 
 At both Smith and St Thomas, I have had students author Wikipedia pages as part of my course. I've written about some of the frustration with this assignment on [my blog](blog/2018-03-20-Wikipedia-in-the-classroom/), and also have [a list](wikipedia.html) of all the successful pages my students have written.
 
